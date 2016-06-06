@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>OpportunityLineItemSchedule | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_opportunitylineitemschedule"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>OpportunityLineItemSchedule</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents information about the quantity, revenue distribution, and
+   delivery dates for a particular OpportunityLineItem.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d552962e107">Field</th>
+
+<th class="featureTableHeader  " id="d552962e110">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Available only for organizations with the multicurrency feature
+enabled. Contains the ISO code for any currency allowed by the organization.
+This field is available in version 10.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a> <span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text description of the opportunity line item schedule. Limit:
+255 characters. Label is <strong class="ph uicontrol">Comments</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityLineItemId" class="dashAnchor"></a> <span class="keyword parmname">OpportunityLineItemId</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the associated OpportunityLineItem.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a> <span class="keyword parmname" id="i1457530"><a name="i1457530"><!-- --></a>Quantity</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double </dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The total number of units to be scheduled in <a class="xref" href="#i1457710">a quantity schedule</a>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/Revenue" class="dashAnchor"></a> <span class="keyword parmname" id="i1457557"><a name="i1457557"><!-- --></a>Revenue</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency </dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>The revenue that should be recognized, or the quantity that should
+be shipped, or both - depending upon the value of <span class="keyword parmname">Type</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/ScheduleDate" class="dashAnchor"></a> <span class="keyword parmname">ScheduleDate</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date </dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The date the associated OpportunityLineItem is to be scheduled for an event: delivery, shipping, or any
+other date you wish to track.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e107" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a> <span class="keyword parmname" id="i1457610"><a name="i1457610"><!-- --></a>Type</span> </td>
+
+<td class="entry" headers="d552962e110" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of the schedule. Required when inserting an OpportunityLineItemSchedule.
+Valid values include <samp class="codeph nolang">Quantity</samp>, <samp class="codeph nolang">Revenue</samp>, or <samp class="codeph nolang">Both</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1457635"><a name="i1457635"><!-- --></a>Allowed Type Field Values</span></h2>
+<div class="p">The allowed <span class="keyword parmname">Type</span> values for an OpportunityLineItemSchedule depend on the product-level schedule preferences and whether
+the line item has any existing schedules. The following criteria must
+be met:<ul class="ul bulletList">
+<li class="li">The Product2 on which the OpportunityLineItem is based must have the appropriate <span class="keyword parmname">CanUseRevenueSchedule</span> or <span class="keyword parmname">CanUseQuantitySchedule</span> fields (or both) set to <samp class="codeph nolang">true</samp>.</li>
+
+<li class="li">When you create a schedule for a line item that does not have
+any existing schedules, you can specify any valid value.</li>
+
+<li class="li">If you create a schedule for a line item that already has existing
+schedules, the new schedule must be consistent with the existing schedules.
+The following matrix outlines the allowable values:</li>
+
+</ul>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d552962e611">Value of HasRevenueSchedule on line item</th>
+
+<th class="featureTableHeader  " id="d552962e614">Value of HasQuantitySchedule on line item</th>
+
+<th class="featureTableHeader  " id="d552962e617">Allowable Type Values</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d552962e611" data-title="Value of HasRevenueSchedule on line item">false</td>
+
+<td class="entry" headers="d552962e614" data-title="Value of HasQuantitySchedule on line item">false</td>
+
+<td class="entry" headers="d552962e617" data-title="Allowable Type Values">
+<span class="keyword parmname">Revenue</span>, <span class="keyword parmname">Quantity</span>, both</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e611" data-title="Value of HasRevenueSchedule on line item">false</td>
+
+<td class="entry" headers="d552962e614" data-title="Value of HasQuantitySchedule on line item">true</td>
+
+<td class="entry" headers="d552962e617" data-title="Allowable Type Values">
+<span class="keyword parmname">Quantity</span> </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e611" data-title="Value of HasRevenueSchedule on line item">true</td>
+
+<td class="entry" headers="d552962e614" data-title="Value of HasQuantitySchedule on line item">false</td>
+
+<td class="entry" headers="d552962e617" data-title="Allowable Type Values">
+<span class="keyword parmname">Revenue</span> </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e611" data-title="Value of HasRevenueSchedule on line item">true</td>
+
+<td class="entry" headers="d552962e614" data-title="Value of HasQuantitySchedule on line item">true</td>
+
+<td class="entry" headers="d552962e617" data-title="Allowable Type Values">both</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1457710"><a name="i1457710"><!-- --></a>Allowed Quantity and Revenue Field
+Values</span></h2>
+<p class="p">The allowable <span class="keyword parmname">Quantity</span> and <span class="keyword parmname">Revenue</span> field values depend on the value of the <span class="keyword parmname">Type</span> field:</p>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d552962e710">Type Value</th>
+
+<th class="featureTableHeader  " id="d552962e713">Allowable Quantity Value</th>
+
+<th class="featureTableHeader  " id="d552962e716">Allowable Revenue Value</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d552962e710" data-title="Type Value">
+<span class="keyword parmname">Revenue</span> </td>
+
+<td class="entry" headers="d552962e713" data-title="Allowable Quantity Value">Null</td>
+
+<td class="entry" headers="d552962e716" data-title="Allowable Revenue Value">Non-null</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e710" data-title="Type Value">
+<span class="keyword parmname">Quantity</span> </td>
+
+<td class="entry" headers="d552962e713" data-title="Allowable Quantity Value">Non-null</td>
+
+<td class="entry" headers="d552962e716" data-title="Allowable Revenue Value">Null</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d552962e710" data-title="Type Value">both</td>
+
+<td class="entry" headers="d552962e713" data-title="Allowable Quantity Value">Non-null</td>
+
+<td class="entry" headers="d552962e716" data-title="Allowable Revenue Value">Non-null</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<div class="p">The <span class="keyword parmname">Quantity</span> and <span class="keyword parmname">Revenue</span> fields have the following restrictions when this object
+is updated:<ul class="ul bulletList">
+<li class="li">For a schedule of <span class="keyword parmname">Type</span> <samp class="codeph nolang">Quantity</samp>, you can’t
+update a null <span class="keyword parmname">Revenue</span> value to non-null. Likewise for a schedule of <span class="keyword parmname">Type</span> <samp class="codeph nolang">Revenue</samp>, you can’t
+update a null <span class="keyword parmname">Quantity</span> value to non-null.</li>
+
+<li class="li">You can’t null out the <span class="keyword parmname">Quantity</span> field for a schedule of <span class="keyword parmname">Type</span> <samp class="codeph nolang">Quantity</samp>. Likewise
+you can’t null out the <span class="keyword parmname">Revenue</span> field for a schedule of <span class="keyword parmname">Type</span> <samp class="codeph nolang">Revenue</samp>.</li>
+
+<li class="li">You can’t null out either the <span class="keyword parmname">Revenue</span> or <span class="keyword parmname">Quantity</span> fields for a schedule of type <samp class="codeph nolang">Both</samp>.</li>
+
+</ul>
+</div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">OpportunityLineItemSchedule supports two types of schedules:</p>
+<ul class="ul bulletList">
+<li class="li"> <span class="keyword parmname">Quantity</span> schedules</li>
+
+<li class="li"> <span class="keyword parmname">Revenue</span> schedules</li>
+
+</ul>
+ </div>
+
+<p class="p">The user must have edit access rights on the Opportunity in order to create or update line item schedules on that opportunity.</p>
+
+<div class="section">
+<h2 class="helpHead2">Products and Schedules Must Be Enabled</h2>
+<p class="p">The OpportunityLineItemSchedule object is defined only for those organizations that have the
+products and schedules features enabled. If the organization does
+not have the products and schedules features, the OpportunityLineItemSchedule object is not returned in a describe,  and you can't describe
+or query  OpportunityLineItemSchedule records.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Effects on Opportunities and Opportunity Line
+Items</h2>
+<div class="p"> OpportunityLineItemSchedule records affect opportunities and opportunity line items in
+the following ways:<ul class="ul bulletList">
+<li class="li">Inserting an OpportunityLineItemSchedule of <span class="keyword parmname">Type</span> “Revenue” or “Quantity” increments
+the <span class="keyword parmname">TotalPrice</span> field on the OpportunityLineItem by the OpportunityLineItemSchedule <span class="keyword parmname">Revenue</span> amount. Inserting an OpportunityLineItemSchedule of <span class="keyword parmname">Type</span> <samp class="codeph nolang">Quantity</samp> or <samp class="codeph nolang">Both</samp> increments the <span class="keyword parmname">Quantity</span> field on the OpportunityLineItem by the OpportunityLineItemSchedule <span class="keyword parmname">Quantity</span> amount. </li>
+
+<li class="li">Creating an OpportunityLineItemSchedule record affects the original
+opportunity:<ol class="ol enumList">
+<li class="li">The Opportunity <span class="keyword parmname">Amount</span> is incremented the by OpportunityLineItemSchedule revenue amount</li>
+
+<li class="li">The Opportunity <span class="keyword parmname">ExpectedRevenue</span> is incremented by the line item schedule amount multiplied
+by the Opportunity <span class="keyword parmname">Probability</span>
+</li>
+
+</ol>
+</li>
+
+<li class="li">Deleting an OpportunityLineItemSchedule has a similar effect on the related OpportunityLineItem and Opportunity. Deleting an OpportunityLineItemSchedule decrements the OpportunityLineItem <span class="keyword parmname">TotalPrice</span> by the deleted OpportunityLineItemSchedule <span class="keyword parmname">Quantity</span> or <span class="keyword parmname">Revenue</span> amount. The Opportunity <span class="keyword parmname">Amount</span> is also decremented by the OpportunityLineItemSchedule <span class="keyword parmname">Quantity</span> or <span class="keyword parmname">Revenue</span> amount, and the Opportunity <span class="keyword parmname">ExpectedRevenue</span> is reduced by OpportunityLineItemSchedule <span class="keyword parmname">Quantity</span> or <span class="keyword parmname">Revenue</span> amount multiplied by the Opportunity <span class="keyword parmname">Probability</span>.</li>
+
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Deleting an Opportunity Line Item Schedule</h2>
+<p class="p">Deleting the last remaining schedule will set the corresponding <span class="keyword parmname">HasQuantitySchedule</span> or <span class="keyword parmname">HasRevenueSchedule</span> flags (or both) to <samp class="codeph nolang">false</samp> on the parent line item.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitem.htm" title="Represents an opportunity line item, which is a member of the list of Product2 products associated with an Opportunity.">OpportunityLineItem</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_product2.htm" title="Represents a product that your organization sells.">Product2</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_calls_delete.htm">delete()</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

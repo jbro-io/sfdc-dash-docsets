@@ -1,0 +1,218 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Announcement | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_announcement"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Announcement</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a Chatter group announcement. This
+   object is available in API version
+   30.0 and later.</span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">undelete()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d154066e123">Field Name</th>
+
+       <th class="featureTableHeader  " id="d154066e126">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d154066e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExpirationDate" class="dashAnchor"></a><span class="keyword parmname">ExpirationDate</span></td>
+
+       <td class="entry" headers="d154066e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Required. The date on which the announcement expires. Announcements display on the
+            group UI until 11:59 p.m. local time on the selected date.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d154066e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname">FeedItemId</span></td>
+
+       <td class="entry" headers="d154066e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Required. The ID of the FeedItem that
+            contains the content of the announcement. Announcements are stored as text posts.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d154066e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d154066e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the parent CollaborationGroup that the announcement belongs to. An announcement can belong only to a single Chatter group.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d154066e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/SendEmails" class="dashAnchor"></a><span class="keyword parmname">SendEmails</span></td>
+
+       <td class="entry" headers="d154066e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Set to <samp class="codeph nolang">true</samp> to email all group members when an
+            announcement is posted to the group. The default is <samp class="codeph nolang">false</samp>. This requires the user to have the “Send announcement on email”
+            permission.</p>
+
+           <p class="p">This field is available in API version 36.0 and
+            later.</p>
+
+           <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This field is currently available to select customers through a pilot program. To
+            be nominated to join this pilot program, contact Salesforce. Additional terms and
+            conditions may apply to participate in the pilot program. Please note that pilot
+            programs are subject to change, and as such, we cannot guarantee acceptance into this
+            pilot program or a particular time frame in which this feature can be enabled. Any
+            unreleased services or features referenced in this document, press releases, or public
+            statements are not currently available and may not be delivered on time or at all.
+            Customers who purchase our services should make their purchase decisions based upon
+            features that are currently available.</p>
+</div>
+</div></div></div></div>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <div class="p">Group owners, managers, and users with the “Modify All Data” permission can use
+    the Announcement object to create, edit, and
+    delete group announcements. Creating a group announcement is a three-step process.<ol class="ol enumList">
+     <li class="li">Use the FeedItem object to
+      create a text post with the announcement’s content. Use the CollaborationGroup record you want to post the announcement to as the parent of this feed item.</li>
+
+     <li class="li">Next, use the feed item ID and an expiration date to create the announcement record.</li>
+
+     <li class="li">Finally, update the <span class="keyword parmname">AnnouncementId</span> field in the CollaborationGroup record with the ID of the announcement you created.</li>
+
+    </ol>
+To delete the group announcement, simply delete the <span class="keyword parmname">AnnouncementId</span> value in the CollaborationGroup record. To restore a group announcement, update the <span class="keyword parmname">AnnouncementId</span> field for a group with the announcement’s ID. The expiration date for the announcement
+    should be in the future and the feed item used to create the announcement should be parented by
+    the same group.</div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContactOwnerSharingRule | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contactownersharingrule"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContactOwnerSharingRule</span></h1><div class="body">
+<div class="shortdesc">Represents the rules for sharing a contact with a User other than
+  the owner.</div>
+
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Contact Salesforce customer support to enable access to this object for your organization.</p>
+</div>
+</div></div></div></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d248051e111">Field</th>
+
+<th class="featureTableHeader  " id="d248051e114">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/ContactAccessLevel" class="dashAnchor"></a><span class="keyword parmname" id="ContactAccessLevel"><a name="ContactAccessLevel"><!-- --></a>ContactAccessLevel</span></td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A value that represents the type of access granted to the target Group, UserRole, or User for Contacts. The possible values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A description of the sharing rule. Maximum size is 1000 characters.
+This field is available in API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization. Corresponds to <strong class="ph uicontrol">Rule Name</strong> in the user interface. <p class="p">This field is available
+in&nbsp;API&nbsp;version&nbsp;24.0&nbsp;and later.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/GroupId" class="dashAnchor"></a>
+<span class="keyword parmname">GroupId</span> </td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID representing the source group. A Contact owned by a User in the source Group triggers the rule to give access.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Label of the sharing rule as it appears in the user interface.
+Limited to 80 characters. Corresponds to <strong class="ph uicontrol">Label</strong> on the user interface.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248051e111" data-title="Field"><a name="//apple_ref/cpp/Field/UserOrGroupId" class="dashAnchor"></a>
+<span class="keyword parmname">UserOrGroupId</span> </td>
+
+<td class="entry" headers="d248051e114" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID representing the User or Group being granted access.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to manage the sharing
+rules for contacts.</p>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contact.htm" title="Represents a contact, which is an individual associated with an account.">Contact</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contactshare.htm" title="Represents a list of access levels to a Contact along with an explanation of the access level. For example, if you have access to a record because you own it, the ContactAccessLevel is All and RowCause is Owner.">ContactShare</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

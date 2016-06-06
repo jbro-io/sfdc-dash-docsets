@@ -1,0 +1,437 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FiscalYearSettings | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_fiscalyearsettings"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FiscalYearSettings</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Settings to define a custom or standard fiscal year for your
+   organization. This object has a parent-child relationship with the Period
+   object.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+ </div>
+
+<div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p">Customer Portal users can’t access this object.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d422427e98">Field</th>
+
+<th class="featureTableHeader  " id="d422427e101">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of the setting.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/EndDate" class="dashAnchor"></a><span class="keyword parmname">EndDate</span></td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">End date of the fiscal year.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/IsStandardYear" class="dashAnchor"></a>
+<span class="keyword parmname">IsStandardYear</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the fiscal year is a standard calendar year
+(<samp class="codeph nolang">true</samp>) or a custom fiscal year
+(<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>
+<span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A name for the fiscal year. Limit: 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/PeriodId" class="dashAnchor"></a>
+<span class="keyword parmname">PeriodId</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the associated fiscal period.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/PeriodLabelScheme" class="dashAnchor"></a>
+<span class="keyword parmname">PeriodLabelScheme</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The numbering scheme used for fiscal periods.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/PeriodPrefix" class="dashAnchor"></a>
+<span class="keyword parmname">PeriodPrefix</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+            Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The prefix of fiscal periods. For example, if <samp class="codeph nolang">p</samp> is the prefix, then the first period
+is “P1.”</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/QuarterLabelScheme" class="dashAnchor"></a>
+<span class="keyword parmname">QuarterLabelScheme</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The numbering scheme used for fiscal quarters. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/QuarterPrefix" class="dashAnchor"></a>
+<span class="keyword parmname">QuarterPrefix</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+            Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The prefix of fiscal quarters. For example, if “Q”
+is the prefix, then the fourth quarter would be “Q4.”</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a><span class="keyword parmname">StartDate</span></td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">Start date of the fiscal year.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/WeekLabelScheme" class="dashAnchor"></a>
+<span class="keyword parmname">WeekLabelScheme</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The numbering scheme used for weeks.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/WeekStartDay" class="dashAnchor"></a><span class="keyword parmname">WeekStartDay</span></td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the day that starts the week, for example <samp class="codeph nolang">Monday</samp> or <samp class="codeph nolang">Sunday</samp>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d422427e98" data-title="Field"><a name="//apple_ref/cpp/Field/YearType" class="dashAnchor"></a>
+<span class="keyword parmname">YearType</span> </td>
+
+<td class="entry" headers="d422427e101" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates one of two types of fiscal years, Standard or Custom.
+Standard denotes the standard Gregorian calendar, while Custom means
+a fiscal year with a custom structure.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_period.htm" title="Represents a fiscal period defined in FiscalYearSettings.">Period</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

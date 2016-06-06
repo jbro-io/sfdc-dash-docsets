@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ApexTestQueueItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_apextestqueueitem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ApexTestQueueItem</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="Desc"><a name="Desc"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a single Apex class in the Apex job queue. This object is available in API version 23.0 and
+  later.</span></span></div>
+
+  <p class="p">This object is available in API version 23.0 and
+  later.</p>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d158469e119">Field Name</th>
+
+       <th class="featureTableHeader  " id="d158469e122">Description</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d158469e119" data-title="Field Name"><a name="//apple_ref/cpp/Field/ApexClassId" class="dashAnchor"></a><span class="keyword parmname">ApexClassId</span></td>
+
+       <td class="entry" headers="d158469e122" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The Apex class whose
+            tests are to be executed.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d158469e119" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExtendedStatus" class="dashAnchor"></a><span class="keyword parmname">ExtendedStatus</span></td>
+
+       <td class="entry" headers="d158469e122" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The pass rate of the test run.</p>
+
+           <p class="p">For example: “(4/6)”. This means that four out of a total of six tests
+            passed.</p>
+
+           <p class="p">If the class fails to execute, this field contains the cause of the failure.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d158469e119" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentJobId" class="dashAnchor"></a><span class="keyword parmname" id="ParentJobId"><a name="ParentJobId"><!-- --></a>ParentJobId</span></td>
+
+       <td class="entry" headers="d158469e122" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p" id="ParentJobIdDescription"><a name="ParentJobIdDescription"><!-- --></a>Points to the AsyncApexJob that represents the entire test run.</p>
+
+           <p class="p"><span class="ph" id="ParentJobIdBulkInsert"><a name="ParentJobIdBulkInsert"><!-- --></a>If you insert multiple Apex test queue items in
+             a single bulk operation, the queue items will share the same parent job. This means
+             that a test run can consist of the execution of the tests of several classes if all the
+             test queue items are inserted in the same bulk operation.</span></p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d158469e119" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d158469e122" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of the job. Valid values are:<ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Holding</samp><sup class="ph sup">1</sup>
+</li>
+
+            <li class="li"><samp class="codeph nolang">Queued</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Preparing</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Processing</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Aborted</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Completed</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Failed</samp></li>
+
+           </ul>
+<sup class="ph sup">1</sup> This status applies to batch jobs in the Apex flex queue.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d158469e119" data-title="Field Name"><a name="//apple_ref/cpp/Field/TestRunResultID" class="dashAnchor"></a><span class="keyword parmname">TestRunResultID</span></td>
+
+       <td class="entry" headers="d158469e122" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the associated <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_apextestrunresult.htm#topic-title">ApexTestRunResult</a> object.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">
+<p class="p"><span class="ph" id="Usage"><a name="Usage"><!-- --></a>Insert an <samp class="codeph nolang">ApexTestQueueItem</samp> object to place its corresponding Apex class in the Apex job queue for execution. The
+      Apex job executes the test
+     methods in the class. </span></p>
+<p class="p"><span class="ph" id="AbortJob"><a name="AbortJob"><!-- --></a>To abort a class that is in the Apex job queue, perform an update
+     operation on the ApexTestQueueItem object and set its <span class="keyword parmname">Status</span> field to
+      <kbd class="ph userinput">Aborted</kbd>.</span></p>
+If you insert multiple Apex test queue items in
+             a single bulk operation, the queue items will share the same parent job. This means
+             that a test run can consist of the execution of the tests of several classes if all the
+             test queue items are inserted in the same bulk operation.</div>
+</div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

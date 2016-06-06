@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkBadge | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkBadge"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkBadge</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents information about who the badge was given to and which badge
+   was given. A WorkBadge record is created for each
+   recipient of a WorkBadgeDefinition.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;
+     <samp class="codeph nolang">delete()</samp>,&nbsp;
+     <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>,&nbsp; <samp class="codeph nolang">getDeleted()</samp>,&nbsp; <samp class="codeph nolang">getUpdated()</samp>,&nbsp; <samp class="codeph nolang">query()</samp>,&nbsp; <samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>,&nbsp; <samp class="codeph nolang">update()</samp>,&nbsp; <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Additional Considerations and Related Objects</h2>
+<p class="p">WorkBadge is
+a lookup to WorkThanks. Each WorkBadge record must derive a SourceId from WorkThanks. There can be multiple WorkBadge records tied
+to a single WorkThanks record.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d768350e147">Field Name</th>
+
+<th class="featureTableHeader  " id="d768350e150">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/DefinitionId" class="dashAnchor"></a><span class="keyword parmname">DefinitionId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. Salesforce unique ID for the given WorkBadgeDefinition record given.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The description of the WorkBadgeDefinition.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/GiverId" class="dashAnchor"></a><span class="keyword parmname">GiverId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the badge giver.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/ImageUrl" class="dashAnchor"></a><span class="keyword parmname">ImageUrl</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The URL of the badge image.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The time stamp that indicates when the current user last viewed a record that is
+           related to this WorkBadge.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The time stamp that indicates when the current user last viewed this WorkBadge. If this value is null, this record
+           might have been only referenced (<span class="keyword parmname">LastReferencedDate</span>) and not
+           viewed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/Message" class="dashAnchor"></a><span class="keyword parmname">Message</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The message accompanying the thanks badge.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> that this WorkBadge is
+           associated with. This field is
+            available only if Salesforce Communities is enabled
+            in your organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/RecipientId" class="dashAnchor"></a><span class="keyword parmname">RecipientId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. Salesforce unique ID for User who is the Recipient of Badge.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/RewardId" class="dashAnchor"></a><span class="keyword parmname">RewardId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Salesforce unique ID for Reward given with badge (if Reward Badge)</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d768350e147" data-title="Field Name"><a name="//apple_ref/cpp/Field/SourceId" class="dashAnchor"></a><span class="keyword parmname">SourceId</span></td>
+
+       <td class="entry" headers="d768350e150" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Salesforce unique ID for Thanks record referenced to this badge.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

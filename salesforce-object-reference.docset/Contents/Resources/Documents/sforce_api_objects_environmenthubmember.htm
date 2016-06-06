@@ -1,0 +1,664 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>EnvironmentHubMember | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_environmenthubmember"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>EnvironmentHubMember</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents a member organization in the
+    Environment Hub.</span> This object is available in API version 29.0 and
+  later.</span></div>
+
+<div class="p">
+   <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You can only create 20 member orgs per day. If you need to create additional orgs, log a
+    case in the Partner Community.</p>
+</div>
+</div></div></div></div>
+
+  </div>
+
+<div class="section" id="section1">
+<a name="section1"><!-- --></a><h2 class="helpHead2">Supported Calls</h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>,
+     <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">undelete()</samp></p>
+</div>
+
+<div class="section" id="section2">
+<a name="section2"><!-- --></a><h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d351554e116">Field Name</th>
+
+       <th class="featureTableHeader  " id="d351554e119">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">CreatedDate</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">System field that specifies the date and time when this record was created.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of this organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">DisplayName</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable,Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name that the user has specified for this member organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">EnvironmentHubId</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The Organization ID of this member’s Environment Hub organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">Id</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">System field that uniquely identifies this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">IsFedIdSsoMatchAllowed</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates if single sign-on has been enabled based on matching Federation ID. The
+           default value is <samp class="codeph nolang">false</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">IsSandbox</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates if the member organization is a sandbox (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This field is
+           available in API version
+           36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">MemberEntity</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique Organization ID of the member organization for this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">MemberType</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of member organization for this record. Possible values include
+            <span class="keyword parmname">Branch Org</span>, <span class="keyword parmname">Patch Org</span>, <span class="keyword parmname">Release
+            Org</span>, <span class="keyword parmname">Sandbox Org</span>, <span class="keyword parmname">Trialforce Management
+            Org</span>, and <span class="keyword parmname">Trialforce Source Org</span>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Only one member
+            type at a time is stored. Member type is determined according to this hierarchy: (1)
+            Sandbox, (2) Release, (3) Trialforce Source Org (TSO), (4) Patch, (5) Branch, and (6)
+            Trialforce Management Org (TMO). For example, if an org is both a sandbox and a TMO, the
+            value of <span class="keyword parmname">MemberType</span> is <span class="keyword parmname">Sandbox Org</span>.</p>
+</div>
+</div></div></div></div>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the member organization for this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">OrgEdition</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The organization’s edition, for example, Enterprise Edition or Unlimited
+           Edition.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">OrgStatus</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The licensing or creation status of this organization. Possible values include
+            <span class="keyword parmname">Active</span>, <span class="keyword parmname">Demo</span>, <span class="keyword parmname">Deleted</span>,
+            <span class="keyword parmname">Free</span>, <span class="keyword parmname">Inactive</span>, and
+           <span class="keyword parmname">Trial</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">Origin</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The method by which this organization was added to the Environment Hub. Possible
+           values are <span class="keyword parmname">Auto Discovered</span>, <span class="keyword parmname">User Added</span>, and
+            <span class="keyword parmname">Provisioned</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">ServiceProviderId</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the service provider for this member organization. This field is available
+           in API version 36.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">ShouldAddRelatedOrgs</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If related organizations should be automatically connected to the hub when this member
+           organization is added. The default value is <samp class="codeph nolang">true</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">ShouldEnableSSO</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If SSO should be enabled when this member organization is added. The default value is
+            <samp class="codeph nolang">false</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">SSOMappedUsers</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total number of mapped users in this member organization. This field is available
+           in API version 36.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">SsoStatus</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If single sign-on has been enabled for this organization. Possible values are:<ul class="ul bulletList">
+            <li class="li">
+<span class="keyword parmname">Enabled</span>—Single sign-on is enabled.</li>
+
+            <li class="li">
+<span class="keyword parmname">Disabled</span>—Single sign-on is disabled.</li>
+
+            <li class="li">
+<span class="keyword parmname">Pending</span>—Single sign-on is in the process of being
+             enabled.</li>
+
+            <li class="li">
+<span class="keyword parmname">Failed</span>—Single sign-on enablement failed. Contact Salesforce support for
+             assistance.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d351554e116" data-title="Field Name"><span class="keyword parmname">SsoUsernameFormula</span></td>
+
+       <td class="entry" headers="d351554e119" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The custom formula for matching users in the hub and member organizations.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+</div>
+
+<div class="section" id="section3">
+<a name="section3"><!-- --></a><h2 class="helpHead2">Usage</h2>
+<p class="p">Use this object to access
+and modify settings of member organizations in the Environment Hub.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

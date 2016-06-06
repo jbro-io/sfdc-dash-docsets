@@ -1,0 +1,342 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LoginGeo | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_logingeo"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LoginGeo</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the geographic location of the user’s IP address for a
+         login event. Due to the nature of geolocation technology, the accuracy of geolocation
+         fields (for example, country, city, postal code) may vary. This object is available in API version 34.0 and
+         later.</span></div>
+
+      <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+         
+         <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+         
+         <p class="p">Only users with Manage Users permissions can access this object.</p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+         
+         
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+               
+               
+               <thead class="thead sorted" align="left">
+                  <tr>
+                     <th class="featureTableHeader  " id="d503237e103">Field</th>
+
+                     <th class="featureTableHeader  " id="d503237e106">Details</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_city"><a name="def_city"><!-- --></a>The city where the user’s IP address is
+                                    physically located. This value is not localized.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_country"><a name="def_country"><!-- --></a>The country where the user’s IP address is
+                                    physically located. This value is not localized.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/CountryIso" class="dashAnchor"></a><span class="keyword parmname">CountryIso</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_countryiso"><a name="def_countryiso"><!-- --></a>The ISO 3166 code for the country where
+                                    the user’s IP address is physically located. For more
+                                    information, see <a class="xref" href="http://www.iso.org/iso/country_codes.htm" target="_blank">Country Codes - ISO 3166</a></span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">double</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_latitude"><a name="def_latitude"><!-- --></a>The latitude where the user’s IP address is
+                                    physically located.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/LoginTime" class="dashAnchor"></a><span class="keyword parmname">LoginTime</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">dateTime</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_logintime"><a name="def_logintime"><!-- --></a>Time of the login attempt, in GMT time
+                                    zone.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">double</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_longitude"><a name="def_longitude"><!-- --></a>The longitude where the user’s IP address
+                                    is physically located.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_postalcode"><a name="def_postalcode"><!-- --></a>The postal code where the user’s IP
+                                    address is physically located. This value is not
+                                 localized.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e103" data-title="Field"><a name="//apple_ref/cpp/Field/Subdivision" class="dashAnchor"></a><span class="keyword parmname">Subdivision</span></td>
+
+                     <td class="entry" headers="d503237e106" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><span class="ph" id="def_subdivision"><a name="def_subdivision"><!-- --></a>The name of the subdivision where the
+                                    user’s IP address is physically located. In the U.S., this value
+                                    is usually the state name (for example, Pennsylvania). This
+                                    value is not localized.</span></dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table></div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+         
+         <p class="p">The API allows you to do
+            many powerful queries. A few examples are:</p>
+
+         
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+               
+               
+               <thead class="thead sorted" align="left">
+                  <tr>
+                     <th class="featureTableHeader vertical-align-top " id="d503237e548">Sample Query </th>
+
+                     <th class="featureTableHeader vertical-align-top " id="d503237e551">Query String</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr>
+                     <td class="entry" headers="d503237e548" data-title="Sample Query">Query showing the country for a login event, where
+                           <span class="keyword parmname">Id=LoginGeoId</span> from AuthSession</td>
+
+                     <td class="entry" headers="d503237e551" data-title="Query String"><samp class="codeph soql">SELECT Country FROM LoginGeo WHERE Id =
+                           '0LE###############'</samp></td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d503237e548" data-title="Sample Query">Query showing the city and postal code for a login event, where
+                           <span class="keyword parmname">Id=LoginGeoId</span> from LoginHistory</td>
+
+                     <td class="entry" headers="d503237e551" data-title="Query String"><samp class="codeph soql">SELECT City, PostalCode FROM LoginGeo WHERE Id
+                           = '0SO###############'</samp></td>
+
+                  </tr>
+
+               </tbody>
+
+            </table></div>
+
+      </div>
+
+   </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

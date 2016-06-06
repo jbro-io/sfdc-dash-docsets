@@ -1,0 +1,1082 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserProvisioningRequest | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_userprovisioningrequest"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserProvisioningRequest</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an individual provisioning request to create, update, or
+      delete a single user account in a third-party service system (or another Salesforce organization). <span class="ph" id="api_version"><a name="api_version"><!-- --></a>This object is available in API version 33.0 and
+      later.</span></span></div>
+
+    <div class="section">
+      <p class="p">A UserProvisioningRequest (UPR) record is created for each provisioning action for each
+        user, and for each connected app available
+        to the user. For example, if a user has two connected apps, and a provisioning
+        request is sent to two different services to create an account for the user, Salesforce creates two UPR objects.
+        Provisioning actions include creating, updating, or deleting a user account. </p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<div class="p">
+<samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">undelete()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp>
+</div>
+</div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d749707e136">Field</th>
+
+              <th class="featureTableHeader  " id="d749707e139">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/AppName" class="dashAnchor"></a><span class="keyword parmname">AppName</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The unique name of the connected app associated with
+                      the service provider.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/ApprovalStatus" class="dashAnchor"></a><span class="keyword parmname">ApprovalStatus</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The status of the approval for the current request. If the user provisioning
+                      setup for the connected app
+                      does not have an approval process enabled, the status is <samp class="codeph nolang">Not Required</samp>. If an approval process is
+                      enabled, supported values are:<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">Required</samp>— An approval
+                          process is enabled in the user provisioning setup for the associated connected app, but there
+                          is no response to the request yet.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">Not Required</samp>— An approval
+                          process is not enabled in the user provisioning setup for the associated
+                            connected app.</li>
+
+                        <li class="li"><samp class="codeph nolang">Approved</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Denied</samp></li>
+
+                      </ul>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectedAppId" class="dashAnchor"></a><span class="keyword parmname">ConnectedAppId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">The 18-digit application ID for the connected app.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/ExternalUserId" class="dashAnchor"></a><span class="keyword parmname">ExternalUserId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The unique identifier for the user in the target system.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerId" class="dashAnchor"></a><span class="keyword parmname">ManagerId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p"><a name="//apple_ref/cpp/Field/SalesforceUserId" class="dashAnchor"></a>Salesforce ID of the
+                        user who manages the user specified in the
+                          <span class="keyword parmname">SalesforceUserId</span> field. If an approval process is
+                        configured for the user provisioning request. this value allows the manager
+                        to approve the request. Available in API version 34.0
+                        and later.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Autonumber,
+                        Defaulted on create,
+                        Filter,
+                        idLookup, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The unique name for this object.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/Operation" class="dashAnchor"></a><span class="keyword parmname">Operation</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The Apex
+                      method called by the trigger associated with the provisioning request
+                      (typically a change to the User object). Supported values are:<ul class="ul bulletList">
+                        <li class="li"><samp class="codeph nolang">Create</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Read</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Update</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Deactivate</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Activate</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Freeze</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Unfreeze</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Reconcile</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Linking</samp></li>
+
+                      </ul>
+<p class="p"><a name="//apple_ref/cpp/Field/Operation" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/isActive" class="dashAnchor"></a>For example, when the User object field <span class="keyword parmname">isActive</span>
+                        is set to <samp class="codeph nolang">false</samp>, the UPR object
+                          <span class="keyword parmname">Operation</span> field value is set to <samp class="codeph nolang">Deactivate</samp>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Salesforce ID of the
+                      Group or User who owns this object.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field">ParentID</td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">When a retry event is created, the failed UPR is cloned and resubmitted.
+                      This field contains a lookup to the failed UPR that was cloned to create the
+                      current record.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field">Retry Count</td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Number of retry attempts performed on a UPR. Retry Count enables custom
+                      business logic such as “Retry 5 times then stop and notify your admin.” </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/SalesforceUserId" class="dashAnchor"></a><span class="keyword parmname">SalesforceUserId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Salesforce ID of the
+                      user making the request.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/ScheduleDate" class="dashAnchor"></a><span class="keyword parmname">ScheduleDate</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">When to send this request to the service provider.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Scheduling is not
+                        implemented yet. Currently, provisioning changes are queued immediately to
+                        be sent to the service provider.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Status of this request. Supported values are: <ul class="ul bulletList">
+                        <li class="li">
+                          <samp class="codeph nolang">New</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Requested</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Completed</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Failed</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Collecting</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Collected</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Analyzing</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Analyzed</samp>
+</li>
+
+                        <li class="li">
+                          <samp class="codeph nolang">Committing</samp>
+</li>
+
+                        <li class="li"><samp class="codeph nolang">Retried</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">Manually Completed</samp></li>
+
+                      </ul>
+<p class="p"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>The <span class="keyword parmname">State</span> goes from <samp class="codeph nolang">New</samp> to <samp class="codeph nolang">Requested</samp> to <samp class="codeph nolang">Completed</samp> or <samp class="codeph nolang">Failed</samp>, unless a reconciliation process is occurring. For
+                        details about the reconciliation process <span class="keyword parmname">State</span> value
+                        changes, see <a class="xref" href="#usage">Usage</a>.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>The <span class="keyword parmname">State</span>
+                        goes from <samp class="codeph nolang">Failed</samp> to <samp class="codeph nolang">Retried</samp> or <samp class="codeph nolang">Manually Completed</samp> when troubleshooting UPR failures. For
+                        details about handling failures, see <a class="xref" href="#troubleshooting">State Values for Managing Provisioning
+                        Failures</a>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/UserProvAccountId" class="dashAnchor"></a><span class="keyword parmname">UserProvAccountId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The ID value of the associated UserProvAccount object.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e136" data-title="Field"><a name="//apple_ref/cpp/Field/UserProvConfigId" class="dashAnchor"></a><span class="keyword parmname">UserProvConfigId</span></td>
+
+              <td class="entry" headers="d749707e139" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">The ID value of the associated UserProvisioningConfig object. Available in
+                          API version
+                        34.0 and later.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section" id="usage">
+<a name="usage"><!-- --></a><h2 class="helpHead2">Usage</h2>
+
+      
+      <p class="p">The <span class="keyword parmname">State</span> value changes during a reconciliation process (<samp class="codeph nolang">Operation = Reconcile</samp>) to gather and compare users on the
+        third-party system to Salesforce
+        users. Typically, when a UPR entry is first created, it has a <span class="keyword parmname">State</span>
+        value of <samp class="codeph nolang">New</samp>. When a collection process is triggered,
+        the <span class="keyword parmname">State</span> transitions to <samp class="codeph nolang">Collecting</samp> until that process is finished and the <span class="keyword parmname">State</span> is
+          <samp class="codeph nolang">Collected</samp>. When an analyze process is triggered, the
+          <span class="keyword parmname">State</span> transitions to <samp class="codeph nolang">Analyzing</samp>
+        until that process is finished and the <span class="keyword parmname">State</span> is <samp class="codeph nolang">Analyzed</samp>. If a process commits the request, the
+          <span class="keyword parmname">State</span> then transitions to <samp class="codeph nolang">Committing</samp>, and the properties move from the UserProvAccountStaging object to
+        the UserProvAccount object. When those properties are saved in the UserProvAccount object,
+        the <span class="keyword parmname">State</span> transitions to <samp class="codeph nolang">Completed</samp>.</p>
+
+      <p class="p">However, the <span class="keyword parmname">State</span> does not necessarily start at <samp class="codeph nolang">New</samp>. For example, UserProvAccountStaging entries can be
+        inserted programmatically. If a process is initiated that triggers linking these rows to
+        accounts on the third-party service, a UPR entry could start with the <samp class="codeph nolang">Analyzing</samp>
+        <span class="keyword parmname">State</span>.</p>
+
+      <p class="p">Also, the <span class="keyword parmname">State</span> cannot go backwards from an active task. For example,
+        a successful <samp class="codeph nolang">Analyzing</samp>
+        <span class="keyword parmname">State</span> must progress to <samp class="codeph nolang">Analyzed</samp>;
+        unless the active process fails, and then the <span class="keyword parmname">State</span> must change to
+          <samp class="codeph nolang">Failed</samp>. Certain <span class="keyword parmname">State</span>
+        transitions cannot be made programmatically and must be triggered by Salesforce.</p>
+
+      <div class="p">The following table shows the <span class="keyword parmname">State</span> transitions that can occur for
+        each <span class="keyword parmname">State</span> value. Each row corresponds to a current
+          <span class="keyword parmname">State</span> value and each column corresponds to a new
+          <span class="keyword parmname">State</span> after a potential transition.<ul class="ul bulletList">
+          <li class="li">
+<img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"> — the transition to
+            this value is not allowed.</li>
+
+          <li class="li">
+<img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"> — the
+            transition to this value is allowed.</li>
+
+          <li class="li">
+<img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only">
+            — only Salesforce can
+            transition the <span class="keyword parmname">State</span> to this value.</li>
+
+        </ul>
+</div>
+
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader vertical-align-top text-center" id="d749707e1386"></th>
+
+              <th class="featureTableHeader vertical-align-top text-center" id="d749707e1388"><samp class="ph codeph">New</samp></th>
+
+              <th class="featureTableHeader vertical-align-top text-center" id="d749707e1392"><samp class="ph codeph">Requested</samp></th>
+
+              <th class="featureTableHeader vertical-align-top text-center" id="d749707e1396"><samp class="ph codeph">Collecting</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1400"><samp class="ph codeph">Collected</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1405"><samp class="ph codeph">Analyzing</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1409"><samp class="ph codeph">Analyzed</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1413"><samp class="ph codeph">Committing</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1417"><samp class="ph codeph">Completed</samp></th>
+
+              <th class="featureTableHeader  text-center" id="d749707e1421"><samp class="ph codeph">Failed</samp></th>
+
+              <th class="featureTableHeader  " id="d749707e1425"><samp class="ph codeph">Retried</samp></th>
+
+              <th class="featureTableHeader  " id="d749707e1430"><samp class="ph codeph">Manually Completed</samp></th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">New</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Requested</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Collecting</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Collected</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Analyzing</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Analyzed</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Committing</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fsalesforce_logo_16.png&amp;folder=api" alt="Salesforce only"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Completed</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title="">
+                <samp class="codeph nolang">Failed</samp>
+</td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fcheckmark_16.png&amp;folder=api" alt="yes"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title=""><samp class="codeph nolang">Retried</samp></td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d749707e1386" data-title=""><samp class="codeph nolang">Manually Completed</samp></td>
+
+              <td class=" text-center" headers="d749707e1388" data-title="New"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1392" data-title="Requested"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1396" data-title="Collecting"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1400" data-title="Collected"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1405" data-title="Analyzing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1409" data-title="Analyzed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1413" data-title="Committing"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1417" data-title="Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class=" text-center" headers="d749707e1421" data-title="Failed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1425" data-title="Retried"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+              <td class="entry" headers="d749707e1430" data-title="Manually Completed"><img class="image" src="https://developer.salesforce.com/docs/resources/img/en-us/202.0?doc_id=dev_guides%2Fapi%2Fimages%2Fx_16.png&amp;folder=api" alt="no"></td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section" id="troubleshooting">
+<a name="troubleshooting"><!-- --></a><h2 class="helpHead2">State Values for Managing Provisioning Failures</h2>
+
+      
+      <p class="p">The <span class="keyword parmname">state</span> value changes to <samp class="codeph nolang">Failed</samp>
+        for several reasons, such as network outages, session timeouts, permissions issues, and
+        record locks. The <samp class="codeph nolang">Failed</samp> state can transition to either
+          <samp class="codeph nolang">Retried</samp> or <samp class="codeph nolang">Manually
+          Completed</samp> to indicate what action was taken to address the failure. Actions can
+        include correcting the root cause of the failure and requesting that the provisioning engine
+        retry the UPR. Or, it can be completing the action against the target manually. Each UPR is
+        an independent transaction and it’s possible the retry causes a failure with a different
+        root cause. So it’s hard to distinguish failed events that you addressed from the ones that
+        require more action.</p>
+
+      <p class="p"> If you tried to correct the cause of the failure and requested the provisioning engine to
+        retry the UPR, you can mark the failed UPR <samp class="codeph apex_code">Retried</samp>.
+        Or, if the action against the target was completed manually, you can mark it <samp class="codeph apex_code">Manually Completed</samp>.</p>
+
+      <p class="p">When a retry event is created, the failed UPR is cloned, and resubmitted. The <samp class="codeph apex_code">ParentID</samp> field contains a lookup to the failed UPR to use
+        to clone the new UPR. The <samp class="codeph apex_code">Retry Count</samp> field contains
+        the number of retry attempts that were performed on a UPR. With the <samp class="codeph apex_code">Retry Count</samp> field, you can add custom business logic like
+        "Retry 5 times then stop and notify your admin."</p>
+
+    </div>
+
+  </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

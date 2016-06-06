@@ -1,0 +1,419 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PartnerNetworkConnection | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_partnernetworkconnection"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PartnerNetworkConnection</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a Salesforce to Salesforce connection between Salesforce organizations.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d583688e88">Field</th>
+
+<th class="featureTableHeader  " id="d583688e91">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the Account associated with this connection.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionName" class="dashAnchor"></a><span class="keyword parmname">ConnectionName</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A descriptive name for the connection. Limit: 295 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionStatus" class="dashAnchor"></a><span class="keyword parmname">ConnectionStatus</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of the Salesforce to Salesforce connection. The picklist includes the following values: <ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Sent</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Received</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Pending</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Accepted</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Rejected</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Inactive</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Disconnecting</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ConnectionSuspended</samp></li>
+
+            <li class="li"><samp class="codeph nolang">SubscribeInProgress</samp></li>
+
+            <li class="li"><samp class="codeph nolang">UsersInitialSync</samp></li>
+
+            <li class="li"><samp class="codeph nolang">BulkSyncMetadata</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionType" class="dashAnchor"></a><span class="keyword parmname">ConnectionType</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of Salesforce to Salesforce
+           connection. The picklist includes the following values: <ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Standard</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Replication</samp></li>
+
+           </ul>
+This field is available in API version 30.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a><span class="keyword parmname">ContactId</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the Contact associated with this connection. </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/IsSyncAuditFields" class="dashAnchor"></a><span class="keyword parmname">IsSyncAuditFields</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether audit fields are synced between the primary and secondary
+           organization in a replication connection. This field is available in API version 32.0 and later, and
+           is only accessible in Salesforce
+           organizations where Organization Sync is enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/IsSyncMetadata" class="dashAnchor"></a><span class="keyword parmname">IsSyncMetadata</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether supported types of metadata are synced from the primary to the
+           secondary organization in a replication connection. This field is available in API version 33.0 and later, and
+           is only accessible in Salesforce
+           organizations where Organization Sync is enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/IsSyncUsers" class="dashAnchor"></a><span class="keyword parmname">IsSyncUsers</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether users with standard Salesforce user licenses are synced
+           between the primary and secondary organization in a replication connection. This field is
+           available in API version
+           35.0 and later, and is only accessible in Salesforce organizations where
+           Organization Sync is enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/PrimaryContactId" class="dashAnchor"></a><span class="keyword parmname">PrimaryContactId</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User
+           associated with this connection.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ReplicationRole" class="dashAnchor"></a><span class="keyword parmname">ReplicationRole</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The role of this Salesforce
+           organization in the replication connection. The picklist includes the following values: <ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Primary</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Secondary</samp></li>
+
+           </ul>
+This field is available in API version 30.0 and later, and
+           is only accessible in Salesforce
+           organizations where Organization Sync is enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d583688e88" data-title="Field"><a name="//apple_ref/cpp/Field/ResponseDate" class="dashAnchor"></a><span class="keyword parmname">ResponseDate</span></td>
+
+       <td class="entry" headers="d583688e91" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time that the connection was accepted or rejected.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+ <p class="p">Represents Salesforce to Salesforce standard and
+    replication connections. This object is referenced by all objects that have been shared with
+    other organizations, enabling you to determine which connections shared a record with you. If
+    the organization does not have Salesforce to Salesforce enabled, the PartnerNetworkConnection object is not available, and you can’t access it via the API.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworkrecordconnection.htm" title="Represents a record shared between Salesforce organizations using Salesforce to Salesforce.">PartnerNetworkRecordConnection</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

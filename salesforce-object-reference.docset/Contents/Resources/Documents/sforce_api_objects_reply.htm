@@ -1,0 +1,374 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Reply | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_reply"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Reply</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="ReplyDef"><a name="ReplyDef"><!-- --></a>Represents a reply that a user has submitted to a
+    question in an answers community.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+       </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+                    
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d639686e119">Field</th>
+
+<th class="featureTableHeader  " id="d639686e122">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname" id="BodyDef"><a name="BodyDef"><!-- --></a>Body</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Body of this reply.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><span class="ph" id="CommunityID"><a name="//apple_ref/cpp/Field/CommunityId" class="dashAnchor"></a><a name="CommunityID"><!-- --></a><span class="keyword parmname">CommunityId</span></span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="reply_community_dscr"><a name="reply_community_dscr"><!-- --></a>The zone ID associated
+with the question and its reply. </span> This field is available in API version
+27.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><span class="ph" id="ownerfullphotoURL"><a name="//apple_ref/cpp/Field/CreatorFullPhotoUrl" class="dashAnchor"></a><a name="ownerfullphotoURL"><!-- --></a><span class="keyword parmname">CreatorFullPhotoUrl</span></span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="descr_ownerfullphotoURL"><a name="descr_ownerfullphotoURL"><!-- --></a>URL of the user’s profile
+photo from the feed. Chatter Answers must be enabled to view this
+field.</span> This field is available in API version
+26.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><span class="ph" id="ownername"><a name="//apple_ref/cpp/Field/CreatorName" class="dashAnchor"></a><a name="ownername"><!-- --></a><span class="keyword parmname">CreatorName</span></span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="descr_owner_name"><a name="descr_owner_name"><!-- --></a>Name of the user who posted the question
+or reply. Only the first name of internal users (agents) appears to
+portal users in the feed. Chatter Answers must be enabled to view
+this field.</span> This field is available in API version
+26.0 and later</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><span class="ph" id="ownersmallphotoURL"><a name="//apple_ref/cpp/Field/CreatorSmallPhotoUrl" class="dashAnchor"></a><a name="ownersmallphotoURL"><!-- --></a><span class="keyword parmname">CreatorSmallPhotoUrl</span></span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="descr_small_photo_url"><a name="descr_small_photo_url"><!-- --></a>URL of the user’s thumbnail
+photo from the feed. Chatter Answers must be enabled to view this
+field.</span> This field is available in API version
+26.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/DownVotes" class="dashAnchor"></a><span class="keyword parmname">DownVotes</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total number of down votes for a reply.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, idLookup, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>When creating a Reply, the <span class="keyword parmname">Name</span> field is automatically populated
+with a truncated, plain text version of the Reply <span class="keyword parmname">Body</span> field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/NumReportAbuses" class="dashAnchor"></a><span class="keyword parmname" id="NumReportAbuses"><a name="NumReportAbuses"><!-- --></a>NumReportAbuses</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="NumReportAbusesDesc"><a name="NumReportAbusesDesc"><!-- --></a>Represents the number of reported
+abuses on the reply by users.</span><p class="p"><span class="ph" id="Api24"><a name="Api24"><!-- --></a>This field is
+available in API version
+24.0 and later.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/QuestionId" class="dashAnchor"></a><span class="keyword parmname">QuestionId</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the Question to which this reply was made.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/UpVotes" class="dashAnchor"></a><span class="keyword parmname">UpVotes</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total number of up votes for a reply.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d639686e119" data-title="Field"><a name="//apple_ref/cpp/Field/VoteTotal" class="dashAnchor"></a><span class="keyword parmname">VoteTotal</span></td>
+
+<td class="entry" headers="d639686e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total number of all votes for a reply, including up and down
+votes.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to track replies to
+a Question.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

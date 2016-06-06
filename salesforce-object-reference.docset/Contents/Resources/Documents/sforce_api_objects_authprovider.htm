@@ -1,0 +1,816 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AuthProvider | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_authprovider"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AuthProvider</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an authentication provider (or auth provider) in your
+			organization.</span></div>
+<div class="section">
+<p class="p">An auth provider enables users to log into your Salesforce organization
+				using their login credentials from an external service provider such as
+				Facebook© or Janrain©.</p>
+</div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			<p class="p">Only users with the
+				“Customize Application” and “Manage AuthProviders”
+				permissions can access this object.</p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d183799e113">Field Name</th>
+
+								<th class="featureTableHeader  " id="d183799e116">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/AuthorizeUrl" class="dashAnchor"></a><span class="keyword parmname">AuthorizeUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a>Required, but only if <span class="keyword parmname">ProviderType</span>
+											is <samp class="codeph nolang">OpenIdConnect</samp>.
+												<span class="ph" id="authorizeUrl_desc"><a name="authorizeUrl_desc"><!-- --></a>The OAuth authorization
+												endpoint URL. Used only with OpenID Connect
+												authentication providers.</span> Available in API version 29.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConsumerKey" class="dashAnchor"></a><span class="keyword parmname">ConsumerKey</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Required. The app’s key that is registered at the
+											third-party Single Sign-On provider.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConsumerSecret" class="dashAnchor"></a><span class="keyword parmname">ConsumerSecret</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<div class="p">Required. The consumer secret of the app that is
+												registered at the third-party Single Sign-On
+												provider. This field cannot be updated. When using
+												<samp class="codeph nolang">create()</samp> this
+												field must be encrypted. To create an encrypted form
+												of the consumer secret from plain text:<ol class="ol enumList">
+												<li class="li"><a name="//apple_ref/cpp/Field/ConsumerSecret" class="dashAnchor"></a>Create an auth provider with the
+												<span class="keyword parmname">ConsumerSecret</span> plain text
+												value.</li>
+
+												<li class="li">Save the auth provider.</li>
+
+												<li class="li">Create an outbound change set that includes
+												the auth provider component.</li>
+
+												</ol>
+The new change set .xml file will have an entry
+												in the form <samp class="codeph xml"><span class="tag">&lt;consumerSecret</span>&gt;++XYZ++<span class="tag">&lt;/consumerSecret</span>&gt;</samp>
+												where ++XYZ++ is the encrypted secret.</div>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/CustomMetadataTypeRecord" class="dashAnchor"></a><span class="keyword parmname">CustomMetadataTypeRecord</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="custommdtrecord"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a><a name="custommdtrecord"><!-- --></a>Required, but only with custom authentication provider
+												plug-ins, when <span class="keyword parmname">ProviderType</span> is
+												<samp class="codeph nolang">Custom</samp>. The
+												API name of the authentication provider.</span>
+											Available in API version 36.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/DefaultScopes" class="dashAnchor"></a><span class="keyword parmname">DefaultScopes</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a>Required, but only if
+												<span class="keyword parmname">ProviderType</span> is <samp class="codeph nolang">OpenIdConnect</samp>
+												<span class="ph" id="defaultScopes_desc"><a name="defaultScopes_desc"><!-- --></a>The scopes to be sent
+												with the authorization request, if not specified
+												when a flow is started. Used only with OpenID
+												Connect authentication providers.</span> Available
+												in API version 29.0 and later.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Required. Used when referring to the auth provider
+												from a program.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/ErrorUrl" class="dashAnchor"></a><span class="keyword parmname">ErrorUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">A custom error URL for the provider to use to report
+												any errors.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExecutionUserId" class="dashAnchor"></a><span class="keyword parmname">ExecutionUserId</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The user that runs the Apex handler class. The user must have the
+												“Manage Users” permission. A user is
+												required if you specify a registration handler
+												class.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/FriendlyName" class="dashAnchor"></a><span class="keyword parmname">FriendlyName</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Required. A user-friendly name for the provider.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/IconUrl" class="dashAnchor"></a><span class="keyword parmname">IconUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><span class="ph" id="IconURL_desc"><a name="IconURL_desc"><!-- --></a>The path to an icon to use as a
+												button on the login page. Users click the button
+												to log in with the associated auth provider.</span>
+											</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/IdTokenIssuer" class="dashAnchor"></a><span class="keyword parmname">IdTokenIssuer</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><span class="ph" id="idtokenissuer_desc"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a><a name="idtokenissuer_desc"><!-- --></a>Only available if
+												<span class="keyword parmname">ProviderType</span> is <samp class="codeph nolang">OpenIdConnect</samp>. This
+												value identifies the source of the authentication
+												token in the form <kbd class="ph userinput">https:
+												URI</kbd> . Used only with OpenID Connect
+												authentication providers. If provided, Salesforce validates the returned <samp class="codeph nolang">id_token</samp> value. The
+												OpenID Connect specification requires an <samp class="codeph nolang">id_token</samp> value to be
+												returned with the <samp class="codeph nolang">access_token</samp> value. Available in API version 30.0 and later.</span></p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/LogoutUrl" class="dashAnchor"></a><span class="keyword parmname">LogoutUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="logoutUrl_desc"><a name="//apple_ref/cpp/Field/https" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/http" class="dashAnchor"></a><a name="logoutUrl_desc"><!-- --></a>Provides a specific destination
+												for users after they log out if they authenticated
+												using social sign-on. The URL must be fully
+												qualified with an <span class="keyword parmname">http</span> or
+												<span class="keyword parmname">https</span> prefix, such as
+												<span class="ph filepath">https://acme.my.salesforce.com</span>.</span>
+											Available in API version 33.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsIncludeOrgIdInId" class="dashAnchor"></a><span class="keyword parmname">OptionsIncludeOrgIdInId</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><span class="ph" id="includeOrgId_desc"><a name="includeOrgId_desc"><!-- --></a>Includes the organization
+												ID to differentiate between users with the same
+												user ID from two sources (such as two sandboxes). Only available for Salesforce authentication providers. Once set to <samp class="codeph nolang">true</samp>, it can’t be set
+												to <samp class="codeph nolang">false</samp>.
+												Available in API version 32.0 and later.</span></p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSendAccessTokenInHeader" class="dashAnchor"></a><span class="keyword parmname">OptionsSendAccessTokenInHeader</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><span class="ph" id="sendAccessToken_desc"><a name="//apple_ref/cpp/Field/UserInfoUrl" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a><a name="sendAccessToken_desc"><!-- --></a>Required only if
+												<span class="keyword parmname">ProviderType</span> is <samp class="codeph nolang">OpenIdConnect</samp>. When
+												<samp class="codeph nolang">true</samp>, the
+												access token is sent to the
+												<span class="keyword parmname">UserInfoUrl</span> in a header
+												instead of a query string. Used only with OpenID
+												Connect authentication providers. Available in API version 30.0 and later.</span></p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSendClientCredentialsInHeader" class="dashAnchor"></a><span class="keyword parmname">OptionsSendClientCredentialsInHeader</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><span class="ph" id="sendClientCred_desc"><a name="//apple_ref/cpp/Field/tokenUrl" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a><a name="sendClientCred_desc"><!-- --></a>Required only if
+												<span class="keyword parmname">ProviderType</span> is <samp class="codeph nolang">OpenIdConnect</samp>. When
+												<samp class="codeph nolang">true</samp>, the
+												client credentials are sent in a header, instead
+												of a query string, to the
+												<span class="keyword parmname">tokenUrl</span>. The credentials are
+												in the standard OpenID Connect Basic Credentials
+												header form, which is <samp class="codeph nolang">Basic &lt;token&gt;</samp>, where <samp class="codeph nolang">&lt;token&gt;</samp> is the
+												base64-encoded string <samp class="codeph nolang">"clientkey:clientsecret"</samp>. Used only with
+												OpenID Connect authentication providers. Available
+												in API version 30.0 and later.</span></p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a><span class="keyword parmname">ProviderType</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<div class="p">Required. The third-party Single Sign-On provider to
+												use. Valid values are:<ul class="ul bulletList">
+												<li class="li"><samp class="codeph nolang">Facebook</samp></li>
+
+												<li class="li"><samp class="codeph nolang">Salesforce</samp></li>
+
+												<li class="li"><samp class="codeph nolang">Janrain</samp></li>
+
+												<li class="li">
+<samp class="codeph nolang">LinkedIn</samp>
+												(Available in API version 32.0 and later.)</li>
+
+												<li class="li">
+<samp class="codeph nolang">Twitter</samp>
+												(Available in API version 32.0 and later.)</li>
+
+												<li class="li">
+<samp class="codeph nolang">OpenIdConnect</samp> (Available in API version 29.0 and later.)<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This type
+												requires values for the following fields:</p><ul class="ul bulletList">
+												<li class="li"><a name="//apple_ref/cpp/Field/AuthorizeUrl" class="dashAnchor"></a><span class="keyword parmname">AuthorizeUrl</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/DefaultScopes" class="dashAnchor"></a><span class="keyword parmname">DefaultScopes</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/TokenUrl" class="dashAnchor"></a><span class="keyword parmname">TokenUrl</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/UserInfoUrl" class="dashAnchor"></a><span class="keyword parmname">UserInfoUrl</span></li>
+
+												</ul>
+<p></p>
+</div>
+</div></div></div></div>
+</li>
+
+												<li class="li">
+<samp class="codeph nolang">MicrosoftACS</samp> Microsoft Access Control
+												Service typically provides authentication for a
+												Microsoft Office 365 service like SharePoint®
+												Online. (Available in API version 31.0 and later.)</li>
+
+												<li class="li">
+<samp class="codeph nolang">GitHub</samp>—<span class="ph" id="github_desc"><a name="github_desc"><!-- --></a>Use
+												the <samp class="codeph nolang">GitHub</samp>
+												provider to log in users of your Force.com app to GitHub using OAuth. When logged in to
+												GitHub, your app can make calls to GitHub APIs.
+												The <samp class="codeph nolang">GitHub</samp>
+												provider isn’t available as a single sign-on
+												provider, which means users can’t log in to your
+												Salesforce organization using their GitHub login
+												credentials.</span> (Available in API version 35.0 and later.)</li>
+
+												<li class="li">
+<samp class="codeph nolang">Custom</samp>
+												(Available in API version 36.0 and later.)</li>
+
+												</ul>
+</div>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/PluginId" class="dashAnchor"></a><span class="keyword parmname">PluginId</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="pluginid"><a name="pluginid"><!-- --></a>An existing Apex class that implements the <samp class="codeph nolang">Auth.AuthProviderPlugin</samp> interface.</span>
+											Available in API version 36.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/RegistrationHandlerId" class="dashAnchor"></a><span class="keyword parmname">RegistrationHandlerId</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">An existing Apex class that implements the <samp class="codeph nolang">Auth.RegistrationHandler</samp> interface.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/TokenUrl" class="dashAnchor"></a><span class="keyword parmname">TokenUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/ProviderType" class="dashAnchor"></a>Required, but only if <span class="keyword parmname">ProviderType</span>
+											is <samp class="codeph nolang">OpenIdConnect</samp>.
+												<span class="ph" id="tokenUrl_desc"><a name="tokenUrl_desc"><!-- --></a>The OAuth token endpoint URL.
+												Used only with OpenID Connect authentication
+												providers.</span> Available in API version 29.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d183799e113" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserInfoUrl" class="dashAnchor"></a><span class="keyword parmname">UserInfoUrl</span></td>
+
+							<td class="entry" headers="d183799e116" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><a name="//apple_ref/cpp/Field/Provider-type" class="dashAnchor"></a>Required, but only if
+												<span class="keyword parmname">Provider-type</span> is <samp class="codeph nolang">OpenIdConnect</samp>. <span class="ph" id="userInfoUrl_desc"><a name="userInfoUrl_desc"><!-- --></a>The OpenID Connect endpoint
+												URL. Used only with OpenID Connect authentication
+												providers.</span> Available in API version 29.0 and later.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+					</table></div>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

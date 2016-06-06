@@ -1,0 +1,897 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PlatformAction | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_platformaction"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PlatformAction</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>PlatformAction is a virtual read-only object. It enables you to query
+   for actions displayed in the UI, given a user, a context, device format, and a record ID.
+   Examples include standard and custom buttons, quick actions, and productivity
+  actions.</span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">query()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d590590e80">Field</th>
+
+       <th class="featureTableHeader  " id="d590590e83">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ActionListContext" class="dashAnchor"></a><span class="keyword parmname">ActionListContext</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. The list context this action applies to. Valid values are:<a name="actionlistcontext_valid_values"><!-- --></a><ul class="ul bulletList" id="actionlistcontext_valid_values">
+            <li class="li"><samp class="codeph nolang">BannerPhoto</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Chatter</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Dockable</samp></li>
+
+            <li class="li"><samp class="codeph nolang">FeedElement</samp></li>
+
+            <li class="li"><samp class="codeph nolang">FlexiPage</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Global</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ListView</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ListViewDefinition</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ListViewRecord</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Lookup</samp></li>
+
+            <li class="li"><samp class="codeph nolang">MruList</samp></li>
+
+            <li class="li"><samp class="codeph nolang">MruRow</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ObjectHomeChart</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Photo</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Record</samp></li>
+
+            <li class="li"><samp class="codeph nolang">RecordEdit</samp></li>
+
+            <li class="li"><samp class="codeph nolang">RelatedList</samp></li>
+
+            <li class="li"><samp class="codeph nolang">RelatedListRecord</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ActionTarget" class="dashAnchor"></a><span class="keyword parmname">ActionTarget</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The URL to invoke or describe the action when the action is invoked. If the action is
+           a standard button overridden by a Visualforce page, the ActionTarget
+           returns the URL of the Visualforce
+           page, such as <span class="ph filepath">/apex/<var class="keyword varname">pagename</var></span>.</dd>
+
+          <dd class="dd">This field is available in API version 35.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ActionTargetType" class="dashAnchor"></a><span class="keyword parmname">ActionTargetType</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of the target when this action is triggered. Valid values are: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Describe</samp>—applies to actions with a user
+             interface, such as quick actions</li>
+
+            <li class="li">
+<samp class="codeph nolang">Invoke</samp>—applies to actions with no user
+             interface, such as action links or invocable actions</li>
+
+            <li class="li">
+<samp class="codeph nolang">Visualforce</samp>—applies to standard buttons
+             overridden by a Visualforce
+             page</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ActionTargetUrl" class="dashAnchor"></a><span class="keyword parmname">ActionTargetUrl</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ActionTarget" class="dashAnchor"></a>URL to invoke or describe the action when the action is invoked. This field is
+           deprecated in API version
+           35.0 and later. Use <span class="keyword parmname">ActionTarget</span> instead.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/Category" class="dashAnchor"></a><span class="keyword parmname">Category</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Applies only to action links. Denotes whether the action link shows up in the feed
+           item list of actions or the overflow list of actions. Valid values are: <ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Primary</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Overflow</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ConfirmationMessage" class="dashAnchor"></a><span class="keyword parmname">ConfirmationMessage</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Applies only to action links. The message to display before the action is invoked.
+           Field is null if no confirmation is required before invoking the action.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/DeviceFormat" class="dashAnchor"></a><span class="keyword parmname">DeviceFormat</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies which action icon the PlatformAction query returns. If this field isn’t
+           specified, it defaults to Phone. Valid values are:<ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Aloha</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Desktop</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Phone</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Tablet</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/ExternalId" class="dashAnchor"></a><span class="keyword parmname">ExternalId</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique ID for the PlatformAction. If the action doesn’t have an ID, its API name is used.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/GroupId" class="dashAnchor"></a><span class="keyword parmname">GroupId</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique ID of a group of action links.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/IconContentType" class="dashAnchor"></a><span class="keyword parmname">IconContentType</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The content type—such as .jpg, .gif, or .png—of the icon for this
+           action. Applies to both custom and standard icons assigned to actions.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/IconHeight" class="dashAnchor"></a><span class="keyword parmname">IconHeight</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The height of the icon for this action. Applies only to standard icons.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/IconUrl" class="dashAnchor"></a><span class="keyword parmname">IconUrl</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The URL of the icon for this action.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/IconWidth" class="dashAnchor"></a><span class="keyword parmname">IconWidth</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The width of the icon for this action. Applies only to standard icons.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/InvocationStatus" class="dashAnchor"></a><span class="keyword parmname">InvocationStatus</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of the action within the feed item. Applies to action links only. Valid
+           values are:<ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Failed</samp></li>
+
+            <li class="li"><samp class="codeph nolang">New</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Pending</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Successful</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/InvokedByUserId" class="dashAnchor"></a><span class="keyword parmname">InvokedByUserId</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user who most recently invoked this action within the current feed item.
+           Applies to action links only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/IsGroupDefault" class="dashAnchor"></a><span class="keyword parmname">IsGroupDefault</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Denotes whether this action is the default in an action link group. False for other
+           action types. Applies to action links only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a><span class="keyword parmname">Label</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The label to display for this action.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/PrimaryColor" class="dashAnchor"></a><span class="keyword parmname">PrimaryColor</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The primary color of the icon for this action.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/RelatedSourceEntity" class="dashAnchor"></a><span class="keyword parmname">RelatedSourceEntity</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="relatedsourceentity_desc"><a name="//apple_ref/cpp/Field/ActionListContext" class="dashAnchor"></a><a name="relatedsourceentity_desc"><!-- --></a>When the <span class="keyword parmname">ActionListContext</span> is
+            RelatedList or RelatedListRecord, this field represents the API name of the related list
+            to which the action belongs.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/Section" class="dashAnchor"></a><span class="keyword parmname">Section</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The section of the user interface the action resides in. Applicable only to Lightning Experience. Valid values are: <ul class="ul bulletList">
+            <li class="li">ActivityComposer</li>
+
+            <li class="li">CollaborateComposer</li>
+
+            <li class="li">NotesComposer</li>
+
+            <li class="li">Page</li>
+
+            <li class="li">SingleActionLinks</li>
+
+           </ul>
+This field is available in API version 35.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/SourceEntity" class="dashAnchor"></a><span class="keyword parmname">SourceEntity</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. The object or record with which this action is associated.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/Subtype" class="dashAnchor"></a><span class="keyword parmname">Subtype</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="platformaction_subtype_desc"><a name="platformaction_subtype_desc"><!-- --></a>The subtype of the action. For quick actions, the
+            subtype is <samp class="codeph nolang">QuickActionType</samp>. For custom buttons, the
+            subtype is <samp class="codeph nolang">WebLinkTypeEnum</samp>. For action links,
+            subtypes are <samp class="codeph nolang">Api</samp>, <samp class="codeph nolang">ApiAsync</samp>, <samp class="codeph nolang">Download</samp>, and <samp class="codeph nolang">Ui</samp>. Standard buttons and productivity actions have no
+            subtype.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d590590e80" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+       <td class="entry" headers="d590590e83" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Restricted picklist,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of the action. Valid values are: <ul class="ul bulletList">
+                                    <li class="li">
+<samp class="codeph nolang">ActionLink</samp>—An
+                                        indicator on a feed element that targets an API, a web page,
+                                        or a file, represented by a button in the Salesforce
+                                        Chatter feed UI.</li>
+
+                                    <li class="li">
+<samp class="codeph nolang">CustomButton</samp>—When clicked, opens a URL or a
+                                            Visualforce page in a window or executes JavaScript.</li>
+
+                                    <li class="li"><samp class="codeph nolang">InvocableAction</samp></li>
+
+                                    <li class="li">
+<samp class="codeph nolang">ProductivityAction</samp>—Productivity actions are predefined by Salesforce and are attached to a limited set of
+         objects. You can’t edit or delete productivity actions.</li>
+
+                                    <li class="li">
+<samp class="codeph nolang">QuickAction</samp>—A
+                                        global or object-specific action.</li>
+
+                                    <li class="li">
+<samp class="codeph nolang">StandardButton</samp>—A
+                                        predefined Salesforce button such as New, Edit, and Delete.</li>
+
+                                </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">PlatformAction can be described using <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_calls_describesobject.htm#sforce_api_calls_describesobject">describeSObject()</a>.</p>
+
+   <div class="p">You can directly query for PlatformAction. For
+    example, this query returns all fields for actions associated with each of the records of the
+    listed
+     objects:<div class="codeSection soql"><div id="highlighter_302125" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_302125_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_302125" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ExternalId, ActionTargetType, ActionTargetUrl, ApiName, Category,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ConfirmationMessage, ExternalId, GroupId, UiTheme, IconUrl, IconContentType, </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">IconHeight, IconWidth, PrimaryColor, InvocationStatus, InvokedByUserId, </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">IsGroupDefault, Label, LastModifiedDate, Subtype, SourceEntity, Type </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">FROM PlatformAction </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">WHERE SourceEntity IN ('001xx000003DGsH', '001xx000003DHBq', ‘Task’, ‘Global’) AND </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ActionListContext = ‘Record’;</code></td></tr></tbody></table></div></div></div></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>To
+     query PlatformAction, provide the
+      <span class="keyword parmname">ActionListContext</span> and <span class="keyword parmname">SourceEntity</span>. If you query for
+      <span class="keyword parmname">ActionListContext</span> with a value of <samp class="codeph nolang">RelatedList</samp>, and don't specify a <span class="keyword parmname">RelatedSourceEntity</span>, the query
+     returns the API name of the related list.</p>
+</div>
+</div></div></div></div>
+</div>
+
+   <div class="p">This query uses multiple <span class="keyword parmname">ActionListContext</span> values in its <samp class="codeph soql">WHERE</samp> clause to return all actions in the Lightning Experience user interface (<samp class="codeph soql">DeviceFormat = 'Desktop'</samp>) for the specified
+    object:<div class="codeSection soql"><div id="highlighter_430116" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_430116_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_430116" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ActionListContext, Label, Type, Subtype, Section, SourceEntity,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">RelatedSourceEntity, ActionTarget, ActionTargetType, ApiName, Category, </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ConfirmationMessage, DeviceFormat, ExternalId, GroupId, IconContentType, </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">IconHeight, IconUrl, IconWidth, Id, InvocationStatus, InvokedByUserId, </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">IsGroupDefault, LastModifiedDate, PrimaryColor </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">FROM PlatformAction </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">WHERE ActionListContext IN ('Record','Chatter','RelatedList') AND </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SourceEntity = '001xx000003DlvX' AND </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">DeviceFormat = 'Desktop'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

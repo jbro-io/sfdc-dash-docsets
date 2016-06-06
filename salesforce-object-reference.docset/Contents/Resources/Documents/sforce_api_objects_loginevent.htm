@@ -1,0 +1,676 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LoginEvent | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_loginevent"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LoginEvent</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a>Represents a trackable user login event in your
+            organization.</span> This object is available in API version 36.0 and
+         later.</span></div>
+
+      <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+         
+         <p class="p"><samp class="codeph nolang">query()</samp></p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+         
+         <p class="p">Accessing this object requires View Event Log Files and API Enabled user
+            permissions.</p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+         
+         
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+               
+               
+               <thead class="thead sorted" align="left">
+                  <tr>
+                     <th class="featureTableHeader  " id="d501457e97">Field</th>
+
+                     <th class="featureTableHeader  " id="d501457e100">Details</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalInfo" class="dashAnchor"></a><span class="keyword parmname">AdditionalInfo</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">JSON serialization of additional information that’s captured from
+                                 the <samp class="codeph nolang">HTTP</samp> headers during a
+                                 login request. For example, <samp class="codeph nolang">{"field1":
+                                    "value1","field2": "value2"}</samp>. <p class="p">See <a class="xref" href="#add-info"><a name="//apple_ref/cpp/Field/AdditionalInfo" class="dashAnchor"></a>Working with
+                                          <span class="keyword parmname">AdditionalInfo</span></a>.</p>
+</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/ApiType" class="dashAnchor"></a><span class="keyword parmname">ApiType</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">English-only. The type of API
+                                 that’s used to log in. Values include:<ul class="ul bulletList">
+                                    <li class="li"><samp class="codeph nolang">XML-RPC</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">OSOAP</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">SOAP Enterprise</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">SOAP Partner</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">SOAP
+                                          Internal/CrossInstance</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">REST API</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">Metadata API</samp></li>
+
+                                    <li class="li"><samp class="codeph nolang">N/A</samp></li>
+
+                                 </ul>
+</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/ApiVersion" class="dashAnchor"></a><span class="keyword parmname">ApiVersion</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">English-only. The version number of the API. If
+                                 no version number is available, “Unknown” is
+                                 returned.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/Application" class="dashAnchor"></a><span class="keyword parmname">Application</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The application name in English. For example, Salesforce
+                                 Internal Application or Microsoft SOAP Toolkit.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/AuthServiceId" class="dashAnchor"></a><span class="keyword parmname">AuthServiceId</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">reference</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/AuthenticationServiceId" class="dashAnchor"></a>Refers to the <span class="keyword parmname">AuthenticationServiceId</span> field on the LoginHistory object. For example, you can use this field to identify the SAML
+                        or authentication provider configuration with which the user logged in.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/Browser" class="dashAnchor"></a><span class="keyword parmname">Browser</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The browser name and version if known. If no browser or version
+                                 number is available, “Unknown” is returned. Product
+                                 names are in English.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/ClientVersion" class="dashAnchor"></a><span class="keyword parmname">ClientVersion</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">English-only. The version number of the login client. If no
+                                 version number is available, “Unknown” is
+                                 returned.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/EventDate" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="event-date"><a name="event-date"><!-- --></a>EventDate</span></span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">dateTime</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The login time of the specified event. For example,
+                                 2013-01-01T03:01:01Z. Seconds are the most granular setting.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/LoginGeoId" class="dashAnchor"></a><span class="keyword parmname">LoginGeoId</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">reference</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The Salesforce ID of the LoginGeo object associated with the login user’s IP address.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/LoginHistoryId" class="dashAnchor"></a><span class="keyword parmname">LoginHistoryId</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">reference</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Tracks a user session so you can correlate user activity with a
+                                 particular login instance.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/LoginType" class="dashAnchor"></a><span class="keyword parmname">LoginType</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable, Restricted picklist</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The event’s type of login. For example, “Application.”</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/LoginUrl" class="dashAnchor"></a><span class="keyword parmname">LoginUrl</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The URL of the login host. For example, <samp class="codeph nolang"><var class="keyword varname">yourInstance</var>.salesforce.com</samp>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/Platform" class="dashAnchor"></a><span class="keyword parmname">Platform</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The platform name and version that are used during the login
+                                 event. If no platform name is available, “Unknown” is
+                                 returned. Platform names are in English.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/SourceIp" class="dashAnchor"></a><span class="keyword parmname">SourceIp</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/126.7.4.2" class="dashAnchor"></a>The source IP address of the client logging in. For example,
+                                    <span class="keyword parmname">126.7.4.2</span>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The login status is in English. "Success" is returned when
+                                 successful. Otherwise, an error message is returned.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">ID</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/005000000000123" class="dashAnchor"></a>The user’s unique ID. For example,
+                                    <span class="keyword parmname">005000000000123</span>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d501457e97" data-title="Field"><a name="//apple_ref/cpp/Field/Username" class="dashAnchor"></a><span class="keyword parmname">Username</span></td>
+
+                     <td class="entry" headers="d501457e100" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/user@company.com" class="dashAnchor"></a>The username in the format of
+                                    <span class="keyword parmname">user@company.com</span>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table></div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2"><span class="ph" id="add-info"><a name="add-info"><!-- --></a>Working with <span class="keyword parmname">AdditionalInfo</span></span></h2>
+
+         
+         <p class="p"><span class="keyword parmname">AdditionalInfo</span> enables you to extend the login event with custom
+            data that can be queried later. For example, you can capture a correlation ID when a
+            user logs in from an external system that shares that unique ID. This process enables
+            tracking logins across systems. To store data with LoginEvent, begin all
+               <span class="keyword parmname">AdditionalInfo</span> field names with <samp class="codeph nolang">x-sfdc-addinfo-{<var class="keyword varname">fieldname</var>}</samp>. For example, a valid
+            field assignment is <samp class="codeph nolang">x-sfdc-addinfo-correlation_id =
+               ABC123</samp> where <samp class="codeph nolang">x-sfdc-addinfo-correlation_id</samp> is the field name and <samp class="codeph nolang">ABC123</samp> is the field value.</p>
+
+         <div class="p">When defining field names, note the following:<ul class="ul bulletList">
+               <li class="li">
+<samp class="codeph nolang">x-sfdc-addinfo-</samp> is case-<em class="ph i">insensitive</em>.
+                     <samp class="codeph nolang">x-sfdc-addinfo-{<var class="keyword varname">field
+                     name</var>}</samp> is the same as <samp class="codeph nolang">X-SFDC-ADDINFO-{<var class="keyword varname">FIELD NAME</var>}</samp>.</li>
+
+               <li class="li">Fields can contain only alphanumeric and “_” (underscore) characters.</li>
+
+               <li class="li">Filed names must be between 2 and 29 characters in length, excluding <samp class="codeph nolang">x-sfdc-addinfo-</samp>.</li>
+
+               <li class="li">Field names that don’t start with <samp class="codeph nolang">x-sfdc-addinfo-</samp> are ignored.</li>
+
+               <li class="li">Names that contain invalid characters after <samp class="codeph nolang">x-sfdc-addinfo-</samp> are ignored.</li>
+
+               <li class="li">Only the first 30 valid field names are stored in
+                     <span class="keyword parmname">AdditionalInfo</span>. Field names are not necessarily stored in
+                  the same order in which they were passed to authentication.</li>
+
+            </ul>
+</div>
+
+         <div class="p">When determining field values, keep the following in mind:<ul class="ul bulletList">
+               <li class="li">You can’t use existing API field names as
+                     <span class="keyword parmname">AdditionalInfo</span> names in the HTTP header. If the
+                     <span class="keyword parmname">AdditionalInfo</span> name conflicts with an object’s API name, the field
+                  value isn’t stored. For example, the HTTP header <samp class="codeph nolang">X-SFDC-ADDINFO-UserId='abc123'</samp> doesn’t get stored in
+                     <span class="keyword parmname">AdditionalInfo</span>.</li>
+
+               <li class="li">Additional field values can contain only alphanumeric, “_,” and “-”
+                  characters.</li>
+
+               <li class="li">Field values must be 255 characters in length or fewer. If a field value exceeds
+                  255 characters, only the first 255 characters are stored and the rest are
+                  truncated.</li>
+
+               <li class="li">Field values that contain invalid characters are saved with a field header of
+                  Empty String ("").</li>
+
+               <li class="li">Only the first 30 valid field names are stored in the
+                     <span class="keyword parmname">AdditionalInfo</span> field. They are not guaranteed to be stored
+                  in the same order that they were passed into the authentication.</li>
+
+               <li class="li">When <span class="keyword parmname">AggregationFieldName</span> or
+                     <span class="keyword parmname">PlatformEventMetrics</span> is <span class="keyword parmname">SourceIp</span>, you
+                  can’t filter on <span class="keyword parmname">AggregationFiledValue</span> if its value is
+                     <var class="keyword varname">Salesforce.com IP</var>.</li>
+
+            </ul>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">How to Pass Additional Information by Using HTTP with cURL</h2>
+
+         
+         <div class="p">Here’s an example of passing additional information via the command
+            line.<div class="codeSection nolang"><div id="highlighter_588752" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_588752_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_588752" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">curl <a href="https://">https://</a><code class="italic">yourInstance</code>.salesforce.com/services/oauth2/token -d "grant_type=password" -d</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">"client_id=3MVG9PhR6g6B7ps4RF_kNPoWSxVQstrazijsE8njPtkpUzVPPffzy8</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">jIoRE6q9rPznNtlsqbP9ob8kUfMjXXX" -d "client_secret=4180313776440635XXX" -d</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">"username=user@company.com" -d "password=123456" -H "X-PrettyPrint:1" -H</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">"x-sfdc-addinfo-correlationid:</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">d18c5a3f-4fba-47bd-bbf8-6bb9a1786624"</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">How to Pass Additional Information in Java</h2>
+
+         
+         <div class="p">Here’s an example of passing additional information in
+            Java.<div class="codeSection java"><div id="highlighter_14163" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_14163_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_14163" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="comments">//adding additional info headers ..</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">Map&lt;String, String&gt; httpHeaders = </code><code class="keyword">new</code> <code class="plain">HashMap&lt;String,String&gt;();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">httpHeaders.put(</code><code class="string">"x-sfdc-addinfo-fieldname1"</code> <code class="comments">/* additional info field*/ ,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="comments">"d18c5a3f-4fba-47bd-bbf8-6bb9a1786624" /* value*/);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="comments">httpHeaders.put("x-sfdc-addinfo-fieldname2" /* additional info field*/ ,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="comments">"d18c5a3f-4fba-47bd-bbf8-6bb9a1786624" /* value*/</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">ConnectorConfig config = </code><code class="keyword">new</code> <code class="plain">ConnectorConfig();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">config.setUsername(<code class="italic">userId</code>);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">config.setPassword(passwd);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">config.setAuthEndpoint(authEndPoint);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">config.setProxy(proxyHost, proxyPort);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="comments">//setting additional info headers</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="keyword">for</code> <code class="plain">(Map.Entry&lt;String, String&gt; entry : httpHeaders.entrySet()) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">config.setRequestHeader(entry.getKey(), entry.getValue());</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="comments">// Set the username and password if your proxy must be authenticated</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="value">9</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">LoginEvent</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="plain">config.setProxyUsername(proxyUsername);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="plain">config.setProxyPassword(proxyPassword);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="keyword">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="plain">EnterpriseConnection connection = </code><code class="keyword">new</code> <code class="plain">EnterpriseConnection(config);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="comments">// etc.</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="plain">} </code><code class="keyword">catch</code> <code class="plain">(ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">SOQL Usage</h2>
+
+         
+      </div>
+
+   </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

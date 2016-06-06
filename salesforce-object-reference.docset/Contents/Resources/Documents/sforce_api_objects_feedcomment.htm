@@ -1,0 +1,495 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FeedComment | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_feedcomment"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FeedComment</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="feed_comment_defn"><a name="feed_comment_defn"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a comment added to a feed by a
+          user.
+      </span> This object is available in API version 18.0 and
+    later.</span></div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">create()</samp>,
+          <samp class="codeph nolang">delete()</samp>,
+          <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>,
+          <samp class="codeph nolang">update()</samp>,
+          <samp class="codeph nolang">upsert()</samp></p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+      
+      <p class="p">Note the following when working with feed comments.</p>
+
+      <a name="ul_dt4_ckj_ln"><!-- --></a><ul class="ul bulletList" id="ul_dt4_ckj_ln">
+        <li class="li">You must have read access to the feed’s parent type to see a FeedComment record.</li>
+
+        <li class="li">You must have access to the feed to add a comment.</li>
+
+        <li class="li">If the comment is related to a user record, the user can delete the comment. <span class="ph" id="user_comment_delete_example"><a name="user_comment_delete_example"><!-- --></a>For example, if John Smith makes a comment about Sasha
+            Jones, Sasha can delete the comment.</span>
+</li>
+
+        <li class="li"><span class="ph" id="WriteChatterAuthorFields_perm"><a name="WriteChatterAuthorFields_perm"><!-- --></a>If the logged-in user has the “Insert
+            System Field Values for Chatter Feeds” user permission, the <samp class="codeph soql">create</samp> field property is available on
+              <span class="keyword parmname">CreatedBy</span> and <span class="keyword parmname">CreatedDate</span> system fields.
+            During migration, the logged-in user can set these fields to the original post’s author
+            and creation date. The fields can’t be updated after migration.</span></li>
+
+      </ul>
+
+      <div class="p">You can delete all feed items you created.
+To delete feed items you didn’t create, you must have one of
+these permissions:<a name="ul_jv4_ckj_ln"><!-- --></a><ul class="ul bulletList" id="ul_jv4_ckj_ln">
+          <li class="li">“Modify All Data”</li>
+
+          <li class="li">“Modify All” on the object associated with the feed and delete
+            permission on the parent feed</li>
+
+          <li class="li">“Moderate Chatter” <div class="box message info" id="d254063e113-d254202e83">
+<a name="d254063e113-d254202e83"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Users with the “Moderate Chatter”
+permission can delete only the feed items and comments they see.</p>
+</div>
+</div></div></div>
+</div>
+</li>
+
+          <li class="li" id="MUG_unlisted_groups_delete">
+<a name="MUG_unlisted_groups_delete"><!-- --></a>“Manage Unlisted Groups”<p class="p">Only users with this
+              permission can delete items in unlisted groups.</p>
+</li>
+
+        </ul>
+</div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d407710e171">Field</th>
+
+              <th class="featureTableHeader  " id="d407710e174">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/CommentBody" class="dashAnchor"></a><span class="keyword parmname">CommentBody</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435387">textarea</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The text in the comment.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/CommentType" class="dashAnchor"></a><span class="keyword parmname" id="feedcomment_comment_type"><a name="feedcomment_comment_type"><!-- --></a>CommentType</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435238">Restricted picklist</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The type of comment:<a name="ul_dvj_dkj_ln"><!-- --></a><ul class="ul bulletList" id="ul_dvj_dkj_ln">
+                        <li class="li">
+<samp class="codeph nolang">ContentComment</samp>—an uploaded
+                          file on a comment</li>
+
+                        <li class="li">
+<samp class="codeph nolang">TextComment</samp>—a direct text
+                          entry on a comment</li>
+
+                      </ul>
+<span class="ph" id="ContentComment_text_optional"><a name="//apple_ref/cpp/Field/CommentType" class="dashAnchor"></a><a name="ContentComment_text_optional"><!-- --></a>Before API version 24.0,
+                        a text entry was required on a comment. As of version 24.0, a text entry is
+                        optional if the <span class="keyword parmname">CommentType</span> is <samp class="codeph nolang">ContentComment</samp>.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname">FeedItemId</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the feed containing the comment.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/InsertedById" class="dashAnchor"></a><span class="keyword parmname" id="field_InsertedById"><a name="field_InsertedById"><!-- --></a>InsertedById</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="desc_InsertedById"><a name="//apple_ref/cpp/Field/InsertedBy" class="dashAnchor"></a><a name="desc_InsertedById"><!-- --></a>ID of the user who added this object to the feed.
+                        For example, if an application migrates posts and comments from another
+                        application into a feed, the <span class="keyword parmname">InsertedBy</span> value is set to
+                        the ID of the logged-in user.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/LastEditById" class="dashAnchor"></a><span class="keyword parmname" id="field_LastEditById"><a name="field_LastEditById"><!-- --></a>LastEditById</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the user who last edited the feed comment.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/LastEditDate" class="dashAnchor"></a><span class="keyword parmname" id="field_LastEditDate"><a name="field_LastEditDate"><!-- --></a>LastEditDate</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435039">datetime</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The date the feed comment was last edited.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname" id="field_ParentId"><a name="field_ParentId"><!-- --></a>ParentId</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a>ID of a record associated with the feed comment. For example, if you are
+                        commenting on a change to a field on Account, <span class="keyword parmname">ParentId</span>
+                        is set to the account ID.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/RelatedRecordId" class="dashAnchor"></a><span class="keyword parmname">RelatedRecordId</span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="relatedrecordid_descrip_short"><a name="relatedrecordid_descrip_short"><!-- --></a>ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_contentversion.htm#sforce_api_objects_contentversion" title="Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available in versions 17.0 and later for Salesforce CRM Content documents. This object is available in versions 20.0 and later for Salesforce Files.">ContentVersion</a> object associated with a <samp class="codeph nolang">ContentComment</samp>. This field is null for all comments except
+                          <samp class="codeph nolang">ContentComment</samp>.</span><p class="p"><a name="//apple_ref/cpp/Field/CommentType" class="dashAnchor"></a>For
+                          example, set this field to an existing <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_contentversion.htm#sforce_api_objects_contentversion" title="Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available in versions 17.0 and later for Salesforce CRM Content documents. This object is available in versions 20.0 and later for Salesforce Files.">ContentVersion</a> and post it to a comment as a FeedComment object
+                          of <span class="keyword parmname">CommentType</span><samp class="codeph nolang">ContentComment</samp>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><strong class="ph b"><strong class="ph b"><a name="//apple_ref/cpp/Field/Revision" class="dashAnchor"></a><span class="keyword parmname" id="field_Revision"><a name="field_Revision"><!-- --></a>Revision</span></strong></strong></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435108">int</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The number of times the comment was revised.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d407710e171" data-title="Field"><a name="//apple_ref/cpp/Field/SystemModstamp" class="dashAnchor"></a><span class="keyword parmname"><a name="//apple_ref/cpp/Field/SystemModstamp" class="dashAnchor"></a><span class="keyword parmname">SystemModstamp</span></span></td>
+
+              <td class="entry" headers="d407710e174" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435039">dateTime</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435199">Defaulted on create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/SystemModstamp" class="dashAnchor"></a>Date and time when a user or automated process (such as a
+                trigger) last modified this record.
+                      <span class="keyword parmname"><a name="//apple_ref/cpp/Field/SystemModstamp" class="dashAnchor"></a><span class="keyword parmname">SystemModstamp</span></span> is a read-only <a class="xref" href="http://www.salesforce.com/developer/docs/api/Content/system_fields.htm" target="_blank">system field,
+                        available in FeedComment as of API version 37.0.</a>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+      
+      <div class="p">
+        <a name="ul_dvy_gtj_ln"><!-- --></a><ul class="ul bulletList" id="ul_dvy_gtj_ln">
+          <li class="li">
+            <p class="p">As of API version 23.0
+              and later, if you have “View All Data” permission, you can query
+              FeedComment records directly without an ID filter. If you don’t have
+              “View All Data” permission, you can’t query FeedComment records
+              directly, with or without an ID filter.</p>
+
+            <div class="p">For example, the following query returns general information about a
+              feed:<div class="codeSection soql"><div id="highlighter_125935" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_125935_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_125935" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ID, CreatedDate, CreatedById, CreatedBy.FirstName, </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">CreatedBy.LastName, ParentId, Parent.Name, Body </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM FeedItem </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE CreatedDate &gt; LAST_MONTH </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">ORDER BY CreatedDate DESC, Id DESC</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+          </li>
+
+          <li class="li">
+            <div class="p">You can search for text in comments using SOSL. For example, the following Java class
+              uses <samp class="codeph nolang">search()</samp> to find the string
+              “foo” in any field of a
+              record:<div class="codeSection java"><div id="highlighter_305487" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_305487_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_305487" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">searchSample() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="keyword">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SearchResult sr = connection.search(</code><code class="string">"find {foo} in all fields "</code> <code class="plain">+</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="string">"returning feedcomment(Id, FeedItemId, CommentBody)"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// Put the results into an array of SearchRecords</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SearchRecord[] records = sr.getSearchRecords();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// Check the length of the returned array of records to see</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// if the search found anything</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(records != </code><code class="keyword">null</code> <code class="plain">&amp;&amp; records.length &gt; </code><code class="value">0</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">System.out.println(</code><code class="string">"Found "</code> <code class="plain">+ records.length + </code><code class="string">" comments: "</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// Display each comment</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">for</code> <code class="plain">(SearchRecord record : records) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">FeedComment comment = (FeedComment) record.getRecord();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">System.out.println(comment.getId() + </code><code class="string">": "</code> <code class="plain">+ </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">comment.getCommentBody());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">System.out.println(</code><code class="string">"No records were found for the search."</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="plain">} </code><code class="keyword">catch</code> <code class="plain">(ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+          </li>
+
+          <li class="li">If you use an Apex trigger to modify the <span class="keyword parmname">Body</span> of a
+            FeedComment object, all mentions hyperlinks are converted to plain text. The mentioned
+            users don't get email notifications.</li>
+
+        </ul>
+
+      </div>
+
+      <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This object is hard deleted. It isn’t sent to the Recycle Bin.</p>
+</div>
+</div></div></div></div>
+
+    </div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_newsfeed.htm" title="Represents a single feed item on a user's home tab. A Chatter feed shows recent changes to records that the user is following.">NewsFeed</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_userprofilefeed.htm" title="Represents a user profile feed, which tracks all actions by a user on records that can be tracked in a feed. This feed is displayed on the user profile page.">UserProfileFeed</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

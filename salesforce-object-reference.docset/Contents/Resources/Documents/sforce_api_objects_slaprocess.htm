@@ -1,0 +1,425 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SlaProcess | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_slaprocess"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SlaProcess</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="SlaProcessDesc"><a name="SlaProcessDesc"><!-- --></a>Represents an entitlement process associated
+    with an Entitlement.</span>
+   This object is available in API
+   version 19.0 and later.</span></div>
+
+<p class="p">An entitlement process is a timeline that includes all the steps (MilestoneType
+   records) that your support team must complete to resolve cases. Each process includes the logic
+   necessary to determine how to enforce the correct service level for your customers.</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<div class="p">
+<samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>
+</div>
+</div>
+
+<div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p">Customer Portal users can’t access this object.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d677482e100">Field</th>
+
+<th class="featureTableHeader  " id="d677482e103">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/BusinessHoursId" class="dashAnchor"></a><span class="keyword parmname">BusinessHoursId</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the BusinessHours associated with the entitlement. Must be a valid business hours
+ID.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A description of the entitlement process.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the entitlement process is active (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/IsVersionDefault" class="dashAnchor"></a><span class="keyword parmname" id="is_version_default_api_name"><a name="is_version_default_api_name"><!-- --></a>IsVersionDefault</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="is_version_default_def"><a name="is_version_default_def"><!-- --></a>Indicates whether the entitlement
+process is the default version (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+<dd class="dd">This field is available in API version
+28.0 and later in organizations that have entitlement versioning enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, idLookup</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the entitlement process.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/NameNorm" class="dashAnchor"></a><span class="keyword parmname" id="name_norm_name"><a name="name_norm_name"><!-- --></a>NameNorm</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The read-only value for the unique name of the entitlement process
+or the entitlement process version. If entitlement versioning is enabled,
+this value is automatically generated for each version of an entitlement
+process in this form: <var class="keyword varname">process name</var>+_v + <var class="keyword varname">x</var>, where <var class="keyword varname">x</var> is the version number (for
+example, “gold_support_v2”).</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>If entitlement versioning isn’t enabled, this value is
+the same as <span class="keyword parmname">Name</span>.</dd>
+
+<dd class="dd">This field is available in API version
+28.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/SObjectType" class="dashAnchor"></a><span class="keyword parmname">SObjectType</span></td>
+
+       <td class="entry" headers="d677482e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Restricted picklist, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of records that the entitlement process can run on. Its values are:<ul class="ul bulletList">
+            <li class="li"><kbd class="ph userinput">Case</kbd></li>
+
+            <li class="li"><kbd class="ph userinput">Work Order</kbd></li>
+
+           </ul>
+An entitlement process runs only on records that match its type. For example, a Case
+           entitlement process that’s applied to an entitlement runs only on cases associated with
+           the entitlement, not on work orders. As a best practice,  therefore, manage customers’
+           work orders and cases on separate entitlements.<p class="p">The field label in the user interface
+            is Entitlement Process Type.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/StartDateField" class="dashAnchor"></a><span class="keyword parmname">StartDateField</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The criteria for cases to enter the entitlement process. Cases
+can enter the process based on:<ul class="ul bulletList">
+<li class="li">The creation date on a case</li>
+
+<li class="li">A custom date/time field on a case</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/VersionMaster" class="dashAnchor"></a><span class="keyword parmname" id="version_master_api_name"><a name="version_master_api_name"><!-- --></a>VersionMaster</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="version_master_def"><a name="version_master_def"><!-- --></a>Identifies the sequence of versions
+to which this entitlement process belongs. This field’s contents
+can be any value as long as it is identical among all versions of
+the entitlement process.</span></dd>
+
+<dd class="dd">This field is available in API version
+28.0 and later in organizations that have entitlement versioning enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/VersionNotes" class="dashAnchor"></a><span class="keyword parmname" id="version_notes_api_name"><a name="version_notes_api_name"><!-- --></a>VersionNotes</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="version_notes_def"><a name="version_notes_def"><!-- --></a>The description of the entitlement
+process version.</span></dd>
+
+<dd class="dd">This field is available in API version
+28.0 and later in organizations that have entitlement versioning enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d677482e100" data-title="Field"><a name="//apple_ref/cpp/Field/VersionNumber" class="dashAnchor"></a><span class="keyword parmname" id="version_number_api_name"><a name="version_number_api_name"><!-- --></a>VersionNumber</span></td>
+
+<td class="entry" headers="d677482e103" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="version_number_def"><a name="version_number_def"><!-- --></a>The version number of the entitlement
+process. Must be 1 or greater.</span></dd>
+
+<dd class="dd">This field is available in API version
+28.0 and later in organizations that have entitlement versioning enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query entitlement
+processes on entitlements.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_entitlement.htm" title="Represents the customer support an Account or Contact is eligible to receive. This object is available in API version 18.0 and later. Entitlements may be based on an Asset, Product2, or ServiceContract.">Entitlement</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_milestonetype.htm" title="Represents a milestone (required step in a customer support process). This object is available in API version 18.0 and later.">MilestoneType</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_casemilestone.htm" title="Represents a milestone (required step in a customer support process) on a Case. This object is available in API version 18.0 and later.">CaseMilestone</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

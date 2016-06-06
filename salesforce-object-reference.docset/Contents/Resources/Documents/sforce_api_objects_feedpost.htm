@@ -1,0 +1,522 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FeedPost | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_feedpost"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FeedPost</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="feedpost_defn"><a name="feedpost_defn"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>FeedPost represents the following types of changes
+    in a record feed, such as AccountFeed: text
+    posts, link posts, and content posts.</span></span>
+  <span class="ph" id="FeedPostAvailVersions"><a name="FeedPostAvailVersions"><!-- --></a>This object is available in API version 18.0 through 21.0. FeedPost
+   is no longer available in later versions. Starting with API version 21.0, use FeedItem to
+   represent text posts, link posts, and content posts in feeds. </span>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">search()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<div class="p">You can delete all feed items you created.
+To delete feed items you didn’t create, you must have one of
+these permissions:<ul class="ul bulletList">
+<li class="li">“Modify All Data”</li>
+
+<li class="li">“Moderate Chatter” <div class="box message info" id="d255731e81-d255753e83">
+<a name="d255731e81-d255753e83"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Users with the “Moderate Chatter”
+permission can delete only the feed items and comments they see.</p>
+</div>
+</div></div></div>
+</div>
+</li>
+
+</ul>
+Only users with the “Modify All Data” permission
+          can delete a FeedItem of
+            <span class="keyword parmname">Type</span>
+          <samp class="codeph nolang">TrackedChange</samp>.</div>
+<p class="p">If the logged-in user has the “Insert
+            System Field Values for Chatter Feeds” user permission, the <samp class="codeph soql">create</samp> field property is available on
+              <span class="keyword parmname">CreatedBy</span> and <span class="keyword parmname">CreatedDate</span> system fields.
+            During migration, the logged-in user can set these fields to the original post’s author
+            and creation date. The fields can’t be updated after migration.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d416090e149">Field</th>
+
+<th class="featureTableHeader  " id="d416090e152">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname">Body</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>The content of the FeedPost. Required when
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">TextPost</samp>. Optional when <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp> or <samp class="codeph nolang">LinkPost</samp>. This field is the message that appears in the
+                        feed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><span class="keyword parmname">ContentData</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">base64</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>This field is required if
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp>. Encoded file data in any format, and can’t be 0
+                        bytes. Setting this field automatically sets <span class="keyword parmname">Type</span> to
+                          <samp class="codeph nolang">ContentPost</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ContentDescription" class="dashAnchor"></a><span class="keyword parmname">ContentDescription</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a>The description of the file specified in
+                          <span class="keyword parmname">ContentData</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><span class="keyword parmname">ContentFileName</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>This field is required if
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp>. The name of the file uploaded to the feed.
+                        Setting <span class="keyword parmname">ContentFileName</span> automatically sets
+                          <span class="keyword parmname">Type</span> to <samp class="codeph nolang">ContentPost</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname">ContentSize</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">This field is the size of the file (in bytes) uploaded to the feed. This
+                        field is read-only and is automatically determined during insert.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ContentType" class="dashAnchor"></a> <span class="keyword parmname">ContentType</span>
+</td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">This field is the MIME type of the file uploaded to the feed. This field is
+                        read-only and is automatically determined during insert.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname">FeedItemId</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the feed containing the FeedPost.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/InsertedById" class="dashAnchor"></a><span class="keyword parmname">InsertedById</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/InsertedBy" class="dashAnchor"></a>ID of the user who added this object to the feed.
+                        For example, if an application migrates posts and comments from another
+                        application into a feed, the <span class="keyword parmname">InsertedBy</span> value is set to
+                        the ID of the logged-in user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a><span class="keyword parmname">IsDeleted</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the record has been moved to the Recycle Bin (<samp class="codeph java">true</samp>) or not (<samp class="codeph java">false</samp>). This field is a standard system field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/LinkUrl" class="dashAnchor"></a><span class="keyword parmname">LinkUrl</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The URL of a <samp class="codeph nolang">LinkPost</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="ParentIdDesc"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><a name="ParentIdDesc"><!-- --></a>ID of the object type to which the FeedPost is related.
+For example, set this field to a <span class="keyword parmname">UserId</span> to post
+to someone’s profile feed, or an <span class="keyword parmname">AccountId</span> to post to a specific account.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The title of the FeedPost. <span class="ph" id="title_desc_linkpost"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="title_desc_linkpost"><!-- --></a>When the <span class="keyword parmname">Type</span> is <samp class="codeph nolang">LinkPost</samp>, the <span class="keyword parmname">Body</span> is the URL and the <span class="keyword parmname">Title</span> is the label for the
+link.</span>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d416090e149" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+<td class="entry" headers="d416090e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of FeedPost:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">UserStatus</samp>—automatically
+generated when a user updates their status</li>
+
+<li class="li">
+<samp class="codeph nolang" id="type_trackedchange"><a name="type_trackedchange"><!-- --></a>TrackedChange</samp>—ignore</li>
+
+<li class="li">
+<samp class="codeph nolang">TextPost</samp>—a direct
+text entry on a feed</li>
+
+<li class="li">
+<samp class="codeph nolang">LinkPost</samp>—a URL posting
+on a feed</li>
+
+<li class="li">
+<samp class="codeph nolang">ContentPost</samp>—an uploaded
+file on a feed</li>
+
+</ul>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>If you set <span class="keyword parmname">Type</span> to <samp class="codeph nolang">ContentPost</samp>,
+you must specify <span class="keyword parmname">ContentData</span> and <span class="keyword parmname">ContentFileName</span>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+<li class="li">You can’t directly query for a FeedPost. FeedPosts
+are always associated with a feed item, so you can query for them
+through the feeds. The following example returns all feed items for
+a given account, ordered by date descending:<div class="codeSection soql"><div id="highlighter_771803" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_771803_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_771803" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Type, FeedPost.Body </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM AccountFeed </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ParentId = AccountId ORDER BY CreatedDate DESC</code></td></tr></tbody></table></div></div></div></div>
+</li>
+
+<li class="li">A FeedPost of
+type <samp class="codeph nolang">UserStatus</samp> is automatically
+created when a user adds a post to update the current status. You
+can’t explicitly create a FeedPost of type <samp class="codeph nolang">UserStatus</samp>.</li>
+
+<li class="li">The size limit for an attachment on a profile, news, or record
+feed is 2 GB.</li>
+
+<li class="li">You can’t use the content fields to update or delete the
+content.</li>
+
+<li class="li">You can’t filter or update the content fields.</li>
+
+<li class="li">Deleting a FeedPost via the API also
+deletes the associated content and FeedPost objects. Likewise,
+undeleting a FeedPost restores associated content and FeedPost objects.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This object is hard deleted. It isn’t sent to the Recycle Bin.</p>
+</div>
+</div></div></div></div>
+</li>
+
+<li class="li">After uploading to a feed, it is possible for an attachment or
+document to be deleted, marked private, or hidden by sharing rules.
+In this case, all content fields in FeedPost appear as <samp class="codeph soql">null</samp> in a SOQL query.</li>
+
+<li class="li">You can’t explicitly create or delete a FeedTrackedChange record.</li>
+
+</ul>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ProcessInstanceNode | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_processinstancenode"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ProcessInstanceNode</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="processinstancenode_def"><a name="processinstancenode_def"><!-- --></a>Represents a step in an instance of an
+    approval process.<span class="ph" id="processnode_def"><a name="processnode_def"><!-- --></a> Compare to ProcessNode,
+     which describes the step in a process definition.</span> Use this object to retrieve approval
+    history.</span></span></div>
+
+  <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Exceptions apply to approval history data retrieved
+    with this object and available only via the SOAP API. For each approval process
+    instance that was pending when Summer ’14 became available for your organization, some
+    field values are never populated or are populated only after the approval process instance is
+    next acted upon—such as when a user approves, rejects, or reassigns an approval
+    request—after the Summer ’14 rollout.</p>
+</div>
+</div></div></div></div>
+
+  <p class="p">ProcessInstanceNode fields are never populated for approval process instances that were
+   completed before the Summer ’14 rollout. For approval process instances that were pending
+   during the Summer ’14 rollout, all ProcessInstanceNode fields are populated only after the
+   approval process instance is next acted upon after the Summer ’14 rollout.</p>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Portal and Communities users can’t
+                access this object.</p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d601074e111">Field</th>
+
+       <th class="featureTableHeader  " id="d601074e114">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/CompletedDate" class="dashAnchor"></a><span class="keyword parmname">CompletedDate</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/CompletedDate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ElapsedTimeMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ElapsedTimeDay, ElapsedTimeHours" class="dashAnchor"></a>The completion date and time of this step in the approval process. The
+            <span class="keyword parmname">ElapsedTimeDay, ElapsedTimeHours</span>, and
+            <span class="keyword parmname">ElapsedTimeMinutes</span> field values are calculated using
+            <span class="keyword parmname">CompletedDate</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInDays" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInDays</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total time in days since this step was started.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInHours" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInHours</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total time in hours since this step was started.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInMinutes" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInMinutes</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total time in minutes since this step was started.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/LastActorId" class="dashAnchor"></a><span class="keyword parmname">LastActorId</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Group,
+            Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last actor that approved or rejected this step.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/NodeStatus" class="dashAnchor"></a><span class="keyword parmname">NodeStatus</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of this approval instance, for example Started, Pending, or Approved.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ProcessInstanceId" class="dashAnchor"></a><span class="keyword parmname">ProcessInstanceId</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The approval process this step is part of.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ProcessNodeId" class="dashAnchor"></a><span class="keyword parmname">ProcessNodeId</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The identifier for this step.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d601074e111" data-title="Field"><a name="//apple_ref/cpp/Field/ProcessNodeName" class="dashAnchor"></a><span class="keyword parmname">ProcessNodeName</span></td>
+
+       <td class="entry" headers="d601074e114" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of this step.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  
+  
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

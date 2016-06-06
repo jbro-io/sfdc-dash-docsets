@@ -1,0 +1,338 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>EmailDomainKey | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_EmailDomainKey"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>EmailDomainKey</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a domain key for an organization’s domain, used to
+      authenticate outbound email that Salesforce sends on the organization’s
+      behalf. This object is available in API version 28.0 and
+    later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d334305e104">Field Name</th>
+
+<th class="featureTableHeader  " id="d334305e107">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/Domain" class="dashAnchor"></a><span class="keyword parmname" id="field_Domain"><a name="field_Domain"><!-- --></a>Domain</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="domain_descr"><a name="domain_descr"><!-- --></a>The organization’s domain name that the DKIM key is generated
+                          for.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/DomainMatch" class="dashAnchor"></a><span class="keyword parmname" id="field_DomainMatch"><a name="field_DomainMatch"><!-- --></a>DomainMatch</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<div class="p">
+<span class="ph" id="domain_match_descr"><a name="domain_match_descr"><!-- --></a>The specificity of match required on the sending domain name before
+                          signing with this DKIM key. Valid values are:</span><ul class="ul bulletList">
+                          <li class="li">
+<samp class="codeph nolang" id="DomainMatch_DomainOnly"><a name="DomainMatch_DomainOnly"><!-- --></a>DomainOnly</samp>—Sign if sending domain matches at the
+                            domain level only (example.com but not mail.example.com)</li>
+
+                          <li class="li">
+<samp class="codeph nolang" id="DomainMatch_SubdomainsOnly"><a name="DomainMatch_SubdomainsOnly"><!-- --></a>SubdomainsOnly</samp>—Sign if sending domain matches at the
+                            subdomain level only (mail.example.com but not example.com)</li>
+
+                          <li class="li">
+<samp class="codeph nolang" id="DomainMatch_DomainAndSubdomains"><a name="DomainMatch_DomainAndSubdomains"><!-- --></a>DomainAndSubdomains</samp>—Sign if sending domain matches at
+                            the domain and subdomain levels (example.com and mail.example.com)</li>
+
+                        </ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname" id="field_IsActive"><a name="field_IsActive"><!-- --></a>IsActive</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="ph" id="is_active_descr"><a name="is_active_descr"><!-- --></a>Indicates whether this DKIM key is active (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+                        </span> You can set <span class="keyword parmname">IsActive</span> to <samp class="codeph nolang">true</samp> on create if you specify an existing key
+                        pair.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrivateKey" class="dashAnchor"></a><span class="keyword parmname" id="field_PrivateKey"><a name="field_PrivateKey"><!-- --></a>PrivateKey</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="private_key_descr"><a name="//apple_ref/cpp/Field/PrivateKey" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PrivateKey" class="dashAnchor"></a><a name="private_key_descr"><!-- --></a>The private portion of the DKIM key pair used to encrypt mail headers
+                          from your domain. Salesforce generates
+                          an encrypted <span class="keyword parmname">PrivateKey</span> if you
+                          don’t specify a value when creating the DKIM key. If you do specify
+                          a value, it must be an existing valid <span class="keyword parmname">PrivateKey</span> from
+                          another EmailDomainKey
+                          object.</span></p>
+
+                                            <div class="p">This field doesn’t contain the actual private key,
+                                                but a value that represents the key in our system. Therefore:<ul class="ul bulletList">
+                                                  <li class="li">The actual private key can’t be leaked.</li>
+
+                                                  <li class="li">You can’t use the value to do your own email
+                                                  signing.</li>
+
+                                                </ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/PublicKey" class="dashAnchor"></a><span class="keyword parmname" id="field_PublicKey"><a name="field_PublicKey"><!-- --></a>PublicKey</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="public_key_descr"><a name="//apple_ref/cpp/Field/PublicKey" class="dashAnchor"></a><a name="public_key_descr"><!-- --></a>Part of the domain key pair that mail recipients retrieve to decrypt
+                          the DKIM header and verify your domain. Add the <span class="keyword parmname">PublicKey</span> value to
+                          your domain’s DNS records before you start signing with this domain
+                          key. Otherwise, mail recipients may reject your email.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d334305e104" data-title="Field Name"><a name="//apple_ref/cpp/Field/Selector" class="dashAnchor"></a><span class="keyword parmname" id="field_Selector"><a name="field_Selector"><!-- --></a>Selector</span></td>
+
+<td class="entry" headers="d334305e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><span class="ph" id="selector_descr"><a name="selector_descr"><!-- --></a>Text used to distinguish the DKIM key from any other DKIM keys your
+                          organization uses for the specified domain.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to define a DomainKeys Identified Mail (DKIM) key, which is used to authenticate
+        outbound email that Salesforce sends
+        on your organization’s behalf. <span class="ph" id="DKIM_overview"><a name="DKIM_overview"><!-- --></a>When you create a DKIM key, Salesforce generates a public and
+          private key pair. You must publish the public key in the DNS, which tells recipients that
+          you, as the owner of the domain, have authorized the use of this key to sign your mail.
+            Salesforce uses the private
+          key to create DKIM signature headers on your outgoing email. Then, recipients of the mail,
+          can compare the signature header with the public key in the DNS to determine that the mail
+          was signed with an authorized key. If your domain also publishes a Domain-based Message
+          Authentication, Reporting and Conformance (DMARC) policy, recipients can use the DKIM
+          signature to verify that the mail conforms to DMARC.</span></p>
+<div class="p" id="domain_key_create_sequence">
+<a name="domain_key_create_sequence"><!-- --></a>For each domain key you create, we recommend this sequence:<ol class="ol enumList">
+          <li class="li">Insert the <span class="keyword parmname">Domain</span>,
+              <span class="keyword parmname">DomainMatch</span>, and
+              <span class="keyword parmname">Selector</span>.</li>
+
+          <li class="li">Update your domain’s DNS records.<ol class="ol enumList" type="a">
+              <li class="li">Locate the DNS record at <samp class="codeph nolang"><var class="keyword varname">selector</var>._domainkey.<var class="keyword varname">domain</var></samp>. For
+                example, <samp class="codeph nolang">mail._domainkey.mail.example.com</samp>.</li>
+
+              <li class="li">Add the <span class="keyword parmname">PublicKey</span>
+                value, like this: <samp class="codeph nolang">V=DKIM1;
+                    p=<var class="keyword varname">public_key</var></samp>.</li>
+
+            </ol>
+DKIM Signing Outbound Email<ol class="ol enumList" type="a">
+              <li class="li">In addition, you can optionally put the record in testing mode, which instructs
+                recipients to not make decisions based on the email signature. Add parameter <samp class="codeph nolang">t=y</samp> to the DNS entry, like this: <samp class="codeph nolang">V=DKIM1; t=y; p=<var class="keyword varname">public_key</var></samp>.</li>
+
+            </ol>
+</li>
+
+          <li class="li">Update the key via the API or UI to be active.</li>
+
+        </ol>
+</div>
+<div class="p" id="domain_key_considerations">
+<a name="domain_key_considerations"><!-- --></a>Consider the following
+when using domain keys.<ul class="ul bulletList">
+<li class="li">Make sure you add the public key to your DNS record before you make your key active in Salesforce and start DKIM
+            signing. DKIM signing is active whenever your DKIM key is in the active state.</li>
+
+<li class="li">You can’t have more than one active DKIM key per domain name. You might have multiple
+            active DKIM keys if your organization mails from more than a single domain or if you use
+            subdomains under your organizational domain and have specified domain matching at the
+            subdomain level.</li>
+
+<li class="li">If you want to use the same DKIM key for multiple organizations, you can. Create the key and
+            ensure it’s working for one organization first. Then using the API or UI create the key in
+            your other organizations by setting the corresponding fields in the new key to the same
+            values as the original.</li>
+
+<li class="li">When you insert or update a DKIM key, it’s possible that the change affects existing
+            domain keys. For example, if you’ve set <span class="keyword parmname">DomainMatch</span> to <samp class="codeph nolang">DomainAndSubdomains</samp> for the
+            example.com domain, and you then set <span class="keyword parmname">DomainMatch</span> to <samp class="codeph nolang">SubdomainsOnly</samp> for the
+            mail.example.com domain, either key could be used. Here’s how we resolve
+            conflicts in the case when DKIM keys overlap.<ul class="ul bulletList">
+              <li class="li">If two keys are equally specific about matching for the same domain, the new key
+                replaces and deactivates the existing key.</li>
+
+              <li class="li">If a new key is more specific about matching than an existing key, the new key is
+                used and the existing key is modified to inactive.</li>
+
+              <li class="li">If multiple keys have different domains that match the sending domain, the key
+                with the longest domain name is used. In case of a tie, the most specific key is
+                used. For example, because <samp class="codeph nolang">DomainOnly</samp> and <samp class="codeph nolang">SubdomainsOnly</samp> are more
+                specific than <samp class="codeph nolang">DomainAndSubdomains</samp>, a
+                new <samp class="codeph nolang">DomainOnly</samp> key
+                would change the <span class="keyword parmname">DomainMatch</span> for an existing
+                  <samp class="codeph nolang">DomainAndSubdomains</samp> key
+                to become <samp class="codeph nolang">SubdomainsOnly</samp>. In case
+                of a tie, the most specific key is used.</li>
+
+            </ul>
+</li>
+
+</ul>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

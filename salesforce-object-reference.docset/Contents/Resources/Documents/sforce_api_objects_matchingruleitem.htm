@@ -1,0 +1,247 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>MatchingRuleItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_MatchingRuleItem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>MatchingRuleItem</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents criteria used by a matching rule to identify duplicate
+			records. This object is available in API version 33.0 and later.</span></div>
+<div class="section">
+<p class="p">A matching rule item determines which field the matching rule uses to identify a duplicate
+				record. It also determines the method used to compare value that two records have
+				for the field. For example, a matching rule item might specify that the
+					<span class="keyword parmname">Email</span> field values of two records must match exactly in
+				order for the records to be considered duplicates.</p>
+
+			<p class="p">When a matching rule has multiple matching rule items, it means that multiple fields must
+				match in order for the records to be identified as dupcliates.</p>
+</div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d511457e88">Field Name</th>
+
+								<th class="featureTableHeader  " id="d511457e91">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+								<tr>
+									<td class="entry" headers="d511457e88" data-title="Field Name"><a name="//apple_ref/cpp/Field/BlankValueBehavior" class="dashAnchor"></a><span class="keyword parmname">BlankValueBehavior</span></td>
+
+									<td class="entry" headers="d511457e91" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">Specifies how blank fields affect whether the fields being compared are considered
+											matches. Valid values are: <ul class="ul bulletList">
+												<li class="li"><kbd class="ph userinput">MatchBlanks</kbd></li>
+
+												<li class="li">
+<kbd class="ph userinput">NullNotAllowed</kbd>
+												(default)</li>
+
+											</ul>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d511457e88" data-title="Field Name"><a name="//apple_ref/cpp/Field/Field" class="dashAnchor"></a><span class="keyword parmname">Field</span></td>
+
+									<td class="entry" headers="d511457e91" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">Indicates which field to compare when determining if a record is similar enough to
+											an existing record to be considered a match.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d511457e88" data-title="Field Name"><a name="//apple_ref/cpp/Field/MatchingMethod" class="dashAnchor"></a><span class="keyword parmname">MatchingMethod</span></td>
+
+									<td class="entry" headers="d511457e91" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">Defines how the fields are compared. Choose between the exact matching method and
+											various fuzzy matching methods. Valid values are:<ul class="ul bulletList">
+												<li class="li"><kbd class="ph userinput">Exact</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">FirstName</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">LastName</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">CompanyName</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">Phone</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">City</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">Street</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">Zip</kbd></li>
+
+												<li class="li"><kbd class="ph userinput">Title</kbd></li>
+
+											</ul>
+For details on each matching method, see “Matching
+											Methods Used with Matching Rules” in the Salesforce Help.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d511457e88" data-title="Field Name"><a name="//apple_ref/cpp/Field/MatchingRuleId" class="dashAnchor"></a><span class="keyword parmname">MatchingRuleId</span></td>
+
+									<td class="entry" headers="d511457e91" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The ID for the matching rule.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d511457e88" data-title="Field Name"><a name="//apple_ref/cpp/Field/SortOrder" class="dashAnchor"></a><span class="keyword parmname">SortOrder</span></td>
+
+									<td class="entry" headers="d511457e91" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">int</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The order of the matching rule items for a matching rule.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+						</tbody>
+
+					</table></div>
+</div>
+
+			<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			<p class="p">Use the Salesforce SOAP
+				API to retrieve and view details about MatchingRule and MatchingRuleItem. Use the
+					<a class="xref" href="atlas.en-us.api.meta/api/meta_matchingrule.htm#meta_matchingrule" title="Represents a matching rule that is used to identify duplicate records. This type extends the Metadata metadata type and inherits its fullName field.">Salesforce Metadata
+					API</a> to create, update, or delete these objects.</p>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_matchingrule.htm" title="Represents a matching rule that is used to identify duplicate records. This object is available in API version 33.0 and later.">MatchingRule</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_duplicaterule.htm" title="Represents a duplicate rule for detecting duplicate records.">DuplicateRule</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_duplicateresult.htm" title="Represents the details of a duplicate rule that detected duplicate records and information about those duplicate records.">DuplicateResult</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/meta_matchingrule.htm" title="Represents a matching rule that is used to identify duplicate records. This type extends the Metadata metadata type and inherits its fullName field.">MatchingRule</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

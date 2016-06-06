@@ -1,0 +1,217 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FlexQueueItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_flexqueueitem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FlexQueueItem</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a>Represents an asynchronous Apex job in the Apex flex queue. Provides
+    information about the job type and flex queue position of the AsyncApexJob.</span> This object is
+   available in API version 36.0 and later.</span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d423534e92">Field Name</th>
+
+       <th class="featureTableHeader  " id="d423534e95">Description</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d423534e92" data-title="Field Name"><a name="//apple_ref/cpp/Field/AsyncApexJobId" class="dashAnchor"></a><span class="keyword parmname">AsyncApexJobId</span></td>
+
+       <td class="entry" headers="d423534e95" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of an <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_asyncapexjob.htm#sforce_api_objects_asyncapexjob" title="Represents an individual Apex sharing recalculation job, a batch Apex job, a method with the future annotation, or a job that implements Queueable.">AsyncApexJob</a> that’s waiting in the
+            flex queue.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d423534e92" data-title="Field Name"><a name="//apple_ref/cpp/Field/FlexQueueItemId" class="dashAnchor"></a><span class="keyword parmname">FlexQueueItemId</span></td>
+
+       <td class="entry" headers="d423534e95" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The primary key for this FlexQueueItem.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d423534e92" data-title="Field Name"><a name="//apple_ref/cpp/Field/JobPosition" class="dashAnchor"></a><span class="keyword parmname">JobPosition</span></td>
+
+       <td class="entry" headers="d423534e95" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The position in the flex queue of the waiting job. The highest-priority job in the
+           queue is at position 0.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d423534e92" data-title="Field Name"><a name="//apple_ref/cpp/Field/JobType" class="dashAnchor"></a><span class="keyword parmname">JobType</span></td>
+
+       <td class="entry" headers="d423534e95" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <div class="p">The type of the job. Valid values are:<ul class="ul bulletList">
+             <li class="li"><samp class="codeph nolang">ApexToken</samp></li>
+
+             <li class="li"><samp class="codeph nolang">BatchApex</samp></li>
+
+             <li class="li"><samp class="codeph nolang">BatchApexWorker</samp></li>
+
+             <li class="li"><samp class="codeph nolang">Future</samp></li>
+
+             <li class="li"><samp class="codeph nolang">Queueable</samp></li>
+
+             <li class="li"><samp class="codeph nolang">ScheduledApex</samp></li>
+
+             <li class="li"><samp class="codeph nolang">SharingRecalculation</samp></li>
+
+             <li class="li"><samp class="codeph nolang">TestRequest</samp></li>
+
+             <li class="li"><samp class="codeph nolang">TestWorker</samp></li>
+
+            </ul>
+</div>
+
+           <p class="p">Currently, queries are supported only on <samp class="codeph nolang">BatchApex</samp> jobs.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <div class="p" id="job_position">
+<a name="job_position"><!-- --></a>To find the position of an AsyncApexJob in the flex queue, query
+     <span class="keyword parmname">JobPosition</span>. For
+    example:<div class="codeSection soql"><div id="highlighter_583958" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_583958_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_583958" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT JobPosition FROM FlexQueueItem WHERE JobType = 'BatchApex' AND AsyncApexJobId = '707xx000000DABC'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+   <div class="p" id="job_at_position">
+<a name="job_at_position"><!-- --></a>To find the job at a given position, query
+     <span class="keyword parmname">AsyncApexJobId</span>. For
+    example:<div class="codeSection soql"><div id="highlighter_67793" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_67793_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_67793" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT AsyncApexJobId FROM FlexQueueItem WHERE JobType = 'BatchApex' AND JobPosition = '2'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+   <div class="p" id="job_info">
+<a name="job_info"><!-- --></a>To find all batch jobs in the flex queue, query <span class="keyword parmname">JobType</span>. To
+    get other information about the jobs, include AsyncApexJob in your query. For
+    example:<div class="codeSection soql"><div id="highlighter_761722" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_761722_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_761722" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT JobType, JobPosition, AsyncApexJob.ApexClass.Name, AsyncApexJob.CreatedDate,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">AsyncApexJob.CreatedBy FROM FlexQueueItem WHERE JobType='BatchApex' AND</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">AsyncApexJob.ApexClass.Name LIKE '%'BatchAJob'%' ORDER BY JobPosition DESC</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

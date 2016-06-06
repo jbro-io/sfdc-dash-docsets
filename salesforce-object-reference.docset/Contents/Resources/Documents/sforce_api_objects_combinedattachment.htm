@@ -1,0 +1,394 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CombinedAttachment | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_combinedattachment"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CombinedAttachment</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>This read-only object contains all notes, attachments, Google Docs, documents uploaded to libraries
+   in Salesforce CRM Content, and files added to Chatter that are associated with a
+   record.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d233236e82">Field Name</th>
+
+<th class="featureTableHeader  " id="d233236e85">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname">ContentSize</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Size of the document in bytes.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentUrl" class="dashAnchor"></a><span class="keyword parmname">ContentUrl</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a>URL for links and Google Docs. This field is set only for links and Google Docs, and
+            is one of the fields that determine the <span class="keyword parmname">FileType</span>.</p>
+
+           <p class="p">This field is available in API version 31.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalDataSourceName" class="dashAnchor"></a><span class="keyword parmname">ExternalDataSourceName</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Name of the external data source in which the document is stored. This field is set
+           only for external documents that are connected to Salesforce.<p class="p">This field is
+            available in API version
+            32.0 and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalDataSourceType" class="dashAnchor"></a><span class="keyword parmname">ExternalDataSourceType</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Type of external data source in which the document is stored. This field is set only
+           for external documents that are connected to Salesforce.<p class="p">This field is
+            available in API version
+            35.0 and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/FileExtension" class="dashAnchor"></a><span class="keyword parmname">FileExtension</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">File extension of the document.</p>
+
+           <p class="p">This field is available in API version 31.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a><span class="keyword parmname" id="FileTypeField"><a name="FileTypeField"><!-- --></a>FileType</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Type of document, determined by the file extension.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the parent object.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/RecordType" class="dashAnchor"></a><span class="keyword parmname">RecordType</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The parent object type.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/SharingOption" class="dashAnchor"></a>
+        <span class="keyword parmname">SharingOption</span>
+       </td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Restricted" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Allowed" class="dashAnchor"></a>Controls whether or not sharing is frozen for a file. Only administrators and file
+           owners with Collaborator access to the file can modify this field. Default is
+            <span class="keyword parmname">Allowed</span>, which means that new shares are allowed. When set to
+            <span class="keyword parmname">Restricted</span>, new shares are prevented without affecting existing
+            shares.<p class="p">This field is available in API versions 35.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d233236e82" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+       <td class="entry" headers="d233236e85" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Title of the attached file.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to list all notes,
+attachments, documents uploaded to libraries in Salesforce CRM Content,
+and files added to Chatter for a record, such as a related list on a detail page.</p>
+<p class="p">To
+determine if an object supports the CombinedAttachment object,
+call <samp class="codeph nolang">describeSObject()</samp> on the
+object. For example, <samp class="codeph nolang">describeSObject('Account')</samp> returns all the child relationships of the Account object, including <span class="keyword parmname">CombinedAttachment</span>. You can then query the CombinedAttachment child
+relationship. </p>
+<div class="codeSection soql"><div id="highlighter_607475" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_607475_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_607475" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Name, (SELECT Title FROM CombinedAttachments)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM Account</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">You can’t directly query CombinedAttachment.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

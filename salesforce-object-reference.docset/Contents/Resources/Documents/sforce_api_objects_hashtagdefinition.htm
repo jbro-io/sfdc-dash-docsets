@@ -1,0 +1,199 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>HashtagDefinition | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_hashtagdefinition"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>HashtagDefinition</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="hashtagdefinition_defn"><a name="hashtagdefinition_defn"><!-- --></a>HashtagDefinition represents hashtag (#) topics in
+    public Chatter posts and
+    comments.</span>
+   <span class="ph" id="hashtag_public_defn"><a name="hashtag_public_defn"><!-- --></a>Public posts and comments include those on profiles and in public
+    groups, but not those on records or in private groups.</span></span>
+  <span class="ph" id="HashtagDefinitionAvailVersion"><a name="HashtagDefinitionAvailVersion"><!-- --></a>This object is available in API version 26.0 and
+  later.</span>
+</div>
+
+  <div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p>Starting in Spring ’16, <span class="ph" id="HashtagDefn_EOL"><a name="HashtagDefn_EOL"><!-- --></a>API access to
+    HashtagDefinition is disabled across all API versions. Any integrations relying on API queries
+    to this object stop working. You can continue to use hashtags in posts and comments, and the
+    hashtags continue to create corresponding topics. We recommend that you redirect all API queries
+    and reports using the HashtagDefinition object to use the Topic object instead. For more
+    information, see <a class="xref" href="https://help.salesforce.com/apex/HTViewSolution?urlname=Retiring-the-Legacy-HashtagDefinition-Object" target="_blank" title="HTML (New Window)">Retiring the Legacy HashtagDefinition
+     Object—FAQs</a>.</span></p>
+</div>
+</div></div></div></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d440357e123">Field Name</th>
+
+       <th class="featureTableHeader  " id="d440357e126">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d440357e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/HashtagCount" class="dashAnchor"></a><span class="keyword parmname">HashtagCount</span></td>
+
+       <td class="entry" headers="d440357e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of times a hashtag topic is used.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d440357e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d440357e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The string of characters following the hashtag (#) in a hashtag topic.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d440357e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/NameNorm" class="dashAnchor"></a><span class="keyword parmname">NameNorm</span></td>
+
+       <td class="entry" headers="d440357e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The string of characters following the hashtag (#) in a hashtag topic, normalized to
+           remove capitalization and punctuation.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d440357e123" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+       <td class="entry" headers="d440357e126" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Identifier of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> to which the HashtagDefinition
+           belongs. This field is
+            available only if Salesforce Communities is enabled
+            in your organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use this object to identify public hashtag topics and see how often they’re used.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_topic.htm" title="Represents a topic on a Chatter post or record. This object is available in API version 28.0 and later.">Topic</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

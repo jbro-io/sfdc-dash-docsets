@@ -1,0 +1,450 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserRole | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_role"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserRole</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a user role in your organization.</span></div>
+
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This object was called “Role” in previous versions
+of the API documentation.</p>
+</div>
+</div></div></div></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d416830e75-d416974e73"><a name="d416830e75-d416974e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d651251e126">Field</th>
+
+<th class="featureTableHeader  " id="d651251e129">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/CaseAccessForAccountOwner" class="dashAnchor"></a> <span class="keyword parmname">CaseAccessForAccountOwner</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The case access level for the account owner.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/ContactAccessForAccountOwner" class="dashAnchor"></a> <span class="keyword parmname">ContactAccessForAccountOwner</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The contact access level for the account owner.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a>When <span class="keyword parmname">DefaultContactAccess</span> is set to <samp class="codeph nolang">Controlled by Parent</samp>, you can’t create or update this field.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization. Corresponds to <strong class="ph uicontrol">Role Name</strong> in the user
+interface. <p class="p">This field is available
+in&nbsp;API&nbsp;version&nbsp;24.0&nbsp;and later.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/ForecastUserId" class="dashAnchor"></a> <span class="keyword parmname">ForecastUserId</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the forecast manager associated with this role. Label
+is <strong class="ph uicontrol">User ID</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/IsPartner" class="dashAnchor"></a><span class="keyword parmname" id="ispartner"><a name="ispartner"><!-- --></a>IsPartner</span></td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PortalType" class="dashAnchor"></a>Indicates whether the user role is a partner who has access to
+the partner portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This field is not available for
+release 9.0 and later. Instead, use <span class="keyword parmname">PortalType</span> with the value <samp class="codeph nolang">Partner</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/MayForecastManagerShare" class="dashAnchor"></a><span class="keyword parmname">MayForecastManagerShare</span></td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the forecast manager can manually share their
+own forecast.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a> <span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Name of the role. Corresponds to <strong class="ph uicontrol">Label</strong> on the user interface.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityAccessForAccountOwner" class="dashAnchor"></a> <span class="keyword parmname">OpportunityAccessForAccountOwner</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The opportunity access level for the account owner.
+Note that you can’t set a user role with an opportunity access
+less than that specified in organization-wide defaults.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/ParentRoleId" class="dashAnchor"></a> <span class="keyword parmname" id="parentroleid"><a name="parentroleid"><!-- --></a>ParentRoleId</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the parent role.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/PortalRole" class="dashAnchor"></a><span class="keyword parmname">PortalRole</span></td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The portal role: Executive, Manager, User, or PersonAccount.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/PortalType" class="dashAnchor"></a><span class="keyword parmname" id="portaltype"><a name="portaltype"><!-- --></a>PortalType</span></td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">This value indicates the type of portal for the role:<ul class="ul bulletList">
+<li class="li">None: Salesforce application
+role.</li>
+
+<li class="li">CustomerPortal: Customer portal role.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/IsPartner" class="dashAnchor"></a>Partner: partner portal role. The field <span class="keyword parmname">IsPartner</span> used in release
+8.0 will map to this value.</li>
+
+</ul>
+This field replaces <a class="xref" href="#ispartner"><a name="//apple_ref/cpp/Field/IsPartner" class="dashAnchor"></a><span class="keyword parmname">IsPartner</span></a> beginning with release 9.0. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d651251e126" data-title="Field"><a name="//apple_ref/cpp/Field/RollupDescription" class="dashAnchor"></a> <span class="keyword parmname">RollupDescription</span> </td>
+
+<td class="entry" headers="d651251e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of the forecast rollup. Label is <strong class="ph uicontrol">Description</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+ <p class="p">Use this object to query the set
+of currently configured user roles in your organization. Use it in
+your client application to obtain valid UserRole IDs to use when querying or modifying a User record.</p>
+<div class="p">All users have access to invoke query or describe
+this object. If your client application logs in with the “Manage
+Users” permission, it can query, create, update, or delete UserRole records.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You can’t update any field for a portal
+role.</p>
+</div>
+</div></div></div></div>
+</div>
+<div class="p">For example, the following code finds all roles
+that are not assigned to any users.<div class="codeSection soql"><div id="highlighter_134626" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_134626_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_134626" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name, DeveloperName, </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM UserRole </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE Id NOT IN (SELECT UserRoleId </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">FROM User </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">WHERE UserRoleId !='000000000000000')</code></td></tr></tbody></table></div></div></div></div>
+</div>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

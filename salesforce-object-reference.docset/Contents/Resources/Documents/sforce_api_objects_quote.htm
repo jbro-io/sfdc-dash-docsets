@@ -1,0 +1,2003 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Quote | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_quote"><!-- --></a><h1 class="helpHead1" id="TitleQuote-0294FED9">
+<a name="TitleQuote-0294FED9"><!-- --></a><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Quote</span>
+</h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>The Quote object represents a quote, which is a record showing proposed
+   prices for products and services. Available in API version 18.0 and
+  later.</span></div>
+
+<p class="p" id="QuoteDefAPI"><a name="QuoteDefAPI"><!-- --></a>Quotes can be created from and synced with opportunities, and emailed as PDFs to
+   customers </p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d629745e122">Field</th>
+
+<th class="featureTableHeader  " id="d629745e125">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the account that’s associated with the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalAddress" class="dashAnchor"></a><span class="keyword parmname">AdditionalAddress</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Compound form of the additional address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalCity" class="dashAnchor"></a><span class="keyword parmname">AdditionalCity</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">City for the quote's additional address. Up to 40 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalCountry" class="dashAnchor"></a><span class="keyword parmname">AdditionalCountry</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Country for the quote's additional address. Up to 80 characters
+allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalCountryCode" class="dashAnchor"></a><span class="keyword parmname">AdditionalCountryCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO country code for the quote’s additional address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalLatitude" class="dashAnchor"></a><span class="keyword parmname">AdditionalLatitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AdditionalLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">AdditionalLongitude</span> to specify
+the precise geolocation of an additional address. Acceptable values
+are numbers between –90 and 90 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalLongitude" class="dashAnchor"></a><span class="keyword parmname">AdditionalLongitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AdditionalLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">AdditionalLatitude</span> to specify the
+precise geolocation of an additional address. Acceptable values are
+numbers between –180 and 180 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalName" class="dashAnchor"></a><span class="keyword parmname">AdditionalName</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Name associated with the quote's additional address. Limited:
+255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalPostalCode" class="dashAnchor"></a><span class="keyword parmname">AdditionalPostalCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Postal Code for the quote's additional address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalState" class="dashAnchor"></a><span class="keyword parmname">AdditionalState</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">State for the quote's additional address. Up to 80 characters
+allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalStateCode" class="dashAnchor"></a><span class="keyword parmname">AdditionalStateCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO state code for the quote’s additional address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/AdditionalStreet" class="dashAnchor"></a><span class="keyword parmname">AdditionalStreet</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Street name for the quote's additional address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingAddress" class="dashAnchor"></a><span class="keyword parmname">BillingAddress</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Compound form of the billing address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCity" class="dashAnchor"></a><span class="keyword parmname">BillingCity</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">City for the quote's billing address. Up to 40 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCountry" class="dashAnchor"></a><span class="keyword parmname">BillingCountry</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Country for the quote's billing address. Up to 80 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCountryCode" class="dashAnchor"></a><span class="keyword parmname">BillingCountryCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO country code for the quote’s billing address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingLatitude" class="dashAnchor"></a><span class="keyword parmname">BillingLatitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/BillingLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">BillingLongitude</span> to specify the
+            precise geolocation of a billing address. Acceptable values are numbers between
+            –90 and 90 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingLongitude" class="dashAnchor"></a><span class="keyword parmname">BillingLongitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/BillingLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">BillingLatitude</span> to specify the
+            precise geolocation of a billing address. Acceptable values are numbers between
+            –180 and 180 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingName" class="dashAnchor"></a><span class="keyword parmname">BillingName</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Entity that the quote is billed to.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingPostalCode" class="dashAnchor"></a><span class="keyword parmname">BillingPostalCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Postal Code for the quote's billing address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingState" class="dashAnchor"></a><span class="keyword parmname">BillingState</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">State for the quote's billing address. Up to 80 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingStateCode" class="dashAnchor"></a><span class="keyword parmname">BillingStateCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO state code for the quote’s billing address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/BillingStreet" class="dashAnchor"></a><span class="keyword parmname">BillingStreet</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Street name for the quote's billing address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a><span class="keyword parmname">ContactId</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the contact that’s associated with the quote.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ContractId" class="dashAnchor"></a><span class="keyword parmname">ContractId</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the contract that’s associated with the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Available only for organizations with the multicurrency feature
+enabled. Contains the ISO code for any currency allowed by the organization.<p class="p"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a>If the organization has multicurrency and a <span class="keyword parmname">Pricebook2Id</span> specified on the quote, then the currency value of this
+field must match the currency of the PricebookEntry objects that are associated with any quote line items it has.</p>
+<p class="p">This value is copied from the related Opportunity and can't be changed.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text description of the quote. Limit: 32,000 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><span class="keyword parmname">Discount</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">percent</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a>Difference between the sum of the QuoteLineItem record's<span class="keyword parmname">Subtotal</span> and the sum of the QuoteLineItem record's <span class="keyword parmname">Discount</span> totals. Expressed as a percentage.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a><span class="keyword parmname">Email</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The email address of the contact who’s associated with the
+                quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ExpirationDate" class="dashAnchor"></a><span class="keyword parmname">ExpirationDate</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date when this quote is no longer valid.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a><span class="keyword parmname">Fax</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The fax number for the contact who’s associated with the
+                quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><span class="ph" id="GrandTotal"><a name="//apple_ref/cpp/Field/GrandTotal" class="dashAnchor"></a><a name="GrandTotal"><!-- --></a><span class="keyword parmname" id="ParmnameGrandTotal-026D6239"><a name="ParmnameGrandTotal-026D6239"><!-- --></a>GrandTotal</span></span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total price of the quote plus shipping and taxes.
+              </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/IsSyncing" class="dashAnchor"></a><span class="keyword parmname">IsSyncing</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the quote is syncing with an opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/LineItemCount" class="dashAnchor"></a><span class="keyword parmname">LineItemCount</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of line items on the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, <span class="ph">idLookup</span>, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Name for the quote. Limit: 225 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityId" class="dashAnchor"></a><span class="keyword parmname">OpportunityId</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID for the opportunity associated with the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The phone number of the contact who’s associated with the
+                quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><span class="keyword parmname">Pricebook2Id</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the price book associated with the quote.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteNumber" class="dashAnchor"></a><span class="keyword parmname">QuoteNumber</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A system-generated number that identifies the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToAddress" class="dashAnchor"></a><span class="keyword parmname">QuoteToAddress</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Compound form of the quote to address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToCity" class="dashAnchor"></a><span class="keyword parmname">QuoteToCity</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">City for the address to send the quote to for approval, such as
+a third party-agency representing a buyer. Up to 40 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToCountry" class="dashAnchor"></a><span class="keyword parmname">QuoteToCountry</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Country for the address to send the quote to for approval. Up
+to 80 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToLatitude" class="dashAnchor"></a><span class="keyword parmname">QuoteToLatitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/QuoteToLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">QuoteToLongitude</span> to specify the
+precise geolocation of a quote to address. Acceptable values are numbers
+between –90 and 90 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToLongitude" class="dashAnchor"></a><span class="keyword parmname">QuoteToLongitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/QuoteToLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">QuoteToLatitude</span> to specify the
+precise geolocation of a quote to address. Acceptable values are numbers
+between –180 and 180 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToName" class="dashAnchor"></a><span class="keyword parmname">QuoteToName</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the entity (such as a person or business)
+                that the quote is sent to for approval. Limit: 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToPostalCode" class="dashAnchor"></a><span class="keyword parmname">QuoteToPostalCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Postal code for the address to send the quote to for approval.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToState" class="dashAnchor"></a><span class="keyword parmname">QuoteToState</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">State for the address to send the quote to for approval.  Up to
+80 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteToStreet" class="dashAnchor"></a><span class="keyword parmname">QuoteToStreet</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Street name for the address to send the quote to for approval.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeID" class="dashAnchor"></a><span class="keyword parmname">RecordTypeID</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the record type assigned to the object.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingAddress" class="dashAnchor"></a><span class="keyword parmname">ShippingAddress</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Compound form of the shipping address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCity" class="dashAnchor"></a><span class="keyword parmname">ShippingCity</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">City for the quote's shipping address. Up to 40 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCountry" class="dashAnchor"></a><span class="keyword parmname">ShippingCountry</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Country for the quote's shipping address. Up to 80 characters
+allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCountryCode" class="dashAnchor"></a><span class="keyword parmname">ShippingCountryCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO country code for the quote’s shipping address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingHandling" class="dashAnchor"></a><span class="keyword parmname">ShippingHandling</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total shipping and handling costs for the
+              quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingLatitude" class="dashAnchor"></a><span class="keyword parmname">ShippingLatitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ShippingLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">ShippingLongitude</span> to specify the
+            precise geolocation of a shipping address. Acceptable values are numbers between
+            –90 and 90 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingLongitude" class="dashAnchor"></a><span class="keyword parmname">ShippingLongitude</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ShippingLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">ShippingLatitude</span> to specify the
+            precise geolocation of an address. Acceptable values are numbers between –180 and
+            180 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingName" class="dashAnchor"></a><span class="keyword parmname">ShippingName</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the entity (such as a person or business)
+                that the quote is sent to for approval.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingPostalCode" class="dashAnchor"></a><span class="keyword parmname">ShippingPostalCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Postal code for the quote's shipping address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingState" class="dashAnchor"></a><span class="keyword parmname">ShippingState</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">State for the quote's shipping address. Up to 80 characters allowed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingStateCode" class="dashAnchor"></a><span class="keyword parmname">ShippingStateCode</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ISO state code for the quote’s shipping address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingStreet" class="dashAnchor"></a><span class="keyword parmname">ShippingStreet</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Street name for the quote's shipping address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<div class="p">The current status of the quote. The standard options are: <ul class="ul bulletList">
+                  <li class="li">—None—</li>
+
+                  <li class="li">Draft</li>
+
+                  <li class="li">Needs Review</li>
+
+                  <li class="li">In Review</li>
+
+                  <li class="li">Approved</li>
+
+                  <li class="li">Rejected</li>
+
+                  <li class="li">Presented</li>
+
+                  <li class="li">Accepted</li>
+
+                  <li class="li">Denied</li>
+
+                </ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><span class="keyword parmname">Subtotal</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The line item’s sales price multiplied by the quantity
+                  and minus the discount.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/Tax" class="dashAnchor"></a><span class="keyword parmname">Tax</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total taxes for the quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d629745e122" data-title="Field"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><span class="keyword parmname">TotalPrice</span></td>
+
+<td class="entry" headers="d629745e125" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total of the quote line items after discounts and
+                before taxes and shipping.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use Quote to manage proposed product prices for customers. To update
+a Quote, your client application needs “Edit” permission. </p>
+<ul class="ul bulletList">
+<li class="li">Client applications can create, update, delete, and query Attachment records associated with a quote via the API.</li>
+
+<li class="li">You can sync a quote and its parent Opportunity.</li>
+
+</ul>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quotelineitem.htm" title="The QuoteLineItem object represents a quote line item, which is a member of the list of Product2 products associated with a Quote, along with other information about those line items on that quote. Available in API version 18.0 and later.">QuoteLineItem</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quotedocument.htm" title="The QuoteDocument object represents a quote in document format. Available in API version 18.0 and later.">QuoteDocument</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunity.htm" title="Represents an opportunity, which is a sale or pending deal.">Opportunity</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PresenceUserConfig | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_presenceuserconfig"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PresenceUserConfig</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a configuration that determines a presence user’s
+   settings.</span> This object is available in API version 32.0 and later.</div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>,  <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d594645e106">Field</th>
+
+       <th class="featureTableHeader  " id="d594645e109">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/Capacity" class="dashAnchor"></a><span class="keyword parmname">Capacity</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum number of work assignments that can be pushed to an agent at a time.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The language of the presence configuration.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The label of the presence configuration.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsIsAutoAcceptEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsIsAutoAcceptEnabled</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/OptionsIsDeclineEnabled" class="dashAnchor"></a>Indicates whether work items that are routed to agents are automatically accepted
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Available only if <span class="keyword parmname">OptionsIsDeclineEnabled</span> is set
+           to <samp class="codeph nolang">false</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsIsDeclineEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsIsDeclineEnabled</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/OptionsIsAutoAcceptEnabled" class="dashAnchor"></a>Indicates whether agents can decline work items that are routed to them (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           Available only if <span class="keyword parmname">OptionsIsAutoAcceptEnabled</span> is set to <samp class="codeph nolang">false</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsIsDeclineReasonEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsIsDeclineReasonEnabled</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether agents can select a reason for declining work requests (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           This can be selected only if decline reasons are enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsIsDisconnectSoundEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsIsDisconnectSoundEnabled</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether a sound is played when agents are disconnected from Omni-Channel (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsIsRequestSoundEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsIsRequestSoundEnabled</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether a sound plays with incoming work requests (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           Set to <samp class="codeph nolang">true</samp> by default.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/PresenceStatusOnDeclineId" class="dashAnchor"></a><span class="keyword parmname">PresenceStatusOnDeclineId</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/OptionsIsDeclineEnabled" class="dashAnchor"></a>The ID of the presence status that’s automatically assigned to the agent when the
+           agent declines a work item. Available only if
+            <span class="keyword parmname">OptionsIsDeclineEnabled</span> is set to <samp class="codeph nolang">true</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d594645e106" data-title="Field"><a name="//apple_ref/cpp/Field/PresenceStatusOnPushTimeoutId" class="dashAnchor"></a><span class="keyword parmname">PresenceStatusOnPushTimeoutId</span></td>
+
+       <td class="entry" headers="d594645e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the presence status that’s automatically assigned to the agent when the
+           agent doesn’t respond to a work item before push timeout occurs. Available in API version
+           36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

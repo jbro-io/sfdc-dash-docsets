@@ -1,0 +1,695 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkOrderLineItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkOrderLineItem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkOrderLineItem</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="TBD"><a name="TBD"><!-- --></a>Represents a subtask on a work order, typically in field
+				service. This object is available in API version 36.0 and
+				later.</span></span></div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">Work orders must be enabled in your organization.</p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d796410e133">Field Name</th>
+
+								<th class="featureTableHeader  " id="d796410e136">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/AssetId" class="dashAnchor"></a><span class="keyword parmname">AssetId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The asset associated with the work order line item. The
+											asset is not automatically inherited from the parent
+											work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Currency ISO
+												Code" class="dashAnchor"></a>Available only for orgs with the multicurrency feature enabled. Contains the ISO code
+											for any currency allowed by the organization. The label
+											in the user interface is <span class="keyword parmname">Currency ISO
+												Code</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Nillable, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The description of the work order line item. Try to
+											describe the steps needed to mark the line item as
+											Completed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><span class="keyword parmname">Discount</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">percent</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The percent discount to apply to the line item. You can
+											enter a number with or without the percent symbol, and
+											you can use up to two decimal places.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/EndDate" class="dashAnchor"></a><span class="keyword parmname">EndDate</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date on which the line item is completed. This field
+											is blank unless you set up an Apex trigger or quick action to populate it. For example,
+											you can create a quick action that sets the EndDate to
+											365 days after the StartDate.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/LineItemNumber" class="dashAnchor"></a><span class="keyword parmname">LineItemNumber</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">An auto-generated number that identifies the work order
+											line item. Each work order’s line items start at 1.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/ListPrice" class="dashAnchor"></a><span class="keyword parmname">ListPrice</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The price of the line item (product) as listed in its
+												corresponding price book entry. If a price book
+												entry isn’t specified, the list price defaults to
+												zero.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/OrderId" class="dashAnchor"></a><span class="keyword parmname">OrderId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The order associated with the line item. For example,
+											you may need to order replacement parts before you can
+											complete the line item.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentWorkOrderLineItemId" class="dashAnchor"></a><span class="keyword parmname">ParentWorkOrderLineItemId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The line item’s parent work order line item, if it has
+												one.<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>Create a custom report to view
+												a line item’s child line items.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/PricebookEntryId" class="dashAnchor"></a><span class="keyword parmname">PricebookEntryId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The price book entry that corresponds with the line item. A price book must be
+											specified on the parent work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Product2Id" class="dashAnchor"></a><span class="keyword parmname">Product2Id</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Price Book
+												Entry" class="dashAnchor"></a>The product associated with the price book entry. Selecting a product in the user
+											interface populates the <span class="keyword parmname">Price Book
+												Entry</span> field.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><span class="keyword parmname">Quantity</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">double</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Number of units of the line item included in the
+												associated work order.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/RootWorkOrderLineItemId" class="dashAnchor"></a><span class="keyword parmname">RootWorkOrderLineItemId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">(Read only) The top-level line item in a work order line
+											item hierarchy. Depending on where a line item lies in
+											the hierarchy, its root could be the same as its
+												parent.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>View a line item’s child line items in
+												the Child Work Order Line Items related
+											list.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a><span class="keyword parmname">StartDate</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date on which the line item goes into effect. This
+											field is blank unless you set up an Apex trigger or quick action to populate it. For example,
+											you can create a quick action that sets the StartDate to
+											the date when the Status changes to In Progress.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The status of the line item. The picklist includes the
+											following values, which can be customized:<ul class="ul bulletList">
+												<li class="li"><a name="//apple_ref/cpp/Field/New" class="dashAnchor"></a><span class="keyword parmname">New</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/In Progress" class="dashAnchor"></a><span class="keyword parmname">In Progress</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Completed" class="dashAnchor"></a><span class="keyword parmname">Completed</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Closed" class="dashAnchor"></a><span class="keyword parmname">Closed</span></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><span class="keyword parmname">Subtotal</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Read only. The line item’s unit price multiplied by
+												the quantity.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><span class="keyword parmname">TotalPrice</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The line item’s subtotal with discounts
+											applied.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><span class="keyword parmname">UnitPrice</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Initially, the unit price for a work order line item is
+											the line item’s list price from the price book, but you
+											can change it.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d796410e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/WorkOrderId" class="dashAnchor"></a><span class="keyword parmname">WorkOrderId</span></td>
+
+							<td class="entry" headers="d796410e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The line item’s parent work order. Because work order
+											line items must be associated with a work order, this is
+											a required field.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+					</table></div>
+</div>
+
+			<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			<p class="p">A work order line item is a child record of a work order. It represents a specific subtask on
+				a work order.</p>
+
+			<div class="p">For example, suppose a customer purchased a truck from you. The truck is represented as an
+				asset in your Salesforce
+				org. After some time, the truck needs both headlight bulbs replaced. Here’s one way
+				that you can use work orders and work order line items to track the repair.<ol class="ol enumList">
+					<li class="li">Create a work order named “Replace Headlight Bulbs” from the asset record
+						detail page.</li>
+
+					<li class="li">Add three work order line items to the work order: “Replace Left Headlight
+						Bulb,” “Replace Right Headlight Bulb,” and “Test Headlights.”</li>
+
+					<li class="li">Assign the work order to a technician via a queue.</li>
+
+					<li class="li">As the technician completes each line item, he or she marks the item as
+							<span class="keyword parmname">Completed</span>.</li>
+
+					<li class="li">When all the line items are complete, the technician marks the work order as
+							<span class="keyword parmname">Completed</span>.</li>
+
+				</ol>
+</div>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

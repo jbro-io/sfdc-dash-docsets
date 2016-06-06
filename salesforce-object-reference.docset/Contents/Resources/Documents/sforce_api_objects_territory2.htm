@@ -1,0 +1,377 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Territory2 | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_Territory2"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Territory2</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a sales territory. Available
+only if Enterprise Territory Management has been enabled for your organization.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeLayout()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">If a territory model
+is in <samp class="ph systemoutput">Active</samp> state, any user can view
+that model, including its territories and assignment rules. For territories
+in an active model, any user can view assigned records and assigned
+users subject to your organization’s sharing settings. Users
+cannot view territory models in other states (such as <samp class="ph systemoutput">Planning</samp> or <samp class="ph systemoutput">Archived</samp>).</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d701643e120">Field Name</th>
+
+<th class="featureTableHeader  " id="d701643e123">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountAccessLevel" class="dashAnchor"></a><span class="keyword parmname">AccountAccessLevel</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the default account record access levels for users
+that are assigned to the territory. Values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Read Only" class="dashAnchor"></a><span class="keyword parmname">Read Only</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read/Write" class="dashAnchor"></a><span class="keyword parmname">Read/Write</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Owner" class="dashAnchor"></a><span class="keyword parmname">Owner</span></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/CaseAccessLevel" class="dashAnchor"></a><span class="keyword parmname">CaseAccessLevel</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the default case record access levels for users that
+are assigned to the territory. Values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Private" class="dashAnchor"></a><span class="keyword parmname">Private</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read Only" class="dashAnchor"></a><span class="keyword parmname">Read Only</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read/Write" class="dashAnchor"></a><span class="keyword parmname">Read/Write</span></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContactAccessLevel" class="dashAnchor"></a><span class="keyword parmname">ContactAccessLevel</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the default contact record access levels for users
+that are assigned to the territory. Values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Private" class="dashAnchor"></a><span class="keyword parmname">Private</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read Only" class="dashAnchor"></a><span class="keyword parmname">Read Only</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read/Write" class="dashAnchor"></a><span class="keyword parmname">Read/Write</span></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The description of the territory.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Territory
+Name" class="dashAnchor"></a>Required. The unique name of the object in the API. This name
+can contain only underscores and alphanumeric characters and must
+be unique in your organization. It must begin with a letter, not include
+spaces, not end with an underscore, and not contain two consecutive
+underscores. The field label in the user interface is <span class="keyword parmname">Territory
+Name</span>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a>The name of the territory. The field label in the user interface
+is <span class="keyword parmname">Label</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/OpportunityAccessLevel" class="dashAnchor"></a><span class="keyword parmname">OpportunityAccessLevel</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the default opportunity record access levels for users
+that are assigned to the territory. Values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Private" class="dashAnchor"></a><span class="keyword parmname">Private</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read Only" class="dashAnchor"></a><span class="keyword parmname">Read Only</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read/Write" class="dashAnchor"></a><span class="keyword parmname">Read/Write</span></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentTerritory2Id" class="dashAnchor"></a><span class="keyword parmname">ParentTerritory2Id</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the territory’s parent territory (if any).  If
+the territory has no parent territory, this value is <samp class="ph systemoutput">null</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Territory2ModelId" class="dashAnchor"></a><span class="keyword parmname">Territory2ModelId</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the territory model that the territory belongs to.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d701643e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Territory2TypeId" class="dashAnchor"></a><span class="keyword parmname">Territory2TypeId</span></td>
+
+<td class="entry" headers="d701643e123" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the territory type that the territory belongs to.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

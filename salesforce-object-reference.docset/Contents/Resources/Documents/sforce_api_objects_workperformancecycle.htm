@@ -1,0 +1,332 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkPerformanceCycle | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkPerformanceCycle"><!-- --></a><h1 class="helpHead1"> 			<span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkPerformanceCycle</span> 		</h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents feedback that is gathered to assess the performance of a
+			specific set of employees.</span></div>
+
+		
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>, &nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp; <samp class="codeph nolang">describeLayout()</samp>,&nbsp; <samp class="codeph nolang">describeSObjects()</samp>,&nbsp; <samp class="codeph nolang">getDeleted()</samp>,&nbsp; <samp class="codeph nolang">getUpdated()</samp>,&nbsp; <samp class="codeph nolang">query()</samp>,&nbsp; <samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>,&nbsp; <samp class="codeph nolang">update()</samp>,&nbsp; <samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d800390e127">Field Name</th>
+
+							<th class="featureTableHeader  " id="d800390e130">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActivityFrom" class="dashAnchor"></a><span class="keyword parmname">ActivityFrom</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">date</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date that you want to start filtering the work.com
+											objects to help requesters create accurate summaries.
+											The start of the evaluation period.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActivityTo" class="dashAnchor"></a><span class="keyword parmname">ActivityTo</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">date</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date that you want to stop filtering the work.com
+											objects to help requesters create accurate summaries.
+											&nbsp;The end of the evaluation period.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/CurrentTask" class="dashAnchor"></a><span class="keyword parmname">CurrentTask</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The current task that the performance summary cycle is
+											engaged in, including deploying and sharing.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastManagerRequestsSharedDate" class="dashAnchor"></a><span class="keyword parmname">LastManagerRequestsSharedDate</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date when all manager requests are set to be
+											shared.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The time stamp that indicates when the current user last
+											viewed a record that is related to this WorkPerformanceCycle.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The time stamp that indicates when the current user last
+											viewed this WorkPerformanceCycle. If this value is null, this record might have been
+											only referenced
+											(<span class="keyword parmname">LastReferencedDate</span>) and not
+											viewed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, idLookup, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The name of the performance summary cycle that employees
+											will participate in. &nbsp;This name is created by the
+											administrator and is visible on all respective
+											notifications and in the UI.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the owner of the WorkPerformanceCycle.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d800390e127" data-title="Field Name"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+							<td class="entry" headers="d800390e130" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The state that the performance summary cycle is in.
+											Available pick list values:<ul class="ul bulletList">
+												<li class="li">Setup: The summary is in draft.</li>
+
+												<li class="li">In Progress: The summary is deployed and people
+												are answering the questions that were
+												created.</li>
+
+												<li class="li">Finished: The summary is no longer in
+												progress.</li>
+
+												<li class="li">Error: The summary encountered an error.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

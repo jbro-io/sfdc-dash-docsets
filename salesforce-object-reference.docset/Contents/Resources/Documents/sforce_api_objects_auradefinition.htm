@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AuraDefinition | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_auradefinition"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AuraDefinition</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a Lightning definition, such as
+			component markup, a client-side controller, or an event. This object is available in API
+			version 32.0 and later.</span></div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d181199e108">Field Name</th>
+
+							<th class="featureTableHeader  " id="d181199e111">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d181199e108" data-title="Field Name"><a name="//apple_ref/cpp/Field/AuraDefinitionBundleId" class="dashAnchor"></a><span class="keyword parmname">AuraDefinitionBundleId</span></td>
+
+							<td class="entry" headers="d181199e111" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="field_AuraDefinitionBundleId_desc"><a name="field_AuraDefinitionBundleId_desc"><!-- --></a>The ID of the
+												bundle containing the definition. A bundle contains
+												a Lightning definition and all its related
+											resources.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d181199e108" data-title="Field Name"><a name="//apple_ref/cpp/Field/DefType" class="dashAnchor"></a><span class="keyword parmname">DefType</span></td>
+
+							<td class="entry" headers="d181199e111" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<div class="p" id="field_DefType_desc">
+<a name="field_DefType_desc"><!-- --></a>The definition type. Valid
+												values are:<a name="field_DefType_desc_values"><!-- --></a><ul class="ul bulletList" id="field_DefType_desc_values">
+												<li class="li">
+<samp class="codeph nolang">APPLICATION</samp> — Lightning Components app</li>
+
+												<li class="li">
+<samp class="codeph nolang">CONTROLLER</samp> — client-side controller</li>
+
+												<li class="li">
+<samp class="codeph nolang">COMPONENT</samp>
+												— component markup</li>
+
+												<li class="li">
+<samp class="codeph nolang">EVENT</samp> —
+												event definition</li>
+
+												<li class="li">
+<samp class="codeph nolang">HELPER</samp> —
+												client-side helper</li>
+
+												<li class="li">
+<samp class="codeph nolang">INTERFACE</samp>
+												— interface definition</li>
+
+												<li class="li">
+<samp class="codeph nolang">RENDERER</samp>
+												— client-side renderer</li>
+
+												<li class="li">
+<samp class="codeph nolang">STYLE</samp> —
+												style (CSS) resource</li>
+
+												<li class="li">
+<samp class="codeph nolang">PROVIDER</samp>
+												— reserved for future use</li>
+
+												<li class="li">
+<samp class="codeph nolang">MODEL</samp> —
+												deprecated, do not use</li>
+
+												<li class="li">
+<samp class="codeph nolang">TESTSUITE</samp>
+												— reserved for future use</li>
+
+												<li class="li">
+<samp class="codeph nolang">DOCUMENTATION</samp> — documentation
+												markup</li>
+
+												<li class="li">
+<samp class="codeph nolang">TOKENS</samp> —
+												tokens collection</li>
+
+												<li class="li">
+<samp class="codeph nolang">DESIGN</samp> —
+												design definition</li>
+
+												<li class="li">
+<samp class="codeph nolang">SVG</samp> — SVG
+												graphic resource</li>
+
+												</ul>
+</div>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d181199e108" data-title="Field Name"><a name="//apple_ref/cpp/Field/Format" class="dashAnchor"></a><span class="keyword parmname">Format</span></td>
+
+							<td class="entry" headers="d181199e111" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The format of the definition. Valid values are:<a name="field_Format_options"><!-- --></a><ul class="ul bulletList" id="field_Format_options">
+												<li class="li">
+<samp class="codeph nolang">XML</samp> for
+												component markup</li>
+
+												<li class="li">
+<samp class="codeph nolang">JS</samp> for
+												JavaScript code</li>
+
+												<li class="li">
+<samp class="codeph nolang">CSS</samp> for
+												styles</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d181199e108" data-title="Field Name"><a name="//apple_ref/cpp/Field/Source" class="dashAnchor"></a><span class="keyword parmname">Source</span></td>
+
+							<td class="entry" headers="d181199e111" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="field_Source_desc"><a name="field_Source_desc"><!-- --></a>The contents of the Lightning definition. This is all the markup or code for
+												the definition.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><span class="ph" id="aura_more_info"><a name="aura_more_info"><!-- --></a>For more information, see the <a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.lightning.meta/lightning/" target="_blank" title="HTML (New Window)">Lightning Components Developer Guide</a>.</span></p>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

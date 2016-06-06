@@ -1,0 +1,600 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContentHubItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_ContentHubItem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContentHubItem</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a file or folder in a Files Connect external data
+			source, such as Microsoft SharePoint or OneDrive for Business.</span> This object is
+		available in API version 33.0 and later.</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Chatter and Files Connect must be
+				enabled for the organization.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">search()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d260419e106">Field Name</th>
+
+							<th class="featureTableHeader  " id="d260419e109">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentHubRepositoryId" class="dashAnchor"></a><span class="keyword parmname">ContentHubRepositoryId</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The ID for the related external data source described by
+											the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_contenthubrepository.htm" title="Represents a Files Connect external data source such as Microsoft SharePoint or OneDrive for Business. This object is available in API version 33.0 and later.">ContentHubRepository</a> object.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><span class="keyword parmname">ContentModifiedDate</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Date the file or folder content last changed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname">ContentSize</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">File or folder size.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Explanation of item in external data source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalContentUrl" class="dashAnchor"></a><span class="keyword parmname">ExternalContentUrl</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The URL of the document content in the external data
+											source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalDocumentUrl" class="dashAnchor"></a><span class="keyword parmname">ExternalDocumentUrl</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">url</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The URL of the detail page in the external data
+											source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalId" class="dashAnchor"></a><span class="keyword parmname">ExternalId</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID for the file or folder in the external data
+											source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/FileExtension" class="dashAnchor"></a><span class="keyword parmname">FileExtension</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">File format extension, such as .doc or .pdf</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a><span class="keyword parmname">FileType</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Complete file type, such as “Microsoft Word
+											Document.”</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFolder" class="dashAnchor"></a><span class="keyword parmname">IsFolder</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates whether item is a folder or file.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/MimeType" class="dashAnchor"></a><span class="keyword parmname">MimeType</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">MIME type of the content.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Name of the file or folder in the external data
+											source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Owner" class="dashAnchor"></a><span class="keyword parmname">Owner</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Username of the content owner in the external data
+											source.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The ID of the parent folder for the record.<p class="p">This field
+												isn’t returned in queries or searches of the
+												ContentHubItem object. It supports only WHERE
+												clauses, such as the following:</p>
+<p class="p"><samp class="codeph nolang">WHERE ContentHubRepositoryId =
+												&lt;ID of external source&gt; and ParentId = &lt;ID
+												of parent folder or record&gt;</samp>. </p>
+<p class="p">Or
+												specify <samp class="codeph nolang">WHERE ParentId =
+												&lt;name of root folder&gt;</samp> to return the
+												children of the root folder.</p>
+<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>The
+												ParentId field supports both Salesforce IDs (in the
+												format “0CHxxx”) and external IDs.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>The title that appears in the content, which often
+											differs from the <span class="keyword parmname">Name</span> of the
+											containing file or folder.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d260419e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/UpdatedBy" class="dashAnchor"></a><span class="keyword parmname">UpdatedBy</span></td>
+
+							<td class="entry" headers="d260419e109" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Username for the person who last updated the file.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">The following SOQL query examples show how to retrieve files and folders from a Files Connect external data
+				source. These examples use placeholders for ID values for the repository ID and
+				folder IDs. Before running these queries, replace the placeholders with valid ID
+				values for your external data source and folders.</p>
+
+			<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p>You must filter queries and searches on ContentHubItem with the
+					<samp class="codeph nolang">ContentHubRepositoryId</samp> field; for example,
+					<samp class="codeph nolang">SELECT Id FROM ContentHubItem WHERE
+					ContentHubRepositoryId = &lt;ID of external data source&gt;</samp>.</p>
+</div>
+</div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 1:</strong> Get the ID and name of the root folder in an external file
+				source.</p>
+
+			<div class="codeSection soql"><div id="highlighter_827757" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_827757_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_827757" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubItem</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>' AND ParentId = NULL</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 2:</strong> List all folders and files under the specified root folder.</p>
+
+			<div class="codeSection soql"><div id="highlighter_984539" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_984539_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_984539" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubItem </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>' AND ParentId = '&lt;root folder ID&gt;'</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 3:</strong> List all external file data sources by querying
+				ContentHubRepository.</p>
+
+			<div class="codeSection soql"><div id="highlighter_809504" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_809504_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_809504" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT DeveloperName </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubRepository</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 4:</strong> List all files and folders in a given folder and external file
+				source.</p>
+
+			<div class="codeSection soql"><div id="highlighter_512101" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_512101_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_512101" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubItem </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>' AND ParentId = '&lt;parent folder ID&gt;'</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 5:</strong> To return only folders in the result set, add <samp class="codeph soql">IsFolder = true</samp> in the <samp class="codeph soql">WHERE</samp> clause to a query that returns files and folders. For example,
+				the following query lists all folders under the root folder.</p>
+
+			<div class="codeSection soql"><div id="highlighter_478575" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_478575_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_478575" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubItem </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>' AND ParentId = '&lt;root folder ID&gt;'</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">AND IsFolder = true</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">Example 6:</strong> Retrieve a link that is used to open the specified document in an
+				external source.</p>
+
+			<div class="codeSection soql"><div id="highlighter_743541" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_743541_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_743541" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ExternalDocumentUrl </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ContentHubItem </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>' AND Id = '&lt;document ID&gt;'</code></td></tr></tbody></table></div></div></div></div>
+
+			<p class="p"><strong class="ph b">SOSL Example:</strong> Retrieve the ID and name of all documents that contain the
+				search string. The result set is limited to the first 10 documents.</p>
+
+			<div class="codeSection soql"><div id="highlighter_323726" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_323726_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_323726" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">FIND {&lt;search string&gt;} </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">RETURNING ContentHubItem(Id, Name </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">WHERE ContentHubRepositoryId = '<code class="italic">&lt;repository ID&gt;</code>') </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">LIMIT 10</code></td></tr></tbody></table></div></div></div></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

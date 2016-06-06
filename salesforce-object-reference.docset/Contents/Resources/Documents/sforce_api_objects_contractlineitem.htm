@@ -1,0 +1,647 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContractLineItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contractlineitem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContractLineItem</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="ContractLineItemDesc"><a name="ContractLineItemDesc"><!-- --></a>Represents a Product2 in a ServiceContract (customer support agreement).</span> This object is available in API version 18.0 and
+  later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d276867e127">Field</th>
+
+<th class="featureTableHeader  " id="d276867e130">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/AssetId" class="dashAnchor"></a><span class="keyword parmname">AssetId</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Required. ID of the Asset
+                      associated with the contract line item. Must be a valid asset ID.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Description of the contract line item.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><span class="keyword parmname" id="Discount"><a name="Discount"><!-- --></a>Discount</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">percent</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The discount for the product as a percentage. </dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a>When updating, if you specify <span class="keyword parmname">Discount</span> without specifying
+                        <span class="keyword parmname">TotalPrice</span>, the
+                        <span class="keyword parmname">TotalPrice</span> will be
+                      adjusted to accommodate the new <span class="keyword parmname">Discount</span> value, and the
+                        <span class="keyword parmname">UnitPrice</span> will be
+                      held constant.</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a>If you specify both <span class="keyword parmname">Discount</span> and <span class="keyword parmname">Quantity</span>, you must also
+                      specify either <span class="keyword parmname">TotalPrice</span> or <span class="keyword parmname">UnitPrice</span> so the system can
+                      determine which one to automatically
+                      adjust.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/EndDate" class="dashAnchor"></a><span class="keyword parmname">EndDate</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The last day the contract line item is in effect.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter, Nillable, Sort,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter, Nillable, Sort,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/LineItemNumber" class="dashAnchor"></a><span class="keyword parmname">LineItemNumber</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Autonumber,
+                        Defaulted on create,
+                        Filter,
+                        idLookup, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Automatically-generated number that identifies the contract line item.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/ListPrice" class="dashAnchor"></a><span class="keyword parmname">ListPrice</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">currency</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a>Corresponds to the <span class="keyword parmname">UnitPrice</span> on the PricebookEntry that is associated with this line item, which can be in the standard
+                      pricebook or a custom pricebook. A client application can use this information
+                      to show whether the unit price (or sales price) of the line item differs from
+                      the pricebook entry list price.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/ParentContractLineItemId" class="dashAnchor"></a><span class="keyword parmname">ParentContractLineItemId</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The line item’s parent line item, if it has one.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/PricebookEntryId" class="dashAnchor"></a><span class="keyword parmname">PricebookEntryId</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Required. ID of the associated PricebookEntry.</dd>
+
+                    <dd class="dd">Only exists if Product2 is enabled.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><span class="keyword parmname" id="Quantity"><a name="Quantity"><!-- --></a>Quantity</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">double</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Number of units of the contract line item (product) included in the
+                      associated service contract.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/RootContractLineItemId" class="dashAnchor"></a><span class="keyword parmname">RootContractLineItemId</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">(Read only) The top-level line item in a contract line item hierarchy.
+                      Depending on where a line item lies in the hierarchy, its root could be the
+                      same as its parent.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/ServiceContractId" class="dashAnchor"></a><span class="keyword parmname">ServiceContractId</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Required. ID of the ServiceContract associated with the contract line item. Must be a valid asset ID.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a><span class="keyword parmname">StartDate</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The first day the contract line item is in effect.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>
+<span class="keyword parmname">Status</span>
+              </td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Status of the contract line item.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><span class="keyword parmname">Subtotal</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">currency</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a>Contract line item's sales price multiplied by the <span class="keyword parmname">Quantity</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><span class="keyword parmname" id="TotalPrice"><a name="TotalPrice"><!-- --></a>TotalPrice</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">currency</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">This field is available only for backward compatibility. It represents the
+                      total price of the ContractLineItem</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a>If you specify <span class="keyword parmname">Discount</span> and <span class="keyword parmname">Quantity</span>, this field or
+                        <span class="keyword parmname">UnitPrice</span> is
+                      required.</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a>This field is nillable, but you can't set both <span class="keyword parmname">TotalPrice</span> and <span class="keyword parmname">UnitPrice</span> to null in the
+                      same update request. To insert the <span class="keyword parmname">TotalPrice</span> for a contract
+                      line item via the API (given only a
+                      unit price and the quantity), calculate this field as the unit price
+                      multiplied by the quantity.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d276867e127" data-title="Field"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><span class="keyword parmname" id="UnitPrice"><a name="UnitPrice"><!-- --></a>UnitPrice</span></td>
+
+              <td class="entry" headers="d276867e130" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">currency</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The unit price for the contract line item. In the user interface, this
+                      field’s value is calculated by dividing the total price of the contract
+                      line item by the quantity listed for that line item. Label is <strong class="ph uicontrol">Sales
+                        Price</strong>.</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a>This field or <span class="keyword parmname">TotalPrice</span> is required. You
+                      can’t specify both.</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a>If you specify <span class="keyword parmname">Discount</span> and <span class="keyword parmname">Quantity</span>, this field or
+                        <span class="keyword parmname">TotalPrice</span> is
+                      required. </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query and manage
+contract line items.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contractlineitemhistory.htm" title="Represents the history of changes to the values in the fields on a ContractLineItem (items in a customer support agreement). This object is available in API version 18.0 and later.">ContractLineItemHistory</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

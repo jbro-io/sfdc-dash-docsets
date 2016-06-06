@@ -1,0 +1,778 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PlatformEventMetrics | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_platformeventmetrics"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PlatformEventMetrics</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a>Represents a roll-up aggregation of an
+            organization’s login events over time. This object is available in API version 36.0 and
+            later.</span></span></div>
+
+      <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+         
+         <p class="p"><samp class="codeph nolang">query()</samp></p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+         
+         <p class="p">tbd</p>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+         
+         
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+               
+               
+               <thead class="thead sorted" align="left">
+                  <tr>
+                     <th class="featureTableHeader  " id="d592869e96">Field</th>
+
+                     <th class="featureTableHeader  " id="d592869e99">Details</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/AggregationFieldName" class="dashAnchor"></a><span class="keyword parmname">AggregationFieldName</span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Optional. The name of the field on which you’re collecting
+                                 metrics.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/AggregationFieldValue" class="dashAnchor"></a><span class="keyword parmname">AggregationFieldValue</span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Optional. The value of the field on which you’re collecting
+                                 metrics.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/EventType" class="dashAnchor"></a><span class="keyword parmname">EventType</span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable, Restricted picklist</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/ApexLimitEvent" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LoginEvent" class="dashAnchor"></a>The name of the event type for which you’re calculating metrics.
+                                 The value is a <span class="keyword parmname">LoginEvent</span> or an
+                                    <span class="keyword parmname">ApexLimitEvent</span>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/MetricDate" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="metric-date"><a name="metric-date"><!-- --></a>MetricDate</span></span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">dateTime</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The date and time stamp of when the metrics were collected.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/MetricType" class="dashAnchor"></a><span class="keyword parmname" id="MetricTypeField"><a name="MetricTypeField"><!-- --></a>MetricType</span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter, Nillable, Restricted picklist,  Sort
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The type of data that you’re collecting. For a full
+                                 description of the available metric types and their use cases, see
+                                    <a class="xref" href="#metrics-types">Metrics
+                                 Types</a>.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d592869e96" data-title="Field"><a name="//apple_ref/cpp/Field/MetricValue" class="dashAnchor"></a><span class="keyword parmname">MetricValue</span></td>
+
+                     <td class="entry" headers="d592869e99" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">double</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">
+                                 Nillable</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The value of the metric data.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table></div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2"><span class="ph" id="metrics-types"><a name="metrics-types"><!-- --></a>Metrics Types</span></h2>
+
+         
+         <p class="p">The <span class="keyword parmname">MetricType</span> field on PlatformEventMetrics stores LoginEvent metric types. In the context of login forensics, metrics are roll-up aggregations of
+            events over time. Use metrics to recognize atypical behavior in your organization.</p>
+
+         <div class="p">This table outlines the available metrics.
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+                  
+                  
+                  <thead class="thead sorted" align="left">
+                     <tr>
+                        <th class="featureTableHeader  " id="d592869e432">Metric Type</th>
+
+                        <th class="featureTableHeader  " id="d592869e435">Description</th>
+
+                     </tr>
+
+                  </thead>
+
+                  <tbody class="tbody">
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumLogins</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of logins</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many logins were attempted. Rapid increase of logins
+                                    could indicate an increased work period (for example, the end of
+                                    the quarter) or malicious log in activity to the
+                                    organization.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd">null</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">N/A</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctLogins</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct logins</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many unique users logged in. </dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd">null</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">N/A</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumLoginsByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of logins by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many times a user logged in. Rapid increase of logins
+                                    could indicate that multiple users are using the same login
+                                    credentials.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctIps</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct IPs</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many IP ranges were used by all users. You can use this
+                                    metric to create a network topology map of your users.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd">null</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">N/A</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctIpsByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct IPs by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many IP ranges were used by each user.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctUsersByIP</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct users by IP</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many users share IP ranges.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">SourceIp</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">10.1.1.2</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctBrowsersByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct browsers by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many browsers each user accessed. Rapid increase of
+                                    browsers could indicate that the account has been
+                                    compromised.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctUsersByBrowser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct users by browser</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See the number of users per browser. This metric identifies
+                                    adoption trends for browsers.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">Browser</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">Chrome 33</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctUsersByApplication</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct users by application</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See the number of users per application. This metric identifies
+                                    adoption trends for browsers.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">Application</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">1000 (browser logins)</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctApplicationsByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct applications by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many applications each user used. Rapid increase of
+                                    applications could indicate that the account has been
+                                    compromised.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctUsersByLoginUrl</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct users by login URL</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many users logged in with a specific URL. This metric
+                                    identifies adoption trends for login entry points.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">LoginUrl</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">
+<var class="keyword varname">yourInstance</var>.salesforce.com</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctLoginUrlsByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct LoginUrls by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many login URLs were used by each user. Rapid increase
+                                    of logins from a URL could indicate that the account has been
+                                    compromised.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctUsersByPlatform</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct users by platform</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See the number of users per platform. This field identifies
+                                    adoption trends for platforms in the organization.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd">null</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">N/A</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                     <tr>
+                        <td class="entry" headers="d592869e432" data-title="Metric Type"><span class="keyword parmname">NumDistinctPlatformsByUser</span></td>
+
+                        <td class="entry" headers="d592869e435" data-title="Description">
+                           <dl class="dl detailList">
+                              
+                                 <dt class="dt dlterm">Label</dt>
+
+                                 <dd class="dd">Count of distinct platforms by user</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Use</dt>
+
+                                 <dd class="dd">See how many platforms each user accessed. Rapid increase of
+                                    platforms or known unsupported platforms could indicate that the
+                                    account has been compromised.</dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Name</dt>
+
+                                 <dd class="dd"><span class="keyword parmname">UserId</span></dd>
+
+                              
+                              
+                                 <dt class="dt dlterm">Aggregation Field Value Example</dt>
+
+                                 <dd class="dd">00500000000Nv1G</dd>
+
+                              
+                           </dl>
+
+                        </td>
+
+                     </tr>
+
+                  </tbody>
+
+               </table></div>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">SOQL Usage</h2>
+
+         
+      </div>
+
+   </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

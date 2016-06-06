@@ -1,0 +1,816 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Site | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_site"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Site</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="SiteDescription"><a name="SiteDescription"><!-- --></a>Represents a public website that is integrated
+    with an Organization.</span>  This object is generally available in API version 16.0 and
+  later.</span></div>
+
+<p class="p"><span class="ph" id="SiteObjectAccess"><a name="SiteObjectAccess"><!-- --></a>To access this object, Force.com
+    Sites or Site.com must be enabled for your
+    organization.</span></p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+<li class="li">Customer Portal users can’t access this object.</li>
+
+<li class="li">To view this object, you must have the “View Setup and Configuration” permission.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d673678e109">Field</th>
+
+<th class="featureTableHeader  " id="d673678e112">Description</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/AdminId" class="dashAnchor"></a><span class="keyword parmname">AdminId</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The site administrator designated as the contact for the site. This user receives
+           site-related communications from site visitors and from Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/AnalyticsTrackingCode" class="dashAnchor"></a><span class="keyword parmname">AnalyticsTrackingCode</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The tracking code associated with your site. This code can be used by services like
+           Google Analytics to track page request data for your site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/ClickjackProtectionLevel" class="dashAnchor"></a><span class="keyword parmname">ClickjackProtectionLevel</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Sets the clickjack protection level. The options are:<a name="clickjack_field_desc2"><!-- --></a><ul class="ul bulletList" id="clickjack_field_desc2">
+            <li class="li">
+<samp class="codeph nolang">AllowAllFraming</samp>—Allow framing by any
+             page (no protection)</li>
+
+            <li class="li">
+<samp class="codeph nolang">SameOriginOnly</samp>—Allow framing by the same
+             origin only (recommended)</li>
+
+            <li class="li">
+<samp class="codeph nolang">NoFraming</samp>—Don’t allow framing by any
+             page (most protection)</li>
+
+           </ul>
+</dd>
+
+          <dd class="dd">This field is available in API version 30.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/DailyBandwidthLimit" class="dashAnchor"></a><span class="keyword parmname">DailyBandwidthLimit</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The rolling 24-hour daily bandwidth limit for the sites in your organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/DailyBandwidthUsed" class="dashAnchor"></a><span class="keyword parmname">DailyBandwidthUsed</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The current rolling 24-hour daily bandwidth usage for the sites in your
+           organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/DailyRequestTimeLimit" class="dashAnchor"></a><span class="keyword parmname">DailyRequestTimeLimit</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The rolling 24-hour daily service request time limit for the sites in your
+           organization. Service request time is calculated as the total server time in minutes
+           required to generate pages for the site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/DailyRequestTimeUsed" class="dashAnchor"></a><span class="keyword parmname">DailyRequestTimeUsed</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The current rolling 24-hour daily service request time for the sites in your
+           organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An optional description of the site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/GuestUserId" class="dashAnchor"></a><span class="keyword parmname">GuestUserId</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The site or Salesforce Communities specific
+           user that anonymous, unauthenticated users run as when interacting with the site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the site as it appears in the user interface.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/MonthlyPageViewsEntitlement" class="dashAnchor"></a><span class="keyword parmname">MonthlyPageViewsEntitlement</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of page views allowed for the current calendar month for the sites in your
+           organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name used when referencing the site in the API.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsAllowHomePage" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowHomePage</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option to enable the standard page associated with the Home tab
+            (<span class="ph filepath">/home/home.jsp</span>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsAllowStandardAnswersPages" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowStandardAnswersPages</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option to enable standard pages associated with an answers community. If you want
+           to use default Answers pages (such as AnswersHome), enable these pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsAllowStandardIdeasPages" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowStandardIdeasPages</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option to enable standard pages associated with an Ideas community. If you want to
+           use default Ideas pages (such as IdeasHome), enable these pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsAllowStandardLookups" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowStandardLookups</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option to enable the standard lookup pages. These are the popup windows associated
+           with lookup fields on Visualforce
+           pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsAllowStandardSearch" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowStandardSearch</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option to enable the standard search pages. To allow public users to perform
+           standard searches, enable these pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsEnableFeeds" class="dashAnchor"></a><span class="keyword parmname">OptionsEnableFeeds</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The option that displays the Syndication Feeds related list, where you can create and
+           manage syndication feeds for users on your public sites. This field is visible only if
+           you have the feature enabled for your organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/OptionsRequireHttps" class="dashAnchor"></a><span class="keyword parmname">OptionsRequireHttps</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="OptionsRequireHttps_desc"><a name="OptionsRequireHttps_desc"><!-- --></a>When true, the site requires secure connections.
+            When false, the site operates normally via insecure connections instead of redirecting
+            to a secure connection.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/SiteType" class="dashAnchor"></a><span class="keyword parmname" id="SiteType"><a name="SiteType"><!-- --></a>SiteType</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Identifies whether the site is a Visualforce (Force.com
+           Sites) or a Site.com site. <samp class="codeph nolang">SiteType</samp> is available in API version 21.0 and later. In
+            API version 26.0 and later,
+           if Salesforce Communities is
+           enabled for your organization, the site could also be a Network Visualforce or Network Site.com site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status for the site. For example, <samp class="codeph nolang">Active</samp> or
+            <samp class="codeph nolang">In Maintenance</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/Subdomain" class="dashAnchor"></a><span class="keyword parmname">Subdomain</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The Force.com domain that
+           you registered for your site. For example, if your Force.com domain is
+            <span class="ph filepath">mycompany.force.com</span>, then <span class="ph filepath">mycompany</span> is the
+           subdomain.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/TopLevelDomain" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="TopLevelDomain"><a name="TopLevelDomain"><!-- --></a>TopLevelDomain</span></span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The optional branded custom Web address that you registered with a third-party domain
+           name registrar. The custom Web address acts as an alias to your Force.com address.<p class="p">Beginning
+            with API version 21.0,
+             <samp class="codeph nolang">TopLevelDomain</samp> is no longer available. Instead,
+            use the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domain.htm" title="Read-only object that represents a custom Web address assigned to a site in your organization. This object is available in API version 26.0 and later.">Domain</a> and <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domainsite.htm" title="Read-only junction object that joins together the Site and Domain objects. This object is available in API version 26.0 and later.">DomainSite</a> objects.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d673678e109" data-title="Field"><a name="//apple_ref/cpp/Field/UrlPathPrefix" class="dashAnchor"></a><span class="keyword parmname">UrlPathPrefix</span></td>
+
+       <td class="entry" headers="d673678e112" data-title="Description">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique Force.com URL
+           that the public uses to access this site.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this read-only object to query
+or retrieve information on your Force.com site.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

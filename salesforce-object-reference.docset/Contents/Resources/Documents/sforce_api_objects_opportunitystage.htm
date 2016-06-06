@@ -1,0 +1,352 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>OpportunityStage | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_opportunitystage"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>OpportunityStage</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the stage of an Opportunity in the sales pipeline, such as New Lead, Negotiating, Pending, Closed, and so
+  on.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d559413e84">Field</th>
+
+<th class="featureTableHeader  " id="d559413e87">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/ApiName" class="dashAnchor"></a>
+        <span class="keyword parmname">ApiName</span>
+       </td>
+
+       <td class="entry" headers="d559413e87" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Uniquely identifies a picklist value so it can be retrieved without using an id or
+           master label.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultProbability" class="dashAnchor"></a> <span class="keyword parmname">DefaultProbability</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">percent</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The default percentage estimate of the confidence in closing a
+specific opportunity for this opportunity stage value. Label is <strong class="ph uicontrol">Probability (%)</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a> <span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of this opportunity stage value. Limit: 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/ForecastCategory" class="dashAnchor"></a> <span class="keyword parmname">ForecastCategory</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The default forecast category for this opportunity stage value.
+The forecast category automatically determines how opportunities are
+tracked and totaled in a forecast.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a> <span class="keyword parmname">ForecastCategoryName</span>
+</td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Available in API version 12.0 and later. The default forecast
+category value for this opportunity stage value.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a> <span class="keyword parmname">IsActive</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether this opportunity stage value is active (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Inactive opportunity stage values are not available
+in the picklist and are retained for historical purposes only.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a> <span class="keyword parmname">IsClosed</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether this opportunity stage value represents a closed
+opportunity (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Multiple opportunity stage values
+can represent a closed opportunity. Label is <strong class="ph uicontrol">Closed</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/IsWon" class="dashAnchor"></a> <span class="keyword parmname" id="i1458877"><a name="i1458877"><!-- --></a>IsWon</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether this opportunity stage value represents a won
+opportunity (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Multiple opportunity stage values
+can represent a won opportunity. Label is <strong class="ph uicontrol">Won</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a> <span class="keyword parmname">MasterLabel</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Master label for this opportunity stage value. This display value
+is the internal label that does not get translated. Limit: 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d559413e84" data-title="Field"><a name="//apple_ref/cpp/Field/SortOrder" class="dashAnchor"></a> <span class="keyword parmname">SortOrder</span> </td>
+
+<td class="entry" headers="d559413e87" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Number used to sort this value in the opportunity stage picklist.
+These numbers are not guaranteed to be sequential, as some previous
+opportunity stage values might have been deleted.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+ <p class="p">This object represents a value in
+the opportunity stage picklist, which provides additional information
+about the stage of a Opportunity, such as its probability or forecast category. Query this object
+to retrieve the set of values in the opportunity stage picklist, and
+then use that information while processing Opportunity records to determine more information about a given opportunity.
+For example, the application could test whether a given opportunity
+is won or not based on its <span class="keyword parmname">StageName</span> value and the value of the <span class="keyword parmname">IsWon</span> property in the associated OpportunityStage object.</p>
+ </div>
+
+<p class="p">This object is read-only via the API.</p>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

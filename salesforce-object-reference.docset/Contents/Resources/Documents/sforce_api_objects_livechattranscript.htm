@@ -1,0 +1,1162 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LiveChatTranscript | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_LiveChatTranscript"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LiveChatTranscript</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>This object is automatically created for each Live Agent chat
+    session and stores information about the session.</span></span> 
+   This object is available in API version 24.0 and
+  later.</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;
+     <samp class="codeph nolang">delete()</samp>,&nbsp;
+     <samp class="codeph nolang">describeLayout()</samp>, &nbsp;<samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>,&nbsp; <samp class="codeph nolang">getUpdated()</samp>,&nbsp; <samp class="codeph nolang">query()</samp>,&nbsp; <samp class="codeph nolang">retrieve()</samp>,&nbsp;
+     <samp class="codeph nolang">search()</samp>,&nbsp;
+     <samp class="codeph nolang">undelete()</samp>,&nbsp; <samp class="codeph nolang">update()</samp>,&nbsp; <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader vertical-align-top " id="d492554e125">Field Name</th>
+
+<th class="featureTableHeader vertical-align-top " id="d492554e128">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Abandoned" class="dashAnchor"></a><span class="keyword parmname">Abandoned</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The amount of time in seconds an incoming chat request remained unanswered by an agent
+           before the chat was disconnected by the customer.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the account associated with the chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AverageResponseTimeOperator" class="dashAnchor"></a><span class="keyword parmname">AverageResponseTimeOperator</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The agent’s average response time (in seconds) to chat messages from the
+           visitor.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AverageResponseTimeVisitor" class="dashAnchor"></a><span class="keyword parmname">AverageResponseTimeVisitor</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The visitor’s average response time (in seconds) to chat messages from the
+           agent.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname">Body</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The contents of the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Browser" class="dashAnchor"></a><span class="keyword parmname">Browser</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The browser the visitor used for the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/BrowserLanguage" class="dashAnchor"></a><span class="keyword parmname">BrowserLanguage</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The language of the visitor’s browser.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/CaseID" class="dashAnchor"></a><span class="keyword parmname">CaseID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the case associated with the chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ChatDuration" class="dashAnchor"></a><span class="keyword parmname">ChatDuration</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total duration of the chat in seconds.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ChatKey" class="dashAnchor"></a><span class="keyword parmname">ChatKey</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, idLookup, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ChatKey" class="dashAnchor"></a>The session ID of the chat before it is persisted. <span class="keyword parmname">ChatKey</span> can be
+           used with advanced integrations in the Salesforce console. This field is
+           available in API version 25.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContactID" class="dashAnchor"></a><span class="keyword parmname">ContactID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the contact associated with the chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/EndedBy" class="dashAnchor"></a><span class="keyword parmname">EndedBy</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The way the chat was ended: by the operator, the visitor, or the system.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/EndTime" class="dashAnchor"></a><span class="keyword parmname">EndTime</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The time the chat ended.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/IpAddress" class="dashAnchor"></a><span class="keyword parmname">IpAddress</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The visitor’s IP address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LeadID" class="dashAnchor"></a><span class="keyword parmname">LeadID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the lead associated with the chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LiveChatButtonID" class="dashAnchor"></a><span class="keyword parmname">LiveChatButtonID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the LiveChatButton the chat session originated from.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LiveChatDeploymentID" class="dashAnchor"></a><span class="keyword parmname">LiveChatDeploymentID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">The ID of the LiveChatDeployment the chat session originated from.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/LiveChatVisitorID" class="dashAnchor"></a><span class="keyword parmname">LiveChatVisitorID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the visitor associated with the chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Location" class="dashAnchor"></a><span class="keyword parmname">Location</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The best-guess approximation of the visitor’s location.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/MaxResponseTimeOperator" class="dashAnchor"></a><span class="keyword parmname">MaxResponseTimeOperator</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum time in seconds it took an agent to respond to a chat visitor’s
+           message.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/MaxResponseTimeVisitor" class="dashAnchor"></a><span class="keyword parmname">MaxResponseTimeVisitor</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum time in seconds it took a customer to respond to an agent’s
+           message.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/OperatorMessageCount" class="dashAnchor"></a><span class="keyword parmname">OperatorMessageCount</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of messages sent by agent(s) during the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerID" class="dashAnchor"></a><span class="keyword parmname">OwnerID</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the operator who participated in the chat last; for missed chats, this is a
+           system user.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Platform" class="dashAnchor"></a><span class="keyword parmname">Platform</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The visitor’s operating system platform.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ReferrerUri" class="dashAnchor"></a><span class="keyword parmname">ReferrerUri</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Where the chat request originated.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/RequestTime" class="dashAnchor"></a><span class="keyword parmname">RequestTime</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable. Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The time the visitor requested the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ScreenResolution" class="dashAnchor"></a><span class="keyword parmname">ScreenResolution</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The visitor’s screen resolution.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/SkillId" class="dashAnchor"></a><span class="keyword parmname">SkillId</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The record ID of the primary Skill associated
+           with the LiveChatButton the chat session originated from. To associate multiple skills with a LiveChatTranscript, use LiveChatTranscriptSkill junction objects.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartTime" class="dashAnchor"></a><span class="keyword parmname">StartTime</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The time the chat started.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The final status of the chat: completed, missed, dropped or blocked.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/SupervisorTranscriptBody" class="dashAnchor"></a><span class="keyword parmname">SupervisorTranscriptBody</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The text body of the supervisor’s chat transcript.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserAgent" class="dashAnchor"></a><span class="keyword parmname">UserAgent</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The visitor’s user agent string.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/VisitorMessageCount" class="dashAnchor"></a><span class="keyword parmname">VisitorMessageCount</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of messages sent by the visitor during the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/VisitorNetwork" class="dashAnchor"></a><span class="keyword parmname">VisitorNetwork</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Decsription</dt>
+
+          <dd class="dd">The network or service provider the chat visitor used for the chat.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d492554e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/WaitTime" class="dashAnchor"></a><span class="keyword parmname">WaitTime</span></td>
+
+       <td class="entry" headers="d492554e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total amount of time in seconds a chat request was waiting to be accepted by an
+           agent.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query and manage
+live chat transcripts.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

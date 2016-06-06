@@ -1,0 +1,1015 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LiveChatUserConfig | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_LiveChatUserConfig"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LiveChatUserConfig</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents a setting that controls the console
+    settings for Live Agent
+    users.</span></span>
+   This object is available in API version 24.0 and
+  later.</div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader vertical-align-top " id="d498034e110">Field Name</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d498034e113">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/AutoGreeting" class="dashAnchor"></a><span class="keyword parmname">AutoGreeting</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The text that is automatically sent from an agent to a visitor when a chat session
+           starts.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/Capacity" class="dashAnchor"></a><span class="keyword parmname">Capacity</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Limits the number of active chat session an agent can engage in.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/CriticalWaitTime" class="dashAnchor"></a><span class="keyword parmname">CriticalWaitTime</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The amount of time before a chat flashes to alert an agent to answer it.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/CustomAgentName" class="dashAnchor"></a><span class="keyword parmname">CustomAgentName</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The custom name of the agent associated with the Live Agent
+           configuration.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasCrmChatlet" class="dashAnchor"></a><span class="keyword parmname">HasCrmChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the CRM chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasDetailsChatlet" class="dashAnchor"></a><span class="keyword parmname">HasDetailsChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the Details chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasHistoryChatlet" class="dashAnchor"></a><span class="keyword parmname">HasHistoryChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the History chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasKnowledgeChatlet" class="dashAnchor"></a><span class="keyword parmname">HasKnowledgeChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the Knowledge chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasLivetrackChatlet" class="dashAnchor"></a><span class="keyword parmname">HasLivetrackChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the Livetrack chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasLogoutSound" class="dashAnchor"></a><span class="keyword parmname">HasLogoutSound</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether a sound plays when an agent logs out of the console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasMapChatlet" class="dashAnchor"></a><span class="keyword parmname">HasMapChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the Map chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasNotifications" class="dashAnchor"></a><span class="keyword parmname">HasNotifications</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether desktop notifications are enabled for the configuration. Available
+           in API version 25.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasQueueChatlet" class="dashAnchor"></a><span class="keyword parmname">HasQueueChatlet</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether the Queue chatlet appears in the agent console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasRequestSound" class="dashAnchor"></a><span class="keyword parmname">HasRequestSound</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether a sound plays when a chat request comes in.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasSneakPeek" class="dashAnchor"></a><span class="keyword parmname">HasSneakPeek</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether an agent sees a real-time preview of the messages a visitor
+           types.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsAutoAwayOnDecline" class="dashAnchor"></a><span class="keyword parmname">IsAutoAwayOnDecline</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether agents’ status is automatically changed to Away when they
+           decline a chat request. Available in API version 26.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The language of the configuration.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the configuration.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasAgentFileTransfer" class="dashAnchor"></a><span class="keyword parmname">OptionsHasAgentFileTransfer</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether agents can initiate a file transfer from a chat customer. Available
+           in API version 31.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasAgentSneakPeek" class="dashAnchor"></a><span class="keyword parmname">OptionsHasAgentSneakPeek</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether Sneak Peek is enabled for agents. Available in API version 29.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasChatConferencing" class="dashAnchor"></a><span class="keyword parmname">OptionsHasChatConferencing</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether agents can invite other agents into a customer chat. Available in
+           API version 34.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasChatMonitoring" class="dashAnchor"></a><span class="keyword parmname">OptionsHasChatMonitoring</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether supervisors can view agents’ ongoing chats. Available in API
+           version 29.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasChatTransferToAgent" class="dashAnchor"></a><span class="keyword parmname">OptionsHasChatTransferToAgent</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether an agent can transfer a chat directly to another agent. Available in
+           API version 36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasChatTransferToButton" class="dashAnchor"></a><span class="keyword parmname">OptionsHasChatTransferToButton</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether an agent can transfer a chat to an agent assigned to a particular
+           chat button. Available in API version 36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasChatTransferToSkill" class="dashAnchor"></a><span class="keyword parmname">OptionsHasChatTransferToSkill</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Specifies whether an agent can transfer a chat to agents assigned to a particular
+           skill. Available in API version 36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasVisitorBlocking" class="dashAnchor"></a><span class="keyword parmname">OptionsHasVisitorBlocking</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether an agent has the ability to block troublesome visitors by IP
+           address. Available in API version 34.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasWhisperMessage" class="dashAnchor"></a><span class="keyword parmname">OptionsHasWhisperMessage</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether supervisors can send private messages to agents within an
+           agent’s chat with a customer. Available in API version 29.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsIsAutoAwayOnPushTimeout" class="dashAnchor"></a><span class="keyword parmname">OptionsIsAutoAwayOnPushTimeout</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether an agent’s status automatically changes to Away if the agent
+           doesn’t respond to a chat request within the specified push time-out limit. Available in
+           API version 34.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/SupervisorDefaultAgentStatus" class="dashAnchor"></a><span class="keyword parmname">SupervisorDefaultAgentStatus</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default agent status by which to filter agents in the Agent Status list in the
+           supervisor panel.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/SupervisorDefaultButtonId" class="dashAnchor"></a><span class="keyword parmname">SupervisorDefaultButtonId</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default button ID by which to filter agents in the Agent Status list in the
+           supervisor panel.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d498034e110" data-title="Field Name"><a name="//apple_ref/cpp/Field/SupervisorDefaultSkillId" class="dashAnchor"></a><span class="keyword parmname">SupervisorDefaultSkillId</span></td>
+
+       <td class="entry" headers="d498034e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default skill ID by which to filter agents in the Agent Status list in the
+           supervisor panel.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use this object to query and manage agent configurations in Live Agent.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

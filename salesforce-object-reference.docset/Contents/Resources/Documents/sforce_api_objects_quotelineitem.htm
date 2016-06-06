@@ -1,0 +1,587 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>QuoteLineItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_quote_lineitem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>QuoteLineItem</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>The QuoteLineItem object represents a quote line item, which is a
+   member of the list of Product2
+   products associated with a Quote, along
+   with other information about those line items on that quote.  Available in API version 18.0 and
+  later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">The user must have
+“Edit” permissions on Quote records in order to create or update quote line items on a
+quote. The user must have “Edit” permissions on Quote records to delete a quote line item.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d635404e128">Field</th>
+
+<th class="featureTableHeader  " id="d635404e131">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a>
+<p class="p">Available only for organizations enabled for multiples currencies.
+Contains the ISO code for any currency allowed by the organization.</p>
+If the organization has multicurrency and a Pricebook2 is specified on the quote (the <span class="keyword parmname">Pricebook2Id</span> field is not blank), then the currency value of this
+field must match the currency of the PricebookEntry objects for any associated quote line items.<p class="p">This value is
+copied from the related Quote and can't be changed.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text description of the line item. Limit: 225 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="Discount"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><a name="Discount"><!-- --></a><span class="keyword parmname">Discount</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">percent</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="DiscountDef"><a name="DiscountDef"><!-- --></a>Editable number from 0 to 100.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/HasQuantitySchedule" class="dashAnchor"></a><span class="keyword parmname">HasQuantitySchedule</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read-only. Indicates whether the opportunity line item that the
+quote line item is synced with has a quantity schedule.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/HasRevenueSchedule" class="dashAnchor"></a><span class="keyword parmname">HasRevenueSchedule</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/GrandTotal" class="dashAnchor"></a>Read-only. Indicates whether the opportunity line item that the
+quote line item is synced with has a revenue schedule. If this object
+has a revenue schedule, the <span class="keyword parmname">GrandTotal</span> and <span class="keyword parmname">TotalPrice</span> fields can't be updated. In addition, the <span class="keyword parmname">Quantity</span> field can't
+be updated if this object has a quantity schedule. The system ignores
+any attempt to update this field. The update isn't rejected but the
+updated value is ignored.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/HasSchedule" class="dashAnchor"></a><span class="keyword parmname">HasSchedule</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read-only. Indicates whether the line item uses schedules.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/LineNumber" class="dashAnchor"></a><span class="keyword parmname">LineNumber</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Autonumber, Defaulted on create, Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read-only. Automatically-generated number identifying the quote
+line item. In the form of <samp class="codeph nolang">QL-XXXXX</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/ListPrice" class="dashAnchor"></a><span class="keyword parmname">ListPrice</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="ListPriceDef"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="ListPriceDef"><!-- --></a>Read-only. Corresponds to the <span class="keyword parmname">UnitPrice</span> on the PricebookEntry that is associated with this line item, which can be in the
+standard price book or a custom price book. A client application can
+use this information to show whether the unit price (or sales price)
+of the line item differs from the price book entry list price.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/PricebookEntryId" class="dashAnchor"></a><span class="keyword parmname">PricebookEntryId</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the associated PricebookEntry. Exists only for those organizations that have Products enabled
+as a feature.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="Product2Id"><a name="//apple_ref/cpp/Field/Product2Id" class="dashAnchor"></a><a name="Product2Id"><!-- --></a><span class="keyword parmname">Product2Id</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the Product2 associated with this QuoteLineItem.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="Quantity"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a><a name="Quantity"><!-- --></a><span class="keyword parmname">Quantity</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of units for the line item.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/QuoteId" class="dashAnchor"></a><span class="keyword parmname">QuoteId</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the associated Quote.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/ServiceDate" class="dashAnchor"></a><span class="keyword parmname">ServiceDate</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Date when the product revenue will be recognized and the product
+quantity will be shipped.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><a name="//apple_ref/cpp/Field/SortOrder" class="dashAnchor"></a><span class="keyword parmname">SortOrder</span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The value of where the line item is in the sorted order, such
+as 1, 2, and so on. The SortOrder value determines the order in which
+a quote line item displays in the Quote Detail page. Client applications
+can use this to match the sort order in Salesforce.
+This field is only available in API versions 21.0 and greater.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="Subtotal"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><a name="Subtotal"><!-- --></a><span class="keyword parmname">Subtotal</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a>The line item's <span class="keyword parmname">Quantity</span> multiplied
+by the <span class="keyword parmname">UnitPrice</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="TotalPrice"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="TotalPrice"><!-- --></a><span class="keyword parmname">TotalPrice</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a>Read-only. Calculated by applying the <span class="keyword parmname">Discount</span>
+           to the <span class="keyword parmname">Subtotal</span>. This field is
+           nillable, but you can't set both <span class="keyword parmname">TotalPrice</span> and <span class="keyword parmname">UnitPrice</span> to null in the same update. To
+           insert the <span class="keyword parmname">TotalPrice</span> for a quote line item via the API (given only a unit price
+           and the quantity), calculate this field as the unit price multiplied by the quantity.
+           This field is read-only if the quote line item has a revenue schedule.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d635404e128" data-title="Field"><span class="ph" id="UnitPrice"><a name="//apple_ref/cpp/Field/UnitPrice" class="dashAnchor"></a><a name="UnitPrice"><!-- --></a><span class="keyword parmname">UnitPrice</span></span></td>
+
+<td class="entry" headers="d635404e131" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The price per unit for the quote line item.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">A Quote record can have QuoteLineItem records only if the Quote has a Pricebook2. A QuoteLineItem must correspond to a Product2 that is listed in the quote's Pricebook2. </p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>If the multicurrency option has been enabled, the <span class="keyword parmname">CurrencyIsoCode</span> field is present. It can't be modified, it is always
+set to the value of the <span class="keyword parmname">CurrencyIsoCode</span> of the parent Quote. </p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1457294"><a name="i1457294"><!-- --></a>Effects on Quotes</span></h2>
+<div class="p">Quotes that have associated QuoteLineItem objects are affected in the following ways:<ul class="ul bulletList">
+<li class="li">Creating a QuoteLineItem increments the Quote  value by the <span class="keyword parmname">TotalPrice</span> of the QuoteLineItem. </li>
+
+<li class="li">When you create or update a QuoteLineItem, the API verifies
+that the line item corresponds to a PricebookEntry in the Pricebook2 that is associated with the quote. </li>
+
+</ul>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quote.htm" title="The Quote object represents a quote, which is a record showing proposed prices for products and services. Available in API version 18.0 and later.">Quote</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quotedocument.htm" title="The QuoteDocument object represents a quote in document format. Available in API version 18.0 and later.">QuoteDocument</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunity.htm" title="Represents an opportunity, which is a sale or pending deal.">Opportunity</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

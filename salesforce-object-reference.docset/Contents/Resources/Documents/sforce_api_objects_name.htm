@@ -1,0 +1,575 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Name | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_name"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Name</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Non-queryable object that provides information about foreign key
+   traversals when the foreign key has more than one parent.</span></div>
+
+<p class="p">This object is used to retrieve information from related records
+where the related record may be from more than one object type (a
+polymorphic foreign key). For example, the owner of a case can be
+either a user or a group (queue). This object allows retrieval of
+the owner name, whether the owner is a user or a group (queue). You
+can use a describe call to access the information about parents for
+an object, or you can use the <samp class="codeph nolang">who</samp>, <samp class="codeph nolang">what</samp>, or <samp class="codeph nolang">owner</samp> fields (depending on the object)
+in SOQL queries. This object cannot be directly accessed.</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<div class="p"><samp class="codeph nolang">describeSObjects()</samp></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d519522e70">Field</th>
+
+<th class="featureTableHeader  " id="d519522e73">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Alias" class="dashAnchor"></a> <span class="keyword parmname">Alias</span> </td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user alias. This field contains a value only if the related
+record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a><span class="keyword parmname">Email</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The email address of the user. This field contains a value only
+if the related record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a><span class="keyword parmname">FirstName</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The first name of the user, contact, or lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the related record is an active user (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This field contains a value only if the related
+record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><span class="keyword parmname">LastName</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The last name of the user, contact, or lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/MiddleName" class="dashAnchor"></a><span class="keyword parmname">MiddleName</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The middle name of the user, contact, or lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a> <span class="keyword parmname">Name</span>
+</td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Suffix" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/MiddleName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a>Name of the parent of the object queried. If the parent is a user, contact, or lead, the value
+           is a concatenation of the <span class="keyword parmname">FirstName</span>,
+           <span class="keyword parmname">MiddleName</span>, <span class="keyword parmname">LastName</span>, and
+            <span class="keyword parmname">Suffix</span> fields of the related record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The phone number of the user. This field contains a value only
+if the related record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Profile" class="dashAnchor"></a><span class="keyword parmname">Profile</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Profile of the user. Only populated if the related record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/ProfileId" class="dashAnchor"></a><span class="keyword parmname">ProfileId</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the user’s Profile. Only populated if the related record is a user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Suffix" class="dashAnchor"></a><span class="keyword parmname">Suffix</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name suffix of the user, contact, or lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The title of the user, for example CFO or CEO.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a> <span class="keyword parmname" id="object_name_type"><a name="object_name_type"><!-- --></a>Type</span>
+</td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A list of the types of sObjects that can be an owner of this object. You can use this field
+to filter on a type of owner, for example, return only the leads owned
+by a user. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/Username" class="dashAnchor"></a><span class="keyword parmname">Username</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Contains the name that a user enters to log into the API or
+the user interface. The value for this field is in the form of an
+email address, and is only populated if the related record is a user. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/UserRole" class="dashAnchor"></a><span class="keyword parmname">UserRole</span></td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Role" class="dashAnchor"></a>Name of the <span class="keyword parmname">Role</span> played by the user. Only populated for user rows.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d519522e70" data-title="Field"><a name="//apple_ref/cpp/Field/UserRoleId" class="dashAnchor"></a> <span class="keyword parmname">UserRoleId</span> </td>
+
+<td class="entry" headers="d519522e73" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the user role associated with this object.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">To query on relationships where the
+parent may be more than one type of object, use <samp class="codeph nolang">who</samp>, <samp class="codeph nolang">what</samp>, or <samp class="codeph nolang">owner</samp> relationship fields.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

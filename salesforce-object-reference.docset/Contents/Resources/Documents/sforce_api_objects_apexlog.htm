@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ApexLog | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_apexlog"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ApexLog</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a debug log, containing information about a transaction,
+   including information about Apex, Visualforce, workflow and validation
+   rules. This object is available in API version 19.0 and later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d156427e92">Field</th>
+
+<th class="featureTableHeader  " id="d156427e95">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/Application" class="dashAnchor"></a><span class="keyword parmname">Application</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">This value depends on the client type that triggered the log. <ul class="ul bulletList">
+<li class="li">For API clients, this value is the client ID</li>
+
+<li class="li"> For browser clients, this value is <samp class="codeph nolang">Browser</samp>
+</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/DurationMilliseconds" class="dashAnchor"></a><span class="keyword parmname">DurationMilliseconds</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Duration of the transaction in milliseconds.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/Location" class="dashAnchor"></a><span class="keyword parmname">Location</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies the location of the origin of the log. Values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">Monitoring</samp>—log is
+generated as part of debug log monitoring. These types of logs are
+maintained until the user or the system overwrites them.</li>
+
+<li class="li">
+<samp class="codeph nolang">SystemLog</samp>—log is generated
+from the Developer Console. These types of logs are only maintained for 60 minutes or
+until the user clears them. </li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/LogLength" class="dashAnchor"></a><span class="keyword parmname">LogLength</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Length of the log in bytes. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/LogUserId" class="dashAnchor"></a><span class="keyword parmname">LogUserId</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the user whose actions triggered the debug log.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/Operation" class="dashAnchor"></a><span class="keyword parmname">Operation</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Name of the operation that triggered the debug log, such as <samp class="codeph nolang">APEXSOAP</samp>, <samp class="codeph nolang">Apex Sharing Recalculation</samp>, and so on. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/Request" class="dashAnchor"></a><span class="keyword parmname">Request</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Request type. Values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">API</samp>—request came from the API</li>
+
+<li class="li">
+<samp class="codeph nolang">Application</samp>—request
+came from the Salesforce user
+interface</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/StartTime" class="dashAnchor"></a><span class="keyword parmname">StartTime</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Start time of the transaction. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d156427e92" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+<td class="entry" headers="d156427e95" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Status of the transaction. This value is either <samp class="codeph nolang">Success</samp>, or the text of an unhandled Apex exception.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">You can read information about this object, as well as delete it, but
+                  you can't update or insert it.</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_apexclass.htm" title="Represents an Apex class.">ApexClass</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_apextrigger.htm" title="Represents an Apex trigger.">ApexTrigger</a></div>
+</li>
+<li>
+<div><a class="link" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.apexcode.meta/apexcode/" target="_blank" title="Apex Developer Guide - html (New Window)"><em class="ph i">Apex Developer Guide</em></a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

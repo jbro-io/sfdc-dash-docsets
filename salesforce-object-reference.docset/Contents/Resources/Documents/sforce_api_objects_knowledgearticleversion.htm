@@ -1,0 +1,961 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>KnowledgeArticleVersion | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_knowledgearticleversion"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>KnowledgeArticleVersion</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Provides a global view of standard article fields across all article
+   types depending on their version. This object is available in API version 18.0 and
+  later.</span></div>
+
+<div class="p">Use this object to:<ul class="ul bulletList">
+    <li class="li">Query or search generically across multiple article types.</li>
+
+    <li class="li">Filter on a specific version.</li>
+
+    <li class="li">Update standard fields, those fields that are updateable, in draft versions.</li>
+
+   </ul>
+When you query on the archived article, the results include both the article and the
+   article’s archived versions. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You can’t update draft translations with the API.</p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, and <samp class="codeph nolang">update()</samp>.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p></p><ul class="ul bulletList">
+<li class="li">You can only update draft versions.</li>
+
+<li class="li">To create, update, or delete a Knowledge article version, use the call on
+            <em class="ph i">ArticleType</em>_kav, where <em class="ph i">ArticleType</em> is the name of the article’s
+            type. For example, to delete, use <em class="ph i">ArticleType</em>_kav.delete().</li>
+
+</ul>
+<p></p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p"><span class="ph" id="accessrules"><a name="accessrules"><!-- --></a>A user must have the “View Articles” permission enabled. Salesforce Knowledge users, unlike Customer Portal and partner portal users, must also
+          be granted the <span class="keyword parmname">Knowledge User</span> feature license to view and edit
+          article versions.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d448741e161">Field Name</th>
+
+<th class="featureTableHeader  " id="d448741e164">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ArchivedById" class="dashAnchor"></a><span class="keyword parmname" id="archivedbyid_name"><a name="archivedbyid_name"><!-- --></a>ArchivedById</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="archivedbyid_desc"><a name="archivedbyid_desc"><!-- --></a>The ID of the user who archived the
+article.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ArchivedDate" class="dashAnchor"></a><span class="keyword parmname" id="archiveddate_name"><a name="archiveddate_name"><!-- --></a>ArchivedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="archiveddate_desc"><a name="archiveddate_desc"><!-- --></a>The date when the article was archived.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ArticleNumber" class="dashAnchor"></a><span class="keyword parmname">ArticleNumber</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Autonumber, Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique number automatically assigned
+to the article when it's created. You can't change the format or value
+for this field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ArticleType" class="dashAnchor"></a><span class="keyword parmname" id="article_type"><a name="article_type"><!-- --></a><span class="ph" id="article_type_ph"><a name="article_type_ph"><!-- --></a>ArticleType</span></span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create,Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="article_type_desc"><a name="//apple_ref/cpp/Field/ArticleType" class="dashAnchor"></a><a name="article_type_desc"><!-- --></a>Indicates the API Name
+of the article type. The <span class="keyword parmname"><span class="ph" id="d279044e303-d279044e267"><a name="d279044e303-d279044e267"><!-- --></a>ArticleType</span></span> is assigned to the article when it's created. You can't
+change the value of this field. This field is available in API version
+26.0 and later</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/FirstPublishedDate" class="dashAnchor"></a><span class="keyword parmname" id="firstpublisheddate_name"><a name="firstpublisheddate_name"><!-- --></a>FirstPublishedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="firstpublisheddate_desc"><a name="firstpublisheddate_desc"><!-- --></a>The date when the article was
+first published.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsLatestVersion" class="dashAnchor"></a><span class="keyword parmname">IsLatestVersion</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Group, Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the article is the most current version. (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This field can be <samp class="codeph nolang">true</samp> on the online or published version, a draft version in the
+                      master language, a draft version in a translation, and the latest archived
+                      version. However, you can’t filter by (PublishState=’Online’) and
+                      (IsLatestVersion=false) because the online version is also the latest version.
+                      This field is available in API version 24.0
+                      and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsMasterLanguage" class="dashAnchor"></a><span class="keyword parmname" id="ismasterlanguage_name"><a name="ismasterlanguage_name"><!-- --></a>IsMasterLanguage</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="ismasterlanguage_desc"><a name="ismasterlanguage_desc"><!-- --></a>Indicates whether the article has
+one or more translations associated with it (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span> Only accessible if your knowledge base supports
+multiple languages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsOutOfDate" class="dashAnchor"></a><span class="keyword parmname" id="isoutofdate_name"><a name="isoutofdate_name"><!-- --></a>IsOutOfDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="isoutofdate_desc"><a name="isoutofdate_desc"><!-- --></a>Indicates whether the source article
+has been updated since this translated version was created (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span> Only accessible if your knowledge base supports
+multiple languages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsVisibleInApp" class="dashAnchor"></a><span class="keyword parmname" id="channelsvisibleinapp_name"><a name="channelsvisibleinapp_name"><!-- --></a>IsVisibleInApp</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="channelsvisibleinapp_desc"><a name="channelsvisibleinapp_desc"><!-- --></a>Required. Indicates whether
+the article is visible in the Articles tab (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsVisibleInCsp" class="dashAnchor"></a><span class="keyword parmname" id="channelsvisibleincsp_name"><a name="channelsvisibleincsp_name"><!-- --></a>IsVisibleInCsp</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="channelsvisibleincsp_desc"><a name="channelsvisibleincsp_desc"><!-- --></a>Required. Indicates whether
+the article is visible in the Customer Portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsVisibleInPkb" class="dashAnchor"></a><span class="keyword parmname" id="channelsvisibleinpkb_name"><a name="channelsvisibleinpkb_name"><!-- --></a>IsVisibleInPkb</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="channelsvisibleinpkb_desc"><a name="channelsvisibleinpkb_desc"><!-- --></a>Required. Indicates whether
+the article is visible in the public knowledge base (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsVisibleInPrm" class="dashAnchor"></a><span class="keyword parmname" id="channelsvisibleinprm_name"><a name="channelsvisibleinprm_name"><!-- --></a>IsVisibleInPrm</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="channelsvisibleinprm_desc"><a name="channelsvisibleinprm_desc"><!-- --></a>Required. Indicates whether
+the article is visible in the partner portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/KnowledgeArticleId" class="dashAnchor"></a><span class="keyword parmname" id="knowledgearticleid_name"><a name="knowledgearticleid_name"><!-- --></a>KnowledgeArticleId</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="knowledgearticleid_desc"><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a><a name="knowledgearticleid_desc"><!-- --></a>The ID of the article independent
+from its version. The value for this field is retrieved from the <span class="keyword parmname">Id</span> field of the KnowledgeArticle object.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname" id="language_name"><a name="language_name"><!-- --></a>Language</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="language_name_desc"><a name="language_name_desc"><!-- --></a>The language that the article is written
+in, such as <samp class="codeph nolang">French</samp> or <samp class="codeph nolang">Chinese (Traditional)</samp>.</span><p class="p" id="SoslRequiresLanguage"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><a name="SoslRequiresLanguage"><!-- --></a>Querying or searching articles in SOQL or SOSL requires that you specify the <span class="keyword parmname">Language</span> field in the WHERE clause. The language must be the same for all
+article types.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastPublishedDate" class="dashAnchor"></a><span class="keyword parmname" id="lastpublisheddate_name"><a name="lastpublisheddate_name"><!-- --></a>LastPublishedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="lastpublisheddate_desc"><a name="lastpublisheddate_desc"><!-- --></a>The date when the article was
+last published.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterVersionId" class="dashAnchor"></a><span class="keyword parmname" id="masterversionid_name"><a name="masterversionid_name"><!-- --></a>MasterVersionId</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="masterversionid_desc"><a name="masterversionid_desc"><!-- --></a>ID of the source article, if the article is the translation of a
+                        source article.</span>
+                      Only accessible if your knowledge base supports
+multiple languages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname" id="ownerid_name"><a name="ownerid_name"><!-- --></a>OwnerId</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="ownerid_desc"><a name="ownerid_desc"><!-- --></a>The ID of the article's owner.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/PublishStatus" class="dashAnchor"></a><span class="keyword parmname" id="publishstatus_name"><a name="publishstatus_name"><!-- --></a>PublishStatus</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<div class="p" id="publishstatus_values">
+<a name="publishstatus_values"><!-- --></a>The publication status for the article:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang"><span class="ph" id="publishstatus_draft"><a name="publishstatus_draft"><!-- --></a>Draft</span></samp>: any draft articles.</li>
+
+<li class="li">
+<samp class="codeph nolang"><span class="ph" id="publishstatus_online"><a name="publishstatus_online"><!-- --></a>Online</span></samp>: articles published in Salesforce Knowledge.</li>
+
+<li class="li">
+<samp class="codeph nolang">Archived</samp>: archived articles.</li>
+
+</ul>
+</div>
+<p class="p" id="publishstatus_rules"><a name="publishstatus_rules"><!-- --></a>A user must have the “Manage
+Articles” permission enabled to use <samp class="codeph nolang">Online</samp>.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/IsLatestVersion" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PublishStatus" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PublishStatus" class="dashAnchor"></a>Querying or searching articles in SOQL or SOSL requires that you specify either the <span class="keyword parmname">PublishStatus</span> or the <span class="keyword parmname">Id</span> field in the WHERE clause. You can
+search for only one publication status per article type in a single
+SOSL query. When searching for articles with a <span class="keyword parmname">PublishStatus</span> of <samp class="codeph nolang">Archived</samp>, also check that <span class="keyword parmname">IsLatestVersion</span> equals <samp class="codeph nolang">false</samp> in your WHERE clause.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/SourceId" class="dashAnchor"></a><span class="keyword parmname" id="sourceid_name"><a name="sourceid_name"><!-- --></a>SourceId</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="sourceid_desc"><a name="sourceid_desc"><!-- --></a>ID of the source from which the article
+was created (Case or Reply).</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Summary" class="dashAnchor"></a><span class="keyword parmname" id="summary_name"><a name="summary_name"><!-- --></a>Summary</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="summary_desc"><a name="summary_desc"><!-- --></a>Summary of the article. Maximum size
+is 1000 characters.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname" id="title_name"><a name="title_name"><!-- --></a>Title</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, idLookup</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="title_desc"><a name="title_desc"><!-- --></a>Required. Article's title. Maximum size
+is 255 characters.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/TranslationCompletedDate" class="dashAnchor"></a><span class="keyword parmname" id="translationcompleteddate_name"><a name="translationcompleteddate_name"><!-- --></a>TranslationCompletedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="translationcompletedate_desc"><a name="translationcompletedate_desc"><!-- --></a>Date and time when the article
+was last translated.</span> Only accessible if your knowledge base supports
+multiple languages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/TranslationExportedDate" class="dashAnchor"></a><span class="keyword parmname" id="translationexporteddate_name"><a name="translationexporteddate_name"><!-- --></a>TranslationExportedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="translationexporteddate_desc"><a name="translationexporteddate_desc"><!-- --></a>Date and time when the article
+was last exported for translation.</span> Only accessible if your knowledge base supports
+multiple languages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/TranslationImportedDate" class="dashAnchor"></a><span class="keyword parmname" id="translationimporteddate_name"><a name="translationimporteddate_name"><!-- --></a>TranslationImportedDate</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="translationimporteddate_desc"><a name="translationimporteddate_desc"><!-- --></a>Date and time when the article
+was last imported for translation. Only accessible if your knowledge base supports
+multiple languages.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/UrlName" class="dashAnchor"></a><span class="keyword parmname" id="urlname_name"><a name="urlname_name"><!-- --></a>UrlName</span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="urlname_desc"><a name="//apple_ref/cpp/Field/UrlName" class="dashAnchor"></a><a name="urlname_desc"><!-- --></a>Required. Represents the article's URL.
+Can contain alphanumeric characters and hyphens but can't begin or
+end with a hyphen. <span class="keyword parmname">UrlName</span> is case-sensitive and its maximum size is 255 characters.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><span class="ph" id="ValidationStatus"><a name="//apple_ref/cpp/Field/ValidationStatus" class="dashAnchor"></a><a name="ValidationStatus"><!-- --></a><span class="keyword parmname">ValidationStatus</span></span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p"><a name="//apple_ref/cpp/Field/Not Validated" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Validated" class="dashAnchor"></a><span class="ph" id="ValidationStatusDescription"><a name="ValidationStatusDescription"><!-- --></a>Shows whether the content
+of the article has been validated.</span> Default values are <span class="keyword parmname">Validated</span> and <span class="keyword parmname">Not Validated</span>. This
+field is available in API version
+24.0 or later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d448741e161" data-title="Field Name"><span class="ph" id="VersionNumber"><a name="//apple_ref/cpp/Field/VersionNumber" class="dashAnchor"></a><a name="VersionNumber"><!-- --></a><span class="keyword parmname">VersionNumber</span></span></td>
+
+<td class="entry" headers="d448741e164" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">None</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="article_version_number"><a name="article_version_number"><!-- --></a>The number assigned to a version
+of an article. This field is available in API version
+24.0 and later.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query, retrieve,
+or search for articles across all article types depending on their
+version. You can update draft master articles. Additionally, you can
+delete articles that are not drafts. Client applications can use KnowledgeArticleVersion with <samp class="codeph nolang" id="d279044e1425-d280339e9"><a name="d279044e1425-d280339e9"><!-- --></a>describeDataCategoryGroups()</samp> and <samp class="codeph nolang" id="d279044e1427-d280351e9"><a name="d279044e1427-d280351e9"><!-- --></a>describeDataCategoryGroupStructures()</samp> to return the category groups and the category structure associated
+with Salesforce Knowledge.</p>
+<p class="p">Alternatively, client applications can use the article
+type <samp class="codeph nolang">API Name</samp> followed by <samp class="codeph nolang">__kav</samp> to query,
+retrieve, or search for articles for a specific article type. </p>
+<p class="p">To access an article independent of its version, use the KnowledgeArticle object.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">SOQL Samples</h2>
+<div class="p">The following SOQL clause uses KnowledgeArticleVersion to query all published articles from <strong class="ph b">all article types</strong> complying
+with the classification specified in the WITH DATA CATEGORY clause: <div class="codeSection soql"><div id="highlighter_956192" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_956192_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_956192" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Title, Summary</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM KnowledgeArticleVersion</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE PublishStatus='Online'</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">AND Language = 'en_US'</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">WITH DATA CATEGORY Geography__c ABOVE_OR_BELOW europe__c AND Product__c BELOW All__c</code></td></tr></tbody></table></div></div></div></div>
+</div>
+<div class="p">The following SOQL clause uses the article type <samp class="codeph nolang">API Name</samp> to limit the query to all draft articles from the <samp class="codeph nolang">Offer__kav</samp> article type: <div class="codeSection soql"><div id="highlighter_713944" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_713944_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_713944" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Title</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM Offer__kav</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE PublishStatus='Draft'</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">AND Language = 'en_US'</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">WITH DATA CATEGORY Geography__c AT (france__c,usa__c) AND Product__c ABOVE dsl__c</code></td></tr></tbody></table></div></div></div></div>
+</div>
+<div class="p">The following SOQL clause uses KnowledgeArticleVersion to query the Ids of all archived versions of a particular article:<div class="codeSection soql"><div id="highlighter_427807" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_427807_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_427807" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM KnowledgeArticleVersion</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE PublishStatus='Archived'</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">AND IsLatestVersion=false</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">AND KnowledgeArticleId='kA1D00000001PQ6KAM'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+</div>
+
+<div class="section" id="kav_soql_sosl">
+<a name="kav_soql_sosl"><!-- --></a><h2 class="helpHead2">SOQL and SOSL with KnowledgeArticleVersion</h2>
+<a name="ul_kav_soql_sosl_limits"><!-- --></a><ul class="ul bulletList" id="ul_kav_soql_sosl_limits">
+<li class="li">Always filter on a single value of <span class="keyword parmname">PublishStatus</span> unless the query filters on one or more primary key IDs.
+To support security, only users with the “Manage Articles”
+permission see articles whose <span class="keyword parmname">PublishStatus</span> value is <samp class="codeph nolang">Draft</samp>.</li>
+
+<li class="li">Archived article versions are stored in the articletype_kav object.
+To query archived article versions, specify the article <span class="keyword parmname">Id</span> and set <samp class="codeph soql">sLatestVersion='0'</samp>.</li>
+
+<li class="li">Always filter on a single value of <span class="keyword parmname">Language</span>. However, in SOQL, you can filter on more than one <span class="keyword parmname">Language</span> if there is a filter on <span class="keyword parmname">Id</span> or <span class="keyword parmname">KnowledgeArticleId</span>.</li>
+
+</ul>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_guidelines_knowledge.htm">Articles</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_guidelines_datacategory.htm">Data Categories</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticle.htm" title="Provides read-only access to an article and the ability to delete the master article. This object is available in API version 19.0 and later.">KnowledgeArticle</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticleviewstat.htm#sforce_api_objects_knowledgearticleviewstat" title="Provides statistics on the number of views for the specified article across all article types. This object is read-only and available in API version 20 and later.">KnowledgeArticleViewStat</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticlevotestat.htm#sforce_api_objects_knowledgearticlevotestat" title="Provides the weighted rating for the specified article on a scale of 1 to 5 across all article types. This object is read-only and available in API version 20 and later.">KnowledgeArticleVoteStat</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContentDocumentLink | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contentdocumentlink"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContentDocumentLink</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="content_document_link_descrip"><a name="content_document_link_descrip"><!-- --></a>Represents the link between a
+          Salesforce CRM Content document or Salesforce
+        file and where it's shared. <span class="ph" id="files_locations_shared_api"><a name="files_locations_shared_api"><!-- --></a>A file can be shared with
+          other users, groups, records, and Salesforce CRM Content libraries.</span></span> This
+      object is available in versions 21.0 and later for Salesforce CRM Content documents and Salesforce Files.</span></div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">create()</samp>,
+          <samp class="codeph nolang">delete()</samp>,
+          <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+
+    </div>
+
+    <div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+
+      
+      <ul class="ul bulletList">
+        <li class="li">Customer and Partner Portal users must have the “View Content in Portal”
+          permission to query content in libraries where they have access.</li>
+
+        <li class="li">Users (including users with
+the “View All Data” permission) can only query files
+they have access to, including:<ul class="ul bulletList">
+<li class="li"> All Salesforce CRM Content files in libraries they're a member of and in their personal
+library, regardless of library permissions (API version
+17.0 and later).</li>
+
+<li class="li">All Salesforce Files they own, posted on
+              their profile, posted on groups they can see, and shared directly with them (API version 21.0 and
+              later).</li>
+
+</ul>
+</li>
+
+        <li class="li">In API versions 33.0 and
+          later, you can create and delete ContentDocumentLink objects with a
+            <span class="keyword parmname">LinkedEntityId</span> of any record type that can be tracked in the feed,
+          even if feed tracking is disabled for that record type. </li>
+
+        <li class="li" id="create_delete_version_25">
+<a name="create_delete_version_25"><!-- --></a>In API versions 25.0 and later,
+          you can create ContentDocumentLink objects
+          with a <samp class="codeph nolang"><span class="keyword parmname">LinkedEntityId</span></samp> of type
+            <samp class="codeph nolang">User</samp>,
+            <samp class="codeph nolang">CollaborationGroup</samp>, or <samp class="codeph nolang">Organization</samp>.</li>
+
+        <li class="li">In API versions 21.0 and
+          later, users with explicit Viewer access (the file has been directly shared with the user)
+          to a file can delete ContentDocumentLink
+          objects between the file and other users who have Viewer access. In the same API versions,
+          any user with Viewer access to a file can deleteContentDocumentLink objects between the file
+          and organizations or groups of which they are a member.</li>
+
+        <li class="li">For organizations with Communities enabled, a
+          document can only be shared with users and groups that are a part of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> the file was created in.</li>
+
+      </ul>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d258043e231">Field</th>
+
+              <th class="featureTableHeader  " id="d258043e234">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d258043e231" data-title="Field"><a name="//apple_ref/cpp/Field/ContentDocumentId" class="dashAnchor"></a><span class="keyword parmname" id="ContentDocumentIDField"><a name="ContentDocumentIDField"><!-- --></a>ContentDocumentId</span></td>
+
+              <td class="entry" headers="d258043e234" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create, Filter, Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the document.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d258043e231" data-title="Field"><a name="//apple_ref/cpp/Field/LinkedEntityId" class="dashAnchor"></a><span class="keyword parmname" id="LinkEntityIdField"><a name="LinkEntityIdField"><!-- --></a>LinkedEntityId</span></td>
+
+              <td class="entry" headers="d258043e234" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create, Filter, Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the linked object. Can include Chatter users, groups, records (any
+                      that support Chatter feed tracking including custom objects), and Salesforce CRM Content libraries.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d258043e231" data-title="Field"><a name="//apple_ref/cpp/Field/ShareType" class="dashAnchor"></a><span class="keyword parmname">ShareType</span></td>
+
+              <td class="entry" headers="d258043e234" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Required. The permission granted to the user of the shared file in a
+                      library. This is determined by the permission the user already has in the
+                      library. This field is available in API version 25.0
+                      and later.<dl class="dl detailList">
+                        
+                          <dt class="dt dlterm"><samp class="codeph nolang">Viewer</samp></dt>
+
+                          <dd class="dd">The user can explicitly view but not edit the shared file.</dd>
+
+                        
+                        
+                          <dt class="dt dlterm"><samp class="codeph nolang">Collaborator</samp></dt>
+
+                          <dd class="dd">The user can explicitly view and edit the shared file.</dd>
+
+                        
+                        
+                          <dt class="dt dlterm"><samp class="codeph nolang">Inferred</samp></dt>
+
+                          <dd class="dd">The user’s permission is determined by the related record. For
+                            shares with a library, this is defined by the permissions the user has
+                            in that library.</dd>
+
+                        
+                      </dl>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d258043e231" data-title="Field"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a><span class="keyword parmname">Visibility</span></td>
+
+              <td class="entry" headers="d258043e234" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435370">picklist</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether this feed item is available to all users, internal users,
+                      or shared users. This field is available in API version 26.0
+                      and later.<div class="p"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>
+<span class="keyword parmname">Visibility</span> can have the following values.<ul class="ul bulletList">
+                          <li class="li">
+<samp class="codeph nolang">AllUsers</samp>—The feed item is
+                            available to all users who have permission to see the feed item. </li>
+
+                          <li class="li">
+<samp class="codeph nolang">InternalUsers</samp>—The feed
+                            item is available to internal users only.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">SharedUsers</samp>—The feed item
+                            is available to all users who can see the feed to which the feed item is
+                            posted. The <samp class="codeph nolang">SharedUsers</samp> value is
+                            available in API version
+                            32.0 and later.</li>
+
+                        </ul>
+</div>
+<div class="p"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>Note the following exceptions for
+                          <span class="keyword parmname">Visibility</span>.<ul class="ul bulletList">
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>For posts to a record feed, <span class="keyword parmname">Visibility</span> is set to
+                              <samp class="codeph nolang">InternalUsers</samp> for all internal
+                            users by default. </li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>External users can set <span class="keyword parmname">Visibility</span> only to <samp class="codeph nolang">AllUsers</samp>.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>On user and group posts, only internal users can set
+                              <span class="keyword parmname">Visibility</span> to <samp class="codeph nolang">InternalUsers</samp>.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>For posts to a user feed, if the organization-wide default for user
+                            sharing is set to private, <span class="keyword parmname">Visibility</span> is set to
+                              <samp class="codeph nolang">SharedUsers</samp>.</li>
+
+                        </ul>
+</div>
+</dd>
+
+                  
+                </dl>
+
+                <p class="p">The visibility of a ContentDocumentLink on a record post
+                  is derived from the highest level of visibility of the link on that record.</p>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">
+<p class="p">Use this object to query the locations where a file is shared or
+        query which files are linked to a particular location. <span class="ph" id="contentdocumentlink_soql_query_ex"><a name="contentdocumentlink_soql_query_ex"><!-- --></a>For example, the following query returns a
+          particular document shared with a Chatter group:</span></p>
+<div class="codeSection soql"><div id="highlighter_542407" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_542407_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_542407" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ContentDocument.title FROM ContentDocumentLink WHERE ContentDocumentId = '069D00000000so2' AND LinkedEntityId = '0D5000000089123'</code></td></tr></tbody></table></div></div></div></div>
+<ul class="ul bulletList">
+        <li class="li">You can't run a query without filters against ContentDocumentLink.</li>
+
+        <li class="li">You can't filter on ContentDocument fields if you're filtering by <span class="keyword parmname">ContentDocumentId</span>. You can only
+          filter on ContentDocument fields if you're filtering by <span class="keyword parmname">LinkedEntityId</span>.</li>
+
+        <li class="li">You can't filter on the related object fields. For example, you can't filter on the
+          properties of the account to which a file is linked. You can filter on the properties of
+          the file, such as the title field.</li>
+
+      </ul>
+A SOQL query must filter on one of <samp class="codeph nolang">Id</samp>, <samp class="codeph nolang">ContentDocumentId</samp>, or <samp class="codeph nolang">LinkedEntityId</samp>.<p class="p">The ContentDocumentLink object supports triggers before and after these operations:
+        insert, update, delete.</p>
+</div>
+</div>
+
+    <div class="example">
+<h2 class="sectiontitle">Example</h2>
+<div class="exampleblock"><div class="p">This trigger for the ContentDocumentLink object prevents public XLSX files from being
+      shared.<div class="codeSection apex_code"><div id="highlighter_2440" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_2440_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_2440" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">trigger NoShareXLSX on ContentDocumentLink (after </code><code class="apexKey">insert</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">for</code> <code class="plain">(ContentDocumentLink cdl : trigger.</code><code class="apexKey">new</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(!CDLHelper.isSharingAllowed(cdl)) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">cdl.addError(</code><code class="apexString">'Sorry, you cannot share this file.'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+The
+      trigger calls this helper
+      class.<div class="codeSection apex_code"><div id="highlighter_757512" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_757512_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_757512" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">public</code> <code class="apexKey">class</code> <code class="plain">CDLHelper {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">/**</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">* Gets FileExtension of the inserted content.</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">*/</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">String</code> <code class="plain">getFileExtension(ContentDocumentLink cdl) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">fileExtension;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">docId = cdl.ContentDocumentId;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">FileExtension = [</code><code class="apexKey">select</code> <code class="plain">FileExtension </code><code class="apexKey">from</code> <code class="plain">ContentVersion </code><code class="apexKey">where</code> <code class="plain">ContentDocumentId = :docId].</code><code class="apexKey">get</code><code class="plain">(</code><code class="value">0</code><code class="plain">).FileExtension;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="plain">FileExtension;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">/**</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">* Checks the file's PublishStatus and FileExtension to decide whether user can share the file with others.</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">* PublishStatus 'P' means the document is in a public library.</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">*/</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">boolean</code> <code class="plain">isSharingAllowed(ContentDocumentLink cdl) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">docId = cdl.ContentDocumentId;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ContentVersion version = [</code><code class="apexKey">select</code> <code class="plain">PublishStatus,FileExtension </code><code class="apexKey">from</code> <code class="plain">ContentVersion </code><code class="apexKey">where</code> <code class="plain">ContentDocumentId = :docId].</code><code class="apexKey">get</code><code class="plain">(</code><code class="value">0</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(version.PublishStatus.equals(</code><code class="apexString">'P'</code><code class="plain">) &amp;&amp; (version.FileExtension != </code><code class="apexKey">null</code> <code class="plain">&amp;&amp; version.FileExtension.equals(</code><code class="apexString">'xlsx'</code><code class="plain">))) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="apexKey">false</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="apexKey">true</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">/**</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">* Gets the parent account name if the file is linked to an account.</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexDocumentation">*/</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">String</code> <code class="plain">getAccountName(ContentDocumentLink cdl) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">name;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">id = cdl.LinkedEntityId;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(id.substring(</code><code class="value">0</code><code class="plain">,</code><code class="value">3</code><code class="plain">) == </code><code class="apexString">'001'</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">name = [</code><code class="apexKey">select</code> <code class="plain">Name </code><code class="apexKey">from</code> <code class="plain">Account </code><code class="apexKey">where</code> <code class="plain">Id = :id].</code><code class="apexKey">get</code><code class="plain">(</code><code class="value">0</code><code class="plain">).Name;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>35</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="plain">name;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>36</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>37</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div></div>
+</div>
+
+    <div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p>Apex has a per organization limit of 10 concurrent requests that last
+      longer than 5 seconds. A trigger that uploads files can easily hit this limit.</p>
+</div>
+</div></div></div></div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocument.htm" title="Represents a document that has been uploaded to a library in Salesforce CRM Content or Salesforce Files.This object is available in API versions 17.0 and later for Salesforce CRM Content. This object is available in API version 21.0 and later for Salesforce Files.">ContentDocument</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

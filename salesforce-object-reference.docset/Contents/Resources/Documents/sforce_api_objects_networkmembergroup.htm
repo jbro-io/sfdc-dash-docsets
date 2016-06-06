@@ -1,0 +1,182 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>NetworkMemberGroup | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_networkmembergroup"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>NetworkMemberGroup</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="network_membergroup_def"><a name="network_membergroup_def"><!-- --></a>Represents a group of members in a community. Members
+    can be either users in your internal organization or external users assigned portal profiles. An
+    administrator adds members to a community by adding a
+    profile or a permission set, and any user with the profile or permission set becomes a member of
+    the community.</span>
+   This object is available in API version 26.0 and
+   later.</span></div>
+
+  <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>If a Chatter
+   customer (from a customer
+   group) is assigned a permission set that is also associated with a community, the Chatter
+   customer won’t be
+   added to the community.</p><p class="p"><span class="ph" id="NetworkProfileRename-note"><a name="NetworkProfileRename-note"><!-- --></a>Prior to API version 27.0, this object was
+     called NetworkProfile.</span></p>
+<p></p>
+</div>
+</div></div></div></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>The <samp class="codeph nolang">upsert()</samp> call is not supported for this object.</p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">This object is available only if Salesforce Communities is enabled in your organization.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d528833e148">Field Name</th>
+
+<th class="featureTableHeader  " id="d528833e151">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d528833e148" data-title="Field Name"><a name="//apple_ref/cpp/Field/AssignmentStatus" class="dashAnchor"></a><span class="keyword parmname">AssignmentStatus</span></td>
+
+<td class="entry" headers="d528833e151" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The status of a profile or permission set within a community. Values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">Added</samp>—Users with this
+profile or permission set are members of the community.</li>
+
+<li class="li">
+<samp class="codeph nolang">Waiting for Add</samp>—The
+profile or permission set was added to the community, but the async process hasn’t completed yet. After the
+process is complete, the status is updated to <samp class="codeph nolang">Added</samp>.</li>
+
+<li class="li">
+<samp class="codeph nolang">Waiting for Remove</samp>—Use
+this status to remove all the community members belonging to a profile or permission set and remove
+a profile or permission set from a community.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d528833e148" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+<td class="entry" headers="d528833e151" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the community that this group of members is associated with.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d528833e148" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+<td class="entry" headers="d528833e151" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_profile.htm" title="Represents a profile, which defines a set of permissions to perform different operations, such as querying, adding, updating, or deleting information.">profile</a> or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm" title="Represents a set of permissions that’s used to grant additional access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and later.">permission set</a> associated with the community.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to view the profiles
+or permission sets associated with a particular community. Profiles and permission sets are added and removed asynchronously,
+so you can also check the status of a profile or permission set that
+was updated in a community.</p>
+<p class="p">If you have “Modify All Data,” “View
+All Data,” or “Create and Set Up Communities,” you can view all profiles or permission sets for any community in the organization, regardless of your membership. If you
+have “Modify All Data” or “Create and Set Up Communities,” you can also add profiles or permission sets. Users
+without these permissions can only find profiles and permission sets
+for communities that they’re members of.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Sample Code</h2>
+<div class="codeSection nolang"><div id="highlighter_734317" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_734317_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_734317" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">// Create a new NetworkMemberGroup with a profile as the ParentId</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">NetworkMemberGroup nmgInsert = new NetworkMemberGroup();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">nmg.setNetworkId("0DBD0000000029o");</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">nmg.setParentId("00eD0000000z1Ww");</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">SaveResult[] results = connection.create(new SObject[] { nmgInsert });</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">// Update an existing NetworkMemberGroup to be removed from the Network</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">NetworkMemberGroup nmgUpdate = new NetworkMemberGroup(); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">nmg.setId("0DLD000000003enOAA"); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">nmg.setAssignmentStatus("WaitingForRemove"); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">SaveResult[] results = connection.update(new SObject[] { nmgUpdate });</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

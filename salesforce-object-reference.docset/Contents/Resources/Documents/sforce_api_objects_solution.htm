@@ -1,0 +1,568 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Solution | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_solution"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Solution</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a detailed description of a customer issue and the
+   resolution of that issue.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+       </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+          
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d678561e119">Field</th>
+
+<th class="featureTableHeader  " id="d678561e122">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsHtml" class="dashAnchor"></a><span class="keyword parmname">IsHtml</span></td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the Solution is an HTML solution (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsOutOfDate" class="dashAnchor"></a>
+<span class="keyword parmname">IsOutOfDate</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read-only field that indicates whether a solution master has been
+updated since the translated version was created (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Note that this field does not appear in the page
+layout of master solutions.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsPublished" class="dashAnchor"></a> <span class="keyword parmname">IsPublished</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the Solution has been published (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). A solution’s
+published state does not affect how it can be used, or whether you
+can query, update, or delete it. Label is <strong class="ph uicontrol">Public</strong>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Prior to Spring ‘14, the label was <strong class="ph uicontrol">Visible
+in Self-Service Portal</strong>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsPublishedInPublicKb" class="dashAnchor"></a> <span class="keyword parmname">IsPublishedInPublicKb</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the Solution has been published as a Public Solution (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Visible in Public Knowledge
+Base</strong>. <p class="p">This field only applies to solutions, not articles
+in the public knowledge base.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsReviewed" class="dashAnchor"></a> <span class="keyword parmname" id="i1466683"><a name="i1466683"><!-- --></a>IsReviewed</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsReviewed" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Indicates whether the Solution has been reviewed (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This flag
+can only be set indirectly via the <span class="keyword parmname">Status</span> picklist. Each predefined <span class="keyword parmname">Status</span> value implies an <span class="keyword parmname">IsReviewed</span> value. Label is <strong class="ph uicontrol">Reviewed</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a> <span class="keyword parmname">OwnerId</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the User who owns the Solution.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a> <span class="keyword parmname">ParentId</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the master solution, if this is the translation of a master
+solution.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1438294"><a name="i1438294"><!-- --></a>RecordTypeId</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the RecordType to which the Solution is associated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/SolutionLanguage" class="dashAnchor"></a>
+<span class="keyword parmname">SolutionLanguage</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The language that the solution is written in, such as <samp class="codeph nolang">French</samp> or <samp class="codeph nolang">Chinese (Traditional)</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/SolutionName" class="dashAnchor"></a> <span class="keyword parmname">SolutionName</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort,  Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. If a client application creates a new Solution and a value for this field is unspecified, a hyphen (-), the
+default value for this field, is used. Limit: 255 characters. Label
+is <strong class="ph uicontrol">Title</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/SolutionNote" class="dashAnchor"></a> <span class="keyword parmname">SolutionNote</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The details of the Solution record. Limit: 32,000 characters.
+Label is <strong class="ph uicontrol">Solution Details</strong>.<div class="box message info" id="no_javascript">
+<a name="no_javascript"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>If you have HTML Solutions enabled, any HTML tags
+used in this field are verified before the object is created or updated.
+If invalid HTML is entered, an error is thrown. Any JavaScript used
+in this field is removed before the object is created or updated.</p>
+</div>
+</div></div></div>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/SolutionNumber" class="dashAnchor"></a> <span class="keyword parmname">SolutionNumber</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Autonumber, Defaulted on create, Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An identifying number that is assigned automatically when a solution
+is created. It can’t be set directly, and it can’t be
+modified.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a> <span class="keyword parmname" id="i1466875"><a name="i1466875"><!-- --></a>Status</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsReviewed" class="dashAnchor"></a>Required. The status of the solution. Directly controls the <span class="keyword parmname">IsReviewed</span> value. To obtain the status values in the picklist, a
+client application can query the SolutionStatus.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d678561e119" data-title="Field"><a name="//apple_ref/cpp/Field/TimesUsed" class="dashAnchor"></a> <span class="keyword parmname">TimesUsed</span> </td>
+
+<td class="entry" headers="d678561e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Number of times this solution has been used. Label is <strong class="ph uicontrol">Num Related Case</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+ <p class="p">Use this object to manage your organization’s
+solutions. Client applications can create, update, delete, and query Attachment records associated with a solution.</p>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_categorydata.htm" title="Represents a logical grouping of Solution records.">CategoryData</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_categorynode.htm" title="Represents a tree of Solution categories.">CategoryNode</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

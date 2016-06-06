@@ -1,0 +1,278 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PartnerNetworkSyncLog | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_PartnerNetworkSyncLog"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PartnerNetworkSyncLog</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the Org Sync Log tab in Salesforce, where Salesforce administrators can
+			track the replication of record inserts and updates being performed in Organization
+			Sync. The Connection Detail page for the replication connection also displays the Org
+			Sync Log’s twenty most recent entries, and provides a link to the log.</span></div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">The Org Sync Log tab can only be added in organizations where Organization Sync has been
+				enabled. To add the tab to the Salesforce user interface,
+				users must also have the “Manage Connections” user permission. </p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d585872e114">Field Name</th>
+
+							<th class="featureTableHeader  " id="d585872e117">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConnectionEvent" class="dashAnchor"></a><span class="keyword parmname">ConnectionEvent</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The action being replicated to the partner organization,
+											such as a record insertion. </dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConnectionId" class="dashAnchor"></a><span class="keyword parmname">ConnectionId</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The ID of the Salesforce to Salesforce
+											replication connection in which the replication event
+											succeeded or failed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">A description of the replication event.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/EntityType" class="dashAnchor"></a><span class="keyword parmname">EntityType</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The type of record being inserted or updated.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/Error" class="dashAnchor"></a><span class="keyword parmname">Error</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The code used to describe the replication failure or
+											success.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/LocalRecord" class="dashAnchor"></a><span class="keyword parmname">LocalRecord</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The record being inserted or updated.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d585872e114" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d585872e117" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">An item is added to the Organization Sync Log if it
+											failed to be replicated to the linked organization. This
+											picklist includes the following values:<ul class="ul bulletList">
+												<li class="li">
+<samp class="codeph nolang">Failed</samp>: The
+												replication continued to fail after multiple
+												retries, and won’t be retried further.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Resolved</samp>:
+												The replication succeeded after retrying.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Retrying</samp>:
+												Salesforce is retrying the replication.</li>
+
+											</ul>
+This field is available in API version 35.0 and later.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

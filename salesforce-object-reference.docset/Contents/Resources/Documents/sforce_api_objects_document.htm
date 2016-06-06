@@ -1,0 +1,621 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Document | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_document"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Document</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a file that a user has uploaded. Unlike Attachment records, documents are not attached to a parent object.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">You must have the “Edit”
+permission on documents and the appropriate access to the Folder that contains a document in order to create or update a document
+in that Folder.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d328410e129">Field</th>
+
+<th class="featureTableHeader  " id="d328410e132">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/AuthorId" class="dashAnchor"></a> <span class="keyword parmname">AuthorId</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the User who is responsible for the Document.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a> <span class="keyword parmname" id="i1448994"><a name="i1448994"><!-- --></a>Body</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">base64</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Encoded file data. If specified, then do not specify
+a URL. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/BodyLength" class="dashAnchor"></a> <span class="keyword parmname" id="i1449015"><a name="i1449015"><!-- --></a>BodyLength</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Size of the file (in bytes).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/ContentType" class="dashAnchor"></a> <span class="keyword parmname">ContentType</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Type of content. Label is <strong class="ph uicontrol">Mime Type</strong>. Limit:
+120 characters.<p class="p"><a name="//apple_ref/cpp/Field/Don't allow HTML uploads as attachments
+                        or document records" class="dashAnchor"></a>If the <span class="keyword parmname">Don't allow HTML uploads as attachments
+                        or document records</span> security setting is enabled for your
+                    organization, you cannot upload files with the following file extensions:
+                        <span class="ph filepath">.htm</span>, <span class="ph filepath">.html</span>,
+                        <span class="ph filepath">.htt</span>, <span class="ph filepath">.htx</span>,
+                        <span class="ph filepath">.mhtm</span>, <span class="ph filepath">.mhtml</span>,
+                        <span class="ph filepath">.shtm</span>, <span class="ph filepath">.shtml</span>,
+                        <span class="ph filepath">.acgi</span>, <span class="ph filepath">.svg</span>.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a> <span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text description of the Document. Limit: 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization. Label is <strong class="ph uicontrol">Document Unique Name</strong>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/FolderId" class="dashAnchor"></a> <span class="keyword parmname">FolderId</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the Folder that contains the document.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/IsBodySearchable" class="dashAnchor"></a><span class="keyword parmname">IsBodySearchable</span></td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the contents of the object can be searched 
+using a SOSL <samp class="codeph soql">FIND</samp> call. The <samp class="codeph soql">ALL FIELDS</samp> search group includes the content
+as a searchable field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/IsInternalUseOnly" class="dashAnchor"></a> <span class="keyword parmname">IsInternalUseOnly</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object is only available for internal use
+(<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Internal
+Use Only</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/IsPublic" class="dashAnchor"></a> <span class="keyword parmname">IsPublic</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object is available for external use (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Externally Available</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Keywords" class="dashAnchor"></a> <span class="keyword parmname">Keywords</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Keywords. Limit: 255 characters. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a> <span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Name of the document. Label is <strong class="ph uicontrol">Document Name</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <p class="p">The namespace prefix can have one of the following values:</p>
+<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a> <span class="keyword parmname">Type</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">File type of the Document. In general, the values match the file
+extension for the type of Document (such as pdf or jpg). Label is <strong class="ph uicontrol">File Extension</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d328410e129" data-title="Field"><a name="//apple_ref/cpp/Field/Url" class="dashAnchor"></a> <span class="keyword parmname" id="i1449231"><a name="i1449231"><!-- --></a>Url</span> </td>
+
+<td class="entry" headers="d328410e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/BodyLength" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a>URL reference to the file (instead of storing it in the database).
+If specified, do not specify the  <span class="keyword parmname">Body</span> or  <span class="keyword parmname">BodyLength</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">When creating or updating a document,
+you can specify a value in either the <span class="keyword parmname">Body</span> or <span class="keyword parmname">Url</span> fields, but not both.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Encoded Data</h2>
+<p class="p">The API sends
+and receives the binary file data encoded as a base64 data type. Prior to creating a record, clients must encode
+the binary file data as base64. Upon receiving an API response,
+clients must decode the base64 data to binary (this conversion
+is usually handled for you by the SOAP client).</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1449297"><a name="i1449297"><!-- --></a>Maximum Document Size</span></h2>
+<p class="p">You can only create or update documents to a maximum size of 5
+MB.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

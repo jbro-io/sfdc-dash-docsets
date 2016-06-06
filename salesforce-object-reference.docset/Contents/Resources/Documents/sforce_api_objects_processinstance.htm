@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ProcessInstance | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_processinstance"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ProcessInstance</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="processinstance_def"><a name="processinstance_def"><!-- --></a>Represents an instance of a single,
+    end-to-end approval process. Use this and the node, step, and workitem process instance objects
+    to create approval history reports.</span></span></div>
+
+  <div class="box message info" id="approval_history_limitations">
+<a name="approval_history_limitations"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Exceptions apply to approval history data retrieved
+    with this object and available only via the SOAP API. For each approval process
+    instance that was pending when Summer ’14 became available for your organization, some
+    field values are never populated or are populated only after the approval process instance is
+    next acted upon—such as when a user approves, rejects, or reassigns an approval
+    request—after the Summer ’14 rollout.</p>
+</div>
+</div></div></div>
+</div>
+
+  <p class="p">For approval process instances that were completed before the Summer ’14 rollout, all
+   Process Instance fields are automatically populated, with one exception:
+    <span class="keyword parmname">CompletedDate</span> is never populated for approval process instances that were
+   completed before January 1, 2013. For approval process instances that were pending during the
+   Summer ’14 rollout, all ProcessInstance fields are automatically populated, with two
+   exceptions: <span class="keyword parmname">CompletedDate</span> and <span class="keyword parmname">LastActorId</span> are populated
+   only after the approval process instance is complete.</p>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Portal and Communities users can’t
+                access this object.</p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d599188e114">Field</th>
+
+       <th class="featureTableHeader  " id="d599188e117">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/CompletedDate" class="dashAnchor"></a><span class="keyword parmname">CompletedDate</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/CompletedDate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ElapsedTimeMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ElapsedTimeDay,
+            ElapsedTimeHours" class="dashAnchor"></a>The completion date and time of the approval process. The <span class="keyword parmname">ElapsedTimeDay,
+            ElapsedTimeHours</span>, and <span class="keyword parmname">ElapsedTimeMinutes</span> field values
+           are calculated using <span class="keyword parmname">CompletedDate</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInDays" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInDays</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total elapsed time in days between when the approval process instance was started
+           and now.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInHours" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInHours</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total elapsed time in hours between when the approval process instance was started
+           and now.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/ElapsedTimeInMinutes" class="dashAnchor"></a><span class="keyword parmname">ElapsedTimeInMinutes</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total elapsed time in minutes between when the approval process instance was
+           started and now.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/LastActorId" class="dashAnchor"></a><span class="keyword parmname">LastActorId</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Group, Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last actor that approved, rejected, or recalled the process.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/ProcessDefinitionId" class="dashAnchor"></a><span class="keyword parmname">ProcessDefinitionId</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Group,
+            Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of this approval process instance.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of this approval process instance, for example Started, Pending, or
+           Approved.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d599188e114" data-title="Field"><a name="//apple_ref/cpp/Field/TargetObjectId" class="dashAnchor"></a><span class="keyword parmname">TargetObjectId</span></td>
+
+       <td class="entry" headers="d599188e117" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the object affected by this approval process instance.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use this object to query or retrieve an approval process.</p>
+
+   <p class="p">The following SOQL query returns details for all the ProcessInstanceStep records related to individual ProcessInstance records. The nested query references <samp class="codeph nolang">Steps</samp>, which is the
+    child <span class="keyword parmname">relationshipName</span> for ProcessInstanceStep in the ProcessInstance object.</p>
+
+   <div class="codeSection soql"><div id="highlighter_803680" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_803680_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_803680" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, (SELECT Id, StepStatus, Comments FROM Steps)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ProcessInstance</code></td></tr></tbody></table></div></div></div></div>
+
+   <p class="p">The following SOQL query returns details for all the ProcessInstanceWorkitem records related to individual ProcessInstance records. The nested query references <samp class="codeph nolang">Workitems</samp>, which is
+    the child <span class="keyword parmname">relationshipName</span> for ProcessInstanceWorkitem in the ProcessInstance object.</p>
+
+   <div class="codeSection soql"><div id="highlighter_299225" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_299225_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_299225" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, (SELECT Id, ActorId, ProcessInstanceId FROM Workitems)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ProcessInstance</code></td></tr></tbody></table></div></div></div></div>
+
+   <p class="p">ProcessInstanceHistory can help provide a unified read-only view of the ProcessInstanceStep and ProcessInstanceWorkitem objects.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_processinstancehistory.htm" title="This read-only object shows all steps and pending approval requests associated with an approval process (ProcessInstance).">ProcessInstanceHistory</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_processinstancestep.htm" title="Represents one work item in an approval process (ProcessInstance).">ProcessInstanceStep</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_processinstanceworkitem.htm" title="Represents a user’s pending approval request.">ProcessInstanceWorkitem</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

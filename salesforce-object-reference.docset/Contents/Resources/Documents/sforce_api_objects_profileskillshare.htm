@@ -1,0 +1,194 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ProfileSkillShare | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_ProfileSkillShare"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ProfileSkillShare</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a sharing entry on a ProfileSkill.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+<div class="p">The properties available for some fields depend on the
+                default organization-wide sharing settings. The properties listed are true for the
+                default settings of such fields.
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d616244e102">Field Name</th>
+
+       <th class="featureTableHeader  " id="d616244e105">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d616244e102" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccessLevel" class="dashAnchor"></a><span class="keyword parmname">AccessLevel</span></td>
+
+       <td class="entry" headers="d616244e105" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Level of access that the User or Group has to the
+            ProfileSkill. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/All" class="dashAnchor"></a>
+<span class="keyword parmname">All</span> (This value is not valid for <samp class="codeph nolang">create()</samp> or
+              <samp class="codeph nolang">update()</samp> calls.)</li>
+
+           </ul>
+<p class="p">This value must be set to an access level that is higher than the
+            organization’s default access level for ProfileSkill objects.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d616244e102" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d616244e105" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the parent object, if any.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d616244e102" data-title="Field Name"><a name="//apple_ref/cpp/Field/RowCause" class="dashAnchor"></a><span class="keyword parmname">RowCause</span></td>
+
+       <td class="entry" headers="d616244e105" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Reason that this sharing entry exists. </dd>
+
+          <dd class="dd">You can create a value for this field in API versions
+                32.0 and later with the correct organization-wide sharing settings.</dd>
+
+          <dd class="dd">Values may include:<ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Manual</samp>—The User or Group has
+             access because a user with “All” access manually shared the ProfileSkill with them.</li>
+
+            <li class="li">
+<samp class="codeph nolang">Owner</samp>—The User is the
+             owner of the ProfileSkill or is in a role above the ProfileSkill owner in the role hierarchy.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d616244e102" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserOrGroupId" class="dashAnchor"></a><span class="keyword parmname">UserOrGroupId</span></td>
+
+       <td class="entry" headers="d616244e105" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User or Group
+           that has been given access to the ProfileSkill.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">This object is read only. It is visible
+because of constraints to the ProfileSkill object, but it is ignored and does not control which users
+and groups can view and edit ProfileSkill records owned by other users.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkThanks | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkThanks"><!-- --></a><h1 class="helpHead1"> 			<span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkThanks</span> 		</h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the source and message of a thanks post.</span></div>
+
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp; <samp class="codeph nolang">delete()</samp>,&nbsp; <samp class="codeph nolang">describeLayout()</samp>,&nbsp; <samp class="codeph nolang">describeSObjects()</samp>,&nbsp; <samp class="codeph nolang">getDeleted()</samp>,&nbsp; <samp class="codeph nolang">getUpdated()</samp>,&nbsp; <samp class="codeph nolang">query()</samp>, &nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp; <samp class="codeph nolang">undelete()</samp>,&nbsp; <samp class="codeph nolang">update()</samp>,&nbsp; <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Additional Considerations and Related Objects</h2>
+<p class="p">WorkBadge is a lookup to WorkThanks. Each WorkBadge record must derive a SourceId from WorkThanks.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d809763e133">Field Name</th>
+
+<th class="featureTableHeader  " id="d809763e136">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d809763e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname">FeedItemId</span></td>
+
+							<td class="entry" headers="d809763e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">ID of the FeedItem related to the thanks badge.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+<tr>
+<td class="entry" headers="d809763e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/GiverId" class="dashAnchor"></a><span class="keyword parmname">GiverId</span></td>
+
+<td class="entry" headers="d809763e136" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Salesforce user ID for the giver of the Thanks record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d809763e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Message" class="dashAnchor"></a><span class="keyword parmname">Message</span></td>
+
+<td class="entry" headers="d809763e136" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Message associated with the Thanks record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d809763e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+<td class="entry" headers="d809763e136" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> that this WorkThanks is associated with. This field is
+            available only if Salesforce Communities is enabled
+            in your organization.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d809763e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+<td class="entry" headers="d809763e136" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Salesforce user ID for the owner of the badge record (typically
+the same user as the giver of the record).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

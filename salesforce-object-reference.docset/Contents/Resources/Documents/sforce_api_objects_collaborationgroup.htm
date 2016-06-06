@@ -1,0 +1,884 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CollaborationGroup | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_collaborationgroup"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CollaborationGroup</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="collabgroup_defn"><a name="collabgroup_defn"><!-- --></a>Represents a Chatter group. This object is
+    available in API version 19.0 and
+    later.</span></span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<div class="p">
+<p class="p">The visibility of information in groups depends on
+    the type of group and the user’s permissions. </p>
+<ul class="ul bulletList">
+    <li class="li">
+<strong class="ph b">Members</strong>: Any user with the “Create and Own New Chatter Groups” permission
+     can create public, private, and unlisted groups, including in any communities they
+     belong to.</li>
+
+    <li class="li">
+<strong class="ph b">Owners and managers</strong>: Users can modify group details for any group they own or manage.
+     Owners can also delete groups they own.</li>
+
+    <li class="li">
+<strong class="ph b">Nonmembers</strong>: These user permissions allow group access regardless of group membership. <ul class="ul bulletList">
+      <li class="li">“View All Data”—Allows users to view all public and private groups across their
+       organization and its communities. Users
+       with this permission can’t view unlisted group information, unless they have the “Modify
+       Unlisted Groups” permission as well.</li>
+
+      <li class="li">“Modify All Data”—Allows users to view, modify, and delete all public and private
+       groups across their organization and its communities. Users
+       with this permission can’t view or modify unlisted group information, unless they have the
+       “Manage Unlisted Groups” permission as well.</li>
+
+      <li class="li">“Create and Customize Communities”—Allows
+       users to view, modify, and delete all public and private groups in communities.</li>
+
+      <li class="li">“Manage Unlisted Groups”—Allows users to search for, access, and modify any
+       unlisted group in an organization and its communities.</li>
+
+      <li class="li">“Data Export”—Allows users to export any data from Salesforce, including private and
+       unlisted group data from an organization and its communities.</li>
+
+     </ul>
+</li>
+
+    <li class="li">
+<strong class="ph b">Apex and Visualforce</strong>: Apex code runs in system mode, which means that the permissions
+     of the current user aren’t taken into account. <ul class="ul bulletList">
+      <li class="li">Visualforce pages that display groups might expose unlisted or private group data to users
+       who aren’t members.</li>
+
+      <li class="li">Because system mode disregards the user’s permissions, all users who are accessing
+       a Visualforce page that’s showing a group can act as an owner of that group.</li>
+
+      <li class="li">AppExchange apps that are written in Apex and that access all groups will expose unlisted
+       groups to users who aren’t members.</li>
+
+     </ul>
+</li>
+
+   </ul>
+To limit and manage access to the unlisted and private groups in your organization:
+   <ul class="ul bulletList">
+    <li class="li">Explicitly filter out unlisted and private group information from SOQL queries in all Apex
+     code.</li>
+
+    <li class="li">Use permission sets, profile-level permissions, and sharing checks in your code to further
+     limit group access.</li>
+
+    <li class="li">Use Apex triggers on the CollaborationGroup
+     object to monitor and manage the creation of groups. In Setup, enter <kbd class="ph userinput">Group
+      Triggers</kbd> in the <span class="keyword parmname">Quick Find</span> box, then select <strong class="ph uicontrol">Group
+      Triggers</strong> to add triggers.</li>
+
+   </ul>
+</div>
+</div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d225358e229">Field</th>
+
+       <th class="featureTableHeader  " id="d225358e232">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/AnnouncementId" class="dashAnchor"></a><span class="keyword parmname" id="announcement_id_field"><a name="announcement_id_field"><!-- --></a>AnnouncementId</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Contains the ID of the Announcement last associated with the group. This field is available in API version 30.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/BannerPhotoUrl" class="dashAnchor"></a><span class="keyword parmname" id="banner_photo_url"><a name="banner_photo_url"><!-- --></a>BannerPhotoUrl</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The URL for the group's banner photo.<p class="p">The
+             URL is updated every time a photo is uploaded and reflects the most recent photo. The
+             URL returned for an older photo is not guaranteed to return a photo if a newer photo
+             has been uploaded. You should always query this field for the URL of the most recent
+             photo.</p>
+<p class="p">This field is available in API version 36.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/CanHaveGuests" class="dashAnchor"></a><span class="keyword parmname" id="canhaveguests_field"><a name="canhaveguests_field"><!-- --></a>CanHaveGuests</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If set to <samp class="codeph nolang">true</samp>, indicates that a group allows customers. Chatter customers are users outside your company's email domains who can only see
+groups they're invited to and interact with members of those groups<span class="ph">; they can't see any Salesforce information</span>.<p class="p">This field is available starting in API version 23.0, but groups
+            that allow customers are
+            accessible from earlier API
+            versions. However, when accessed from earlier API versions, groups that
+            allow customers
+            aren't distinguishable from private groups. We strongly recommend that you upgrade to
+            the latest API version. If
+            you must use an earlier version, name groups that allow customers to
+            indicate that they include customers.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/CollaborationType" class="dashAnchor"></a><span class="keyword parmname">CollaborationType</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of Chatter group. Available values are:<ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Public</samp>—Anyone can see and post updates.
+             Anyone can join a public group.</li>
+
+            <li class="li">
+<samp class="codeph nolang">Private</samp>—Only members can see the group
+             feed and post updates. Non-members can only see the group name and a few other details
+             in list views, search, and on the group page. The group's owner or managers must add
+             members who request to join the group.</li>
+
+            <li class="li">
+<samp class="codeph nolang">Unlisted</samp>—Only members and users with the
+             “Manage Unlisted Groups” permission can see the group and post updates. Other users
+             can’t access the group or see it in lists, search, and feeds. </li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Description of the group.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/FullPhotoUrl" class="dashAnchor"></a><span class="keyword parmname" id="field_FullPhotoUrl"><a name="field_FullPhotoUrl"><!-- --></a>FullPhotoUrl</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="field_FullPhotoUrl_desc"><a name="field_FullPhotoUrl_desc"><!-- --></a>The URL for the group's profile photo.</span><p class="p">The
+             URL is updated every time a photo is uploaded and reflects the most recent photo. The
+             URL returned for an older photo is not guaranteed to return a photo if a newer photo
+             has been uploaded. You should always query this field for the URL of the most recent
+             photo.</p>
+<p class="p">This field is available in API version 20.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/GroupEmail" class="dashAnchor"></a><span class="keyword parmname" id="groupemail"><a name="groupemail"><!-- --></a>GroupEmail</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="field_groupemail_desc"><a name="field_groupemail_desc"><!-- --></a>The email address for posting to the group. For private
+            groups, only visible to members and users with “Modify All Data” or
+            “View All Data” permissions.</span><p class="p">This field is available in API version 29.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/HasPrivateFieldsAccess" class="dashAnchor"></a><span class="keyword parmname" id="hasprivatefieldaccess"><a name="hasprivatefieldaccess"><!-- --></a>HasPrivateFieldsAccess</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="hasprivatefieldaccess_desc"><a name="//apple_ref/cpp/Field/InformationTitle" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/InformationBody" class="dashAnchor"></a><a name="hasprivatefieldaccess_desc"><!-- --></a>If set to <samp class="codeph nolang">true</samp>, indicates that a user can see the <span class="keyword parmname">InformationBody</span> and <span class="keyword parmname">InformationTitle</span> fields in a private
+            group. This field is set to <samp class="codeph nolang">true</samp> for members of a
+            private group and users with “Modify All Data” or “View All
+            Data” permissions.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/InformationBody" class="dashAnchor"></a><span class="keyword parmname" id="informationbody"><a name="informationbody"><!-- --></a>InformationBody</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="informationbody_desc"><a name="informationbody_desc"><!-- --></a>The text of the Information section. For private groups,
+            only visible to members and users with “Modify All Data” or “View
+            All Data” permissions.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/InformationTitle" class="dashAnchor"></a><span class="keyword parmname" id="informationtitle"><a name="informationtitle"><!-- --></a>InformationTitle</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="informationtitle_desc"><a name="informationtitle_desc"><!-- --></a>The title of the Information section. For private
+            groups, only visible to members and users with “Modify All Data” or
+            “View All Data” permissions.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/IsArchived" class="dashAnchor"></a><span class="keyword parmname" id="group_is_archived"><a name="group_is_archived"><!-- --></a>IsArchived</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the group is archived (<samp class="codeph nolang">true</samp>) or
+           not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/IsAutoArchiveDisabled" class="dashAnchor"></a><span class="keyword parmname" id="group_is_autoarchive_disabled"><a name="group_is_autoarchive_disabled"><!-- --></a>IsAutoArchiveDisabled</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether automatic archiving is disabled for the group (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/IsBroadcast" class="dashAnchor"></a><span class="keyword parmname" id="group_is_broadcast"><a name="group_is_broadcast"><!-- --></a>IsBroadcast</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the group is a broadcast group (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).<p class="p">This field is
+            available in API version
+            36.0 and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/LastFeedModifiedDate" class="dashAnchor"></a><span class="keyword parmname" id="group_lastactivity"><a name="group_lastactivity"><!-- --></a>LastFeedModifiedDate</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date of the last post or comment on the group.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/MediumPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">MediumPhotoUrl</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+          <dd class="dd">Nillable</dd>
+
+          <dd class="dd">Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The URL for the larger, cropped photo size.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/MemberCount" class="dashAnchor"></a><span class="keyword parmname">MemberCount</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of members in the group.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Name of the group. Group names must be unique across public and private groups.
+           Unlisted groups don’t require unique names.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><span class="ph" id="NetworkID"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><a name="NetworkID"><!-- --></a><span class="keyword parmname">NetworkId</span></span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> that this group is part of. <span class="ph" id="networks_field_avail_pilot"><a name="networks_field_avail_pilot"><!-- --></a>This field is
+            available only if Salesforce Communities is enabled
+            in your organization.</span><p class="p"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a>You can only add a <span class="keyword parmname">NetworkId</span> when creating a group. You
+            can’t change or add a <span class="keyword parmname">NetworkId</span> for an existing group. <span class="ph" id="networks_field_avail_version"><a name="networks_field_avail_version"><!-- --></a>This field is available in API version 26.0 and
+             later.</span></p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname" id="collabgroup_ownerid"><a name="collabgroup_ownerid"><!-- --></a>OwnerId</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>ID of the owner of the group. Only the current group owner or people with the
+           “Modify All Data” permission can update the <span class="keyword parmname">OwnerId</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d225358e229" data-title="Field"><a name="//apple_ref/cpp/Field/SmallPhotoUrl" class="dashAnchor"></a><span class="keyword parmname" id="field_SmallPhotoUrl"><a name="field_SmallPhotoUrl"><!-- --></a>SmallPhotoUrl</span></td>
+
+       <td class="entry" headers="d225358e232" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="field_SmallPhotoUrl_desc"><a name="field_SmallPhotoUrl_desc"><!-- --></a>The URL for a thumbnail of the group's profile
+            photo.</span><p class="p">The
+             URL is updated every time a photo is uploaded and reflects the most recent photo. The
+             URL returned for an older photo is not guaranteed to return a photo if a newer photo
+             has been uploaded. You should always query this field for the URL of the most recent
+             photo.</p>
+<p class="p">This field is available in API version 20.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">
+<p class="p">Use this object to create, edit, or delete groups in an
+    organization or in a community. Deleting a group permanently deletes all posts and comments to
+    the group. It also deletes all files and links posted to the group and removes the files from
+    other locations where they were shared.</p>
+<p class="p">As a Chatter group member, you can post
+    to the group using the CollaborationGroupFeed object. As a Chatter group
+    owner or manager, you can add or remove group members using the CollaborationGroupMember object, post announcements to the group using the Announcement
+    object, and accept or decline requests to join private groups using the CollaborationGroupMemberRequest object. Additionally, the group owner, manager, or your Salesforce system administrator can invite
+    people to join the group using the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationinvitation.htm" title="Represents an invitation to join Chatter, either directly or through a group. This object is available in API version 21.0 and later.">CollaborationInvitation</a> object.</p>
+<span class="ph" id="collabgroup_admin_invite"><a name="collabgroup_admin_invite"><!-- --></a>The Salesforce system administrator
+    doesn’t need to be a member of the group in order to send invitations using the API.</span>
+</div>
+</div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupfeed.htm" title="Represents a single feed item on a Chatter group feed. A group feed shows posts and comments about the group. This object is available in API version 19.0 and later.">CollaborationGroupFeed</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupmember.htm" title="Represents a member of a Chatter group. This object is available in API version 19.0 and later.">CollaborationGroupMember</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupmemberrequest.htm" title="Represents a request to join a private Chatter group. This object is available in API version 21.0 and later.">CollaborationGroupMemberRequest</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

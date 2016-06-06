@@ -1,0 +1,450 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ExternalDataSource | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_externaldatasource"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ExternalDataSource</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an external data source, which defines connection details
+      for integration with data and content that are stored outside the Salesforce org.</span>
+    This object is available in API version 27.0 and later.</div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d405222e97">Field Name</th>
+
+              <th class="featureTableHeader  " id="d405222e100">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/CustomConfiguration" class="dashAnchor"></a><span class="keyword parmname">CustomConfiguration</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">A JSON-encoded configuration string that defines parameters specific to the
+                      type of external data source.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/Endpoint" class="dashAnchor"></a><span class="keyword parmname">Endpoint</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The URL of the
+                                            external system, or if that URL is defined in a named
+                                            credential, the named credential URL.</dd>
+
+                    <dd class="dd">A named
+                    credential URL contains the scheme <samp class="codeph nolang">callout:</samp>, the name of the named credential, and an optional path. For
+                    example: <samp class="codeph nolang">callout:</samp><var class="keyword varname">My_Named_Credential</var><samp class="codeph nolang">/</samp><var class="keyword varname">some_path</var>.
+                      You can append a query string to a
+                    named credential URL. Use a question mark (?) as the separator between the named credential URL and the
+                    query string. For example: <samp class="codeph nolang">callout:</samp><var class="keyword varname">My_Named_Credential</var><samp class="codeph nolang">/</samp><var class="keyword varname">some_path</var><samp class="codeph nolang">?format=json</samp>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/isWritable" class="dashAnchor"></a><span class="keyword parmname">isWritable</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create, Filter, Group,
+                        Query, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">Lets the Force.com
+                                    platform and users in this org create, update, and delete
+                                    records for external objects associated with the external data
+                                    source. The external object data is stored outside the org. By
+                                    default, external objects are read only.</p>
+
+                      <p class="p">Available only for Salesforce Connect external data sources. Writable external
+                        objects aren’t supported with the cross-org adapter for Salesforce Connect.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a>The language of the <span class="keyword parmname">MasterLabel</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname" id="MasterLabel_field"><a name="MasterLabel_field"><!-- --></a>MasterLabel</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Master label for the external data source. This internal label doesn’t get
+                      translated.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrincipalType" class="dashAnchor"></a><span class="keyword parmname">PrincipalType</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Identity Type" class="dashAnchor"></a>Specifies whether the org uses one set (<samp class="codeph nolang">NamedUser</samp>), multiple sets (<samp class="codeph nolang">PerUser</samp>), or no (<samp class="codeph nolang">Anonymous</samp>)
+                      credentials to access the external system. Each set of credentials corresponds
+                      to a login account on the external system. Corresponds to <span class="keyword parmname">Identity Type</span> in the user interface.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/Protocol" class="dashAnchor"></a><span class="keyword parmname">Protocol</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether to use OAuth, password authentication, or no
+                      authentication to access the external system.</dd>
+
+                    <dd class="dd">Some types of external data sources support only one value.<ul class="ul bulletList">
+                        <li class="li">For cloud-based Files Connect
+                          external systems, select <strong class="ph uicontrol">Oauth 2.0</strong>.</li>
+
+                        <li class="li">For on-premises systems, select <strong class="ph uicontrol">Password
+                            Authentication</strong>.</li>
+
+                        <li class="li">For Simple URL data sources, select <strong class="ph uicontrol">No
+                            Authentication</strong>.</li>
+
+                      </ul>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/Repository" class="dashAnchor"></a><span class="keyword parmname">Repository</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Used for SharePoint Online. An optional name of the repository in the data
+                      source. Not applicable to all data source types.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            
+            <tr>
+              <td class="entry" headers="d405222e97" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+              <td class="entry" headers="d405222e100" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies the adapter that connects to the external system.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+      
+      <p class="p">Define an external data source to connect to data or content that’s stored outside the Salesforce org. Then create external
+        objects, which map to the external system’s data and behave similarly to custom objects.</p>
+
+    </div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_externaldatauserauth.htm" title="Stores authentication settings for a Salesforce user to access an external system. The external system must be defined in an external data source or a named credential that’s configured to use per-user authentication. This object is available in API version 27.0 and later.">ExternalDataUserAuth</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_namedcredential.htm" title="Represents a named credential, which specifies the URL of a callout endpoint and its required authentication parameters in one definition. A named credential can be specified as an endpoint to simplify the setup of authenticated callouts. This object is available in API version 33.0 and later.">NamedCredential</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

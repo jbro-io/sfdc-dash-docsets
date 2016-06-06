@@ -1,0 +1,1378 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkOrder | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkOrder"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkOrder</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="TBD"><a name="TBD"><!-- --></a>Represents a task or series of tasks to be performed,
+				typically in field service. This object is available in API version 36.0 and
+				later.</span></span></div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">Work orders must be enabled in your organization. Work orders are available in Enterprise,
+				Performance, Unlimited, and Developer Editions with the Service Cloud.</p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d791306e133">Field Name</th>
+
+								<th class="featureTableHeader  " id="d791306e136">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The account associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a><span class="keyword parmname">Address</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">address</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The compound form of the address where the work order is
+											completed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/AssetId" class="dashAnchor"></a><span class="keyword parmname">AssetId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The asset associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/BusinessHoursId" class="dashAnchor"></a><span class="keyword parmname">BusinessHoursId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The business hours associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/CaseId" class="dashAnchor"></a><span class="keyword parmname">CaseId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The case associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The city where the work order is completed. Maximum
+											length is 40 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a><span class="keyword parmname">ContactId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The contact associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The country where the work order is completed. Maximum
+											length is 80 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Currency ISO
+												Code" class="dashAnchor"></a>Available only for orgs with the multicurrency feature enabled. Contains the ISO code
+											for any currency allowed by the organization. The label
+											in the user interface is <span class="keyword parmname">Currency ISO
+												Code</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Nillable, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The description of the work order. Try to include the
+											steps needed to change the work order’s status to
+											Completed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><span class="keyword parmname">Discount</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">percent</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The weighted average of the discounts on all
+											line items in the work order. It can be any positive
+											number up to 100. </dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/EndDate" class="dashAnchor"></a><span class="keyword parmname">EndDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date when the work order is completed. This field is
+											blank unless you set up an Apex trigger or quick action to populate it. For example,
+											you can create a quick action that sets the EndDate to
+											365 days after the StartDate.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/EntitlementId" class="dashAnchor"></a><span class="keyword parmname">EntitlementId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The entitlement associated with the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/GeocodeAccuracy" class="dashAnchor"></a><span class="keyword parmname">GeocodeAccuracy</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The level of accuracy of a location’s
+											geographical coordinates compared with its physical
+											address. Usually provided by a geocoding service based
+											on the address’s latitude and longitude
+											coordinates.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/GrandTotal" class="dashAnchor"></a><span class="keyword parmname">GrandTotal</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The total price of the work order with tax
+											added.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a><span class="keyword parmname">IsClosed</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Defaulted on create, Filter, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates whether the work order is closed (<samp class="codeph nolang">true</samp>) or open (<samp class="codeph nolang">false</samp>).</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsStopped" class="dashAnchor"></a><span class="keyword parmname">IsStopped</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Defaulted on create, Create, Filter, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates whether a milestone is paused (<samp class="codeph nolang">true</samp>) or counting down
+												(<samp class="codeph nolang">false</samp>). This
+											field is available only if <strong class="ph b">Enable stopped time and
+												actual elapsed time</strong> is selected on the
+											Entitlement Settings page.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Last Modified
+												Date" class="dashAnchor"></a>The date when the work order was last modified. Its
+											label in the user interface is <span class="keyword parmname">Last Modified
+												Date</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date when the work order was last viewed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">double</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Longitude</span> to specify the
+											precise geolocation of the address where the work order
+											is completed. Acceptable values are numbers between
+											–90 and 90 with up to 15 decimal places.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/LineItemCount" class="dashAnchor"></a><span class="keyword parmname">LineItemCount</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Line
+												Items" class="dashAnchor"></a>The number of work order line items in the work order.
+											Its label in the user interface is <span class="keyword parmname">Line
+												Items</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">double</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Latitude</span> to specify the
+											precise geolocation of the address where the work order
+											is completed. Acceptable values are numbers between
+											–180 and 180 with up to 15 decimal places.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/MilestoneStatus" class="dashAnchor"></a><span class="keyword parmname">MilestoneStatus</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the status of a milestone. This field is
+											visible if an entitlement process is applied to a work
+											order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The work order’s assigned owner.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentWorkOrderId" class="dashAnchor"></a><span class="keyword parmname">ParentWorkOrderId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The work order’s parent work order, if it has one.<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>Create a custom report to view a work
+												order’s child work orders.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The postal code where the work order is completed.
+											Maximum length is 20 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><span class="keyword parmname">Pricebook2Id</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The price book associated with the work order. Adding a
+											price book to the work order lets you assign different
+											price book entries to the work order’s line items. This
+											is only available if Product2 is enabled.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a><span class="keyword parmname">Priority</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The priority of the work order. The picklist includes
+											the following values, which can be customized:<ul class="ul bulletList">
+												<li class="li"><a name="//apple_ref/cpp/Field/Low" class="dashAnchor"></a><span class="keyword parmname">Low</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Medium" class="dashAnchor"></a><span class="keyword parmname">Medium</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/High" class="dashAnchor"></a><span class="keyword parmname">High</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Critical" class="dashAnchor"></a><span class="keyword parmname">Critical</span></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/RootWorkOrderId" class="dashAnchor"></a><span class="keyword parmname">RootWorkOrderId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">(Read only) The top-level work order in a work order
+											hierarchy. Depending on where a work order lies in the
+											hierarchy, its root could be the same as its
+												parent.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>View a work order’s child work order in
+												the Child Work Orders related list.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/ServiceContractId" class="dashAnchor"></a><span class="keyword parmname">ServiceContractId</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The service contract associated with the work
+											order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/SlaExitDate" class="dashAnchor"></a><span class="keyword parmname">SlaExitDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The time that the work order exits the entitlement process.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/SlaStartDate" class="dashAnchor"></a><span class="keyword parmname">SlaStartDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Update, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The time that the work order enters the entitlement process. You can update or reset
+											the time if you have “Edit” permission on
+											work orders.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a><span class="keyword parmname">StartDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The date when the work order goes into effect. This
+											field is blank unless you set up an Apex trigger or quick action to populate it. For example,
+											you can create a quick action that sets the StartDate to
+											the date when the Status changes to In Progress.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The state where the work order is completed. Maximum
+											length is 80 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The status of the work order. The picklist includes the
+											following values, which can be customized:<ul class="ul bulletList">
+												<li class="li"><a name="//apple_ref/cpp/Field/New" class="dashAnchor"></a><span class="keyword parmname">New</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Scheduled" class="dashAnchor"></a><span class="keyword parmname">Scheduled</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Assigned" class="dashAnchor"></a><span class="keyword parmname">Assigned</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/In Progress" class="dashAnchor"></a><span class="keyword parmname">In Progress</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Completed" class="dashAnchor"></a><span class="keyword parmname">Completed</span></li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/Closed" class="dashAnchor"></a><span class="keyword parmname">Closed</span></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/StopStartDate" class="dashAnchor"></a><span class="keyword parmname">StopStartDate</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Stopped
+											Since" class="dashAnchor"></a>Indicates when the milestone was paused. The label in
+											the user interface is <span class="keyword parmname">Stopped
+											Since</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The street number and name where the work order is
+											completed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Subject" class="dashAnchor"></a><span class="keyword parmname">Subject</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The subject of the work order. Try to describe the
+											nature and purpose of the job to be completed. For
+											example, “Annual On-Site Well Maintenance.” Maximum
+											length is 255 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><span class="keyword parmname">Subtotal</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The total of the work order line items’
+											subtotals before discounts and taxes are applied.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/Tax" class="dashAnchor"></a><span class="keyword parmname">Tax</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The total tax on the work order. You can enter a number
+											with or without the currency symbol and use up to two
+											decimal places. For example, in a work order whose total
+											price is $100, enter $10 to apply a 10% tax.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><span class="keyword parmname">TotalPrice</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">currency</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Read only. The total of the work order line items’
+											prices. This value has discounts applied but not
+											tax.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d791306e133" data-title="Field Name"><a name="//apple_ref/cpp/Field/WorkOrderNumber" class="dashAnchor"></a><span class="keyword parmname">WorkOrderNumber</span></td>
+
+							<td class="entry" headers="d791306e136" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">An eight-digit, auto-generated number that identifies
+											the work order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+					</table></div>
+</div>
+
+			<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">A work order can be a child record of accounts, assets, cases, contacts,
+				entitlements, service contracts, and other work orders. We recommend adding work
+				order line items to the work order to break the main task into smaller subtasks.</p>
+
+		</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FeedTrackedChange | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_feedtrackedchange"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FeedTrackedChange</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="feed_item_defn"><a name="feed_item_defn"><!-- --></a>Represents an individual field change or set of
+    field changes.</span> A FeedTrackedChange is a
+   child object of a record feed, such as AccountFeed This
+   object is available in API version
+   18.0 and later.</span>.</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d418864e115">Field</th>
+
+<th class="featureTableHeader  " id="d418864e118">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/FieldName" class="dashAnchor"></a>Available only for organizations with the multicurrency feature
+enabled. Contains the ISO currency code for the field, if <span class="keyword parmname">FieldName</span> is a currency field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname" id="field_FeedId"><a name="field_FeedId"><!-- --></a>FeedItemId</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Group, Sort, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the parent feed that tracks the field change.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/FieldName" class="dashAnchor"></a><span class="keyword parmname" id="field_FieldName"><a name="field_FieldName"><!-- --></a>FieldName</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the field that was changed.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This field also tracks
+other events that are not related to an individual field for a parent
+feed. <span class="ph" id="special_events_tracked"><a name="special_events_tracked"><!-- --></a>These events occur as the parent
+record advances through its pipeline. For example, a value of <samp class="codeph nolang">leadConverted</samp> indicates that a lead has
+been converted to an opportunity.</span> For a full list of values,
+see <a class="xref" href="#special_events_title">Tracking of Special
+Events</a>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/NewValue" class="dashAnchor"></a><span class="keyword parmname" id="field_NewValue"><a name="field_NewValue"><!-- --></a>NewValue</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">anyType</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The new value of the field that was changed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/OldCurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">OldCurrencyIsoCode</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/FieldName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/OldValue" class="dashAnchor"></a>Available only for organizations with the multicurrency feature
+enabled. Contains the ISO currency code for the <span class="keyword parmname">OldValue</span> field, if <span class="keyword parmname">FieldName</span> is a currency field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d418864e115" data-title="Field"><a name="//apple_ref/cpp/Field/OldValue" class="dashAnchor"></a><span class="keyword parmname" id="field_OldValue"><a name="field_OldValue"><!-- --></a>OldValue</span></td>
+
+<td class="entry" headers="d418864e118" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">anyType</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The last value of the field before it was changed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p"><span class="ph" id="d257213e375-d257597e315"><a name="d257213e375-d257597e315"><!-- --></a>A user can subscribe to a record or to
+                  another user. Changes to the record and updates from the users are displayed in
+                  the Chatter feed on the user's home page, which is a useful way to stay up-to-date
+                  with other users and with changes made to records in Salesforce.</span> Feeds are
+               available in API version
+               18.0 and later. </p>
+<p class="p">If you move a custom field to the Recycle Bin, all FeedTrackedChange records
+that track historical changes to the custom field are automatically
+deleted and are not restored if the custom-field is undeleted.</p>
+<p class="p">The following sections outline the difference between standard
+feeds and custom feeds.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="title_standard_feeds"><a name="title_standard_feeds"><!-- --></a>Standard Feeds</span></h2>
+<p class="p">A standard feed is a record feed, such as AccountFeed. FeedTrackedChange records for standard feeds can only be queried via the parent
+feed object.</p>
+<p class="p">Note the following when working with standard feed
+items:</p>
+<ul class="ul bulletList">
+<li class="li">Feed items for standard feeds are read only in the API.</li>
+
+<li class="li">A FeedTrackedChange record is visible when you have read access on the record feed,
+and when the field in the FeedTrackedChange is
+visible in the field-level security settings.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="title_custom_feeds"><a name="title_custom_feeds"><!-- --></a>Custom Feeds</span></h2>
+<p class="p">If you want more control over the information provided in a record
+feed, such as AccountFeed, you can create a custom feed. A custom feed can replace or
+augment an existing record feed. For example, you might want to:</p>
+<ul class="ul bulletList">
+<li class="li">Disable the standard account record feed and use an Apex trigger to generate FeedTrackedChange records
+for the events that you want to track in the feed instead.</li>
+
+<li class="li">Augment the standard contact record feed by writing an API client
+that inserts feed items for events that are not tracked in the standard
+feed.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="special_events_title"><a name="special_events_title"><!-- --></a>Tracking of Special
+Events</span></h2>
+<p class="p">The <span class="keyword parmname">FieldName</span> field also tracks other events that are not related to an individual
+field for a parent feed. These events occur as the parent
+record advances through its pipeline. For example, a value of <samp class="codeph nolang">leadConverted</samp> indicates that a lead has
+been converted to an opportunity.</p>
+<p class="p">Valid values for the <span class="keyword parmname">FieldName</span> field for multiple objects:</p>
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">created</samp></li>
+
+<li class="li"><samp class="codeph nolang">ownerAccepted</samp></li>
+
+<li class="li"><samp class="codeph nolang">ownerAssignment</samp></li>
+
+</ul>
+<p class="p">Additional valid values for the <span class="keyword parmname">FieldName</span> field for individual objects:</p>
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Account</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">accountCreatedFromLead</samp></li>
+
+<li class="li"><samp class="codeph nolang">accountMerged</samp></li>
+
+<li class="li"><samp class="codeph nolang">accountUpdatedByLead</samp></li>
+
+<li class="li"><samp class="codeph nolang">personAccountUpdatedByLead</samp></li>
+
+</ul>
+</dd>
+
+
+
+<dt class="dt dlterm">Case</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">closed</samp></li>
+
+<li class="li"><samp class="codeph nolang">ownerEscalated</samp></li>
+
+</ul>
+</dd>
+
+
+
+<dt class="dt dlterm">Contact</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">contactCreatedFromLead</samp></li>
+
+<li class="li"><samp class="codeph nolang">contactMerged</samp></li>
+
+<li class="li"><samp class="codeph nolang">contactUpdatedByLead</samp></li>
+
+</ul>
+</dd>
+
+
+
+<dt class="dt dlterm">Contract</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">contractActivation</samp></li>
+
+<li class="li"><samp class="codeph nolang">contractApproval</samp></li>
+
+<li class="li"><samp class="codeph nolang">contractConversion</samp></li>
+
+<li class="li"><samp class="codeph nolang">contractExpiration</samp></li>
+
+<li class="li"><samp class="codeph nolang">contractTermination</samp></li>
+
+</ul>
+</dd>
+
+
+
+<dt class="dt dlterm">Lead</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">leadConverted</samp></li>
+
+<li class="li"><samp class="codeph nolang">leadMerged</samp></li>
+
+</ul>
+</dd>
+
+
+
+<dt class="dt dlterm">Opportunity</dt>
+
+<dd class="dd">
+<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">opportunityCreatedFromLead</samp></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_newsfeed.htm" title="Represents a single feed item on a user's home tab. A Chatter feed shows recent changes to records that the user is following.">NewsFeed</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_userprofilefeed.htm" title="Represents a user profile feed, which tracks all actions by a user on records that can be tracked in a feed. This feed is displayed on the user profile page.">UserProfileFeed</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

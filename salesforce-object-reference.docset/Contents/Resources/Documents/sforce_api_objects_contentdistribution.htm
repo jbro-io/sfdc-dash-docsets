@@ -1,0 +1,706 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContentDistribution | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contentdistribution"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContentDistribution</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents information about sharing a document externally. This
+			object is available in API
+			version 32.0 and later.</span></div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">undelete()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<a name="SpecialAccessRulesList"><!-- --></a><ul class="ul bulletList" id="SpecialAccessRulesList">
+				<li class="li">Salesforce CRM Content  must be enabled to query
+					shared documents. To query content deliveries, content deliveries must be
+					enabled.</li>
+
+				<li class="li">Users (including users with the “View All Data” permission) can query only
+						the files that they have access to. If the file is managed by a Content
+						Library, the user must have “Deliver Content” enabled in the
+						library permission definition and be a member of the library. If the file
+						isn’t managed by a Content Library, the user must have the
+						“Enable Creation of Content Deliveries for Salesforce Files”
+						permission.</li>
+
+				<li class="li">Users can query the <span class="keyword parmname">DistributionPublicUrl</span> and
+						<span class="keyword parmname">Password</span> fields only if they are the file owner, if the
+					file is shared with them, or if the <span class="keyword parmname">RelatedRecordId</span>
+					specifies a record that the users can access.</li>
+
+				<li class="li">If the shared document is deleted, the delete cascades to any associated ContentDistribution. The ContentDistribution is still
+					queryable by using the <samp class="codeph nolang">QueryAll</samp> verb.</li>
+
+				<li class="li">If the shared document is archived, the only fields that users can edit are
+						<span class="keyword parmname">ExpiryDate</span> and
+					<span class="keyword parmname">PreferencesExpires</span>.</li>
+
+				<li class="li">Customer Portal users can’t access this object.</li>
+
+				<li class="li">Chatter Free users can’t access this object.</li>
+
+			</ul>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d249831e170">Field Name</th>
+
+							<th class="featureTableHeader  " id="d249831e173">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentDocumentId" class="dashAnchor"></a><span class="keyword parmname">ContentDocumentId</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the shared document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentVersionId" class="dashAnchor"></a><span class="keyword parmname">ContentVersionId</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the shared document version.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DistributionPublicUrl" class="dashAnchor"></a><span class="keyword parmname">DistributionPublicUrl</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">URL of the link to the shared document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExpiryDate" class="dashAnchor"></a><span class="keyword parmname" id="ExpiryDateField"><a name="ExpiryDateField"><!-- --></a>ExpiryDate</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Date when the shared document becomes inaccessible.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/FirstViewDate" class="dashAnchor"></a><span class="keyword parmname">FirstViewDate</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Date when the shared document is first viewed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastViewDate" class="dashAnchor"></a><span class="keyword parmname">LastViewDate</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Date when the shared document was last viewed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Name of the content delivery.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the user who owns the shared document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Password" class="dashAnchor"></a><span class="keyword parmname" id="PasswordField"><a name="PasswordField"><!-- --></a>Password</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">A password that allows access to a shared document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesAllowOriginalDownload" class="dashAnchor"></a><span class="keyword parmname">PreferencesAllowOriginalDownload</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, the
+											shared document can be downloaded as the file type that
+											it was uploaded as.<p class="p">When <samp class="codeph nolang">false</samp>, download availability depends on
+												whether a preview of the file exists. If a preview
+												exists, the file can’t be downloaded. If a
+												preview doesn’t exist, the file can still be
+												downloaded.</p>
+<p class="p">If the shared document is a link,
+												it can’t be downloaded.</p>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesAllowPDFDownload" class="dashAnchor"></a><span class="keyword parmname">PreferencesAllowPDFDownload</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, the
+											shared document can be downloaded as a PDF if the
+											original file type is PDF or if a PDF preview has been
+											generated.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesAllowViewInBrowser" class="dashAnchor"></a><span class="keyword parmname">PreferencesAllowViewInBrowser</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, a
+											preview of the shared document can be viewed in a Web
+											browser.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesExpires" class="dashAnchor"></a><span class="keyword parmname">PreferencesExpires</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/ExpiryDate" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, access
+											to the shared document expires on the date that’s
+											specified by <span class="keyword parmname">ExpiryDate</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesLinkLatestVersion" class="dashAnchor"></a><span class="keyword parmname">PreferencesLinkLatestVersion</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, users
+											see the most recent version of a shared document. When
+												<samp class="codeph nolang">false</samp>, users
+											see the version of the document that’s shared, even if
+											it isn’t the most recent version.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesNotifyOnVisit" class="dashAnchor"></a><span class="keyword parmname">PreferencesNotifyOnVisit</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, the
+											owner of the shared document is emailed the first time
+											that someone views or downloads the shared
+											document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesNotifyRndtnComplete" class="dashAnchor"></a><span class="keyword parmname">PreferencesNotifyRndtnComplete</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When <samp class="codeph nolang">true</samp>, the
+											owner of the shared document is emailed when renditions
+											of the shared document that can be previewed in a Web
+											browser are generated.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesPasswordRequired" class="dashAnchor"></a><span class="keyword parmname">PreferencesPasswordRequired</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Password" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, a
+											password, specified by <span class="keyword parmname">Password</span>, is required to access the shared document.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/RelatedRecordId" class="dashAnchor"></a><span class="keyword parmname">RelatedRecordId</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the record, such as an Account, Campaign, or Case,
+											that the shared document is related to.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d249831e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/ViewCount" class="dashAnchor"></a><span class="keyword parmname">ViewCount</span></td>
+
+							<td class="entry" headers="d249831e173" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The number of times that the shared document has been
+											viewed.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Use this object to create, update, delete, or query information about a document shared
+				externally via a link or via Salesforce CRM Content delivery.</p>
+
+			<p class="p">The ContentDistribution object supports triggers before and after these operations:
+				insert, update, delete. It supports triggers after undelete.</p>
+
+		</div>
+
+		<div class="example">
+<h2 class="sectiontitle">Example</h2>
+<div class="exampleblock"><div class="p">The VP of Marketing wants file authors to specify whether their files can be shared with
+			external people using content delivery. He also wants some files to have a password. You
+			can add a custom field <span class="keyword parmname">DeliveryPolicy</span> on the ContentVersion object.
+			Make the custom field a picklist with the values, <samp class="codeph nolang">Allowed</samp>, <samp class="codeph nolang">Blocked</samp>, and <samp class="codeph nolang">Password required</samp>. Add the field to the ContentVersion
+			layout so that the user can set the delivery policy per file. Then, add an insert
+			trigger for the ContentDistribution object to enforce the rules based on the delivery
+			policy set in the file.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>The <span class="keyword parmname">ContentVersionId</span> for
+					<span class="keyword parmname">ContentDistribution</span> must be unique.</p>
+</div>
+</div></div></div></div>
+<div class="p">This trigger
+				for the ContentDistribution object enforces the delivery policy rules for each
+				file:<div class="codeSection apex_code"><div id="highlighter_910726" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_910726_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_910726" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">trigger deliveryPolicy on ContentDistribution (before </code><code class="apexKey">insert</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">for</code> <code class="plain">(ContentDistribution cd : trigger.</code><code class="apexKey">new</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">versionId = DeliveryPolicyHelper.getContentVersionId(cd);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ContentVersion version = [</code><code class="apexKey">select</code> <code class="apexObjects">DeliveryPolicy__c</code> <code class="apexKey">from</code> <code class="plain">ContentVersion </code><code class="apexKey">where</code> <code class="plain">Id = :versionId];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">policy = version.</code><code class="apexObjects">DeliveryPolicy__c</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(policy.equals(</code><code class="apexString">'Blocked'</code><code class="plain">)) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">cd.addError(</code><code class="apexString">'This file is not allowed to be delivered.'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">else</code> <code class="apexKey">if</code> <code class="plain">(policy.equals(</code><code class="apexString">'Password required'</code><code class="plain">)){</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(!DeliveryPolicyHelper.requirePassword(cd)) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">cd.addError(</code><code class="apexString">'To deliver this file, set a password.'</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+			The trigger calls this helper
+			class:<div class="codeSection apex_code"><div id="highlighter_728319" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_728319_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_728319" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">public</code> <code class="apexKey">class</code> <code class="plain">DeliveryPolicyHelper {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">String</code> <code class="plain">getContentVersionId(ContentDistribution cd) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(cd.ContentVersionId != </code><code class="apexKey">null</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="plain">cd.ContentVersionId;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">String</code> <code class="plain">versionId = [</code><code class="apexKey">select</code> <code class="plain">LatestPublishedVersionId </code><code class="apexKey">from</code> <code class="plain">ContentDocument </code><code class="apexKey">where</code> <code class="plain">Id = :cd.ContentDocumentId].</code><code class="apexKey">get</code><code class="plain">(</code><code class="value">0</code><code class="plain">).LatestPublishedVersionId;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="plain">versionId;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">boolean</code> <code class="plain">requirePassword(ContentDistribution cd) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code> <code class="plain">cd.PreferencesPasswordRequired;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+
+		</div></div>
+</div>
+
+		<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p>Apex has a per organization limit of 10 concurrent requests that last
+			longer than 5 seconds. A trigger that uploads files can easily hit this limit.</p>
+</div>
+</div></div></div></div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

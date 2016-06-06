@@ -1,0 +1,428 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ApexTestResult | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_apextestresult"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ApexTestResult</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the result of an Apex test method execution.</span>
+  This object is available in API version 23.0 and
+  later.</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d159131e99">Field Name</th>
+
+<th class="featureTableHeader  " id="d159131e102">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/ApexClassId" class="dashAnchor"></a><span class="keyword parmname">ApexClassId</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The Apex class whose
+            test methods were executed.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/ApexLogId" class="dashAnchor"></a><span class="keyword parmname">ApexLogId</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Points to the ApexLog for
+            this test method execution if debug logging is enabled; otherwise, <samp class="codeph nolang">null</samp>.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/ApexTestRunResultId" class="dashAnchor"></a><span class="keyword parmname">ApexTestRunResultId</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_apextestrunresult.htm#topic-title">ApexTestRunResult</a> that represents the entire test run.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/AsyncApexJobId" class="dashAnchor"></a><span class="keyword parmname">AsyncApexJobId</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Points to the AsyncApexJob that represents the entire test run.</p>
+
+           <p class="p">This field points to the same object as <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_apextestqueueitem.htm#ParentJobId"><samp class="codeph nolang">ApexTestQueueItem.ParentJobId</samp></a>.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/Message" class="dashAnchor"></a><span class="keyword parmname">Message</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The exception error message if a test failure occurs; otherwise, <samp class="codeph nolang">null</samp>.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/MethodName" class="dashAnchor"></a><span class="keyword parmname">MethodName</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The test method name.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/Outcome" class="dashAnchor"></a><span class="keyword parmname">Outcome</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <div class="p">The result of the test method execution. Can be one of these values:<ul class="ul bulletList">
+             <li class="li">Pass</li>
+
+             <li class="li">Fail</li>
+
+             <li class="li">CompileFail</li>
+
+             <li class="li">Skip</li>
+
+            </ul>
+</div>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/QueueItemId" class="dashAnchor"></a><span class="keyword parmname">QueueItemId</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Points to the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_apextestqueueitem.htm" title="Represents a single Apex class in the Apex job queue. This object is available in API version 23.0 and later.">ApexTestQueueItem</a> which is the class that this test method is part of.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/RunTime" class="dashAnchor"></a><span class="keyword parmname">RunTime</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The time it took the test method to run, in seconds.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/StackTrace" class="dashAnchor"></a><span class="keyword parmname">StackTrace</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The Apex stack trace
+            if the test failed; otherwise, <samp class="codeph nolang">null</samp>.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d159131e99" data-title="Field Name"><a name="//apple_ref/cpp/Field/TestTimestamp" class="dashAnchor"></a><span class="keyword parmname">TestTimestamp</span></td>
+
+       <td class="entry" headers="d159131e102" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The start time of the test method.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><span class="ph" id="Usage"><a name="Usage"><!-- --></a>You can query the fields of the <samp class="codeph nolang">ApexTestResult</samp> record that corresponds to a test method executed as part of an Apex class execution.</span></p>
+
+   <p class="p"><span class="ph" id="Usage2"><a name="Usage2"><!-- --></a>Each test method execution is represented by a single <samp class="codeph nolang">ApexTestResult</samp> record. For example, if an Apex test class contains six test
+     methods, six <samp class="codeph nolang">ApexTestResult</samp> records are created. These
+     records are in addition to the <samp class="codeph nolang">ApexTestQueueItem</samp> record
+     that represents the Apex
+     class.</span></p>
+
+   <p class="p">Each ApexTestResult record has an associated <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_apextestresultlimits.htm#topic-title">ApexTestResultLimits</a> record, which captures the Apex limits used during execution
+    of the test method.</p>
+
+  </div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

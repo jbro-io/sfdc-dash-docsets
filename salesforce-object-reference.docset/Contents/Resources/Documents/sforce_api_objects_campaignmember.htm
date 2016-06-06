@@ -1,0 +1,394 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CampaignMember | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_campaignmember"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CampaignMember</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the association between a campaign and either a lead or a
+   contact.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p">For API version
+15.0 and earlier:<samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+<p class="p">For API version
+16.0 and later: <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p">Customer Portal users can’t access this object.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d199662e126">Field</th>
+
+<th class="featureTableHeader  " id="d199662e129">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/CampaignId" class="dashAnchor"></a> <span class="keyword parmname" id="i1443868"><a name="i1443868"><!-- --></a>CampaignId</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the Campaign to which this  Lead or Contact is associated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a> <span class="keyword parmname" id="i1443898"><a name="i1443898"><!-- --></a>ContactId</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the Contact who is associated with a Campaign.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="campaign_currencyiso_desc"><a name="campaign_currencyiso_desc"><!-- --></a>Available only for organizations
+with the multicurrency feature enabled. Contains the ISO code for
+any currency allowed by the organization.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/FirstRespondedDate" class="dashAnchor"></a> <span class="keyword parmname">FirstRespondedDate</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the date on which the campaign member was first given
+a responded status.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a> <span class="keyword parmname" id="i1443942"><a name="i1443942"><!-- --></a>HasResponded</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the campaign member has responded to the campaign
+(<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Responded</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/LeadId" class="dashAnchor"></a> <span class="keyword parmname" id="i1443977"><a name="i1443977"><!-- --></a>LeadId</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable,Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the Lead who is associated with a Campaign.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1438294"><a name="i1438294"><!-- --></a>RecordTypeId</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/CampaignMemberRecordTypeId" class="dashAnchor"></a>ID of the record type assigned to this object. To change the record
+type, modify the <span class="keyword parmname">CampaignMemberRecordTypeId</span> field
+on the associated Campaign. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d199662e129" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">First and last name of the contact or lead with which the campaign member is
+           associated.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d199662e126" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a> <span class="keyword parmname" id="i1444004"><a name="i1444004"><!-- --></a>Status</span> </td>
+
+<td class="entry" headers="d199662e129" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/HasResponded" class="dashAnchor"></a>Controls the <span class="keyword parmname">HasResponded</span> flag on this object. You can't directly set the <span class="keyword parmname">HasResponded</span> flag, as it is read-only, but you can set it indirectly
+by setting this field in a create or update call. Each predefined
+value implies a <span class="keyword parmname">HasResponded</span> flag value. Each time you update this field, you implicitly
+update the <span class="keyword parmname">HasResponded</span> flag. In the Salesforce user
+interface, Marketing users can define valid status values for the <span class="keyword parmname">Status</span> picklist. They can choose one status as the default
+status. For each <span class="keyword parmname">Status</span> field value, they can
+also select which values should be counted as “Responded,”
+meaning that the <span class="keyword parmname">HasResponded</span> flag will be set to <samp class="codeph nolang">true</samp> for those values.<p class="p">40 character limit.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>When creating or
+updating campaign members, use the text value for <span class="keyword parmname">Status</span> instead of the ID from the CampaignMemberStatus object.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you are importing CampaignMember data into Salesforce and
+need to set the value for an audit field, such as <span class="keyword parmname">CreatedDate</span>, contact Salesforce. Audit fields are automatically updated during API operations
+unless you request to set these fields yourself..</p>
+</div>
+</div></div></div></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Each record has a unique ID, and must
+contain either a <span class="keyword parmname">ContactId</span> or a <span class="keyword parmname">LeadId</span>, but can't contain both. Any attempt to create a single
+record with both results in a successful insert but only the <span class="keyword parmname">ContactId</span> will be inserted. However, you can create two separate
+records on a Campaign—one for the Lead and one for the Contact.</p>
+<div class="p">Standard fields from a Contact or Lead are associated with the CampaignMember object but you can’t query them directly. To include
+a lead’s <span class="keyword parmname">Phone</span> in your query, for example,
+query the field from the Lead object.<div class="codeSection soql"><div id="highlighter_185589" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_185589_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_185589" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, (SELECT Phone FROM Lead)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM CampaignMember</code></td></tr></tbody></table></div></div></div></div>
+</div>
+<p class="p">This object is defined only
+for those organizations that have the marketing feature and valid
+marketing licenses. In addition, the object is accessible only to
+those users that are enabled as marketing users. If the organization
+does not have the marketing feature or valid marketing licenses, this
+object does not appear in the <samp class="codeph nolang">describeGlobal()</samp> call, and you can't use <samp class="codeph nolang">describeSObjects()</samp> or <samp class="codeph nolang">query()</samp> with the CampaignMember object.</p>
+<div class="p">In API version
+16.0 and later, a <samp class="codeph nolang">create()</samp> call only creates a new record; in earlier versions, a  <samp class="codeph nolang">create()</samp> call creates and updates records. The API determines
+whether a record exists with the specified <span class="keyword parmname">CampaignId</span> and either <span class="keyword parmname">ContactId</span> or <span class="keyword parmname">LeadId</span>. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Only use a <span class="keyword parmname">ContactId</span> or <span class="keyword parmname">LeadId</span>, but not both, unless you want to track lead-based campaign
+members you convert to contacts.</p>
+</div>
+</div></div></div></div>
+If the record does not exist
+for the given <span class="keyword parmname">ContactId</span> or <span class="keyword parmname">LeadId</span>, then a new record is created. If the record exists,
+an error is returned and no update is made. To update an existing
+record, specify the ID of the CampaignMember record to update.</div>
+<p class="p">In API versions
+15.0 and earlier, if you submit multiple records using a single create
+request, and if more than one record matches an existing record, only
+the first record submitted updates the existing record. If any of
+the submitted records match each other but do not match existing records,
+only the last record submitted is created.</p>
+<p class="p">The <samp class="codeph nolang">upsert()</samp> call is not supported in API version
+16.0 and later. <span class="ph" id="upsert_for_joinobjects"><a name="upsert_for_joinobjects"><!-- --></a>To use the <samp class="codeph nolang">upsert()</samp> call on this object, you must first delete all data in ID fields
+except the record ID.</span></p>
+<p class="p">To delete a record, specify the ID
+of the CampaignMember record to delete.</p>
+<p class="p">When creating or updating records,
+the <span class="keyword parmname">Status</span> field value specified in the call is verified as a valid
+status for the given Campaign:</p>
+<ul class="ul bulletList">
+<li class="li">If the specified <span class="keyword parmname">Status</span> value is a valid status, the value is updated, and the <span class="keyword parmname">HasResponded</span> field is updated to either <samp class="codeph nolang">true</samp> or <samp class="codeph nolang">false</samp>, depending
+on the <span class="keyword parmname">Status</span> value association with <span class="keyword parmname">HasResponded</span>.</li>
+
+<li class="li">If the specified <span class="keyword parmname">Status</span> value is not a valid status, the API assigns
+the default status to the <span class="keyword parmname">Status</span> field and updates the <span class="keyword parmname">HasResponded</span> field with the associated value. However, if the given Campaign does not have a default status, the API assigns
+the value specified in the call to the <span class="keyword parmname">Status</span> field, and the <span class="keyword parmname">HasResponded</span> field is set to <samp class="codeph nolang">false</samp>.</li>
+
+</ul>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_campaign.htm" title="Represents and tracks a marketing campaign, such as a direct mail promotion, webinar, or trade show.">Campaign</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_campaignmemberstatus.htm" title="One or more member status values defined for a campaign.">CampaignMemberStatus</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

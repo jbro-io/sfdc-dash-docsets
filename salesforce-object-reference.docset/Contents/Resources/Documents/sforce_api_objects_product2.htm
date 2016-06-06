@@ -1,0 +1,821 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Product2 | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_product2"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Product2</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a product that your organization sells.</span></div>
+
+<p class="p">This object has several fields that are used only for quantity
+and revenue schedules (for example, annuities). Schedules are available
+only for organizations that have enabled the products and schedules
+features. If these features aren’t enabled, the schedule fields
+don’t appear in the DescribeSObjectResult, and you can’t query, create, or update the fields.</p>
+
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><span class="ph" id="product_vs_product2"><a name="product_vs_product2"><!-- --></a>Products are represented by Product2
+    objects. The Product object is no longer available. Requests containing Product are refused, and
+    responses do not contain the Product object.</span></p>
+</div>
+</div></div></div></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d603870e130">Field</th>
+
+<th class="featureTableHeader  " id="d603870e133">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/CanUseQuantitySchedule" class="dashAnchor"></a><span class="keyword parmname" id="i1462956"><a name="i1462956"><!-- --></a>CanUseQuantitySchedule</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the product can have a quantity schedule (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Quantity Scheduling Enabled</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/CanUseRevenueSchedule" class="dashAnchor"></a><span class="keyword parmname" id="i1462975"><a name="i1462975"><!-- --></a>CanUseRevenueSchedule</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the product can have a revenue schedule (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Revenue Scheduling Enabled</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a>
+<span class="keyword parmname" id="currency_iso_code"><a name="currency_iso_code"><!-- --></a>CurrencyIsoCode</span> </td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Restricted picklist</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="field_CurrencyIsoCode_desc"><a name="field_CurrencyIsoCode_desc"><!-- --></a>Available only for organizations
+with the multicurrency feature enabled. Contains the ISO code for
+any currency allowed by the organization.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultPrice" class="dashAnchor"></a>
+<span class="keyword parmname">DefaultPrice</span> </td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The default price for this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>
+<span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A text description of this record. Label is <strong class="ph uicontrol">Product
+Description</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/Family" class="dashAnchor"></a><span class="keyword parmname">Family</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Name of the product family associated with this record. Product
+families are configured as picklists in the  user interface. To obtain
+a list of valid values, call <samp class="codeph nolang">describeSObjects()</samp> and process the DescribeSObjectResult for the values associated with the <samp class="codeph nolang">Family</samp> field. Label is <strong class="ph uicontrol">Product Family</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname" id="i1463100"><a name="i1463100"><!-- --></a>IsActive</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a>Indicates whether this record is active (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph java">false</samp>).
+Inactive Product2 records are hidden in many areas in the  user interface. You
+can change the <span class="keyword parmname">IsActive</span> flag on a Product2 object as often as necessary. Label is <strong class="ph uicontrol">Active</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+<span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle  Bin
+(<samp class="codeph java">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d603870e133" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The timestamp for when the current
+user last viewed a record related to this record.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d603870e133" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>
+<span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Default name of this record. Label is <strong class="ph uicontrol">Product
+Name</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/NumberOfQuantityInstallments" class="dashAnchor"></a><span class="keyword parmname">NumberOfQuantityInstallments</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If the product has a quantity schedule, the number of installments.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/NumberOfRevenueInstallments" class="dashAnchor"></a><span class="keyword parmname">NumberOfRevenueInstallments</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If the product has a revenue schedule, the number of installments.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/ProductCode" class="dashAnchor"></a><span class="keyword parmname">ProductCode</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Default product code for this record. The product code naming
+pattern is defined by your organization.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/QuantityInstallmentPeriod" class="dashAnchor"></a><span class="keyword parmname">QuantityInstallmentPeriod</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If the product has a quantity schedule, the amount of time covered
+by the schedule.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/QuantityScheduleType" class="dashAnchor"></a><span class="keyword parmname">QuantityScheduleType</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of the quantity schedule, if the product has one.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/RecalculateTotalPrice" class="dashAnchor"></a><span class="keyword parmname">RecalculateTotalPrice</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Quantity" class="dashAnchor"></a>Changes behavior of OpportunityLineItem calculations when a line item has child schedule rows for the <span class="keyword parmname">Quantity</span> value. When enabled, if the rollup quantity changes, then the quantity
+rollup value is multiplied against the sales price to change the total
+price.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/RevenueInstallmentPeriod" class="dashAnchor"></a><span class="keyword parmname">RevenueInstallmentPeriod</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If the product has a revenue schedule, the period of time covered
+by the schedule.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e130" data-title="Field"><a name="//apple_ref/cpp/Field/RevenueScheduleType" class="dashAnchor"></a><span class="keyword parmname">RevenueScheduleType</span></td>
+
+<td class="entry" headers="d603870e133" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of the revenue schedule, if the product has one.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Schedule Enabled Flags</h2>
+<p class="p">When enabling
+the schedules feature, organizations can decide whether to enable
+quantity schedules, revenue schedules, or both. In addition, you can
+use the API to control quantity and revenue scheduling at the product level
+via the <span class="keyword parmname">CanUseQuantitySchedule</span> and <span class="keyword parmname">CanUseRevenueSchedule</span> flags. A value of <samp class="codeph nolang">true</samp> for either flag indicates that the product and any OpportunityLineItems can have a schedule of that type. These flags can be set when
+creating or updating Product2 records.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Default Schedule Fields</h2>
+<p class="p">The remaining
+schedule fields for this object define default schedules. Default
+schedule values are used to create an OpportunityLineItemSchedule when an OpportunityLineItem is created for the Product.</p>
+<p class="p">The default schedule fields
+support the following valid values (all fields are also nillable).</p>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d603870e1346">Field</th>
+
+<th class="featureTableHeader  " id="d603870e1349">Valid Values</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">RevenueScheduleType</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Divide, Repeat</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">RevenueInstallmentPeriod</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Daily, Weekly, Monthly, Quarterly, Yearly</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">NumberOfRevenueInstallments</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Integer between 1 to 150, inclusive.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">QuantityScheduleType</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Divide, Repeat</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">QuantityInstallmentPeriod</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Daily, Weekly, Monthly, Quarterly, Yearly</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d603870e1346" data-title="Field">
+<span class="keyword parmname">NumberOfQuantityInstallments</span> </td>
+
+<td class="entry" headers="d603870e1349" data-title="Valid Values">Integer between 1 to 150, inclusive</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<p class="p">When you attempt to set the schedule fields when creating
+or updating, the API applies
+cross-field integrity checks. The integrity requirements are:</p>
+<ul class="ul bulletList">
+<li class="li">If the schedule type is nil, the installment period and number
+of installments must be nil.</li>
+
+<li class="li">If the schedule type is set to any value, then the installment
+period and number of installments must be non-nil.</li>
+
+</ul>
+<p class="p">Any create or update that fails these integrity checks is
+rejected with an error.</p>
+<p class="p">These default schedule fields, as well
+as <span class="keyword parmname">CanUseQuantitySchedule</span> and <span class="keyword parmname">CanUseRevenueSchedule</span>, are restricted picklist fields and are available only
+if the organization has the schedules feature enabled.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to define the default
+product information for your organization. This object is associated
+by reference with Pricebook2 objects via PricebookEntry objects. The same product can be represented in different price
+books as price book entries. In fact, the same product can be represented
+multiple times (as separate PricebookEntry records) in the same price book with different prices or currencies.
+A product can only have one price for a given currency within the
+same price book. To be used in custom price books, all standard prices
+must be added as price book entries to the standard price book.</p>
+<div class="p">You can query the products that have been configured for your
+organization. For example, you can allow your client application to
+obtain valid product IDs for use when configuring PricebookEntry records via the API. <span class="ph" id="prod_pbook_ul_intro"><a name="prod_pbook_ul_intro"><!-- --></a>Your client application can perform the following
+tasks on PricebookEntry objects:</span><a name="prod_and_pbook_ul"><!-- --></a><ul class="ul bulletList" id="prod_and_pbook_ul">
+<li class="li">Query</li>
+
+<li class="li">Create for the standard pricebook or custom pricebooks.</li>
+
+<li class="li">Update</li>
+
+<li class="li">Delete</li>
+
+<li class="li"> Change the <span class="keyword parmname">IsActive</span> field when creating or updating records</li>
+
+</ul>
+</div>
+<p class="p">This object is defined only for those organizations that
+have products enabled as a feature. If the organization does not have
+the products feature, this object does not appear in the <samp class="codeph nolang">describeGlobal()</samp> call, and you can’t describe or query this object.</p>
+<p class="p">If you try to delete a product via the API but
+there is an opportunity that uses that product, the delete fails.
+The workaround is to delete the product in the  user interface, which
+gives you an option to archive the product.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>On opportunities and opportunity
+products, the workflow rules, validation rules, and Apex triggers fire when an update to a child opportunity product or schedule
+causes an update to the parent record. This means your custom application
+logic is enforced when there are updates to the parent record, ensuring
+higher data quality and compliance with your organization’s
+business policies. </p>
+</div>
+</div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CollaborationInvitation | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_collaborationinvitation"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CollaborationInvitation</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="collabinvite_defn"><a name="collabinvite_defn"><!-- --></a>Represents an invitation to join Chatter, either
+                directly or through a group. This object is available in API version 21.0 and
+                later.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">Invitations are available
+if “Allow Invitations” is enabled for your organization.</p>
+<p class="p">Invitations are limited to your allowed domain(s) unless the invite
+is sent from a private group that allows customers. Allowed domains are set by the administrator.</p>
+<p class="p">Invitations
+to customers are available if “Allow Customer Invitations”
+is enabled for your organization. Users must have the “Invite Customers to Chatter” permission to send invitations to people
+outside their Chatter domain.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d232421e118">Field</th>
+
+<th class="featureTableHeader  " id="d232421e121">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/InvitedUserEmail" class="dashAnchor"></a><span class="keyword parmname" id="InvitedUserEmail"><a name="InvitedUserEmail"><!-- --></a>InvitedUserEmail</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Invited
+                                                Email" class="dashAnchor"></a>The email address for the user invited to join Chatter. Label is <span class="keyword parmname">Invited
+                                                Email</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/InvitedUserEmailNormalized" class="dashAnchor"></a><span class="keyword parmname">InvitedUserEmailNormalized</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Invited Email (Normalized)" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/InvitedUserEmail" class="dashAnchor"></a>A normalized version of the <span class="keyword parmname">InvitedUserEmail</span> entered. Label is <span class="keyword parmname">Invited Email (Normalized)</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/InviterId" class="dashAnchor"></a><span class="keyword parmname">InviterId</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The person that initiated the invitation.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/OptionalMessage" class="dashAnchor"></a><span class="keyword parmname">OptionalMessage</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An optional message from the person sending the invitation to
+the person receiving it.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Used when the email address on the invitation is different than
+the one entered when the invitee accepts the invitation.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/SharedEntityId" class="dashAnchor"></a><span class="keyword parmname" id="SharedEntityId"><a name="SharedEntityId"><!-- --></a>SharedEntityId</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the user or group associated with this invitation.<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/SharedEntityId" class="dashAnchor"></a>If the invitation is to join Chatter, the <span class="keyword parmname">SharedEntityId</span> is the ID of the User that created the invitation. The invitee will
+                                                  auto-follow the inviter.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/SharedEntityId" class="dashAnchor"></a>If the invitation is to join a group within Chatter, the <span class="keyword parmname">SharedEntityId</span> is the ID of the Chatter CollaborationGroup.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/SharedEntityId" class="dashAnchor"></a>To invite a customer, set <span class="keyword parmname">SharedEntityId</span> to the ID of the private CollaborationGroup with Allow Customers turned on.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d232421e118" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+<td class="entry" headers="d232421e121" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The status of the invitation. Possible values are:<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">Sent</samp></li>
+
+<li class="li"><samp class="codeph nolang">Accepted</samp></li>
+
+<li class="li"><samp class="codeph nolang">Canceled</samp></li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">Use this object to create or delete (cancel) invitations to join Chatter. You can either invite a
+                user to join Chatter directly or as part of a CollaborationGroup. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>To invite someone to join a CollaborationGroup, you must be either the owner or a manager of the group or a Salesforce system
+                            administrator.</p><p class="p">The Salesforce system administrator
+    doesn’t need to be a member of the group in order to send invitations using the API.</p>
+<p></p>
+</div>
+</div></div></div></div>
+When the person accepts your CollaborationGroup invitation, they join the CollaborationGroup and Chatter as well.</div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You
+can't send invitations to users of the organization the invite was
+sent from.</p>
+</div>
+</div></div></div></div>
+<p class="p">Invited users can view profiles, post
+on their feed, and join groups<span class="ph">, but can't
+see your Salesforce data or records</span>.</p>
+<p class="p">If your organization allows groups with customers, owners and managers of private groups with the “Allow Customers” setting, as well as system administrators, can use
+this object to invite customers.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Java Samples</h2>
+<p class="p">The following example shows how to send an invitation to join Chatter:</p>
+<div class="codeSection java"><div id="highlighter_775854" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_775854_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_775854" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">invitePeople(String inviterUserId, String invitedEmail) </code><code class="keyword">throws</code> <code class="plain">Exception {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">CollaborationInvitation invitation = </code><code class="keyword">new</code> <code class="plain">CollaborationInvitation();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">invitation.setSharedEntityId(inviterUserId);</code><code class="comments">//pass the userId of the inviter</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">invitation.setInvitedUserEmail(invitedEmail);</code><code class="comments">//email of the invited user</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">insert(invitation);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">The following example shows how to send an invitation
+to a customer user from a group that allows customers:</p>
+<div class="codeSection java"><div id="highlighter_651515" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_651515_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_651515" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">inviteToGroup(String GroupName, String invitedEmail) </code><code class="keyword">throws</code> <code class="plain">Exception {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">QueryResult qr = query(</code><code class="string">"select id from collaborationgroup where name = '"</code> <code class="plain">+ </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">GroupName); </code><code class="comments">//pass the group name</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">String groupId = qr.getRecords()[</code><code class="value">0</code><code class="plain">].getId();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">CollaborationInvitation invitation = </code><code class="keyword">new</code> <code class="plain">CollaborationInvitation();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">invitation.setSharedEntityId(groupId);</code><code class="comments">//pass the groupId</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">invitation.setInvitedUserEmail(invitedEmail);</code><code class="comments">//email of the invited user</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">insert(invitation);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Apex Samples</h2>
+<div class="codeSection apex_code"><div id="highlighter_651981" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_651981_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_651981" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">String</code> <code class="plain">emailAddress = </code><code class="apexString">'bob@external.com'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">CollaborationGroup chatterGroup = [</code><code class="apexKey">SELECT</code> <code class="plain">Id </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">FROM</code> <code class="plain">CollaborationGroup </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">WHERE</code> <code class="plain">Name=</code><code class="apexString">'All acme.com'</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">LIMIT </code><code class="value">1</code><code class="plain">];</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">CollaborationInvitation inv = New CollaborationInvitation();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">inv.SharedEntityId = chatterGroup.id;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="plain">inv.InvitedUserEmail = emailAddress;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="apexKey">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">Insert</code> <code class="plain">inv;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">} </code><code class="apexKey">catch</code><code class="plain">(DMLException e){</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.debug(</code><code class="apexString">'There was an error with the invite: '</code><code class="plain">+e);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

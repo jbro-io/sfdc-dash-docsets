@@ -1,0 +1,360 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ActionLinkGroupTemplate | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_actionlinkgrouptemplate"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ActionLinkGroupTemplate</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Action link templates let you reuse action link definitions and
+			package and distribute action links. An action link is a button on a feed element.
+			Clicking on an action link can take a user to another Web page, initiate a file
+			download, or invoke an API call to an external server or Salesforce. Use action links
+			to integrate Salesforce and
+			third-party services into the feed. Every action link belongs to an action link group
+			and action links within the group are mutually exclusive.</span> This object is available
+		in API version 33.0 and
+		later.</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeLayout()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p" id="ALspecialAccess"><a name="ALspecialAccess"><!-- --></a>Only users with the “Customize Application” permission can
+				modify or delete this object.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d145352e126">Field Name</th>
+
+							<th class="featureTableHeader  " id="d145352e129">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Category" class="dashAnchor"></a><span class="keyword parmname">Category</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="categoryDescr"><a name="categoryDescr"><!-- --></a>The location of the action link
+												group within the feed element. Values are:</span><ul class="ul bulletList">
+                    <li class="li">
+<samp class="codeph nolang">Primary</samp>—The action link group is
+                      displayed in the body of the feed element.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">Overflow</samp>—The action link group
+                      is displayed in the overflow menu of the feed element.</li>
+
+                  </ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="nameDescr"><a name="nameDescr"><!-- --></a>The name of the action link group
+												template to use in code.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExecutionsAllowed" class="dashAnchor"></a><span class="keyword parmname">ExecutionsAllowed</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="executionsAllowedDescr"><a name="executionsAllowedDescr"><!-- --></a>The number of times an
+												action link can be executed. Values are:</span><ul class="ul bulletList">
+                    <li class="li">
+<samp class="codeph nolang">Once</samp>—An action link can be
+                      executed only once across all users.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">OncePerUser</samp>—An action link can
+                      be executed only once for each user.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">Unlimited</samp>—An action link can be
+                      executed an unlimited number of times by each user. If the action
+                      link’s <samp class="codeph nolang">actionType</samp> is <samp class="codeph nolang">Api</samp> or <samp class="codeph nolang">ApiAsync</samp>, you can’t use this value.</li>
+
+                  </ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/HoursUntilExpiration" class="dashAnchor"></a><span class="keyword parmname">HoursUntilExpiration</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="ExpirationPeriodInHoursDescr"><a name="ExpirationPeriodInHoursDescr"><!-- --></a>The number of
+												hours from when the action link group is created
+												until it's removed from associated feed elements and
+												can no longer be executed. The maximum value is
+												8,760.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsPublished" class="dashAnchor"></a><span class="keyword parmname">IsPublished</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="publishedDescr"><a name="publishedDescr"><!-- --></a>If <samp class="codeph nolang">true</samp>, the action link group template is
+												published. Action link group templates shouldn’t be
+												published until at least one <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_actionlinktemplate.htm" title="Action link templates let you reuse action link definitions and package and distribute action links. An action link is a button on a feed element. Clicking an action link can take a user to another Web page, initiate a file download, or invoke an API call to an external server or Salesforce. Use action links to integrate Salesforce and third-party services into the feed. This object is available in API version 33.0 and later.">ActionLinkTemplate</a> is associated with it. Once
+												set to <samp class="codeph nolang">true</samp>,
+												this can’t be set back to <samp class="codeph nolang">false</samp>.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a>The language of the
+											<span class="keyword parmname">MasterLabel</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The name of the action link group template.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d145352e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+							<td class="entry" headers="d145352e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <div class="p">The namespace prefix can have one of the following values:<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Define action link templates in Setup and use <samp class="codeph apex_code">ConnectApi</samp> in Apex or Chatter REST API to
+				instantiate action links from the templates and to post feed elements with the
+				action links.</p>
+
+			<p class="p" id="deleteCascade"><a name="deleteCascade"><!-- --></a>If you delete a published action link group template, you delete
+				all related action link information which includes deleting all action links that
+				were instantiated using the template from feed items.</p>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

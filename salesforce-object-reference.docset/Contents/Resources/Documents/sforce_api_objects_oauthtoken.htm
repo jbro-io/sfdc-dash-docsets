@@ -1,0 +1,380 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>OauthToken | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_oauthtoken"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>OauthToken</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an OAuth access token for connected app authentication and can
+			be used to create a user interface for token management. This object is available in API version 32.0 and
+			later.</span></div>
+
+		<div class="section">
+			<p class="p">A connected app integrates an application with Salesforce using APIs. Connected apps use standard SAML and
+              OAuth protocols to authenticate, provide Single Sign-On, and provide tokens for use
+              with Salesforce
+              APIs. In addition to standard OAuth
+              capabilities, connected apps allow
+              administrators to set various security policies and have explicit control over who may
+              use the corresponding applications. Each time that a user grants access to an application, the application obtains a
+				new access token.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">If you are a user with the “Manage Users” permission, you see all tokens for all
+				users in the organization. Otherwise, you see only your own tokens.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d535223e129">Field Name</th>
+
+							<th class="featureTableHeader  " id="d535223e132">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccessToken" class="dashAnchor"></a><span class="keyword parmname">AccessToken</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The refresh token for authorization.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/AppMenuItemId" class="dashAnchor"></a><span class="keyword parmname">AppMenuItemId</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The unique ID for the App Picker menu item that’s
+												associated with this OAuth token.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/AppName" class="dashAnchor"></a><span class="keyword parmname">AppName</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The label for the connected app that’s associated with this OAuth token.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeleteToken" class="dashAnchor"></a><span class="keyword parmname">DeleteToken</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">A token that can be used at the revoke OAuth token
+												endpoint to remove this token. </p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a><span class="keyword parmname">Id</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">ID</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Reserved for future use. Currently, the value is
+												always <samp class="codeph nolang">null</samp>.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastUsedDate" class="dashAnchor"></a><span class="keyword parmname">LastUsedDate</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The most recent date when the OAuth token was
+												used.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/RequestToken" class="dashAnchor"></a><span class="keyword parmname">RequestToken</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The authorization code that was used to request the
+												corresponding AccessToken. With this authorization
+												code, you can revoke the corresponding AccesToken by
+												passsing the DeleteToken.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/UseCount" class="dashAnchor"></a><span class="keyword parmname">UseCount</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">How often the token has been used.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d535223e129" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+							<td class="entry" headers="d535223e132" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The owner of the token.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">To delete an AccessToken, send a request to the revoke OAuth token endpoint with the
+				DeleteToken as the parameter. For example, this URL
+					<span class="ph filepath">https://login.salesforce.com/services/oauth2/revoke?token=(the Delete
+					Token) </span>causes the deletion of the token. </p>
+
+			<p class="p">In API version 34.0 and later,
+				this object was enhanced to help manage high instance counts. A 
+					<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_calls_query.htm#topic-title"><samp class="codeph nolang">query()</samp></a>
+				 call returns up to 500 rows. A <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_calls_querymore.htm#topic-title"><samp class="codeph nolang">queryMore()</samp></a> call returns 500 more, up to 2500 total. No more records are returned
+				after 2500. To make sure you don’t miss any records, issue a <samp class="codeph nolang">COUNT()</samp> query in a SELECT clause for OauthToken.
+				This gives you the total number of records. If there are more than 2500 records,
+				divide your query by filtering on fields, like <span class="keyword parmname">UserId</span>, to
+				return subsets of less than 2500 records.</p>
+
+		</div>
+
+		
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AuthConfig | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_authconfig"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AuthConfig</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="authconfig_desc"><a name="authconfig_desc"><!-- --></a>Represents authentication options for a communityor custom domain that was created by using My Domain.</span> This object is
+			available in API version
+			32.0 and later.</span></div>
+
+		<div class="section">
+			<div class="p">The fields for this object control the login options that show up on the login page
+				for users of a community or custom domain.<ul class="ul bulletList">
+					<li class="li">Logging in with a username and password</li>
+
+					<li class="li">Using SAML for single sign-on</li>
+
+					<li class="li">Authentication provider logins from a third-party service, such as Facebook
+						or Twitter</li>
+
+				</ul>
+</div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">You must have “View Setup and Configuration” permission to view the
+				settings.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d182509e125">Field Name</th>
+
+							<th class="featureTableHeader  " id="d182509e128">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AuthOptionsAuthProvider" class="dashAnchor"></a><span class="keyword parmname">AuthOptionsAuthProvider</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">If <samp class="codeph nolang">true</samp>, at least one Auth. Provider is
+												selected to show up on the login page, and this
+												object has child AuthConfigProvider objects for each
+												provider.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AuthOptionsSaml" class="dashAnchor"></a><span class="keyword parmname">AuthOptionsSaml</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">If <samp class="codeph nolang">true</samp>, at least one SAML configuration is
+												selected to show up on the login page. If the
+												organization has only one SAML configuration, this
+												value indicates whether that configuration is
+												selected to show up on the login page. If the
+												organization has multiple SAML configurations, see
+												the child AuthConfigProvider objects for each
+												configuration.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AuthOptionsUsernamePassword" class="dashAnchor"></a><span class="keyword parmname">AuthOptionsUsernamePassword</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">If <samp class="codeph nolang">true</samp>, the login option for a username
+												and password appears on the login page.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The name of the domain created using My Domain or, for
+												communities, a concatenated string of <var class="keyword varname">community
+												name</var>_<var class="keyword varname">community
+											prefix</var>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Whether this configuration is in use.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The language for the organization.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The text that’s used to identify the Visualforce page in Setup.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<dl class="dl detailList">
+												
+												<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <p class="p">The namespace prefix can have one of the following values:</p>
+<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</dd>
+
+												
+											</dl>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<div class="p">The organization type for this object.<ul class="ul bulletList">
+												<li class="li">
+<samp class="codeph nolang">Org</samp>
+												(includes custom domains)</li>
+
+												<li class="li"><samp class="codeph nolang">Community</samp></li>
+
+												<li class="li"><samp class="codeph nolang">Site</samp></li>
+
+												<li class="li">Portal</li>
+
+												</ul>
+</div>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d182509e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/Url" class="dashAnchor"></a><span class="keyword parmname">Url</span></td>
+
+							<td class="entry" headers="d182509e128" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The login URL of the organization for this AuthConfig
+												object. Each URL has only one associated AuthConfig
+												object.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

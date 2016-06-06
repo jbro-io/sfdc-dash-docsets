@@ -1,0 +1,1686 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContentVersion | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contentversion"><!-- --></a><h1 class="helpHead1">
+  <span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContentVersion</span>
+ </h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available
+   in versions 17.0 and later for Salesforce CRM Content
+   documents. This object is available in versions 20.0 and later for Salesforce Files.</span></div>
+
+  <p class="p">The maximum number of versions that can be published in a 24-hour period is 36,000.</p>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+
+   
+   <ul class="ul bulletList">
+    <li class="li">Customer and Partner Portal users must have the “View Content in Portal”
+     permission to query content in libraries where they have access.</li>
+
+    <li class="li">Customer and Partner Portal users can only publish, version, or edit documents if they have
+     a Salesforce CRM Content feature license.</li>
+
+    <li class="li">All users with a content feature license can create versions in their personal library.</li>
+
+    <li class="li">Users (including users with
+the “View All Data” permission) can only query files
+they have access to, including:<ul class="ul bulletList">
+<li class="li"> All Salesforce CRM Content files in libraries they're a member of and in their personal
+library, regardless of library permissions (API version
+17.0 and later).</li>
+
+<li class="li">All Salesforce Files they own, posted on
+              their profile, posted on groups they can see, and shared directly with them (API version 21.0 and
+              later).</li>
+
+</ul>
+</li>
+
+    <li class="li">All users can update versions in their personal library.</li>
+
+    <li class="li">The owner of a version or document can update the document if they are a member of the
+     library, regardless of library permissions.</li>
+
+    <li class="li">To update a Salesforce CRM Content document, the
+     user must be a member of the library with one of these library privileges enabled:<ul class="ul bulletList">
+      <li class="li">“Add Content”</li>
+
+      <li class="li">“Add Content On Behalf of Others”</li>
+
+      <li class="li">“Manage Library”</li>
+
+     </ul>
+</li>
+
+    <li class="li">
+<span class="keyword parmname">FileType</span> is defined by either
+      <span class="keyword parmname">ContentUrl</span> for links or <span class="keyword parmname">PathOnClient</span> for documents, but not
+     both.</li>
+
+    <li class="li">In API version 34.0 and later,
+     any file can be shared with libraries, whether the file originated in Chatter or in Salesforce CRM Content.</li>
+
+   </ul>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d263670e222">Field</th>
+
+       <th class="featureTableHeader  " id="d263670e225">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Checksum" class="dashAnchor"></a>
+        <span class="keyword parmname" id="ChecksumField"><a name="ChecksumField"><!-- --></a>Checksum</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">MD5 checksum for the file.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentDocumentId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="ContentDocumentIDField"><a name="ContentDocumentIDField"><!-- --></a>ContentDocumentId</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the document.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentLocation" class="dashAnchor"></a>
+        <span class="keyword parmname">ContentLocation</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Origin of the document. Valid values are:<ul class="ul bulletList">
+            <li class="li">
+<strong class="ph b">S</strong>—This is a document located within Salesforce. Label is
+              <strong class="ph b">Salesforce</strong>.</li>
+
+            <li class="li">
+<strong class="ph b">E</strong>—This is a document located outside of Salesforce. Label is
+              <strong class="ph b">External</strong>.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentModifiedById" class="dashAnchor"></a>
+        <span class="keyword parmname">ContentModifiedById</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the user who modified the document.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a>
+        <span class="keyword parmname" id="ContentModifiedDateField"><a name="ContentModifiedDateField"><!-- --></a>ContentModifiedDate</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           dateTime
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Date the document was modified. </p>
+
+           <p class="p"><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><span class="keyword parmname">ContentModifiedDate</span>
+            updates when, for example, the document is renamed or a new document version is
+            uploaded. When uploading the first version of a document, <span class="keyword parmname">ContentModifiedDate</span> can be set to
+            the current time or any time in the past.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a>
+        <span class="keyword parmname">ContentSize</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Size of the document in bytes. Always zero for links.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ContentUrl" class="dashAnchor"></a>
+        <span class="keyword parmname" id="ContentUrlField"><a name="ContentUrlField"><!-- --></a>ContentUrl</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           url
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a>URL for links. This is only set for links. One of the fields that determines the
+            <span class="keyword parmname">FileType</span>. The character
+           limit in API versions 37.0 and later is 1,300. The
+           character limit in API
+           versions 32.0 and earlier was 255.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>
+        <span class="keyword parmname">Description</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           textarea
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Description of the content version.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Division" class="dashAnchor"></a>
+        
+        <span class="keyword parmname">Division</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A logical segment of your organization's data. For example, if your
+   company is organized into different business units, you could create a division for each business
+   unit, such as “North America,” “Healthcare,” or
+   “Consulting.” Available only if the organization has the Division permission
+   enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ExternalDataSourceId" class="dashAnchor"></a>
+        <span class="keyword parmname">ExternalDataSourceId</span>
+        
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ExternalDataSource" class="dashAnchor"></a>ID of the external document referenced in the <span class="keyword parmname">ExternalDataSource</span>
+           object.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ExternalDocumentInfo1" class="dashAnchor"></a>
+        <span class="keyword parmname">ExternalDocumentInfo1</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Stores the URL of the file in the external content repository. The integration from
+           the external source determines the content for this string. After the reference or copy
+           is created, the URL of the external file is updated when you:<ul class="ul bulletList">
+            <li class="li">Republish a file reference in Lightning Experience</li>
+
+            <li class="li">Open the document</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/reuseReference" class="dashAnchor"></a>Create a file reference in the Chatter REST API with
+              <span class="keyword parmname">reuseReference</span> set to true.</li>
+
+           </ul>
+When the file is updated, the shared link is updated to the most current
+           version.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ExternalDocumentInfo2" class="dashAnchor"></a>
+        <span class="keyword parmname">ExternalDocumentInfo2</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Contains the external file ID. Salesforce determines the content for this string,
+           which is private. The content can change without notice, depending on the external
+           system. After the file reference is created, this field isn’t updated, even if the file
+           path changes.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/FeaturedContentBoost" class="dashAnchor"></a>
+        <span class="keyword parmname">FeaturedContentBoost</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read only. Designates a document as featured.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/FeaturedContentDate" class="dashAnchor"></a>
+        <span class="keyword parmname">FeaturedContentDate</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           date
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date the document was featured.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/FileExtension" class="dashAnchor"></a>
+        <span class="keyword parmname">FileExtension</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">File extension of the document.</p>
+
+           <p class="p">This field is available in API version 31.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a>
+        <span class="keyword parmname" id="FileTypeField"><a name="FileTypeField"><!-- --></a>FileType</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/PathOnClient" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentUrl" class="dashAnchor"></a>Type of content determined by <span class="keyword parmname">ContentUrl</span> for links or <span class="keyword parmname">PathOnClient</span> for documents.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="FirstPublishLocationIdField"><a name="FirstPublishLocationIdField"><!-- --></a>FirstPublishLocationId</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">ID of the location where the version was first published. If the version is first
+            published into a user's personal library or My Files, the field will contain the ID of
+            the user who owns the personal library or My Files. If the first version is published
+            into a public library, the field will contain the ID of that library.</p>
+
+           <p class="p">This field is only set the first time a version is published via the API. It isn't set when a
+            version is published in Salesforce CRM Content
+            or uploaded in Salesforce Files
+            or. After the version is published, it is a read-only field.</p>
+
+           <p class="p"><a name="//apple_ref/cpp/Field/Origin" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a>If you don't set a <span class="keyword parmname">FirstPublishLocationId</span> via the API, this field defaults to
+            the user's personal library, unless <span class="keyword parmname">Origin</span> is set to <strong class="ph b">H</strong>, then this
+            field defaults to My Files.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/IsEncrypted" class="dashAnchor"></a>
+        <span class="keyword parmname">IsEncrypted</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This information is about Shield Platform Encryption and not Classic Encryption.</p>
+</div>
+</div></div></div></div>
+
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           boolean
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether files are encrypted using Shield Platform Encryption (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           This field is available in API version 34.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/IsLatest" class="dashAnchor"></a>
+        <span class="keyword parmname">IsLatest</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           boolean
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether this is the latest version of the document (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/IsMajorVersion" class="dashAnchor"></a>
+        <span class="keyword parmname">IsMajorVersion</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           boolean
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<samp class="codeph nolang">true</samp> if the document is a major version; <samp class="codeph nolang">false</samp> if the document is a minor version. Major versions
+           can’t be replaced.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a>
+        <span class="keyword parmname" id="lang_field"><a name="lang_field"><!-- --></a>Language</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Restricted picklist, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <span class="ph" id="lang_def"><a name="lang_def"><!-- --></a>The language for this document. This field defaults to the user's
+            language unless the organization is multi-language enabled.</span>
+           <p class="p">Specifies the language of the labels
+returned. The value must be a valid user locale (language and country),
+such as <samp class="codeph nolang">de_DE</samp> or <samp class="codeph nolang">en_GB</samp>. For more information on locales,
+see the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_categorynodelocalization.htm#languagelocalekey_desc"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></a> field on the CategoryNodeLocalization object.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/NegativeRatingCount" class="dashAnchor"></a>
+        <span class="keyword parmname" id="NegativeRatingCountField"><a name="NegativeRatingCountField"><!-- --></a>NegativeRatingCount</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read only. The number of times different users have given the document a thumbs
+            down.<p class="p"><a name="//apple_ref/cpp/Field/NegativeRatingCount" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NegativeRatingCount" class="dashAnchor"></a>Rating counts for the latest version are not version-specific. If Version 1
+            receives 10 thumbs-down votes, and Version 2 receives 2 thumbs-down votes, the <span class="keyword parmname">NegativeRatingCount</span> on Version 2 is
+            12. However, rating counts are not retroactive for prior versions. The <span class="keyword parmname">NegativeRatingCount</span> on Version 1 is
+            10.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/
+         NetworkId
+        " class="dashAnchor"></a>
+        <span class="keyword parmname"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a>
+         <span class="keyword parmname">NetworkId</span>
+        </span>
+        
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a> that this file originated from. This field is available in API version 26.0 and later, if
+            Salesforce Communities is
+           enabled for your organization.<p class="p"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a>You can only add a <span class="keyword parmname">NetworkId</span> when creating a file. You can’t change or add a <span class="keyword parmname">NetworkId</span> for an existing file.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Origin" class="dashAnchor"></a>
+        <span class="keyword parmname" id="OriginField"><a name="OriginField"><!-- --></a>Origin</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The source of the content version. Valid values are:<ul class="ul bulletList">
+            <li class="li">
+<strong class="ph b">C</strong>—This is a Content document from the user's personal library. Label
+             is <strong class="ph b">Content</strong>. <span class="ph" id="1st_pub_location_id"><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a><a name="1st_pub_location_id"><!-- --></a>The <span class="keyword parmname">FirstPublishLocationId</span> must be the
+              user's ID. If <span class="keyword parmname">FirstPublishLocationId</span> is left
+              blank, it defaults to the user's ID</span>.</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstPublishLocationId" class="dashAnchor"></a>
+<strong class="ph b">H</strong>—This is a Salesforce file from the user's My Files. Label is
+              <strong class="ph b">Chatter</strong>.
+              The <span class="keyword parmname">FirstPublishLocationId</span> must be the
+              user's ID. If <span class="keyword parmname">FirstPublishLocationId</span> is left
+              blank, it defaults to the user's ID. Origin can only
+             be set to <strong class="ph b">H</strong> if Chatter is enabled for your
+             organization.</li>
+
+           </ul>
+This field defaults to C. Label is <strong class="ph b">Content Origin</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="OwnerIdField"><a name="OwnerIdField"><!-- --></a>OwnerId</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the owner of this document.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/PathOnClient" class="dashAnchor"></a>
+        <span class="keyword parmname" id="PathOnClientField"><a name="PathOnClientField"><!-- --></a>PathOnClient</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a>The complete path of the document. One of the fields that determines the <span class="keyword parmname">FileType</span>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You must specify a
+            complete path including the path extension in order for the document to be visible in
+            the Preview tab.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/PositiveRatingCount" class="dashAnchor"></a>
+        <span class="keyword parmname" id="PositiveRatingCountField"><a name="PositiveRatingCountField"><!-- --></a>PositiveRatingCount</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read only. The number of times different users have given the document a thumbs up.<p class="p" id="RatingCountVotes"><a name="//apple_ref/cpp/Field/PositiveRatingCount" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PositiveRatingCount" class="dashAnchor"></a><a name="RatingCountVotes"><!-- --></a>Rating counts for the latest version are not version-specific. If
+            Version 1 receives 10 thumbs-up votes, and Version 2 receives 2 thumbs-up votes, the
+             <span class="keyword parmname">PositiveRatingCount</span> on
+            Version 2 is 12. However, rating counts are not retroactive for prior versions. The
+             <span class="keyword parmname">PositiveRatingCount</span> on
+            Version 1 is 10.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/PublishStatus" class="dashAnchor"></a>
+        <span class="keyword parmname" id="PubStatusField"><a name="PubStatusField"><!-- --></a>PublishStatus</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <div class="p">Indicates if and how the document
+is published. Valid values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">P</samp>—The document is
+published to a public library and is visible to other users. Label
+is <strong class="ph b">Public</strong>.</li>
+
+<li class="li">
+<samp class="codeph nolang">R</samp>—The document is
+published to a personal library and is not visible to other users.
+Label is <strong class="ph b">Personal Library</strong>.</li>
+
+<li class="li">
+<samp class="codeph nolang">U</samp>—The document is
+not published because publishing was interrupted. Label is <strong class="ph b"><span class="ph" id="d173662e1792-d173851e956"><a name="d173662e1792-d173851e956"><!-- --></a>Upload Interrupted</span></strong>.</li>
+
+</ul>
+</div>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/RatingCount" class="dashAnchor"></a>
+        <span class="keyword parmname">RatingCount</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read only. Total number of positive and negative ratings.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/ReasonForChange" class="dashAnchor"></a>
+        <span class="keyword parmname">ReasonForChange</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The reason why the document was changed. This field can only be set when inserting a
+           new version (revising) a document.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+        
+        <span class="keyword parmname" id="RecordTypeIdField"><a name="RecordTypeIdField"><!-- --></a>RecordTypeId</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           reference
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the record type of the version.<div class="p"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>Custom fields are restricted in <span class="keyword parmname">RecordTypeId</span>. When an administrator
+            creates a custom field via the API it must be added to at
+            least one page layout:<ul class="ul bulletList">
+             <li class="li"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>If the custom field is added to the page layout associated with the General record
+              type, the <span class="keyword parmname">RecordTypeId</span>
+              that corresponds to that record type does not have to be set on the version
+              record.</li>
+
+             <li class="li"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>If the custom field is added to the page layout associated with a custom record
+              type, the <span class="keyword parmname">RecordTypeId</span>
+              that corresponds to that record type must be set on the version record.</li>
+
+            </ul>
+</div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/SharingOption" class="dashAnchor"></a>
+        <span class="keyword parmname">SharingOption</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Restricted" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Allowed" class="dashAnchor"></a>Controls whether or not sharing is frozen for a file. Only administrators and file
+           owners with Collaborator access to the file can modify this field. Default is
+            <span class="keyword parmname">Allowed</span>, which means that new shares are allowed. When set to
+            <span class="keyword parmname">Restricted</span>, new shares are prevented without affecting existing
+            shares.<p class="p">This field is available in API versions 35.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/TagCsv" class="dashAnchor"></a>
+        <span class="keyword parmname" id="TagCsvField"><a name="TagCsvField"><!-- --></a>TagCsv</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           textarea
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Text used to apply tags to a content version via the API.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Text Preview" class="dashAnchor"></a><span class="keyword parmname">Text Preview</span></td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">
+           Nillable, Filter,Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A preview of a document. Available in API version  35.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a>
+        <span class="keyword parmname">Title</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The title of a document.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/VersionData" class="dashAnchor"></a>
+        <span class="keyword parmname" id="VersionDataField"><a name="VersionDataField"><!-- --></a>VersionData</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           base64
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/VersionData" class="dashAnchor"></a>Encoded file data. This field can't be set for links. The maximum file size you can upload via the SOAP API must be less than 50 MB. When a
+      document is uploaded or downloaded via the API, it is converted to base64 and
+      stored in <span class="keyword parmname">VersionData</span>. This
+      conversion increases the document size by approximately 37%. You must account for the base64
+      conversion increase so that the file you plan to upload is less than 50 MB.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d263670e222" data-title="Field"><a name="//apple_ref/cpp/Field/VersionNumber" class="dashAnchor"></a>
+        <span class="keyword parmname">VersionNumber</span>
+       </td>
+
+       <td class="entry" headers="d263670e225" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The version number. The number increments with each version of the document, for
+           example, 1, 2, 3.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <ul class="ul bulletList">
+    <li class="li">Use this object to <span class="ph" id="content_version_actions"><a name="content_version_actions"><!-- --></a>create, query, retrieve, search, edit,
+      and update a specific version of a Salesforce CRM Content document or Salesforce
+     file</span>. Use the ContentDocument object to retrieve, query, update, and delete
+            the latest version of a document, but not a content pack, in a library or a Salesforce
+            file .</li>
+
+    <li class="li">Use this object to create, query, retrieve, search, edit, and update a specific version of a
+     Salesforce file. Use the ContentDocument object to retrieve, query, update, and delete the latest version of a Salesforce file .</li>
+
+    <li class="li">
+     To query a file that is shared only with a record, you
+            must specify the content ID of the file.
+    </li>
+
+    <li class="li">Not all fields can be set for Salesforce Files.</li>
+
+    <li class="li">You can only update a version if it is the latest version and if it is published.</li>
+
+    <li class="li">You can't archive versions.</li>
+
+    <li class="li">Using API version 32.0 and
+     later, you can update record types on versions.</li>
+
+    <li class="li">You can't delete a version via the API.</li>
+
+    <li class="li">
+     <span class="ph" id="SOAP_API_max_file_size"><a name="SOAP_API_max_file_size"><!-- --></a>The maximum file size you can upload via the SOAP API must be less than 50 MB. When a
+      document is uploaded or downloaded via the API, it is converted to base64 and
+      stored in <span class="keyword parmname">VersionData</span>. This
+      conversion increases the document size by approximately 37%. You must account for the base64
+      conversion increase so that the file you plan to upload is less than 50 MB.</span>
+    </li>
+
+    <li class="li">To download a document via the API, you must export the <span class="keyword parmname">VersionData</span> of the document. This does not
+     increase the download count.</li>
+
+    <li class="li"> When you upload a document from your local drive using the Data Loader, you must specify
+     the actual path in both <span class="keyword parmname">VersionData</span> and <span class="keyword parmname">PathOnClient</span>. <span class="keyword parmname">VersionData</span> identifies the location and
+     extracts the format and <span class="keyword parmname">PathOnClient</span> identifies the type of document being uploaded.</li>
+
+    <li class="li">SOQL queries on the ContentVersion object
+     return all versions of the document. <span class="ph" id="ContentVersionSOSLNote"><a name="ContentVersionSOSLNote"><!-- --></a>SOSL searches on the ContentVersion object return only the most recent
+      version of the document.</span>
+</li>
+
+    <li class="li">If you query versions in the API, versions with a <span class="keyword parmname">PublishStatus</span> of <samp class="codeph nolang">Upload Interrupted</samp> are not returned.</li>
+
+    <li class="li">Documents published into a personal library assume the default record type that is set for
+     the user profile of the person publishing the document (General, if no default is set for the
+     user profile). <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>An administrator can rename the default (<em class="ph i">Content Version Layout</em>)
+      page layout.</p>
+</div>
+</div></div></div></div>
+</li>
+
+    <li class="li">
+     Contact Manager, Group, Professional, Enterprise,
+Unlimited, and Performance Edition customers can publish a maximum of 36,000 new versions per 24–hour period. Developer Edition and
+trial users can publish a maximum of 2,500 new versions per 24–hour period.
+    </li>
+
+    <li class="li">Custom validation rules can prevent an update of documents published into a personal library
+     via the API.</li>
+
+   </ul>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Applying Tags to <span class="ph" id="ContentVersionAPITaggingTitle"><a name="ContentVersionAPITaggingTitle"><!-- --></a>ContentVersion </span> Records </h2>
+
+   
+   <p class="p">Tags can be applied to ContentVersion records
+    using either Enterprise or Partner API.</p>
+
+   <p class="p">To apply tags to a ContentVersion record, set a
+    value in the <span class="keyword parmname">TagCsv</span> field. For
+    example, setting this field to <samp class="codeph nolang">one,two,three</samp> creates and
+    associates three tags to that version.</p>
+
+   <ul class="ul bulletList">
+    <li class="li">The maximum length of the <span class="keyword parmname">TagCsv</span> field is 2,000 characters.</li>
+
+    <li class="li">The maximum length of an individual tag is 100 characters.</li>
+
+    <li class="li">When tags are applied to a version, the content is indexed automatically and the tags are
+     searchable.</li>
+
+    <li class="li">You can't apply tags to a <span class="keyword parmname">TagCsv</span> that is published into a personal library.</li>
+
+    <li class="li">You can't apply tags using the ContentDocument object.</li>
+
+    <li class="li">You can't change or delete tag names. You can remove tags from a document, but that doesn't
+     delete the tag.</li>
+
+    <li class="li">Tags are case insensitive. You can't have two tags with the same name even if they use
+     different uppercase and lowercase letters. The case of the original tag is always used.</li>
+
+   </ul>
+
+   <p class="p">To delete tags from a ContentVersion record,
+    perform a standard API update, and
+    remove any values from the <span class="keyword parmname">TagCsv</span>
+    field that you want to delete. For example, if the original <span class="keyword parmname">TagCsv</span> is <samp class="codeph nolang">one,two,three</samp>, perform an API update specifying <samp class="codeph nolang">one,three</samp> in the <span class="keyword parmname">TagCsv</span> field to delete <samp class="codeph nolang">two</samp>. To delete all tags from a ContentVersion you perform a standard API update by setting the field to
+     <samp class="codeph java">null</samp>. </p>
+
+   <div class="p">If you create a ContentVersion record and want
+    to revise it via the API, you
+    insert another ContentVersion record but
+    associate it to the same ContentDocument record as the original. This has an impact on tagging:<ul class="ul bulletList">
+     <li class="li">If you insert the revision and do not set any value in the <span class="keyword parmname">TagCsv</span> field, any tags applied to the
+      previous version are automatically applied to the new version.</li>
+
+     <li class="li">If you insert the revision and specify a new <span class="keyword parmname">TagCsv</span> field, no tags transfer over and
+      the tags you specify are applied instead.</li>
+
+    </ul>
+</div>
+
+   <p class="p">When you perform a SOQL query for a ContentVersion record and select the <span class="keyword parmname">TagCsv</span> field, all the tags associated with
+    that record are returned. The tags in the string are always ordered alphabetically even if they
+    were inserted in a different order. You can't use the <span class="keyword parmname">TagCsv</span> field as part of a filter in a SOQL
+    query. You can't query all tags in your organization.</p>
+
+   <p class="p">Library tagging rules:</p>
+
+   <ul class="ul bulletList">
+    <li class="li">API tagging respects the
+     tagging restrictions that exist on any library that the document is published into. For
+     example, if the library is in restricted tagging mode and only allows tags <samp class="codeph nolang">one,three</samp>, you can't save a version with a <span class="keyword parmname">TagCsv</span> of <samp class="codeph nolang">one,two,three</samp>.</li>
+
+    <li class="li">If the library is in guided tagging mode, you can apply tags to the ContentVersion. You can't query the value of guided
+     tags on a library, but you can query the tagging model of a library.</li>
+
+   </ul>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocument.htm" title="Represents a document that has been uploaded to a library in Salesforce CRM Content or Salesforce Files.This object is available in API versions 17.0 and later for Salesforce CRM Content. This object is available in API version 21.0 and later for Salesforce Files.">ContentDocument</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentversionhistory.htm" title="Represents the history of a specific version of a document. This object is available in version 17.0 and later.">ContentVersionHistory</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

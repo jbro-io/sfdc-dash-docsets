@@ -1,0 +1,731 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LoginHistory | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_loginhistory"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LoginHistory</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the login history for all successful and failed login
+      attempts for organizations and enabled portals. This object is available in API version 21.0 and
+    later.</span></div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp></p>
+
+    </div>
+
+    <div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+
+      
+      <p class="p">With one exception, only users with Manage Users permissions can access this object. The
+        exception is that, in API
+        version 37.0 and later, all users can retrieve their own login history records.</p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d504084e104">Field</th>
+
+              <th class="featureTableHeader  " id="d504084e107">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/ApiType" class="dashAnchor"></a><span class="keyword parmname" id="APIType"><a name="APIType"><!-- --></a>ApiType</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the API type, for example <samp class="codeph nolang">Soap Enterprise</samp>.
+                      Label is <strong class="ph uicontrol">API Type</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/APIVersion" class="dashAnchor"></a><span class="keyword parmname" id="APIVersion"><a name="APIVersion"><!-- --></a>APIVersion</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Displays the API version used by the client. Label is <strong class="ph uicontrol">API
+                      Version</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/Application" class="dashAnchor"></a><span class="keyword parmname" id="Application"><a name="Application"><!-- --></a>Application</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The application used to access the organization. Label is
+                        <strong class="ph uicontrol">Application</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/AuthenticationServiceId" class="dashAnchor"></a><span class="keyword parmname" id="AuthenticationServiceId"><a name="AuthenticationServiceId"><!-- --></a>AuthenticationServiceId</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The 18-character ID for an authentication service for a login event. <span class="ph" id="authservid-ex"><a name="authservid-ex"><!-- --></a>For example, you can use this field to identify the SAML
+                        or authentication provider configuration with which the user logged in.</span>
+                      This field is available in API version 34.0 and later. Label is
+                        <strong class="ph uicontrol">Authentication Service Id</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/Browser" class="dashAnchor"></a><span class="keyword parmname" id="Browser"><a name="Browser"><!-- --></a>Browser</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The current browser version. Label is <strong class="ph uicontrol">Browser</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/ClientVersion" class="dashAnchor"></a><span class="keyword parmname" id="ClientVersion"><a name="ClientVersion"><!-- --></a>ClientVersion</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Version of the API client. Label
+                      is <strong class="ph uicontrol">Client Version</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/CipherSuite" class="dashAnchor"></a><span class="keyword parmname">CipherSuite</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="CipherSuiteDesc"><a name="CipherSuiteDesc"><!-- --></a>The TLS cipher suite used for the login. Values are
+                        OpenSSL-style cipher suite names, with hyphen delimiters. For more
+                        information, see <a class="xref" href="https://www.openssl.org/docs/manmaster/apps/ciphers.html" target="_blank">OpenSSL Cryptography and SSL/TLS
+                          Toolkit</a>.</span> This field is available in API version 37.0
+                      and later.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/CountryIso" class="dashAnchor"></a><span class="keyword parmname">CountryIso</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="CountryIsoDesc"><a name="CountryIsoDesc"><!-- --></a>The ISO 3166 code for the country where the user’s
+                        IP address is physically located. For more information, see <a class="xref" href="http://www.iso.org/iso/country_codes.htm" target="_blank">Country Codes - ISO 3166</a></span>. This field is
+                      available in API
+                      version 37.0 and later.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/LoginGeoId" class="dashAnchor"></a><span class="keyword parmname">LoginGeoId</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                </dl>
+
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The 18-character ID for the record of the geographic location of the user
+                      for a successful or unsuccessful login event. Due to the nature of geolocation
+                      technology, the accuracy of geolocation fields (for example, country, city,
+                      postal code) can vary. This field is available in API version 34.0
+                      and later.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/LoginTime" class="dashAnchor"></a><span class="keyword parmname" id="LoginTime"><a name="LoginTime"><!-- --></a>LoginTime</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable,
+                        Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Time zone is based on GMT. Label is <strong class="ph uicontrol">Login Time</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/LoginType" class="dashAnchor"></a><span class="keyword parmname" id="LoginType"><a name="LoginType"><!-- --></a>LoginType</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="def_logintype"><a name="def_logintype"><!-- --></a>The type of login, for example, Application, OAuth,
+                        or SAML.</span> Label is <strong class="ph uicontrol">Login Type</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/LoginUrl" class="dashAnchor"></a><span class="keyword parmname" id="LoginUrl"><a name="LoginUrl"><!-- --></a>LoginUrl</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">URL from which the login request is coming. Label is <strong class="ph uicontrol">Login
+                        URL</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The ID of the community that the user is logging in to. This field is available in API version 31.0
+                      and later, if Salesforce Communities
+                      is enabled for your organization.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/Platform" class="dashAnchor"></a><span class="keyword parmname" id="Platform"><a name="Platform"><!-- --></a>Platform</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Operating system on the login machine. Label is
+                        <strong class="ph uicontrol">Platform</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/SourceIp" class="dashAnchor"></a><span class="keyword parmname" id="SourceIp"><a name="SourceIp"><!-- --></a>SourceIp</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">IP address of the machine from which the login request is coming. The
+                      address can be an IPv4 or IPv6 address in API version 23.0 or
+                      later. In API
+                      version 22.0 or earlier, the address is an IPv4 address, and IPv6 addresses
+                      are null. Label is <strong class="ph uicontrol">Source IP</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname" id="Status"><a name="Status"><!-- --></a>Status</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Displays the status of the attempted login. Status is either success or a
+                      reason for failure. Label is <strong class="ph uicontrol">Status</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/TlsProtocol" class="dashAnchor"></a><span class="keyword parmname">TlsProtocol</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="TlsProtocolDesc"><a name="TlsProtocolDesc"><!-- --></a>The TLS protocol used for the login.</span> Possible
+                      values are: <ul class="ul bulletList">
+                        <li class="li"><a name="//apple_ref/cpp/Field/TLS 1.0" class="dashAnchor"></a><span class="keyword parmname">TLS 1.0</span></li>
+
+                        <li class="li"><a name="//apple_ref/cpp/Field/TLS 1.1" class="dashAnchor"></a><span class="keyword parmname">TLS 1.1</span></li>
+
+                        <li class="li"><a name="//apple_ref/cpp/Field/TLS 1.2" class="dashAnchor"></a><span class="keyword parmname">TLS 1.2</span></li>
+
+                        <li class="li"><a name="//apple_ref/cpp/Field/Unknown" class="dashAnchor"></a><span class="keyword parmname">Unknown</span></li>
+
+                      </ul>
+This field is available in API version 37.0
+                      and later.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e104" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname" id="UserId"><a name="UserId"><!-- --></a>UserId</span></td>
+
+              <td class="entry" headers="d504084e107" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the user logging in. Label is <strong class="ph uicontrol">User ID</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+      
+      <p class="p">Not all fields are filterable. You can only filter on the following fields:</p>
+
+      <ul class="ul bulletList">
+        <li class="li"><span class="keyword parmname">AuthenticationServiceId</span></li>
+
+        <li class="li"><span class="keyword parmname">CipherSuite</span></li>
+
+        <li class="li"><span class="keyword parmname">CountryIso</span></li>
+
+        <li class="li"><span class="keyword parmname">Id</span></li>
+
+        <li class="li"><span class="keyword parmname">LoginTime</span></li>
+
+        <li class="li"><span class="keyword parmname">LoginType</span></li>
+
+        <li class="li"><span class="keyword parmname">LoginUrl</span></li>
+
+        <li class="li"><span class="keyword parmname">NetworkId</span></li>
+
+        <li class="li"><span class="keyword parmname">TlsProtocol</span></li>
+
+        <li class="li"><span class="keyword parmname">UserId</span></li>
+
+      </ul>
+
+      <p class="p">The API allows you to do many
+        powerful queries. A few examples are:</p>
+
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader vertical-align-top " id="d504084e1206">Sample Query </th>
+
+              <th class="featureTableHeader vertical-align-top " id="d504084e1209">Query String</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d504084e1206" data-title="Sample Query">Simple query showing UserId &amp; LoginTime for each user</td>
+
+              <td class="entry" headers="d504084e1209" data-title="Query String"><samp class="codeph soql">SELECT UserId, LoginTime from
+                LoginHistory;</samp></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e1206" data-title="Sample Query">Query showing logins only after a specified date and time</td>
+
+              <td class="entry" headers="d504084e1209" data-title="Query String"><samp class="codeph soql">SELECT UserId, LoginTime from LoginHistory WHERE
+                  LoginTime &gt; 2010-09-20T22:16:30.000Z;</samp></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e1206" data-title="Sample Query">Query showing logins for a specific time interval</td>
+
+              <td class="entry" headers="d504084e1209" data-title="Query String"><samp class="codeph soql">SELECT UserId, LoginTime from LoginHistory WHERE
+                  LoginTime &gt; 2010-09-20T22:16:30.000Z AND LoginTime &lt;
+                  2010-09-21T22:16:30.000Z;</samp></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e1206" data-title="Sample Query">Query showing the authentication service for a SAML login event, where
+                  <span class="keyword parmname">Id=AuthenticationServiceId</span> from LoginHistory</td>
+
+              <td class="entry" headers="d504084e1209" data-title="Query String"><samp class="codeph soql">SELECT name, issuer, samlVersion FROM SamlSsoConfig
+                  WHERE Id = '0LE###############'</samp></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d504084e1206" data-title="Sample Query">Query showing the authentication service for an authentication provider login
+                event, where <span class="keyword parmname">Id=AuthenticationServiceId</span> from
+                LoginHistory</td>
+
+              <td class="entry" headers="d504084e1209" data-title="Query String"><samp class="codeph soql">SELECT Type, DeveloperName FROM AuthProvider WHERE Id
+                  = '0SO###############'</samp></td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+  </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

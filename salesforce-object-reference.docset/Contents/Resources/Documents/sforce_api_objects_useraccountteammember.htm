@@ -1,0 +1,304 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserAccountTeamMember | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_useraccountteammember"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserAccountTeamMember</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a User on the
+   default account team of another User.</span></div>
+
+<p class="p">See also OpportunityTeamMember, which represents  a User on the opportunity team of an Opportunity</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d473746e76-d473920e73"><a name="d473746e76-d473920e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d726654e129">Field</th>
+
+<th class="featureTableHeader  " id="d726654e132">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/AccountAccessLevel" class="dashAnchor"></a> <span class="keyword parmname">AccountAccessLevel</span> </td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. For Account records that the user has added to his or her default account
+team, the level of access  the account team member has. . The possible
+values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+</ul>
+<p class="p">This field must be set to an access level that is higher than
+the organization’s default access level for accounts.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/CaseAccessLevel" class="dashAnchor"></a><span class="keyword parmname">CaseAccessLevel</span></td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Level of access that the account team member has to Case records related to the account. The possible values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+</ul>
+<p class="p">This field must be set to an access level that is higher than
+the organization's default access level for cases.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/ContactAccessLevel" class="dashAnchor"></a><span class="keyword parmname">ContactAccessLevel</span></td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ForContact records related to the account, the level of access that the
+account team member has. The possible values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+</ul>
+<p class="p">This field must be set to an access level that is higher than
+the organization's default access level for contacts.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a>When <span class="keyword parmname">DefaultContactAccess</span> is set to <samp class="codeph nolang">Controlled by Parent</samp>, you can’t create or update this field.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityAccessLevel" class="dashAnchor"></a> <span class="keyword parmname">OpportunityAccessLevel</span> </td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Restricted picklist, Update </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Level of access that the team member has to Opportunity records related to the account. The possible values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+</ul>
+<p class="p">This field must be set to an access level that is higher than
+the organization’s default access level for opportunities.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a> <span class="keyword parmname">OwnerId</span> </td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the User who owns the default account team.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/TeamMemberRole" class="dashAnchor"></a> <span class="keyword parmname">TeamMemberRole</span> </td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Role that the team member has on opportunities for which the user
+has added his or her default account team. The valid values are set
+by the organization’s administrator in the Account Team Roles
+picklist. Label is <strong class="ph uicontrol">Team Role</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d726654e129" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a> <span class="keyword parmname">UserId</span> </td>
+
+<td class="entry" headers="d726654e132" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the User who is a member of the default account team. This field cannot
+be updated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">This object is available only in organizations
+that have enabled the account teams functionality, which can be done
+using the  user interface.</p>
+</div>
+
+<p class="p">If you attempt to create a record that matches an existing record,
+the create call updates any modified fields and returns the existing
+record.</p>
+
+<p class="p">You can set up a User record so the default account team includes the others  who
+typically work with them on accounts. </p>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

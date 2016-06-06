@@ -1,0 +1,1057 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Network | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_network"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Network</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="network_comm_def"><a name="network_comm_def"><!-- --></a>Represents a community, which is a
+    customizable public or private space where employees, end-customers, and partners can
+    collaborate on best practices and business processes. Communities give you the
+    opportunity to share information, records, and files with coworkers and related external
+    stakeholders all in one place. <span class="ph" id="NetworkAPIVersion"><a name="NetworkAPIVersion"><!-- --></a>This object is available in API version 26.0 and
+   later.</span></span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section" id="networks_special_access">
+<a name="networks_special_access"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+<p class="p">This object is available only if Salesforce Communities is enabled in your organization.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d523686e106">Field Name</th>
+
+<th class="featureTableHeader  " id="d523686e109">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/AllowedExtensions" class="dashAnchor"></a><span class="keyword parmname" id="field_AllowedExtensions"><a name="field_AllowedExtensions"><!-- --></a>AllowedExtensions</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="AllowedExtensions_description"><a name="AllowedExtensions_description"><!-- --></a>Specifies the types of files allowed in your
+            community. This whitelist of file types lets you control what your community members
+            upload and also prevents spammers from polluting your community with inappropriate
+            files.</span> Available in API version 36.0 and later.<p class="p">Separate file types with a comma (for example:
+             <kbd class="ph userinput">jpg,docx,txt</kbd>). You can enter lowercase and uppercase letters.
+            You can enter up to 1,000 characters. To allow all file types, leave this field
+            empty.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/CaseCommentEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname" id="field_CaseCommentEmailTemplateId"><a name="field_CaseCommentEmailTemplateId"><!-- --></a>CaseCommentEmailTemplateId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="CaseCommentEmailTemplateId_description"><a name="CaseCommentEmailTemplateId_description"><!-- --></a>ID of the email template used when
+            submitting a comment on a case.</span> This field is available in API version 28.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ChangePasswordEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname" id="field_ChangePasswordEmailTemplateId"><a name="field_ChangePasswordEmailTemplateId"><!-- --></a>ChangePasswordEmailTemplateId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="ChangePasswordEmailTemplateId_description"><a name="ChangePasswordEmailTemplateId_description"><!-- --></a>ID of the email template used when
+            notifying a user that their password has been reset.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Description of the community.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmailFooterLogoId" class="dashAnchor"></a><span class="keyword parmname" id="field_EmailFooterLogoId"><a name="field_EmailFooterLogoId"><!-- --></a>EmailFooterLogoId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="EmailFooterLogoId_description"><a name="EmailFooterLogoId_description"><!-- --></a>ID of the Document object that displays as an
+            image in the footer of community
+            Chatter emails.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmailFooterText" class="dashAnchor"></a><span class="keyword parmname" id="field_EmailFooterText"><a name="field_EmailFooterText"><!-- --></a>EmailFooterText</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="EmailFooterText_description"><a name="EmailFooterText_description"><!-- --></a>Text that displays in the footer of community
+            Chatter emails.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><span class="keyword parmname" id="EmailSenderAddress"><a name="EmailSenderAddress"><!-- --></a>EmailSenderAddress</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="EmailSenderAddress_description"><a name="EmailSenderAddress_description"><!-- --></a>Read only. Email address from which community
+            emails are sent.</span><div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><span class="ph" id="sender_address_requires_verification"><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><a name="sender_address_requires_verification"><!-- --></a>To change the
+              <span class="keyword parmname">EmailSenderAddress</span> value, you must
+             first specify <span class="keyword parmname">NewSenderAddress</span>, which
+             triggers the sending of an address change verification email. After you complete the
+             address verification process, <span class="keyword parmname">EmailSenderAddress</span> changes to the specified
+              <span class="keyword parmname">NewSenderAddress</span>.</span></p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmailSenderName" class="dashAnchor"></a><span class="keyword parmname" id="field_EmailSenderName"><a name="field_EmailSenderName"><!-- --></a>EmailSenderName</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="EmailSenderName_description"><a name="EmailSenderName_description"><!-- --></a>Name from which community
+            emails are sent.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/FirstActivationDate" class="dashAnchor"></a><span class="keyword parmname" id="field_FirstActivationDate"><a name="field_FirstActivationDate"><!-- --></a>FirstActivationDate</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="FirstActivationDate_description"><a name="FirstActivationDate_description"><!-- --></a>The date the community was
+            first activated. This field is available in API version 34.0 and later. If the community was
+            activated or inactive prior to the release of API version 34.0, this field returns the
+            date the community was first created.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForgotPasswordEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname" id="field_ForgotPasswordEmailTemplateId"><a name="field_ForgotPasswordEmailTemplateId"><!-- --></a>ForgotPasswordEmailTemplateId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="ForgotPasswordEmailTemplateId_description"><a name="ForgotPasswordEmailTemplateId_description"><!-- --></a>ID of the email template used when
+            a user forgets their password.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/MaxFileSizeKb" class="dashAnchor"></a><span class="keyword parmname" id="field_MaxFileSizeKb"><a name="field_MaxFileSizeKb"><!-- --></a>MaxFileSizeKb</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="MaxFileSizeKb_description"><a name="MaxFileSizeKb_description"><!-- --></a>Specifies the maximum file size (in KBs) that
+            members can upload in your community.</span> Available in API version 36.0 and
+            later.<p class="p">Enter
+            a number between 3072 KB and your org’s maximum file size. To use the default limit of 2
+            GB, leave this field empty.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the community.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a><span class="keyword parmname" id="NewSenderAddress"><a name="NewSenderAddress"><!-- --></a>NewSenderAddress</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="NewSenderAddress_description"><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><a name="NewSenderAddress_description"><!-- --></a>Email address that has been entered as the new
+            value for <span class="keyword parmname">EmailSenderAddress</span> but has
+            not been verified yet. After a user has requested to change the sender email address and
+            has successfully responded to the verification email, the <span class="keyword parmname">NewSenderAddress</span> value overwrites the value in
+             <span class="keyword parmname">EmailSenderAddress</span>. This becomes the
+            email address from which community
+            emails are sent.</span><div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+            <a name="address_verification_caveats"><!-- --></a></p><ul class="ul bulletList" id="address_verification_caveats">
+             <li class="li"><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a>If verification is pending for a new email address and you set <span class="keyword parmname">NewSenderAddress</span> to null, this cancels the
+              verification request.</li>
+
+             <li class="li"><a name="//apple_ref/cpp/Field/EmailSenderAddress" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NewSenderAddress" class="dashAnchor"></a>
+<span class="keyword parmname">NewSenderAddress</span> is automatically
+              set to null after <span class="keyword parmname">EmailSenderAddress</span>
+              has been set to the new verified address.</li>
+
+             <li class="li">If verification is pending for a new email address and you specify a different new
+              address for this field, only the latest value is retained and used for
+              verification.</li>
+
+            </ul>
+
+           <p></p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsAllowInternalUserLogin" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowInternalUserLogin</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="AllowInternalUserLoginDesc"><a name="AllowInternalUserLoginDesc"><!-- --></a>Specifies whether internal users can log in with
+            their internal credentials on the community login page.</span> This field is available in
+           API version 37.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsAllowMembersToFlag" class="dashAnchor"></a><span class="keyword parmname" id="AllowMembersToFlag"><a name="AllowMembersToFlag"><!-- --></a>OptionsAllowMembersToFlag</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="AllowMembersToFlagDesc"><a name="AllowMembersToFlagDesc"><!-- --></a>Determines whether users can flag posts, comments, or
+            files as inappropriate in the community.</span><p class="p">This field is available in API version 29.0 and later. The ability to flag
+            files is available in version 30.0 and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsGuestChatterEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsGuestChatterEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="GuestChatterEnabledDesc"><a name="GuestChatterEnabledDesc"><!-- --></a>Specifies whether guest users can access public Chatter groups in the community
+            without logging in.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsInvitationsEnabled" class="dashAnchor"></a><span class="keyword parmname">OptionsInvitationsEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether users can invite others to the community.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsKnowledgeableEnabled" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsKnowledgeableEnabled"><a name="field_OptionsKnowledgeableEnabled"><!-- --></a>OptionsKnowledgeableEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether users can see knowledgeable people for topics and endorse people
+           for topics.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsNicknameDisplayEnabled" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsNicknameDisplayEnabled"><a name="field_OptionsNicknameDisplayEnabled"><!-- --></a>OptionsNicknameDisplayEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether user nicknames display instead of their first and last names in
+           most places in the community.<div class="p">A few restrictions to keep in mind about nickname display:<ul class="ul bulletList">
+     <li class="li">Private messages display full names. You can choose to turn off private messages to avoid
+      this. </li>
+
+     <li class="li">Records and user lookups on records show full names. Keep in mind, though, that you can
+      control record and user visibility with sharing rules.</li>
+
+     <li class="li">Mobile notifications in Salesforce1 show full
+      names. You can turn off mobile notifications in Salesforce1 to avoid this.</li>
+
+     <li class="li">Searches by first, last, and full names aren’t restricted and return matches, but the
+      search results display only nicknames. The auto-complete recommendations in global search and
+      the recent items list show any first, last, and full names that the user has already searched
+      by or has accessed via a record or another location.</li>
+
+    </ul>
+</div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsPrivateMessagesEnabled" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsPrivateMessagesEnabled"><a name="field_OptionsPrivateMessagesEnabled"><!-- --></a>OptionsPrivateMessagesEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether users can send and receive Chatter messages in the community.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsReputationEnabled" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsReputationEnabled"><a name="field_OptionsReputationEnabled"><!-- --></a>OptionsReputationEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines if reputation is calculated and displayed for community
+           members. This field is available in API version 31.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSelfRegistrationEnabled" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsSelfRegistrationEnabled"><a name="field_OptionsSelfRegistrationEnabled"><!-- --></a>OptionsSelfRegistrationEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether external users can self-register to join the community. External users are users with Community, Customer Portal, or partner portal licenses. If <samp class="codeph nolang">true</samp>, displays a <strong class="ph uicontrol">Not a
+            member?</strong> link on the login page that points to the default self-registration
+           page. This field is available in API version 28.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSendWelcomeEmail" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsSendWelcomeEmail"><a name="field_OptionsSendWelcomeEmail"><!-- --></a>OptionsSendWelcomeEmail</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="OptionsSendWelcomeEmail_description"><a name="OptionsSendWelcomeEmail_description"><!-- --></a>Determines whether a welcome email is
+            sent when a new user is added to the community.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsShowAllNetworkSettings" class="dashAnchor"></a><span class="keyword parmname" id="field_OptionsShowAllNetworkSettings"><a name="field_OptionsShowAllNetworkSettings"><!-- --></a>OptionsShowAllNetworkSettings</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Determines whether settings in Community Management
+           that were hidden based on how you set up your community are visible or remain
+            hidden.<p class="p">This field is available in API version 33.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSiteAsContainerEnabled" class="dashAnchor"></a><span class="keyword parmname" id="OptionsSiteAsContainer"><a name="OptionsSiteAsContainer"><!-- --></a>OptionsSiteAsContainerEnabled</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="SiteAsContinerDesc"><a name="SiteAsContinerDesc"><!-- --></a>Determines whether the community
+            uses Site.com pages instead of tabs.</span><p class="p">This field is available in API version 29.0
+            and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/SelfRegProfileId" class="dashAnchor"></a><span class="keyword parmname" id="SelfRegProfileId"><a name="SelfRegProfileId"><!-- --></a>SelfRegProfileId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="SelfRegProfileIDDesc"><a name="SelfRegProfileIDDesc"><!-- --></a>ID of the profile assigned to users who self register.
+            Only applies if self registration is enabled for the community.</span><p class="p">This field is available in API version 29.0 and later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="NetworkStatusDescriptionIntro"><a name="NetworkStatusDescriptionIntro"><!-- --></a>Status of the community.
+            Available values are:</span><a name="NetworkStatusDescriptions"><!-- --></a><ul class="ul bulletList" id="NetworkStatusDescriptions">
+            <li class="li"><a name="//apple_ref/cpp/Field/Published" class="dashAnchor"></a>
+<samp class="codeph nolang">Live</samp>—The community is
+             online and members can access it. Label is <span class="keyword parmname">Published</span>.</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Offline" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CommunityName
+              (Offline)" class="dashAnchor"></a>
+<samp class="codeph nolang">DownForMaintenance</samp>—The community
+             was previously published, but was taken offline. Members with “Create and Set Up Communities”
+             can still access the setup for offline communities
+             regardless of profile or membership. Members are not able to access offline communities,
+             but they still appear in the user interface drop-down as <span class="keyword parmname">CommunityName
+              (Offline)</span>. Label is <span class="keyword parmname">Offline</span>.</li>
+
+            <li class="li">
+<samp class="codeph nolang">UnderConstruction</samp>—The community
+             has not yet been published. Users with “Create and Set Up Communities”
+             can access communities in
+             this status if their profile is associated with the community.<p class="p"><a name="//apple_ref/cpp/Field/Preview" class="dashAnchor"></a> Once a community
+              is published, it can never be in this status again. Label is
+               <span class="keyword parmname">Preview</span>.</p>
+</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/UrlPathPrefix" class="dashAnchor"></a><span class="keyword parmname" id="URLPathPrefix"><a name="URLPathPrefix"><!-- --></a>UrlPathPrefix</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/UrlPathPrefix" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UrlPathPrefix" class="dashAnchor"></a>The <span class="keyword parmname">UrlPathPrefix</span> is a unique string
+           at the end of the URL for this community. For
+           example, in the community URL
+            <span class="ph filepath">UniversalTelco.force.com/customers</span>, <span class="ph filepath">customers</span>
+           is the <span class="keyword parmname">UrlPathPrefix</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d523686e106" data-title="Field Name"><a name="//apple_ref/cpp/Field/WelcomeEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname" id="field_WelcomeEmailTemplateId"><a name="field_WelcomeEmailTemplateId"><!-- --></a>WelcomeEmailTemplateId</span></td>
+
+       <td class="entry" headers="d523686e109" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="WelcomeEmailTemplateId_description"><a name="WelcomeEmailTemplateId_description"><!-- --></a>ID of the email template used when sending
+            welcome emails to new community
+            members.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to find, view, and
+update communities in your organization. If you have “Modify All Data,”
+“View All Data,” or “Create and Set Up Communities,” you can view all communities in the organization. Users without these permissions only see
+the <samp class="codeph nolang">Preview</samp> or <samp class="codeph nolang">Published</samp> communities that they’re members of. If you have “Create and Set Up Communities,” you can customize community settings.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

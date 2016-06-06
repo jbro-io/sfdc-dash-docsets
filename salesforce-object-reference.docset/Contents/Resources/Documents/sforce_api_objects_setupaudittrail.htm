@@ -1,0 +1,207 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SetupAuditTrail | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_setupaudittrail"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SetupAuditTrail</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents changes you or other administrators
+            made in your organization’s Setup area. This object is available in API version 15.0 and
+            later.</span></span></div>
+
+      <div class="section">
+         <div class="box message info" id="std">
+<a name="std"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>SetupAuditTrail is not a
+            supported standard controller. Using SetupAuditTrail as a standard controller
+            in a Visualforce page results in
+            an error.</p>
+</div>
+</div></div></div>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+         
+         <div class="p">
+<samp class="codeph nolang">query()</samp>,
+               <samp class="codeph nolang">retrieve()</samp><div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Aggregate queries aren’t supported on this object. For example, <samp class="codeph soql">SELECT count() FROM SetupAuditTrail</samp> works but <samp class="codeph soql">SELECT count(Id) FROM SetupAuditTrail</samp> fails.</p>
+</div>
+</div></div></div></div>
+</div>
+
+      </div>
+
+      <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+         
+         
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+               
+               
+               <thead class="thead sorted" align="left">
+                  <tr>
+                     <th class="featureTableHeader  " id="d670112e113">Field</th>
+
+                     <th class="featureTableHeader  " id="d670112e116">Details</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr>
+                     <td class="entry" headers="d670112e113" data-title="Field"><a name="//apple_ref/cpp/Field/Action" class="dashAnchor"></a><span class="keyword parmname">Action</span></td>
+
+                     <td class="entry" headers="d670112e116" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter,
+                                    Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/Display" class="dashAnchor"></a>The category of the change made in Setup. For example, a value of
+                                    <var class="keyword varname">PermSetCreate</var> indicates that an administrator
+                                 created a permission set. The <span class="keyword parmname">Display</span> field
+                                 contains more specific information.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d670112e113" data-title="Field"><a name="//apple_ref/cpp/Field/DelegateUser" class="dashAnchor"></a><span class="keyword parmname">DelegateUser</span></td>
+
+                     <td class="entry" headers="d670112e116" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Filter,
+                                    Nillable,
+                                    Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The Login-As user who executed the action in Setup. If a Login-As
+                                 user didn’t perform the action, this field is blank. This field is
+                                 available in API
+                                 version 35.0 and later.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d670112e113" data-title="Field"><a name="//apple_ref/cpp/Field/Display" class="dashAnchor"></a><span class="keyword parmname">Display</span></td>
+
+                     <td class="entry" headers="d670112e116" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable,
+                                    Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/Display" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Action" class="dashAnchor"></a>The full description of changes made in Setup. For example, if the
+                                    <span class="keyword parmname">Action</span> field has a value of
+                                    <var class="keyword varname">PermSetCreate</var>, the
+                                    <span class="keyword parmname">Display</span> field has a value like “Created
+                                 permission set MAD: with user license Salesforce.”</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d670112e113" data-title="Field"><a name="//apple_ref/cpp/Field/Section" class="dashAnchor"></a><span class="keyword parmname">Section</span></td>
+
+                     <td class="entry" headers="d670112e116" data-title="Details">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">string</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Nillable,
+                                    Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The section in the Setup menu where the action occurred. For
+                                 example, Manage Users or Company Profile.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table></div>
+
+         <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You can use SOQL joins
+            to get the information you need more quickly. For example, running <samp class="codeph soql">SELECT CreatedBy.Name FROM SetupAuditTrail LIMIT 10</samp>
+            returns the first and last names of the last 10 people to make changes in Setup.</p>
+</div>
+</div></div></div></div>
+
+      </div>
+
+   </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

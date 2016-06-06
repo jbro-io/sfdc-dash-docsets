@@ -1,0 +1,848 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ForecastingItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_forecastingitem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ForecastingItem</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="ForecastingItemDesc"><a name="ForecastingItemDesc"><!-- --></a>This is a read-only object used for
+    individual forecast amounts. Users see amounts based on their perspectives and forecast roles.
+    The amounts users see include one of the following when forecasting in revenue: <span class="keyword parmname">AmountWithoutAdjustments</span>, <span class="keyword parmname">AmountWithoutManagerAdjustment</span>, <span class="keyword parmname">ForecastAmount</span>, <span class="keyword parmname">OwnerOnlyAmount</span>. The amounts users see include
+    one of the following when forecasting in quantity: <span class="keyword parmname">QuantityWithoutAdjustments</span>, <span class="keyword parmname">QuantityWithoutManagerAdjustments</span>, <span class="keyword parmname">ForecastQuantity</span>, <span class="keyword parmname">OwnerOnlyQuantity</span>.</span>
+   Available in API versions 26 and greater.</span></div>
+
+<div class="p">Additionally, note that users:<ul class="ul bulletList">
+    <li class="li">with the “View All Forecasts” permission have access to all ForecastingItem
+     fields.</li>
+
+    <li class="li">without the “View All Forecasts” permission have access to all fields for
+     their own subordinates.</li>
+
+   </ul>
+Other users can see the ForecastingItem object, but not its records.</div>
+
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This information only applies
+to Collaborative Forecasts.</p>
+</div>
+</div></div></div></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d428419e125">Field Name</th>
+
+<th class="featureTableHeader  " id="d428419e128">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AmountWithoutAdjustments" class="dashAnchor"></a><span class="keyword parmname" id="AmountWithoutAdjustments"><a name="AmountWithoutAdjustments"><!-- --></a>AmountWithoutAdjustments</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The sum of
+              all of a person’s owned revenue opportunities and also his or her
+              subordinates’ opportunities, without adjustments. Subordinates include everyone
+              reporting up to a person in the forecast hierarchy.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/AmountWithoutManagerAdjustment" class="dashAnchor"></a><span class="keyword parmname" id="AmountWithoutManagerAdjustments"><a name="AmountWithoutManagerAdjustments"><!-- --></a>AmountWithoutManagerAdjustment</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The
+              forecast number as seen by the forecast owner. This is the sum of the owner’s
+              revenue opportunities and his or her subordinates’ opportunities, including
+              adjustments made by the forecast owner on her or her own or subordinates’
+              forecasts. <em class="ph i">&nbsp;It doesn’t include adjustments made by forecast managers
+                above the owner in the forecast hierarchy.</em></p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForecastAmount" class="dashAnchor"></a><span class="keyword parmname" id="ForecastAmount"><a name="ForecastAmount"><!-- --></a>ForecastAmount</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The revenue forecast
+              from the forecast manager’s perspective and the sum of the owner’s and
+              subordinates’ opportunities, including all forecast adjustments.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a><span class="keyword parmname">ForecastCategoryName</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">A forecast category is the category within the sales cycle that
+                  an opportunity is assigned to based on its opportunity stage. The standard
+                  forecast categories are Pipeline, Best Case, Commit, Omitted, and Closed. You can
+                  customize forecast category names for your organization.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForecastQuantity" class="dashAnchor"></a><span class="keyword parmname" id="ForecastQuantity"><a name="ForecastQuantity"><!-- --></a>ForecastQuantity</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The quantity forecast
+              from the forecast manager’s perspective and the sum of the owner’s and
+              subordinates’ opportunities, including all forecast adjustments.
+            This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForecastingItemCategory" class="dashAnchor"></a><span class="keyword parmname">ForecastingItemCategory</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ForecastingItemCategory" class="dashAnchor"></a>This field indicates which type of forecast rollup the forecasting item belongs to.
+           Depending on whether your organization uses individual forecast category rollups or
+           cumulative forecast rollups, you have these possible values for the
+            <span class="keyword parmname">ForecastingItemCategory</span> field. <dl class="dl detailList">
+            
+             <dt class="dt dlterm"><em class="ph i">Individual forecast category rollups:</em></dt>
+
+             <dd class="dd">
+              <ul class="ul bulletList">
+               <li class="li">PipelineOnly - Rollup from Pipeline opportunities only.</li>
+
+               <li class="li">BestCaseOnly - Rollup from Best Case opportunities only. Adjustable.</li>
+
+               <li class="li">CommitOnly - Rollup from Commit opportunities only. Adjustable.</li>
+
+              </ul>
+
+             </dd>
+
+            
+            
+             <dt class="dt dlterm"><em class="ph i">Cumulative forecast rollups:</em></dt>
+
+             <dd class="dd">
+              <ul class="ul bulletList">
+               <li class="li">OpenPipeline - Rollup from Pipeline + Best Case + Commit opportunities.</li>
+
+               <li class="li">BestCaseForecast - Rollup from Best Case + Commit + Closed opportunities.
+                Adjustable.</li>
+
+               <li class="li">CommitForecast - Rollup from Commit + Closed opportunities. Adjustable.</li>
+
+              </ul>
+
+             </dd>
+
+            
+            
+             <dt class="dt dlterm"><em class="ph i">Either cumulative or individual forecast category rollups:</em></dt>
+
+             <dd class="dd">
+              <ul class="ul bulletList">
+               <li class="li">ClosedOnly - Rollup from Closed opportunities only.</li>
+
+              </ul>
+
+             </dd>
+
+            
+           </dl>
+<p class="p"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ForecastingItemCategory" class="dashAnchor"></a>The <span class="keyword parmname">ForecastingItemCategory</span> field differs from the
+             <span class="keyword parmname">ForecastCategoryName</span> field.</p>
+<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a>The <span class="keyword parmname">ForecastCategoryName</span> field represents the forecast category
+             of the <em class="ph i">underlying opportunities</em> rolling up to forecast amounts. In organizations
+             using cumulative forecast rollups, the <span class="keyword parmname">ForecastCategoryName</span> field
+             can be null because the cumulative forecast amounts include opportunities from multiple
+             forecast categories.</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ForecastingItemCategory" class="dashAnchor"></a>The new <span class="keyword parmname">ForecastingItemCategory</span> field represents the <em class="ph i">type of
+              rollup</em> a forecast amount or adjustment is from. In organizations using individual
+             forecast category columns, it contains the individual forecast rollup categories. In
+             organizations using cumulative forecast rollups, it contains the cumulative rollup
+             categories.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ForecastingTypeId" class="dashAnchor"></a><span class="keyword parmname">ForecastingTypeId</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the related ForecastingType.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasAdjustment" class="dashAnchor"></a><span class="keyword parmname" id="HasAdjustment"><a name="HasAdjustment"><!-- --></a>HasAdjustment</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">A flag that indicates if the forecasting item includes a <em class="ph i">manager</em> adjustment.
+            This flag is true only when the item includes an adjustment and the user performing the
+            query has read access to the adjustment.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasOwnerAdjustment" class="dashAnchor"></a><span class="keyword parmname">HasOwnerAdjustment</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">A flag that indicates if the forecasting item includes an <em class="ph i">owner</em> adjustment.
+            This flag is true only when the item includes an adjustment and the user performing the
+            query has read access to the adjustment. Available in API versions 33 and greater.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsAmount" class="dashAnchor"></a><span class="keyword parmname">IsAmount</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p"><a name="//apple_ref/cpp/Field/IsQuantity" class="dashAnchor"></a>True indicates that the adjustment is made in a revenue amount. If false, then
+             <span class="keyword parmname">IsQuantity</span> must be true. This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsQuantity" class="dashAnchor"></a><span class="keyword parmname">IsQuantity</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p"><a name="//apple_ref/cpp/Field/IsAmount" class="dashAnchor"></a>True indicates that the adjustment is made in a quantity amount. If false, then
+             <span class="keyword parmname">IsAmount</span> must be true. This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsUpToDate" class="dashAnchor"></a><span class="keyword parmname">IsUpToDate</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">A flag indicating whether or not a specific forecasting item reflects current
+            information. For example, if users are making adjustments which are in process, the item
+            won’t be up-to-date.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the forecast owner.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerOnlyAmount" class="dashAnchor"></a><span class="keyword parmname" id="OwnerOnlyAmount"><a name="OwnerOnlyAmount"><!-- --></a>OwnerOnlyAmount</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The sum of all of a
+              person’s revenue opportunities, without adjustments.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerOnlyQuantity" class="dashAnchor"></a><span class="keyword parmname" id="OwnerOnlyQuantity"><a name="OwnerOnlyQuantity"><!-- --></a>OwnerOnlyQuantity</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The sum of all of a
+              person’s quantity opportunities, without adjustments.
+            This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentForecastingItemId" class="dashAnchor"></a><span class="keyword parmname">ParentForecastingItemId</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The ID of the ForecastingItem that the
+            current item rolls up to.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/PeriodId" class="dashAnchor"></a><span class="keyword parmname">PeriodId</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Period ID for the forecast.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/ProductFamily" class="dashAnchor"></a><span class="keyword parmname">ProductFamily</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The product family of the forecast item. This field is available in API version 29 and
+           later. Read only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/QuantityWithoutAdjustments" class="dashAnchor"></a><span class="keyword parmname" id="QuantityWithoutAdjustments"><a name="QuantityWithoutAdjustments"><!-- --></a>QuantityWithoutAdjustments</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The sum of
+              a person’s owned quantity opportunities and also his or her
+              subordinates’ opportunities, without adjustments. Subordinates include everyone
+              reporting up to a person in the forecast hierarchy.
+            This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d428419e125" data-title="Field Name"><a name="//apple_ref/cpp/Field/QuantityWithoutManagerAdjustments" class="dashAnchor"></a><span class="keyword parmname" id="QuantityWithoutManagerAdjustments"><a name="QuantityWithoutManagerAdjustments"><!-- --></a>QuantityWithoutManagerAdjustments</span></td>
+
+       <td class="entry" headers="d428419e128" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The
+              forecast number as seen by the forecast owner. This is the sum of the owner’s
+              quantity opportunities and his or her subordinates’ opportunities, including
+              adjustments made on the subordinates’ forecasts. <em class="ph i">&nbsp;It doesn’t
+                include adjustments made by forecast managers above the owner in the forecast
+                hierarchy.</em>
+            This field is available in API version 28 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to obtain individual forecast amounts, either with or without adjustments, based
+    on a user’s perspective and forecast role. The ForecastingItem object is visible to all
+    users, but only forecast managers and users above them in the forecast hierarchy can read or
+    write ForecastingAdjustment records.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Beginning with API version 30.0, organizations can have more than
+      one forecasting type enabled. The <span class="keyword parmname">ForecastingQuota</span>,
+        <span class="keyword parmname">ForecastingAdjustment</span>, <span class="keyword parmname">ForecastingOwnerAdjustment</span>,
+        <span class="keyword parmname">ForecastingItem</span>, and <span class="keyword parmname">ForecastingFact</span> objects can
+      all have records with different <span class="keyword parmname">ForecastingTypeId</span> values. Use the
+      ForecastingType object to determine the ID for each forecast type and then filter
+        <span class="keyword parmname">ForecastingQuota</span>, <span class="keyword parmname">ForecastingAdjustment</span>,
+        <span class="keyword parmname">ForecastingItem</span>, or <span class="keyword parmname">ForecastingFact</span> records as
+      necessary.
+    </p>
+</div>
+</div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingadjustment.htm" title="This object represents an individual sales manager’s adjustment for a subordinate’s forecast via a ForecastingItem. Available in API versions 26 and greater. This object is separate from the ForecastingOwnerAdjustment object, which represents forecast users’ adjustments of their own forecasts.">ForecastingAdjustment</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingfact.htm" title="This is a read-only object linking a ForecastingItem with its opportunities, such as opportunities that share the same owner or forecast category and have a closing date within the period of the forecasting item. Available in API versions 26 and greater.">ForecastingFact</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingquota.htm" title="This object represents an individual user’s quota for a specified time period. The “Manage Quotas” user permission is required for creating, updating, or deleting quotas. (Users can only edit their subordinates’ quotas, not their own.) The “View All Forecasts��� permission is required to View any user's forecast, regardless of the forecast role hierarchy. Available in API versions 25 and greater. Forecast managers can view the forecasts of subordinates who report to them in the forecast hierarchy.">ForecastingQuota</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

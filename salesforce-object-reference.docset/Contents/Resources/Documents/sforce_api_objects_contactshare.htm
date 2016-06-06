@@ -1,0 +1,230 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContactShare | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contactshare"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContactShare</span></h1><div class="body">
+<div class="shortdesc">Represents a list of access levels to a Contact along with an
+  explanation of the access level. For example, if you have access to a record because you own it,
+  the <span class="keyword parmname">ContactAccessLevel</span> is <span class="keyword parmname">All</span> and <span class="keyword parmname">RowCause</span> is Owner.</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d164267e67-d164414e73"><a name="d164267e67-d164414e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d248722e116">Field</th>
+
+<th class="featureTableHeader  " id="d248722e119">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d248722e116" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a> <span class="keyword parmname">ContactId</span> </td>
+
+<td class="entry" headers="d248722e119" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the Contact associated with this sharing entry. This field can't be updated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248722e116" data-title="Field"><a name="//apple_ref/cpp/Field/ContactAccessLevel" class="dashAnchor"></a> <span class="keyword parmname" id="contactaccesslevel"><a name="contactaccesslevel"><!-- --></a>ContactAccessLevel</span> </td>
+
+<td class="entry" headers="d248722e119" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Level of access that the User or Group has to cases associated with the account Contact. The possible values are:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/All" class="dashAnchor"></a>
+<span class="keyword parmname">All</span> This value is not valid for create or update.</li>
+
+</ul>
+This field must be set to an access level that is higher than
+the organization’s default access level for contacts.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248722e116" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d248722e119" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248722e116" data-title="Field"><a name="//apple_ref/cpp/Field/RowCause" class="dashAnchor"></a> <span class="keyword parmname" id="rowcause"><a name="rowcause"><!-- --></a>RowCause</span> </td>
+
+<td class="entry" headers="d248722e119" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Reason that this sharing entry exists. You can only write to this field when its value is either
+           omitted or set to <samp class="codeph nolang">Manual</samp> (default). There are many
+           possible values, including: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Rule</samp>—The User
+             or Group has access via a Contact
+             sharing rule.</li>
+
+            <li class="li">
+<samp class="codeph nolang">ImplicitChild</samp>—The User
+             or Group has access to the Contact via
+             sharing access on the associated Account.</li>
+
+            <li class="li">
+<samp class="codeph nolang">Manual</samp>—The User
+             or Group has access because a User
+             with “All” access manually shared the Contact with
+             them.</li>
+
+            <li class="li">
+<samp class="codeph nolang"><span class="ph" id="Owner"><a name="Owner"><!-- --></a>Owner</span></samp>—The User
+             is the owner of the Contact.</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d248722e116" data-title="Field"><a name="//apple_ref/cpp/Field/UserOrGroupId" class="dashAnchor"></a> <span class="keyword parmname">UserOrGroupId</span>
+</td>
+
+<td class="entry" headers="d248722e119" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the User or Group that has been given access to the Contact. This field can't be updated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">This object allows you to determine
+which users and groups can view or edit Contact records owned by other users.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_accountshare.htm" title="Represents a sharing entry on an Account.">AccountShare</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

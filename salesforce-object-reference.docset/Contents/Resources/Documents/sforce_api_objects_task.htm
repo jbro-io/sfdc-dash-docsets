@@ -1,0 +1,1614 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Task | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_task"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Task</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a business activity such as making a phone call or other
+      to-do items. In the user interface, Task and
+        Event
+      records are collectively referred to as activities.</span></div>
+
+    <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Task fields related to calls are exclusive to Salesforce CRM Call Center. Additionally, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">delete()</samp>, and
+          <samp class="codeph nolang">update()</samp>
+        aren’t allowed with tasks related to more than one contact in API versions 23.0 and
+        earlier.</p>
+</div>
+</div></div></div></div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">create()</samp>,
+          <samp class="codeph nolang">delete()</samp>,
+          <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>,
+          <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>,
+          <samp class="codeph nolang">upsert()</samp></p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d690204e149">Field</th>
+
+              <th class="featureTableHeader  " id="d690204e152">Field Type</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>
+                <span class="keyword parmname">AccountId</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Sort, Filter, Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>Represents the ID of the related Account. The <span class="keyword parmname">AccountId</span> is determined as follows.<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>If the
+                        value of <span class="keyword parmname">WhatId</span> is any of the following objects, then
+                          Salesforce uses
+                        that object’s <span class="keyword parmname">AccountId</span>.</p>
+<ul class="ul bulletList">
+                        <li class="li">Account</li>
+
+                        <li class="li">Opportunity</li>
+
+                        <li class="li">Contract</li>
+
+                        <li class="li">Custom object that is a child of Account</li>
+
+                      </ul>
+<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>If the value of the <span class="keyword parmname">WhatId</span>field is any other
+                        object, and the value of the <span class="keyword parmname">WhoId</span> field is a Contact object, then Salesforce uses that contact’s
+                          <span class="keyword parmname">AccountId</span>. (If your organization uses Shared
+                        Activities, then Salesforce uses the
+                          <span class="keyword parmname">AccountId</span> of the primary contact.)</p>
+<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>Otherwise,
+                          Salesforce sets
+                        the value of the <span class="keyword parmname">AccountId</span> field to <samp class="codeph nolang">null</samp>.</p>
+<p class="p">For information on IDs, see <a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435616">ID Field Type.</a></p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a>
+                <span class="keyword parmname" id="i1467334"><a name="i1467334"><!-- --></a>ActivityDate</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Group, Sort, Create, Filter, Nillable, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Represents the due date of the task. <span class="ph" id="timestamp_desc"><a name="timestamp_desc"><!-- --></a>This field has
+                        a timestamp that is always set to midnight in the Coordinated Universal Time
+                        (UTC) time zone. The timestamp is not relevant; do not attempt to alter it
+                        in order to accommodate time zone differences.</span> Label is <strong class="ph uicontrol">Due
+                        Date</strong>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/IsRecurrence" class="dashAnchor"></a>This field can’t be set or updated for a
+                        recurring task (<span class="keyword parmname">IsRecurrence</span> is <samp class="codeph nolang">true</samp>).</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/CallDisposition" class="dashAnchor"></a><span class="keyword parmname">CallDisposition</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">Represents the result
+ of a given call, for example, “we'll call back,” or
+“call unsuccessful.” Limit is 255 characters. </p>
+
+                      <p class="p" id="cti_no_fls"><a name="cti_no_fls"><!-- --></a>Not subject to field-level security, available for any user
+                        in an organization with Salesforce CRM Call Center.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/CallDurationInSeconds" class="dashAnchor"></a><span class="keyword parmname">CallDurationInSeconds</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">Duration of the call
+in seconds.</p>
+
+                      <p class="p">Not subject to field-level security, available for any user
+                        in an organization with Salesforce CRM Call Center.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/CallObject" class="dashAnchor"></a><span class="keyword parmname">CallObject</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">Name of a call center.
+Limit is 255 characters.</p>
+
+                      <p class="p">Not subject to field-level security, available for any user
+                        in an organization with Salesforce CRM Call Center.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/CallType" class="dashAnchor"></a><span class="keyword parmname">CallType</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p">The type of call being
+answered: Inbound, Internal, or Outbound.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Nillable</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>
+                <span class="keyword parmname">Description</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Contains a text description of the task.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsArchived" class="dashAnchor"></a><span class="keyword parmname">IsArchived</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the event has been archived.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a>
+                <span class="keyword parmname" id="i1467379"><a name="i1467379"><!-- --></a>IsClosed</span>
+</td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Indicates whether the task has been completed (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Is only
+                      set indirectly via the <span class="keyword parmname">Status</span> picklist. Label is
+                        <strong class="ph uicontrol">Closed</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsHighPriority" class="dashAnchor"></a><span class="keyword parmname">IsHighPriority</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a>Indicates a high-priority task. This field is derived from the
+                        <span class="keyword parmname">Priority</span> field.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsRecurrence" class="dashAnchor"></a><span class="keyword parmname" id="TaskIsRecurrence"><a name="TaskIsRecurrence"><!-- --></a>IsRecurrence</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceType" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RecurrenceStartDateOnly" class="dashAnchor"></a>Indicates whether the task is scheduled to repeat itself (<samp class="codeph nolang">true</samp>) or only occurs once (<samp class="codeph nolang">false</samp>). This is a read-only field on update,
+                      but not on create. If this field value is <samp class="codeph nolang">true</samp>, then <span class="keyword parmname">RecurrenceStartDateOnly</span>, <span class="keyword parmname">RecurrenceEndDateOnly</span>, <span class="keyword parmname">RecurrenceType</span>, and any recurrence fields associated with the given recurrence type must
+                      be populated. See <strong class="ph b">Recurring Tasks</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><span class="keyword parmname">IsReminderSet</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether a popup reminder has been set for the task (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a><span class="keyword parmname" id="IsVisibleInSelfService"><a name="IsVisibleInSelfService"><!-- --></a>IsVisibleInSelfService</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether a task associated with an object can be viewed in the Customer Portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).<p class="p"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a>If your organization has enabled Communities, tasks marked <span class="keyword parmname">IsVisibleInSelfService</span> are visible to
+                        any external user in the community, as long as the user has access to the
+                        record the task was created on.</p>
+<p class="p">This
+                        field is available when Customer Portal or partner portal are
+                        enabled OR Communities is enabled and you have Customer Portal or partner portal
+                        licenses.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>
+<span class="keyword parmname">OwnerId</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the User who owns the record. Label is <strong class="ph uicontrol">Assigned To ID</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a>
+                <span class="keyword parmname" id="i1467447"><a name="i1467447"><!-- --></a>Priority</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Group, Sort, Create, Filter, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Required. Indicates the importance or urgency of a task, such as high or
+                      low.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceActivityId" class="dashAnchor"></a><span class="keyword parmname">RecurrenceActivityId</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Read-only. Not required on create. ID of the main record of the recurring
+                      task. Subsequent occurrences have the same value in this field.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceDayOfMonth" class="dashAnchor"></a><span class="keyword parmname" id="RecurDayOfMonth"><a name="RecurDayOfMonth"><!-- --></a>RecurrenceDayOfMonth</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The day of the month in which the task repeats.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceDayOfWeekMask" class="dashAnchor"></a><span class="keyword parmname" id="RecurDayOfWeekMask"><a name="RecurDayOfWeekMask"><!-- --></a>RecurrenceDayOfWeekMask</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The day or days of the week on which the task repeats. This field
+                        contains a bitmask. The values are as follows:<ul class="ul bulletList">
+                        <li class="li">Sunday = 1</li>
+
+                        <li class="li">Monday = 2</li>
+
+                        <li class="li">Tuesday = 4</li>
+
+                        <li class="li">Wednesday = 8</li>
+
+                        <li class="li">Thursday = 16</li>
+
+                        <li class="li">Friday = 32</li>
+
+                        <li class="li">Saturday = 64</li>
+
+                      </ul>
+Multiple days are represented as the sum of their numerical values.
+                        For example, Tuesday and Thursday = 4 + 16 = 20.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a><span class="keyword parmname" id="TaskRecurEndDateOnly"><a name="TaskRecurEndDateOnly"><!-- --></a>RecurrenceEndDateOnly</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The last date on which the task repeats. This field has
+                        a timestamp that is always set to midnight in the Coordinated Universal Time
+                        (UTC) time zone. The timestamp is not relevant; do not attempt to alter it
+                        in order to accommodate time zone differences.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceInstance" class="dashAnchor"></a><span class="keyword parmname" id="TaksRecurrenceInstance"><a name="TaksRecurrenceInstance"><!-- --></a>RecurrenceInstance</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The frequency of the recurring task. For example, “2nd” or
+                      “3rd.”</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceInterval" class="dashAnchor"></a><span class="keyword parmname" id="RecurInterval"><a name="RecurInterval"><!-- --></a>RecurrenceInterval</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The interval between recurring tasks.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceMonthOfYear" class="dashAnchor"></a><span class="keyword parmname" id="RecurMonthOfYear"><a name="RecurMonthOfYear"><!-- --></a>RecurrenceMonthOfYear</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The month of the year in which the task repeats.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceRegeneratedType" class="dashAnchor"></a><span class="keyword parmname" id="TaskRecurrenceRegeneratedType"><a name="TaskRecurrenceRegeneratedType"><!-- --></a>RecurrenceRegeneratedType</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceInterval" class="dashAnchor"></a>Represents what triggers a repeating task to repeat. Add this field to a
+                      page layout together with the <span class="keyword parmname">RecurrenceInterval</span> field,
+                      which determines the number of days between the triggering date (due date or
+                      close date) and the due date of the next repeating task in the series.<p class="p">Label
+                        is <strong class="ph uicontrol">Repeat This Task</strong>. This field has the following
+                        picklist values:</p>
+<ul class="ul bulletList">
+                        <li class="li">
+<strong class="ph uicontrol">None</strong>: The task doesn’t repeat.</li>
+
+                        <li class="li">
+<strong class="ph uicontrol">After due date</strong>: The next repeating task will be
+                          due the specified number of days after the current task’s due
+                          date.</li>
+
+                        <li class="li">
+<strong class="ph uicontrol">After the task is closed</strong>: The next repeating task
+                          will be due the specified number of days after the current task is
+                          closed.</li>
+
+                        <li class="li">
+<strong class="ph uicontrol">(Task closed)</strong>: This task, now closed, was opened
+                          as part of a repeating series.</li>
+
+                      </ul>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceStartDateOnly" class="dashAnchor"></a><span class="keyword parmname" id="TaskRecurStartDateOnly"><a name="TaskRecurStartDateOnly"><!-- --></a>RecurrenceStartDateOnly</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a>The date when the recurring task begins. Must be a date and time before
+                        <span class="keyword parmname">RecurrenceEndDateOnly</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceTimeZoneSidKey" class="dashAnchor"></a><span class="keyword parmname" id="RecurTimeZone"><a name="RecurTimeZone"><!-- --></a>RecurrenceTimeZoneSidKey</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The time zone associated with the recurring task. For example,
+                      “UTC-8:00” for Pacific Standard Time.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceType" class="dashAnchor"></a><span class="keyword parmname" id="TaskRecurrenceType"><a name="TaskRecurrenceType"><!-- --></a>RecurrenceType</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceInstance" class="dashAnchor"></a>Indicates how often the task repeats. For example, daily, weekly, or every
+                      nth month (where “nth” is defined in <span class="keyword parmname">RecurrenceInstance</span>).</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/ReminderDateTime" class="dashAnchor"></a><span class="keyword parmname">ReminderDateTime</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a>Represents the time when the reminder is
+                        scheduled to fire, if <span class="keyword parmname">IsReminderSet</span> is set to <samp class="codeph nolang">true</samp>. If <span class="keyword parmname">IsReminderSet</span> is set to <samp class="codeph nolang">false</samp>, then the user may
+                        have deselected the reminder checkbox in the Salesforce user
+                        interface, or the reminder has already fired at the time indicated by the
+                        value.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname" id="i1467468"><a name="i1467468"><!-- --></a>Status</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Required. The current status of the task, such as In Progress or Completed.
+                      Each predefined <span class="keyword parmname">Status</span> field implies a value for the <span class="keyword parmname">IsClosed</span> flag. To obtain picklist values, query the TaskStatus object.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/IsRecurrence" class="dashAnchor"></a>This field can’t be updated for recurring tasks
+                          (<span class="keyword parmname">IsRecurrence</span> is <samp class="codeph nolang">true</samp>).</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/Subject" class="dashAnchor"></a>
+<span class="keyword parmname">Subject</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">combobox</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The subject line of the task, such as “Call” or “Send
+                      Quote.” Limit: 255 characters.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/TaskSubtype" class="dashAnchor"></a><span class="keyword parmname" id="tasksubtype_parmname"><a name="tasksubtype_parmname"><!-- --></a>TaskSubtype</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">
+<a name="activitysubtype_dlentry"><!-- --></a>Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="tasksubtype_desc"><a name="tasksubtype_desc"><!-- --></a>Provides standard subtypes to facilitate creating
+                        and searching for specific task subtypes. This field isn’t
+                          updateable.</span><div class="p"><a name="//apple_ref/cpp/Field/TaskSubtype" class="dashAnchor"></a>
+<span class="keyword parmname">TaskSubtype</span> values:<ul class="ul bulletList">
+                          <li class="li">Task</li>
+
+                          <li class="li">Email</li>
+
+                          <li class="li">Call</li>
+
+                        </ul>
+</div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/TaskWhoIds" class="dashAnchor"></a><span class="keyword parmname" id="TaskWhoRelatins_parmname"><a name="TaskWhoRelatins_parmname"><!-- --></a>TaskWhoIds</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">JunctionIdList</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="TaskWhoRelations_desc_ph"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TaskWhoIds" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/TaskWhoRelations" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a><a name="TaskWhoRelations_desc_ph"><!-- --></a>A string array of contact or lead IDs
+                        related to this task. This <span class="keyword parmname">JunctionIdList</span> field is
+                        linked to the <span class="keyword parmname">TaskWhoRelations</span> child relationship.
+                          <span class="keyword parmname">TaskWhoIds</span> is only available when the shared
+                        activities setting is enabled. The first contact or lead ID in the list
+                        becomes the primary <span class="keyword parmname">WhoId</span> if you don’t specify a
+                        primary <span class="keyword parmname">WhoId</span>.</span><div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p><a name="//apple_ref/cpp/Field/fieldsToNull" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a>Adding a
+                  <span class="keyword parmname">JunctionIdList</span> field name to the
+                  <span class="keyword parmname">fieldsToNull</span> property deletes all related junction records.
+                This action can’t be undone.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The type of task, such as Call or Meeting.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/WhatCount" class="dashAnchor"></a><span class="keyword parmname">WhatCount</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>
+<span class="ph" id="SharedActivitiesSpecific"><a name="SharedActivitiesSpecific"><!-- --></a>Available to organizations that have
+                        Shared Activities enabled.</span> Count of related TaskRelations pertaining to <span class="keyword parmname">WhatId</span>. Count of the
+                        <span class="keyword parmname">WhatId</span> must be <kbd class="ph userinput">1</kbd> or less.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><span class="keyword parmname" id="WhatId"><a name="WhatId"><!-- --></a>WhatId</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Related To ID" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>The <span class="keyword parmname">WhatId</span> represents nonhuman
+             objects such as accounts, opportunities, campaigns, cases, or custom objects.
+              <span class="keyword parmname">WhatId</span>s are polymorphic. Polymorphic means a
+              <span class="keyword parmname">WhatId</span> is equivalent to the ID of a related object. The label is
+              <span class="keyword parmname">Related To ID</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/WhoCount" class="dashAnchor"></a><span class="keyword parmname">WhoCount</span></td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a>Available to organizations that have
+                        Shared Activities enabled. Count of
+                      related TaskRelations pertaining to <span class="keyword parmname">WhoId</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e149" data-title="Field"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1467560"><a name="i1467560"><!-- --></a>WhoId</span>
+              </td>
+
+              <td class="entry" headers="d690204e152" data-title="Field Type">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+                      <p class="p"><a name="//apple_ref/cpp/Field/Name ID" class="dashAnchor"></a>The WhoId represents a human such as a lead
+             or a contact. WhoIds are polymorphic. Polymorphic means a WhoId is equivalent to a
+             contact’s ID or a lead’s ID. The label is <span class="keyword parmname">Name ID</span>.</p>
+
+                      <p class="p"><a name="//apple_ref/cpp/Field/Name ID" class="dashAnchor"></a>If Shared Activities is enabled, the
+             value of this field is the ID of the related lead or primary contact. If you add,
+             update, or remove the WhoId field, you might encounter problems with triggers,
+             workflows, and data validation rules that are associated with the record. The label is
+              <span class="keyword parmname">Name ID</span>.</p>
+
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section" id="sforce_api_objects_task_usage_section">
+<a name="sforce_api_objects_task_usage_section"><!-- --></a><h2 class="helpHead2">Usage</h2>
+<div class="p">
+<div class="sectiondiv">
+        <div class="p">
+<span class="ph" id="RecurTasks"><a name="RecurTasks"><!-- --></a><strong class="ph b">Recurring Tasks</strong></span><ul class="ul bulletList">
+            <li class="li">Recurring tasks are available in API version 16.0 and
+              later.</li>
+
+            <li class="li">After a task is created, it can’t be changed from recurring to nonrecurring
+              or vice versa.</li>
+
+            <li class="li">When you delete a recurring task series through the API, all open and closed
+              task occurrences in the series are removed. However, when you delete a recurring task
+              series through the user interface, only open tasks occurrences (<span class="keyword parmname">IsClosed</span> is <samp class="codeph java">false</samp>) in the series are removed.</li>
+
+            <li class="li">If <span class="keyword parmname">IsRecurrence</span> is
+                <samp class="codeph java">true</samp>, then <span class="keyword parmname">RecurrenceStartDateOnly</span>, <span class="keyword parmname">RecurrenceEndDateOnly</span>,
+                <span class="keyword parmname">RecurrenceType</span>,
+              and any properties associated with the given recurrence type (see the following table)
+              must be populated.</li>
+
+            <li class="li">When you change the <span class="keyword parmname">RecurrenceStartDateOnly</span> field or the recurrence pattern, all open tasks occurrences in the series are
+              deleted and new open task occurrences are created based on the new recurrence pattern.
+              The recurrence pattern is determined by the following fields: <span class="keyword parmname">RecurrenceType</span>,
+                <span class="keyword parmname">RecurrenceTimeZoneSidKey</span>, <span class="keyword parmname">RecurrenceInterval</span>,
+                <span class="keyword parmname">RecurrenceDayOfWeekMask</span>,
+                <span class="keyword parmname">RecurrenceDayOfMonth</span>,
+                <span class="keyword parmname">RecurrenceInstance</span>, and <span class="keyword parmname">RecurrenceMonthOfYear</span>.</li>
+
+            <li class="li">When you change the value of <span class="keyword parmname">RecurrenceEndDateOnly</span>
+              to an earlier date (for example, from January 20th to January 10th), all open task
+              occurrences in the series with the <span class="keyword parmname">ActivityDate</span> value
+              greater than the new end date value are deleted. Other open and closed task
+              occurrences in the series are not affected.</li>
+
+            <li class="li">When you change the value of <span class="keyword parmname">RecurrenceEndDateOnly</span>
+              to a later date (for example, from January 10th to January 20th), new task occurrences
+              are created up to the new end date. Existing open and closed tasks in the series are
+              not affected.</li>
+
+          </ul>
+</div>
+
+        <p class="p">The following table describes the usage of recurrence
+        fields. Each recurrence type must have all of its properties set. All unused properties must
+        be set to null.</p>
+
+        
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d690204e2788">RecurrenceType Value</th>
+
+              <th class="featureTableHeader  " id="d690204e2791">Properties</th>
+
+              <th class="featureTableHeader  " id="d690204e2794">Example Pattern</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursDaily</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceInterval</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every second day</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursEveryWeekday</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every weekday - can’t be Saturday or Sunday</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursMonthly</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceDayOfMonth RecurrenceInterval</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every second month, on the third day of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursMonthlyNth</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceInterval RecurrenceInstance RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every second month, on the last Friday of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursWeekly</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceInterval RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every three weeks on Wednesday and Friday</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursYearly</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceDayOfMonth RecurrenceMonthOfYear</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">Every March on the twenty-sixth day of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d690204e2788" data-title="RecurrenceType Value">RecursYearlyNth</td>
+
+              <td class="entry" headers="d690204e2791" data-title="Properties">RecurrenceDayOfWeekMask
+                RecurrenceInstanceRecurrenceMonthOfYear</td>
+
+              <td class="entry" headers="d690204e2794" data-title="Example Pattern">The first Saturday in every October</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+      </div>
+<div class="sectiondiv">
+        <dl class="dl detailList">
+          
+            <dt class="dt dlterm">JunctionIdList</dt>
+
+            <dd class="dd">
+<p class="p">The <span class="keyword parmname">JunctionIdList</span> field is now implemented in the Event and
+                Task objects. With a single API call, it’s easy to create many-to-many relationships
+                between the Event or Task object with contacts, leads, or users. </p>
+To create a
+              Task with related Contacts without <span class="keyword parmname">JunctionIdList</span>, you first have
+              to create the task, then use the returned task ID to create the
+                <span class="keyword parmname">TaskRelation</span> records. If the <span class="keyword parmname">TaskRelation</span>
+              save call fails, error handling is your responsibility because the task has already
+              been committed to the
+              database.<div class="codeSection nolang"><div id="highlighter_272293" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_272293_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_272293" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">public void createTasksOld(Contact[] contacts) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Task task = new Task();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task.setSubject("New Task");</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] results = null;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">try {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">results = connection.create(new Task[] {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">});</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">if (results[0].isSuccess()) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">TaskRelation[] relations = new TaskRelation[contacts.size()];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">for (int i = 0; i &lt; contacts.length; i++) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">relations[i] = new TaskRelation();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">relations[i].setTaskId(results[0].getID());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">resltsion[i].setRelationId(contacts[i].getID());</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">results = connection.create(relations);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} catch (ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</dd>
+
+            <dd class="dd">To create a task using <span class="keyword parmname">JuncionIdList</span>, IDs are pulled from the
+              related contacts and both the task and the <span class="keyword parmname">TaskRelation</span> records
+              are created in one API call. If the <span class="keyword parmname">TaskRelation</span> fails, the task
+              is rolled back because it’s all done in a single API
+              call.<div class="codeSection nolang"><div id="highlighter_390220" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_390220_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_390220" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">public void createTaskNew(Contact[] contacts) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">String[] contactIds = new String[contacts.size()];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">for (int i = 0; i &lt; contacts.size(); i++) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">contactIds[i] = contacts[i].getID();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Task task = new Task();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task.setSubject("New Task");</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task.setTaskWhoIds(contactIds);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] results = null;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">try {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">results = connection.create(new Task[] {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">});</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} catch (ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</dd>
+
+          
+        </dl>
+
+      </div>
+</div>
+</div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

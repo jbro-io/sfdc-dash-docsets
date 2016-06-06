@@ -1,0 +1,1327 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Opportunity | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_opportunity"><!-- --></a><h1 class="helpHead1" id="TitleOpportunity-0298DB21">
+<a name="TitleOpportunity-0298DB21"><!-- --></a><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Opportunity</span>
+</h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an opportunity, which is a sale or pending
+      deal.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d541553e117">Field</th>
+
+<th class="featureTableHeader  " id="d541553e120">Field Type</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>
+<span class="keyword parmname">AccountId</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the account associated with this opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Amount" class="dashAnchor"></a> <span class="keyword parmname" id="i1455351"><a name="i1455351"><!-- --></a>Amount</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Estimated total sale amount. For opportunities with products,
+the amount is the sum of the related products. Any attempt to update
+this field, if the record has products, will be ignored. The update
+call will not be rejected, and other fields will be updated as specified,
+but the Amount will be unchanged.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/CampaignId" class="dashAnchor"></a> <span class="keyword parmname">CampaignId</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of a related Campaign. This field is defined only for those organizations that have
+the campaign feature Campaigns enabled. The User must have read access rights to the cross-referenced Campaign object in order to create or update that campaign into this
+field on the opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/CloseDate" class="dashAnchor"></a> <span class="keyword parmname" id="i1455416"><a name="i1455416"><!-- --></a>CloseDate</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Date when the opportunity is expected to close.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ContractId" class="dashAnchor"></a><span class="keyword parmname">ContractId</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the contract that’s associated with this opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a> <span class="keyword parmname" id="i1455437"><a name="i1455437"><!-- --></a>CurrencyIsoCode</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Available only for organizations with the multicurrency feature
+enabled. Contains the ISO code for any currency allowed by the organization.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a> If the organization has multicurrency and a Pricebook2 is specified on the opportunity (i.e., the <span class="keyword parmname">Pricebook2Id</span> field is not blank), then the currency value of this
+field must match the currency of the PricebookEntry records that are associated with any opportunity line items
+it has.</dd>
+
+
+</dl>
+ </td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a> <span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text description of the opportunity. Limit: 32,000 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ExpectedRevenue" class="dashAnchor"></a> <span class="keyword parmname" id="i1455497"><a name="i1455497"><!-- --></a>ExpectedRevenue</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Probability" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Amount" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Probability" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Amount" class="dashAnchor"></a>Read-only field that is equal to the product of the opportunity <span class="keyword parmname">Amount</span> field and the <span class="keyword parmname">Probability</span>. You can’t directly set this field, but you can
+indirectly set it by setting the <span class="keyword parmname">Amount</span> or <span class="keyword parmname">Probability</span> fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Fiscal" class="dashAnchor"></a> <span class="keyword parmname">Fiscal</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/CloseDate" class="dashAnchor"></a>If fiscal years are not enabled, the name of the fiscal quarter
+or period in which the opportunity <span class="keyword parmname">CloseDate</span> falls. Value should be in YYY Q format, for example,
+'2006 1' for first quarter of 2006.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/FiscalQuarter" class="dashAnchor"></a> <span class="keyword parmname">FiscalQuarter</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the fiscal quarter. Valid values are 1, 2, 3, or 4.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/FiscalYear" class="dashAnchor"></a> <span class="keyword parmname">FiscalYear</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Represents the fiscal year, for example, 2006.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ForecastCategory" class="dashAnchor"></a> <span class="keyword parmname" id="i1455578"><a name="i1455578"><!-- --></a>ForecastCategory</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>Restricted picklist field. It is implied, but not directly controlled,
+by the <span class="keyword parmname">StageName</span> field. You can override this field to a different value
+than is implied by the <span class="keyword parmname">StageName</span> value. The values of this field are fixed enumerated
+values. The field labels are localized to the language of the user
+performing the operation, if localized versions of those labels are
+available for that language in the  user interface.<p class="p"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a>In API version
+12.0 and later, the value of this field is automatically set based
+on the value of the <span class="keyword parmname">ForecastCategoryName</span> and
+can’t be updated any other way. The field properties Create, Defaulted on create, Nillable, and Update are not available in version 12.0.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a><span class="keyword parmname" id="forecastcategoryname_ref"><a name="forecastcategoryname_ref"><!-- --></a>ForecastCategoryName</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>
+<p class="p">Available in API version 12.0 and later.</p>
+The name of the
+forecast category. It is implied, but not directly controlled, by
+the <span class="keyword parmname">StageName</span> field. You can override this field to a different value
+than is implied by the <span class="keyword parmname">StageName</span> value.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+                  <tr>
+                     <td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/HasOpenActivity" class="dashAnchor"></a><span class="keyword parmname">HasOpenActivity</span></td>
+
+                     <td class="entry" headers="d541553e120" data-title="Field Type">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">boolean</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Defaulted on create,  Group, </dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Indicates whether an opportunity has an open event or task
+                                    (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Available in API version
+                                 35.0 and later.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/HasOpportunityLineItem" class="dashAnchor"></a><span class="keyword parmname" id="i1455618"><a name="i1455618"><!-- --></a>HasOpportunityLineItem</span></td>
+
+                     <td class="entry" headers="d541553e120" data-title="Field Type">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">boolean</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd"><a name="//apple_ref/cpp/Field/PricebookId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PricebookId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a>Read-only field that indicates whether the opportunity has
+                                 associated line items. A value of <samp class="codeph java">true</samp> means that Opportunity line items have been
+                                 created for the opportunity. An opportunity can have opportunity
+                                 line items only if the opportunity has a price book. The
+                                 opportunity line items must correspond to PricebookEntry objects that are listed in the opportunity Pricebook2. However, you can insert opportunity line items on an
+                                 opportunity that does not have an associated Pricebook2. For the first opportunity line item that you insert on an
+                                 opportunity without a Pricebook2, the API
+                                 automatically sets the <span class="keyword parmname">Pricebook2Id</span> field, if the opportunity line item corresponds to a PricebookEntry in an active Pricebook2 that has a <span class="keyword parmname">CurrencyIsoCode</span> field that
+                                 matches the <span class="keyword parmname">CurrencyIsoCode</span> field of the opportunity. If the Pricebook2 is not active or the <span class="keyword parmname">CurrencyIsoCode</span> fields
+                                 do not match, then the API
+                                 returns an error. You can’t update the <span class="keyword parmname">Pricebook2Id</span> or <span class="keyword parmname">PricebookId</span> fields if opportunity line items exist on the Opportunity. You must delete the line items before attempting to update the
+                                    <span class="keyword parmname">PricebookId</span> field.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+                  <tr>
+                     <td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/HasOverdueTask" class="dashAnchor"></a><span class="keyword parmname">HasOverdueTask</span></td>
+
+                     <td class="entry" headers="d541553e120" data-title="Field Type">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">boolean</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Defaulted on create,  Group, </dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Indicates whether an opportunity has an overdue task (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Available in API version
+                                 35.0 and later.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a> <span class="keyword parmname" id="isClosed_name"><a name="isClosed_name"><!-- --></a>IsClosed</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>Directly controlled by  <span class="keyword parmname">StageName</span>. You can query and filter on this field, but you can’t
+directly set it in a create, upsert, or update request. It can only
+be set via  <span class="keyword parmname">StageName</span>. Label is <strong class="ph uicontrol">Closed</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+                  <tr>
+                     <td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsExcludedFromTerritory2Filter" class="dashAnchor"></a><span class="keyword parmname">IsExcludedFromTerritory2Filter</span></td>
+
+                     <td class="entry" headers="d541553e120" data-title="Field Type">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">boolean</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">Used for Filter-Based Opportunity Territory Assignment (Pilot in
+                                 Spring ’15 / API version 33). Indicates whether the opportunity is
+                                 excluded (<kbd class="ph userinput">True</kbd>) or included
+                                    (<kbd class="ph userinput">False</kbd>) each time the APEX filter is
+                                 executed. </dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsSplit" class="dashAnchor"></a><span class="keyword parmname">IsSplit</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsSplit" class="dashAnchor"></a>Read-only field that indicates whether credit for the opportunity
+is split between opportunity team members. Label is <span class="keyword parmname">IsSplit</span>.This field is available in versions 14.0 and later for organizations
+that enabled Opportunity Splits during the pilot period.<div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p>This field should not be used. However, it’s
+documented for the benefit of pilot customers who find references
+to <samp class="codeph nolang">IsSplit</samp> in code.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsWon" class="dashAnchor"></a> <span class="keyword parmname" id="isWon_name"><a name="isWon_name"><!-- --></a>IsWon</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>Directly controlled by <span class="keyword parmname">StageName</span>. You can query and filter on this field, but you can’t
+directly set the value. It can only be set via <span class="keyword parmname">StageName</span>. Label is <strong class="ph uicontrol">Won</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/LastActivityDate" class="dashAnchor"></a> <span class="keyword parmname">LastActivityDate</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Value is one of the following, whichever is the most recent:<ul class="ul bulletList">
+<li class="li">Due date of the most recent event logged against the record.</li>
+
+<li class="li">Due date of the most recently closed task associated with the
+record.</li>
+
+</ul>
+ </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/LeadSource" class="dashAnchor"></a> <span class="keyword parmname">LeadSource</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Source of this opportunity, such as Advertisement or Trade Show.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a> <span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. A name for this opportunity. Limit: 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/NextStep" class="dashAnchor"></a> <span class="keyword parmname">NextStep</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of next task in closing opportunity. Limit: 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a> <span class="keyword parmname">OwnerId</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the User who has been assigned to work this opportunity.<p class="p">If you update
+this field, the previous owner's access becomes Read Only or the access
+specified in your organization-wide default for opportunities, whichever
+is greater.</p>
+<p class="p">If you have set up opportunity teams in your organization,
+updating this field has different consequences depending on your version
+of the API:</p>
+<ul class="ul bulletList">
+            <li class="li">For API version 12.0
+             and later, sharing records are kept, as they are for all objects.</li>
+
+            <li class="li"> For API version before
+             12.0, sharing records are deleted.</li>
+
+            <li class="li">For API version 16.0
+             and later, users must have the “Transfer Record” permission in order to
+             update (transfer) account ownership using this field.</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a> <span class="keyword parmname" id="i1455878"><a name="i1455878"><!-- --></a>Pricebook2Id</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PricebookId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a>ID of a related Pricebook2 object. The <span class="keyword parmname">Pricebook2Id</span> field indicates which Pricebook2 applies to this opportunity. The <span class="keyword parmname">Pricebook2Id</span> field is defined only for those organizations that have
+products enabled as a feature. You can specify values for only one
+field (<span class="keyword parmname">Pricebook2Id</span> or <span class="keyword parmname">PricebookId</span>)—not both fields. For this reason, both fields
+are declared nillable.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/PricebookId" class="dashAnchor"></a> <span class="keyword parmname" id="i1455924"><a name="i1455924"><!-- --></a>PricebookId</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a>Unavailable as of version 3.0. As of version 8.0, the Pricebook
+object is no longer available. Use the <span class="keyword parmname">Pricebook2Id</span> field instead, specifying the ID of the Pricebook2 record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Probability" class="dashAnchor"></a> <span class="keyword parmname" id="i1455960"><a name="i1455960"><!-- --></a>Probability</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">percent</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>Percentage of estimated confidence in closing the opportunity.
+It is implied, but not directly controlled, by the <span class="keyword parmname">StageName</span> field. You can override this field to a different value
+than what is implied by the <span class="keyword parmname">StageName</span>. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/Probability" class="dashAnchor"></a>If you're changing the <span class="keyword parmname">Probability</span> field through the API using
+a partner WSDL call, or an Apex <samp class="codeph nolang">before</samp> trigger, and the value
+may have several decimal places, we recommend rounding the value to
+a whole number. For example, the following Apex in a <samp class="codeph nolang">before</samp> trigger uses the <samp class="codeph nolang">round</samp> method to change the field value: <samp class="codeph nolang">o.probability = o.probability.round();</samp></p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1438294"><a name="i1438294"><!-- --></a>RecordTypeId</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the record type assigned to this object.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a> <span class="keyword parmname" id="i1455993"><a name="i1455993"><!-- --></a>StageName</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Probability" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsWon" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ForecastCategoryName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/StageName" class="dashAnchor"></a>Required. Current stage of this record. The <span class="keyword parmname">StageName</span> field controls several other fields on an opportunity.
+Each of the fields can be directly set or implied by changing the <span class="keyword parmname">StageName</span> field. In addition, the <span class="keyword parmname">StageName</span> field is a picklist, so it has additional members in
+the returned describeSObjectResult to indicate how it affects the other fields. To obtain the
+stage name values in the picklist, query the OpportunityStage object. If the <span class="keyword parmname">StageName</span> is updated, then the <span class="keyword parmname">ForecastCategoryName</span>, <span class="keyword parmname">IsClosed</span>, <span class="keyword parmname">IsWon</span>, and <span class="keyword parmname">Probability</span> are automatically updated based on the stage-category
+mapping.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/SyncedQuoteID" class="dashAnchor"></a><span class="keyword parmname">SyncedQuoteID</span></td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read only in an Apex trigger. The ID of the Quote that syncs with the opportunity. Setting this field lets you
+start and stop syncing between the opportunity and a quote. The ID
+has to be for a quote that is a child of the opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+                  <tr>
+                     <td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Territory2Id" class="dashAnchor"></a><span class="keyword parmname">Territory2Id</span></td>
+
+                     <td class="entry" headers="d541553e120" data-title="Field Type">
+                        <dl class="dl detailList">
+                           
+                              <dt class="dt dlterm">Type</dt>
+
+                              <dd class="dd">reference</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Properties</dt>
+
+                              <dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+                           
+                           
+                              <dt class="dt dlterm">Description</dt>
+
+                              <dd class="dd">The ID of the territory that is assigned to the opportunity.
+                                 Available only if Enterprise Territory Management has
+                                 been enabled for your organization.</dd>
+
+                           
+                        </dl>
+
+                     </td>
+
+                  </tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/TotalOpportunityQuantity" class="dashAnchor"></a> <span class="keyword parmname">TotalOpportunityQuantity</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Number of items included in this opportunity. Used in quantity-based
+forecasting.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d541553e117" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a> <span class="keyword parmname">Type</span> </td>
+
+<td class="entry" headers="d541553e120" data-title="Field Type">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Type of opportunity. For example, Existing Business or New Business.
+Label is <strong class="ph uicontrol">Opportunity Type</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you are importing Opportunity data and need to set
+the value for an audit field, such as <span class="keyword parmname">CreatedDate</span>, contact Salesforce. Audit fields are automatically updated during API operations
+unless you request to set these fields yourself..</p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use the Opportunity object to manage
+information about a sale or pending deal. You can also sync this object
+with a child <span class="ph">Quote</span>. To update an Opportunity, your client application
+needs “Edit” permission on opportunities. You can create,
+update, delete, and query Attachment records associated with an opportunity via the API.
+To split credit for an opportunity among multiple opportunity team
+members, use the OpportunitySplit object. </p>
+ </div>
+
+<p class="p">Client applications can also create or update opportunity objects
+by converting a Lead with <samp class="codeph nolang">convertLead()</samp>.</p>
+
+<div class="box message info" id="NewOppSaveBehavior_api">
+<a name="NewOppSaveBehavior_api"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>On opportunities and opportunity
+products, the workflow rules, validation rules, and Apex triggers fire when an update to a child opportunity product or schedule
+causes an update to the parent record. This means your custom application
+logic is enforced when there are updates to the parent record, ensuring
+higher data quality and compliance with your organization’s
+business policies. </p>
+</div>
+</div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Sample Code—Java</h2>
+<p class="p">This code starts
+the sync between an object and a child quote.</p>
+<div class="codeSection apex_code"><div id="highlighter_238845" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_238845_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_238845" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">public</code> <code class="apexKey">void</code> <code class="plain">startQuoteSync() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Opportunity opp = </code><code class="apexKey">new</code> <code class="plain">Opportunity(); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">opp.setId(</code><code class="apexKey">new</code> <code class="plain">ID(</code><code class="apexString">"006D000000CpOSy"</code><code class="plain">)); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">opp.setSyncedQuoteId(</code><code class="apexKey">new</code> <code class="plain">ID(</code><code class="apexString">"0Q0D000000002OZ"</code><code class="plain">)); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Invoke the update call and save the results</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] saveResults = binding.</code><code class="apexKey">update</code><code class="plain">(</code><code class="apexKey">new</code> <code class="plain">SObject[] {opp});</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// check results and do more processing after the update call ...</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">catch</code> <code class="plain">(Exception ex) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"An unexpected error has occurred."</code> <code class="plain">+ ex.getMessage());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">This code stops the sync between an object and a child
+quote.</p>
+<div class="codeSection apex_code"><div id="highlighter_920408" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_920408_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_920408" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">public</code> <code class="apexKey">void</code> <code class="plain">stopQuoteSync() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Opportunity opp = </code><code class="apexKey">new</code> <code class="plain">Opportunity(); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">opp.setId(</code><code class="apexKey">new</code> <code class="plain">ID(</code><code class="apexString">"006D000000CpOSy"</code><code class="plain">)); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">opp.setFieldsToNull(</code><code class="apexKey">new</code> <code class="apexKey">String</code><code class="plain">[]&nbsp; {</code><code class="apexString">"SyncedQuoteId"</code><code class="plain">} );</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Invoke the update call and save the results</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] saveResults = binding.</code><code class="apexKey">update</code><code class="plain">(</code><code class="apexKey">new</code> <code class="plain">SObject[] {opp});</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// check results and do more processing after the update call ...</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">catch</code> <code class="plain">(Exception ex) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"An unexpected error has occurred."</code> <code class="plain">+ ex.getMessage());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitycompetitor.htm" title="Represents a competitor on an Opportunity.">OpportunityCompetitor</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityhistory.htm" title="Represents the stage history of an Opportunity.">OpportunityHistory</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitem.htm" title="Represents an opportunity line item, which is a member of the list of Product2 products associated with an Opportunity.">OpportunityLineItem</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitemschedule.htm" title="Represents information about the quantity, revenue distribution, and delivery dates for a particular OpportunityLineItem.">OpportunityLineItemSchedule</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityfieldhistory.htm" title="Represents the history of changes to the values in the fields of an opportunity. This object is available in versions 13.0 and later.">OpportunityFieldHistory</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quote.htm" title="The Quote object represents a quote, which is a record showing proposed prices for products and services. Available in API version 18.0 and later.">Quote</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quotelineitem.htm" title="The QuoteLineItem object represents a quote line item, which is a member of the list of Product2 products associated with a Quote, along with other information about those line items on that quote. Available in API version 18.0 and later.">QuoteLineItem</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworkconnection.htm" title="Represents a Salesforce to Salesforce connection between Salesforce organizations.">PartnerNetworkConnection</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserProvAccountStaging | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_UserProvAccountStaging"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserProvAccountStaging</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Temporarily stores user account information while a user completes the
+			User Provisioning Wizard. This information that is stored in the UserProvAccount object
+			when you click the button to collect and analyze accounts on the target
+		system.</span></div>
+
+		<div class="section">
+			<p class="p">User provisioning links a Salesforce user account with
+				an account in a third-party (target) system. To configure user provisioning, you use
+				a User Provisioning Wizard that guides you through the setup process. As you enter
+				values about account details in the wizard, these values are stored in this object
+				until you click the button to collect and analyze accounts on the target system. The
+				general user provisioning configuration details are stored in the
+				UserProvisioningConfig object.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">undelete()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d746618e122">Field Name</th>
+
+							<th class="featureTableHeader  " id="d746618e125">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConnectedAppId" class="dashAnchor"></a><span class="keyword parmname">ConnectedAppId</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The 15 character connected app ID.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalEmail" class="dashAnchor"></a><span class="keyword parmname">ExternalEmail</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The email address as stored in the target system for
+												the associated user account.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalFirstName" class="dashAnchor"></a><span class="keyword parmname">ExternalFirstName</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The first name as stored in the target system for the
+												associated user account.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalLastName" class="dashAnchor"></a><span class="keyword parmname">ExternalLastName</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The last name as stored in the target system for the
+												associated user account.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalUserId" class="dashAnchor"></a><span class="keyword parmname">ExternalUserId</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, idLookup, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The unique identifier for the user as stored in the
+												target system.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExternalUsername" class="dashAnchor"></a><span class="keyword parmname">ExternalUsername</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The username as stored in the target system for the
+												associated user account.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/LinkState" class="dashAnchor"></a><span class="keyword parmname">LinkState</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd" id="linkState_desc">
+<a name="linkState_desc"><!-- --></a>The state of the current connection
+											between the user account in the Salesforce organization and the associated user account in the
+											target system. The valid values are:<a name="linkstate_values"><!-- --></a><ul class="ul bulletList" id="linkstate_values">
+												<li class="li">
+<samp class="codeph nolang">linked</samp>— a user account matches
+												one in the target system.</li>
+
+												<li class="li">
+<samp class="codeph nolang">duplicate</samp>— an associated account
+												in the target system exists.</li>
+
+												<li class="li">
+<samp class="codeph nolang">orphaned</samp>—no associated account
+												exists in the target system.</li>
+
+												<li class="li">
+<samp class="codeph nolang">ignored</samp>— changes to the account
+												in the Salesforce organization have no effect on the associated
+												user account in the target system.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The unique name for this object. </p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The user ID of the owner of this
+												object—typically a Salesforce administrator.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/SalesforceUserId" class="dashAnchor"></a><span class="keyword parmname">SalesforceUserId</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The user ID for the user account in the Salesforce organization that is associated with the user
+												account in the target system.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d746618e122" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d746618e125" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The status of the account in the target system. The
+											valid values are:<a name="status_values"><!-- --></a><ul class="ul bulletList" id="status_values">
+												<li class="li"><samp class="codeph nolang">Active</samp></li>
+
+												<li class="li"><samp class="codeph nolang">Deactivated</samp></li>
+
+												<li class="li"><samp class="codeph nolang">Deleted</samp></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">When committing fields from a UserProvAccountStaging to a UserProvAccount object, Salesforce looks up the
+				UserProvAccount record where <samp class="codeph nolang">UserProvAccountStaging.ExternalUserId =
+				UserProvAccount.ExternalUserId</samp>.</p>
+
+			<ul class="ul bulletList">
+				<li class="li">If an <samp class="codeph nolang">ExternalUserId</samp> doesn't match an
+					existing account, Salesforce creates a
+					UserProvAccount record based on the UserProvAccountStaging record.</li>
+
+				<li class="li">If an <samp class="codeph nolang">ExternalUserId</samp> matches, then Salesforce checks the
+						<span class="keyword parmname">UserProvAccount.isKnownLink</span> value, and does the following.<ul class="ul bulletList">
+						<li class="li">If <samp class="codeph nolang">UserProvAccount.IsKnownLink =
+								true</samp>, Salesforce
+							copies the UserProvAccountStaging values to the UserProvAccount object,
+							except for the <span class="keyword parmname">ExternalUserId</span> and
+								<span class="keyword parmname">LinkState</span> values.</li>
+
+						<li class="li">If <samp class="codeph nolang">UserProvAccount.IsKnownLink =
+								false</samp>, Salesforce
+							copies all of the UserProvAccountStaging values to the UserProvAccount
+							object.</li>
+
+					</ul>
+</li>
+
+			</ul>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

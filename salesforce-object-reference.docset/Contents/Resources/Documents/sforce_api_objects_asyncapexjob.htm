@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AsyncApexJob | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_asyncapexjob"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AsyncApexJob</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="AsyncApexJobDesc"><a name="AsyncApexJobDesc"><!-- --></a>Represents an individual Apex sharing recalculation job, a
+    batch Apex job, a method with
+    the <samp class="codeph nolang">future</samp> annotation, or a job that implements <samp class="codeph apex_code">Queueable</samp>.</span></span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d177195e101">Field Name</th>
+
+       <th class="featureTableHeader  " id="d177195e104">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/ApexClassID" class="dashAnchor"></a><span class="keyword parmname">ApexClassID</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference, </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Class ID" class="dashAnchor"></a>The ID of the Apex
+           class executing the job. Label is <span class="keyword parmname">Class ID</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompletedDate" class="dashAnchor"></a><span class="keyword parmname">CompletedDate</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time when the job was completed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExtendedStatus" class="dashAnchor"></a><span class="keyword parmname">ExtendedStatus</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If one or more errors occurred during the batch processing, this contains a short
+           description of the first error. A more detailed description of that error, along with any
+           subsequent errors, is emailed to the user who started the running batch class. This field
+           is available in API version
+           19.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/JobItemsProcessed" class="dashAnchor"></a><span class="keyword parmname">JobItemsProcessed</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Batches Processed" class="dashAnchor"></a>Number of job items processed. Label is <span class="keyword parmname">Batches Processed</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/JobType" class="dashAnchor"></a><span class="keyword parmname">JobType</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of job being processed. Valid values are:<ul class="ul bulletList">
+            <li class="li"><samp class="codeph nolang">Future</samp></li>
+
+            <li class="li"><samp class="codeph nolang">SharingRecalculation</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ScheduledApex</samp></li>
+
+            <li class="li"><samp class="codeph nolang">BatchApex</samp></li>
+
+            <li class="li"><samp class="codeph nolang">BatchApexWorker</samp></li>
+
+            <li class="li"><samp class="codeph nolang">TestRequest</samp></li>
+
+            <li class="li"><samp class="codeph nolang">TestWorker</samp></li>
+
+            <li class="li"><samp class="codeph nolang">ApexToken</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Queueable</samp></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/MethodName" class="dashAnchor"></a><span class="keyword parmname">MethodName</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Apex
+           Method" class="dashAnchor"></a>The name of the Apex
+           method being executed. Label is <span class="keyword parmname">Apex
+           Method</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/NumberOfErrors" class="dashAnchor"></a><span class="keyword parmname">NumberOfErrors</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Failures" class="dashAnchor"></a>Total number of batches with a failure. A batch is considered transactional, so any
+           unhandled exceptions constitute an entire failure of the batch. Label is
+            <span class="keyword parmname">Failures</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd" id="AsyncApexJobStatusDescription">
+<a name="AsyncApexJobStatusDescription"><!-- --></a>The status of the job. Valid values are:<ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Holding</samp><sup class="ph sup">1</sup>
+</li>
+
+            <li class="li"><samp class="codeph nolang">Queued</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Preparing</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Processing</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Aborted</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Completed</samp></li>
+
+            <li class="li"><samp class="codeph nolang">Failed</samp></li>
+
+           </ul>
+<sup class="ph sup">1</sup> This status applies to batch jobs in the Apex flex queue.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d177195e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/TotalJobItems" class="dashAnchor"></a><span class="keyword parmname">TotalJobItems</span></td>
+
+       <td class="entry" headers="d177195e104" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Total Batches" class="dashAnchor"></a>Total number of batches processed. Each batch contains a set of records. Label is
+            <span class="keyword parmname">Total Batches</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use this object to query Apex
+    batch jobs in your organization. </p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

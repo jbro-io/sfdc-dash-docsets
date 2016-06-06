@@ -1,0 +1,1424 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ServiceContract | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_servicecontract"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ServiceContract</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="ServiceContractDesc"><a name="ServiceContractDesc"><!-- --></a>Represents a customer support contract
+    (business agreement).</span>
+   This object is available in API version 18.0 and later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d660928e120">Field</th>
+
+<th class="featureTableHeader  " id="d660928e123">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the account associated with the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ActivationDate" class="dashAnchor"></a><span class="keyword parmname">ActivationDate</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a>The initial day the service contract went into effect (whereas
+            <span class="keyword parmname">StartDate</span> may include a renewal date).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ApprovalStatus" class="dashAnchor"></a><span class="keyword parmname">ApprovalStatus</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Approval status of the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingAddress" class="dashAnchor"></a>
+<span class="keyword parmname">BillingAddress</span> (beta)</td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">address</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The compound form of the billing address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for
+           details on compound address fields.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCity" class="dashAnchor"></a><span class="keyword parmname">BillingCity</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details for the billing address. Maximum size is 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCountry" class="dashAnchor"></a><span class="keyword parmname">BillingCountry</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details for the billing address. Maximum size is 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingCountryCode" class="dashAnchor"></a><span class="keyword parmname">BillingCountryCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO country code for the service contract’s billing address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingLatitude" class="dashAnchor"></a><span class="keyword parmname">BillingLatitude</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/BillingLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">BillingLongitude</span> to specify the
+            precise geolocation of a billing address. Acceptable values are numbers between
+            –90 and 90 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingLongitude" class="dashAnchor"></a><span class="keyword parmname">BillingLongitude</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/BillingLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">BillingLatitude</span> to specify the
+            precise geolocation of a billing address. Acceptable values are numbers between
+            –180 and 180 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingPostalCode" class="dashAnchor"></a><span class="keyword parmname">BillingPostalCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details for the billing address. Maximum size is 20 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingState" class="dashAnchor"></a><span class="keyword parmname">BillingState</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Group, Sort, Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details for the billing address. Maximum size is 20 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingStateCode" class="dashAnchor"></a><span class="keyword parmname">BillingStateCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO state code for the service contract’s billing address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/BillingStreet" class="dashAnchor"></a>
+<span class="keyword parmname">BillingStreet</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Street address for the billing address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a><span class="keyword parmname">ContactId</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. ID of the Contact
+           associated with the service contract. Must be a valid ID.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ContractNumber" class="dashAnchor"></a><span class="keyword parmname">ContractNumber</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Autonumber, Defaulted on create, Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Unique number automatically assigned to the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Description of the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Discount" class="dashAnchor"></a><span class="keyword parmname">Discount</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+<dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">percent</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">The last day the service contract is in effect.</p>
+
+          </dd>
+
+         
+        </dl>
+Weighted average of all contract line item discounts on the service contract.</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/EndDate" class="dashAnchor"></a><span class="keyword parmname">EndDate</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last day the service contract is in effect.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/GrandTotal" class="dashAnchor"></a><span class="keyword parmname">GrandTotal</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">currency</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Total price of the service contract plus shipping and taxes.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+        <span class="keyword parmname">IsDeleted</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the object has been moved to the Recycle Bin
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/LineItemCount" class="dashAnchor"></a><span class="keyword parmname">LineItemCount</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Number of ContractLineItem records associated with the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Name of the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user who currently owns the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ParentServiceContractId" class="dashAnchor"></a><span class="keyword parmname">ParentServiceContractId</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The servie contract’s parent service contract, if it has one.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Pricebook2Id" class="dashAnchor"></a><span class="keyword parmname">Pricebook2Id</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the Pricebook2
+           associated with the service contract. Must be a valid ID.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/RootServiceContractId" class="dashAnchor"></a><span class="keyword parmname">RootServiceContractId</span></td>
+
+       
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">(Read only) The top-level service contract in a service contract hierarchy. Depending
+           on where a service contract lies in the hierarchy, its root could be the same as its
+           parent.</dd>
+
+         
+        </dl>
+
+       </td>
+
+       
+      </tr>
+
+      
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingAddress" class="dashAnchor"></a>
+<span class="keyword parmname">ShippingAddress</span> (beta)</td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">address</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The compound form of the shipping address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for
+           details on compound address fields.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCity" class="dashAnchor"></a>
+<span class="keyword parmname">ShippingCity</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details of the shipping address. Maximum size is 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCountry" class="dashAnchor"></a><span class="keyword parmname">ShippingCountry</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details of the shipping address. Country maximum size is 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingCountryCode" class="dashAnchor"></a><span class="keyword parmname">ShippingCountryCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO country code for the service contract’s shipping address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingLatitude" class="dashAnchor"></a><span class="keyword parmname">ShippingLatitude</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ShippingLongitude" class="dashAnchor"></a>Used with <span class="keyword parmname">ShippingLongitude</span> to specify the
+            precise geolocation of a shipping address. Acceptable values are numbers between
+            –90 and 90 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingLongitude" class="dashAnchor"></a><span class="keyword parmname">ShippingLongitude</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ShippingLatitude" class="dashAnchor"></a>Used with <span class="keyword parmname">ShippingLatitude</span> to specify the
+            precise geolocation of an address. Acceptable values are numbers between –180 and
+            180 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingPostalCode" class="dashAnchor"></a><span class="keyword parmname">ShippingPostalCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details of the shipping address. Postal code maximum size is 20 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingState" class="dashAnchor"></a><span class="keyword parmname">ShippingState</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Details of the shipping address. State maximum size is 20 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingStateCode" class="dashAnchor"></a><span class="keyword parmname">ShippingStateCode</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO state code for the service contract’s shipping address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/ShippingStreet" class="dashAnchor"></a>
+<span class="keyword parmname">ShippingStreet</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The street address of the shipping address. Maximum of 255 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/SpecialTerms" class="dashAnchor"></a><span class="keyword parmname">SpecialTerms</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Any terms specifically agreed to and tracked in the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a>
+<span class="keyword parmname" id="ServiceContractStartDate"><a name="ServiceContractStartDate"><!-- --></a>StartDate</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The first day the service contract is in effect.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>
+        <span class="keyword parmname">Status</span>
+       </td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The status of the service contract, such as Inactive.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Subtotal" class="dashAnchor"></a><span class="keyword parmname">Subtotal</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">currency</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Total of the service contract line items (products) before discounts, taxes, and
+           shipping are applied.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Tax" class="dashAnchor"></a><span class="keyword parmname">Tax</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">currency</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Total taxes for the service contract.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/Term" class="dashAnchor"></a><span class="keyword parmname" id="ServiceContractTerm"><a name="ServiceContractTerm"><!-- --></a>Term</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Number of months that the service contract is valid.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d660928e120" data-title="Field"><a name="//apple_ref/cpp/Field/TotalPrice" class="dashAnchor"></a><span class="keyword parmname">TotalPrice</span></td>
+
+       <td class="entry" headers="d660928e123" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">currency</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Total of the contract line items (products) after discounts and before taxes and
+           shipping.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"> Usage</h2>
+<p class="p">Use this object to query and manage
+service contracts. </p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontracthistory.htm" title="Represents the history of changes to the values in the fields on a ServiceContract (customer support agreement). This object is available in API version 18.0 and later.">ServiceContractHistory</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontractshare.htm" title="Represents a sharing entry on a ServiceContract (customer support agreement). This object is available in API version 18.0 and later.">ServiceContractShare</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontractownersharingrule.htm" title="Represents the rules for sharing a ServiceContract (customer service agreement) with users other than the owner. This object is available in API version 18.0 and later.">ServiceContractOwnerSharingRule</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

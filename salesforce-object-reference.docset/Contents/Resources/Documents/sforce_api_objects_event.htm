@@ -1,0 +1,1932 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Event | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_event"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Event</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an event in the calendar. In the user interface, event and
+      task records are collectively referred to as activities.</span></div>
+
+    <div class="p">
+      <div class="box message info" id="eventrelation_child_events">
+<a name="eventrelation_child_events"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+        </p><ul class="ul bulletList">
+          <li class="li">An EventRelation object can’t be related to a child event, and child events don’t
+            include the invitee related list.</li>
+
+          <li class="li">
+<samp class="codeph nolang">query()</samp>,
+              <samp class="codeph nolang">delete()</samp>, and <samp class="codeph nolang">update()</samp>
+            aren’t allowed with events related to more than one contact in API versions 25.0
+            and earlier.</li>
+
+        </ul>
+
+      <p></p>
+</div>
+</div></div></div>
+</div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">create()</samp>,
+          <samp class="codeph nolang">delete()</samp>,
+          <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>,
+          <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>,
+          <samp class="codeph nolang">upsert()</samp></p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d353210e151">Field</th>
+
+              <th class="featureTableHeader  " id="d353210e154">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/AcceptedEventInviteeIds" class="dashAnchor"></a><span class="keyword parmname" id="AcceptedEventRelationIds_parmname_ph"><a name="AcceptedEventRelationIds_parmname_ph"><!-- --></a>AcceptedEventInviteeIds</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">JunctionIdList</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="AcceptedEvetnRelationIds_desc_ph"><a name="//apple_ref/cpp/Field/AcceptedEventRelation" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a><a name="AcceptedEvetnRelationIds_desc_ph"><!-- --></a>A string array of contact or lead
+                        IDs who accepted this event. This <span class="keyword parmname">JunctionIdList</span> is
+                        linked to the <span class="keyword parmname">AcceptedEventRelation</span> child
+                        relationship.</span><div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p><a name="//apple_ref/cpp/Field/fieldsToNull" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a>Adding a
+                  <span class="keyword parmname">JunctionIdList</span> field name to the
+                  <span class="keyword parmname">fieldsToNull</span> property deletes all related junction records.
+                This action can’t be undone.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>Represents the ID of the related Account. The <span class="keyword parmname">AccountId</span> is determined as follows.<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>If the
+                        value of <span class="keyword parmname">WhatId</span> is any of the following objects, then
+                          Salesforce uses
+                        that object’s <span class="keyword parmname">AccountId</span>.</p>
+<ul class="ul bulletList">
+                        <li class="li">Account</li>
+
+                        <li class="li">Opportunity</li>
+
+                        <li class="li">Contract</li>
+
+                        <li class="li">Custom object that is a child of Account</li>
+
+                      </ul>
+<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>If the value of the <span class="keyword parmname">WhatId</span> field is any other
+                        object, and the value of the <span class="keyword parmname">WhoId</span> field is a Contact object, then Salesforce uses
+                        that contact’s <span class="keyword parmname">AccountId</span>. (If your organization
+                        uses Shared Activities, Salesforce uses the
+                          <span class="keyword parmname">AccountId</span> of the primary contact.)</p>
+<p class="p"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>Otherwise,
+                          Salesforce sets
+                        the value of the <span class="keyword parmname">AccountId</span> field to <samp class="codeph nolang">null</samp>.</p>
+<p class="p">For information on IDs, see <a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435616">ID Field Type.</a></p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a><span class="keyword parmname" id="i1450257"><a name="i1450257"><!-- --></a>ActivityDate</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>Contains the event’s due date if the <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">true</samp>. <span class="ph" id="date_field_desc"><a name="date_field_desc"><!-- --></a>This field is a date field with a timestamp that is
+                        always set to midnight in the Coordinated Universal Time (UTC) time zone.
+                        Don’t attempt to alter the timestamp to account for time zone
+                        differences.</span> Label is <strong class="ph uicontrol">Due Date Only</strong>.<p class="p"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>This
+                        field is required in versions 12.0 and earlier if the <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">true</samp>.</p>
+<p class="p" id="sdtime_must_match"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><a name="sdtime_must_match"><!-- --></a>The value for this field and <span class="keyword parmname">StartDateTime</span> must match, or one of them must be <samp class="codeph nolang">null</samp>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/ActivityDateTime" class="dashAnchor"></a><span class="keyword parmname" id="i1450287"><a name="i1450287"><!-- --></a>ActivityDateTime</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>Contains the event’s due date if the <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">false</samp>. <span class="ph" id="date_time_field_info"><a name="date_time_field_info"><!-- --></a>This field is a regular Date/Time field with a
+                        relevant time portion. The time portion is always transferred in the
+                        Coordinated Universal Time (UTC) time zone. Translate the time portion to or
+                        from a local time zone for the user or the application, as appropriate.</span>
+                      Label is <strong class="ph uicontrol">Due Date Time</strong>.<p class="p"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>This field is required in
+                        versions 12.0 and earlier if the <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">false</samp>.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a>The value for this field and <span class="keyword parmname">StartDateTime</span> must match, or one of them must be <samp class="codeph nolang">null</samp>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/ClientGuid" class="dashAnchor"></a><span class="keyword parmname">ClientGuid</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The client globally unique identifier identifies the external API client used to
+                      create the event. Label is <strong class="ph uicontrol">Client GUID</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname" id="field_CurrencyIsoCode"><a name="field_CurrencyIsoCode"><!-- --></a>CurrencyIsoCode</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="curr_iso_def"><a name="curr_iso_def"><!-- --></a>Available only for organizations with the
+                        multicurrency feature enabled. Contains the ISO code for any currency
+                        allowed by the organization.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/DeclinedEventInviteeIds" class="dashAnchor"></a><span class="keyword parmname" id="DeclinedEventRelationIds_parmname"><a name="DeclinedEventRelationIds_parmname"><!-- --></a>DeclinedEventInviteeIds</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">JunctionIdList</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="DeclinedEventRelationIds_desc_ph"><a name="//apple_ref/cpp/Field/DeclinedEventRelation" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a><a name="DeclinedEventRelationIds_desc_ph"><!-- --></a>A string array of contact, lead,
+                        or user IDs who declined this event. This
+                          <span class="keyword parmname">JunctionIdList</span> is linked to the
+                          <span class="keyword parmname">DeclinedEventRelation</span> child relationship.</span><div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p><a name="//apple_ref/cpp/Field/fieldsToNull" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a>Adding a
+                  <span class="keyword parmname">JunctionIdList</span> field name to the
+                  <span class="keyword parmname">fieldsToNull</span> property deletes all related junction records.
+                This action can’t be undone.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Contains a text description of the event. Limit: 32,000 characters.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/Division" class="dashAnchor"></a><span class="keyword parmname" id="field_Division"><a name="field_Division"><!-- --></a>Division</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">A logical segment of your organization's data. For example, if your
+   company is organized into different business units, you could create a division for each business
+   unit, such as “North America,” “Healthcare,” or
+   “Consulting.” Available only if the organization has the Division permission
+   enabled.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><span class="keyword parmname" id="DurationInMinutesField"><a name="DurationInMinutesField"><!-- --></a>DurationInMinutes</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+                      Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Contains the event length, in minutes. Note that even though this field
+                      represents a temporal value, it is an integer type—not a Date/Time
+                        type.<p class="p"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>This field is required in versions 12.0 and earlier if <span class="keyword parmname">IsAllDayEvent</span> is false. </p>
+<div class="p">In versions 13.0 and later, this field is optional,
+                        depending on the following:<a name="DurationConditions"><!-- --></a><ul class="ul bulletList" id="DurationConditions">
+                          <li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is true, you can supply a value for either <span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if the values add up to
+                            the same amount of time. If both fields are <samp class="codeph nolang">null</samp>, the duration defaults to one day.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is false, a value must be supplied for either <span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if the values add up to
+                            the same amount of time.</li>
+
+                        </ul>
+</div>
+<p class="p"><span class="ph" id="DurationInMinutesSupport"><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="DurationInMinutesSupport"><!-- --></a>If the multiday event feature
+                          is enabled, then API versions
+                          13.0 and later support values greater than 1440 for the <span class="keyword parmname">DurationInMinutes</span> field. API
+                          versions 12.0 and earlier can’t access event objects whose
+                            <span class="keyword parmname">DurationInMinutes</span> is greater than 1440.</span> For more information, see <a class="xref" href="#MultidayEventsDesc"><strong class="ph b">Multiday
+            Events</strong></a>.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><span class="keyword parmname" id="EndDateTimeField"><a name="EndDateTimeField"><!-- --></a>EndDateTime</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Available in versions 13.0 and later. This field is a regular Date/Time field with a
+                        relevant time portion. The time portion is always transferred in the
+                        Coordinated Universal Time (UTC) time zone. Translate the time portion to or
+                        from a local time zone for the user or the application, as appropriate.<p class="p">This field is
+                        optional, depending on the following:</p>
+<ul class="ul bulletList">
+                          <li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is true, you can supply a value for either <span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if the values add up to
+                            the same amount of time. If both fields are <samp class="codeph nolang">null</samp>, the duration defaults to one day.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is false, a value must be supplied for either <span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if the values add up to
+                            the same amount of time.</li>
+
+                        </ul>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/EventSubtype" class="dashAnchor"></a><span class="keyword parmname" id="eventsubtype_parmname"><a name="eventsubtype_parmname"><!-- --></a>EventSubtype</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">
+<a name="eventsubtype_dlentry"><!-- --></a>Description</dt>
+
+                    <dd class="dd"><span class="ph" id="eventsubtype_desc"><a name="eventsubtype_desc"><!-- --></a>Provides standard subtypes to facilitate creating
+                        and searching for events. This field isn’t updateable.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/EventWhoIds" class="dashAnchor"></a><span class="keyword parmname" id="EventWhoRelationIds_parname"><a name="EventWhoRelationIds_parname"><!-- --></a>EventWhoIds</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">JunctionIdList</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="EventWhoRelationIds_desc_ph"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/EventWhoIds" class="dashAnchor"></a><a name="EventWhoRelationIds_desc_ph"><!-- --></a>A string array of contact or lead IDs
+                        used to create many-to-many relationships with a shared event.
+                          <span class="keyword parmname">EventWhoIds</span> is available when the shared activities
+                        setting is enabled. The first contact or lead ID in the list becomes the
+                        primary <span class="keyword parmname">WhoId</span> if you don’t specify a primary
+                          <span class="keyword parmname">WhoId</span>.</span><div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p><a name="//apple_ref/cpp/Field/fieldsToNull" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a>Adding a
+                  <span class="keyword parmname">JunctionIdList</span> field name to the
+                  <span class="keyword parmname">fieldsToNull</span> property deletes all related junction records.
+                This action can’t be undone.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/GroupEventType" class="dashAnchor"></a><span class="keyword parmname" id="GroupEventType"><a name="GroupEventType"><!-- --></a>GroupEventType</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Read-only. Available in API versions 19.0
+                      and later. <div class="p">The possible values are:<ul class="ul bulletList">
+                          <li class="li">
+<samp class="codeph nolang">0</samp> (Non–group
+                            event)—An event with no invitees.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">1</samp> (Group event)—An event
+                            with invitees.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">2</samp> (Proposed event)—An
+                            event created when a user requests a meeting with a contact, lead, or
+                              person account using the Salesforce user
+                            interface. When the user confirms the meeting, the proposed event
+                            becomes a group event. You can’t create, edit, or delete proposed
+                            events in the API.</li>
+
+                        </ul>
+</div>
+<p class="p">For more information, see How Cloud Scheduler Works in Salesforce Classic in the Salesforce
+                        help.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a><span class="keyword parmname" id="i1450364"><a name="i1450364"><!-- --></a>IsAllDayEvent</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/ActivityDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a>Indicates whether the <span class="keyword parmname">ActivityDate</span> field (<samp class="codeph nolang">true</samp>) or the <span class="keyword parmname">ActivityDateTime</span> field (<samp class="codeph nolang">false</samp>) is used to define the
+                      date or time of the event. Label is <strong class="ph uicontrol">All-Day Event</strong>. See
+                      also <a class="xref" href="#DurationInMinutesField"><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><span class="keyword parmname">DurationInMinutes</span></a> and <a class="xref" href="#EndDateTimeField"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><span class="keyword parmname">EndDateTime</span></a>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsArchived" class="dashAnchor"></a><span class="keyword parmname">IsArchived</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the event has been archived.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsChild" class="dashAnchor"></a><span class="keyword parmname" id="isChild"><a name="isChild"><!-- --></a>IsChild</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the event is a child of another event (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/ReminderDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a>For a child event, you can update <span class="keyword parmname">IsReminderSet</span> and
+                        <span class="keyword parmname">ReminderDateTime</span> only. You can query and delete a child
+                      event. If the objects related to the child event are different from those
+                      related to the parent event (this difference is possible if you use API version 25.0 or
+                      earlier) and one of the objects related to the child event is deleted, the
+                      objects related to the parent event are updated to ensure data integrity.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsClientManaged" class="dashAnchor"></a><span class="keyword parmname">IsClientManaged</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the event is managed by an external client. If the value
+                      of this field is false, the event isn’t owned or managed by an external
+                      client, and Salesforce can be used to update it. If the value is true, Salesforce can be used to change only noncritical fields on the event.
+                      Label is <strong class="ph uicontrol">Is Client Managed</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsGroupEvent" class="dashAnchor"></a><span class="keyword parmname">IsGroupEvent</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+                      Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the event is a group event—that is, whether it has
+                      invitees (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsPrivate" class="dashAnchor"></a><span class="keyword parmname">IsPrivate</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+                      Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether users other than the creator of the event can (<samp class="codeph nolang">false</samp>) or can’t (<samp class="codeph nolang">true</samp>) see the event details when viewing the
+                      event user’s calendar. However, users with the View All Data or Modify
+                      All Data permission can see private events in reports and searches, or when
+                      viewing other users’ calendars. Private events can’t be
+                      associated with opportunities, accounts, cases, campaigns, contracts, leads,
+                      or contacts. Label is <strong class="ph uicontrol">Private</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsRecurrence" class="dashAnchor"></a><span class="keyword parmname" id="i1450469"><a name="i1450469"><!-- --></a>IsRecurrence</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceType" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RecurrenceStartDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a>Indicates whether the event is scheduled to repeat itself (<samp class="codeph nolang">true</samp>) or only occurs once (<samp class="codeph nolang">false</samp>). This is a read-only field when
+                        updating records, but not when creating them. If this field value is <samp class="codeph nolang">true</samp>, then <span class="keyword parmname">RecurrenceEndDateOnly</span>, <span class="keyword parmname">RecurrenceStartDateTime</span>, <span class="keyword parmname">RecurrenceType</span>, and any recurrence fields associated with the given recurrence type must
+                        be populated. Label is <strong class="ph uicontrol">Create recurring series of
+                          events</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><span class="keyword parmname" id="event_IsReminderSet"><a name="event_IsReminderSet"><!-- --></a>IsReminderSet</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="isreminderset_desc"><a name="isreminderset_desc"><!-- --></a>Indicates whether the activity is a reminder
+                          (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a><span class="keyword parmname" id="IsVisibleInSelfService"><a name="IsVisibleInSelfService"><!-- --></a>IsVisibleInSelfService</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Defaulted on create,
+                        Filter,
+                        Group, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether an event associated with an object can be viewed in the
+                        Customer Portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).<p class="p"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a>If your organization has enabled Communities, events marked <span class="keyword parmname">IsVisibleInSelfService</span> are visible to
+                        any external user in the community, as long as the user has access to the
+                        record the event was created on.</p>
+<p class="p" id="PublicFieldAvailability"><a name="PublicFieldAvailability"><!-- --></a>This
+                        field is available when Customer Portal or partner portal are
+                        enabled OR Communities is enabled and you have Customer Portal or partner portal
+                        licenses.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/Location" class="dashAnchor"></a><span class="keyword parmname">Location</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Contains the location of the event.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Contains the ID of the user who owns the event. Label is <strong class="ph uicontrol">Assigned
+                        to ID</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceActivityId" class="dashAnchor"></a><span class="keyword parmname">RecurrenceActivityId</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Read-only. Not required on create. Contains the ID of the main record of
+                        the recurring event. Subsequent occurrences have the same value in this
+                        field.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceDayOfMonth" class="dashAnchor"></a><span class="keyword parmname">RecurrenceDayOfMonth</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the day of the month on which the event repeats.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceDayOfWeekMask" class="dashAnchor"></a><span class="keyword parmname">RecurrenceDayOfWeekMask</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the day or days of the week on which the event repeats. This
+                        field contains a bitmask. The values are as follows:<ul class="ul bulletList">
+                        <li class="li">Sunday = <samp class="codeph nolang">1</samp>
+</li>
+
+                        <li class="li">Monday = <samp class="codeph nolang">2</samp>
+</li>
+
+                        <li class="li">Tuesday = <samp class="codeph nolang">4</samp>
+</li>
+
+                        <li class="li">Wednesday = <samp class="codeph nolang">8</samp>
+</li>
+
+                        <li class="li">Thursday = <samp class="codeph nolang">16</samp>
+</li>
+
+                        <li class="li">Friday = <samp class="codeph nolang">32</samp>
+</li>
+
+                        <li class="li">Saturday = <samp class="codeph nolang">64</samp>
+</li>
+
+                      </ul>
+Multiple days are represented as the sum of their numerical values.
+                        For example, Tuesday and Thursday = 4 + 16 = 20.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a><span class="keyword parmname" id="i1450630"><a name="i1450630"><!-- --></a>RecurrenceEndDateOnly</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">date</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the last date on which the event repeats. For multiday
+                        recurring events, this is the day on which the last occurrence starts.
+                      This field is a date field with a timestamp that is
+                        always set to midnight in the Coordinated Universal Time (UTC) time zone.
+                        Don’t attempt to alter the timestamp to account for time zone
+                        differences.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceInstance" class="dashAnchor"></a><span class="keyword parmname" id="i1450654"><a name="i1450654"><!-- --></a>RecurrenceInstance</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the frequency of the event’s recurrence. For example,
+                          <samp class="codeph nolang">2nd</samp> or <samp class="codeph nolang">3rd</samp>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceInterval" class="dashAnchor"></a><span class="keyword parmname">RecurrenceInterval</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+                      Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the interval between recurring events.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceMonthOfYear" class="dashAnchor"></a><span class="keyword parmname">RecurrenceMonthOfYear</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the month in which the event repeats.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceStartDateTime" class="dashAnchor"></a><span class="keyword parmname" id="i1450730"><a name="i1450730"><!-- --></a>RecurrenceStartDateTime</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceEndDateOnly" class="dashAnchor"></a>Indicates the date and time when the recurring event begins. The value
+                        must precede the <span class="keyword parmname">RecurrenceEndDateOnly</span>.
+                      This field is a regular Date/Time field with a
+                        relevant time portion. The time portion is always transferred in the
+                        Coordinated Universal Time (UTC) time zone. Translate the time portion to or
+                        from a local time zone for the user or the application, as appropriate.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceTimeZoneSidKey" class="dashAnchor"></a><span class="keyword parmname">RecurrenceTimeZoneSidKey</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the time zone associated with a recurring event. For example,
+                        “UTC-8:00” for Pacific Standard Time.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/RecurrenceType" class="dashAnchor"></a><span class="keyword parmname" id="i1450783"><a name="i1450783"><!-- --></a>RecurrenceType</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/RecurrenceInstance" class="dashAnchor"></a>Indicates how often the event repeats. For example, daily, weekly, or
+                        every nth month (where “nth” is defined in <span class="keyword parmname">RecurrenceInstance</span>).</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/ReminderDateTime" class="dashAnchor"></a><span class="keyword parmname" id="event_reminderDateTime"><a name="event_reminderDateTime"><!-- --></a>ReminderDateTime</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="ReminderDateTime_desc"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><a name="ReminderDateTime_desc"><!-- --></a>Represents the time when the reminder is
+                        scheduled to fire, if <span class="keyword parmname">IsReminderSet</span> is set to <samp class="codeph nolang">true</samp>. If <span class="keyword parmname">IsReminderSet</span> is set to <samp class="codeph nolang">false</samp>, then the user may
+                        have deselected the reminder checkbox in the Salesforce user
+                        interface, or the reminder has already fired at the time indicated by the
+                        value.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/ShowAs" class="dashAnchor"></a><span class="keyword parmname">ShowAs</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates how this event appears when another user views the calendar: Busy,
+                      Out of Office, or Free. Label is <strong class="ph uicontrol">Show Time As</strong>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><span class="keyword parmname" id="StartDateTime"><a name="StartDateTime"><!-- --></a>StartDateTime</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">dateTime</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the start date and time of the event. Available in versions 13.0
+                      and later.<p class="p"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If the Event <span class="keyword parmname">IsAllDayEvent</span> flag is set to true (indicating that it is an all-day Event), then the
+                        event start date information is contained in the <span class="keyword parmname">StartDateTime</span> field. This field is a regular Date/Time field with a
+                        relevant time portion. The time portion is always transferred in the
+                        Coordinated Universal Time (UTC) time zone. Translate the time portion to or
+                        from a local time zone for the user or the application, as appropriate.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If the Event <span class="keyword parmname">IsAllDayEvent</span> flag is set to false (indicating that it is not an all-day event), then
+                        the event start date information is contained in the <span class="keyword parmname">StartDateTime</span> field. The time portion is always transferred in the Coordinated
+                        Universal Time (UTC) time zone. You need to translate the time portion to or
+                        from a local time zone for the user or the application, as
+                        appropriate.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/ActivityDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a>If this field has a value, then <span class="keyword parmname">ActivityDate</span>
+                        and <span class="keyword parmname">ActivityDateTime</span>
+                        must either be <samp class="codeph nolang">null</samp> or match the value
+                        of this field.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/Subject" class="dashAnchor"></a><span class="keyword parmname" id="SubjectField"><a name="SubjectField"><!-- --></a>Subject</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">combobox</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The subject line of the event, such as Call, Email, or Meeting. Limit: 255
+                      characters.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates the event type, such as Call, Email, or Meeting.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/UndecidedEventInviteeIds" class="dashAnchor"></a><span class="keyword parmname" id="UndecidedEventRelationIds_parmname_ph"><a name="UndecidedEventRelationIds_parmname_ph"><!-- --></a>UndecidedEventInviteeIds</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">JunctionIdList</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="UndecidedEventRelationsId_desc_ph"><a name="//apple_ref/cpp/Field/UndecidedEventRelation" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a><a name="UndecidedEventRelationsId_desc_ph"><!-- --></a>A string array of contact, lead,
+                        or user IDs who are undecided about this event. This
+                          <span class="keyword parmname">JunctionIdList</span> is linked to the
+                          <span class="keyword parmname">UndecidedEventRelation</span> child relationship.</span><div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p><a name="//apple_ref/cpp/Field/fieldsToNull" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a>Adding a
+                  <span class="keyword parmname">JunctionIdList</span> field name to the
+                  <span class="keyword parmname">fieldsToNull</span> property deletes all related junction records.
+                This action can’t be undone.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/WhatCount" class="dashAnchor"></a><span class="keyword parmname" id="whatcount"><a name="whatcount"><!-- --></a>WhatCount</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>
+<span class="ph" id="SharedActivitiesSpecific"><a name="SharedActivitiesSpecific"><!-- --></a>Available if your organization has enabled
+                        Shared Activities.</span> Represents the count of related EventRelations pertaining to the <span class="keyword parmname">WhatId</span>. The count of the
+                        <span class="keyword parmname">WhatId</span> must be <kbd class="ph userinput">1</kbd> or less.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><span class="keyword parmname" id="i1450886"><a name="i1450886"><!-- --></a>WhatId</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Related To ID" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>The <span class="keyword parmname">WhatId</span> represents nonhuman
+             objects such as accounts, opportunities, campaigns, cases, or custom objects.
+              <span class="keyword parmname">WhatId</span>s are polymorphic. Polymorphic means a
+              <span class="keyword parmname">WhatId</span> is equivalent to the ID of a related object. The label is
+              <span class="keyword parmname">Related To ID</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/WhoCount" class="dashAnchor"></a><span class="keyword parmname" id="whocount"><a name="whocount"><!-- --></a>WhoCount</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a>Available to organizations that have
+                        Shared Activities enabled. Represents the count of related EventRelations pertaining to the <span class="keyword parmname">WhoId</span>.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e151" data-title="Field"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><span class="keyword parmname" id="i1450922"><a name="i1450922"><!-- --></a>WhoId</span></td>
+
+              <td class="entry" headers="d353210e154" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">reference</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Name ID" class="dashAnchor"></a>The WhoId represents a human such as a lead
+             or a contact. WhoIds are polymorphic. Polymorphic means a WhoId is equivalent to a
+             contact’s ID or a lead’s ID. The label is <span class="keyword parmname">Name ID</span>.<p class="p"><a name="//apple_ref/cpp/Field/Name ID" class="dashAnchor"></a>If Shared Activities is enabled, the
+             value of this field is the ID of the related lead or primary contact. If you add,
+             update, or remove the WhoId field, you might encounter problems with triggers,
+             workflows, and data validation rules that are associated with the record. The label is
+              <span class="keyword parmname">Name ID</span>.</p>
+<p class="p"><span class="ph" id="whoid_with_junctionidlist"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/JunctionIdList" class="dashAnchor"></a><a name="whoid_with_junctionidlist"><!-- --></a>If the
+                            <span class="keyword parmname">JunctionIdList</span> field is used, all
+                            <span class="keyword parmname">WhoId</span>s are included in the relationship
+                        list.</span></p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+    <div class="section" id="sforce_api_objects_event_usage_section">
+<a name="sforce_api_objects_event_usage_section"><!-- --></a><h2 class="helpHead2">Usage</h2>
+<div class="p">
+<p class="p">Use Event to
+        manage calendar appointments.</p>
+<p class="p"><strong class="ph b">Querying and Filtering Events</strong></p>
+<p class="p">Queries on
+        events will be denied before they time out if they involve amounts of data that are deemed
+        too large. In such cases, the exception code <samp class="codeph nolang">OPERATION_TOO_LARGE</samp> is returned. If you receive <samp class="codeph nolang">OPERATION_TOO_LARGE</samp>, refactor your query to return or scan a smaller amount of
+        data.</p>
+<div class="p">When querying for events with a specific due date, you must filter on both the
+          <span class="keyword parmname">ActivityDateTime</span> and
+          <span class="keyword parmname">ActivityDate</span>
+        fields. For example to find all events with a due date of February 14, 2003, you need two filters:<ul class="ul bulletList">
+          <li class="li">One filter with the <span class="keyword parmname">ActivityDate</span>
+            field equal to the Coordinated Universal Time (UTC) time zone on February 14, 2003.</li>
+
+          <li class="li">One filter with the <span class="keyword parmname">ActivityDateTime</span>
+            field greater than or equal to midnight on February 14, 2003 in the user’s local
+            time zone AND less than or equal to midnight on February 15, 2003 in the user’s
+            local time zone.</li>
+
+        </ul>
+</div>
+<p class="p">Alternatively, in version 13.0 and later, you can find events with a specific
+        due date by filtering on <span class="keyword parmname">StartDateTime</span>. For
+        example, to find all events with a due date of February 14, 2003, filter with the <span class="keyword parmname">StartDateTime</span> greater
+        than or equal to midnight on February 14, 2003 in the user's local time zone AND less than
+        or equal to midnight on February 15, 2003 in the user's local time zone.</p>
+<p class="p">The <span class="keyword parmname">EventId</span>
+        field of an EventRelation object always points to the master record. An invitee on a group event can query the EventRelation object to view the master record.</p>
+<div class="p">
+<span class="ph" id="MultidayEventsDesc"><a name="MultidayEventsDesc"><!-- --></a><strong class="ph b">Multiday
+            Events</strong></span><ul class="ul bulletList">
+          <li class="li">Multiday events are available in version 13.0 and later. Also, in earlier versions
+            SOQL queries do not return multiday events.</li>
+
+          <li class="li">Multiday events are enabled through the user interface from Setup by entering
+              <kbd class="ph userinput">Activity Settings</kbd> in the <span class="keyword parmname">Quick Find</span> box,
+            then selecting <strong class="ph uicontrol">Activity Settings</strong>.</li>
+
+          <li class="li">If the multiday event feature
+                          is enabled, then API versions
+                          13.0 and later support values greater than 1440 for the <span class="keyword parmname">DurationInMinutes</span> field. API
+                          versions 12.0 and earlier can’t access event objects whose
+                            <span class="keyword parmname">DurationInMinutes</span> is greater than 1440.</li>
+
+          <li class="li">Multiday events can’t exceed 14 days.</li>
+
+        </ul>
+</div>
+<p class="p"><strong class="ph b"><span class="ph" id="i1450994"><a name="i1450994"><!-- --></a>Recurring Events</span></strong></p>
+<ul class="ul bulletList">
+        <li class="li">Recurring events are available in version 7.0 and later. </li>
+
+        <li class="li">After an event is created, it can’t be changed from recurring to nonrecurring or
+          vice versa.</li>
+
+        <li class="li">When you delete a recurring event series through the API, all past and future events
+          in the series are removed. However, when you delete a recurring event series through the
+          user interface, only future occurrences are removed.</li>
+
+        <li class="li">When creating a recurring event series, the duration of the event must be 24 hours or
+          less (either the <span class="keyword parmname">DurationInMinutes</span>
+          or the difference between <span class="keyword parmname">RecurrenceStartDateTime</span> and <span class="keyword parmname">EndDateTime</span> must
+          be greater than 24 hours). Once the recurring event series is created, you can extend the
+          length of individual occurrences beyond 24 hours if Multiday events are enabled; see <strong class="ph b">Multiday
+            Events</strong>.</li>
+
+        <li class="li">If <span class="keyword parmname">IsRecurrence</span> is
+            <samp class="codeph nolang">true</samp>, then <span class="keyword parmname">RecurrenceStartDateTime</span>,
+            <span class="keyword parmname">RecurrenceEndDateOnly</span>,
+            <span class="keyword parmname">RecurrenceType</span>,
+          and any properties associated with the given recurrence type (see the following table)
+          must be populated.</li>
+
+        <li class="li">When updating a recurring event series, it’s not possible to update the EventRelation for the event series object and the EventRelation for the series object occurrences at the same time.</li>
+
+      </ul>
+<p class="p" id="RecurrenceFieldsUsage"><a name="RecurrenceFieldsUsage"><!-- --></a>The following table describes the usage of recurrence
+        fields. Each recurrence type must have all of its properties set. All unused properties must
+        be set to null.</p>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d353210e3448">RecurrenceType Value</th>
+
+              <th class="featureTableHeader  " id="d353210e3451">Properties</th>
+
+              <th class="featureTableHeader  " id="d353210e3454">Example Pattern</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursDaily</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceInterval</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every second day</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursEveryWeekday</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every weekday - can’t be Saturday or Sunday</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursMonthly</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceDayOfMonth RecurrenceInterval</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every second month, on the third day of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursMonthlyNth</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceInterval RecurrenceInstance RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every second month, on the last Friday of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursWeekly</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceInterval RecurrenceDayOfWeekMask</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every three weeks on Wednesday and Friday</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursYearly</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceDayOfMonth RecurrenceMonthOfYear</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">Every March on the twenty-sixth day of the month</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d353210e3448" data-title="RecurrenceType Value">RecursYearlyNth</td>
+
+              <td class="entry" headers="d353210e3451" data-title="Properties">RecurrenceDayOfWeekMask
+                RecurrenceInstanceRecurrenceMonthOfYear</td>
+
+              <td class="entry" headers="d353210e3454" data-title="Example Pattern">The first Saturday in every October</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+<div class="sectiondiv">
+        <dl class="dl detailList">
+          
+            <dt class="dt dlterm">JunctionIdList</dt>
+
+            <dd class="dd">To create an event using <span class="keyword parmname">JuncionIdList</span>, IDs are pulled from the
+              related contacts and both the event and the <span class="keyword parmname">EventRelation</span> records
+              are created in one API call. If the <span class="keyword parmname">EventRelation</span> fails, the
+              event is rolled back because it’s all done in a single API
+              call.<div class="codeSection nolang"><div id="highlighter_699685" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_699685_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_699685" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">public void createEventNew(Contact[] contacts) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">String[] contactIds = new String[contacts.size()];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">for (int i = 0; i &lt; contacts.size(); i++) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">contactIds[i] = contacts[i].getID();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Event event = new Event();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">event.setSubject("New Event");</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">event.setEventWhoIds(contactIds);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] results = null;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">try {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">results = connection.create(new Event[] {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">task</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">});</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} catch (ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</dd>
+
+          
+        </dl>
+
+      </div>
+</div>
+</div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_guidelines_archive.htm">Archived Activities</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

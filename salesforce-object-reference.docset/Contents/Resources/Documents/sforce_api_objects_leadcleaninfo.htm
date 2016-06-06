@@ -1,0 +1,2069 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LeadCleanInfo | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_LeadCleanInfo"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LeadCleanInfo</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Stores the metadata Data.com Clean uses to determine a lead
+      record’s clean status. Helps you automate the cleaning or related processing of lead
+      records.</span></div>
+
+  <p class="p">Lead Clean Info provides a snapshot of the data in your Salesforce lead record and its
+      matched Data.com record at the time
+      the Salesforce record was
+      cleaned.</p>
+
+  <p class="p">Lead Clean Info includes a number of bit vector fields, whose component fields each correspond
+   to individual object fields and provide related data or status information about those fields.
+   For example, the bit vector field <span class="keyword parmname">IsDifferent</span> has an
+    <span class="keyword parmname">IsDifferentTitle</span> field. If the <span class="keyword parmname">IsDifferentTitle</span>
+   field’s value is <samp class="ph systemoutput">False</samp>, that means the
+    <span class="keyword parmname">Title</span> field value is <em class="ph i">the same</em> on the Salesforce lead record and its
+   matched Data.com record.</p>
+
+  <div class="p">LeadCleanInfo bit vector fields include:<ul class="ul bulletList">
+        <li class="li">
+<span class="keyword parmname">CleanedBy</span> indicates who (a user) or what (a Clean job) cleaned the
+          lead record.</li>
+
+        <li class="li">
+<span class="keyword parmname">IsDifferent</span> indicates whether or not a field on the lead record has
+          a value that differs from the corresponding field on the matched Data.com record.</li>
+
+        <li class="li">
+<span class="keyword parmname">IsFlaggedWrong</span> indicates whether or not a field on the lead record
+          has a value that is flagged as wrong to Data.com.</li>
+
+        <li class="li">
+<span class="keyword parmname">IsReviewed</span> indicates whether or not a field on the lead record is
+          in a <samp class="ph systemoutput">Reviewed</samp> state, which means that the value was reviewed
+          but not accepted..</li>
+
+      </ul>
+</div>
+
+<p class="p">Their individual bits are defined here</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d458334e165">Field Name</th>
+
+<th class="featureTableHeader  " id="d458334e168">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a><span class="keyword parmname">Address</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">AnnualRevenue</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Estimated annual revenue of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/CleanedByJob" class="dashAnchor"></a><span class="keyword parmname">CleanedByJob</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the lead record was cleaned by a Data.com Clean
+job (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/CleanedByUser" class="dashAnchor"></a><span class="keyword parmname">CleanedByUser</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the lead record was cleaned by a Salesforce
+user (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">CompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Data Universal Numbering System (D-U-N-S) number is a unique,
+nine-digit number assigned to every business location in the Dun &amp;
+Bradstreet database that has a unique, separate, and distinct operation.
+D-U-N-S numbers are used by industries and organizations around the
+world as a global standard for business identification and tracking. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompanyName" class="dashAnchor"></a><span class="keyword parmname">CompanyName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the company.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContactStatusDataDotCom" class="dashAnchor"></a><span class="keyword parmname">ContactStatusDataDotCom</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The status of the contact associated with the lead per Data.com.
+Values are: <samp class="ph systemoutput">Contact is Active per Data.com</samp>, <samp class="ph systemoutput">Phone is Wrong per Data.com </samp>, <samp class="ph systemoutput">Email is Wrong per Data.com</samp>, <samp class="ph systemoutput">Phone and
+Email are Wrong per Data.com</samp>, <samp class="ph systemoutput">Contact
+Not at Company per Data.com</samp>, <samp class="ph systemoutput">Contact
+is Inactive per Data.com</samp>, <samp class="ph systemoutput">Company this
+contact belongs to is out of business per Data.com</samp>, <samp class="ph systemoutput">Company this contact belongs to never existed per Data.com</samp> or <samp class="ph systemoutput">Email address is invalid per Data.com</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/DandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">DandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The D-U-N-S Number on the D&amp;B Company record (if any) that
+is linked to the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/DataDotComCompanyId" class="dashAnchor"></a><span class="keyword parmname">DataDotComCompanyId</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID Data.com maintains for the company associated with the
+lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/DataDotComId" class="dashAnchor"></a><span class="keyword parmname">DataDotComId</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID Data.com maintains for the contact associated with the
+lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a><span class="keyword parmname">Email</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The lead’s email address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a><span class="keyword parmname">FirstName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The lead’s first name.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a><span class="keyword parmname">Industry</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The industry the lead belongs to.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsDifferentAnnualRevenue</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">AnnualRevenue</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCity" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCity</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">City</span> field
+value is different from the corresponding value on its matched Data.com
+record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company D-U-N-S
+Number" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company D-U-N-S
+Number</span> field value is different from the corresponding
+value on its matched Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCompanyName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company Name</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCountry" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCountry</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Country</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCountryCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCountryCode</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Country Code" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Country Code</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentDandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsDifferentDandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/D&amp;B Company
+D-U-N-S Number" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">D&amp;B Company
+D-U-N-S Number</span> field value is different from the corresponding
+value on its matched Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentEmail" class="dashAnchor"></a><span class="keyword parmname">IsDifferentEmail</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Email</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentFirstName" class="dashAnchor"></a><span class="keyword parmname">IsDifferentFirstName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/First Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">First Name</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentIndustry" class="dashAnchor"></a><span class="keyword parmname">IsDifferentIndustry</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Industry</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentLastName" class="dashAnchor"></a><span class="keyword parmname">IsDifferentLastName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Last Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Last Name</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsDifferentNumberOfEmployees</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/No. of Employees" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">No. of Employees</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentPhone" class="dashAnchor"></a><span class="keyword parmname">IsDifferentPhone</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Phone</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentPostalCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentPostalCode</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Postal Code" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Postal Code</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentState" class="dashAnchor"></a><span class="keyword parmname">IsDifferentState</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">State</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentStateCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentStateCode</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/State Code" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">State Code</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentStreet" class="dashAnchor"></a><span class="keyword parmname">IsDifferentStreet</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Street</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentTitle" class="dashAnchor"></a><span class="keyword parmname">IsDifferentTitle</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Title</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongAddress" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongAddress</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Address</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongAnnualRevenue</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Annual Revenue" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Annual Revenue</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company D-U-N-S
+Number" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company D-U-N-S
+Number</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongCompanyName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company Name</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongEmail" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongEmail</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Email</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongIndustry" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongIndustry</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Industry</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongName" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Name</span> field
+value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongNumberOfEmployees</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/No. of Employees" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">No. of Employees</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongPhone" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongPhone</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Phone</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongTitle" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongTitle</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Title</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsInactive" class="dashAnchor"></a><span class="keyword parmname">IsInactive</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the lead has been reported to Data.com as <kbd class="ph userinput">Inactive</kbd> (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedAddress" class="dashAnchor"></a><span class="keyword parmname">IsReviewedAddress</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Address</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsReviewedAnnualRevenue</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Annual Revenue" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Annual Revenue</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsReviewedCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company D-U-N-S
+Number" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company D-U-N-S
+Number</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsReviewedCompanyName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Company Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Company Name</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedDandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsReviewedDandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/D&amp;B Company
+D-U-N-S Number" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">D&amp;B Company
+D-U-N-S Number</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedEmail" class="dashAnchor"></a><span class="keyword parmname">IsReviewedEmail</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Email</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedIndustry" class="dashAnchor"></a><span class="keyword parmname">IsReviewedIndustry</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Industry</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedName" class="dashAnchor"></a><span class="keyword parmname">IsReviewedName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Name</span> field
+value is in a <samp class="ph systemoutput">Reviewed</samp> state (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsReviewedNumberOfEmployees</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/No. of Employees" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">No. of Employees</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedPhone" class="dashAnchor"></a><span class="keyword parmname">IsReviewedPhone</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Phone</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedTitle" class="dashAnchor"></a><span class="keyword parmname">IsReviewedTitle</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a>Indicates whether the lead’s <span class="keyword parmname">Title</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastMatchedDate" class="dashAnchor"></a><span class="keyword parmname">LastMatchedDate</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date the lead record was last matched and linked to a Data.com
+record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><span class="keyword parmname">LastName</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The lead’s last name.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastStatusChangedById" class="dashAnchor"></a><span class="keyword parmname">LastStatusChangedById</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Clean Status" class="dashAnchor"></a>The ID of who or what last changed the record’s <span class="keyword parmname">Clean Status</span> field value: a Salesforce user or a Clean
+job.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastStatusChangedDate" class="dashAnchor"></a><span class="keyword parmname">LastStatusChangedDate</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Clean Status" class="dashAnchor"></a>The date on which the record’s <span class="keyword parmname">Clean Status</span> field value was last changed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Longitude</span> to specify the precise
+geolocation of a billing address. Data not currently provided.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/LeadId" class="dashAnchor"></a><span class="keyword parmname">LeadId</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique, system-generated ID assigned when the lead record
+was created.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Latitude</span> to specify the precise
+geolocation of a billing address. Data not currently provided.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Field label is <strong class="ph uicontrol">Lead Clean Info Name</strong>. The
+name of the lead. Maximum size is 255 characters. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/NumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">NumberOfEmployees</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of employees working at the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The phone number for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d458334e165" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d458334e168" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The lead’s title.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+      <p class="p">Developers can create triggers that read the Lead Clean Info fields to help automate the
+        cleaning or related processing of lead records.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

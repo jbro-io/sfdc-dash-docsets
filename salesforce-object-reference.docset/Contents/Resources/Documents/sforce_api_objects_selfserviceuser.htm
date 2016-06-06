@@ -1,0 +1,459 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SelfServiceUser | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_selfserviceuser"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SelfServiceUser</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a Contact who
+   has been enabled to use your organization’s Self-Service portal, where he or she can
+   obtain online support.</span></div>
+
+<div class="p">
+   <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Starting with Spring ’12, the Self-Service portal isn’t
+                available for new orgs. Existing orgs continue to have access to the Self-Service portal.</p>
+</div>
+</div></div></div></div>
+
+  </div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d422837e70-d422989e73"><a name="d422837e70-d422989e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d658836e124">Field</th>
+
+<th class="featureTableHeader  " id="d658836e127">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a> <span class="keyword parmname">ContactId</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>Required. All Self-Service users must be associated with a Contact. The contact’s email should match the Self-Service user
+email. The contact must have a value in the <span class="keyword parmname">AccountId</span> field or an error occurs. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a> <span class="keyword parmname">Email</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Make this the same as the email address for the Contact associated with this SelfServiceUser. Password resets and other
+system communication will be sent to this email address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a> <span class="keyword parmname" id="i1466268"><a name="i1466268"><!-- --></a>FirstName</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">First name of the Self-Service user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a> <span class="keyword parmname">IsActive</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the Self-Service user is allowed to log in 
+to the Self-Service portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Note that
+there is no way to delete a Self-Service user. They can only be marked
+as inactive.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/LanguageLocaleKey" class="dashAnchor"></a> <span class="keyword parmname">LanguageLocaleKey</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. This is a restricted picklist field. It is the primary
+language for the user. All on-screen text in the Self-Service portal
+is displayed in this language.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastLoginDate" class="dashAnchor"></a> <span class="keyword parmname">LastLoginDate</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date and time when the Self-Service user last logged in.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a> <span class="keyword parmname" id="i1466372"><a name="i1466372"><!-- --></a>LastName</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Last name of the Self-Service user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/LocaleSidKey" class="dashAnchor"></a> <span class="keyword parmname">LocaleSidKey</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. This is a restricted picklist field. The value of this
+field affects the formatting and parsing of values, especially numeric
+values, in the Self-Service portal. Values are two-letter codes that
+indicate language and sometimes language and country. The codes are
+based on ISO standards.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a> <span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a>Concatenation of <span class="keyword parmname">FirstName</span> and <span class="keyword parmname">LastName</span>. Limited to 121 characters. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/SuperUser" class="dashAnchor"></a> <span class="keyword parmname">SuperUser</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">Indicates whether this Self-Service user is a super user with
+additional access on his or her company's Self-Service portal (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). </p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/TimeZoneSidKey" class="dashAnchor"></a> <span class="keyword parmname">TimeZoneSidKey</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. This is a restricted picklist field. The time zone of
+a affects the offset used when displaying or entering times in the
+Self-Service portal.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d658836e124" data-title="Field"><a name="//apple_ref/cpp/Field/Username" class="dashAnchor"></a> <span class="keyword parmname">Username</span> </td>
+
+<td class="entry" headers="d658836e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. This contains the name that a Self-Service user enters
+to log into the Self-Service portal. Value must be unique in your
+organization. If you try to create or update a user with a duplicate
+value, the operation is rejected and an error is returned.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">For security reasons, you can’t
+query Self-Service user passwords via the API or
+the  user interface. However, the API allows
+you to set and reset Self-Service user passwords using the <samp class="codeph nolang">setPassword()</samp> and <samp class="codeph nolang">resetPassword()</samp> calls.</p>
+<p class="p">SelfServiceUser records created from the API don’t
+cause a notification email to be sent. If you want to notify the user,
+you must send them an email after creating the user.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contact.htm" title="Represents a contact, which is an individual associated with an account.">Contact</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm" title="Represents a user in your organization.">User</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

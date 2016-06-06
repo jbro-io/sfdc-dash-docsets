@@ -1,0 +1,332 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Approval | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_approval"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Approval</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents an approval request for a Contract.</span></div>
+
+  <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This object is read-only and is specific to approvals on the Contract object. It
+   isn't equal to or involved in the approval processes represented by the ProcessInstance, which is more powerful.</p>
+</div>
+</div></div></div></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+
+   
+   <p class="p">Customer Portal users can't access this object.</p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d166099e110">Field</th>
+
+       <th class="featureTableHeader  " id="d166099e113">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/ApproveComment" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1441288"><a name="i1441288"><!-- --></a>ApproveComment</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Text entered by the user when they approved or rejected this approval request.
+           Required. Limit: 4,000 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+        <span class="keyword parmname">IsDeleted</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the object has been moved to the Recycle Bin
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1441332"><a name="i1441332"><!-- --></a>OwnerId</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. ID of the User
+           being asked to approve or reject the approval request. Must be a valid User ID.
+           Required.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1441359"><a name="i1441359"><!-- --></a>ParentId</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. ID of the Contract associated with this approval request. Must be a valid contract ID.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/RequestComment" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1441380"><a name="i1441380"><!-- --></a>RequestComment</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Text entered by the User
+           who created the approval request. Optional. This field can't be updated after the
+           Approval has been created. Limit: 4,000 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d166099e110" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1441407"><a name="i1441407"><!-- --></a>Status</span>
+       </td>
+
+       <td class="entry" headers="d166099e113" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. Status of this approval request. One of the following picklist values: <ul class="ul bulletList">
+            <li class="li">
+             <samp class="codeph nolang">Pending</samp>—Specified only when the Approval
+             request is created (<samp class="codeph nolang">create()</samp>
+             call)</li>
+
+            <li class="li">
+             <samp class="codeph nolang">Approved</samp>—Specified only when the Approval
+             request is approved (<samp class="codeph nolang">update()</samp>
+             call)</li>
+
+            <li class="li">
+             <samp class="codeph nolang">Rejected</samp>—Specified when the Approval
+             request is rejected (<samp class="codeph nolang">update()</samp>
+             call) or when it is created (<samp class="codeph nolang">create()</samp>
+             call) and immediately rejected for archival/historical purposes.</li>
+
+           </ul>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">This object allows client applications to programmatically handle approval requests for a Contract.
+    Initially, to request a Contract approval, a client application might create a new Approval
+    request record, specifying the <span class="keyword parmname">ParentId</span>,
+     <span class="keyword parmname">OwnerId</span>
+    (user approving or rejecting the request), <span class="keyword parmname">Status</span>
+    (Pending), and (optionally) <span class="keyword parmname">RequestComment</span>
+    fields. Note that when a client application creates the first approval request, if the value of
+    the Contract
+    <span class="keyword parmname">Status</span>
+    field is Draft, then the Approval
+    <span class="keyword parmname">Status</span> for
+    this record is automatically changed to In Approval Process (see ContractStatus for more information).</p>
+
+   <p class="p">A client application might subsequently update an existing Approval
+    request, specifying the <span class="keyword parmname">Status</span>
+    (Approved or <samp class="codeph nolang">Rejected</samp>) and an <span class="keyword parmname">ApproveComment</span>
+    (required); the <span class="keyword parmname">RequestComment</span>
+    field can't be updated. Updating an Approval
+    record (either to approve or reject) requires the client application to be logged in with
+    “Approve Contract” permission. To update an Approval request, its <span class="keyword parmname">Status</span> must
+    be Pending—a client application can't update an Approval
+    that has already been Approved or Rejected. To re-submit an approval request for a given Contract,
+    a client application must create a new, separate Approval
+    record and repeat the approval process.</p>
+
+   <p class="p">Once a Contract
+    has been approved (not rejected), the Contract
+    <span class="keyword parmname">LastApprovedDate</span>
+    field is automatically updated, however the Contract
+    <span class="keyword parmname">Status</span>
+    field isn't updated, it keeps the value InApproval. </p>
+
+   <p class="p">An approved Contract
+    must be activated explicitly. Client applications can activate a Contract
+    by setting the value in its <span class="keyword parmname">Status</span>
+    field to Activated, or a User can
+    activate a Contract
+    via the Salesforce user interface.</p>
+
+   <p class="p">A Contract
+    can have multiple approval requests in various states (Pending, Approved, and Rejected). In
+    addition, one User can have
+    multiple approval requests associated with the same Contract.</p>
+
+   <p class="p">Client applications can't explicitly deleteApproval
+    records. Approval records are deleted automatically if the parent Contract
+    is deleted.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

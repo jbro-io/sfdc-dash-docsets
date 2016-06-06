@@ -1,0 +1,353 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ThirdPartyAccountLink | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_thirdpartyaccountlink"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ThirdPartyAccountLink</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the list of external users who authenticated using an Auth.
+			Provider. This object is available in API version 32.0 and
+			later.</span></div>
+
+		<div class="section">
+			<p class="p">A list of third-party account links is generated when users of an organization authenticate
+				using an external Auth. Provider. Use this object to list and revoke a given user's
+				social sign-on connections (such as Facebook©). </p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d704775e93">Field Name</th>
+
+							<th class="featureTableHeader  " id="d704775e96">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/Handle" class="dashAnchor"></a><span class="keyword parmname">Handle</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The username in the third-party system.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsNotSsoUsable" class="dashAnchor"></a><span class="keyword parmname">IsNotSsoUsable</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Support for single sign-on.<p class="p">If
+												<kbd class="ph userinput">true</kbd>, the link cannot be
+												used for a single sign-on flow. It is only available
+												OAuth access and refresh tokens.</p>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/Provider" class="dashAnchor"></a><span class="keyword parmname">Provider</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The third-party account provider name.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/RemoteIdentifier" class="dashAnchor"></a><span class="keyword parmname">RemoteIdentifier</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The unique ID for the user in the third-party
+											system.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/SsoProvider" class="dashAnchor"></a><span class="keyword parmname">SsoProvider</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_authprovider.htm#sforce_api_objects_authprovider" title="Represents an authentication provider (or auth provider) in your organization.">AuthProvider</a></dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The foreign key to the AuthProvider of the third-party
+											system.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/SsoProviderId" class="dashAnchor"></a><span class="keyword parmname">SsoProviderId</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">
+											reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/SsoProvider" class="dashAnchor"></a>The ID associated with the
+												<span class="keyword parmname">SsoProvider</span> value.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/SsoProviderName" class="dashAnchor"></a><span class="keyword parmname">SsoProviderName</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/SsoProvider" class="dashAnchor"></a>The name associated with the AuthProvider of the
+											third-party system, in case the user has no access to
+											the provider foreign key (the
+												<span class="keyword parmname">SsoProvider</span> value). </dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdPartyAccountLinkKey" class="dashAnchor"></a><span class="keyword parmname">ThirdPartyAccountLinkKey</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/RemoteIdentifier" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/SsoProvider" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/SsoProviderId" class="dashAnchor"></a>A concatenated string including the organization ID, the
+												<span class="keyword parmname">SsoProviderId</span> value, the
+												<span class="keyword parmname">SsoProvider</span> value, and the
+												<span class="keyword parmname">RemoteIdentifier</span> value.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d704775e93" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+							<td class="entry" headers="d704775e96" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The Salesforceuser associated with this third-party account
+											link.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Use this object makes to build custom screens to manage a user’s third-party account
+				links.</p>
+
+			<p class="p">Administrators (with the “Manage Users” permission) querying this object can see all
+				the links for all users in the organization. Without the “Manage Users” permission,
+				users can only retrieve thier own links. A user may not have access to the
+					<span class="keyword parmname">SsoProvider</span> value (the foreign key). In this case, use the
+					<span class="keyword parmname">SsoProviderName</span> to render the name of the provider for the
+				associated link.</p>
+
+			<p class="p">Use the Apex method <samp class="codeph apex_code">Auth.AuthToken.revokeAccess()</samp> to revoke a link.</p>
+
+			<p class="p">In API version 34.0 and later,
+				this object was enhanced to help manage high instance counts. A 
+					<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_calls_query.htm#topic-title"><samp class="codeph nolang">query()</samp></a>
+				 call returns up to 500 rows. A <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_calls_querymore.htm#topic-title"><samp class="codeph nolang">queryMore()</samp></a> call returns 500 more, up to 2500 total. No more records are returned
+				after 2500. To make sure you don’t miss any records, issue a <samp class="codeph nolang">COUNT()</samp> query in a SELECT clause for
+				ThirdPartyAccountLink. This gives you the total number of records. If there are more
+				than 2500 records, divide your query by filtering on fields, like
+					<span class="keyword parmname">UserId</span>, to return subsets of less than 2500 records.</p>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

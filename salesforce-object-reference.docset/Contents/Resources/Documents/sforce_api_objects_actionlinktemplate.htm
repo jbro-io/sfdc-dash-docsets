@@ -1,0 +1,603 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ActionLinkTemplate | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_actionlinktemplate"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ActionLinkTemplate</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Action link templates let you reuse action link definitions and package
+			and distribute action links. An action link is a button on a feed element. Clicking an
+			action link can take a user to another Web page, initiate a file download, or invoke an
+			API call to an external server or Salesforce. Use action links
+			to integrate Salesforce and
+			third-party services into the feed.</span> This object is available in API version 33.0 and
+		later.</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeLayout()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Only users with the “Customize Application” permission can
+				modify or delete this object.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d146265e126">Field Name</th>
+
+							<th class="featureTableHeader  " id="d146265e129">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActionLinkGroupTemplateId" class="dashAnchor"></a><span class="keyword parmname">ActionLinkGroupTemplateId</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_actionlinkgrouptemplate.htm" title="Action link templates let you reuse action link definitions and package and distribute action links. An action link is a button on a feed element. Clicking on an action link can take a user to another Web page, initiate a file download, or invoke an API call to an external server or Salesforce. Use action links to integrate Salesforce and third-party services into the feed. Every action link belongs to an action link group and action links within the group are mutually exclusive. This object is available in API version 33.0 and later.">ActionLinkGroupTemplate</a> with which this action link
+											template is associated.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActionUrl" class="dashAnchor"></a><span class="keyword parmname">ActionUrl</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The action link URL. For example, a <samp class="codeph nolang">Ui</samp> action link URL is a Web page. A <samp class="codeph nolang">Download</samp> action link URL is a link to the file to download. <samp class="codeph nolang">Ui</samp> and <samp class="codeph nolang">Download</samp> action link URLs are provided to clients. An <samp class="codeph nolang">Api</samp> or <samp class="codeph nolang">ApiAsync</samp> action link URL is a REST resource. <samp class="codeph nolang">Api</samp> and <samp class="codeph nolang">ApiAsync</samp> action link URLs aren’t provided to clients. Links to Salesforce can be relative.
+                All other links must be absolute and start with <samp class="codeph nolang">https://</samp>.<p class="p" id="actionUrlDescrCont"><a name="actionUrlDescrCont"><!-- --></a>Links to resources
+												hosted on Salesforce servers can be relative, starting with a <samp class="codeph nolang"> /</samp>. All other links
+												must be absolute and start with <samp class="codeph apex_code">https:<span class="onelineComment">//</span></samp>. This
+												field can contain context variables and binding
+												variables in the form <samp class="codeph apex_code">{!Bindings.<var class="keyword varname">key</var>}</samp>, for
+												example, <samp class="codeph nolang">https://www.example.com/{!Bindings.itemId}</samp>.
+												Set the binding variable’s value when you
+												instantiate the action link group from the
+												template.</p>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Headers" class="dashAnchor"></a><span class="keyword parmname">Headers</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Nillable, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="headersDescr"><a name="headersDescr"><!-- --></a>Template for the HTTP headers sent
+												when corresponding action links are invoked. This
+												field can be used only for <samp class="codeph nolang">Api</samp> and <samp class="codeph nolang">ApiAsync</samp> action
+												links. This field can contain context variables and
+												binding variables in the form <samp class="codeph apex_code">{!Bindings.<var class="keyword varname">key</var>}</samp>.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsConfirmationRequired" class="dashAnchor"></a><span class="keyword parmname">IsConfirmationRequired</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="confirmationDescr"><a name="confirmationDescr"><!-- --></a>If <samp class="codeph nolang">true</samp>, a confirmation
+												dialog appears before the action is
+											executed.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsGroupDefault" class="dashAnchor"></a><span class="keyword parmname">IsGroupDefault</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="groupDefaultDescr"><a name="groupDefaultDescr"><!-- --></a>If <samp class="codeph nolang">true</samp>, action links
+												derived from this template are the default or
+												primary action in their action groups. There can be
+												only one default action per action group.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a><span class="keyword parmname">Label</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="labelDescr"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LabelKey" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LabelKey" class="dashAnchor"></a><a name="labelDescr"><!-- --></a>A custom label to display on the action link button. If none of
+												the <span class="keyword parmname">LabelKey</span> values make sense
+												for an action link, use a custom label. Set the
+												<span class="keyword parmname">LabelKey</span> field to <samp class="codeph nolang">None</samp> and enter a
+												label name in the <span class="keyword parmname">Label</span>
+												field.</span></dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a>Action links have four states: new, pending, success, and failed. These strings are
+												appended to the label for each state:<ul class="ul bulletList">
+												<li class="li"><em class="ph i">Label</em></li>
+
+												<li class="li">
+<em class="ph i">Label</em> Pending</li>
+
+												<li class="li">
+<em class="ph i">Label</em> Success</li>
+
+												<li class="li">
+<em class="ph i">Label</em> Failed</li>
+
+												</ul>
+For example, if the value of
+												<span class="keyword parmname">Label</span> is “Call Home,” the
+											values of the four action link states are: Call Home,
+											Call Home Pending, Call Home Success, and Call Home
+											Failed.</dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LabelKey" class="dashAnchor"></a>If <span class="keyword parmname">LabelKey</span> has any value other
+											than <samp class="codeph nolang">None</samp>, the
+												<span class="keyword parmname">Label</span> field is empty.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/LabelKey" class="dashAnchor"></a><span class="keyword parmname">LabelKey</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="labelKeyDescr"><a name="labelKeyDescr"><!-- --></a>Key for the set of labels to display for these action link
+												states: new, pending, success, failed. For example,
+												the Approve set contains these labels: Approve,
+												Pending, Approved, Failed. For a complete list of
+												keys and labels, see Action Links Labels in the <cite class="cite">Chatter REST API Developer Guide</cite> or the <cite class="cite">Apex Developer Guide</cite>.</span></dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a>If none of the label key values make sense for an action
+											link, set this field to <samp class="codeph nolang">None</samp> and enter a custom label name in the
+												<span class="keyword parmname">Label</span> field.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/LinkType" class="dashAnchor"></a><span class="keyword parmname">LinkType</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="linkTypeDescr"><a name="linkTypeDescr"><!-- --></a>The type of action link. One of
+												these values:</span><ul class="ul bulletList">
+                    <li class="li">
+<samp class="codeph nolang">Api</samp>—The action link calls a
+                      synchronous API at the action URL. Salesforce sets the
+                      status to <samp class="codeph nolang">SuccessfulStatus</samp> or <samp class="codeph nolang">FailedStatus</samp> based on the HTTP status code
+                      returned by your server.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">ApiAsync</samp>—The action link calls
+                      an asynchronous API at the action URL. The action remains in a <samp class="codeph nolang">PendingStatus</samp> state until a third party makes a
+                      request to <samp class="codeph nolang">/connect/action-links/<var class="keyword varname">actionLinkId</var></samp> to set the
+                      status to <samp class="codeph nolang">SuccessfulStatus</samp> or <samp class="codeph nolang">FailedStatus</samp> when the asynchronous operation is
+                      complete.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">Download</samp>—The action link
+                      downloads a file from the action URL.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">Ui</samp>—The action link takes the
+                      user to a Web page at the action URL.</li>
+
+                  </ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Method" class="dashAnchor"></a><span class="keyword parmname">Method</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="methodDescr"><a name="methodDescr"><!-- --></a>HTTP method for the action URL. One
+												of these values:</span><ul class="ul bulletList">
+                    <li class="li">
+<samp class="codeph nolang">HttpDelete</samp>—Returns HTTP 204 on
+                      success. Response body or output class is empty.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">HttpGet</samp>—Returns HTTP 200 on
+                      success.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">HttpHead</samp>—Returns HTTP 200 on
+                      success. Response body or output class is empty.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">HttpPatch</samp>—Returns HTTP 200 on
+                      success or HTTP 204 if the response body or output class is empty.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">HttpPost</samp>—Returns HTTP 201 on
+                      success or HTTP 204 if the response body or output class is empty. Exceptions
+                      are the batch posting resources and methods, which return HTTP 200 on
+                      success.</li>
+
+                    <li class="li">
+<samp class="codeph nolang">HttpPut</samp>—Return HTTP 200 on
+                      success or HTTP 204 if the response body or output class is empty.</li>
+
+                  </ul>
+<p class="p" id="methodInfo"><a name="methodInfo"><!-- --></a><samp class="codeph nolang">Ui</samp> and <samp class="codeph nolang">Download</samp> action links must use <samp class="codeph nolang">HttpGet</samp>.</p>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Position" class="dashAnchor"></a><span class="keyword parmname">Position</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="positionDescr"><a name="positionDescr"><!-- --></a>An integer specifying the
+												position of the action link template relative to
+												other action links in the group. 0 is the first
+												position.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/RequestBody" class="dashAnchor"></a><span class="keyword parmname">RequestBody</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Nillable, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="requestBodyDescr"><a name="requestBodyDescr"><!-- --></a>Template for the HTTP request
+												body sent when corresponding action links are
+												invoked. This field can be used only for <samp class="codeph nolang">Api</samp> and <samp class="codeph nolang">ApiAsync</samp> action
+												links. This field can contain context variables and
+												binding variables in the form <samp class="codeph apex_code">{!Bindings.<var class="keyword varname">key</var>}</samp>.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserAlias" class="dashAnchor"></a><span class="keyword parmname">UserAlias</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="userAliasDescr"><a name="//apple_ref/cpp/Field/UserVisibility" class="dashAnchor"></a><a name="userAliasDescr"><!-- --></a>If you selected <samp class="codeph nolang">CustomUser</samp> or <samp class="codeph nolang">CustomExcludedUser</samp>
+												for <span class="keyword parmname">UserVisibility</span>, this field
+												is the alias for the custom user. Use the alias in a
+												template binding to specify the custom user when an
+												action link group is created using the
+												template.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d146265e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserVisibility" class="dashAnchor"></a><span class="keyword parmname">UserVisibility</span></td>
+
+							<td class="entry" headers="d146265e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="userVisibilityDescr"><a name="userVisibilityDescr"><!-- --></a>Who can see the action link. This value is set per action
+												link, not per action link group.</span> One of these
+												values:<a name="userVisibilityValues"><!-- --></a><ul class="ul bulletList" id="userVisibilityValues">
+												<li class="li">
+<samp class="codeph nolang">Creator</samp>—Only the creator of the
+												action link can see the action link.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Everyone</samp>—Everyone can see the
+												action link.</li>
+
+												<li class="li">
+<samp class="codeph nolang">EveryoneButCreator</samp>—Everyone but
+												the creator of the action link can see the action
+												link.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Manager</samp>—Only the manager of the
+												creator of the action link can see the action
+												link.</li>
+
+												<li class="li">
+<samp class="codeph nolang">CustomUser</samp>—Only the custom user
+												can see the action link.</li>
+
+												<li class="li">
+<samp class="codeph nolang">CustomExcludedUser</samp>—Everyone but
+												the custom user can see the action link.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Create action link templates in Setup. Use Apex classes in the
+					<samp class="codeph apex_code">ConnectApi</samp> namespace or Chatter REST API to
+				instantiate action links from templates and to post feed elements with the action
+				links.</p>
+
+			<p class="p">For information about action links, see “Working with Action Links” in the <cite class="cite">Apex Developer Guide</cite> or the <cite class="cite">Chatter REST API Developer Guide</cite>.</p>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

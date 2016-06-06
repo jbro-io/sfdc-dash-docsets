@@ -1,0 +1,437 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FieldHistoryArchive | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_FieldHistoryArchive"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FieldHistoryArchive</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents field history values for all objects that retain field
+   history. This is a BigObject, available only to users with the “Retain Field
+   History” permission. This object is available in API version 29.0 and
+  later.</span></div>
+
+  <p class="p">Each instance of the <samp class="codeph nolang">FieldHistoryArchive</samp> object represents a
+   single change in the value of a field. <samp class="codeph nolang">FieldHistoryArchive</samp> stores history for both
+   standard and custom fields. </p>
+
+  <p class="p">The <span class="keyword parmname">Field</span> field returns the name of the field unless the parent field or
+   object is deleted, in which case it returns the field ID. You can use the ID to retrieve the old
+   field and object name from the <span class="keyword parmname">FieldNameAfterArchival</span> and
+    <span class="keyword parmname">ParentNameAfterArchival</span> fields, respectively.</p>
+
+  <div class="section" id="fha_supported_calls">
+<a name="fha_supported_calls"><!-- --></a><h2 class="helpHead2">Supported Calls</h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp></p>
+
+  </div>
+
+  <div class="section" id="fha_fields">
+<a name="fha_fields"><!-- --></a><h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d420437e107">Field Name</th>
+
+       <th class="featureTableHeader  " id="d420437e110">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">ArchiveFieldName</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the field at the time the data was archived. If the field name changed,
+           the name is sometimes not the same for all records related to a single field.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">ArchiveParentName</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the parent object at the time the data was archived. If the object name
+           changed, the name is sometimes not the same for all records related to a single
+           field.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">ArchiveParentType</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of the field at the time the data was archived. If the field type changed,
+           the type is sometimes not the same for all records related to a single field.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">ArchiveTimestamp</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time at which the data was archived.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">CreatedById</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The user ID of the user who created the original record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">CreatedDate</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time at which the original record was created.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">Field</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Restricted
+            picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the field that was changed. If the field is deleted from the parent
+           object, the <span class="keyword parmname">Field</span> field contains the field ID instead.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">FieldHistoryType</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable, Sort, Restricted
+            picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the object that contains the field history (for example, Account).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">Id</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter,
+           idLookup</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the archived record. It’s useful to have a field’s ID for
+           fields that you’ve deleted. (Field names aren’t retained in history when you
+           delete fields from Salesforce.)</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">NewValue</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">anyType</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The new value of the modified field.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">OldValue</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">anyType</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The previous value of the modified field.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d420437e107" data-title="Field Name"><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d420437e110" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the object that contains the field (the parent object).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <div class="p">When sorting fields, order them as follows:<ol class="ol enumList">
+     <li class="li">
+<span class="keyword parmname">FieldHistoryType</span>
+      <samp class="codeph nolang">ASC</samp>
+</li>
+
+     <li class="li">
+<span class="keyword parmname">ParentID</span>
+      <samp class="codeph nolang">ASC</samp>
+</li>
+
+     <li class="li">
+<span class="keyword parmname">CreatedDate</span>
+      <samp class="codeph nolang">DESC</samp>
+</li>
+
+    </ol>
+
+   </div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

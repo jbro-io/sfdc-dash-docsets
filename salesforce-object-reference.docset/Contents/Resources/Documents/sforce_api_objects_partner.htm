@@ -1,0 +1,295 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Partner | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_partner"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Partner</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a partner relationship between two Account
+   records or between an Opportunity and an Account.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+<li class="li">You must have the “View All Data” permission to
+access this object via the API.
+All of the Partner fields are accessible in the&nbsp;<a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_describesobjects.htm#topic-title" target="_blank"><samp class="codeph nolang">describeSObjects()</samp></a>&nbsp;and&nbsp;<a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_query.htm#topic-title" target="_blank"><samp class="codeph nolang">query()</samp></a>&nbsp;calls. You cannot&nbsp;<a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_update.htm#topic-title" target="_blank"><samp class="codeph nolang">update()</samp></a>&nbsp;or&nbsp;<a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_upsert.htm" target="_blank"><samp class="codeph nolang">upsert()</samp></a> partners via the API.</li>
+
+<li class="li">Customer Portal users can’t access this object.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d582726e147">Field</th>
+
+<th class="featureTableHeader  " id="d582726e150">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/AccountFromId" class="dashAnchor"></a> <span class="keyword parmname" id="i1460623"><a name="i1460623"><!-- --></a>AccountFromId</span> </td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/OpportunityId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/OpportunityId" class="dashAnchor"></a>Required if <span class="keyword parmname">OpportunityId</span> is null. ID of the main Account in a partner relationship between two accounts. Specifying
+this field when creating a Partner record creates two AccountPartner objects, one for each direction of the relationship. If you
+specify the <span class="keyword parmname">OpportunityId</span> field, you can’t specify this field as well.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/AccountToId" class="dashAnchor"></a> <span class="keyword parmname" id="i1460653"><a name="i1460653"><!-- --></a>AccountToId</span> </td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the Partner Account related to either an opportunity
+or an account. You must specify this field when creating an opportunity
+Partner or an Account Partner.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a> <span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/IsPrimary" class="dashAnchor"></a> <span class="keyword parmname" id="i1460688"><a name="i1460688"><!-- --></a>IsPrimary</span> </td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Valid for Opportunity Partners only. <p class="p">Indicates that the account
+is the primary partner for the opportunity. Only one account can be
+marked as primary for an opportunity. If you set this field to 1 (<samp class="codeph nolang">true</samp>) upon insert of a new opportunity
+partner, any other primary partners for that opportunity will automatically
+have this field set to 0 (<samp class="codeph nolang">false</samp>).</p>
+<p class="p">Label is <strong class="ph uicontrol">Primary</strong>.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityId" class="dashAnchor"></a><span class="keyword parmname" id="i1460711"><a name="i1460711"><!-- --></a>OpportunityId</span></td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountFromId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/AccountFromId" class="dashAnchor"></a>Required if <span class="keyword parmname">AccountFromId</span> is null. ID of the Opportunity in a partner relationship between an Account and an Opportunity. Specifying this field when creating a record creates an OpportunityPartner. If you specify the <span class="keyword parmname">AccountFromId</span> field,
+you can’t specify this field as well.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+
+<tr>
+<td class="entry" headers="d582726e147" data-title="Field"><a name="//apple_ref/cpp/Field/Role" class="dashAnchor"></a> <span class="keyword parmname" id="i1460744"><a name="i1460744"><!-- --></a>Role</span> </td>
+
+<td class="entry" headers="d582726e150" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">UserRole that the account has towards the related opportunity or account,
+such as consultant or distributor.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Roles</h2>
+<p class="p">In the Salesforce user
+interface, system administrators can set up the valid role values
+and their corresponding reverse role values in the PartnerRole object. Each account in the relationship is assigned a <span class="keyword parmname">Role</span> (such as <samp class="codeph nolang">Consultant</samp> or <samp class="codeph nolang">Distributor</samp>) designating
+that account’s role towards the related account or opportunity. </p>
+</div>
+
+<div class="section" id="account_oppt">
+<a name="account_oppt"><!-- --></a><h2 class="helpHead2">Creating an Account-Opportunity
+Partner Relationship</h2>
+<p class="p">When you create a partner relationship
+between an account and an opportunity (when you create a Partner object
+and specify the <span class="keyword parmname">OpportunityId</span> field), the API automatically
+creates an OpportunityPartner with the corresponding values:</p>
+<ul class="ul bulletList">
+<li class="li">The value of the Partner field <span class="keyword parmname">AccountToId</span> maps to the value of the OpportunityPartner field <span class="keyword parmname">AccountToId</span>.</li>
+
+<li class="li">The values of the <span class="keyword parmname">OpportunityId</span>, <span class="keyword parmname">Role</span>, and <span class="keyword parmname">IsPrimary</span> fields in both
+objects are the same.</li>
+
+<li class="li">If you set the <span class="keyword parmname">IsPrimary</span> value to 1 (<samp class="codeph nolang">true</samp>) upon insert of a new OpportunityPartner, any other existing primary partners for that opportunity will
+automatically have the <span class="keyword parmname">IsPrimary</span> value set to 0 (<samp class="codeph nolang">false</samp>). </li>
+
+</ul>
+<p class="p">This mapping allows the API to
+manage the objects and their relationship efficiently.</p>
+</div>
+
+<div class="section" id="account_acct">
+<a name="account_acct"><!-- --></a><h2 class="helpHead2">Creating an Account-Account Partner
+Relationship</h2>
+<p class="p">When you create a partner relationship between
+two accounts (when you create a Partner object and specify the  <span class="keyword parmname">AccountFromId</span>), the API automatically
+creates two AccountPartner objects, one for the forward relationship and one for the reverse.
+For example, if you create a Partner object with “Acme, Inc.”
+as the <span class="keyword parmname">AccountFromId</span> and “Acme Consulting” as the <span class="keyword parmname">AccountToId</span>, the API automatically
+creates two  AccountPartner objects:</p>
+<ul class="ul bulletList">
+<li class="li">The forward relationship AccountPartner with “Acme, Inc.” as the <span class="keyword parmname">AccountFromId</span> and “Acme Consulting” as the <span class="keyword parmname">AccountToId</span>.</li>
+
+<li class="li">The reverse relationship AccountPartner with “Acme Consulting” as the <span class="keyword parmname">AccountFromId</span> and “Acme, Inc.” as the <span class="keyword parmname">AccountToId</span>. </li>
+
+<li class="li"> The value of the <span class="keyword parmname">Role</span> field in the reverse relationship AccountPartner is set to the PartnerRole object <span class="keyword parmname">ReverseRole</span> value associated with the value of the <span class="keyword parmname">Role</span> field in the forward relationship AccountPartner.</li>
+
+</ul>
+<p class="p">This mapping allows the API to
+manage the objects and their relationship efficiently.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_accountpartner.htm" title="This read-only object represents a partner relationship between two Account objects. It is automatically created when a Partner object is created for a partner relationship between two accounts.">AccountPartner</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitypartner.htm" title="This read-only object represents a partner relationship between an Account and an Opportunity. This object is automatically created when a Partner object is created for a partner relationship between an account and an opportunity.">OpportunityPartner</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_role.htm" title="Represents a user role in your organization.">UserRole</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_partnerrole.htm" title="Represents a role for an account Partner, such as consultant, supplier, and so on.">PartnerRole</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

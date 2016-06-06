@@ -1,0 +1,327 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Custom Metadata Type__mdt | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_custommetadatatype__mdt"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a><var class="keyword varname">Custom Metadata Type</var>__mdt</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a custom metadata record.</span> This object is available in
+			API version 34.0 and
+		later.</div>
+
+		<div class="section">
+			<p class="p">The object name is a variable with the syntax <var class="keyword varname">Custom Metadata Type</var>__mdt,
+				where <var class="keyword varname">Custom Metadata Type</var> is the <span class="keyword parmname">Object
+					Name</span> for the custom metadata type associated with the custom metadata
+				record. For example, <samp class="codeph nolang">PicklistUsage__mdt</samp>
+				represents a custom metadata record based on the <samp class="codeph nolang">PicklistUsage</samp> custom metadata type.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d284798e126">Field</th>
+
+							<th class="featureTableHeader  " id="d284798e129">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/Custom Field__c" class="dashAnchor"></a><span class="keyword parmname"><var class="keyword varname">Custom Field</var>__c</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">Any Type</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">A custom field on the record.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/isProtected" class="dashAnchor"></a><span class="keyword parmname">isProtected</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When a custom metadata type’s records are released in a managed package, access to
+											them is limited in specific ways.<ul class="ul bulletList">
+												<li class="li">Code that’s in the same managed package as
+												custom metadata records can read the records.</li>
+
+												<li class="li">Code that’s in the same managed package as
+												custom metadata types can read the records that
+												belong to that type.</li>
+
+												<li class="li">Code that’s in a managed package that doesn’t
+												contain either the type or the protected record
+												can’t read the protected records.</li>
+
+												<li class="li">Code that the subscriber creates and code that’s
+												in an unmanaged package can’t read the protected
+												records.</li>
+
+												<li class="li">The developer can modify protected records only
+												with a package upgrade. The subscriber can’t read
+												or modify protected records. The developer name of
+												a protected record can’t be changed after
+												release.</li>
+
+											</ul>
+</dd>
+
+										<dd class="dd">Records that are hidden by these access rules are also
+											unavailable to REST, SOAP, SOQL, and Setup.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/Label" class="dashAnchor"></a><span class="keyword parmname">Label</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a>The custom metadata record label. This label value is
+												always the same as the
+												<span class="keyword parmname">MasterLabel</span> value.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, restrictedPicklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The language of the custom metadata record. This value is always the default language
+											of the developing organization.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The master label for the custom metadata record.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. </dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d284798e126" data-title="Field"><a name="//apple_ref/cpp/Field/QualifiedApiName" class="dashAnchor"></a><span class="keyword parmname">QualifiedApiName</span></td>
+
+							<td class="entry" headers="d284798e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/NamespacePrefix__DeveloperName" class="dashAnchor"></a>A concatenation of the namespace prefix and developer name. The format is
+												<span class="keyword parmname"><var class="keyword varname">NamespacePrefix</var>__<var class="keyword varname">DeveloperName</var></span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,2930 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Organization | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_organization"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Organization</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents key configuration information for an
+  organization.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+<p class="p">Executing a SOQL SELECT query returns the value of fields
+in this object, but no value is visible for some of the fields.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d363421e58-d363506e73"><a name="d363421e58-d363506e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d573879e100">Field</th>
+
+<th class="featureTableHeader  " id="d573879e103">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>
+<span class="keyword parmname">Address</span> (beta)</td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">address</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for
+           details on compound address fields.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/AllowsSelfServiceLogin" class="dashAnchor"></a><span class="keyword parmname">AllowsSelfServiceLogin</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the organization allows Self-Service login (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Name of the city for the organization's address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/ComplianceBccEmail" class="dashAnchor"></a><span class="keyword parmname">ComplianceBccEmail</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Email address for compliance blind carbon copies. Limit: 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           Name of the country for the organization's address. Limit: 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/CountryCode" class="dashAnchor"></a><span class="keyword parmname">CountryCode</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO country code for the organization’s address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DailyWebToCaseCount" class="dashAnchor"></a><span class="keyword parmname">DailyWebToCaseCount</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of web form submissions that have been converted to cases for the day.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DailyWebToCaseLimit" class="dashAnchor"></a><span class="keyword parmname">DailyWebToCaseLimit</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum number of web form submissions that can be converted to cases per
+           day.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DailyWebToLeadCount" class="dashAnchor"></a><span class="keyword parmname">DailyWebToLeadCount</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of web form submission that have been converted to leads for the day</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DailyWebToLeadLimit" class="dashAnchor"></a><span class="keyword parmname">DailyWebToLeadLimit</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum number of web form submissions that can be converted to leads per
+           day.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultAccountAccess" class="dashAnchor"></a><span class="keyword parmname" id="defaultaccountaccess"><a name="defaultaccountaccess"><!-- --></a>DefaultAccountAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/DefaultAccountAndContactAccess" class="dashAnchor"></a>In API version 10.0 and
+           later, represents the default access level for accounts, contracts, and assets. The
+           possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+In versions before 10.0, <span class="keyword parmname">DefaultAccountAndContactAccess</span> represented this value.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultAccountAndContactAccess" class="dashAnchor"></a><span class="keyword parmname" id="defaultaccountandcontactaccess"><a name="defaultaccountandcontactaccess"><!-- --></a>DefaultAccountAndContactAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Restricted picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DefaultAccountAccess" class="dashAnchor"></a>Default access level for accounts, contacts, contracts, and assets. This field is
+           supported for backward compatibility only and is not available in API version 10.0 or later. In
+           version 10.0 and later, use either <span class="keyword parmname">DefaultAccountAccess</span> or <span class="keyword parmname">DefaultContactAccess</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultCalendarAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultCalendarAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for calendars. The possible values are listed, followed
+           by the user interface labels in parentheses: <ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/HideDetails" class="dashAnchor"></a>
+<span class="keyword parmname">HideDetails</span> (Hide Details)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/HideDetailsInsert" class="dashAnchor"></a>
+<span class="keyword parmname">HideDetailsInsert</span> (Hide Details and Add Events)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ShowDetails" class="dashAnchor"></a>
+<span class="keyword parmname">ShowDetails</span> (Show Details)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ShowDetailsInsert" class="dashAnchor"></a>
+<span class="keyword parmname">ShowDetailsInsert</span> (Show Details and Add Events)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/AllowEdits" class="dashAnchor"></a>
+<span class="keyword parmname">AllowEdits</span> (Full Access)</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultCampaignAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultCampaignAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for campaigns. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/All" class="dashAnchor"></a><span class="keyword parmname">All</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultCaseAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultCaseAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for cases. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ReadEditTransfer" class="dashAnchor"></a><span class="keyword parmname">ReadEditTransfer</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a><span class="keyword parmname" id="defaultcontactaccess"><a name="defaultcontactaccess"><!-- --></a>DefaultContactAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/DefaultAccountAndContactAccess" class="dashAnchor"></a>Default access level for contacts. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ControlledByParent" class="dashAnchor"></a><span class="keyword parmname">ControlledByParent</span></li>
+
+           </ul>
+ In versions before 10.0, <span class="keyword parmname">DefaultAccountAndContactAccess</span> represented this value.<div class="box message info" id="ControlledbyParent">
+<a name="ControlledbyParent"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/ContactAccessLevel" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a>When <span class="keyword parmname">DefaultContactAccess</span> is set to “Controlled by Parent,” you can’t update the
+             <span class="keyword parmname">ContactAccessLevel</span> field.</p>
+</div>
+</div></div></div>
+</div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultLeadAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultLeadAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for leads. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a>
+<span class="keyword parmname">None</span><span class="keyword parmname">Read</span>
+</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ReadEditTransfer" class="dashAnchor"></a><span class="keyword parmname">ReadEditTransfer</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultLocaleSidKey" class="dashAnchor"></a><span class="keyword parmname">DefaultLocaleSidKey</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default locale SID key.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultOpportunityAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultOpportunityAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for opportunities. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultPricebookAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultPricebookAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for price books. The possible values are listed,
+           followed by the user interface labels in parentheses: <ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a>
+<span class="keyword parmname">None</span> (No access)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a>
+<span class="keyword parmname">Read</span> (Read only)</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/ReadSelect" class="dashAnchor"></a>
+<span class="keyword parmname">ReadSelect</span> (Use)</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultTerritoryAccountAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultTerritoryAccountAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for accounts in territories. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/All" class="dashAnchor"></a><span class="keyword parmname">All</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultTerritoryCaseAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultTerritoryCaseAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for cases associated with accounts in territories. The possible
+           values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a><span class="keyword parmname">None</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultTerritoryContactAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultTerritoryContactAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for contacts associated with accounts in territories. The
+           possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a>
+<span class="keyword parmname">None</span><span class="keyword parmname">Read</span>
+</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+
+           <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DefaultContactAccess" class="dashAnchor"></a>When <span class="keyword parmname">DefaultContactAccess</span> is set to “Controlled by Parent” you
+            can’t update this field.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultTerritoryOppAccess" class="dashAnchor"></a><span class="keyword parmname">DefaultTerritoryOppAccess</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Default access level for opportunities in territories. </dd>
+
+          <dd class="dd">Valid values:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/None" class="dashAnchor"></a>
+<span class="keyword parmname">None</span><span class="keyword parmname">Read</span>
+</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Division" class="dashAnchor"></a><span class="keyword parmname">Division</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="not_Div_desc"><a name="not_Div_desc"><!-- --></a>The name of the division for this organization. This field is
+            not related to the Division
+            object.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a><span class="keyword parmname">Fax</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">phone</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Fax number. Limit: 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/FiscalYearStartMonth" class="dashAnchor"></a><span class="keyword parmname">FiscalYearStartMonth</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Number that corresponds to the month that this organization's fiscal year starts.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/HomepageHtml" class="dashAnchor"></a><span class="keyword parmname">HomepageHtml</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The Home tab custom links and company message for this organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/InstanceName" class="dashAnchor"></a><span class="keyword parmname">InstanceName</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The name of the instance. Available in API version 31.0 or later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/IsSandbox" class="dashAnchor"></a><span class="keyword parmname">IsSandbox</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. Indicates whether the current organization is a sandbox (<samp class="codeph nolang">true</samp>) or production (<samp class="codeph nolang">false</samp>) instance. Available in API version 31.0 or later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/LanguageLocaleKey" class="dashAnchor"></a><span class="keyword parmname">LanguageLocaleKey</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd" id="lang_locale_key"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a>
+<a name="lang_locale_key"><!-- --></a>The same as <span class="keyword parmname">Language</span>, the two-to-five
+           character code which represents the language and locale ISO code. This controls the
+           language for labels displayed in an application.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/LastWebToCaseDate" class="dashAnchor"></a><span class="keyword parmname">LastWebToCaseDate</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last date that a web form submission was converted to a case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/LastWebToLeadDate" class="dashAnchor"></a><span class="keyword parmname">LastWebToLeadDate</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last date that a web form submission was converted to a lead.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Longitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –90 and 90 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Latitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –180 and 180 with up to 15 decimal places.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/MaxActionsPerRule" class="dashAnchor"></a><span class="keyword parmname">MaxActionsPerRule</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Maximum number of actions per workflow, assignment, escalation, and auto-response
+           rules. This field is unavailable in version 15.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/MaxRulesPerEntity" class="dashAnchor"></a><span class="keyword parmname">MaxRulesPerEntity</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Maximum number of rules per object, inclusive of workflow, assignment, escalation, and
+           auto-response rules. This field is unavailable in version 15.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/MonthlyPageViewsEntitlement" class="dashAnchor"></a><span class="keyword parmname" id="MonthlyPageViewsEntitlement"><a name="MonthlyPageViewsEntitlement"><!-- --></a>MonthlyPageViewsEntitlement</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of page views allowed for the current calendar month for the sites in your
+           organization. <span class="ph" id="SitesRequired"><a name="SitesRequired"><!-- --></a>To access this field, Force.com
+            Sites must be enabled for your
+            organization.</span>
+           <span class="ph" id="API18Field"><a name="API18Field"><!-- --></a>This field is generally available in API versions 18.0 and
+            later.</span>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/MonthlyPageViewsUsed" class="dashAnchor"></a><span class="keyword parmname" id="MonthlyPageViewsUsed"><a name="MonthlyPageViewsUsed"><!-- --></a>MonthlyPageViewsUsed</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of page views used in the current calendar month for the sites in your
+           organization. To access this field, Force.com
+            Sites must be enabled for your
+            organization.
+           This field is generally available in API versions 18.0 and
+            later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name of the organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <div class="p">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. The namespace prefix can have one of the following values:<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</div>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/OrganizationType" class="dashAnchor"></a><span class="keyword parmname">OrganizationType</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Edition of the organization, for example Enterprise Edition or Unlimited Edition.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">phone</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Phone number for the organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Postal code for the address of the organization. Limit: 20 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PreferencesEventScheduler" class="dashAnchor"></a><span class="keyword parmname">PreferencesEventScheduler</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether opportunities require products (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PreferencesRequireOpportunityProducts" class="dashAnchor"></a><span class="keyword parmname">PreferencesRequireOpportunityProducts</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether opportunities require products (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PreferencesS1BrowserEnabled" class="dashAnchor"></a><span class="keyword parmname">PreferencesS1BrowserEnabled</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the Salesforce1 mobile browser app is enabled for all
+           users in your organization (<samp class="codeph nolang">true</samp>) or is disabled for
+           all users (<samp class="codeph nolang">false</samp>).<p class="p">This field is available in API
+            version 29.0 or later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PreferencesTerminateOldestSession" class="dashAnchor"></a><span class="keyword parmname">PreferencesTerminateOldestSession</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the oldest login session is automatically closed when a policy
+           specifying the maximum number of sessions is triggered.<p class="p">This field is available in API
+            version 35.0 or later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PreferencesTransactionSecurityPolicy" class="dashAnchor"></a><span class="keyword parmname">PreferencesTransactionSecurityPolicy</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the Transaction Security feature has been enabled.<p class="p">This field is
+            available in API version 35.0 or later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/PrimaryContact" class="dashAnchor"></a><span class="keyword parmname">PrimaryContact</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Name of the primary contact for the organization. Limit: 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/ReceivesAdminInfoEmails" class="dashAnchor"></a><span class="keyword parmname">ReceivesAdminInfoEmails</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the organization receives administrator emails (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/ReceivesInfoEmails" class="dashAnchor"></a><span class="keyword parmname">ReceivesInfoEmails</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the organization receives informational email from Salesforce (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceCasePlural" class="dashAnchor"></a><span class="keyword parmname">SelfServiceCasePlural</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The plural version of the term used to represent the Case object in the
+           Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceCaseSingle" class="dashAnchor"></a><span class="keyword parmname">SelfServiceCaseSingle</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The singular version of the term used to represent the Case object in the
+           Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceCaseSubmitRecordTypeId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceCaseSubmitRecordTypeId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the record type associated with a case submitted via the Self-Service
+           portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServicDefaultCaseOrigin" class="dashAnchor"></a><span class="keyword parmname">SelfServicDefaultCaseOrigin</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default origin of a case submitted via the Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceEmailSenderAddress" class="dashAnchor"></a><span class="keyword parmname" id="SSEmail"><a name="SSEmail"><!-- --></a>SelfServiceEmailSenderAddress</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The Self-Service email address from which new Self-Service user and password email
+           messages are sent, such as <samp class="codeph nolang">support@acme.com</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceEmailSenderName" class="dashAnchor"></a><span class="keyword parmname">SelfServiceEmailSenderName</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/SelfServiceEmailSenderAddress" class="dashAnchor"></a>The name associated with the email address in the <span class="keyword parmname">SelfServiceEmailSenderAddress</span>
+           field, such as <samp class="codeph nolang">Acme Customer Support</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceEmailUserOnCaseCreation‍TemplateId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceEmailUserOnCaseCreation‍TemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used when email is sent to a Self-Service user when he or
+           she creates a case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceEnabledForResponseRules" class="dashAnchor"></a><span class="keyword parmname">SelfServiceEnabledForResponseRules</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the Self-Service portal is enabled for auto-response rules (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceFeatureConfig" class="dashAnchor"></a><span class="keyword parmname">SelfServiceFeatureConfig</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An integer representing the active Self-Service feature configuration for this
+           organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceLogoutUrl" class="dashAnchor"></a><span class="keyword parmname">SelfServiceLogoutUrl</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The Web page that displays when a Self-Service user logs out of the Self-Service
+           portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceMaxNumSuggestions" class="dashAnchor"></a><span class="keyword parmname">SelfServiceMaxNumSuggestions</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum number of suggested solutions allowed for a Self-Service case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceNewCommentCheckedByDefault" class="dashAnchor"></a><span class="keyword parmname">SelfServiceNewCommentCheckedByDefault</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">If <samp class="codeph nolang">true</samp>, When a customer notification is
+           automatically sent when a new comment is added to a case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceNewCommentTemplateId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceNewCommentTemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used to send a notification to Self-Service users when a
+           public comment is added to one of their cases.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceNewPassTemplateId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceNewPassTemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used when new passwords are generated for Self-Service
+           users.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceNewUserTemplateId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceNewUserTemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used when new Self-Service users are enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServicePageHeight" class="dashAnchor"></a><span class="keyword parmname">SelfServicePageHeight</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum height in pixels of Self-Service pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServicePageWidth" class="dashAnchor"></a><span class="keyword parmname">SelfServicePageWidth</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum width in pixels of Self-Service pages.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceSelfClosedCaseStatus" class="dashAnchor"></a><span class="keyword parmname">SelfServiceSelfClosedCaseStatus</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default status for cases closed by Self-Service users.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceSolutionCategoryAvailable" class="dashAnchor"></a><span class="keyword parmname">SelfServiceSolutionCategoryAvailable</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether solution categories are available in the Self-Service portal
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceSolutionCategoryStartNodeId" class="dashAnchor"></a><span class="keyword parmname">SelfServiceSolutionCategoryStartNodeId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the top-level category in the Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceSolutionPlural" class="dashAnchor"></a><span class="keyword parmname">SelfServiceSolutionPlural</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The plural version of the term used to represent the Solution
+           object in the Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceSolutionSingle" class="dashAnchor"></a><span class="keyword parmname">SelfServiceSolutionSingle</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The singular version of the term used to represent the Solution
+           object in the Self-Service portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceStyleSheetUrl" class="dashAnchor"></a><span class="keyword parmname">SelfServiceStyleSheetUrl</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">url</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The public URL of your organization's Self-Service portal stylesheet.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceWelcomePageConfig" class="dashAnchor"></a><span class="keyword parmname">SelfServiceWelcomePageConfig</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Integer that represents the welcome page configuration for the Self-Service
+           portal.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SelfServiceWelcomeText" class="dashAnchor"></a><span class="keyword parmname">SelfServiceWelcomeText</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The custom welcome message displayed at the top of the Self-Service home page when
+           Self-Service users log in. Limit: 32,000 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/SignupCountryIsoCode" class="dashAnchor"></a><span class="keyword parmname">SignupCountryIsoCode</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO country code specified by the user for a sign-up request.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">State of the address of the organization. Limit: 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/StateCode" class="dashAnchor"></a><span class="keyword parmname">StateCode</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ISO state code for the organization’s address.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Street address for the organization. Limit: 255 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/TrialExpirationDate" class="dashAnchor"></a><span class="keyword parmname">TrialExpirationDate</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date that this organization's trial license expires.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/UiSkin" class="dashAnchor"></a><span class="keyword parmname">UiSkin</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Nillable, Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The user interface theme selected for the organization.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/UsesStartDateAsFiscalYearName" class="dashAnchor"></a><span class="keyword parmname">UsesStartDateAsFiscalYearName</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the calendar year when the fiscal year begins is referred to as
+            the year of the company's fiscal year (<samp class="codeph nolang">true</samp>) or not
+             (<samp class="codeph nolang">false</samp>). For example, if the fiscal year begins in
+            February 2006, a <samp class="codeph java">true</samp> value means the fiscal year is
+            FY2006, and a <samp class="codeph java">false</samp> value means the fiscal year is
+            FY2007.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/UsesWebToCase" class="dashAnchor"></a><span class="keyword parmname">UsesWebToCase</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether this organization can use Web-to-Case (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/UsesWebToLead" class="dashAnchor"></a><span class="keyword parmname">UsesWebToLead</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether this organization can use Web-to-Lead (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/WebToCaseAssignedEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname">WebToCaseAssignedEmailTemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used when a new case is assigned to a user via
+           Web-to-Case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/WebToCaseCreatedEmailTemplateId" class="dashAnchor"></a><span class="keyword parmname">WebToCaseCreatedEmailTemplateId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the email template used when a new case is created via Web-to-Case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/WebToCaseDefaultCreatorId" class="dashAnchor"></a><span class="keyword parmname">WebToCaseDefaultCreatorId</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user specified as the default creator of cases created via
+           Web-to-Case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d573879e100" data-title="Field"><a name="//apple_ref/cpp/Field/WebToCaseDefaultOrigin" class="dashAnchor"></a><span class="keyword parmname">WebToCaseDefaultOrigin</span></td>
+
+       <td class="entry" headers="d573879e103" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The default value for the <strong class="ph uicontrol">Case Origin</strong> field on cases submitted
+           via Web-to-Case. Limit: 40 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Query this object to obtain information
+about an organization's settings. Only one organization object exists
+per organization. </p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

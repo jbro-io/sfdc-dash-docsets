@@ -1,0 +1,712 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>NetworkMember | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_networkmember"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>NetworkMember</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="network_member_def"><a name="network_member_def"><!-- --></a>Represents a member of a community. Members
+    can be either users in your company or external users with portal profiles. This object is available in API version 26.0 and
+   later.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">This object is available only if Salesforce Communities is enabled in your organization.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d527032e103">Field Name</th>
+
+<th class="featureTableHeader  " id="d527032e106">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/DefaultGroupNotificationFrequency" class="dashAnchor"></a><span class="keyword parmname">DefaultGroupNotificationFrequency</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The default frequency for sending the member’s group email notifications when
+           the member joins groups in the community. The
+           valid values are: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">P</samp>—<span class="ph" id="d329478e128-d329592e1057"><a name="d329478e128-d329592e1057"><!-- --></a>Email on
+              every post</span>
+</li>
+
+            <li class="li">
+<samp class="codeph nolang">D</samp>—Daily digests</li>
+
+            <li class="li">
+<samp class="codeph nolang">W</samp>—Weekly digests</li>
+
+            <li class="li">
+<samp class="codeph nolang">N</samp>—Never</li>
+
+           </ul>
+The default
+           value is <samp class="codeph nolang">W</samp>. However, this field is not currently enabled. These values are
+           reserved for future use.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/DigestFrequency" class="dashAnchor"></a><span class="keyword parmname">DigestFrequency</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The frequency for sending the member’s personal email digest for the community. The
+           valid values are: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">D</samp>—Daily</li>
+
+            <li class="li">
+<samp class="codeph nolang">W</samp>—Weekly</li>
+
+            <li class="li">
+<samp class="codeph nolang">N</samp>—Never</li>
+
+           </ul>
+The default value is <samp class="codeph nolang">D</samp>. However, daily and
+           weekly personal digests aren’t currently available in communities.
+           These values are reserved for future use.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastChatterActivityDate" class="dashAnchor"></a><span class="keyword parmname">LastChatterActivityDate</span></td>
+
+       <td class="entry" headers="d527032e106" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The last time the member posted or commented in the community.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/MemberId" class="dashAnchor"></a><span class="keyword parmname">MemberId</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of a person who is a member of a community.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a><span class="keyword parmname">NetworkId</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the community that the member is part of.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableAllFeedsEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableAllFeedsEmail"><a name="PrefDisableAllFeedsEmail"><!-- --></a>PreferencesDisableAllFeedsEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member can
+automatically receive email for updates in the community, based on the types of feed emails and digests the member has
+enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableBookmarkEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableBookmarkEmail"><a name="PrefDisableBookmarkEmail"><!-- --></a>PreferencesDisableBookmarkEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on a feed item after the
+member has bookmarked it.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableChangeCommentEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableChangeCommentEmail"><a name="PrefDisableChangeCommentEmail"><!-- --></a>PreferencesDisableChangeCommentEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on a change the member
+has made, such as an update to their profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableEndorsementEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableTopicEndorsementEmail"><a name="PrefDisableTopicEndorsementEmail"><!-- --></a>PreferencesDisableEndorsementEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone endorses them for a topic.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableFollowersEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableFollowersEmail"><a name="PrefDisableFollowersEmail"><!-- --></a>PreferencesDisableFollowersEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone in the community starts following the member.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/DisableItemFlaggedEmail" class="dashAnchor"></a><span class="keyword parmname">DisableItemFlaggedEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically
+receives email every time a community member flags a post or comment.
+This setting only applies for community moderators (with the “Moderate
+Communities Feeds” permission) and group owners or managers.<p class="p">This field is available in API version 29.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableLaterCommentEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableLaterCommentEmail"><a name="PrefDisableLaterCommentEmail"><!-- --></a>PreferencesDisableLaterCommentEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on a feed item after the
+member has commented on the feed item.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableLikeEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableLikeEmail"><a name="PrefDisableLikeEmail"><!-- --></a>PreferencesDisableLikeEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on a feed item after the
+member has liked the feed item.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableMentionsPostEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableMentionsPostEmail"><a name="PrefDisableMentionsPostEmail"><!-- --></a>PreferencesDisableMentionsPostEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time the member is mentioned in posts.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableMessageEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableMessageEmail"><a name="PrefDisableMessageEmail"><!-- --></a>PreferencesDisableMessageEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time the member is sent a Chatter message.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableProfilePostEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableProfilePostEmail"><a name="PrefDisableProfilePostEmail"><!-- --></a>PreferencesDisableProfilePostEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone posts to the member’s profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisableSharePostEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisableSharePostEmail"><a name="PrefDisableSharePostEmail"><!-- --></a>PreferencesDisableSharePostEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time the member’s post is shared.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisCommentAfterLikeEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisCommentAfterLikeEmail"><a name="PrefDisCommentAfterLikeEmail"><!-- --></a>PreferencesDisCommentAfterLikeEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on a post the member has
+liked.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisMentionsCommentEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisMentionsCommentEmail"><a name="PrefDisMentionsCommentEmail"><!-- --></a>PreferencesDisMentionsCommentEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time the member is mentioned in comments.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/PreferencesDisProfPostCommentEmail" class="dashAnchor"></a><span class="keyword parmname" id="PrefDisProfPostEmail"><a name="PrefDisProfPostEmail"><!-- --></a>PreferencesDisProfPostCommentEmail</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone comments on posts on the member’s
+profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d527032e103" data-title="Field Name"><a name="//apple_ref/cpp/Field/ReputationPoints" class="dashAnchor"></a><span class="keyword parmname">ReputationPoints</span></td>
+
+<td class="entry" headers="d527032e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of reputation points the user has accumulated by performing
+actions in the community.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<div class="p">Use this object to query members of a certain community and to
+    update their email notification settings. If you have “Modify All Data,”
+    “View All Data,” or “Create and Set Up Communities,” you can
+    view all members of any community, regardless
+    of your own membership. If you have “Modify All Data” or “Create and Set Up Communities,” you can
+    also update any member’s email settings. Users without these permissions can update their
+    own email settings and can see members of the communities that
+    they’re also members of.<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>You can directly update reputation points for a
+        community member via the Salesforce API. You can also use Apex triggers to send custom
+        notifications based on changes to reputation points.</p>
+</div>
+</div></div></div></div>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

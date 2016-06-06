@@ -1,0 +1,670 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ApexTrigger | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_apextrigger"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ApexTrigger</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="defn_ph"><a name="defn_ph"><!-- --></a>Represents an Apex
+    trigger.</span></span></div>
+
+    <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Although Apex classes and triggers have
+      the Create and Update field properties, a
+      runtime exception occurs if you try to create or update them using the API. Instead, use the Force.com Migration Tool, the Salesforce user interface, or the Force.com IDE to create or update
+        Apex classes or
+      triggers.</p>
+</div>
+</div></div></div></div>
+
+    <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+      
+      <p class="p"><samp class="codeph nolang">create()</samp>,
+          <samp class="codeph nolang">delete()</samp>,
+          <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>,
+          <samp class="codeph nolang">upsert()</samp></p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+      
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d162587e140">Field</th>
+
+              <th class="featureTableHeader  " id="d162587e143">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/ApiVersion" class="dashAnchor"></a><span class="keyword parmname">ApiVersion</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">double</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The API version
+                      for this trigger. Every trigger has an API version
+                      specified at creation.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname">Body</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">textarea</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Nillable,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The Apex
+                      trigger definition. <p class="p">Limit: 1 million
+                      characters.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/bodyCrc" class="dashAnchor"></a><span class="keyword parmname">bodyCrc</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">double</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Nillable,
+                        Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The CRC (cyclic redundancy check) of
+the class or trigger file.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/IsValid" class="dashAnchor"></a><span class="keyword parmname">IsValid</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="isvalid_desc"><a name="isvalid_desc"><!-- --></a>Indicates whether any dependent metadata has changed
+                        since the trigger was last compiled (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/LengthWithoutComments" class="dashAnchor"></a><span class="keyword parmname">LengthWithoutComments</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">int</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Length of the trigger without comments</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Name of the trigger.<p class="p">Limit: 255 characters</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">string</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Filter,
+                        Group, Nillable, Sort</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <p class="p">The namespace prefix can have one of the following values:</p>
+<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The current status of the Apex trigger.
+                      The following string values are valid: <ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">Active</samp>—The trigger is
+                          active.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">Inactive</samp>—The trigger is
+                          inactive, but not deleted.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">Deleted</samp>—The trigger is
+                          marked for deletion. This is useful for managed packages, because it
+                          allows a class to be deleted when a managed package is updated.</li>
+
+                      </ul>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+                        <samp class="codeph nolang">Inactive</samp> is not valid for ApexClass.
+                        For more information, see the <cite class="cite"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api_meta.meta/api_meta/" target="_blank" title="HTML (New Window)">Metadata API Developer Guide</a></cite>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/TableEnumOrId" class="dashAnchor"></a><span class="keyword parmname">TableEnumOrId</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">picklist</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies the object associated with the trigger, such as Account or Contact.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageAfterDelete" class="dashAnchor"></a><span class="keyword parmname">UsageAfterDelete</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is an <samp class="codeph nolang">after
+                        delete</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageAfterInsert" class="dashAnchor"></a><span class="keyword parmname">UsageAfterInsert</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is an <samp class="codeph nolang">after
+                        insert</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageAfterUndelete" class="dashAnchor"></a><span class="keyword parmname">UsageAfterUndelete</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is an <samp class="codeph nolang">after
+                        undelete</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageAfterUpdate" class="dashAnchor"></a><span class="keyword parmname">UsageAfterUpdate</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is an <samp class="codeph nolang">after
+                        update</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageBeforeDelete" class="dashAnchor"></a><span class="keyword parmname">UsageBeforeDelete</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is a <samp class="codeph nolang">before
+                        delete</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageBeforeInsert" class="dashAnchor"></a><span class="keyword parmname">UsageBeforeInsert</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is a <samp class="codeph nolang">before
+                        insert</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageBeforeUpdate" class="dashAnchor"></a><span class="keyword parmname">UsageBeforeUpdate</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is a <samp class="codeph nolang">before
+                        update</samp> trigger (<samp class="codeph nolang">true</samp>) or not
+                        (<samp class="codeph nolang">false</samp>). </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d162587e140" data-title="Field"><a name="//apple_ref/cpp/Field/UsageIsBulk" class="dashAnchor"></a><span class="keyword parmname">UsageIsBulk</span></td>
+
+              <td class="entry" headers="d162587e143" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">boolean</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Filter,
+                        Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether the trigger is defined as a bulk trigger (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This field is not used for Apex triggers
+                        saved using Salesforce
+                        API version
+                        10.0 or higher: all triggers starting with that version are automatically
+                        considered bulk, and this field will always return <samp class="codeph java">true</samp>. </p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+    </div>
+
+  </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_apexclass.htm" title="Represents an Apex class.">ApexClass</a></div>
+</li>
+<li>
+<div><a class="link" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.apexcode.meta/apexcode/" target="_blank" title="Apex Developer Guide - html (New Window)"><em class="ph i">Apex Developer Guide</em></a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LiveChatButton | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_LiveChatButton"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LiveChatButton</span></h1><div class="body">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents a button that allows visitors to
+    request chats with Live Agent
+    users.</span></span>
+   <span class="ph" id="api_version_note"><a name="api_version_note"><!-- --></a>This object is available in API version 24.0 and
+  later.</span>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader vertical-align-top " id="d487404e96">Field Name</th>
+
+<th class="featureTableHeader vertical-align-top " id="d487404e99">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Animation" class="dashAnchor"></a><span class="keyword parmname">Animation</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of animation used when an automated chat invitation appears
+on-screen. For automated chat invitations only. Available in API version
+29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/AutoGreeting" class="dashAnchor"></a><span class="keyword parmname">AutoGreeting</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The text that is automatically sent from an agent to a visitor
+when a chat session starts.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/AutoGreeting" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/AutoGreeting" class="dashAnchor"></a>A greeting message in the <span class="keyword parmname">AutoGreeting</span> field of the LiveChatButton object
+overrides individual users’ greeting messages in the <span class="keyword parmname">AutoGreeting</span> field in the LiveChatUserConfig object.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/ChatPageId" class="dashAnchor"></a><span class="keyword parmname">ChatPageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the custom Visualforce page that contains the custom chat window code.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/CustomAgentName" class="dashAnchor"></a><span class="keyword parmname">CustomAgentName</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The custom name of the agent associated with the button. Available
+in API version 29.0 and later.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CustomAgentName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CustomAgentName" class="dashAnchor"></a>A custom agent name in the <span class="keyword parmname">CustomAgentName</span> field of the LiveChatButton object
+overrides individual users’ custom agent name in the <span class="keyword parmname">CustomAgentName</span> field in the LiveChatUserConfig object.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/CustomRoutingClassId" class="dashAnchor"></a><span class="keyword parmname">CustomRoutingClassId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/RoutingType" class="dashAnchor"></a>The ID of the Apex class you customize to create your custom routing
+rules if <span class="keyword parmname">RoutingType</span> equals <samp class="codeph nolang">Custom</samp>. Available in API version 29.0
+and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed
+            packages, this field prevents naming conflicts on package installations. With this
+            field, a developer can change the object’s name in a managed package and the
+            changes are reflected in a subscriber’s organization.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a>When
+            creating large sets of data, always specify a unique <span class="keyword parmname">DeveloperName</span>
+            for each record. If no <span class="keyword parmname">DeveloperName</span> is specified, performance may
+            slow while Salesforce generates one for each record.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasQueue" class="dashAnchor"></a><span class="keyword parmname">HasQueue</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Determines whether to allow incoming chat requests to queue until
+an agent is available.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/InviteEndPosition" class="dashAnchor"></a><span class="keyword parmname">InviteEndPosition</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The position on-screen where an automated chat invitation’s
+animation ends.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You don’t need to select an end position
+for your automated chat invitation if you use a custom animation.</p>
+</div>
+</div></div></div></div>
+<p class="p">For automated chat invitations only. Available in API version
+29.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/InviteImageId" class="dashAnchor"></a><span class="keyword parmname">InviteImageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the static image resource displayed on your automated
+chat invitation. For automated chat invitations only. Available in
+API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/InviteStartPosition" class="dashAnchor"></a><span class="keyword parmname">InviteStartPosition</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The position on-screen where an automated chat invitation’s
+animation begins.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You don’t need to select a start position
+for your automated chat invitation if you use a custom animation.</p>
+</div>
+</div></div></div></div>
+<p class="p">For automated chat invitations only. Available in API version
+29.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">For automated chat invitations, specifies whether an automated
+chat invitation is active and able to be sent to customers (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). For chat buttons, this is set to <samp class="codeph nolang">true</samp> by default.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The language of the chat.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Label for the live chat button.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/NumberOfReroutingAttempts" class="dashAnchor"></a><span class="keyword parmname">NumberOfReroutingAttempts</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies the number of times a chat request can be rerouted to
+available agents if all agents reject the chat request.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OfflineImageId" class="dashAnchor"></a><span class="keyword parmname">OfflineImageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the static image resource that is displayed when
+the button is offline (inactive).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OnlineImageId" class="dashAnchor"></a><span class="keyword parmname">OnlineImageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the static image resource that is displayed when
+the button is online (active).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasInviteAfterAccept" class="dashAnchor"></a><span class="keyword parmname">OptionsHasInviteAfterAccept</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies whether an automated chat invitation can be sent to
+a customer after that customer has accepted a prior automated chat
+invitation (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). For automated chat invitations
+only. Available in API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasInviteAfterReject" class="dashAnchor"></a><span class="keyword parmname">OptionsHasInviteAfterReject</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies whether an automated chat invitation can be sent to
+a customer after that customer has rejected a prior automated chat
+invitation (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). For automated chat invitations
+only. Available in API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasRerouteDeclinedRequest" class="dashAnchor"></a><span class="keyword parmname">OptionsHasRerouteDeclinedRequest</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies whether a chat request that has been rejected by all
+available agents should be rerouted to available agents again (<samp class="codeph java">true</samp>) or not <samp class="codeph java">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsIsAutoAccept" class="dashAnchor"></a><span class="keyword parmname">OptionsIsAutoAccept</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Least Active" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Most Available" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RoutingType" class="dashAnchor"></a>Specifies whether a chat request should be automatically accepted
+by the agent it’s assigned to (<samp class="codeph java">true</samp>) or not <samp class="codeph java">false</samp>). For chat buttons
+and automated chat invitations with <span class="keyword parmname">RoutingType</span> set to <span class="keyword parmname">Most Available</span> or <span class="keyword parmname">Least Active</span>. Available in API version 30.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsIsInviteAutoRemove" class="dashAnchor"></a><span class="keyword parmname">OptionsIsInviteAutoRemove</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Specifies whether an automated chat invitation should be automatically
+removed from the screen after a certain amount of time (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). For automated chat invitations only. Available in
+API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OverallQueueLength" class="dashAnchor"></a><span class="keyword parmname">OverallQueueLength</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The maximum number of chat requests allowed to queue.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PerAgentQueueLength" class="dashAnchor"></a><span class="keyword parmname">PerAgentQueueLength</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The maximum number of chat requests allowed to queue for each
+agent with the required skill.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostchatPageId" class="dashAnchor"></a><span class="keyword parmname">PostchatPageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the custom Visualforce page displayed when the chat ends.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostchatUrl" class="dashAnchor"></a><span class="keyword parmname">PostchatUrl</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The URL the user is directed to after the chat ends.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrechatFormPageId" class="dashAnchor"></a><span class="keyword parmname">PrechatFormPageId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the custom Visualforce page displayed before the chat begins.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrechatFormUrl" class="dashAnchor"></a><span class="keyword parmname">PrechatFormUrl</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The URL the user is directed to before the chat begins.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PushTimeout" class="dashAnchor"></a><span class="keyword parmname">PushTimeout</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of seconds an agent has to answer a chat request before
+it’s routed to the next available agent.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/RoutingType" class="dashAnchor"></a><span class="keyword parmname">RoutingType</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">How chat requests are routed to agents. The values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">Choice</samp>—Incoming chat requests are added to the queue
+             in Live Agent
+             in the Salesforce console and are
+             available to any agent with the required skill.</li>
+
+<li class="li">
+<samp class="codeph nolang">Least Active</samp>—Incoming chats are routed to the agent
+             with the required skill who has the fewest active chats.</li>
+
+<li class="li">
+<samp class="codeph nolang">Most Available</samp>—Incoming chats are routed to the
+             agent with the required skill and the greatest difference between chat capacity and
+             active chat sessions. For example, if Agent A and Agent B each have a chat capacity of
+             five, and Agent A has three active chat sessions while Agent B has one, incoming chats
+             will be routed to Agent B.</li>
+
+<li class="li">
+<samp class="codeph nolang">Custom</samp>—Incoming chats
+are routed to agents based on the custom routing rules specified in
+the Apex class you use to create them.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/SiteId" class="dashAnchor"></a><span class="keyword parmname">SiteId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The record ID of the site used for loading static resources and
+custom Visualforce pages.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/SkillId" class="dashAnchor"></a><span class="keyword parmname">SkillId</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SkillId" class="dashAnchor"></a>The record ID of the skill used to route incoming chat requests.
+To associate multiple skills with a live chat button, reference one
+skill in the <span class="keyword parmname">SkillId</span> field and use LiveChatButtonSkill junction objects for the remaining skills.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/TimeToRemoveInvite" class="dashAnchor"></a><span class="keyword parmname">TimeToRemoveInvite</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of seconds an automated invitation stays on-screen
+before it is automatically removed. For automated chat invitations
+only. Available in API version 29.0 and later.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of element to display to customers (either a chat button
+or an automated invitation).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d487404e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/WindowLanguage" class="dashAnchor"></a><span class="keyword parmname">WindowLanguage</span></td>
+
+<td class="entry" headers="d487404e99" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The language used for standard chat windows. Custom chat windows
+use the language of the user’s browser.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query and manage
+live chat buttons and automated chat invitations.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

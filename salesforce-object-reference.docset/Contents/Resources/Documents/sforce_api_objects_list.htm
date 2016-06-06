@@ -1,0 +1,1701 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Standard Objects | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_list"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Standard Objects</span></h1><div class="body">
+        <p class="p">This section provides a list of standard objects and their standard fields. Some fields
+            may not be listed for some objects.</p>
+
+        <p class="p">To see the system fields for each object, see <a class="xref" href="atlas.en-us.api.meta/api/system_fields.htm">System Fields</a>.</p>
+
+        <p class="p">To verify the complete list of fields for an object, you can use a describe call from
+                the API, or inspect with an appropriate tool, for example, inspecting the WSDL or
+                using a schema viewer.</p>
+
+    </div><div id="sfdc:seealso" class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_acceptedeventrelation.htm">AcceptedEventRelation</a></strong><br>
+Represents invitees with the status <samp class="codeph nolang">Accepted</samp> for a given event.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_account.htm">Account</a></strong><br>
+Represents an individual account, which is an organization or person    involved with your business (such as customers, competitors, and partners).</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountcontactrelation.htm">AccountContactRelation</a></strong><br>
+Represents a relationship between a contact and one or more 			accounts.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountcleaninfo.htm">AccountCleanInfo</a></strong><br>
+Stores the metadata Data.com Clean uses to             determine an account record’s clean status. AccountCleanInfo helps you automate             the cleaning or related processing of account records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountcontactrole.htm">AccountContactRole</a></strong><br>
+Represents the role that a Contact    plays on an Account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountfeed.htm">AccountFeed</a></strong><br>
+Represents a single feed item on an account         record detail page.       This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accounthistory.htm">AccountHistory</a></strong><br>
+Represents the history of changes to the values in the fields of an    account. This object is available in versions 11.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountownersharingrule.htm">AccountOwnerSharingRule</a></strong><br>
+Represents the rules for sharing an account with a User other than    the owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountpartner.htm">AccountPartner</a></strong><br>
+This read-only object represents a partner relationship between two Account    objects. It is automatically created when a Partner object is    created for a partner relationship between two accounts.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountshare.htm">AccountShare</a></strong><br>
+Represents a sharing entry on an Account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accounttag.htm">AccountTag</a></strong><br>
+Associates a word or short phrase with an Account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountteammember.htm">AccountTeamMember</a></strong><br>
+Represents a User who is a    member of an Account    team.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountterritoryassignmentrule.htm">AccountTerritoryAssignmentRule</a></strong><br>
+An account assignment rule that assigns accounts to territories based    on account fields. Only available if territory management has been enabled for your    organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountterritoryassignmentruleitem.htm">AccountTerritoryAssignmentRuleItem</a></strong><br>
+A row of selection criteria for an AccountTerritoryAssignmentRule object. Only available if territory management has been enabled for your   organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_accountterritorysharingrule.htm">AccountTerritorySharingRule</a></strong><br>
+Represents the rules for sharing an Account    within a Territory.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_actionlinkgrouptemplate.htm">ActionLinkGroupTemplate</a></strong><br>
+Action link templates let you reuse action link definitions and 			package and distribute action links. An action link is a button on a feed element. 			Clicking on an action link can take a user to another Web page, initiate a file 			download, or invoke an API call to an external server or Salesforce. Use action links 			to integrate Salesforce and 			third-party services into the feed. Every action link belongs to an action link group 			and action links within the group are mutually exclusive. This object is available 		in API version 33.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_actionlinktemplate.htm">ActionLinkTemplate</a></strong><br>
+Action link templates let you reuse action link definitions and package 			and distribute action links. An action link is a button on a feed element. Clicking an 			action link can take a user to another Web page, initiate a file download, or invoke an 			API call to an external server or Salesforce. Use action links 			to integrate Salesforce and 			third-party services into the feed. This object is available in API version 33.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_activityhistory.htm">ActivityHistory</a></strong><br>
+This read-only object is displayed in a related list of closed    activities—past events and closed tasks—related to an object. It includes    activities for all contacts related to the object. ActivityHistory fields for phone calls are only    available if your organization uses Salesforce CRM Call Center.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_additionalnumber.htm">AdditionalNumber</a></strong><br>
+Represents an optional additional number for a call center. This    additional number is visible in the call center's phone directory.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_agentwork.htm">AgentWork</a></strong><br>
+Represents a work assignment that’s been routed to an agent.   This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_allowedemaildomain.htm">AllowedEmailDomain</a></strong><br>
+Represents an allowed email domain for users in your organization. You can define a whitelist to restrict the email    domains allowed in a user’s <span class="keyword parmname">Email</span> field. This object is available in API    version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_announcement.htm">Announcement</a></strong><br>
+Represents a Chatter group announcement. This    object is available in API version    30.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apexclass.htm">ApexClass</a></strong><br>
+Represents an Apex     class.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apexcomponent.htm">ApexComponent</a></strong><br>
+Represents a definition for a custom component that can be used in a     Visualforce page alongside standard    components such as <samp class="codeph apex_page"><span class="tag">&lt;apex:relatedList</span>&gt;</samp> and <samp class="codeph apex_page"><span class="tag">&lt;apex:dataTable</span>&gt;</samp>.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apexlog.htm">ApexLog</a></strong><br>
+Represents a debug log, containing information about a transaction,    including information about Apex, Visualforce, workflow and validation    rules. This object is available in API version 19.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apexpage.htm">ApexPage</a></strong><br>
+Represents a single Visualforce page.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextestqueueitem.htm">ApexTestQueueItem</a></strong><br>
+Represents a single Apex class in the Apex job queue. This object is available in API version 23.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextestresult.htm">ApexTestResult</a></strong><br>
+Represents the result of an Apex test method execution.   This object is available in API version 23.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextestresultlimits.htm">ApexTestResultLimits</a></strong><br>
+Captures the Apex test limits used for a    particular test method execution. An instance of this object is associated with each ApexTestResult    record.   This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextestrunresult.htm">ApexTestRunResult</a></strong><br>
+Contains summary information about all the test methods that were run    in a particular Apex job.   This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextestsuite.htm">ApexTestSuite</a></strong><br>
+Represents a suite of Apex classes to include in a test     run. A TestSuiteMembership object associates each class with the suite. This object is available     in API version 36.0 and later. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_apextrigger.htm">ApexTrigger</a></strong><br>
+Represents an Apex     trigger.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_appmenuitem.htm">AppMenuItem</a></strong><br>
+Represents the organization’s default settings for items in the    Force.com app menu or App Launcher.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_approval.htm">Approval</a></strong><br>
+Represents an approval request for a Contract.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_articletype__datacategoryselection.htm">Article Type__DataCategorySelection</a></strong><br>
+A data category selection represents a data     category that classifies an article. This object is available in API version 19.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_articletype__feed.htm">Article Type__Feed</a></strong><br>
+Represents a single feed item in the     feed displayed on the detail page for an article.    This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_asset.htm">Asset</a></strong><br>
+Represents an item of commercial value, such as a product sold by             your company or a competitor, that a customer has purchased and         installed.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_assetfeed.htm">AssetFeed</a></strong><br>
+Represents a single feed item in the feed     displayed on the detail page for an asset record.    This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_assetownersharingrule.htm">AssetOwnerSharingRule</a></strong><br>
+Represents the rules for sharing an Asset with users          other than the owner. This object is available in API version 33.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_assetshare.htm">AssetShare</a></strong><br>
+Represents a sharing entry on an Asset. This          object is available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_assettag.htm">AssetTag</a></strong><br>
+Associates a word or short phrase with an Asset.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_assignmentrule.htm">AssignmentRule</a></strong><br>
+Represents an assignment rule associated with a Case or Lead.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_asyncapexjob.htm">AsyncApexJob</a></strong><br>
+Represents an individual Apex sharing recalculation job, a     batch Apex job, a method with     the <samp class="codeph nolang">future</samp> annotation, or a job that implements <samp class="codeph apex_code">Queueable</samp>.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_attachedcontentdocument.htm">AttachedContentDocument</a></strong><br>
+This read-only object contains all <samp class="codeph nolang">ContentDocument</samp> objects associated with an object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_attachedcontentnote.htm">AttachedContentNote</a></strong><br>
+This read-only object contains all ContentNote objects associated with an object. This object is available in API version 35.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_attachment.htm">Attachment</a></strong><br>
+Represents a file that a User has    uploaded and attached to a parent object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_auradefinition.htm">AuraDefinition</a></strong><br>
+Represents a Lightning definition, such as 			component markup, a client-side controller, or an event. This object is available in API 			version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_auradefinitionbundle.htm">AuraDefinitionBundle</a></strong><br>
+Represents a Lightning definition bundle, 			such as a component or application bundle. A bundle contains a Lightning definition and all 			its related resources. This object is available in API version 32.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_authconfig.htm">AuthConfig</a></strong><br>
+Represents authentication options for a communityor custom domain that was created by using My Domain. This object is 			available in API version 			32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_authconfigproviders.htm">AuthConfigProviders</a></strong><br>
+Represents an authentication provider 				that’s configured in an organization. This object is a child of the AuthConfig 				object. This object is available in API version 32.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_authprovider.htm">AuthProvider</a></strong><br>
+Represents an authentication provider (or auth provider) in your 			organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_authsession.htm">AuthSession</a></strong><br>
+The AuthSession object    represents an individual user session in your organization. This object is available in versions    29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_backgroundoperation.htm">BackgroundOperation</a></strong><br>
+Represents a background operation in an asynchronous job queue. This 			object is available in API version 35.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_backgroundoperationresult.htm">BackgroundOperationResult</a></strong><br>
+Stores error messages generated when running Async SOQL queries or    importing data into BigObjects using Bulk API. This is a BigObject,     available in API version 37.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_bookmark.htm">Bookmark</a></strong><br>
+Represents a link between opportunities     that share common information.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_brandtemplate.htm">BrandTemplate</a></strong><br>
+Letterhead for HTML EmailTemplate.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_businesshours.htm">BusinessHours</a></strong><br>
+Specifies the business hours of your support organization. Escalation    rules are run only during these hours.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_businessprocess.htm">BusinessProcess</a></strong><br>
+Represents a business process.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_callcenter.htm">CallCenter</a></strong><br>
+Represents a call center, which is a                                 logical representation of a single computer-telephony integration                                 (CTI) system instance in an organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaign.htm">Campaign</a></strong><br>
+Represents and tracks a marketing campaign, such as a direct mail    promotion, webinar, or trade show.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaignfeed.htm">CampaignFeed</a></strong><br>
+Represents a single feed item in the feed on         a campaign record detail page. This object is available in API version 18.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaignmember.htm">CampaignMember</a></strong><br>
+Represents the association between a campaign and either a lead or a    contact.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaignmemberstatus.htm">CampaignMemberStatus</a></strong><br>
+One or more member status values defined for a   campaign.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaignownersharingrule.htm">CampaignOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a campaign with User       records other than the owner or anyone above the owner in the role hierarchy.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaignshare.htm">CampaignShare</a></strong><br>
+Represents a sharing entry on a Campaign.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_campaigntag.htm">CampaignTag</a></strong><br>
+Associates a word or short phrase with a Campaign.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_case.htm">Case</a></strong><br>
+Represents a case, which is a customer issue or   problem.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casearticle.htm">CaseArticle</a></strong><br>
+Represents the association between a Case and a KnowledgeArticle. This object is available in API version 20.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casecomment.htm">CaseComment</a></strong><br>
+Represents a comment that provides additional information about the associated Case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casecontactrole.htm">CaseContactRole</a></strong><br>
+Represents the role that a given Contact    plays on a Case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casefeed.htm">CaseFeed</a></strong><br>
+Represents a single feed item in the feed     displayed on the detail page for a case record.    A case feed shows recent changes to a case record for any fields that     are tracked in feeds, and comments and posts about the record. It is a useful way to stay    up-to-date with changes to cases. This object is available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casehistory.htm">CaseHistory</a></strong><br>
+Represents historical information about changes that have been made to the associated    Case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casemilestone.htm">CaseMilestone</a></strong><br>
+Represents a milestone (required step in a     customer support process) on a Case. This object is    available in API version 18.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseownersharingrule.htm">CaseOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a case with users other than the    owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseshare.htm">CaseShare</a></strong><br>
+Represents a sharing entry on a Case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casesolution.htm">CaseSolution</a></strong><br>
+Represents the association between a Case and a Solution.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casestatus.htm">CaseStatus</a></strong><br>
+Represents the status of a Case, such as   New, On Hold, or In Process.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_casetag.htm">CaseTag</a></strong><br>
+Associates a word or short phrase with a Case</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseteammember.htm">CaseTeamMember</a></strong><br>
+Represents a case team member, who works with a team of other     users to help resolve a case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseteamrole.htm">CaseTeamRole</a></strong><br>
+Represents a case team role. Every case team member has a role on a     case, such as “Customer Contact” or “Case    Manager.”</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseteamtemplate.htm">CaseTeamTemplate</a></strong><br>
+Represents a predefined case team, which is a group of users     that helps resolve a case.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseteamtemplatemember.htm">CaseTeamTemplateMember</a></strong><br>
+Represents a member on a predefined case team, which is a     group of users that helps resolve cases.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_caseteamtemplaterecord.htm">CaseTeamTemplateRecord</a></strong><br>
+The CaseTeamTemplateRecord object is a linking object     between the Case and CaseTeamTemplate objects. To assign a predefined case team to a case     (customer inquiry), create a CaseTeamTemplateRecord record and point the      <span class="keyword parmname">ParentId</span> to the case and the <span class="keyword parmname">TeamTemplateId</span> to the     predefined case team.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_categorydata.htm">CategoryData</a></strong><br>
+Represents a logical grouping of Solution    records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_categorynode.htm">CategoryNode</a></strong><br>
+Represents a tree of Solution    categories.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_categorynodelocalization.htm">CategoryNodeLocalization</a></strong><br>
+When the Translation Workbench is enabled for    your organization, the CategoryNodeLocalization object provides the translation of the label of a    solution category.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chatteractivity.htm">ChatterActivity</a></strong><br>
+ChatterActivity represents the number of posts and     comments made by a user and the number of comments and likes on posts and comments received by     the same user.    This object is available in API version 23.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chatteranswersactivity.htm">ChatterAnswersActivity</a></strong><br>
+Represents the reputation of a User in Chatter Answers communities. This    object is available in API version    25.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chatteranswersreputationlevel.htm">ChatterAnswersReputationLevel</a></strong><br>
+Represents a reputation level     within a Chatter Answers     zone. This object is available in API version 26.0 and later.   </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chatterconversation.htm">ChatterConversation</a></strong><br>
+Represents a private conversation in Chatter, consisting of messages that    conversation members have sent or received. This object is available in API version 23.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chatterconversationmember.htm">ChatterConversationMember</a></strong><br>
+Represents a member of a private conversation in Chatter. A member has    either sent messages to or received messages from other conversation participants. This object is    available in API version 23.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_chattermessage.htm">ChatterMessage</a></strong><br>
+Represents a message sent as part of a private conversation in Chatter. This object is available in API version 23.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_clientbrowser.htm">ClientBrowser</a></strong><br>
+Represents a cookie added to the browser upon login, and also includes    information about the browser application where the cookie was inserted. This object is   available in version 28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroup.htm">CollaborationGroup</a></strong><br>
+Represents a Chatter group. This object is     available in API version 19.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupfeed.htm">CollaborationGroupFeed</a></strong><br>
+Represents a single feed item on a Chatter group feed.     A group feed shows posts and comments about the group. This object is       available in API version 19.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupmember.htm">CollaborationGroupMember</a></strong><br>
+Represents a member of a Chatter group. This     object is available in API version     19.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupmemberrequest.htm">CollaborationGroupMemberRequest</a></strong><br>
+Represents a request to join a private         Chatter group. This object is available in API version 21.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgrouprecord.htm">CollaborationGroupRecord</a></strong><br>
+Represents the records associated     with Chatter   groups.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationinvitation.htm">CollaborationInvitation</a></strong><br>
+Represents an invitation to join Chatter, either                 directly or through a group. This object is available in API version 21.0 and                 later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_combinedattachment.htm">CombinedAttachment</a></strong><br>
+This read-only object contains all notes, attachments, Google Docs, documents uploaded to libraries    in Salesforce CRM Content, and files added to Chatter that are associated with a    record.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_community.htm">Community (Zone)</a></strong><br>
+Represents a zone that contains Idea or Question   objects.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_connectedapplication.htm">ConnectedApplication</a></strong><br>
+Represents a connected app and its details; all 			fields are read-only.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contact.htm">Contact</a></strong><br>
+Represents a contact, which is an individual associated with an       account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contactcleaninfo.htm">ContactCleanInfo</a></strong><br>
+Stores the metadata Data.com Clean uses to determine a contact       record’s clean status. Helps you automate the cleaning or related processing of contact       records. ContactCleanInfo includes a number of bit vector fields.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contactfeed.htm">ContactFeed</a></strong><br>
+Represents a single feed item in the feed on         a contact record detail page. This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contacthistory.htm">ContactHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a    contact. This object is available in versions 11.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contactownersharingrule.htm">ContactOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a contact with a User other than   the owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contactshare.htm">ContactShare</a></strong><br>
+Represents a list of access levels to a Contact along with an   explanation of the access level. For example, if you have access to a record because you own it,   the <span class="keyword parmname">ContactAccessLevel</span> is <span class="keyword parmname">All</span> and <span class="keyword parmname">RowCause</span> is Owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contacttag.htm">ContactTag</a></strong><br>
+Associates a word or short phrase with a Contact.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdistribution.htm">ContentDistribution</a></strong><br>
+Represents information about sharing a document externally. This 			object is available in API 			version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdistributionview.htm">ContentDistributionView</a></strong><br>
+Represents information about views of a shared document. This 			read-only object is available in API version 32.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocument.htm">ContentDocument</a></strong><br>
+Represents a document that has been uploaded to a library in Salesforce CRM Content or Salesforce Files.This object is       available in API versions 17.0       and later for Salesforce CRM Content. This object is available in API version 21.0 and later for           Salesforce Files.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumentfeed.htm">ContentDocumentFeed</a></strong><br>
+Represents a single feed item associated         with ContentDocument. A content document feed shows these content document changes: creating a ContentDocument file and uploading a new ContentDocument. This object is available in versions 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumenthistory.htm">ContentDocumentHistory</a></strong><br>
+Represents the history of a document. This object is available in    versions 17.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumentlink.htm">ContentDocumentLink</a></strong><br>
+Represents the link between a           Salesforce CRM Content document or Salesforce         file and where it's shared. A file can be shared with           other users, groups, records, and Salesforce CRM Content libraries. This       object is available in versions 21.0 and later for Salesforce CRM Content documents and Salesforce Files.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentfolder.htm">ContentFolder</a></strong><br>
+Represents a folder in a content library for adding files. This 			object is available in API 			version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentfolderitem.htm">ContentFolderItem</a></strong><br>
+Represents a file (ContentDocument) or folder (ContentFolder) that 			resides in a ContentFolder in a ContentWorkspace. This object is available in API version 35.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentfolderlink.htm">ContentFolderLink</a></strong><br>
+Defines the association between a library and its root folder. This 			object is available in API 			version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentfoldermember.htm">ContentFolderMember</a></strong><br>
+Defines the association between a file and a folder. This object is 			available in API version 			34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contenthubitem.htm">ContentHubItem</a></strong><br>
+Represents a file or folder in a Files Connect external data 			source, such as Microsoft SharePoint or OneDrive for Business. This object is 		available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contenthubrepository.htm">ContentHubRepository</a></strong><br>
+Represents a Files Connect external data 			source such as Microsoft SharePoint or OneDrive for Business. This object is 		available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentnote.htm">ContentNote</a></strong><br>
+Represents a note in Salesforce. This object is available in     API version 32.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentversion.htm">ContentVersion</a></strong><br>
+Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available    in versions 17.0 and later for Salesforce CRM Content    documents. This object is available in versions 20.0 and later for Salesforce Files.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentversionhistory.htm">ContentVersionHistory</a></strong><br>
+Represents the history of a specific version of a document. This object    is available in version 17.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentworkspace.htm">ContentWorkspace</a></strong><br>
+Represents a public library in Salesforce CRM Content. This object is available in   versions 17.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contentworkspacedoc.htm">ContentWorkspaceDoc</a></strong><br>
+Represents a link between a document and a public library in Salesforce CRM Content. This object is available in   versions 17.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contract.htm">Contract</a></strong><br>
+Represents a contract (a business agreement) associated with an Account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contractcontactrole.htm">ContractContactRole</a></strong><br>
+Represents the role that a given Contact    plays on a Contract.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contractfeed.htm">ContractFeed</a></strong><br>
+Represents a single feed item in the feed on         the contract record detail page. This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contracthistory.htm">ContractHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a    contract.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contractlineitem.htm">ContractLineItem</a></strong><br>
+Represents a Product2 in a ServiceContract (customer support agreement). This object is available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contractlineitemhistory.htm">ContractLineItemHistory</a></strong><br>
+Represents the history of changes to the values in the fields on a ContractLineItem (items in a customer support agreement). This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contractstatus.htm">ContractStatus</a></strong><br>
+Represents the status of a Contract,    such as Draft, InApproval, Activated, Terminated, or Expired.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_contracttag.htm">ContractTag</a></strong><br>
+Associates a word or short phrase with a Contract.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_cronjobdetail.htm">CronJobDetail</a></strong><br>
+Contains details about the associated scheduled job, such as the    job’s name and type.   This object is available in API version 29.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_crontrigger.htm">CronTrigger</a></strong><br>
+Contains schedule information for a scheduled     job. CronTrigger is similar to a cron job on UNIX systems. This object is available in API version 17.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_currencytype.htm">CurrencyType</a></strong><br>
+Represents the currencies used by an organization for which the    multicurrency feature is enabled.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_custombrand.htm">CustomBrand</a></strong><br>
+Represents a custom branding and color scheme.   This object is available in API version 28.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_custombrandasset.htm">CustomBrandAsset</a></strong><br>
+Represents a branding element in a custom branding scheme. For example,    a color, logo image, header image, or footer text. A CustomBrandAsset can apply to a   community or to an organization using Salesforce1. This object is available in API version 28.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_custommetadatatype__mdt.htm">Custom Metadata Type__mdt</a></strong><br>
+Represents a custom metadata record. This object is available in 			API version 34.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_customobject__feed.htm">Custom Object__Feed</a></strong><br>
+Represents a single feed item on a     custom object detail page. This object is available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_custompermission.htm">CustomPermission</a></strong><br>
+Represents a permission created to control access to a custom process          or app, such as sending email. This object is available in API version 31.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_custompermissiondependency.htm">CustomPermissionDependency</a></strong><br>
+Represents the dependency between two custom permissions when one 			custom permission requires that you enable another custom permission. This object 		is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dandbcompany.htm">DandBCompany</a></strong><br>
+Represents a Dun &amp; Bradstreet®     company record, which is associated with an account added from Data.com. This object is available in      API version 25.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dashboard.htm">Dashboard</a></strong><br>
+Represents a dashboard, which shows data from custom reports as visual    components. Access is read-only. This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dashboardcomponent.htm">DashboardComponent</a></strong><br>
+Represents a dashboard component, which can be a chart, metric,             table, or gauge on a dashboard. Access is read-only. This object is available in API version 21.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dashboardcomponentfeed.htm">DashboardComponentFeed</a></strong><br>
+Represents a single feed item in the feed displayed on a dashboard    component. This object is available in API version 21.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dashboardfeed.htm">DashboardFeed</a></strong><br>
+Represents a single feed item in the feed displayed on a dashboard.         This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dashboardtag.htm">DashboardTag</a></strong><br>
+Associates a word or short phrase with a Dashboard.             This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dataassessmentfieldmetric.htm">DataAssessmentFieldMetric</a></strong><br>
+Represents summary statistics for 			matched, blank, and differing fields in account records of an org compared to records in 				Data.com.This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dataassessmentmetric.htm">DataAssessmentMetric</a></strong><br>
+Represents a summary of statistics for fields 			matched and unmatched in your account records with Data.com account 			records.This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dataassessmentvaluemetric.htm">DataAssessmentValueMetric</a></strong><br>
+Summarizes the number of fields matched 			for your account records with Data.com account 			records.This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datacloudcompany.htm">DatacloudCompany</a></strong><br>
+Represents the 				fields for Data.com 				company records. This object is available in API version 30.0 or 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datacloudcontact.htm">DatacloudContact</a></strong><br>
+The fields and 				properties for Data.com 				contact records. This object is available in API version 30.0 or 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dataclouddandbcompany.htm">DatacloudDandBCompany</a></strong><br>
+Represents a 				set of read-only fields that are used to return D&amp;B company data from Data.com API calls. 			This object is available in API version 30.0 or later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datacloudownedentity.htm">DatacloudOwnedEntity</a></strong><br>
+Represents 				fields in the DatacloudOwnedEntity object. The DatacloudOwnedEntity object tracks 				user-purchased records. This object is available in API version 30.0 or 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datacloudpurchaseusage.htm">DatacloudPurchaseUsage</a></strong><br>
+Represents 				an object used to identify and track Data.com record 				purchases. This object is available in API version 30.0 or 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datacloudsocialhandle.htm">DatacloudSocialHandle</a></strong><br>
+Returns     normalized URLs with userids for different social media used by Data.com contacts. The     DatacloudSocialHandle object is a child object of the DatacloudContact object.This object is     available in API version 30.0 or later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_datedconversionrate.htm">DatedConversionRate</a></strong><br>
+Represents the dated exchange rates used by an organization for which    the multicurrency and the effective dated currency features are enabled.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dcsocialprofile.htm">DcSocialProfile</a></strong><br>
+The <samp class="codeph nolang">DcSocialProfile</samp> object is a read-only object accessible only through 				the Data.com Social Key 				API. This object is available in API version 32.0 or later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_dcsocialprofilehandle.htm">DcSocialProfileHandle</a></strong><br>
+The <samp class="codeph nolang">DcSocialProfileHandle</samp> object. a child object to 					<samp class="codeph nolang">DcSocialProfile</samp>, is a read-only object 				accessible only through the Data.com Social Key 				API. The <samp class="codeph nolang">DcSocialProfileHandle</samp> object is a 			child object of the <samp class="codeph nolang">DcSocialProfile</samp> object.This 			object is available in API version 32.0 or later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_declinedeventrelation.htm">DeclinedEventRelation</a></strong><br>
+Represents invitees with the     status <samp class="codeph nolang">Declined</samp> for a given event. This object is    available in API versions 29.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_division.htm">Division</a></strong><br>
+A logical segment of your organization's data. For example, if your    company is organized into different business units, you could create a division for each business    unit, such as “North America,” “Healthcare,” or    “Consulting.” Available only if the organization has the Division permission    enabled.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_divisionlocalization.htm">DivisionLocalization</a></strong><br>
+When the Translation Workbench is enabled for your organization, the DivisionLocalization object provides the translation of   the label for a division.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_document.htm">Document</a></strong><br>
+Represents a file that a user has uploaded. Unlike Attachment records, documents are not attached to a parent object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_documentattachmentmap.htm">DocumentAttachmentMap</a></strong><br>
+Maps the relationship between an EmailTemplate and its attachment, which is stored as a Document.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_documenttag.htm">DocumentTag</a></strong><br>
+Associates a word or short phrase with a Document.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_domain.htm">Domain</a></strong><br>
+Read-only object that represents a custom     Web address assigned to a site in your organization. This object is available in API version 26.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_domainsite.htm">DomainSite</a></strong><br>
+Read-only junction object that joins     together the Site and Domain objects. This   object is available in API version   26.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_duplicaterecorditem.htm">DuplicateRecordItem</a></strong><br>
+Represents an individual record that’s part of a duplicate record 			set. Use this object to create custom report types. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_duplicaterecordset.htm">DuplicateRecordSet</a></strong><br>
+Represents a group of records that have been identified as 			duplicates. Each duplicate record set contains one or more duplicate record items. Use 			this object to create custom report types.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_duplicaterule.htm">DuplicateRule</a></strong><br>
+Represents a duplicate rule for detecting duplicate 		records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emaildomainkey.htm">EmailDomainKey</a></strong><br>
+Represents a domain key for an organization’s domain, used to       authenticate outbound email that Salesforce sends on the organization’s       behalf. This object is available in API version 28.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emailmessage.htm">EmailMessage</a></strong><br>
+An email message.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emailservicesaddress.htm">EmailServicesAddress</a></strong><br>
+An email service address.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emailservicesfunction.htm">EmailServicesFunction</a></strong><br>
+An email service.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emailstatus.htm">EmailStatus</a></strong><br>
+Represents the status of email sent.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_emailtemplate.htm">EmailTemplate</a></strong><br>
+Represents a template for mass email, or email sent when the activity    history related list of a record is modified.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitlement.htm">Entitlement</a></strong><br>
+Represents the customer support an Account or Contact is eligible to     receive. This object is available in API version 18.0 and later.    Entitlements may be based on an Asset, Product2, or ServiceContract.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitlementcontact.htm">EntitlementContact</a></strong><br>
+Represents a Contact eligible to     receive customer support via an Entitlement.    This object is available in API    version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitlementfeed.htm">EntitlementFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the detail page    for an entitlement. An entitlement feed shows recent changes to an     entitlement record for any fields that are tracked in feeds, and comments and posts about the     record. It's a useful way to stay up-to-date with changes to entitlements. This object is available in API version 23.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitlementhistory.htm">EntitlementHistory</a></strong><br>
+Represents the changes to field values         on an Entitlement. This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitlementtemplate.htm">EntitlementTemplate</a></strong><br>
+Represents predefined terms of customer     support for a product (Product2). This    object is available in API version    18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entityhistory.htm">EntityHistory</a></strong><br>
+Represents historical information about an object’s changed    field values. This object is only available to users with the “View All Data”    permission. This object is unavailable beginning with API version 8.0. Use the    object-specific History objects instead: CaseHistory, ContractHistory, LeadHistory, OpportunityFieldHistory, OpportunityHistory    ProcessInstanceHistory, QuantityForecastHistory, RevenueForecastHistory, or SolutionHistory.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitymilestone.htm">EntityMilestone</a></strong><br>
+Represents a required step in a customer support process on a record. The Salesforce 		user interface uses the term “object milestone.” This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_entitysubscription.htm">EntitySubscription</a></strong><br>
+Represents a subscription for a user         following a record or another user. This object is available in API version 34.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_environmenthubmember.htm">EnvironmentHubMember</a></strong><br>
+Represents a member organization in the     Environment Hub. This object is available in API version 29.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_event.htm">Event</a></strong><br>
+Represents an event in the calendar. In the user interface, event and       task records are collectively referred to as activities.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_eventfeed.htm">EventFeed</a></strong><br>
+Represents a single feed item in the feed on an           Event. This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_eventlogfile.htm">EventLogFile</a></strong><br>
+Represents event log files for event monitoring. This object is    available in API versions 32.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_eventattendee.htm">EventRelation</a></strong><br>
+Represents people (a user, a lead, or                 contacts) or a resource (such as a conference room) invited to an event. This object                 lets you add or remove invitees from an event and use the API to manage                 invitees’ responses to invitations. If Shared Activities is enabled, this                 object doesn’t support triggers, workflow, or data validation         rules.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_eventtag.htm">EventTag</a></strong><br>
+Associates a word or short phrase with an Event.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_eventwhorelation.htm">EventWhoRelation</a></strong><br>
+Represents the relationship between     an event and a lead or contacts. This derived object is a filtered version of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_eventattendee.htm" title="Represents people (a user, a lead, or contacts) or a resource (such as a conference room) invited to an event. This object lets you add or remove invitees from an event and use the API to manage invitees’ responses to invitations. If Shared Activities is enabled, this object doesn’t support triggers, workflow, or data validation rules.">EventRelation</a> object; that is, IsParent is <kbd class="ph userinput">true</kbd> and IsWhat is      <kbd class="ph userinput">false</kbd>. It doesn’t represent relationships to invitees or to     accounts, opportunities, or other objects.    This object is available in API versions 29.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_externaldatasource.htm">ExternalDataSource</a></strong><br>
+Represents an external data source, which defines connection details       for integration with data and content that are stored outside the Salesforce org.     This object is available in API version 27.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_externaldatauserauth.htm">ExternalDataUserAuth</a></strong><br>
+Stores authentication settings for a Salesforce user to access an external       system. The external system must be defined in an external data source or a named credential       that’s configured to use per-user authentication.     This object is available in API version 27.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedattachment.htm">FeedAttachment</a></strong><br>
+Represents an attachment to a feed item, such as a 				file attachment or a link. Use FeedAttachment to add various 				attachments to one feed item. 			This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedcomment.htm">FeedComment</a></strong><br>
+Represents a comment added to a feed by a           user.        This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feeditem.htm">FeedItem</a></strong><br>
+FeedItem represents an entry in the feed, such as         changes in a record feed, including text posts, link posts, and content posts.       This object is available in API version 21.0 and later.       This object replaces FeedPost.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedlike.htm">FeedLike</a></strong><br>
+Indicates that a user has liked a feed     item.    This object is available in API version 21.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedpollchoice.htm">FeedPollChoice</a></strong><br>
+Shows the choices for a poll posted in the         feed. This object is available in API version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedpollvote.htm">FeedPollVote</a></strong><br>
+Shows how users voted on a poll posted in the     feed. This object is available in API version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedpost.htm">FeedPost</a></strong><br>
+FeedPost represents the following types of changes     in a record feed, such as AccountFeed: text     posts, link posts, and content posts.   This object is available in API version 18.0 through 21.0. FeedPost    is no longer available in later versions. Starting with API version 21.0, use FeedItem to    represent text posts, link posts, and content posts in feeds. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedrevision.htm">FeedRevision</a></strong><br>
+Holds the revision history of a specific feed item or comment,       including a list of attributes that changed for each revision. This object is available in API version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_feedtrackedchange.htm">FeedTrackedChange</a></strong><br>
+Represents an individual field change or set of     field changes. A FeedTrackedChange is a    child object of a record feed, such as AccountFeed This    object is available in API version    18.0 and later..</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_fieldhistoryarchive.htm">FieldHistoryArchive</a></strong><br>
+Represents field history values for all objects that retain field    history. This is a BigObject, available only to users with the “Retain Field    History” permission. This object is available in API version 29.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_fieldpermissions.htm">FieldPermissions</a></strong><br>
+Represents the enabled field permissions for the             parent PermissionSet. This object is available in API version 24.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_fiscalyearsettings.htm">FiscalYearSettings</a></strong><br>
+Settings to define a custom or standard fiscal year for your    organization. This object has a parent-child relationship with the Period    object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_flexqueueitem.htm">FlexQueueItem</a></strong><br>
+Represents an asynchronous Apex job in the Apex flex queue. Provides     information about the job type and flex queue position of the AsyncApexJob. This object is    available in API version 36.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_flowinterview.htm">FlowInterview</a></strong><br>
+Represents a flow interview. A <dfn class="term">flow 					interview</dfn> is a running instance of a flow.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_folder.htm">Folder</a></strong><br>
+Represents a repository for a Document,     EmailTemplate, Report, or Dashboard. Only one type    of item can be contained in a folder.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_folderedcontentdocument.htm">FolderedContentDocument</a></strong><br>
+Represents the relationship between a parent and child 			ContentFolderItem in a ContentWorkspace.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingadjustment.htm">ForecastingAdjustment</a></strong><br>
+This object represents an individual     sales manager’s adjustment for a subordinate’s forecast via a ForecastingItem. Available in API versions 26 and greater. This object is     separate from the ForecastingOwnerAdjustment object, which represents forecast users’ adjustments of their <em class="ph i">own</em>    forecasts.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingfact.htm">ForecastingFact</a></strong><br>
+This is a read-only object linking a ForecastingItem with its opportunities, such as opportunities that share the same owner or forecast category     and have a closing date within the period of the forecasting item. Available in API versions 26 and greater.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingitem.htm">ForecastingItem</a></strong><br>
+This is a read-only object used for     individual forecast amounts. Users see amounts based on their perspectives and forecast roles.     The amounts users see include one of the following when forecasting in revenue: <span class="keyword parmname">AmountWithoutAdjustments</span>, <span class="keyword parmname">AmountWithoutManagerAdjustment</span>, <span class="keyword parmname">ForecastAmount</span>, <span class="keyword parmname">OwnerOnlyAmount</span>. The amounts users see include     one of the following when forecasting in quantity: <span class="keyword parmname">QuantityWithoutAdjustments</span>, <span class="keyword parmname">QuantityWithoutManagerAdjustments</span>, <span class="keyword parmname">ForecastQuantity</span>, <span class="keyword parmname">OwnerOnlyQuantity</span>.    Available in API versions 26 and greater.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingowneradjustment.htm">ForecastingOwnerAdjustment</a></strong><br>
+This object represents an 				individual forecast user’s adjustment of their <em class="ph i">own</em> forecast via a ForecastingItem. Available in API versions 33 and greater. This 				object is separate from the ForecastingAdjustment object, which represents managers’ adjustments of <em class="ph i">subordinates’</em> 				forecasts.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingquota.htm">ForecastingQuota</a></strong><br>
+This object represents an individual                 user’s quota for a specified time period. The “Manage             Quotas” user permission is required for creating, updating, or deleting quotas.             (Users can only edit their subordinates’ quotas, not their own.) The “View             All Forecasts” permission is required to View any user's forecast, regardless of             the forecast role hierarchy. Available in API versions 25 and greater. Forecast managers             can view the forecasts of subordinates who report to them in the forecast             hierarchy.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastingtype.htm">ForecastingType</a></strong><br>
+This object is used to identify the     forecast type associated with <span class="keyword parmname">ForecastingAdjustment</span>, <span class="keyword parmname">ForecastingOwnerAdjustment</span>, <span class="keyword parmname">ForecastingQuota</span>, <span class="keyword parmname">ForecastingFact</span>, and <span class="keyword parmname">ForecastingItem</span> objects. Available in API versions 30.0 and greater.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_forecastshare.htm">ForecastShare</a></strong><br>
+Represents the sharing of a customizable                 forecast at a given role and territory.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_goal.htm">Goal</a></strong><br>
+The Goal object 			represents the components of a goal such as its name, description, and 		status.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_goalfeed.htm">GoalFeed</a></strong><br>
+Represents a single feed item in the feed displayed for a Goal record. 			The goal feed shows changes to a goal for fields that are tracked in feeds, posts, and 			comments about the goal.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_goalhistory.htm">GoalHistory</a></strong><br>
+This read-only object contains historical information about changes 			that have been made to the Goal 			object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_goallink.htm">GoalLink</a></strong><br>
+Represents the relationship between two goals. This is a 			many-to-many relationship, meaning that each goal can link to many other 		goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_goalshare.htm">GoalShare</a></strong><br>
+Represents a sharing entry on a Goal 			object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_googledoc.htm">GoogleDoc</a></strong><br>
+Represents a link to a Google Document. This object is available in API version 14.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_group.htm">Group</a></strong><br>
+A set of User    records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_groupmember.htm">GroupMember</a></strong><br>
+Represents a User or Group that is     a member of a public group.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_hashtagdefinition.htm">HashtagDefinition</a></strong><br>
+HashtagDefinition represents hashtag (#) topics in     public Chatter posts and     comments.    Public posts and comments include those on profiles and in public     groups, but not those on records or in private groups.   This object is available in API version 26.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_holiday.htm">Holiday</a></strong><br>
+Represents a period of time during which     your customer support team is unavailable. Business hours and escalation rules associated with     business hours are suspended during any holidays with which they are   affiliated.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_idea.htm">Idea</a></strong><br>
+Represents an idea on which users are allowed to     comment and vote, for example, a suggestion for an enhancement to an existing product or     process. This object is available in API version 12 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ideacomment.htm">IdeaComment</a></strong><br>
+Represents a comment that a user has submitted     in response to an idea.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ideareputation.htm">IdeaReputation</a></strong><br>
+Represents a collection of statistics and scores derived from a    user’s activity within an Ideas    zone or internal organization. This object is    available in API version 28.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ideareputationlevel.htm">IdeaReputationLevel</a></strong><br>
+Represents a reputation level within an Ideas    zone or internal organization and is used by    the system to calculate reputation. You can create up to 25 levels per zone or internal organization. This object is    available in API version 28.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ideatheme.htm">IdeaTheme</a></strong><br>
+Represents an invitation to community members     to submit ideas that are focused on a specific topic. This object is available in API version 26 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgeableuser.htm">KnowledgeableUser</a></strong><br>
+Represents a user identified as knowledgeable about a specific topic,    and ranks them relative to other knowledgeable users. This object is available in API version    31.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticle.htm">KnowledgeArticle</a></strong><br>
+Provides read-only access to an article and the ability to delete the    master article. This object is available in API version 19.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticleversion.htm">KnowledgeArticleVersion</a></strong><br>
+Provides a global view of standard article fields across all article    types depending on their version. This object is available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticleversionhistory.htm">KnowledgeArticleVersionHistory</a></strong><br>
+Enables read-only access to     the full history of an article.    This object is available in API version 25.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticleviewstat.htm">KnowledgeArticleViewStat</a></strong><br>
+Provides statistics on the number of views for the specified article    across all article types. This object is read-only and available in API version 20 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_knowledgearticlevotestat.htm">KnowledgeArticleVoteStat</a></strong><br>
+Provides the weighted rating for the specified article on a scale of 1    to 5 across all article types. This object is read-only and available in API version 20 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_lead.htm">Lead</a></strong><br>
+Represents a prospect or potential Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadcleaninfo.htm">LeadCleanInfo</a></strong><br>
+Stores the metadata Data.com Clean uses to determine a lead       record’s clean status. Helps you automate the cleaning or related processing of lead       records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadfeed.htm">LeadFeed</a></strong><br>
+Represents a single feed item in the feed         displayed on the detail page for a lead record. This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadhistory.htm">LeadHistory</a></strong><br>
+Represents the history of changes to the     values in the fields of a lead.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadownersharingrule.htm">LeadOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a lead with users other than the    owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadshare.htm">LeadShare</a></strong><br>
+Represents a sharing entry on a Lead.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadstatus.htm">LeadStatus</a></strong><br>
+Represents the status of a Lead, such as    Open, Qualified, or Converted.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_leadtag.htm">LeadTag</a></strong><br>
+Associates a word or short phrase with a Lead.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_limitallocationperapp.htm">LimitAllocationPerApp</a></strong><br>
+Represents a connected app quota for an API limit. This object is available in API version 30.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_lineitemoverride.htm">LineitemOverride</a></strong><br>
+A forecast override of a line item on an Opportunity. This    read-only object for customizable forecasting has a child-parent relationship with OpportunityOverride.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_linkedarticle.htm">LinkedArticle</a></strong><br>
+Represents a Knowledge article that is attached to a record. This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_linkedarticlefeed.htm">LinkedArticleFeed</a></strong><br>
+Represents a single feed item on a linked Knowledge article attached to a record. This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_linkedarticlehistory.htm">LinkedArticleHistory</a></strong><br>
+Represents the history of changes made to tracked fields on a linked article. 		This object is available in API version 37.0 and                     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_listview.htm">ListView</a></strong><br>
+Represents a list view. A list view specifies a set     of records for an object, based on specific criteria. This object is available in API version 32.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_listviewchart.htm">ListViewChart</a></strong><br>
+Represents a graphical chart that’s displayed on Salesforce1 list views. The chart     aggregates data that is filtered based on the list view that’s currently displayed. This    object is available in API version    33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_listviewchartinstance.htm">ListViewChartInstance</a></strong><br>
+Retrieves metadata for all standard and custom charts for a given 			entity in context of a given list view. This object is 				available in API versions 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_liveagentsession.htm">LiveAgentSession</a></strong><br>
+This object is automatically created for each Live Agent session    and stores information about the session. This object is available in API     versions 28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_liveagentsessionhistory.htm">LiveAgentSessionHistory</a></strong><br>
+This object is automatically created for each Live Agent session    and stores information about changes made to the session. This object is     available in API versions 28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_liveagentsessionownersharingrule.htm">LiveAgentSessionOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a Live Agent       session record with users other than the record owner. This object is         available in API version 28.0         and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_liveagentsessionshare.htm">LiveAgentSessionShare</a></strong><br>
+This object is automatically created for each Live Agent session    and stores information about the session. This object is available in API versions 28.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatblockingrule.htm">LiveChatBlockingRule</a></strong><br>
+Represents a rule for blocking chat visitors’ IP     addresses from starting new chats with agents.    This object is available in API version 34.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatbutton.htm">LiveChatButton</a></strong><br>
+Represents a button that allows visitors to     request chats with Live Agent     users.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatbuttondeployment.htm">LiveChatButtonDeployment</a></strong><br>
+Associates a Live Agent automated chat invitation with a specific deployment. This 				object is available in API versions 28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatbuttonskill.htm">LiveChatButtonSkill</a></strong><br>
+Represents all the skills available to a LiveChatButton    except the one currently assigned. To retrieve the skill currently assigned, query    LiveChatButton. This object is available in API version 25.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatdeployment.htm">LiveChatDeployment</a></strong><br>
+Represents the general settings for deploying Live Agent on a     website.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatsensitivedatarule.htm">LiveChatSensitiveDataRule</a></strong><br>
+Represents a rule for masking or deleting data of     a specified pattern. Written as a regular expression (regex).    This object is available in API version 35.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscript.htm">LiveChatTranscript</a></strong><br>
+This object is automatically created for each Live Agent chat     session and stores information about the session.     This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscriptevent.htm">LiveChatTranscriptEvent</a></strong><br>
+Captures specific events that occur over the     lifetime of a chat.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscripthistory.htm">LiveChatTranscriptHistory</a></strong><br>
+Represents changes to field values on a LiveChatTranscript object.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscriptownersharingrule.htm">LiveChatTranscriptOwnerSharingRule</a></strong><br>
+Represents the rules for sharing a Live Agent chat       transcript record with users other than the record owner. This object is         available in API version 29.0         and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscriptshare.htm">LiveChatTranscriptShare</a></strong><br>
+Represents a sharing entry on a LiveChatTranscript object.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechattranscriptskill.htm">LiveChatTranscriptSkill</a></strong><br>
+Represents a join between LiveChatTranscript and Skill.    This object is available in API version 25.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatuserconfig.htm">LiveChatUserConfig</a></strong><br>
+Represents a setting that controls the console     settings for Live Agent     users.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatuserconfigprofile.htm">LiveChatUserConfigProfile</a></strong><br>
+Represents a join between LiveChatUserConfig and Profile.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatuserconfiguser.htm">LiveChatUserConfigUser</a></strong><br>
+Represents a join between LiveChatUserConfig and User.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_livechatvisitor.htm">LiveChatVisitor</a></strong><br>
+Represents a website visitor who has started or     tried to start a chat session.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_loginevent.htm">LoginEvent</a></strong><br>
+Represents a trackable user login event in your             organization. This object is available in API version 36.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_logingeo.htm">LoginGeo</a></strong><br>
+Represents the geographic location of the user’s IP address for a          login event. Due to the nature of geolocation technology, the accuracy of geolocation          fields (for example, country, city, postal code) may vary. This object is available in API version 34.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_loginhistory.htm">LoginHistory</a></strong><br>
+Represents the login history for all successful and failed login       attempts for organizations and enabled portals. This object is available in API version 21.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_loginip.htm">LoginIp</a></strong><br>
+Represents a validated IP address. This object is available in version    28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_lookedupfromactivity.htm">LookedUpFromActivity</a></strong><br>
+This read-only object is displayed as a related list on an activity 			record (an event or a task); the list contains records that have custom lookup 			relationships from the activity to another object. This object is not 		queryable.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_macroinstruction.htm">MacroInstruction</a></strong><br>
+Represents an instruction in a macro. An instruction can 				specify the object that the macro interacts with, the context or publisher that the 				macro works within, the operation or action that the macro performs, and the target 				of the macro’s actions. It is a useful way to programmatically define instructions, 				instead of using the macro widget in the console.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_mailmergetemplate.htm">MailmergeTemplate</a></strong><br>
+Represents a mail merge template (a Microsoft Word document) used for    performing mail merges for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_matchingrule.htm">MatchingRule</a></strong><br>
+Represents a matching rule that is used to identify duplicate    records.  This object is available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_matchingruleitem.htm">MatchingRuleItem</a></strong><br>
+Represents criteria used by a matching rule to identify duplicate 			records. This object is available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metric.htm">Metric</a></strong><br>
+The Metric object 			represents the components of a goal metric such as its name, metric type, and current 			value.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metricdatalink.htm">MetricDataLink</a></strong><br>
+The link between the metric and the data source, such as a 			report.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metricdatalinkhistory.htm">MetricDataLinkHistory</a></strong><br>
+This read-only object contains historical information about changes 			that have been made to the MetricDataLink object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metricfeed.htm">MetricFeed</a></strong><br>
+Represents a single feed item in the feed displayed on a Metric 			record.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metrichistory.htm">MetricHistory</a></strong><br>
+This read-only object contains historical information about changes 			that have been made to the Metric 			object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metricsdatafile.htm">MetricsDataFile</a></strong><br>
+Represents a data file containing usage metrics on     all installations of a managed package in a Salesforce instance. This object is available    in API version 30.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_metricshare.htm">MetricShare</a></strong><br>
+Represents a sharing entry on a Metric 			object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_milestonetype.htm">MilestoneType</a></strong><br>
+Represents a milestone (required step in a     customer support process). This object is available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_name.htm">Name</a></strong><br>
+Non-queryable object that provides information about foreign key    traversals when the foreign key has more than one parent.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_namedcredential.htm">NamedCredential</a></strong><br>
+Represents a named credential, which                     specifies the URL of a callout endpoint and its required authentication                     parameters in one definition. A named credential can be specified as an endpoint                     to simplify the setup of authenticated callouts. 		This object is available in API version 33.0                     and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_navigationlinkset.htm">NavigationLinkSet</a></strong><br>
+Represents the navigation menu in a community. A navigation menu 			consists of items that users can click to go to other parts of the community. This 			object is available in API version 36.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_navigationmenuitem.htm">NavigationMenuItem</a></strong><br>
+Represents a single menu item in a NavigationLinkSet. Use this object to create, delete, or update menu items in your community’s 			navigation menu. This object is available in API version 36.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_navigationmenuitemlocalization.htm">NavigationMenuItemLocalization</a></strong><br>
+Represents the translated value of a 				navigation menu item in a community. This object is available in API version 			36.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm">Network</a></strong><br>
+Represents a community, which is a     customizable public or private space where employees, end-customers, and partners can     collaborate on best practices and business processes. Communities give you the     opportunity to share information, records, and files with coworkers and related external     stakeholders all in one place. This object is available in API version 26.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkactivityaudit.htm">NetworkActivityAudit</a></strong><br>
+Represents an audit trail of moderation actions in Communities. This object is available in API version 30.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkmember.htm">NetworkMember</a></strong><br>
+Represents a member of a community. Members     can be either users in your company or external users with portal profiles. This object is available in API version 26.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkmembergroup.htm">NetworkMemberGroup</a></strong><br>
+Represents a group of members in a community. Members     can be either users in your internal organization or external users assigned portal profiles. An     administrator adds members to a community by adding a     profile or a permission set, and any user with the profile or permission set becomes a member of     the community.    This object is available in API version 26.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkmoderation.htm">NetworkModeration</a></strong><br>
+Represents a flag on an item in a community. This object is available in API version 30.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkpageoverride.htm">NetworkPageOverride</a></strong><br>
+Represents information about 				custom pages used to override the default pages in communities. You can create Community Builder 				(Site.com                 Studio) or Visualforce pages and override 			the default pages in a community. 			Using custom pages allows you to create a more personalized experience for your users. 			This object is available in API version 34.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_networkselfregistration.htm">NetworkSelfRegistration</a></strong><br>
+Represents the account that 				self-registering community members are associated with by default. 			Self-registering users in a community are required to be associated with an account, 			which the administrator must specify while setting up self-registration for the 			community. If an account isn’t specified, Salesforce creates person accounts (when 			enabled) for self-registering users.  This object is available in API version 34.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_newsfeed.htm">NewsFeed</a></strong><br>
+Represents a single feed item on a user's home         tab. A Chatter feed shows recent changes to records that the user is     following.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_note.htm">Note</a></strong><br>
+Represents a note, which is text associated with a custom object or a    standard object, such as a Contact, Contract,    or Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_oauthtoken.htm">OauthToken</a></strong><br>
+Represents an OAuth access token for connected app authentication and can 			be used to create a user interface for token management. This object is available in API version 32.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_noteandattachment.htm">NoteAndAttachment</a></strong><br>
+This read-only object contains all notes and attachments associated    with an object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_notetag.htm">NoteTag</a></strong><br>
+Associates a word or short phrase with a Note.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_objectpermissions.htm">ObjectPermissions</a></strong><br>
+Represents the enabled object permissions for             the parent PermissionSet. This object is available in API version 24.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_objectterritory2assignmentrule.htm">ObjectTerritory2AssignmentRule</a></strong><br>
+Represents a territory assignment rule that’s associated with an object, such as Account. ObjectTerritory2AssignmentRuleItem can only be created or deleted if the BooleanFilter field on its corresponding ObjectTerritory2AssignmentRule is <samp class="ph systemoutput">null</samp>. Available only if Enterprise Territory Management has been enabled for your organization. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_objectterritory2assignmentruleitem.htm">ObjectTerritory2AssignmentRuleItem</a></strong><br>
+A single row of selection criteria for an ObjectTerritory2AssignmentRule object. ObjectTerritory2AssignmentRuleItem can only be created or deleted if the <span class="keyword parmname">BooleanFilter</span> field on its corresponding ObjectTerritory2AssignmentRule object is a <samp class="ph systemoutput">null</samp> value. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_objectterritory2association.htm">ObjectTerritory2Association</a></strong><br>
+Represents an association (by assignment) between a territory and an    object record, such as an account. Available only if Enterprise Territory Management has been    enabled for your Salesforce   org.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_openactivity.htm">OpenActivity</a></strong><br>
+This read-only object is displayed in a related list of open    activities—future events and open tasks—related to an object. It includes    activities for all contacts related to the object. OpenActivity fields for phone calls are only    available if your organization uses Salesforce CRM Call Center.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunity.htm">Opportunity</a></strong><br>
+Represents an opportunity, which is a sale or pending       deal.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitycompetitor.htm">OpportunityCompetitor</a></strong><br>
+Represents a competitor on an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitycontactrole.htm">OpportunityContactRole</a></strong><br>
+Represents the role that a Contact    plays on an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityfeed.htm">OpportunityFeed</a></strong><br>
+Represents a single feed item in the         feed displayed on the detail page for an opportunity record. This object is available       in API version 18.0 and       later.   </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityfieldhistory.htm">OpportunityFieldHistory</a></strong><br>
+Represents the history of changes to the values in the fields of an    opportunity. This object is available in versions 13.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityhistory.htm">OpportunityHistory</a></strong><br>
+Represents the stage history of an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitem.htm">OpportunityLineItem</a></strong><br>
+Represents an opportunity line item, which is a member of the list of     Product2 products associated with an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitemschedule.htm">OpportunityLineItemSchedule</a></strong><br>
+Represents information about the quantity, revenue distribution, and    delivery dates for a particular OpportunityLineItem.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityoverride.htm">OpportunityOverride</a></strong><br>
+Represents a forecast override of an Opportunity. This read-only object is specific to customizable forecasting. It has a parent-child    relationship with LineitemOverride.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityownersharingrule.htm">OpportunityOwnerSharingRule</a></strong><br>
+Represents a rule for sharing an opportunity with users other than the    owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitypartner.htm">OpportunityPartner</a></strong><br>
+This read-only object represents a partner relationship between an Account and    an Opportunity. This object is automatically created when a Partner object is    created for a partner relationship between an account and an opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityshare.htm">OpportunityShare</a></strong><br>
+Represents a sharing entry on an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitysplit.htm">OpportunitySplit</a></strong><br>
+OpportunitySplit credits one or more opportunity team members with a    portion of the opportunity amount. This object is available in API version 16.0 and later for     pilot customers, and version 28.0 and later for others.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitysplittype.htm">OpportunitySplitType</a></strong><br>
+OpportunitySplitType provides unique labels and behavior for each split       type.     This object is available in API version 28.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitystage.htm">OpportunityStage</a></strong><br>
+Represents the stage of an Opportunity in the sales pipeline, such as New Lead, Negotiating, Pending, Closed, and so   on.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunitytag.htm">OpportunityTag</a></strong><br>
+Associates a word or short phrase with an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityteammember.htm">OpportunityTeamMember</a></strong><br>
+Represents a User on the    opportunity team of an Opportunity.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_order.htm">Order</a></strong><br>
+Represents an order associated with a contract or an   account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderfeed.htm">OrderFeed</a></strong><br>
+Represents a single feed item in the feed displayed on an order.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderhistory.htm">OrderHistory</a></strong><br>
+Represents historical information about changes that have been made to    the standard fields of the associated order, or to any custom fields with history tracking     enabled.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderitem.htm">OrderItem</a></strong><br>
+Represents an order product that your organization   sells.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderitemfeed.htm">OrderItemFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the detail page    for an order product record.   </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderitemhistory.htm">OrderItemHistory</a></strong><br>
+Represents the history of changes to the values in the fields of an    order product. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orderownersharingrule.htm">OrderOwnerSharingRule</a></strong><br>
+Represents a rule which determines order sharing access for the order’s    owners.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_organization.htm">Organization</a></strong><br>
+Represents key configuration information for an   organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_orgwideemailaddress.htm">OrgWideEmailAddress</a></strong><br>
+Represents an organization-wide email address for     user profiles.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ownedcontentdocument.htm">OwnedContentDocument</a></strong><br>
+Represents a file owned by a user.  This object is available in version    30.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_packagelicense.htm">PackageLicense</a></strong><br>
+Represents a license for an installed managed         package. This object is available in API version 31.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_partner.htm">Partner</a></strong><br>
+Represents a partner relationship between two Account    records or between an Opportunity and an Account.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworkconnection.htm">PartnerNetworkConnection</a></strong><br>
+Represents a Salesforce to Salesforce connection between Salesforce organizations.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworkrecordconnection.htm">PartnerNetworkRecordConnection</a></strong><br>
+Represents a                 record shared between Salesforce organizations                 using Salesforce to Salesforce.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworksynclog.htm">PartnerNetworkSyncLog</a></strong><br>
+Represents the Org Sync Log tab in Salesforce, where Salesforce administrators can 			track the replication of record inserts and updates being performed in Organization 			Sync. The Connection Detail page for the replication connection also displays the Org 			Sync Log’s twenty most recent entries, and provides a link to the log.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_partnerrole.htm">PartnerRole</a></strong><br>
+Represents a role for an account Partner,    such as consultant, supplier, and so on.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_period.htm">Period</a></strong><br>
+Represents a fiscal period defined in FiscalYearSettings.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm">PermissionSet</a></strong><br>
+Represents a set of permissions that’s used to grant additional       access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_permissionsetassignment.htm">PermissionSetAssignment</a></strong><br>
+Represents the association between a User and a PermissionSet.    This object is available in API    version 22.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_permissionsetlicense.htm">PermissionSetLicense</a></strong><br>
+Represents a license that’s used to enable one or more users to    receive a specified permission without changing their profile or reassigning profiles. You can    use permission set licenses to grant access, but not to deny access. This object is available in    API version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_permissionsetlicenseassign.htm">PermissionSetLicenseAssign</a></strong><br>
+Represents the association between a User and a PermissionSetLicense.  This object is available in API version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_platformaction.htm">PlatformAction</a></strong><br>
+PlatformAction is a virtual read-only object. It enables you to query    for actions displayed in the UI, given a user, a context, device format, and a record ID.    Examples include standard and custom buttons, quick actions, and productivity   actions.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_platformeventmetrics.htm">PlatformEventMetrics</a></strong><br>
+Represents a roll-up aggregation of an             organization’s login events over time. This object is available in API version 36.0 and             later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_presenceuserconfig.htm">PresenceUserConfig</a></strong><br>
+Represents a configuration that determines a presence user’s    settings. This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_presenceuserconfigprofile.htm">PresenceUserConfigProfile</a></strong><br>
+Represents a configuration that determines the settings that are    assigned to presence users who are assigned to a specific profile. User-level configurations    override profile-level configurations. This object is available in API version 32.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_presenceuserconfiguser.htm">PresenceUserConfigUser</a></strong><br>
+Represents a configuration that determines the settings that are    assigned to a presence user. These user-level configurations override profile-level    configurations. This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_pricebook2.htm">Pricebook2</a></strong><br>
+Represents a price book that contains the list of products that your       organization sells.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_pricebook2history.htm">Pricebook2History</a></strong><br>
+Represents historical information     about changes that have been made to the standard fields of the associated Pricebook2, or to     any custom fields with history tracking enabled.    This object is available in API version 37.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_pricebookentry.htm">PricebookEntry</a></strong><br>
+Represents a product entry (an association between a Pricebook2 and Product2)    in a price book.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processdefinition.htm">ProcessDefinition</a></strong><br>
+Represents the definition of a single     approval process.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processinstance.htm">ProcessInstance</a></strong><br>
+Represents an instance of a single,     end-to-end approval process. Use this and the node, step, and workitem process instance objects     to create approval history reports.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processinstancehistory.htm">ProcessInstanceHistory</a></strong><br>
+This read-only object shows all     steps and pending approval requests associated with an approval process (ProcessInstance).</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processinstancestep.htm">ProcessInstanceStep</a></strong><br>
+Represents one work item in an     approval process (ProcessInstance).</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processinstancenode.htm">ProcessInstanceNode</a></strong><br>
+Represents a step in an instance of an     approval process. Compare to ProcessNode,      which describes the step in a process definition. Use this object to retrieve approval     history.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processinstanceworkitem.htm">ProcessInstanceWorkitem</a></strong><br>
+Represents a user’s pending     approval request.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_processnode.htm">ProcessNode</a></strong><br>
+Describes a step in a process definition.     Compare to ProcessInstanceNode, which describes the step in a running process.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_product2.htm">Product2</a></strong><br>
+Represents a product that your organization sells.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_product2feed.htm">Product2Feed</a></strong><br>
+Represents a single feed item in the feed         displayed on the detail page for a product record.       This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_productentitlementtemplate.htm">ProductEntitlementTemplate</a></strong><br>
+Represents predefined terms of     customer support (Entitlement) that     users can add to products (Product2).</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profile.htm">Profile</a></strong><br>
+Represents a profile, which defines a set of permissions to perform    different operations, such as querying, adding, updating, or deleting information.   </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskill.htm">ProfileSkill</a></strong><br>
+Represents a profile skill, which describes a user’s    professional knowledge. This is a global record for the organization, and users are associated    through the ProfileSkillUser object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillendorsement.htm">ProfileSkillEndorsement</a></strong><br>
+Represents a detail relationship of ProfileSkillUser. An endorsement of a profile skill shows approval and support of another user’s    publicly declared skill.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillendorsementfeed.htm">ProfileSkillEndorsementFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the detail 			page for a ProfileSkillEndorsement record. This object is available in API version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillendorsementhistory.htm">ProfileSkillEndorsementHistory</a></strong><br>
+Represents the history of changes to the fields of a ProfileSkillEndorsement.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillfeed.htm">ProfileSkillFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the detail page    for a profile skill.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillhistory.htm">ProfileSkillHistory</a></strong><br>
+Represents the history of changes to the fields of a ProfileSkill.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskillshare.htm">ProfileSkillShare</a></strong><br>
+Represents a sharing entry on a ProfileSkill.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskilluser.htm">ProfileSkillUser</a></strong><br>
+Represents a detail relationship of User. The object connects    profile skills with users.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskilluserfeed.htm">ProfileSkillUserFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the detail 			page for a ProfileSkillUser record. This object is available in API version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_profileskilluserhistory.htm">ProfileSkillUserHistory</a></strong><br>
+Represents the history of changes to the fields of a ProfileSkillUser.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/pushtopic.htm">PushTopic</a></strong><br>
+</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quantityforecast.htm">QuantityForecast</a></strong><br>
+Represents a quantity-based forecast.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quantityforecasthistory.htm">QuantityForecastHistory</a></strong><br>
+Represents historical information about quantity-based forecasts that    have been submitted (saved) in the user interface.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_queueroutingconfig.htm">QueueRoutingConfig</a></strong><br>
+Represents the settings that determine how work items are routed to    agents. This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_question.htm">Question</a></strong><br>
+Represents a question in a community that users     can view and reply to.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_questiondatacategoryselection.htm">QuestionDataCategorySelection</a></strong><br>
+A data category selection represents a data                 category that classifies a question.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_questionreportabuse.htm">QuestionReportAbuse</a></strong><br>
+Represents a user-reported abuse on     a Question in a      Chatter Answers community. This    object is available in API version    24.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_questionsubscription.htm">QuestionSubscription</a></strong><br>
+Represents a subscription for a user     following a Question. This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_queuesobject.htm">QueueSobject</a></strong><br>
+Represents the mapping between a queue Group and       the sObject       types associated with the queue, including custom objects.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quicktext.htm">QuickText</a></strong><br>
+This object stores a snippet of text that allows     an agent to send a quick response to a customer in the Live Agent                 console.     This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quicktexthistory.htm">QuickTextHistory</a></strong><br>
+Represents changes to field values on a QuickText     object.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quicktextownersharingrule.htm">QuickTextOwnerSharingRule</a></strong><br>
+Represents a rule for sharing a QuickText object     with users other than the owner.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quicktextshare.htm">QuickTextShare</a></strong><br>
+Represents a sharing entry on a QuickText     object.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quote.htm">Quote</a></strong><br>
+The Quote object represents a quote, which is a record showing proposed    prices for products and services. Available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quotedocument.htm">QuoteDocument</a></strong><br>
+The QuoteDocument object represents a quote in document format.    Available in API version 18.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_quotelineitem.htm">QuoteLineItem</a></strong><br>
+The QuoteLineItem object represents a quote line item, which is a    member of the list of Product2    products associated with a Quote, along    with other information about those line items on that quote.  Available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_recentlyviewed.htm">RecentlyViewed</a></strong><br>
+Represents records that the    current user has recently viewed or referenced (by viewing a related record).</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_recordtype.htm">RecordType</a></strong><br>
+Represents a record type.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_recordtypelocalization.htm">RecordTypeLocalization</a></strong><br>
+Represents the translated value of a label for a record type when the     Translation Workbench is enabled for    your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reply.htm">Reply</a></strong><br>
+Represents a reply that a user has submitted to a     question in an answers community.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_replyreportabuse.htm">ReplyReportAbuse</a></strong><br>
+Represents a user-reported abuse on     a Reply in a Chatter Answers community. This object    is available in API version 24.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_report.htm">Report</a></strong><br>
+Represents a report, a set of data that meets certain criteria,    displayed in an organized way. Access is read-only. This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reportfeed.htm">ReportFeed</a></strong><br>
+Represents a single feed item in the feed displayed on a report. This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reporttag.htm">ReportTag</a></strong><br>
+Associates a word or short phrase with a Report. This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reputationlevel.htm">ReputationLevel</a></strong><br>
+Represents a 					reputation level defined for a community. This object is available in API 				version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reputationlevellocalization.htm">ReputationLevelLocalization</a></strong><br>
+Represents the translated value of a 				reputation level. Reputation level localization only applies for reputation levels 				in communities. This object is available in API version 35.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_reputationpointsrule.htm">ReputationPointsRule</a></strong><br>
+Represents the reputation point rules for a community. Each rule specifies an 					action that community members can earn points from and the points associated 					with those actions in a particular community. This object is available in 				API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_revenueforecast.htm">RevenueForecast</a></strong><br>
+Represents a revenue-based forecast.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_revenueforecasthistory.htm">RevenueForecastHistory</a></strong><br>
+Represents historical information about revenue-based forecasts that    have been submitted (saved) in the user interface.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_ruleterritory2association.htm">RuleTerritory2Association</a></strong><br>
+Represents a record-assignment rule and its association to an object, such as Account. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_samlssoconfig.htm">SamlSsoConfig</a></strong><br>
+Represents a SAML Single Sign-On configuration. 				This object is available in API version 32.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_scontrol.htm">Scontrol</a></strong><br>
+A custom s-control, which is custom content that is hosted by the          system but executed by the client application.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_scontrollocalization.htm">ScontrolLocalization</a></strong><br>
+The translated value of the field label for an   s-control.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_searchpromotionrule.htm">SearchPromotionRule</a></strong><br>
+Represents a promoted search term, which is one or more keywords that    you associate with a Salesforce Knowledge article.    When a user’s search query includes these keywords, the associated article is returned    first in search results.  This object is available in API version 31.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_secureagent.htm">SecureAgent</a></strong><br>
+Represents a Secure Agent that connects 				Salesforce to on-premises external data sources like SharePoint 2010 and 2013. 			This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_secureagentscluster.htm">SecureAgentsCluster</a></strong><br>
+Represents a cluster consisting of several 				Secure Agents on different servers. Clusters provide failover protection if an agent 				on a particular server becomes inaccessible. This object is available in API 			version 35.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_selfserviceuser.htm">SelfServiceUser</a></strong><br>
+Represents a Contact who    has been enabled to use your organization’s Self-Service portal, where he or she can    obtain online support.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicechannel.htm">ServiceChannel</a></strong><br>
+Represents a channel of work items that are received from your    organization—for example, cases, chats, or leads. This object is available in API version    32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicechannelstatus.htm">ServiceChannelStatus</a></strong><br>
+Represents the status that’s associated with a specific service    channel. This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontract.htm">ServiceContract</a></strong><br>
+Represents a customer support contract     (business agreement).    This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontractfeed.htm">ServiceContractFeed</a></strong><br>
+Represents a single feed item in the         feed displayed on the detail page for a service contract record.        This object is available in API version 23.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontracthistory.htm">ServiceContractHistory</a></strong><br>
+Represents the history of changes     to the values in the fields on a ServiceContract (customer support agreement).    This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontractownersharingrule.htm">ServiceContractOwnerSharingRule</a></strong><br>
+Represents the rules for     sharing a ServiceContract (customer service agreement) with users other than the owner.    This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicecontractshare.htm">ServiceContractShare</a></strong><br>
+Represents a sharing entry on a ServiceContract (customer support agreement).    This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_servicepresencestatus.htm">ServicePresenceStatus</a></strong><br>
+Represents a presence status that can be assigned to a service channel.    This object is available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sessionpermsetactivations.htm">SessionPermSetActivation</a></strong><br>
+The SessionPermSetActivation object represents a    permission set assignment activated during an individual user session. When a SessionPermSetActivation object is inserted into a    permission set, an activation event fires, allowing the permission settings to apply to the    user’s specific session. This object is available in API versions 37.0 and later as part of   the Session-Based Permission Sets Developer Preview.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_setupaudittrail.htm">SetupAuditTrail</a></strong><br>
+Represents changes you or other administrators             made in your organization’s Setup area. This object is available in API version 15.0 and             later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_setupentityaccess.htm">SetupEntityAccess</a></strong><br>
+Represents the enabled setup entity access             settings (such as for Apex classes) for the             parent PermissionSet. This object is available in API version 25.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_signuprequest.htm">SignupRequest</a></strong><br>
+Represents a request for a new Trialforce sign-up.             This object is available in API version 27.0 and             later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_site.htm">Site</a></strong><br>
+Represents a public website that is integrated     with an Organization.  This object is generally available in API version 16.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sitedomain.htm">SiteDomain</a></strong><br>
+SiteDomain is a read-only object, and a     one-to-many replacement for the Site.TopLevelDomain field. This object is available in API version 21.0, and has been    deprecated as of API version 26.0.    In API version 26.0 and later, use    the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domain.htm" title="Read-only object that represents a custom Web address assigned to a site in your organization. This object is available in API version 26.0 and later.">Domain</a> and <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domainsite.htm" title="Read-only junction object that joins together the Site and Domain objects. This object is available in API version 26.0 and later.">DomainSite</a> objects   instead.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sitehistory.htm">SiteHistory</a></strong><br>
+Represents the history of changes to     the values in the fields of a site. This object is generally available in API version 18.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_skill.htm">Skill</a></strong><br>
+Represents a category or group that Live Agent users     can be assigned to.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_skillprofile.htm">SkillProfile</a></strong><br>
+Represents a join between Skill and Profile.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_skilluser.htm">SkillUser</a></strong><br>
+Represents a join between Skill and User.    This object is available in API version 24.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_slaprocess.htm">SlaProcess</a></strong><br>
+Represents an entitlement process associated     with an Entitlement.    This object is available in API    version 19.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_solution.htm">Solution</a></strong><br>
+Represents a detailed description of a customer issue and the    resolution of that issue.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_solutionfeed.htm">SolutionFeed</a></strong><br>
+Represents a single feed item in the feed         displayed on the detail page for a solution record.       This object is available in API version 18.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_solutionhistory.htm">SolutionHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a    solution.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_solutionstatus.htm">SolutionStatus</a></strong><br>
+Represents the status of a Solution,    such as Draft, Reviewed, and so on.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_solutiontag.htm">SolutionTag</a></strong><br>
+Associates a word or short phrase with a Solution.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sosdeployment.htm">SOSDeployment</a></strong><br>
+Represents the general settings for deploying SOS video call 			capability in a native mobile application. This object is available in API version 34.0 			and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sossession.htm">SOSSession</a></strong><br>
+This object is automatically created for each SOS session and stores 			information about the session. This object is available in API versions 34.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sossessionactivity.htm">SOSSessionActivity</a></strong><br>
+Captures information about specific events that occur during an SOS 			video call, such as when an SOS call begins or ends. This object is available in API 			version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sossessionhistory.htm">SOSSessionHistory</a></strong><br>
+This object is automatically created for each SOS session and stores 			information about changes made to the session.  This object is available in API versions 			34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sossessionownersharingrule.htm">SOSSessionOwnerSharingRule</a></strong><br>
+Represents the rules for sharing an SOS session record with users 			other than the record owner. This object is available in API version 34.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_sossessionshare.htm">SOSSessionShare</a></strong><br>
+Represents a sharing entry on an SOS session. This object is available 			in API version 34.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_staticresource.htm">StaticResource</a></strong><br>
+Represents a static resource that can be used in Visualforce markup. </li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/streamingChannel.htm">StreamingChannel</a></strong><br>
+</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_tagdefinition.htm">TagDefinition</a></strong><br>
+Defines the attributes of child Tag objects.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_task.htm">Task</a></strong><br>
+Represents a business activity such as making a phone call or other       to-do items. In the user interface, Task and         Event       records are collectively referred to as activities.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_taskfeed.htm">TaskFeed</a></strong><br>
+Represents a single feed item in the feed on a           Task.       This object is available in API version 20.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_taskpriority.htm">TaskPriority</a></strong><br>
+Represents the importance or urgency of a Task, such as    High, Normal, or Low.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_taskrelation.htm">TaskRelation</a></strong><br>
+Represents the relationship between a                 task and a lead, contacts, and other objects related to the task. If Shared                 Activities is enabled, this object doesn’t support triggers, workflow, or data                 validation rules. This object is available in API version 24.0 and         later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_taskstatus.htm">TaskStatus</a></strong><br>
+Represents the status of a Task, such as    Not Started, Completed, or Closed.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_tasktag.htm">TaskTag</a></strong><br>
+Associates a word or short phrase with a Task.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_taskwhorelation.htm">TaskWhoRelation</a></strong><br>
+Represents the relationship between a                 task and a lead or contacts.   This object is available in API version 29.0 and             later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_tenantsecret.htm">TenantSecret</a></strong><br>
+This object stores an encrypted             organization-specific key fragment that is used with the master secret to produce             organization-specific data encryption keys. This object is available in API version 34.0 and          later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_territory.htm">Territory</a></strong><br>
+Represents a flexible collection of accounts and users where the users    have at least read access to the accounts, regardless of who owns the accounts. Only available if    territory management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_territory2.htm">Territory2</a></strong><br>
+Represents a sales territory. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_territory2model.htm">Territory2Model</a></strong><br>
+Represents a territory model. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_territory2modelhistory.htm">Territory2ModelHistory</a></strong><br>
+Represents the history of changes to the values in the fields on a territory model. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_territory2type.htm">Territory2Type</a></strong><br>
+Represents a category for territories (Territory2). Every Territory2 must have a Territory2Type. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_testsuitemembership.htm">TestSuiteMembership</a></strong><br>
+Represents a class in an ApexTestSuite. This    object is available in API version 36.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_thirdpartyaccountlink.htm">ThirdPartyAccountLink</a></strong><br>
+Represents the list of external users who authenticated using an Auth. 			Provider. This object is available in API version 32.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_topic.htm">Topic</a></strong><br>
+Represents a topic on a Chatter post or record. This object is available in API version 28.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_topicassignment.htm">TopicAssignment</a></strong><br>
+Represents the assignment of a topic to a specific feed item, record,    or file. This object is available in API version 28.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_topicfeed.htm">TopicFeed</a></strong><br>
+Represents a single feed item on a topic page.         This object is available in API         version 29.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_topiclocalization.htm">TopicLocalization—Beta</a></strong><br>
+Represents the translated version of a topic name. Topic localization 			applies only to navigational and featured topics in communities. This object is 		available in API version 33.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_twofactorinfo.htm">TwoFactorInfo</a></strong><br>
+Stores a user’s secret for two-factor 				operations. Use this object when customizing two-factor authentication in your 			organization. This object is available in API version 32.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_twofactormethodsinfo.htm">TwoFactorMethodsInfo</a></strong><br>
+Stores information about which identity verification methods a user 			has registered. This object is available in API version 37.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_twofactortempcode.htm">TwoFactorTempCode</a></strong><br>
+Stores information about a user’s temporary identity verification 			code. This object is available in API version 37.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_undecidedeventrelation.htm">UndecidedEventRelation</a></strong><br>
+Represents invitees with the     status <samp class="codeph nolang">Not Responded</samp> for a given event. This object is    available in API versions 29.0 and    later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm">User</a></strong><br>
+Represents a user in your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_useraccountteammember.htm">UserAccountTeamMember</a></strong><br>
+Represents a User on the    default account team of another User.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userappmenucustomization.htm">UserAppMenuCustomization</a></strong><br>
+Represents an individual user’s settings for items in the Force.com 			app menu or App Launcher. This object is available in API version 35.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userappmenucustomizationshare.htm">UserAppMenuCustomizationShare</a></strong><br>
+Represents a sharing entry on a UserAppMenuCustomization record. This object is available in API version 35.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userappmenuitem.htm">UserAppMenuItem</a></strong><br>
+Represents the organization-wide settings for items in the Force.com 			app menu or App Launcher that the requesting user has access to in Setup. This object is 				available in API 				version 35.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userconfigtransferbutton.htm">UserConfigTransferButton</a></strong><br>
+Represents the association between a Live Agent configuration and a live chat button. This association allows users associated with a specific configuration to transfer chats to a button queue.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userconfigtransferskill.htm">UserConfigTransferSkill</a></strong><br>
+Represents the association between a Live Agent configuration and a skill. This association allows users associated with a specific configuration to transfer chats to agents who have that skill.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userfeed.htm">UserFeed</a></strong><br>
+Represents a single feed item in the feed         displayed on a Chatter user         profile feed. A user profile feed shows changes to a user record for fields that are tracked         in feeds, and posts and comments about the record. This object is available in API version 18.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userlicense.htm">UserLicense</a></strong><br>
+Represents a user license in your organization. A    user license entitles a user to specific functionality and determines the profiles and permission    sets available to the user.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userlogin.htm">UserLogin</a></strong><br>
+Represents the settings that affect a user’s ability to log       into an organization. To access this object, you need the         <span class="keyword parmname">UserPermissions.ManageUsers</span> permission. This object is available in API version 29.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_usermembershiprule.htm">UserMembershipSharingRule</a></strong><br>
+Represents the rules for sharing user records from a source group to a    target group. A user record contains details about a user. Users who are members of the source    group can be shared with members of the target group. The source and target groups can be based    on roles, portal roles, public groups, or territories. This object is     available in API version 26.0 and     later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userpackagelicense.htm">UserPackageLicense</a></strong><br>
+Represents a license for an installed managed     package, assigned to a specific user.    This object is available in API version 31.0 and   later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userpreference.htm">UserPreference</a></strong><br>
+Represents a functional preference for a specific user in     your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprofile.htm">UserProfile</a></strong><br>
+Represents a Chatter user     profile.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprofilefeed.htm">UserProfileFeed</a></strong><br>
+Represents a user profile feed, which tracks all actions by a user on records that can be tracked in a feed. This feed is displayed on the user profile page.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovaccount.htm">UserProvAccount</a></strong><br>
+Represents information that links a Salesforce user account with an account       in a third-party (target) system, such as Google, for users of connected apps with Salesforce user provisioning enabled. This object is available in API version 33.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovaccountstaging.htm">UserProvAccountStaging</a></strong><br>
+Temporarily stores user account information while a user completes the 			User Provisioning Wizard. This information that is stored in the UserProvAccount object 			when you click the button to collect and analyze accounts on the target 		system.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovmocktarget.htm">UserProvMockTarget</a></strong><br>
+Represents an entity for testing user data before committing the data 			to a third-party system for user provisioning.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovisioningconfig.htm">UserProvisioningConfig</a></strong><br>
+Represents information for a flow to use during a user provisioning 			request process, such as the attributes for an update. 		This object is available in API version 34.0 and 			later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovisioninglog.htm">UserProvisioningLog</a></strong><br>
+Represents messages generated during the process of provisioning users       for third-party applications. This object is available in API version 33.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovisioningrequest.htm">UserProvisioningRequest</a></strong><br>
+Represents an individual provisioning request to create, update, or       delete a single user account in a third-party service system (or another Salesforce organization). This object is available in API version 33.0 and       later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovisioningrequestownersharingrule.htm">UserProvisioningRequestOwnerSharingRule</a></strong><br>
+Represents a rule for sharing a UserProvisioningRequest object with 			users other than the owner. This object is available in API version 34.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userprovisioningrequestshare.htm">UserProvisioningRequestShare</a></strong><br>
+Represents a sharing entry on a UserProvisioningRequest record. This object is available in API version 34.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userrecordaccess.htm">UserRecordAccess</a></strong><br>
+Represents a user’s access to a set of records. This object                   is read only and is available in API version 24.0                   and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_role.htm">UserRole</a></strong><br>
+Represents a user role in your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userservicepresence.htm">UserServicePresence</a></strong><br>
+Represents a presence user’s real-time presence status. This object is    available in API version 32.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_usershare.htm">UserShare</a></strong><br>
+Represents a sharing entry on a user record. This object is available in API     version 26.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userteammember.htm">UserTeamMember</a></strong><br>
+Represents a single User on the    default opportunity team of another User.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userterritory.htm">UserTerritory</a></strong><br>
+Represents a User who has    been assigned to a Territory.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_userterritory2association.htm">UserTerritory2Association</a></strong><br>
+Represents an association (by assignment) between a territory and a user    record. Available only if Enterprise Territory Management has been enabled for your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_verificationhistory.htm">VerificationHistory</a></strong><br>
+Represents the past six months of your org users’ attempts to verify 			their identity. This object is available in API version 36.0 and 		later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_vote.htm">Vote</a></strong><br>
+Represents a vote that a user has made on an Idea or a Reply.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_weblink.htm">WebLink</a></strong><br>
+Represents a custom link to a URL or Scontrol.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_weblinklocalization.htm">WebLinkLocalization</a></strong><br>
+Represents the translated value of the field label for a custom link to    a URL or s-control when the Translation Workbench is enabled for    your organization.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workaccess.htm">WorkAccess</a></strong><br>
+Used to grant or restrict user access to give badge definitions. 			Each badge definition record must have one WorkAccess record.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workaccessshare.htm">WorkAccessShare</a></strong><br>
+Used to control Givers of WorkBadgeDefinition 		records.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workbadge.htm">WorkBadge</a></strong><br>
+Represents information about who the badge was given to and which badge    was given. A WorkBadge record is created for each    recipient of a WorkBadgeDefinition.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workbadgedefinition.htm">WorkBadgeDefinition</a></strong><br>
+Represents the attributes of a badge including the badge name, 			description, and image. Each WorkBadge 			record must have a lookup to a WorkBadgeDefinition since badge 			attributes (like badge name) are derived from the WorkBadgeDefinition 		object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workbadgedefinitionhistory.htm">WorkBadgeDefinitionHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkBadgeDefinition object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workbadgedefinitionshare.htm">WorkBadgeDefinitionShare</a></strong><br>
+Represents a sharing entry on a WorkBadgeDefinition object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workcoaching.htm">WorkCoaching</a></strong><br>
+Represents a single coaching relationship between two users. One of 			the users is defined as the coach and the other is defined as a coachee. WorkCoaching is feed-enabled so there is 			a private feed available to the coach and coachee.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workcoachingfeed.htm">WorkCoachingFeed</a></strong><br>
+Represents a single feed item in the feed on the detail page for a 			coaching record.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workcoachinghistory.htm">WorkCoachingHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkCoaching object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workcoachingshare.htm">WorkCoachingShare</a></strong><br>
+Represents a sharing entry on a WorkCoaching object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedback.htm">WorkFeedback</a></strong><br>
+Represents the answer to a question that a person was asked via a 			feedback request. Also used to store offered feedback without linking it to a particular 			question.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackhistory.htm">WorkFeedbackHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a WorkFeedback object. Access is read-only.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestion.htm">WorkFeedbackQuestion</a></strong><br>
+Represents a free-form text type or multiple choice question within 			a set of questions.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestionhistory.htm">WorkFeedbackQuestionHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkFeedbackQuestion.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestionset.htm">WorkFeedbackQuestionSet</a></strong><br>
+Represents a set of questions being asked. The question set is used 			to link all the individual requests where different recipients were asked the same set 			of questions on the same subject.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestionsethistory.htm">WorkFeedbackQuestionSetHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a WorkFeedbackQuestionSet object. Access is read-only.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestionsetshare.htm">WorkFeedbackQuestionSetShare</a></strong><br>
+Represents a sharing entry on a WorkFeedbackQuestionSet.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackquestionshare.htm">WorkFeedbackQuestionShare</a></strong><br>
+Represents a sharing entry on a WorkFeedbackQuestion.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackrequest.htm">WorkFeedbackRequest</a></strong><br>
+Represents a single feedback request on a subject or topic 			(question) to a single recipient in the feedback application. In the case of offered 			feedback, WorkFeedbackRequest represents 			feedback that is offered about a subject. In the performance application, WorkFeedbackRequest represents a request 			for feedback on a set of questions from a question set, on a subject—for the 			recipient to complete and submit.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackrequestfeed.htm">WorkFeedbackRequestFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the feedback 			request detail page.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackrequesthistory.htm">WorkFeedbackRequestHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkFeedbackRequest.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackrequestshare.htm">WorkFeedbackRequestShare</a></strong><br>
+Represents a sharing entry on a WorkFeedbackRequest.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workfeedbackshare.htm">WorkFeedbackShare</a></strong><br>
+Represents a sharing entry on a WorkFeedback object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoal.htm">WorkGoal</a></strong><br>
+Represents the components of a goal, such as its description and 			associated metrics. This object has been deprecated as of API version 35.0. Use the 				<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goal.htm#sforce_api_objects_Goal" title="The Goal object represents the components of a goal such as its name, description, and status.">Goal</a> object to query information 			about Work.com 		goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoalcollaborator.htm">WorkGoalCollaborator</a></strong><br>
+Represents collaborators on a WorkGoal 			object. This doesn’t include WorkGoal 			followers, which is handled by Chatter Feed Follow functionality. This object has been 			deprecated as of API 			version 35.0. Use the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goal.htm#sforce_api_objects_Goal" title="The Goal object represents the components of a goal such as its name, description, and status.">Goal</a> object to query 			information about Work.com 			goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoalcollaboratorhistory.htm">WorkGoalCollaboratorHistory</a></strong><br>
+Represents the history of changes to the values in the fields in 				a&nbsp;WorkGoalCollaborator&nbsp;object. Access is read-only.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoalfeed.htm">WorkGoalFeed</a></strong><br>
+Represents a single feed item in the feed displayed on the goal page 			for a Goal record. The goal&nbsp;feed shows changes to a goal for fields that are 			tracked in feeds, posts, and comments about the goal, and updates on metrics. This 			object has been deprecated as of API version 35.0. Use the 				<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goalfeed.htm#sforce_api_objects_GoalFeed" title="Represents a single feed item in the feed displayed for a Goal record. The goal feed shows changes to a goal for fields that are tracked in feeds, posts, and comments about the goal.">GoalFeed</a> object to query 			information about feed items for Work.com goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoalhistory.htm">WorkGoalHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a WorkGoal. 			Access is read-only. This object has been deprecated as of API version 35.0. Use the 				<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goalhistory.htm#sforce_api_objects_GoalHistory" title="This read-only object contains historical information about changes that have been made to the Goal object.">GoalHistory</a> object to query 			historical information for Work.com goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoallink.htm">WorkGoalLink</a></strong><br>
+Represents the relationship between two goals (many to many 			relationship). This object has been deprecated as of API version 35.0. Use the 				<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goallink.htm#sforce_api_objects_GoalLink" title="Represents the relationship between two goals. This is a many-to-many relationship, meaning that each goal can link to many other goals.">GoalLink</a> object to query 			information about the relationship between two Work.com goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workgoalshare.htm">WorkGoalShare</a></strong><br>
+Represents a sharing entry on a WorkGoal 			object. This object has been deprecated as of API version 35.0. Use the 				<a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_goalshare.htm#sforce_api_objects_GoalShare" title="Represents a sharing entry on a Goal object.">GoalShare</a> object to query 			information about sharing for Work.com goals.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorder.htm">WorkOrder</a></strong><br>
+Represents a task or series of tasks to be performed, 				typically in field service. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorderfeed.htm">WorkOrderFeed</a></strong><br>
+Represents a single feed item on a work order record 				detail page. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorderhistory.htm">WorkOrderHistory</a></strong><br>
+Represents the history of changes made to tracked fields 				on a work order. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorderlineitem.htm">WorkOrderLineItem</a></strong><br>
+Represents a subtask on a work order, typically in field 				service. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorderlineitemfeed.htm">WorkOrderLineItemFeed</a></strong><br>
+Represents a single feed item on a work order line item 				record detail page. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workorderlineitemhistory.htm">WorkOrderLineItemHistory</a></strong><br>
+Represents the history of changes made to tracked fields 				on a work order line item. This object is available in API version 36.0 and 				later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workordershare.htm">WorkOrderShare</a></strong><br>
+Represents a sharing entry on a work order. This object 				is available in API 				version 36.0 and later.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workperformancecycle.htm">WorkPerformanceCycle</a></strong><br>
+Represents feedback that is gathered to assess the performance of a 			specific set of employees.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workperformancecyclefeed.htm">WorkPerformanceCycleFeed</a></strong><br>
+Represents a single feed item in the feed that is displayed on a Work.com Performance detail 			page.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workperformancecyclehistory.htm">WorkPerformanceCycleHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkPerformanceCycle object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workperformancecycleshare.htm">WorkPerformanceCycleShare</a></strong><br>
+Represents a sharing entry on a WorkPerformanceCycle object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workreward.htm">WorkReward</a></strong><br>
+Used to store reward codes tied to a Reward Fund. Reward Funds must 			have at least one WorkReward 		record.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfund.htm">WorkRewardFund</a></strong><br>
+Represents a Reward Fund and describes the Reward Fund 			attributes.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfundhistory.htm">WorkRewardFundHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a 				WorkRewardFund object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfundshare.htm">WorkRewardFundShare</a></strong><br>
+Share records for WorkRewardFund.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfundtype.htm">WorkRewardFundType</a></strong><br>
+Represents the type of WorkRewardFund    object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfundtypehistory.htm">WorkRewardFundTypeHistory</a></strong><br>
+Represents the history of changes to the values in the fields of a WorkRewardFundType object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardfundtypeshare.htm">WorkRewardFundTypeShare</a></strong><br>
+Represents a sharing entry on a WorkRewardFundType.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardhistory.htm">WorkRewardHistory</a></strong><br>
+Represents the history of changes to the fields of a WorkReward.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workrewardshare.htm">WorkRewardShare</a></strong><br>
+Share records for WorkReward object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workthanks.htm">WorkThanks</a></strong><br>
+Represents the source and message of a thanks post.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/sforce_api_objects_workthanksshare.htm">WorkThanksShare</a></strong><br>
+Share records for WorkThanks object.</li>
+<li class="link ulchildlink">
+<strong><a href="atlas.en-us.api.meta/api/api_objects_resource.htm">Reusable Terms for API Objects</a></strong><br>
+</li>
+</ul>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

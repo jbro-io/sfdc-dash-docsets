@@ -1,0 +1,272 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LinkedArticle | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_LinkedArticle"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LinkedArticle</span></h1><div class="body refbody">
+<div class="shortdesc">Represents a Knowledge article that is attached to a record. This object is available in API version 37.0 and
+                    later.</div>
+<div class="section">
+<p class="p"><span class="ph" id="spring16"><a name="spring16"><!-- --></a>As of Spring ’16, linked articles are supported only for work orders and work
+					order line items.</span></p>
+</div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+			
+		</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">Knowledge must be set up in your org.</p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d471938e126">Field Name</th>
+
+								<th class="featureTableHeader  " id="d471938e129">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Available only for orgs with the multicurrency feature
+											enabled. Contains the ISO code for any currency allowed
+											by the organization.</dd>
+
+									
+								</dl>
+
+							</td>
+
+								</tr>
+
+						<tr>
+							<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/KnowledgeArticleId" class="dashAnchor"></a><span class="keyword parmname">KnowledgeArticleId</span></td>
+
+							<td class="entry" headers="d471938e129" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The ID of the Knowledge article attached to the record.
+											The label in the user interface is Knowledge Article
+											ID.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/KnowledgeArticleVersionId" class="dashAnchor"></a><span class="keyword parmname">KnowledgeArticleVersionId</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The version of the Knowledge article attached to the record. This field lists the
+											title of the attached version and links to the version.
+											The label in the user interface is Article
+												Version.<p class="p">When you attach an article to a work
+												order, that version of the article stays associated
+												with the work order, even if later versions are
+												published. If needed, you can detach and reattach an
+												article to a work order to link the latest
+												version.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/LinkedEntityId" class="dashAnchor"></a><span class="keyword parmname">LinkedEntityId</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+									
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The ID of the record that the Knowledge article is attached to. The label in the
+											user interface is Linked Record ID.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The title of the article. The label in the user interface is Article Title.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a><span class="keyword parmname">RecordTypeId</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The ID of the article’s record type, if used.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d471938e126" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+									<td class="entry" headers="d471938e129" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">(Read only) The type of record that the Knowledge article is attached to. For
+											example, work order. The label in the user interface is
+											Linked Object Type.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+						</tbody>
+
+					</table></div>
+</div>
+
+			<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			<p class="p">Admins can customize linked articles’ page layouts, fields, validation rules, and more from
+				the Linked Articles node in Setup under Knowledge.</p>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

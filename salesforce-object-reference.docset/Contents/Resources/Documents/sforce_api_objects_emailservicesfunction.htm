@@ -1,0 +1,685 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>EmailServicesFunction | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_emailservicesfunction"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>EmailServicesFunction</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>An email service.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d337835e104">Field</th>
+
+<th class="featureTableHeader  " id="d337835e107">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/AddressInactiveAction" class="dashAnchor"></a><span class="keyword parmname" id="EsAddressInactiveAction"><a name="EsAddressInactiveAction"><!-- --></a>AddressInactiveAction</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group,
+            Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates what the email service does with messages received at
+an email address that is inactive.<div class="p">One
+of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The system default
+is used.</li>
+
+<li class="li" id="d221767e135-d221767e951">
+<a name="d221767e135-d221767e951"><!-- --></a><samp class="codeph nolang">1</samp>—The
+email service returns the message to the sender with a notification
+that explains why the message was rejected.</li>
+
+<li class="li" id="d221767e135-d221767e956">
+<a name="d221767e135-d221767e956"><!-- --></a><samp class="codeph nolang">2</samp>—The
+email service deletes the message without notifying the sender.</li>
+
+<li class="li" id="d221767e135-d221767e961">
+<a name="d221767e135-d221767e961"><!-- --></a><samp class="codeph nolang">3</samp>—The
+email service queues the message for processing in the next 24 hours.
+If the message is not processed within 24 hours, the email service
+returns the message to the sender with a notification that explains
+why the message was rejected.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/ApexClassId" class="dashAnchor"></a><span class="keyword parmname" id="ApexClassId"><a name="ApexClassId"><!-- --></a>ApexClassId</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. The ID of the Apex class that the email service uses to process inbound messages.<p class="p">This field is required for API version
+12.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/AttachmentOption" class="dashAnchor"></a><span class="keyword parmname">AttachmentOption</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the types of attachments the email service accepts.
+One of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The email service
+accepts the message but discards any attachment.</li>
+
+<li class="li">
+<samp class="codeph nolang">1</samp>—The email service
+only accepts the following types of attachments:<ul class="ul bulletList">
+<li class="li">Attachments with a Multipurpose Internet Mail Extension (MIME)
+type of text.</li>
+
+<li class="li">Attachments with a MIME type of application/octet-stream and a
+file name that ends with either a .vcf or .vcs extension. These are
+saved as text/x-vcard and text/calendar MIME types, respectively.</li>
+
+</ul>
+</li>
+
+<li class="li">
+<samp class="codeph nolang">2</samp>—The email service
+only accepts binary attachments, such as image, audio, application,
+and video files.</li>
+
+<li class="li">
+<samp class="codeph nolang">3</samp>—The email service
+accepts any type of attachment.</li>
+
+</ul>
+  </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/AuthenticationFailureAction" class="dashAnchor"></a><span class="keyword parmname" id="EsAuthenticationFailureAction"><a name="EsAuthenticationFailureAction"><!-- --></a>AuthenticationFailureAction</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group,
+            Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsAuthenticationRequired" class="dashAnchor"></a>Indicates what the email service does with messages that fail
+or do not support any of the authentication protocols if the <span class="keyword parmname">IsAuthenticationRequired</span> field is true. <div class="p">One
+of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The system default
+is used.</li>
+
+<li class="li" id="d221767e327-d221767e951">
+<a name="d221767e327-d221767e951"><!-- --></a><samp class="codeph nolang">1</samp>—The
+email service returns the message to the sender with a notification
+that explains why the message was rejected.</li>
+
+<li class="li" id="d221767e327-d221767e956">
+<a name="d221767e327-d221767e956"><!-- --></a><samp class="codeph nolang">2</samp>—The
+email service deletes the message without notifying the sender.</li>
+
+<li class="li" id="d221767e327-d221767e961">
+<a name="d221767e327-d221767e961"><!-- --></a><samp class="codeph nolang">3</samp>—The
+email service queues the message for processing in the next 24 hours.
+If the message is not processed within 24 hours, the email service
+returns the message to the sender with a notification that explains
+why the message was rejected.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/AuthorizationFailureAction" class="dashAnchor"></a><span class="keyword parmname" id="EsAuthorizationFailureAction"><a name="EsAuthorizationFailureAction"><!-- --></a>AuthorizationFailureAction</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Group,
+            Sort,
+            Create, Filter, Nillable, Restricted picklist, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AuthorizedSenders" class="dashAnchor"></a>Indicates what the email service does with messages received from
+senders who are not listed in the <span class="keyword parmname">AuthorizedSenders</span> field on either the email service or email service address.<div class="p">One
+of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The system default
+is used.</li>
+
+<li class="li" id="d221767e383-d221767e951">
+<a name="d221767e383-d221767e951"><!-- --></a><samp class="codeph nolang">1</samp>—The
+email service returns the message to the sender with a notification
+that explains why the message was rejected.</li>
+
+<li class="li" id="d221767e383-d221767e956">
+<a name="d221767e383-d221767e956"><!-- --></a><samp class="codeph nolang">2</samp>—The
+email service deletes the message without notifying the sender.</li>
+
+<li class="li" id="d221767e383-d221767e961">
+<a name="d221767e383-d221767e961"><!-- --></a><samp class="codeph nolang">3</samp>—The
+email service queues the message for processing in the next 24 hours.
+If the message is not processed within 24 hours, the email service
+returns the message to the sender with a notification that explains
+why the message was rejected.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/AuthorizedSenders" class="dashAnchor"></a><span class="keyword parmname" id="EsAuthorizedSenders"><a name="EsAuthorizedSenders"><!-- --></a>AuthorizedSenders</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AuthorizationFailureAction" class="dashAnchor"></a>Configures the email service to only accept messages from the
+email addresses or domains listed in this field. If the email service
+receives a message from an unlisted email address or domain, the email
+service performs the action specified in the <span class="keyword parmname">AuthorizationFailureAction</span> field. Leave this field blank if you want the email service
+to receive email from any email address.  </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/ErrorRoutingAddress" class="dashAnchor"></a><span class="keyword parmname" id="ErrorRoutingAddress"><a name="ErrorRoutingAddress"><!-- --></a>ErrorRoutingAddress</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/IsErrorRoutingEnabled" class="dashAnchor"></a>The destination email address for error notification email messages
+when <span class="keyword parmname">IsErrorRoutingEnabled</span> is <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/FunctionInactiveAction" class="dashAnchor"></a><span class="keyword parmname" id="EsFunctionInactiveAction"><a name="EsFunctionInactiveAction"><!-- --></a>FunctionInactiveAction</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates what the email service does with messages it receives
+when the email service itself is inactive. <div class="p">One
+of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The system default
+is used.</li>
+
+<li class="li" id="d221767e535-d221767e951">
+<a name="d221767e535-d221767e951"><!-- --></a><samp class="codeph nolang">1</samp>—The
+email service returns the message to the sender with a notification
+that explains why the message was rejected.</li>
+
+<li class="li" id="d221767e535-d221767e956">
+<a name="d221767e535-d221767e956"><!-- --></a><samp class="codeph nolang">2</samp>—The
+email service deletes the message without notifying the sender.</li>
+
+<li class="li" id="d221767e535-d221767e961">
+<a name="d221767e535-d221767e961"><!-- --></a><samp class="codeph nolang">3</samp>—The
+email service queues the message for processing in the next 24 hours.
+If the message is not processed within 24 hours, the email service
+returns the message to the sender with a notification that explains
+why the message was rejected.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/FunctionName" class="dashAnchor"></a><span class="keyword parmname">FunctionName</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the email service.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether this object is active (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsAuthenticationRequired" class="dashAnchor"></a><span class="keyword parmname" id="EsIsAuthenticationRequired"><a name="EsIsAuthenticationRequired"><!-- --></a>IsAuthenticationRequired</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AuthenticationFailureAction" class="dashAnchor"></a>Configures the email service to verify the legitimacy of the sending
+server before processing a message. The email service uses the SPF,
+SenderId, and DomainKeys protocols to verify the sender's legitimacy:
+If the sending server passes at least one of these protocols and does
+not fail any, the email service accepts the email. If the server fails
+a protocol or does not support any of the protocols, the email service
+performs the action specified in the <span class="keyword parmname">AuthenticationFailureAction</span> field. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsErrorRoutingEnabled" class="dashAnchor"></a><span class="keyword parmname" id="IsErrorRoutingEnabled"><a name="IsErrorRoutingEnabled"><!-- --></a>IsErrorRoutingEnabled</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When incoming email messages can’t be processed, indicates
+whether error notification email messages are routed to a chosen address
+or to the senders.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsTextAttachmentsAsBinary" class="dashAnchor"></a><span class="keyword parmname" id="IsTextAttachmentsAsBinary"><a name="IsTextAttachmentsAsBinary"><!-- --></a>IsTextAttachmentsAsBinary</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the email service converts text attachments
+to binary files.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsTextTruncated" class="dashAnchor"></a><span class="keyword parmname" id="istruncated"><a name="istruncated"><!-- --></a>IsTextTruncated</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">This field is deprecated. It is not available as of API version
+23.0 and is deprecated and hidden in versions 17.0 through 22.0. In
+all API versions, the email service now accepts inbound email messages
+up to the 10 MB size limit, without truncating the text. Previously,
+it indicated whether the email service truncated and accepted email
+messages with HTML body text, plain body text, and text attachments
+over approximately 100,000 characters (<samp class="codeph nolang">true</samp>) or rejected these email messages and notified the
+sender (<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/IsTlsRequired" class="dashAnchor"></a><span class="keyword parmname" id="EsIsTlsRequired"><a name="EsIsTlsRequired"><!-- --></a>IsTlsRequired</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Configures the email service to use Transport Layer Security (TLS),
+a protocol for secure email communication, to ensure the security
+and authenticity of inbound email.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d337835e104" data-title="Field"><a name="//apple_ref/cpp/Field/OverLimitAction" class="dashAnchor"></a><span class="keyword parmname" id="EsOverLimitAction"><a name="EsOverLimitAction"><!-- --></a>OverLimitAction</span></td>
+
+<td class="entry" headers="d337835e107" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group,
+            Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates what the email service does with messages if the total
+number of messages processed by all email services combined has reached
+the daily limit for your organization.<div class="p" id="EsPossibleActions">
+<a name="EsPossibleActions"><!-- --></a>One
+of the following values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">0</samp>—The system default
+is used.</li>
+
+<li class="li" id="EsBounceMessage">
+<a name="EsBounceMessage"><!-- --></a><samp class="codeph nolang">1</samp>—The
+email service returns the message to the sender with a notification
+that explains why the message was rejected.</li>
+
+<li class="li" id="EsDiscardMessage">
+<a name="EsDiscardMessage"><!-- --></a><samp class="codeph nolang">2</samp>—The
+email service deletes the message without notifying the sender.</li>
+
+<li class="li" id="EsRequeueMessage">
+<a name="EsRequeueMessage"><!-- --></a><samp class="codeph nolang">3</samp>—The
+email service queues the message for processing in the next 24 hours.
+If the message is not processed within 24 hours, the email service
+returns the message to the sender with a notification that explains
+why the message was rejected.</li>
+
+</ul>
+</div>
+<p class="p">The system calculates the limit by multiplying the number
+of user licenses by 1,000.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">This object supports the email services
+feature, which allows you to create automated processes that use Apex classes to process the contents, headers, and attachments of inbound
+email. For example, you can create an email service that automatically
+creates contact records based on contact information in messages.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_emailservicesaddress.htm" title="An email service address.">EmailServicesAddress</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

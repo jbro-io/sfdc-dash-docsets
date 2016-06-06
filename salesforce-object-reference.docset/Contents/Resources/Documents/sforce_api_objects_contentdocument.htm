@@ -1,0 +1,746 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContentDocument | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contentdocument"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContentDocument</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a document that has been uploaded to a library in Salesforce CRM Content or Salesforce Files.This object is
+      available in API versions 17.0
+      and later for Salesforce CRM Content. <span class="ph" id="ContentDocumentVersion"><a name="ContentDocumentVersion"><!-- --></a>This object is available in API version 21.0 and later for
+          Salesforce Files.</span></span></div>
+
+<div class="p">The maximum number of documents that can be published is 2,000,000. Archived
+      files count towards this limit and towards storage usage limits.<ul class="ul bulletList">
+        <li class="li">Contact Manager, Group, Professional, Enterprise, Unlimited, and Performance Edition customers can
+          publish a maximum of 36,000 new
+          versions per 24–hour period.</li>
+
+        <li class="li">Developer Edition and trial users can publish a maximum of 2,500 new versions
+          per 24–hour period.</li>
+
+      </ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access
+Rules</h2>
+<ul class="ul bulletList">
+<li class="li">Customer and Partner Portal users must have the “View Content
+in Portal” permission in order to query content in libraries
+where they have access.</li>
+
+<li class="li" id="users_query_files_access">
+<a name="users_query_files_access"><!-- --></a>Users (including users with
+the “View All Data” permission) can only query files
+they have access to, including:<ul class="ul bulletList">
+<li class="li"> All Salesforce CRM Content files in libraries they're a member of and in their personal
+library, regardless of library permissions (API version
+17.0 and later).</li>
+
+<li class="li">All Salesforce Files they own, posted on
+              their profile, posted on groups they can see, and shared directly with them (API version 21.0 and
+              later).</li>
+
+</ul>
+</li>
+
+<li class="li">A Salesforce CRM Content document can be deleted if any of the following are true:<ul class="ul bulletList">
+<li class="li">The document is published into a personal library or is in the
+user's upload queue.</li>
+
+<li class="li">The document is published into a public library, the user is a
+member of that library with the “Add Content” library
+privilege enabled, and the user trying to delete the document is the
+owner.</li>
+
+<li class="li">The document is published into a public library that has the “Delete
+Content” or “Manage Library” permission enabled,
+and the user trying to delete the document is not the owner.</li>
+
+</ul>
+</li>
+
+</ul>
+<div class="p">For API version 25.0 and later, you
+        can change ownership of  Salesforce Files and Salesforce CRM Content documents. <a name="version_25_caveats"><!-- --></a><ul class="ul bulletList" id="version_25_caveats">
+          <li class="li">The following must be true to change ownership of a Salesforce CRM Content document:<ul class="ul bulletList">
+              <li class="li">The Salesforce CRM Content app must be
+                enabled.</li>
+
+              <li class="li">The user who is becoming the owner of the document must have a Salesforce CRM Content feature license.</li>
+
+            </ul>
+</li>
+
+          <li class="li">A user can change ownership of a Salesforce CRM Content document or Salesforce
+            file if any of the following are true:<ul class="ul bulletList">
+              <li class="li">The user is the current owner, or has either the “Modify All Data”
+                or "Manage Salesforce CRM Content”
+                permission enabled.</li>
+
+              <li class="li">The user has the “Manage Library” permission enabled for the library
+                containing the document.</li>
+
+            </ul>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+              </p><ul class="ul bulletList">
+                <li class="li">The user who is becoming the owner of the document must be a visible user who is
+                  active, but the original owner can be inactive.</li>
+
+                <li class="li">A document's owner can be changed to a user who doesn’t have access to
+                  the library that contains the document. Library administrators may need to give
+                  the new owner membership to the library.</li>
+
+              </ul>
+
+            <p></p>
+</div>
+</div></div></div></div>
+</li>
+
+        </ul>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d252007e255">Field</th>
+
+<th class="featureTableHeader  " id="d252007e258">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/ArchivedById" class="dashAnchor"></a><span class="keyword parmname">ArchivedById</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the user who archived the document.<p class="p">This field is
+available in API version
+24.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/ArchivedDate" class="dashAnchor"></a><span class="keyword parmname">ArchivedDate</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date when the document was archived.<p class="p">This field is available
+in API version 24.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><span class="keyword parmname" id="ContentModifiedDateField"><a name="ContentModifiedDateField"><!-- --></a>ContentModifiedDate</span></td>
+
+       <td class="entry" headers="d252007e258" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date the document was modified.<p class="p"><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentModifiedDate" class="dashAnchor"></a><span class="keyword parmname">ContentModifiedDate</span> updates when,
+            for example, the document is renamed or a new document version is uploaded. When you’re
+            uploading the first version of a document, <span class="keyword parmname">ContentModifiedDate</span> can be set to
+            the current time or any time in the past.</p>
+<p class="p">This field is available in API version 32.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname">ContentSize</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">The size of the document in bytes.</p>
+<p class="p">This field is available
+in API version 31.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">A description of the document.</p>
+<p class="p">This field is available
+in API version 31.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/Division" class="dashAnchor"></a><span class="keyword parmname">Division</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group,
+                        Restricted picklist,
+                        Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A logical segment of your organization's data. For example, if your
+   company is organized into different business units, you could create a division for each business
+   unit, such as “North America,” “Healthcare,” or
+   “Consulting.” Available only if the organization has the Division permission
+   enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/FileExtension" class="dashAnchor"></a><span class="keyword parmname">FileExtension</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">File extension of the document.</p>
+<p class="p">This field is available
+in API version 31.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/FileType" class="dashAnchor"></a><span class="keyword parmname">FileType</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">Type of document, determined by the file extension.</p>
+<p class="p">This
+field is available in API version
+31.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/IsArchived" class="dashAnchor"></a><span class="keyword parmname">IsArchived</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the document has been archived (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/LatestPublishedVersionId" class="dashAnchor"></a><span class="keyword parmname">LatestPublishedVersionId</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the latest document version.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname" id="OwnerIdField"><a name="OwnerIdField"><!-- --></a>OwnerId</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the owner of this document.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname" id="ParentId-0A135AFF"><a name="ParentId-0A135AFF"><!-- --></a>ParentId</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the library that owns the document. Created automatically when inserting a ContentVersion via the API
+                      for the first time.<p class="p">This field is available in API version 24.0
+                        and later when Salesforce CRM Content is
+                        enabled.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/PublishStatus" class="dashAnchor"></a><span class="keyword parmname" id="PublishStatusField"><a name="PublishStatusField"><!-- --></a>PublishStatus</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<div class="p" id="PublishStatusDescription">
+<a name="PublishStatusDescription"><!-- --></a>Indicates if and how the document
+is published. Valid values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">P</samp>—The document is
+published to a public library and is visible to other users. Label
+is <strong class="ph b">Public</strong>.</li>
+
+<li class="li">
+<samp class="codeph nolang">R</samp>—The document is
+published to a personal library and is not visible to other users.
+Label is <strong class="ph b">Personal Library</strong>.</li>
+
+<li class="li">
+<samp class="codeph nolang">U</samp>—The document is
+not published because publishing was interrupted. Label is <strong class="ph b"><span class="ph" id="option_upload_interrupted"><a name="option_upload_interrupted"><!-- --></a>Upload Interrupted</span></strong>.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+            <tr>
+              <td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/SharingOption" class="dashAnchor"></a>
+                <span class="keyword parmname">SharingOption</span>
+              </td>
+
+              <td class="entry" headers="d252007e258" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd">
+                      picklist
+                    </dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">Create,
+                        Defaulted on create, Filter, Group,
+                        Restricted picklist, Sort, Update</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Restricted" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Allowed" class="dashAnchor"></a>Controls whether or not sharing is frozen for a file. Only administrators
+                      and file owners with Collaborator access to the file can modify this field.
+                      Default is <span class="keyword parmname">Allowed</span>, which means that new shares are
+                      allowed. When set to <span class="keyword parmname">Restricted</span>, new shares are prevented
+                      without affecting existing shares.<p class="p">This field is available in API versions 35.0
+                        and later.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+<tr>
+<td class="entry" headers="d252007e255" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d252007e258" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p" id="TitleDef"><a name="TitleDef"><!-- --></a>The title of a document.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+        <li class="li">Use this object to <span class="ph" id="content_document_actions"><a name="content_document_actions"><!-- --></a>retrieve, query, update, and delete
+            the latest version of a document, but not a content pack, in a library or a Salesforce
+            file </span>. Use the ContentVersion object to create, query, retrieve, search, edit,
+      and update a specific version of a Salesforce CRM Content document or Salesforce
+     file.</li>
+
+        <li class="li">The <samp class="codeph nolang">query()</samp> call doesn’t return archived documents. The <samp class="codeph nolang">queryAll()</samp>
+          call returns archived documents.</li>
+
+        <li class="li">You can’t add new versions of archived documents.</li>
+
+        <li class="li"><span class="ph" id="files_only_on_records"><a name="files_only_on_records"><!-- --></a>To query a file that is shared only with a record, you
+            must specify the content ID of the file.</span></li>
+
+        <li class="li">To create a document, create a new version via the ContentVersion object without setting the <span class="keyword parmname">ContentDocumentId</span>. This automatically creates a parent document record. When adding a new version of the
+          document, you must specify an existing <span class="keyword parmname">ContentDocumentId</span> which initiates the revision process for the document. When the latest version is
+          published, the title, owner, and publish status fields are updated in the document.</li>
+
+        <li class="li">When you delete a document, all versions of that document are deleted, including
+          ratings, comments, and tags.</li>
+
+        <li class="li">You can't create, edit, or delete content packs via the API.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Content metadata,
+            such as tags, custom fields, and content owners are tracked at the version level rather
+            than at the document level.</p>
+</div>
+</div></div></div></div>
+</li>
+
+        <li class="li">If you query versions in the API, versions with a <span class="keyword parmname">PublishStatus</span> of <samp class="codeph nolang">Upload Interrupted</samp> are not returned.</li>
+
+        <li class="li">A document record is a container for multiple version records. You create a new version
+          to add a document to the system. The new version contains the actual file data which
+          allows the document to have multiple versions. The version stores the body of the uploaded
+          document.</li>
+
+        <li class="li">Assign topics to ContentDocument using <span class="keyword parmname">TopicAssignment</span> in API
+          version 37.0 or later.</li>
+
+      </ul>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumentfeed.htm" title="Represents a single feed item associated with ContentDocument. A content document feed shows these content document changes: creating a ContentDocument file and uploading a new ContentDocument. This object is available in versions 20.0 and later.">ContentDocumentFeed</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumenthistory.htm" title="Represents the history of a document. This object is available in versions 17.0 and later.">ContentDocumentHistory</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contentversion.htm" title="Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available in versions 17.0 and later for Salesforce CRM Content documents. This object is available in versions 20.0 and later for Salesforce Files.">ContentVersion</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

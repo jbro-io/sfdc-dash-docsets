@@ -1,0 +1,701 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SamlSsoConfig | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_samlssoconfig"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SamlSsoConfig</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a SAML Single Sign-On configuration.
+				This object is available in API version 32.0 and
+				later.</span></span></div>
+
+		<div class="section">
+<p class="p">Single sign-on is a process that allows network users to access all authorized network resources
+				without having to log in separately to each resource. Single sign-on allows you to
+				validate usernames and passwords against your corporate user database or other
+				client application rather than having separate user passwords managed by Salesforce.</p>
+</div>
+
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d652824e94">Field Name</th>
+
+							<th class="featureTableHeader  " id="d652824e97">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/AttributeFormat" class="dashAnchor"></a><span class="keyword parmname">AttributeFormat</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/identityLocation" class="dashAnchor"></a>For SAML 2.0 only and when <span class="keyword parmname">identityLocation</span> is set to <samp class="codeph nolang">Attribute</samp>. Possible
+values include <samp class="codeph nolang">unspecified</samp>, <samp class="codeph nolang">emailAddress</samp> or <samp class="codeph nolang">persistent</samp>. All legal values can be found in the “Name
+Identifier Format Identifiers” section of the <a class="xref" href="http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf" target="_blank" title="Adobe Acrobat PDF (New Window)">Assertions and Protocols SAML
+2.0 specification</a>.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/AttributeName" class="dashAnchor"></a><span class="keyword parmname">AttributeName</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The name of the identity provider’s application. Get this name value from your
+											identity provider.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/Audience" class="dashAnchor"></a><span class="keyword parmname">Audience</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<p class="p">The Issuer, also called the “Entity ID.” The value is a URL that uniquely identifies the SAML
+												identity provider.</p>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/DeveloperName" class="dashAnchor"></a><span class="keyword parmname">DeveloperName</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The unique name of the object in the API. This name can contain only underscores and alphanumeric
+          characters, and must be unique in your org. It must begin with a letter, not include
+          spaces, not end with an underscore, and not contain two consecutive underscores. In managed packages, this field prevents naming
+											conflicts on package installations. With this field, a
+											developer can change the object’s name in a
+											managed package, and the changes are reflected in a
+											subscriber’s organization.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/ErrorUrl" class="dashAnchor"></a><span class="keyword parmname">ErrorUrl</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The URL of the page users should
+         be directed to if there’s an error during SAML login. It must
+         be a publicly accessible page, such as a public site Visualforce page. The
+         URL can be absolute or relative.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExecutionUserID" class="dashAnchor"></a><span class="keyword parmname">ExecutionUserID</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The user that runs the Apex handler class. The user must have the
+												“Manage Users” permission. A user is
+												required if you specify a SAML JIT handler
+												class.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/IdentityLocation" class="dashAnchor"></a><span class="keyword parmname">IdentityLocation</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The location in the assertion where a user is identified. Valid values are:<ul class="ul bulletList">
+												<li class="li">
+<samp class="codeph nolang">SubjectNameId</samp>—The identity is in
+												the <samp class="codeph nolang">&lt;Subject&gt;</samp> statement of the
+												assertion.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Attribute</samp>—The identity is
+												specified in an <samp class="codeph nolang">&lt;AttributeValue&gt;</samp>, located in the
+												<samp class="codeph nolang">&lt;Attribute&gt;</samp> of the assertion.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/IdentityMapping" class="dashAnchor"></a><span class="keyword parmname">IdentityMapping</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The identifier that the service provider uses for the user during Just-in-Time user provisioning. Valid values are:<ul class="ul bulletList">
+												<li class="li">
+<samp class="codeph nolang">Username</samp>—The user’s Salesforce username.</li>
+
+												<li class="li">
+<samp class="codeph nolang">FederationId</samp>—The federation ID
+												from the user object; the identifier that’s used
+												by the service provider for the user.</li>
+
+												<li class="li">
+<samp class="codeph nolang">UserId</samp>—The user ID from the
+												user’s Salesforce organization.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/Issuer" class="dashAnchor"></a><span class="keyword parmname">Issuer</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, idLookup, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Also called the “Entity ID.” The value is a URL that uniquely identifies the SAML
+											identity provider.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/Language" class="dashAnchor"></a><span class="keyword parmname">Language</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<p class="p">The language for the organization.</p>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/LoginUrl" class="dashAnchor"></a><span class="keyword parmname">LoginUrl</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">For SAML 2.0 only: The URL where Salesforce sends a SAML request to start the login
+											sequence.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/LogoutUrl" class="dashAnchor"></a><span class="keyword parmname">LogoutUrl</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">For SAML 2.0 only: The URL to direct users to where they click the Logout link. The
+											default is <span class="ph filepath">http://www.salesforce.com</span>.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<p class="p">The text that’s used to identify the Visualforce page in the Setup area of Salesforce.</p>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <p class="p">The namespace prefix can have one of the following values:</p>
+<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsSpInitBinding" class="dashAnchor"></a><span class="keyword parmname">OptionsSpInitBinding</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<p class="p">The service provider initiated request binding, either HTTP Redirect (<samp class="codeph nolang">true</samp>) or HTTP POST (<samp class="codeph nolang">false</samp>).</p>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsUserProvisioning" class="dashAnchor"></a><span class="keyword parmname">OptionsUserProvisioning</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/identityMapping" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, Just-in-Time user provisioning is
+											enabled, which creates users on the fly the first time
+											that they try to log in. Specify <samp class="codeph nolang">Federation ID</samp> for the <span class="keyword parmname">identityMapping</span> value to use this
+											feature.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/RequestSignatureMethod" class="dashAnchor"></a><span class="keyword parmname">RequestSignatureMethod</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The method that’s used to sign the SAML request. Valid values are:<ul class="ul bulletList">
+												<li class="li"><samp class="codeph nolang">RSA-SHA1</samp></li>
+
+												<li class="li"><samp class="codeph nolang">RSA-SHA256</samp></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/SamlJitHandlerId" class="dashAnchor"></a><span class="keyword parmname">SamlJitHandlerId</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">The name of an existing Apex class that implements the <samp class="codeph nolang">Auth.SamlJitHandler</samp> interface.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/ValidationCert" class="dashAnchor"></a><span class="keyword parmname">ValidationCert</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The certificate that’s used to validate the request. Get this certificate value from
+											your identity provider.</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d652824e94" data-title="Field Name"><a name="//apple_ref/cpp/Field/Version" class="dashAnchor"></a><span class="keyword parmname">Version</span></td>
+
+							<td class="entry" headers="d652824e97" data-title="Details">
+<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The SAML version. Valid values are:<ul class="ul bulletList">
+												<li class="li"><samp class="codeph nolang">SAML1_1</samp></li>
+
+												<li class="li"><samp class="codeph nolang">SAML2_2</samp></li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>BackgroundOperationResult | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_backgroundoperationresult"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>BackgroundOperationResult</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Stores error messages generated when running Async SOQL queries or
+   importing data into BigObjects using Bulk API. <span class="ph" id="api_version"><a name="api_version"><!-- --></a>This is a BigObject,
+    available in API version 37.0 and later.</span></span></div>
+
+  <div class="p">Each instance of <samp class="codeph nolang">BackgroundOperationResult</samp> represents one
+   error. The <samp class="codeph nolang">Message</samp> field stores the text of the error
+   message. The <samp class="codeph nolang">ParentID</samp> field stores the:<ul class="ul bulletList">
+    <li class="li">job ID of the query, in case of Async SOQL</li>
+
+    <li class="li">batch ID for the data import, in case of Bulk API</li>
+
+   </ul>
+</div>
+
+  <div class="p">Bulk API validates data at the time of import, and generates an error message for the first
+   occurrence of invalid data in any row of the data file. The validation performed depends on the
+   type of data being imported. <ul class="ul bulletList">
+    <li class="li">
+<strong class="ph b">Text</strong>—The length of the input string must be less than or equal to the length
+     of the corresponding text field in the target object.</li>
+
+    <li class="li">
+<strong class="ph b">Number</strong>—The input data must be a number, whose scale and precision are
+     compatible with the corresponding number field in the target object.</li>
+
+    <li class="li">
+<strong class="ph b">ID—</strong>The input data must be a valid 15- or 18-character ID.</li>
+
+    <li class="li">
+<strong class="ph b">DateTime</strong>—The input data must be a valid dateTime value, in the approved
+     format.</li>
+
+    <li class="li">
+<strong class="ph b">Lookup</strong>—The lookup value must be a valid 15- or 18-character ID.</li>
+
+   </ul>
+</div>
+
+  <div class="section" id="fha_supported_calls">
+<a name="fha_supported_calls"><!-- --></a><h2 class="helpHead2">Supported Calls</h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp></p>
+
+  </div>
+
+  <div class="section" id="fha_fields">
+<a name="fha_fields"><!-- --></a><h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d188555e136">Field Name</th>
+
+       <th class="featureTableHeader  " id="d188555e139">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">CreatedById</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The user ID of the user initiating the Bulk API or Async SOQL request.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">CreatedDate</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time at which the Bulk API or Async SOQL request was made.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">Data</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The data that generated the error message. The total length is limited to 2,000
+           characters, and each column can occupy a maximum of 50 characters. Any data exceeding
+           those limits is truncated.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">Id</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, idLookup</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the error message.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">Message</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The text of the error message.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">MessageType</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable,
+            Restricted picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of error message. The possible values are: ERROR, WARNING, or INFO.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d188555e136" data-title="Field Name"><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d188555e139" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The batch ID, in case of Bulk API, or the job ID, in case of Async SOQL.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <div class="p">You can check for errors by querying the <samp class="codeph nolang">BackgroundOperationResult</samp> object. For example, this query returns details of all
+    errors in a data file imported using Bulk API, whose batch ID is <samp class="codeph nolang">751xx000000006OAAQ</samp>.<div class="codeSection soql"><div id="highlighter_271098" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_271098_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_271098" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT CreatedbyId, CreatedDate, Id, Message, MessageType, ParentId FROM BackgroundOperationResult WHERE ParentId = “751xx000000006OAAQ”</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+  </div>
+
+  <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>You can only view errors resulting from Async SOQL or Bulk API requests that you initiated,
+   unless you have the global permission to view all data. </p>
+</div>
+</div></div></div></div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

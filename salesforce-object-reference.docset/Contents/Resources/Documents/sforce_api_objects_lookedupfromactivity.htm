@@ -1,0 +1,978 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>LookedUpFromActivity | SOAP API Developer Guide | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_lookedupfromactivity"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>LookedUpFromActivity</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>This read-only object is displayed as a related list on an activity
+			record (an event or a task); the list contains records that have custom lookup
+			relationships from the activity to another object. This object is not
+		queryable.</span></div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d506470e80">Field Name</th>
+
+							<th class="featureTableHeader  " id="d506470e83">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the ID of the related account, which is
+											determined as follows:<ul class="ul bulletList">
+												<li class="li"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>The account associated with the
+												<span class="keyword parmname">WhatId</span>, if it exists; or</li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a>The account associated with the
+												<span class="keyword parmname">WhoId</span>, if it exists;
+												otherwise</li>
+
+												<li class="li"><samp class="codeph nolang">null</samp></li>
+
+											</ul>
+</dd>
+
+										<dd class="dd">For information on IDs, see <a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#field_types">Field Types</a>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a><span class="keyword parmname">ActivityDate</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">date</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates one of the following:<ul class="ul bulletList">
+												<li class="li">The due date of a task</li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>The date of an event if <span class="keyword parmname">IsAllDayEvent</span> is set to <samp class="codeph nolang">true</samp>
+</li>
+
+											</ul>
+</dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Date" class="dashAnchor"></a>This field has a time stamp that is always set to
+											midnight in the Universal Time Coordinated (UTC) time
+											zone. The time stamp doesn’t represent the time
+											of the activity; don’t attempt to alter it to
+											accommodate time zone differences. Label is
+												<span class="keyword parmname">Date</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActivitySubtype" class="dashAnchor"></a><span class="keyword parmname">ActivitySubtype</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">
+<a name="d315366e217-d315512e252"><!-- --></a>Description</dt>
+
+          <dd class="dd">
+<span class="ph" id="d315366e217-d315512e258"><a name="d315366e217-d315512e258"><!-- --></a>Provides standard subtypes to facilitate creating and
+            searching for specific activity subtypes. This field isn’t
+             updateable.</span><div class="p"><a name="//apple_ref/cpp/Field/ActivitySubtype" class="dashAnchor"></a>
+<span class="keyword parmname">ActivitySubtype</span> values:<ul class="ul bulletList">
+             <li class="li">Task</li>
+
+             <li class="li">Email</li>
+
+             <li class="li">Call</li>
+
+             <li class="li">Event</li>
+
+            </ul>
+</div>
+</dd>
+
+         
+        </dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/ActivityType" class="dashAnchor"></a><span class="keyword parmname">ActivityType</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>Represents one of the following values: <samp class="codeph nolang">Call</samp>, <samp class="codeph nolang">Meeting</samp>, or <samp class="codeph nolang">Other</samp>. Label is
+												<span class="keyword parmname">Type</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/CallDisposition" class="dashAnchor"></a><span class="keyword parmname">CallDisposition</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Represents the result of a given call; for example,
+											“we’ll call back,” or “call
+											unsuccessful.” Limit is 255 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/CallDurationInSeconds" class="dashAnchor"></a><span class="keyword parmname">CallDurationInSeconds</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Duration of the call in seconds.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/CallObject" class="dashAnchor"></a><span class="keyword parmname">CallObject</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Name of a call center. Limit is 255 characters.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/CallType" class="dashAnchor"></a><span class="keyword parmname">CallType</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The type of call being answered: Inbound, Internal, or
+											Outbound.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">textarea</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Nillable</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Contains a description of the event or task. Limit is 32
+											KB.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><span class="keyword parmname">DurationInMinutes</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the duration of the event or task.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><span class="keyword parmname">EndDateTime</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the end date and time of the event or task. Available in versions 27.0 and
+											later. This field is optional, depending on the
+												following:<a name="DurationConditions"><!-- --></a><ul class="ul bulletList" id="DurationConditions">
+												<li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is true, you can supply a value for either
+												<span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if
+												the values add up to the same amount of time. If
+												both fields are <samp class="codeph nolang">null</samp>, the duration defaults to one
+												day.</li>
+
+												<li class="li"><a name="//apple_ref/cpp/Field/EndDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/DurationInMinutes" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If <span class="keyword parmname">IsAllDayEvent</span> is false, a value must be supplied for either
+												<span class="keyword parmname">DurationInMinutes</span> or <span class="keyword parmname">EndDateTime</span>. Supplying values in both fields is allowed if
+												the values add up to the same amount of time.</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a><span class="keyword parmname">IsAllDayEvent</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/All-Day Event" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a>If the value of this field is
+											set to <samp class="codeph nolang">true</samp>, then
+											the activity is an event spanning a full day, and the
+												<span class="keyword parmname">ActivityDate</span> defines the date of the event. If the value of this
+											field is set to <samp class="codeph nolang">false</samp>, then the activity may be an event
+											spanning less than a full day, or it may be a task.
+											Label is <span class="keyword parmname">All-Day Event</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a><span class="keyword parmname">IsClosed</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Closed" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Indicates whether a task is closed; value is always
+												<samp class="codeph nolang">false</samp>. This
+											field is set indirectly by setting
+												<span class="keyword parmname">Status</span> on the task—each
+											picklist value has a corresponding <samp class="codeph nolang">IsClosed</samp> value. Label
+											is <span class="keyword parmname">Closed</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsHighPriority" class="dashAnchor"></a><span class="keyword parmname">IsHighPriority</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a>Indicates a high-priority task. This field is derived
+											from the <span class="keyword parmname">Priority</span> field.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><span class="keyword parmname">IsReminderSet</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates whether a reminder is set for an activity
+												(<samp class="codeph nolang">true</samp>) or not
+												(<samp class="codeph nolang">false</samp>).</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsTask" class="dashAnchor"></a><span class="keyword parmname">IsTask</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Task" class="dashAnchor"></a>If the value of this field is set to <samp class="codeph nolang">true</samp>, then the activity
+											is a task; if the value is set to <samp class="codeph nolang">false</samp>, then the
+											activity is an event. Label is
+											<span class="keyword parmname">Task</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a><span class="keyword parmname">IsVisibleInSelfService</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">boolean</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Visible in Self-Service" class="dashAnchor"></a>If the value of this field is set to <samp class="codeph nolang">true</samp>, then the activity
+											can be viewed in the self-service portal. Label is
+												<span class="keyword parmname">Visible in Self-Service</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/Location" class="dashAnchor"></a><span class="keyword parmname">Location</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">If the activity is an event, then this field represents the location of the event. If
+											the activity is a task, then the value is <samp class="codeph nolang">null</samp>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the ID of the user who owns the activity.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a><span class="keyword parmname">Priority</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the priority of a task, such as high, normal,
+											or low.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/ReminderDateTime" class="dashAnchor"></a><span class="keyword parmname">ReminderDateTime</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsReminderSet" class="dashAnchor"></a>Represents the time at which a reminder is scheduled to
+											fire if <span class="keyword parmname">IsReminderSet</span> is set to
+												<samp class="codeph nolang">true</samp>. If
+												<span class="keyword parmname">IsReminderSet</span> is set to <samp class="codeph nolang">false</samp>, then either the
+											user has deselected the reminder checkbox in the user
+											interface or the reminder has already fired at the time
+											indicated by the value.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><span class="keyword parmname">StartDateTime</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Indicates the start date and time of the event.
+											Available in versions 13.0 and later.</dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a>The <span class="keyword parmname">StartDateTime</span> field contains
+											the event start date. </dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>However, if the event’s <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">true</samp> (indicating an
+											all-day event), then the time stamp in the
+												<span class="keyword parmname">StartDateTime</span> field is always
+											set to midnight in the Coordinated Universal Time (UTC)
+											time zone. Don’t attempt to alter the time stamp to
+											account for any time zone differences.</dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/StartDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsAllDayEvent" class="dashAnchor"></a>If the event’s <span class="keyword parmname">IsAllDayEvent</span> flag is set to <samp class="codeph nolang">false</samp>, then you must
+											translate the time portion of the time stamp in the
+												<span class="keyword parmname">StartDateTime</span> field to or from
+											a local time zone for the user or the application, as
+											appropriate, and the translation must be in the
+											Coordinated Universal Time (UTC) time zone.</dd>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/ActivityDateTime" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ActivityDate" class="dashAnchor"></a>If this field has a value, then
+												<span class="keyword parmname">ActivityDate</span> and
+												<span class="keyword parmname">ActivityDateTime</span> either must be
+												<samp class="codeph nolang">null</samp> or must
+											match the value of this field.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Defaulted on create, Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a>Indicates the current status of a task, such as in progress or complete. Each
+											predefined status field sets a value for
+												<span class="keyword parmname">IsClosed</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/Subject" class="dashAnchor"></a><span class="keyword parmname">Subject</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">combobox</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Contains the subject of the task or event.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><span class="keyword parmname">WhatId</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Related To ID" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/WhatId" class="dashAnchor"></a>The <span class="keyword parmname">WhatId</span> represents nonhuman
+             objects such as accounts, opportunities, campaigns, cases, or custom objects.
+              <span class="keyword parmname">WhatId</span>s are polymorphic. Polymorphic means a
+              <span class="keyword parmname">WhatId</span> is equivalent to the ID of a related object. The label is
+              <span class="keyword parmname">Related To ID</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d506470e80" data-title="Field Name"><a name="//apple_ref/cpp/Field/WhoId" class="dashAnchor"></a><span class="keyword parmname">WhoId</span></td>
+
+							<td class="entry" headers="d506470e83" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Name ID" class="dashAnchor"></a>The WhoId represents a human such as a lead
+             or a contact. WhoIds are polymorphic. Polymorphic means a WhoId is equivalent to a
+             contact’s ID or a lead’s ID. The label is <span class="keyword parmname">Name ID</span>.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section" id="no_view_all_restrict">
+<a name="no_view_all_restrict"><!-- --></a><h2 class="helpHead2">Usage</h2>
+
+			
+			<dl class="dl detailList">
+				
+					<dt class="dt dlterm">Query activities related to an object</dt>
+
+					<dd class="dd">
+						<ol class="ol enumList">
+							<li class="li">Optionally, issue a describe call against the object whose
+								activities you wish to query, to get a suggestion of the correct SOQL
+								to use.</li>
+
+							<li class="li">Issue a SOQL relationship
+								query with a main clause that references the object, and an inner
+								clause that references the activity custom lookup relationship; for
+									example:<div class="codeSection nolang"><div id="highlighter_150304" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_150304_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_150304" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT id, name, </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">(SELECT id, subject from sponsoredact__r) </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM Contact</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">In
+									this example <var class="keyword varname">sponsoredact__r</var> is a user
+									defined relationship list.</p>
+</li>
+
+						</ol>
+
+						<p class="p">The user interface enforces sharing rules, filtering out related-list
+							items that a user doesn’t have permission to see.</p>
+
+						<div class="p">The following restrictions on users who don’t have “View
+							All Data” permission help prevent performance issues:<ul class="ul bulletList">
+								<li class="li">In the main clause of the relationship query, you can reference only one record. For
+									example, you can’t filter on all records where the
+									account name starts with ‘A’; instead, you must
+									reference a single account record.</li>
+
+								<li class="li">In the inner clause of the query, you can’t use <samp class="codeph soql">WHERE</samp>.</li>
+
+								<li class="li">In the inner clause of the query, you must specify a limit of
+									500 or fewer on the number of rows that are returned in the
+									list.</li>
+
+								<li class="li">You must sort on <span class="keyword parmname">ActivityDate</span> in descending
+									order and <span class="keyword parmname">LastModifiedDate</span> in descending
+									order; you can display nulls last. For example: <samp class="codeph soql">ORDER BY ActivityDate DESC NULLS LAST,
+										LastModifiedDate DESC</samp>.</li>
+
+							</ul>
+</div>
+
+					</dd>
+
+				
+			</dl>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

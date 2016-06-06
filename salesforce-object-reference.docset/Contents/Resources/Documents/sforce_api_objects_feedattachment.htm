@@ -1,0 +1,279 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FeedAttachment | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_FeedAttachment"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FeedAttachment</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="shortdesc"><a name="shortdesc"><!-- --></a>Represents an attachment to a feed item, such as a
+				file attachment or a link. Use FeedAttachment to add various
+				attachments to one feed item.</span>
+			<span class="ph" id="FeedAttachment_api_version"><a name="FeedAttachment_api_version"><!-- --></a>This object is available in API version 36.0 and
+				later.</span></span></div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			<ul class="ul bulletList">
+				<li class="li">You can read, create, update, or delete a FeedAttachment only if you have the
+					corresponding access to the associated FeedItem.</li>
+
+				<li class="li">Inline images aren’t creatable, updatable, or deletable through SOAP API.</li>
+
+			</ul>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d406863e120">Field Name</th>
+
+								<th class="featureTableHeader  " id="d406863e123">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+								<tr>
+									<td class="entry" headers="d406863e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/FeedEntityId" class="dashAnchor"></a><span class="keyword parmname" id="FeedEntityID"><a name="FeedEntityID"><!-- --></a>FeedEntityId</span></td>
+
+									<td class="entry" headers="d406863e123" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The ID of the associated feed entity that contains this attachment. Currently, the
+											only feed entity supported is FeedItem.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d406863e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/RecordId" class="dashAnchor"></a><span class="keyword parmname" id="RecordId"><a name="RecordId"><!-- --></a>RecordId</span></td>
+
+									<td class="entry" headers="d406863e123" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/RecordId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RecordId" class="dashAnchor"></a>The ID of the record that this feed attachment contains. For inline images,
+												<span class="keyword parmname">RecordId</span> is a ContentVersion ID. For content attachments,
+												<span class="keyword parmname">RecordId</span> is a ContentDocument ID.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d406863e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+									<td class="entry" headers="d406863e123" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>The title of this feed attachment. When <span class="keyword parmname">Type</span> is <samp class="codeph nolang">Link</samp>,
+												<span class="keyword parmname">Title</span> value is the label for
+											the attachment link. Otherwise,
+												<span class="keyword parmname">Title</span> value isn’t used.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d406863e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname" id="Type"><a name="Type"><!-- --></a>Type</span></td>
+
+									<td class="entry" headers="d406863e123" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Group, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The type of this feed attachment. Valid values are:<ul class="ul bulletList">
+												<li class="li">
+<samp class="codeph nolang">Content</samp>—A content
+												attachment.</li>
+
+												<li class="li">
+<samp class="codeph nolang">InlineImage</samp>—An inline image. The system
+												creates an inline image attachment when an image
+												is added to the body of the associated FeedItem. You can’t add an inline image directly by
+												using FeedAttachment.</li>
+
+												<li class="li">
+<samp class="codeph nolang">Link</samp>—A link.</li>
+
+											</ul>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d406863e120" data-title="Field Name"><a name="//apple_ref/cpp/Field/Value" class="dashAnchor"></a><span class="keyword parmname">Value</span></td>
+
+									<td class="entry" headers="d406863e123" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The string value of this FeedAttachment. This field is optional. If the feed
+											attachment is a Link FeedAttachment, the value is the
+											link URL string.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+						</tbody>
+
+					</table></div>
+</div>
+
+			<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			<ul class="ul bulletList">
+				<li class="li">You can only create one link attachment (FeedAttachment of type <samp class="codeph nolang">Link</samp>) per feed item.</li>
+
+				<li class="li">If the feed item type is one of the following, you can add content or link feed
+					attachments to a FeedItem.<ul class="ul bulletList">
+						<li class="li"><samp class="codeph nolang">AdvancedTextPost</samp></li>
+
+						<li class="li"><samp class="codeph nolang">TextPost</samp></li>
+
+						<li class="li"><samp class="codeph nolang">ContentPost</samp></li>
+
+						<li class="li"><samp class="codeph nolang">LinkPost</samp></li>
+
+						<li class="li"><samp class="codeph nolang">QuestionPost</samp></li>
+
+					</ul>
+</li>
+
+				<li class="li">When a FeedAttachment is added or removed from a feed item, Salesforce updates the
+					type of the feed item to its most appropriate value, as follows.<ul class="ul bulletList">
+						<li class="li">If all content feed attachments are removed from a feed item of type
+								<samp class="codeph nolang">ContentPost</samp>, the type of this feed item is updated to <samp class="codeph nolang">TextPost</samp>.</li>
+
+						<li class="li">Conversely, if a content feed attachment is added to a feed item of type
+								<samp class="codeph nolang">TextPost</samp>, the type of this feed item is updated to <samp class="codeph nolang">ContentPost</samp>.</li>
+
+						<li class="li">If all link feed attachments are removed from a feed item of type
+								<samp class="codeph nolang">LinkPost</samp>, the type of this feed item is updated to <samp class="codeph nolang">TextPost</samp>.</li>
+
+						<li class="li">Conversely, if a link feed attachment is added to a feed item of type
+								<samp class="codeph nolang">TextPost</samp>, the type of this feed item is updated to <samp class="codeph nolang">LinkPost</samp>.</li>
+
+						<li class="li">The type of all other feed items, such as <samp class="codeph nolang">QuestionPost</samp> or <samp class="codeph nolang">AdvancedTextPost</samp> feed items, doesn’t change when any feed attachments are added or
+							removed.</li>
+
+						<li class="li">If a content feed attachment is added to a feed item of type <samp class="codeph nolang">LinkPost</samp>, the feed item type is updated to <samp class="codeph nolang">ContentPost</samp>.</li>
+
+						<li class="li">If all content attachments are removed from a feed item of type <samp class="codeph nolang">ContentPost</samp>, but there's also a link attachment, the feed item type is updated to
+								<samp class="codeph nolang">LinkPost</samp>.</li>
+
+					</ul>
+</li>
+
+				<li class="li">Those without administrator privileges can’t retrieve a FeedAttachment by its ID in a
+					SOQL query. They can retrieve attachments by specifying the associated <span class="keyword parmname">FeedEntityId</span>, as
+					follows:<div class="codeSection soql"><div id="highlighter_606110" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_606110_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_606110" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id FROM FeedAttachment WHERE FeedEntityId = '<code class="italic">some_feedItem_id</code>'</code></td></tr></tbody></table></div></div></div></div>
+</li>
+
+				<li class="li">Alternatively, retrieve attachments by using a SOQL query on FeedItem with a subquery on the FeedAttachments child relationship, as
+					follows.<div class="codeSection soql"><div id="highlighter_655502" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_655502_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_655502" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Body, (SELECT RecordId, Title, Type, Value FROM FeedAttachments) </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM FeedItem </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE Id = '<code class="italic">some_feedItem_id</code>'</code></td></tr></tbody></table></div></div></div></div>
+</li>
+
+				<li class="li">FeedAttachment is not a triggerable object.
+					You can access feed attachments in FeedItem <em class="ph i">update</em> triggers by retrieving
+					them through a SOQL query. For a trigger example, and to learn about trigger
+					considerations for FeedAttachment, see <a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.apexcode.meta/apexcode/apex_triggers_fields_not_updated_chatter.htm" target="_blank">Triggers for Chatter Objects</a> in the <cite class="cite">Apex Developer Guide</cite>.</li>
+
+			</ul>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

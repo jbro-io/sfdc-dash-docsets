@@ -1,0 +1,1923 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Lead | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_lead"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Lead</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a prospect or potential Opportunity.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">merge()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d453404e124">Field</th>
+
+<th class="featureTableHeader  " id="d453404e127">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a><span class="keyword parmname">Address</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a>
+<span class="keyword parmname">AnnualRevenue</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Annual revenue for the company of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a>
+<span class="keyword parmname">City</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">City for the address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/CleanStatus" class="dashAnchor"></a><span class="keyword parmname" id="DataDotComCleanStatus"><a name="DataDotComCleanStatus"><!-- --></a>CleanStatus</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="DDCCleanDef"><a name="DDCCleanDef"><!-- --></a>Indicates the record’s clean status as compared with Data.com. Values are:
+                                                <samp class="ph systemoutput">Matched</samp>,
+                                                  <samp class="ph systemoutput">Different</samp>,
+                                                  <samp class="ph systemoutput">Acknowledged</samp>,
+                                                  <samp class="ph systemoutput">NotFound</samp>,
+                                                  <samp class="ph systemoutput">Inactive</samp>,
+                                                  <samp class="ph systemoutput">Pending</samp>,<samp class="ph systemoutput">
+                                                  SelectMatch</samp>, or
+                                                  <samp class="ph systemoutput">Skipped</samp></span>.<div class="p"><a name="//apple_ref/cpp/Field/CleanStatus" class="dashAnchor"></a>Several
+                                                values for <span class="keyword parmname">CleanStatus</span> display
+                                                with different labels on the lead record detail
+                                                page. <ul class="ul bulletList">
+                                                  <li class="li">
+<samp class="ph systemoutput">Matched</samp> displays
+                                                  as <samp class="ph systemoutput">In Sync</samp>
+</li>
+
+                                                  <li class="li">
+<samp class="ph systemoutput">Acknowledged</samp>
+                                                  displays as
+                                                  <samp class="ph systemoutput">Reviewed</samp>
+</li>
+
+                                                  <li class="li">
+<samp class="ph systemoutput">Pending</samp> displays
+                                                  as <samp class="ph systemoutput">Not Compared</samp>
+</li>
+
+                                                </ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Company" class="dashAnchor"></a>
+<span class="keyword parmname" id="LeadCompanyField"><a name="LeadCompanyField"><!-- --></a>Company</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Company of the lead. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/Company" class="dashAnchor"></a>If person account record types have been enabled, and if the value of <span class="keyword parmname">Company</span> is null, the lead converts to a person account.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/CompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname" id="CoDunsNoField"><a name="CoDunsNoField"><!-- --></a>CompanyDunsNumber</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="CoDunsNoDef"><a name="CoDunsNoDef"><!-- --></a>The Data Universal Numbering System (D-U-N-S) number is a unique,
+                                                nine-digit number assigned to every business
+                                                location in the Dun&amp;Bradstreet database that has
+                                                a unique, separate, and distinct operation. D-U-N-S
+                                                numbers are used by industries and organizations
+                                                around the world as a global standard for business
+                                                identification and tracking. Maximum size is 9
+                                                characters.</span><div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This field is only available to organizations that use Data.com Prospector or Data.com Clean.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr id="connection_received_id">
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname" id="connectionreceivedid"><a name="connectionreceivedid"><!-- --></a>ConnectionReceivedId</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="conn_recvdid_desc"><a name="conn_recvdid_desc"><!-- --></a>ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr id="connection_sent_id">
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname" id="connectionsentid"><a name="connectionsentid"><!-- --></a>ConnectionSentId</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="conn_sentid_desc"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="conn_sentid_desc"><!-- --></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConvertedAccountId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452276"><a name="i1452276"><!-- --></a>ConvertedAccountId</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Object reference ID that points to the Account into which the Lead has been converted. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConvertedContactId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452303"><a name="i1452303"><!-- --></a>ConvertedContactId</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Object reference ID that points to the Contact into which the Lead has been converted. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConvertedDate" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452327"><a name="i1452327"><!-- --></a>ConvertedDate</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Date on which this Lead was converted.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConvertedOpportunityId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452348"><a name="i1452348"><!-- --></a>ConvertedOpportunityId</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Object reference ID that points to the Opportunity into which the Lead has been converted.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a>
+<span class="keyword parmname">Country</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Country for the address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/CountryCode" class="dashAnchor"></a><span class="keyword parmname">CountryCode</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ISO country code for the lead’s address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/CurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyIsoCode</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Available only for organizations with the
+                        multicurrency feature enabled. Contains the ISO code for any currency
+                        allowed by the organization.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>
+<span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Division" class="dashAnchor"></a><span class="keyword parmname">Division</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+                                        <dd class="dd">A logical segment of your organization's data. For example, if your
+   company is organized into different business units, you could create a division for each business
+   unit, such as “North America,” “Healthcare,” or
+   “Consulting.” Available only if the organization has the Division permission
+   enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a>
+<span class="keyword parmname">Email</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Email address for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/EmailBouncedDate" class="dashAnchor"></a><span class="keyword parmname">EmailBouncedDate</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If bounce management is activated and an email sent to the lead
+bounced, the date and time the bounce occurred.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/EmailBouncedReason" class="dashAnchor"></a><span class="keyword parmname">EmailBouncedReason</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If bounce management is activated and an email sent to the lead
+bounced, the reason the bounce occurred.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a>
+<span class="keyword parmname">Fax</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Fax number for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452461"><a name="i1452461"><!-- --></a>FirstName</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">First name of the lead. Limited to 40 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/HasOptedOutOfEmail" class="dashAnchor"></a>
+<span class="keyword parmname">HasOptedOutOfEmail</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the lead has opted out of email (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Email Opt Out</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+                        <tr>
+                            <td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/GeocodeAccuracy" class="dashAnchor"></a><span class="keyword parmname">GeocodeAccuracy</span></td>
+
+                            <td class="entry" headers="d453404e127" data-title="Details">
+                                <dl class="dl detailList">
+                                    
+                                        <dt class="dt dlterm">Type</dt>
+
+                                        <dd class="dd">picklist</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Properties</dt>
+
+                                        <dd class="dd">Retrieve, Query, Restricted picklist, Search, Nillable</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Description</dt>
+
+                                        <dd class="dd">Accuracy level of the geocode for the address on this
+                                            object. Usually provided by a geocoding service based on
+                                            the address’s latitude and longitude coordinates.</dd>
+
+                                    
+                                </dl>
+
+                            </td>
+
+                        </tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>
+<span class="keyword parmname">Industry</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Industry the lead works in.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsConverted" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452531"><a name="i1452531"><!-- --></a>IsConverted</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the Lead has been converted (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph uicontrol">Converted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+<span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsUnreadByOwner" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452572"><a name="i1452572"><!-- --></a>IsUnreadByOwner</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If true, lead has been assigned, but not yet viewed. See Unread Leads for more information. Label is <strong class="ph uicontrol">Unread By Owner</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Jigsaw" class="dashAnchor"></a><span class="keyword parmname">Jigsaw</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">References the ID of a contact in Data.com. If a lead has a value in this field, it means that a
+                                            contact was imported as a lead from Data.com. If the
+                                            contact (converted to a lead) was not imported from
+                                            Data.com, the field value is null. Maximum size is 20
+                                            characters. Available in API version 22.0 and later.
+                                            Label is <strong class="ph b">Data.com Key</strong>.<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p><span class="ph" id="JigsawFieldImpNote"><a name="//apple_ref/cpp/Field/Jigsaw" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Jigsaw" class="dashAnchor"></a><a name="JigsawFieldImpNote"><!-- --></a>The <span class="keyword parmname">Jigsaw</span>field is exposed in the API to support troubleshooting for import errors
+                                                  and reimporting of corrected data. Do not modify
+                                                  the value in the <span class="keyword parmname">Jigsaw</span> field.</span></p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastActivityDate" class="dashAnchor"></a>
+<span class="keyword parmname">LastActivityDate</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"> <div class="p">Value is one of the following, whichever is the most recent:<ul class="ul bulletList">
+<li class="li">Due date of the most recent event logged against the record.</li>
+
+<li class="li">Due date of the most recently closed task associated with the
+record.</li>
+
+</ul>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a> <span class="keyword parmname" id="i1452618"><a name="i1452618"><!-- --></a>LastName</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Last name of the lead. Limited to 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">date</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><span class="ph" id="latitude"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><a name="latitude"><!-- --></a><span class="keyword parmname">Latitude</span></span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="latdef"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><a name="latdef"><!-- --></a>Used with <span class="keyword parmname">Longitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –90 and 90 with up to 15 decimal places.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><span class="ph" id="longitude"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><a name="longitude"><!-- --></a><span class="keyword parmname">Longitude</span></span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="longdef"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><a name="longdef"><!-- --></a>Used with <span class="keyword parmname">Latitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –180 and 180 with up to 15 decimal places.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/LeadSource" class="dashAnchor"></a>
+<span class="keyword parmname">LeadSource</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Source from which the lead was obtained.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/MasterRecordId" class="dashAnchor"></a><span class="keyword parmname">MasterRecordId</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If this object was deleted as the result of a merge, this field
+contains the ID of the record that was kept. If this object was deleted
+for any other reason, or has not been deleted, the value is <samp class="codeph nolang">null</samp>.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>When using Apex triggers to determine which record was deleted in a merge event,
+this field’s value is the ID of the record that was kept only
+in <samp class="codeph apex_code">Trigger.old</samp>. In <samp class="codeph apex_code">Trigger.<span class="keyword">new</span></samp>, the value is <samp class="codeph nolang">null</samp>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/MiddleName" class="dashAnchor"></a><span class="keyword parmname">MiddleName</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Middle name of the lead. Maximum size is 40 characters. Contact Salesforce Customer Support to enable this field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/MobilePhone" class="dashAnchor"></a>
+<span class="keyword parmname">MobilePhone</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Mobile phone number for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a>
+<span class="keyword parmname">Name</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Suffix" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/MiddleName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a>Concatenation of <span class="keyword parmname">FirstName</span>, <span class="keyword parmname">MiddleName</span>, <span class="keyword parmname">LastName</span>, and <span class="keyword parmname">Suffix</span>. Maximum size is 121
+                                            characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/NumberOfEmployees" class="dashAnchor"></a>
+<span class="keyword parmname">NumberOfEmployees</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Number of employees at the lead’s company. Label is <strong class="ph uicontrol">Employees</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>
+<span class="keyword parmname">OwnerId</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the owner of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/PartnerAccountId" class="dashAnchor"></a><span class="keyword parmname" id="PartnerAccountID"><a name="PartnerAccountID"><!-- --></a>PartnerAccountId</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the partner account for the partner user that owns this
+lead. <span class="ph" id="PartnerAccountIdAvailability"><a name="PartnerAccountIdAvailability"><!-- --></a>Available only if Partner
+Relationship Management is enabled OR Communities is enabled and you have partner portal licenses.</span><div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><span class="ph" id="PartnerAccountNote"><a name="//apple_ref/cpp/Field/Partner Account" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Partner Account" class="dashAnchor"></a><a name="PartnerAccountNote"><!-- --></a>If you are
+uploading leads using API version
+15.0 or earlier, and one of the leads in the batch has a partner user
+as the owner, the <span class="keyword parmname">Partner Account</span> field on all
+leads in the batch is set to that partner user’s account regardless
+of whether the partner user is the owner. In version 16.0, the <span class="keyword parmname">Partner Account</span> field is set to the appropriate account
+for the partner user that owns the lead. If the owner of the lead
+is not a partner user, this field remains blank.</span></p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>
+<span class="keyword parmname">Phone</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd"> Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Phone number for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/PhotoUrl" class="dashAnchor"></a><span class="keyword parmname">PhotoUrl</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+</dl>
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+</dl>
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">Path to be combined with the URL of a Salesforce instance (for example, https://<var class="keyword varname">yourInstance</var>.salesforce.com/) to generate a URL to request the social network
+                                                profile image associated with the lead. Generated
+                                                URL returns an HTTP redirect (code 302) to the
+                                                social network profile image for the lead.</p>
+<p class="p">Blank if Social Accounts and Contacts isn't
+enabled for the organization or if Social Accounts and Contacts has
+been disabled for the requesting user.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a>
+<span class="keyword parmname">PostalCode</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Postal code for the address of the lead. Label is <strong class="ph uicontrol">Zip/Postal
+Code</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Rating" class="dashAnchor"></a>
+<span class="keyword parmname">Rating</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Rating of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1438294"><a name="i1438294"><!-- --></a>RecordTypeId</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the record type assigned to this object.  </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Salutation" class="dashAnchor"></a>
+<span class="keyword parmname">Salutation</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Salutation for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>
+<span class="keyword parmname">State</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">State for the address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/StateCode" class="dashAnchor"></a>
+<span class="keyword parmname">StateCode</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ISO state code for the lead’s address.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1452866"><a name="i1452866"><!-- --></a>Status</span> </td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Status code for this converted lead. Status codes are defined
+in <span class="keyword parmname">Status</span> and represented in the API by
+the LeadStatus object. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Street number and name for the address of the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Suffix" class="dashAnchor"></a><span class="keyword parmname">Suffix</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Name suffix of the lead. Maximum size is 40 characters. Contact Salesforce Customer Support to enable this field.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Title for the lead, for example CFO or CEO.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e124" data-title="Field"><a name="//apple_ref/cpp/Field/Website" class="dashAnchor"></a><span class="keyword parmname">Website</span></td>
+
+<td class="entry" headers="d453404e127" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Website for the lead.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you import Lead data and need to set the value for an audit field, such as
+                    <span class="keyword parmname">CreatedDate</span>, contact Salesforce. Audit fields are automatically updated during API operations
+unless you request to set these fields yourself..</p>
+</div>
+</div></div></div></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Converted Leads</h2>
+<p class="p">Leads have a special state to indicate that they have been converted into an Account, Contact, and optionally, an Opportunity. Your client application can convert leads via the <samp class="codeph nolang">convertLead()</samp> call. Users can also convert leads through the user interface. Once a
+                lead has been converted, it is read-only. You can’t update or delete a
+                converted lead. However, you can query converted lead records.</p>
+<p class="p">Leads have several fields that indicate their
+converted status. These special fields are set when converting the
+lead in the user interface.</p>
+<ul class="ul bulletList">
+<li class="li"><span class="keyword parmname">ConvertedAccountId</span></li>
+
+<li class="li"><span class="keyword parmname">ConvertedContactId</span></li>
+
+<li class="li"><span class="keyword parmname">ConvertedDate</span></li>
+
+<li class="li"><span class="keyword parmname">ConvertedOpportunityId</span></li>
+
+<li class="li"><span class="keyword parmname">IsConverted</span></li>
+
+<li class="li"><span class="keyword parmname">Status</span></li>
+
+</ul>
+<div class="box message info" id="note_convert_lead_business_field">
+<a name="note_convert_lead_business_field"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>If person account record types have been enabled, and if the value of <span class="keyword parmname">Company</span> is null, the lead converts to a person account.</p>
+</div>
+</div></div></div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1453028"><a name="i1453028"><!-- --></a>Unread Leads</span></h2>
+<p class="p">Leads
+have a special state to indicate that they have not been viewed or
+edited by the lead owner. In the  user interface, this is helpful
+for users to know which leads have been assigned to them but which
+they have not touched yet. <span class="keyword parmname">IsUnreadByOwner</span> is <samp class="codeph nolang">true</samp> if the lead
+owner has not yet viewed or edited the lead, and <samp class="codeph nolang">false</samp> if the lead owner has viewed or
+edited the lead at least once.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1453038"><a name="i1453038"><!-- --></a>Lead Status Picklist</span></h2>
+<p class="p">Each <span class="keyword parmname">Status</span> value corresponds to either a converted or unconverted
+status in the lead status picklist, as defined in the user interface.
+To obtain the lead status values in the picklist, a client application
+can query LeadStatus.</p>
+<p class="p">You can’t convert a lead via the API by
+changing  <span class="keyword parmname">Status</span> to one of the converted lead status values. When you
+convert qualified leads into an account, contact, and opportunity,
+you can select one of the converted status types for the lead. Leads
+with a converted status type are no longer available in the Leads
+tab, although you can include them in reports.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">To update a Lead or to convert one
+with <samp class="codeph nolang">convertLead()</samp>, your client application must log in with the “Edit”
+permission on leads.</p>
+</div>
+
+<p class="p">When you create, update, or upsert a lead, your client application
+can have the lead automatically assigned to one or more User records based on assignment rules that have been configured
+in the  user interface. </p>
+
+<p class="p">To use this feature, your client application needs to set either
+of the following options (but not both) in the AssignmentRuleHeader used in create or update:</p>
+
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d453404e3570">Field</th>
+
+<th class="featureTableHeader  " id="d453404e3573">Field Type</th>
+
+<th class="featureTableHeader  " id="d453404e3576">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d453404e3570" data-title="Field"><span class="keyword parmname">assignmentRuleId</span></td>
+
+<td class="entry" headers="d453404e3573" data-title="Field Type">reference </td>
+
+<td class="entry" headers="d453404e3576" data-title="Details">ID of the assignment rule to use. Can be an inactive assignment
+rule. If unspecified and  <span class="keyword parmname">useDefaultRule</span> is <samp class="codeph nolang">true</samp>, then the
+default assignment rule is used. <p class="p">To find the ID for a given assignment
+rule,  query the AssignmentRule object (specifying <samp class="codeph nolang">RuleType="leadAssignment"</samp>), iterate through the returned AssignmentRule records, find the one you want to use, retrieve its ID, and
+then specify its ID in this field in the AssignmentRuleHeader.</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d453404e3570" data-title="Field">
+<span class="keyword parmname" id="i1453138"><a name="i1453138"><!-- --></a>useDefaultRule</span> </td>
+
+<td class="entry" headers="d453404e3573" data-title="Field Type">boolean </td>
+
+<td class="entry" headers="d453404e3576" data-title="Details">Specifies whether to use the default rule for rule-based assignment
+(<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Default rules are assigned in
+the user interface.</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="lead_java_example"><a name="lead_java_example"><!-- --></a>Java Sample</span></h2>
+<p class="p">The following Java sample shows how to automatically assign a
+newly created lead.</p>
+<div class="codeSection apex_code"><div id="highlighter_19202" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_19202_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_19202" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="apexKey">package</code> <code class="plain">wsc;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.Connector;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.EnterpriseConnection;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.ws.ConnectionException;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.ws.ConnectorConfig;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.sobject.Lead;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.QueryResult; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.SaveResult; </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="apexKey">import</code> <code class="plain">com.sforce.soap.enterprise.sobject.SObject;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="apexKey">public</code> <code class="apexKey">class</code> <code class="plain">LeadAssignment {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">static</code> <code class="apexKey">final</code> <code class="apexKey">String</code> <code class="plain">USERNAME = </code><code class="apexString">"REPLACE USER NAME"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">static</code> <code class="apexKey">final</code> <code class="apexKey">String</code> <code class="plain">PASSWORD = </code><code class="apexString">"REPLACE PASSWORD"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">static</code> <code class="plain">EnterpriseConnection connection;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">static</code> <code class="plain">LeadAssignment _leadAssignment;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Main</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">static</code> <code class="apexKey">void</code> <code class="plain">main(</code><code class="apexKey">String</code><code class="plain">[] args)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>22</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{ </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>23</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Establish connection and login</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>24</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ConnectorConfig config = </code><code class="apexKey">new</code> <code class="plain">ConnectorConfig();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>25</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">config.setUsername(USERNAME);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>26</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">config.setPassword(PASSWORD);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>27</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>28</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">connection = Connector.newConnection(config);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>29</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"Logged in, endpoint: "</code> <code class="plain">+ config.getAuthEndpoint());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>30</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">catch</code> <code class="plain">(ConnectionException e1) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>31</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">e1.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>32</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>33</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>34</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create lead </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>35</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">_leadAssignment = </code><code class="apexKey">new</code> <code class="plain">LeadAssignment(); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>36</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code> <code class="plain">{ </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>37</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">_leadAssignment.CreateLead(); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>38</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">catch</code> <code class="plain">(Exception e) { </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>39</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">e.printStackTrace(); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>40</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>41</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>42</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Logout</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>43</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>44</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">connection.logout();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>45</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"Logged out"</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>46</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">catch</code> <code class="plain">(ConnectionException ce) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>47</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">ce.printStackTrace();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>48</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>49</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>50</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>51</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">void</code> <code class="plain">CreateLead() </code><code class="apexKey">throws</code> <code class="plain">ConnectionException</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>52</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>53</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create a new Lead and assign various properties </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>54</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Lead lead = </code><code class="apexKey">new</code> <code class="plain">Lead(); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>55</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>56</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.setFirstName(</code><code class="apexString">"Joe"</code><code class="plain">); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>57</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.setLastName(</code><code class="apexString">"Smith"</code><code class="plain">); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>58</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.setCompany(</code><code class="apexString">"ABC Corporation"</code><code class="plain">); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>59</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.setLeadSource(</code><code class="apexString">"API"</code><code class="plain">); </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>60</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// The lead assignment rule will assign any new leads that </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>61</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// have "API" as the LeadSource to a particular user </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>62</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>63</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// In this sample we will look for a particular rule and if found </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>64</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// use the id for the lead assignment. If it is not found we will </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>65</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// instruct the call to use the current default rule. You can't use </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>66</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// both of these values together. </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>67</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">QueryResult qr = connection.query(</code><code class="apexString">"SELECT Id FROM AssignmentRule WHERE Name = "</code> <code class="plain">+</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>68</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexString">"'Mass Mail Campaign' AND SobjectType = 'Lead'"</code><code class="plain">); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>69</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(qr.getSize() == </code><code class="value">0</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>70</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">connection.setAssignmentRuleHeader(</code><code class="apexKey">null</code><code class="plain">, </code><code class="apexKey">true</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>71</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>72</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">connection.setAssignmentRuleHeader(qr.getRecords()[</code><code class="value">0</code><code class="plain">].getId(), </code><code class="apexKey">false</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>73</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>74</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>75</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Every operation that results in a new or updated lead will </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>76</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// use the specified rule until the header is removed from the </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>77</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// connection. </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>78</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] sr = connection.create(</code><code class="apexKey">new</code> <code class="plain">SObject[] {lead}); </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>79</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">for</code> <code class="plain">(</code><code class="apexKey">int</code> <code class="plain">i=</code><code class="value">0</code><code class="plain">;i&lt;sr.length;i++) { </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>80</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(sr[i].isSuccess()) {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>81</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"Successfully created lead with id of: "</code> <code class="plain">+ </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>82</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">sr[i].getId() + </code><code class="apexString">"."</code><code class="plain">);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>83</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">} </code><code class="apexKey">else</code> <code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>84</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">System</code><code class="plain">.out.println(</code><code class="apexString">"Error creating lead: "</code> <code class="plain">+ </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>85</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">sr[i].getErrors()[</code><code class="value">0</code><code class="plain">].getMessage());</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>86</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>87</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>88</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>89</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// This call effectively removes the header, the next lead will </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>90</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// be assigned to the default lead owner. </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>91</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">connection.clearAssignmentRuleHeader();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>92</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}&nbsp;&nbsp;&nbsp; </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>93</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="c_sharp_lead_example"><a name="c_sharp_lead_example"><!-- --></a>C# Sample</span></h2>
+<p class="p">The following C# sample shows how to automatically assign a newly
+created lead.</p>
+<div class="codeSection apex_code"><div id="highlighter_527390" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_527390_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_527390" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>001</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>002</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">.Collections.Generic;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>003</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">.Linq;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>004</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">.Text;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>005</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">.Threading.Tasks;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>006</code></td><td class="content"><code class="plain">using </code><code class="apexKey">System</code><code class="plain">.ServiceModel;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>007</code></td><td class="content"><code class="plain">using LeadSample.sforce;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>008</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>009</code></td><td class="content"><code class="plain">namespace LeadSample</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>010</code></td><td class="content"><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>011</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">class</code> <code class="plain">LeadAssignment</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>012</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>013</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">SoapClient client;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>014</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">SoapClient apiClient;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>015</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">SessionHeader header;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>016</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">LoginResult loginResult;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>017</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">readonly string Username = </code><code class="apexString">"REPLACE USERNAME"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>018</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="apexKey">static</code> <code class="plain">readonly string Password = </code><code class="apexString">"REPLACE PASSWORD AND SECURITY TOKEN"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>019</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>020</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create the proxy binding and login</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>021</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">private</code> <code class="plain">LeadAssignment()</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>022</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>023</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">client = </code><code class="apexKey">new</code> <code class="plain">SoapClient();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>024</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>025</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>026</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>027</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">loginResult = client.login(</code><code class="apexKey">null</code><code class="plain">, Username, Password);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>028</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>029</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">catch</code> <code class="plain">(Exception e)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>030</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>031</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(</code><code class="apexString">"Unexpected login error: "</code> <code class="plain">+ e.Message);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>032</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(e.StackTrace);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>033</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">return</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>034</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>035</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Access API endpoint and create new client</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>036</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">header = </code><code class="apexKey">new</code> <code class="plain">SessionHeader();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>037</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">header.sessionId = loginResult.sessionId;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>038</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">apiClient = </code><code class="apexKey">new</code> <code class="plain">SoapClient(</code><code class="apexString">"Soap"</code><code class="plain">, loginResult.serverUrl);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>039</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>040</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>041</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">[STAThread]</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>042</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">static</code> <code class="apexKey">void</code> <code class="plain">Main(string[] args)</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>043</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>044</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">LeadAssignment leadAssignment = </code><code class="apexKey">new</code> <code class="plain">LeadAssignment();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>045</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>046</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>047</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">leadAssignment.CreateLead();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>048</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>049</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">catch</code> <code class="plain">(Exception e)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>050</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>051</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(e.Message);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>052</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(e.StackTrace);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>053</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(e.InnerException);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>054</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>055</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// logout</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>056</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">client.logout(header);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>057</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>058</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>059</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">public</code> <code class="apexKey">void</code> <code class="plain">CreateLead()</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>060</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>061</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create a new Lead and assign various properties</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>062</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Lead lead = </code><code class="apexKey">new</code> <code class="plain">Lead();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>063</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>064</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.FirstName = </code><code class="apexString">"John"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>065</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.LastName = </code><code class="apexString">"Brown"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>066</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.Company = </code><code class="apexString">"ABC Corporation"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>067</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">lead.LeadSource = </code><code class="apexString">"Advertisement"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>068</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Setting the lead source for a pre-existing lead assignment rule. This </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>069</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// rule was created outside of this sample and will assign any new leads</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>070</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// that have "Advertisement" as the LeadSource to a particular user.</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>071</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>072</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create the assignment rule header and add it to the proxy binding</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>073</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">AssignmentRuleHeader arh = </code><code class="apexKey">new</code> <code class="plain">AssignmentRuleHeader();</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>074</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>075</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// In this sample we will look for a particular rule and if found</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>076</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// use the id for the lead assignment. If it is not found we will</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>077</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// instruct the call to use the current default rule. Both these</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>078</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// values can't be used together.</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>079</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">QueryResult qr = </code><code class="apexKey">null</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>080</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">string query = </code><code class="apexString">"SELECT Id FROM AssignmentRule WHERE Name = "</code> <code class="plain">+</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>081</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexString">"'Mass Mail Campaign' AND SobjectType = 'Lead'"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>082</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">try</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>083</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>084</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">LimitInfo[] limitArray = apiClient.query(</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>085</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">header, </code><code class="apexComments">// sessionheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>086</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// queryoptions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>087</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// mruheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>088</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// packageversionheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>089</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">query,&nbsp; </code><code class="apexComments">// SOQL query</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>090</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">out qr);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>091</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>092</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">catch</code> <code class="plain">(Exception e)</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>093</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>094</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(</code><code class="apexString">"Unexpected query error: "</code> <code class="plain">+ e.Message);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>095</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(e.StackTrace);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>096</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>097</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(qr.size == </code><code class="value">0</code><code class="plain">)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>098</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>099</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">arh.useDefaultRule = </code><code class="apexKey">true</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>100</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>101</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">else</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>102</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>103</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">arh.assignmentRuleId = qr.records[</code><code class="value">0</code><code class="plain">].Id;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>104</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>105</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>106</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// Create the lead using our Assignment Rule header</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>107</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">LimitInfo[] li;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>108</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">SaveResult[] sr;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>109</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">apiClient.create(</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>110</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">header, </code><code class="apexComments">// sessionheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>111</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">arh,&nbsp;&nbsp;&nbsp; </code><code class="apexComments">// assignmentruleheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>112</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// mruheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>113</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// allowfieldtrunctionheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>114</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// disablefeedtrackingheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>115</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// streamingenabledheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>116</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// allornoneheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>117</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// duplicateruleheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>118</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// localeoptions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>119</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// debuggingheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>120</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// packageversionheader</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>121</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">null</code><code class="plain">,&nbsp;&nbsp; </code><code class="apexComments">// emailheader</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>122</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">new</code> <code class="plain">sObject[] { lead },</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>123</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">out li,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>124</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">out sr);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>125</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">foreach (SaveResult s </code><code class="apexKey">in</code> <code class="plain">sr)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>126</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>127</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(s.success)</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>128</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>129</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(</code><code class="apexString">"Successfully created Lead with ID: {0}"</code><code class="plain">, s.id);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>130</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>131</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">else</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>132</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">{</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>133</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Console.WriteLine(</code><code class="apexString">"Error creating Lead: {0}"</code><code class="plain">, s.errors[</code><code class="value">0</code><code class="plain">].message);</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>134</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>135</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>136</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>137</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>138</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_leadownersharingrule.htm" title="Represents the rules for sharing a lead with users other than the owner.">LeadOwnerSharingRule</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_leadshare.htm" title="Represents a sharing entry on a Lead.">LeadShare</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_leadstatus.htm" title="Represents the status of a Lead, such as Open, Qualified, or Converted.">LeadStatus</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_partnernetworkconnection.htm" title="Represents a Salesforce to Salesforce connection between Salesforce organizations.">PartnerNetworkConnection</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

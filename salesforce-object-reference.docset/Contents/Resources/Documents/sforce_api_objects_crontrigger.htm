@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CronTrigger | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_objectname"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CronTrigger</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="CronTriggerDefn"><a name="CronTriggerDefn"><!-- --></a>Contains schedule information for a scheduled
+    job. CronTrigger is similar to a cron job on UNIX systems.</span> This object is available in API version 17.0 and
+  later.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d280407e85">Field</th>
+
+<th class="featureTableHeader  " id="d280407e88">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/CronExpression" class="dashAnchor"></a><span class="keyword parmname">CronExpression</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group,
+            Nillable, Sort
+          </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The cron expression used to initiate the schedule. </dd>
+
+<dd class="dd">Syntax:<div class="codeSection nolang"><div id="highlighter_140913" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_140913_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_140913" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain"><code class="italic">Minutes</code>, Hours, Day of month, Month, Day of week, optional Year</code></td></tr></tbody></table></div></div></div></div>
+</dd>
+
+<dd class="dd">See <a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.apexcode.meta/apexcode/apex_methods_system_system.htm#apex_System_System_schedule" target="_blank" title="HTML (New Window)"><samp class="codeph apex_code">schedule(jobName, cronExpression, schedulableClass)</samp></a> in the <cite class="cite">Apex Developer Guide</cite>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/CronJobDetailId" class="dashAnchor"></a><span class="keyword parmname">CronJobDetailId</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort
+          </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the CronJobDetail record containing more details about
+this scheduled job.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/EndTime" class="dashAnchor"></a><span class="keyword parmname">EndTime</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date and time when the job either finished or will finish.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/NextFireTime" class="dashAnchor"></a><span class="keyword parmname">NextFireTime</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The next date and time the job is scheduled to run. <samp class="codeph nolang">null</samp> if the job is not scheduled to run
+again. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Owner of the job.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/PreviousFireTime" class="dashAnchor"></a><span class="keyword parmname">PreviousFireTime</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The most recent date and time the job ran. <samp class="codeph java">null</samp> if the job has not run before current local time. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/StartTime" class="dashAnchor"></a><span class="keyword parmname">StartTime</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date and time when the most recent iteration of the scheduled
+job started. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The current state of the job. The job state is managed by the system. Possible values are:<ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">WAITING</samp>—The job is waiting for
+             execution.</li>
+
+            <li class="li">
+<samp class="codeph nolang">ACQUIRED</samp>—The job has been picked up by
+             the system and is about to execute.</li>
+
+            <li class="li">
+<samp class="codeph nolang">EXECUTING</samp>—The job is executing.</li>
+
+            <li class="li">
+<samp class="codeph nolang">COMPLETE</samp>—The trigger has fired and is
+             not scheduled to fire again.</li>
+
+            <li class="li">
+<samp class="codeph nolang">ERROR</samp>—The trigger definition has an
+             error.</li>
+
+            <li class="li">
+<samp class="codeph nolang">DELETED</samp>—The job has been deleted.</li>
+
+            <li class="li">
+<samp class="codeph nolang">PAUSED</samp>—A job can have this state during
+             patch and major releases. After the release has finished, the job state is
+             automatically set to <samp class="codeph nolang">WAITING</samp> or another
+             state.</li>
+
+            <li class="li">
+<samp class="codeph nolang">BLOCKED</samp>—Execution of a second instance
+             of the job is attempted while one instance is running. This state lasts until the first
+             job instance is completed. </li>
+
+            <li class="li">
+<samp class="codeph nolang">PAUSED_BLOCKED</samp>—A job has this state due
+             to a release occurring. When the release has finished and no other instance of the job
+             is running, the job’s status is set to another state.</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/TimesTriggered" class="dashAnchor"></a><span class="keyword parmname">TimesTriggered</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of times this job has been triggered.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d280407e85" data-title="Field"><a name="//apple_ref/cpp/Field/TimeZoneSidKey" class="dashAnchor"></a><span class="keyword parmname">TimeZoneSidKey</span></td>
+
+<td class="entry" headers="d280407e88" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Returns the timezone ID. For example, <samp class="codeph nolang">America/Los_Angeles</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query scheduled
+jobs in your organization. </p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

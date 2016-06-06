@@ -1,0 +1,335 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CaseComment | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_casecomment"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CaseComment</span></h1><div class="body">
+<div class="shortdesc">Represents a comment that provides additional information about the associated Case.</div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d207319e113">Field</th>
+
+<th class="featureTableHeader  " id="d207319e116">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/CommentBody" class="dashAnchor"></a> <span class="keyword parmname">CommentBody</span> </td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Text of the CaseComment. The maximum size of the comment body
+is 4,000 bytes. Label is <strong class="ph b">Body</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorFullPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">CreatorFullPhotoUrl</span></td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">URL of the user’s profile
+photo from the feed. Chatter Answers must be enabled to view this
+field. This field is available in API version
+26.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorName" class="dashAnchor"></a><span class="keyword parmname">CreatorName</span></td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">Name of the user who posted the question
+or reply. Only the first name of internal users (agents) appears to
+portal users in the feed. Chatter Answers must be enabled to view
+this field. This field is available in API version
+26.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorSmallPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">CreatorSmallPhotoUrl</span></td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<p class="p">URL of the user’s thumbnail
+photo from the feed. Chatter Answers must be enabled to view this
+field. This field is available in API version
+26.0 and later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+<span class="keyword parmname">IsDeleted</span> </td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the object has been moved to the Recycle Bin (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/IsPublished" class="dashAnchor"></a> <span class="keyword parmname" id="i1445178"><a name="i1445178"><!-- --></a>IsPublished</span> </td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the CaseComment is visible to customers in the
+Self-Service portal (<samp class="codeph nolang">true</samp>) or
+not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Published</strong>. This is the only CaseComment field that can be updated via the API.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d207319e113" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a> <span class="keyword parmname">ParentId</span> </td>
+
+<td class="entry" headers="d207319e116" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, </dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. ID of the parent Case of the CaseComment.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you are importing CaseComment data and need to set
+the value for an audit field, such as <span class="keyword parmname">CreatedDate</span>, contact Salesforce. Audit fields are automatically updated during API operations
+unless you request to set these fields yourself..</p>
+</div>
+</div></div></div></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">In the Salesforce user
+interface, comments are generally entered by a User working on a Case. All users have access to create and view CaseComment in the Salesforce user
+interface and when using the API.
+In the API, CaseComment records can't be modified after insertion unless the user 
+has the “Modify All” object-level permission for Cases
+or the “Modify All Data” permission. If not, users can
+only update the <span class="keyword parmname">IsPublished</span> field, and can't delete CaseComment.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_concepts.htm">Object Basics</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

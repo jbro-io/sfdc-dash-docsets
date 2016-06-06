@@ -1,0 +1,150 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SiteDomain | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_sitedomain"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SiteDomain</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="SiteDomainDescription"><a name="SiteDomainDescription"><!-- --></a>SiteDomain is a read-only object, and a
+    one-to-many replacement for the Site.TopLevelDomain field.</span> This object is available in API version 21.0, and has been
+   deprecated as of API version 26.0.
+   In API version 26.0 and later, use
+   the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domain.htm" title="Read-only object that represents a custom Web address assigned to a site in your organization. This object is available in API version 26.0 and later.">Domain</a> and <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_domainsite.htm" title="Read-only junction object that joins together the Site and Domain objects. This object is available in API version 26.0 and later.">DomainSite</a> objects
+  instead.</span></div>
+
+<p class="p">To access this object, Force.com
+    Sites or Site.com must be enabled for your
+    organization. </p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+<li class="li">Customer Portal users can’t access this object.</li>
+
+<li class="li">To view this object, you must have the “View Setup and
+Configuration” permission.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d675619e141">Field</th>
+
+<th class="featureTableHeader  " id="d675619e144">Description</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d675619e141" data-title="Field"><a name="//apple_ref/cpp/Field/Domain" class="dashAnchor"></a><span class="keyword parmname">Domain</span></td>
+
+<td class="entry" headers="d675619e144" data-title="Description">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The branded custom Web address within the global namespace identified
+by this domain's type. In the Domain Name System (DNS) global namespace,
+this field is the custom Web address that you registered with a third-party
+domain name registrar. The custom Web address can be used to access
+the site of this domain.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d675619e141" data-title="Field"><a name="//apple_ref/cpp/Field/SiteId" class="dashAnchor"></a><span class="keyword parmname">SiteId</span></td>
+
+<td class="entry" headers="d675619e144" data-title="Description">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the associated Site.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d675619e141" data-title="Field"><a name="//apple_ref/cpp/Field/DomainType" class="dashAnchor"></a><span class="keyword parmname">DomainType</span></td>
+
+<td class="entry" headers="d675619e144" data-title="Description">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The global namespace that this custom Web address belongs to.
+This value is set to DNS for custom Web addresses in the global DNS.
+This field is available in version 24.0 of the API.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this read-only object to query
+the custom Web addresses that are associated with each website in
+your organization.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

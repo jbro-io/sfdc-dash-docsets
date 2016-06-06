@@ -1,0 +1,3443 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>DandBCompany | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_DandBCompany"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>DandBCompany</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="DandBCompanyDescription"><a name="DandBCompanyDescription"><!-- --></a>Represents a Dun &amp; Bradstreet®
+    company record, which is associated with an account added from Data.com. This object is available in
+     API version 25.0 and
+   later.</span></span></div>
+
+<div class="p">
+   <div class="box message warn"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpWarning_icon.gif" alt="Warning"><div class="mediaBd">
+<h4 class="mbs">Warning</h4>
+<p>You can update fields in the DandBCompany object; however, field changes may
+    be overwritten by Data.com Clean jobs
+    or by using the Data.com Clean
+    button. </p>
+</div>
+</div></div></div></div>
+
+  </div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, &nbsp;<samp class="codeph nolang">delete()</samp>, &nbsp;<samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, &nbsp;<samp class="codeph nolang">getDeleted()</samp>, &nbsp;<samp class="codeph nolang">getUpdated()</samp>, &nbsp;<samp class="codeph nolang">query()</samp>, &nbsp;<samp class="codeph nolang">retrieve()</samp>, &nbsp;<samp class="codeph nolang">search()</samp>, &nbsp;<samp class="codeph nolang">undelete()</samp>, &nbsp;<samp class="codeph nolang">update()</samp>, &nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<p class="p">Only organizations
+with Data.com Premium Prospector or Data.com Premium Clean can access this object. </p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d289776e149">Field Name</th>
+
+<th class="featureTableHeader  " id="d289776e152">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a><span class="keyword parmname">Address</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The city where a company is physically located. Maximum size is
+40 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompanyCurrencyIsoCode" class="dashAnchor"></a><span class="keyword parmname">CompanyCurrencyIsoCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The code used to represent a company’s
+                  local currency. This data is provided by the International Organization for
+                  Standardization (ISO) and is based on their three-letter currency codes. For
+                  example, USD is the ISO code for United States Dollar. Maximum size is 3 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The country where a company is physically located. Maximum size
+is 40 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/CountryAccessCode" class="dashAnchor"></a><span class="keyword parmname">CountryAccessCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The required code for international
+                  calls. Maximum size is 4 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/CurrencyCode" class="dashAnchor"></a><span class="keyword parmname">CurrencyCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The currency in which the company’s sales
+                  volume is expressed.
+           <span class="ph" id="OptimizerLink"><a name="OptimizerLink"><!-- --></a>The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet.</span> Maximum size is 4 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Nillable, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of the company, which may
+                  include information about its history, its products and services, and its
+                  influence on a particular industry. Maximum size is 32000 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/DomesticUltimateBusinessName" class="dashAnchor"></a><span class="keyword parmname">DomesticUltimateBusinessName</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The primary name of the Domestic
+                  Ultimate, which is the highest ranking subsidiary, specified by country, within an
+                  organization’s corporate structure. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/DomesticUltimateDunsNumber" class="dashAnchor"></a><span class="keyword parmname">DomesticUltimateDunsNumber</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The D-U-N-S Number for the Domestic Ultimate, which is the highest
+ranking subsidiary, specified by country, within an organization’s
+corporate structure. Maximum size is 9 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/DunsNumber" class="dashAnchor"></a><span class="keyword parmname">DunsNumber</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Data Universal Numbering System (D-U-N-S) number is
+                  a unique, nine-digit number assigned to every business location in the Dun &amp;
+                  Bradstreet database that has a unique, separate, and distinct operation. D-U-N-S
+                  numbers are used by industries and organizations around the world as a global
+                  standard for business identification and tracking.
+           Maximum size is 9 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmployeeQuantityGrowthRate" class="dashAnchor"></a><span class="keyword parmname" id="employeequantitygrowthrate_parmname"><a name="employeequantitygrowthrate_parmname"><!-- --></a>EmployeeQuantityGrowthRate</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable,  Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The yearly growth rate of the number of
+												employees in a company expressed as a decimal
+												percentage. The data includes the total employee
+												growth rate for the past two years.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmployeesHere" class="dashAnchor"></a><span class="keyword parmname">EmployeesHere</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of employees at a specified
+                  location, such as a branch location. Maximum size is 15 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmployeesHereReliability" class="dashAnchor"></a><span class="keyword parmname">EmployeesHereReliability</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/EmployeesHere" class="dashAnchor"></a>The reliability of the <span class="keyword parmname">EmployeesHere</span> figure. Available values include:<ul class="ul bulletList">
+            <li class="li">0—Actual number</li>
+
+            <li class="li">1—Low</li>
+
+            <li class="li">2—Estimated (for all records)</li>
+
+            <li class="li">3—Modeled (for non-US records)</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmployeesTotal" class="dashAnchor"></a><span class="keyword parmname">EmployeesTotal</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LocationStatus" class="dashAnchor"></a>The total number of employees in the company, including all subsidiary
+and branch locations. This data is only available on records that
+have a value of <kbd class="ph userinput">Headquarters/Parent</kbd> in the <span class="keyword parmname">LocationStatus</span> field. Maximum size is 15 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/EmployeesTotalReliability" class="dashAnchor"></a><span class="keyword parmname">EmployeesTotalReliability</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/EmployeesTotal" class="dashAnchor"></a>The reliability of the <span class="keyword parmname">EmployeesTotal</span> figure. Available values include:<ul class="ul bulletList">
+            <li class="li">0—Actual number</li>
+
+            <li class="li">1—Low</li>
+
+            <li class="li">2—Estimated (for all records)</li>
+
+            <li class="li">3—Modeled (for non-US records)</li>
+
+           </ul>
+A blank value indicates this data is unavailable.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FamilyMembers" class="dashAnchor"></a><span class="keyword parmname">FamilyMembers</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total number of family members,
+                  worldwide, within an organization, including the Global Ultimate, its subsidiaries
+                  (if any), and its branches (if any). Maximum size is 5 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a><span class="keyword parmname">Fax</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The company’s facsimile number.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthNaics" class="dashAnchor"></a><span class="keyword parmname">FifthNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="AdditionalNaicsCode"><a name="AdditionalNaicsCode"><!-- --></a>An additional NAICS code used
+to further classify an organization by industry. Maximum size is 6
+characters.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">FifthNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="AdditionalNaicsDesc"><a name="AdditionalNaicsDesc"><!-- --></a>A brief description of an organization’s
+line of business, based on the corresponding NAICS code. Maximum size
+is 120 characters.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthSic" class="dashAnchor"></a><span class="keyword parmname">FifthSic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthSic8" class="dashAnchor"></a><span class="keyword parmname">FifthSic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="AdditionalSicCode"><a name="AdditionalSicCode"><!-- --></a>An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthSic8Desc" class="dashAnchor"></a><span class="keyword parmname">FifthSic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="AdditionalSicDesc"><a name="AdditionalSicDesc"><!-- --></a>A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FifthSicDesc" class="dashAnchor"></a><span class="keyword parmname">FifthSicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FipsMsaCode" class="dashAnchor"></a><span class="keyword parmname">FipsMsaCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Federal Information Processing Standards (FIPS) and
+                  the Metropolitan Statistical Area (MSA) codes identify the organization’s
+                  location. The MSA codes are defined by the US Office of Management and
+                  Budget. Maximum size is 5 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FipsMsaDesc" class="dashAnchor"></a><span class="keyword parmname">FipsMsaDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s FIPS MSA code.
+Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FortuneRank" class="dashAnchor"></a><span class="keyword parmname" id="fortunerank_paramname"><a name="fortunerank_paramname"><!-- --></a>FortuneRank</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The numeric value of
+												the company’s Fortune 1000 ranking. A null or blank
+												value means that the company isn’t ranked as a
+												Fortune 1000 company.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthNaics" class="dashAnchor"></a><span class="keyword parmname">FourthNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional NAICS code used
+to further classify an organization by industry. Maximum size is 6
+characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">FourthNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s
+line of business, based on the corresponding NAICS code. Maximum size
+is 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthSic" class="dashAnchor"></a><span class="keyword parmname">FourthSic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthSic8" class="dashAnchor"></a><span class="keyword parmname">FourthSic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthSic8Desc" class="dashAnchor"></a><span class="keyword parmname">FourthSic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/FourthSicDesc" class="dashAnchor"></a><span class="keyword parmname">FourthSicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/GeoCodeAccuracy" class="dashAnchor"></a><span class="keyword parmname">GeoCodeAccuracy</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The level of accuracy of a location’s geographical coordinates compared with its physical
+           address. Available values include:<ul class="ul bulletList">
+            <li class="li">A – <kbd class="ph userinput">Non-US rooftop accuracy</kbd>
+</li>
+
+            <li class="li">B – <kbd class="ph userinput">Block level</kbd>
+</li>
+
+            <li class="li">C – <kbd class="ph userinput">Places the address in the correct city</kbd>
+</li>
+
+            <li class="li">D – <kbd class="ph userinput">Rooftop level</kbd>
+</li>
+
+            <li class="li">I – <kbd class="ph userinput">Street intersection</kbd>
+</li>
+
+            <li class="li">M – <kbd class="ph userinput">Mailing address level</kbd>
+</li>
+
+            <li class="li">N – <kbd class="ph userinput">Not matched</kbd>
+</li>
+
+            <li class="li">P – <kbd class="ph userinput">PO BOX location</kbd>
+</li>
+
+            <li class="li">S – <kbd class="ph userinput">Street level</kbd>
+</li>
+
+            <li class="li">T – <kbd class="ph userinput">Census tract level</kbd>
+</li>
+
+            <li class="li">Z – <kbd class="ph userinput">ZIP code level</kbd>
+</li>
+
+            <li class="li">0 (zero)– <kbd class="ph userinput">Geocode could not be assigned</kbd>
+</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/GlobalUltimateBusinessName" class="dashAnchor"></a><span class="keyword parmname">GlobalUltimateBusinessName</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The primary name of the Global Ultimate,
+                  which is the highest entity within an organization’s corporate structure
+                  and may oversee branches and subsidiaries. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/GlobalUltimateDunsNumber" class="dashAnchor"></a><span class="keyword parmname">GlobalUltimateDunsNumber</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The D-U-N-S Number of the Global Ultimate, which is the highest
+entity within an organization’s corporate structure and may
+oversee branches and subsidiaries. Maximum size is 9 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/GlobalUltimateTotalEmployees" class="dashAnchor"></a><span class="keyword parmname">GlobalUltimateTotalEmployees</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total number of employees at the Global
+                  Ultimate, which is the highest entity within an organization’s corporate
+                  structure and may oversee branches and subsidiaries. Maximum size is 15 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ImportExportAgent" class="dashAnchor"></a><span class="keyword parmname">ImportExportAgent</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Identifies whether a business imports goods or
+                  services, exports goods or services, and/or is an agent for goods. Available values include:<ul class="ul bulletList">
+            <li class="li">A—Importer/exporter/agent</li>
+
+            <li class="li">B—Importer/exporter</li>
+
+            <li class="li">C—Importer</li>
+
+            <li class="li">D—Importer/agent</li>
+
+            <li class="li">E—Exporter/agent</li>
+
+            <li class="li">F—Agent (keeps no inventory and does not take title goods)</li>
+
+            <li class="li">G—None or data not available</li>
+
+            <li class="li">H—Exporter</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/IncludedInSnP500" class="dashAnchor"></a><span class="keyword parmname" id="includedinsnp500_parmname"><a name="includedinsnp500_parmname"><!-- --></a>IncludedInSnP500</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"> A true or false value. If <samp class="codeph nolang">true</samp>, the company is listed in the
+												S&amp;P 500 Index. If <samp class="codeph nolang">false</samp>, the company isn’t listed in the
+												S&amp;P 500 Index.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Used with longitude to specify a precise location, which is then
+used to assess the Geocode Accuracy. Maximum size is 11 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/LegalStatus" class="dashAnchor"></a><span class="keyword parmname">LegalStatus</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Identifies the legal structure of an organization.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/LocationStatus" class="dashAnchor"></a><span class="keyword parmname">LocationStatus</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Identifies the organizational status of a company.
+                 Available values are <kbd class="ph userinput">Single location</kbd>,
+            <kbd class="ph userinput">Headquarters/Parent</kbd>, and <kbd class="ph userinput">Branch</kbd>. Available
+           values include:<ul class="ul bulletList">
+            <li class="li">0—Single location (no other entities report to the business)</li>
+
+            <li class="li">1—Headquarters/parent (branches and/or subsidiaries report to the
+             business)</li>
+
+            <li class="li">2—Branch (secondary location to a headquarters location)</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Used with latitude to specify a precise location, which is then
+used to assess the Geocode Accuracy. Maximum size is 11 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingAddress" class="dashAnchor"></a><span class="keyword parmname">MailingAddress</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the mailing address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingCity" class="dashAnchor"></a><span class="keyword parmname">MailingCity</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The city where a company has its mail delivered. Maximum size
+is 40 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingCountry" class="dashAnchor"></a><span class="keyword parmname">MailingCountry</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The country where a company has its mail delivered. Maximum size
+is 40 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingPostalCode" class="dashAnchor"></a><span class="keyword parmname">MailingPostalCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The postal code that a company uses on its mailing address. Maximum
+size is 20 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingState" class="dashAnchor"></a><span class="keyword parmname">MailingState</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The state where a company has its mail delivered. Maximum size
+is 20 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MailingStreet" class="dashAnchor"></a><span class="keyword parmname">MailingStreet</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The street address where a company has its mail delivered. Maximum
+size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MarketingPreScreen" class="dashAnchor"></a><span class="keyword parmname">MarketingPreScreen</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The probability that a company will pay with a significant delay compared to the agreed terms.
+           The risk level is based on the standard Commercial Credit Score, and ranges from low risk
+           to high risk. Available values include:<ul class="ul bulletList">
+            <li class="li">L—<kbd class="ph userinput">Low risk of delinquency</kbd>
+</li>
+
+            <li class="li">M—<kbd class="ph userinput">Moderate risk of delinquency</kbd>
+</li>
+
+            <li class="li">H—<kbd class="ph userinput">High risk of delinquency</kbd>
+</li>
+
+           </ul>
+<div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/important.gif" alt="Important"><div class="mediaBd">
+<h4 class="mbs">Important</h4>
+<p>Use this information for marketing pre-screening
+                  purposes only.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MarketingSegmentationCluster" class="dashAnchor"></a><span class="keyword parmname">MarketingSegmentationCluster</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Twenty-two distinct, mutually exclusive profiles, created as a result of cluster analysis of Dun
+           &amp; Bradstreet data for US organizations.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/MinorityOwned" class="dashAnchor"></a><span class="keyword parmname">MinorityOwned</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether an organization is
+                  owned or controlled by a member of a minority group. Available values include:<ul class="ul bulletList">
+            <li class="li">Y—Minority owned</li>
+
+            <li class="li">N—Not minority owned</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The primary or registered name of a
+                  company. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/NationalId" class="dashAnchor"></a><span class="keyword parmname">NationalId</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The identification number used in some
+                  countries for business registration and tax collection. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/NationalIdType" class="dashAnchor"></a><span class="keyword parmname">NationalIdType</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A code value that identifies the type of national identification
+number used. The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet. Maximum size is 5 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/OutOfBusiness" class="dashAnchor"></a><span class="keyword parmname">OutOfBusiness</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the company at the
+                  specified address has discontinued operations. Available values include: <ul class="ul bulletList">
+            <li class="li">0—Unknown or not applicable</li>
+
+            <li class="li">1—Owns</li>
+
+            <li class="li">2—Rents</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/OwnOrRent" class="dashAnchor"></a><span class="keyword parmname">OwnOrRent</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether a company owns or
+                  rents the building it occupies. Available values include:<ul class="ul bulletList">
+            <li class="li">Y—Out of business</li>
+
+            <li class="li">N—Not out of business</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentOrHqBusinessName" class="dashAnchor"></a><span class="keyword parmname">ParentOrHqBusinessName</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The primary name of the parent or
+                  headquarters company. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentOrHqDunsNumber" class="dashAnchor"></a><span class="keyword parmname">ParentOrHqDunsNumber</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The D-U-N-S Number for the parent or headquarters. Maximum size
+is 9 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A company’s primary telephone
+                number.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The postal code that corresponds to a company’s physical
+location. Maximum size is 20 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PremisesMeasure" class="dashAnchor"></a><span class="keyword parmname" id="premisesmeasure_parmname"><a name="premisesmeasure_parmname"><!-- --></a>PremisesMeasure</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A numeric value for the measurement of the
+												premises.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PremisesMeasureReliability" class="dashAnchor"></a><span class="keyword parmname" id="premisesmeasurereliability_parmname"><a name="premisesmeasurereliability_parmname"><!-- --></a>PremisesMeasureReliability</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A descriptive accuracy of the measurement
+												such as actual, estimated, or modeled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PremisesMeasureUnit" class="dashAnchor"></a><span class="keyword parmname" id="premisesmeasureunit_parmname"><a name="premisesmeasureunit_parmname"><!-- --></a>PremisesMeasureUnit</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A descriptive measurement unit such as acres,
+												square meters, or square feet.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimaryNaics" class="dashAnchor"></a><span class="keyword parmname">PrimaryNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The six-digit North American Industry
+                  Classification System (NAICS) code is the standard used by business and government
+                  to classify business establishments according to their economic activity for the
+                  purpose of collecting, analyzing, and publishing statistical data related to the
+                  US business economy.
+           The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet. Maximum size is 6
+           characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimaryNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">PrimaryNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an
+                  organization’s line of business, based on its NAICS code. Maximum size is 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimarySic" class="dashAnchor"></a><span class="keyword parmname">PrimarySic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The four-digit Standard Industrial Classification (SIC) code is
+used to categorize business establishments by industry. The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet. Maximum
+size is 4 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimarySic8" class="dashAnchor"></a><span class="keyword parmname">PrimarySic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="primary_sic8"><a name="primary_sic8"><!-- --></a>The eight-digit Standard Industrial Classification (SIC) code is
+            used to categorize business establishments by industry. The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet. Maximum size is 8
+            characters.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimarySic8Desc" class="dashAnchor"></a><span class="keyword parmname">PrimarySic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of an
+                  organization’s line of business, based on its SIC code.
+           The full list of values can be found at the <a class="xref" href="http://www.dnboptimizer.com/knowledge-center/optimizer-resources.html" target="_blank" title="HTML (New Window)">Optimizer Resources</a>
+            page maintained by Dun &amp; Bradstreet. Maximum size is 80
+           characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PrimarySicDesc" class="dashAnchor"></a><span class="keyword parmname">PrimarySicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an
+                  organization’s line of business, based on its SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PriorYearEmployees" class="dashAnchor"></a><span class="keyword parmname">PriorYearEmployees</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="prior_year_employees"><a name="prior_year_employees"><!-- --></a>The total number of employees for the prior
+           year.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PriorYearRevenue" class="dashAnchor"></a><span class="keyword parmname">PriorYearRevenue</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter,  Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="prior_year_revenue"><a name="prior_year_revenue"><!-- --></a>The annual revenue for the prior year.</span></dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/PublicIndicator" class="dashAnchor"></a><span class="keyword parmname">PublicIndicator</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether ownership of the company
+                  is public or private. Available values include: <ul class="ul bulletList">
+            <li class="li">Y—Public</li>
+
+            <li class="li">N—Private</li>
+
+           </ul>
+
+          </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SalesTurnoverGrowthRate" class="dashAnchor"></a><span class="keyword parmname" id="salesturnovergrowthrate_parmname"><a name="salesturnovergrowthrate_parmname"><!-- --></a>SalesTurnoverGrowthRate</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter,  Nillable,  Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The increase in
+												annual revenue from the previous value for an
+												equivalent period expressed as a decimal
+												percentage.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SalesVolume" class="dashAnchor"></a><span class="keyword parmname">SalesVolume</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The total annual sales revenue in the
+                  headquarters’ local currency. Dun &amp; Bradstreet tracks revenue data for
+                  publicly traded companies, Global Ultimates, Domestic Ultimates, and some
+                  headquarters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SalesVolumeReliability" class="dashAnchor"></a><span class="keyword parmname">SalesVolumeReliability</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SalesVolume" class="dashAnchor"></a>The reliability of the <span class="keyword parmname">SalesVolume</span> figure. Available values include:<ul class="ul bulletList">
+            <li class="li">0—Actual number</li>
+
+            <li class="li">1—Low</li>
+
+            <li class="li">2—Estimated (for all records)</li>
+
+            <li class="li">3—Modeled (for non-US records)</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondNaics" class="dashAnchor"></a><span class="keyword parmname">SecondNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional NAICS code used
+to further classify an organization by industry. Maximum size is 6
+characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">SecondNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s
+line of business, based on the corresponding NAICS code. Maximum size
+is 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondSic" class="dashAnchor"></a><span class="keyword parmname">SecondSic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondSic8" class="dashAnchor"></a><span class="keyword parmname">SecondSic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondSic8Desc" class="dashAnchor"></a><span class="keyword parmname">SecondSic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SecondSicDesc" class="dashAnchor"></a><span class="keyword parmname">SecondSicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthNaics" class="dashAnchor"></a><span class="keyword parmname">SixthNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional NAICS code used
+to further classify an organization by industry. Maximum size is 6
+characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">SixthNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s
+line of business, based on the corresponding NAICS code. Maximum size
+is 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthSic" class="dashAnchor"></a><span class="keyword parmname">SixthSic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthSic8" class="dashAnchor"></a><span class="keyword parmname">SixthSic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthSic8Desc" class="dashAnchor"></a><span class="keyword parmname">SixthSic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SixthSicDesc" class="dashAnchor"></a><span class="keyword parmname">SixthSicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/SmallBusiness" class="dashAnchor"></a><span class="keyword parmname">SmallBusiness</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the company is designated
+                  a small business as defined by the Small Business Administration of the US
+                  government. Available values include:<ul class="ul bulletList">
+            <li class="li">Y—Small business site</li>
+
+            <li class="li">N—Not small business site</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The state where a company is physically located. Maximum size
+is 20 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/StockExchange" class="dashAnchor"></a><span class="keyword parmname">StockExchange</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The corresponding exchange for a company’s stock symbol.
+For example: NASDAQ or NYSE. Maximum size is 16 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/StockSymbol" class="dashAnchor"></a><span class="keyword parmname">StockSymbol</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The abbreviation used to identify publicly traded shares of a
+particular stock. Maximum size is 6 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The street address where a company is physically located. Maximum
+size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/Subsidiary" class="dashAnchor"></a><span class="keyword parmname">Subsidiary</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether a company is more than 50
+                  percent owned by another organization. Available values include:<ul class="ul bulletList">
+            <li class="li">0—Not subsidiary of another organization</li>
+
+            <li class="li">3—Subsidiary of another organization</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdNaics" class="dashAnchor"></a><span class="keyword parmname">ThirdNaics</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional NAICS code used
+to further classify an organization by industry. Maximum size is 6
+characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdNaicsDesc" class="dashAnchor"></a><span class="keyword parmname">ThirdNaicsDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s
+line of business, based on the corresponding NAICS code. Maximum size
+is 120 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdSic" class="dashAnchor"></a><span class="keyword parmname">ThirdSic</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdSic8" class="dashAnchor"></a><span class="keyword parmname">ThirdSic8</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An additional SIC code used to further classify an
+            organization by industry. Maximum size is 8 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdSic8Desc" class="dashAnchor"></a><span class="keyword parmname">ThirdSic8Desc</span></td>
+
+       <td class="entry" headers="d289776e152" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/ThirdSicDesc" class="dashAnchor"></a><span class="keyword parmname">ThirdSicDesc</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+            based on the corresponding SIC code. Maximum size is 80 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/TradeStyle1" class="dashAnchor"></a><span class="keyword parmname">TradeStyle1</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A name, different from its legal name, that an
+                  organization may use for conducting business. Similar to “Doing business
+                  as” or “DBA”. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/TradeStyle2" class="dashAnchor"></a><span class="keyword parmname">TradeStyle2</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<span class="ph" id="AdditionalTradestyleDef"><a name="AdditionalTradestyleDef"><!-- --></a>An additional tradestyle used
+by the organization.</span> Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/TradeStyle3" class="dashAnchor"></a><span class="keyword parmname">TradeStyle3</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional tradestyle used
+by the organization. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/TradeStyle4" class="dashAnchor"></a><span class="keyword parmname">TradeStyle4</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional tradestyle used
+by the organization. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/TradeStyle5" class="dashAnchor"></a><span class="keyword parmname">TradeStyle5</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An additional tradestyle used
+by the organization. Maximum size is 255 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/URL" class="dashAnchor"></a><span class="keyword parmname">URL</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">An organization’s primary website address.
+           Maximum size is 104 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/UsTaxId" class="dashAnchor"></a><span class="keyword parmname">UsTaxId</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The identification number for the company used by the
+                  Internal Revenue Service (IRS) in the administration of tax laws. Also referred to
+                  as Federal Taxpayer Identification Number. Maximum size is 9 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/WomenOwned" class="dashAnchor"></a><span class="keyword parmname">WomenOwned</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether a company is more than 50
+                  percent owned or controlled by a woman. Available values include:<ul class="ul bulletList">
+            <li class="li">Y—Owned by a woman</li>
+
+            <li class="li">N—Not owned by a woman, or unknown</li>
+
+           </ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d289776e149" data-title="Field Name"><a name="//apple_ref/cpp/Field/YearStarted" class="dashAnchor"></a><span class="keyword parmname">YearStarted</span></td>
+
+<td class="entry" headers="d289776e152" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The year the company was established or the year when current
+ownership or management assumed control of the company. Maximum size
+is 4 characters.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to manage D&amp;B
+Company records in your organization.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

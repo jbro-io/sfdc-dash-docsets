@@ -1,0 +1,544 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>WorkOrderFeed | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_WorkOrderFeed"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>WorkOrderFeed</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="TBD"><a name="TBD"><!-- --></a>Represents a single feed item on a work order record
+				detail page. This object is available in API version 36.0 and
+				later.</span></span></div>
+<div class="section">
+<p class="p">A work order feed shows changes to tracked fields on a work order record. It also shows posts and
+				comments about the record. It’s a useful way to stay up to date with changes made to
+				work orders in Salesforce.</p>
+</div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+				<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<div class="p">Work orders must be enabled in your organization, and you can delete all feed items you created.
+				To delete feed items you didn’t create, you must have one of these permissions:<ul class="ul bulletList">
+					<li class="li">“Modify All Data”</li>
+
+					<li class="li">“Modify All” on the Work Order object</li>
+
+					<li class="li">“Moderate Chatter”<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Users with the “Moderate Chatter” permission can
+							delete only the feed items and comments they see.</p>
+</div>
+</div></div></div></div>
+</li>
+
+				</ul>
+</div>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d794580e124">Field Name</th>
+
+								<th class="featureTableHeader  " id="d794580e127">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname">Body</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">textarea</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>The message that appears in the feed. Required when <span class="keyword parmname">Type</span> is
+												<samp class="ph systemoutput">TextPost</samp>. Optional when
+												<span class="keyword parmname">Type</span> is
+												<samp class="ph systemoutput">ContentPost</samp>
+												or<samp class="ph systemoutput">LinkPost</samp>.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/CommentCount" class="dashAnchor"></a><span class="keyword parmname">CommentCount</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">int</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The number of comments associated with this feed item.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConnectionId" class="dashAnchor"></a><span class="keyword parmname">ConnectionId</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/CreatedBy" class="dashAnchor"></a>The ID of the PartnerNetworkConnection. Available if Salesforce to Salesforce is
+											enabled for your organization. When a
+											PartnerNetworkConnection modifies a record that is
+											tracked, the <span class="keyword parmname">CreatedBy</span> field
+											contains the ID of the system administrator.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><span class="keyword parmname">ContentData</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">base64</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Nillable</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>Available in API version 36.0 and earlier only. Required if <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp>. Encoded file data in any format, and can’t be 0
+                        bytes. Setting this field automatically sets <span class="keyword parmname">Type</span> to
+                          <samp class="codeph nolang">ContentPost</samp>.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentDescription" class="dashAnchor"></a><span class="keyword parmname">ContentDescription</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">textarea</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a>Available in API version 36.0 and earlier only. The description of the file
+											specified in <span class="keyword parmname">ContentData</span>.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><span class="keyword parmname">ContentFileName</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>Available in API version 36.0 and earlier only. The name of the file to upload to
+											the feed. Required if <span class="keyword parmname">Type</span> is
+												<samp class="ph systemoutput">ContentPost</samp>. Setting
+											this field sets <span class="keyword parmname">Type</span> to
+												<samp class="ph systemoutput">ContentPost</samp>.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname">ContentSize</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">int</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">Available in API version 36.0 and earlier only. Read only. The size of the file
+											uploaded to the feed in bytes. Determined during
+											insert.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentType" class="dashAnchor"></a><span class="keyword parmname">ContentType</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">Available in API version 36.0 and earlier only. Read only. The MIME type of the file
+											uploaded to the feed. Determined during insert.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/InsertedById" class="dashAnchor"></a><span class="keyword parmname">InsertedById</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">ID of the user who added this object to the feed. For example, if an application
+											migrates posts and comments from another application
+											into a feed, the value is set to the ID of the logged-in
+											user.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsRichText" class="dashAnchor"></a><span class="keyword parmname">IsRichText</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">boolean</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<samp class="ph systemoutput">true</samp> indicates that the body of the feed contains rich
+											text. <samp class="ph systemoutput">false</samp> indicates that
+											the post is rendered as plain text.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/LikeCount" class="dashAnchor"></a><span class="keyword parmname">LikeCount</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">int</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The number of feed likes associated with this feed item.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/LinkUrl" class="dashAnchor"></a><span class="keyword parmname">LinkUrl</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">url</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">The URL of a link post.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">ID of the work order record tracked in the feed. The feed is displayed on the detail
+											page for this record.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/RelatedRecordId" class="dashAnchor"></a><span class="keyword parmname">RelatedRecordId</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">reference</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/ContentVersion" class="dashAnchor"></a>ID of the <span class="keyword parmname">ContentVersion</span> object associated with a content post.
+											This field is null for all posts, except
+												<samp class="ph systemoutput">ContentPost</samp>.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>The title of the feed item. When the <span class="keyword parmname">Type</span> is
+												<samp class="ph systemoutput">LinkPost</samp>, the Link URL
+											is the URL, and this field is the link name.</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d794580e124" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname">Type</span></td>
+
+									<td class="entry" headers="d794580e127" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">The type of feed item.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+						</tbody>
+
+					</table></div>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

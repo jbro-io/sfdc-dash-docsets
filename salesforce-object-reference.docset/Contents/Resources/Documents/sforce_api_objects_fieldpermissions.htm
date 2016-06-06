@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FieldPermissions | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_fieldpermissions"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FieldPermissions</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents the enabled field permissions for the
+            parent PermissionSet.</span> This object is available in API version 24.0 and
+         later.</span></div>
+
+<p class="p">To grant a user access to a field, associate a FieldPermissions record with a PermissionSet that’s assigned to a user. FieldPermissions records are only supported
+         in PermissionSet, not in Profile.</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d421482e121">Field Name</th>
+
+<th class="featureTableHeader  " id="d421482e124">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d421482e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/Field" class="dashAnchor"></a><span class="keyword parmname" id="Field"><a name="Field"><!-- --></a>Field</span></td>
+
+<td class="entry" headers="d421482e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SobjectType" class="dashAnchor"></a>The field’s API name.
+This name must be prefixed with the <span class="keyword parmname">SobjectType</span>. For example, <samp class="codeph nolang">Merchandise__c.Description__c</samp>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d421482e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+<td class="entry" headers="d421482e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a>The <span class="keyword parmname">Id</span> of the field’s parent <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm" title="Represents a set of permissions that’s used to grant additional access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and later.">PermissionSet</a>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d421482e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsEdit" class="dashAnchor"></a><span class="keyword parmname" id="PermsEdit"><a name="PermsEdit"><!-- --></a>PermissionsEdit</span></td>
+
+<td class="entry" headers="d421482e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can edit this field. Requires <span class="keyword parmname">PermissionsRead</span> for the same field to be <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d421482e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a><span class="keyword parmname" id="PermsRead"><a name="PermsRead"><!-- --></a>PermissionsRead</span></td>
+
+<td class="entry" headers="d421482e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can view this field. A FieldPermissions record
+must have at minimum <span class="keyword parmname">PermissionsRead</span> set to <samp class="codeph nolang">true</samp>, or it will be
+deleted.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d421482e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/SobjectType" class="dashAnchor"></a><span class="keyword parmname" id="SobjectType"><a name="SobjectType"><!-- --></a>SobjectType</span></td>
+
+<td class="entry" headers="d421482e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The object’s API name.
+For example, <samp class="codeph nolang">Merchandise__c</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">FieldPermissions work
+similarly to ObjectPermissions. However, FieldPermissions includes
+a <span class="keyword parmname">Field</span> attribute to return the name of the field.</p>
+<p class="p">For
+example, the following query returns all FieldPermissions records
+that have at least the “Read” permission. The results
+includes the field, object, and permission set names.</p>
+<div class="codeSection soql"><div id="highlighter_373765" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_373765_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_373765" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT SobjectType, Field, PermissionsRead, Parent.Name</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM FieldPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE PermissionsRead = True</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">Include the field’s
+parent object when querying FieldPermissions. For
+example, to find all rows that match the Account object’s <span class="keyword parmname">Type</span> field, create the
+following query:</p>
+<div class="codeSection soql"><div id="highlighter_744353" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_744353_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_744353" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, SobjectType, Field</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM FieldPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE Field = 'Account.Type' AND SobjectType = 'Account'</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">Both <span class="keyword parmname">SobjectType</span> and <span class="keyword parmname">Field</span> must be included in the <samp class="codeph nolang">SELECT</samp> line of the query. You must also provide the full API name of the
+field in the form of <samp class="codeph nolang">SobjectType.Field</samp> when querying for a field.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Properties for Field Permissions</h2>
+<p class="p">The auto-number and formula fields have special rules for how field
+permissions work. Both have FieldPermissions records,
+but inserting and updating is limited to <span class="keyword parmname">PermissionsRead</span>. <span class="keyword parmname">PermissionsEdit</span> isn’t allowed for either field type, since these
+fields must be read-only for users.</p>
+<p class="p">The following field types
+don’t return a FieldPermissions record
+because they are assumed to always be readable.</p>
+<ul class="ul bulletList">
+<li class="li"><span class="keyword parmname">Id</span></li>
+
+<li class="li"><span class="keyword parmname">CreatedById</span></li>
+
+<li class="li"><span class="keyword parmname">CreatedDate</span></li>
+
+<li class="li"><span class="keyword parmname">IsDeleted</span></li>
+
+<li class="li"><span class="keyword parmname">LastModifiedById</span></li>
+
+<li class="li"><span class="keyword parmname">LastModifiedDate</span></li>
+
+<li class="li"><span class="keyword parmname">SystemModStamp</span></li>
+
+</ul>
+<p class="p">The following field types don’t return a FieldPermissions record
+because they are assumed to always be readable and writable.</p>
+<ul class="ul bulletList">
+<li class="li"><span class="keyword parmname">OwnerId</span></li>
+
+<li class="li">Master-detail custom (relationship) fields</li>
+
+<li class="li">Universally required custom fields</li>
+
+</ul>
+<p class="p">As a result, the following query returns no records, even
+though users do have some access to some of the fields.</p>
+<div class="codeSection soql"><div id="highlighter_351474" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_351474_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_351474" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Field, SobjectType, PermissionsRead</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM FieldPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE Field='Id'</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">To determine if a field can return
+a FieldPermissions record, you can call a <samp class="codeph nolang">describeSObject()</samp> on the field. For example, <samp class="codeph nolang">describeSObject('Merchandise__c')</samp>, returns all the properties of the Merchandise custom object, including
+field properties. If you’re using a field whose <span class="keyword parmname">permissionable</span> property is <samp class="codeph java">false</samp> (such
+as any of the field types listed in this section), you can’t
+query, insert, update, or delete any field permissions records, because
+none exist.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Working with Custom Activity Fields</h2>
+<p class="p">While
+tasks and events are considered separate objects, they share a common
+set of activity custom fields. As a result, when a custom task field
+is created, a custom event field is also created, and vice versa.
+You can display the custom field on the event layout, task layout,
+or both event and task layouts.</p>
+<p class="p">Although custom activity fields
+are shared between tasks and events, you’ll see separate FieldPermissions records
+for the task and event. However, changes made to one field permission
+record are automatically made to the other. For example, if you create
+a custom activity field, assign field permissions to it in a permission
+set, and run the following query, the query will return two records
+with the same permission value.</p>
+<div class="codeSection soql"><div id="highlighter_997834" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_997834_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_997834" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Field, Id, ParentId, PermissionsEdit, PermissionsRead, SobjectType</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM FieldPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE SobjectType = 'event' OR SobjectType ='task'</code></td></tr></tbody></table></div></div></div></div>
+<p class="p">If
+you then update one of the records with a different set of field permission
+values and run the query again, the same permission values for both
+records are returned.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Nesting Field Permissions</h2>
+<div class="p">You can nest FieldPermissions in
+a PermissionSet query. For example, the following returns any permission sets
+where “Edit Read Only Fields” is <samp class="codeph nolang">true</samp>. Additionally, the result set will
+include both the “Read” and “Edit” field
+permission on the Merchandise object. This is done by nesting the
+SOQL with a field permission query using the relationship name for
+field permissions: <samp class="codeph nolang">FieldPerms</samp>. <div class="codeSection soql"><div id="highlighter_822017" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_822017_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_822017" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT PermissionsEditReadonlyFields,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">(SELECT SobjectType, Field, PermissionsRead, PermissionsEdit</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM FieldPerms</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE SobjectType = 'Merchandise__c')</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">FROM PermissionSet</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">WHERE PermissionsEditReadonlyFields = true</code></td></tr></tbody></table></div></div></div></div>
+</div>
+<p class="p">As a
+result, it’s possible to traverse the relationship between
+the PermissionSet and any child related objects (in this case, FieldPermissions).
+You can do this from the PermissionSet object by using the child relationship (<samp class="codeph nolang">ObjectPerms</samp>, <samp class="codeph nolang">FieldPerms</samp>, and so on) or from the child object by referencing
+the PermissionSet with <samp class="codeph nolang">Parent.<var class="keyword varname">permission_set_attribute</var></samp>.</p>
+<p class="p">It’s important to consider when to use a
+conditional <samp class="codeph soql">WHERE</samp> statement to
+restrict the result set. To query based on an attribute on the permission
+set object, nest the SOQL with the child relationship. However, to
+query based on an attribute on the child object, you must reference
+the permission set parent attribute in your query.</p>
+<div class="p">The following
+two queries return the same columns with different results, based
+on whether you use the child relationship or parent notation.<div class="codeSection soql"><div id="highlighter_335942" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_335942_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_335942" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT PermissionsEditReadonlyFields,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">(SELECT SobjectType, Field, PermissionsRead, PermissionsEdit</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM FieldPerms</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE SobjectType = 'Merchandise__c')</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">FROM PermissionSet</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">WHERE PermissionsEditReadonlyFields = true</code></td></tr></tbody></table></div></div></div></div>
+versus:<div class="codeSection soql"><div id="highlighter_233507" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_233507_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_233507" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT SobjectType, Field, PermissionsRead, PermissionsEdit, Parent.Name,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">Parent.PermissionsEditReadonlyFields</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM FieldPermissions</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE SObjectType='Merchandise__c'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm" title="Represents a set of permissions that’s used to grant additional access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and later.">PermissionSet</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_objectpermissions.htm" title="Represents the enabled object permissions for the parent PermissionSet. This object is available in API version 24.0 and later.">ObjectPermissions</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>CollaborationGroupMember | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_collaborationgroupmember"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>CollaborationGroupMember</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="groupmember_defn"><a name="groupmember_defn"><!-- --></a>Represents a member of a Chatter group. This
+    object is available in API version
+    19.0 and later.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d230793e103">Field</th>
+
+<th class="featureTableHeader  " id="d230793e106">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d230793e103" data-title="Field"><a name="//apple_ref/cpp/Field/CollaborationGroupId" class="dashAnchor"></a><span class="keyword parmname">CollaborationGroupId</span></td>
+
+<td class="entry" headers="d230793e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the associated CollaborationGroup.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d230793e103" data-title="Field"><a name="//apple_ref/cpp/Field/CollaborationRole" class="dashAnchor"></a><span class="keyword parmname" id="CollaborationRole"><a name="CollaborationRole"><!-- --></a>CollaborationRole</span></td>
+
+<td class="entry" headers="d230793e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">
+<div class="p">The role of a group member. Group owners and managers can change
+roles for members of their groups. The valid values are:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang" id="Member"><a name="Member"><!-- --></a>Standard</samp>—Indicates
+that a user is a group member. Members can post and comment in the
+group.</li>
+
+<li class="li">
+<samp class="codeph nolang" id="Manager"><a name="Manager"><!-- --></a>Admin</samp>—Indicates
+that a user is a group manager. Managers can post and comment, change
+member roles, edit group settings, add and remove members, delete
+posts and comments, and edit the group information field.</li>
+
+</ul>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>To change the group owner, use the <span class="keyword parmname">OwnerId</span> field on the CollaborationGroup object.</p>
+</div>
+</div></div></div></div>
+</div>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d230793e103" data-title="Field"><a name="//apple_ref/cpp/Field/LastFeedAccessDate" class="dashAnchor"></a><span class="keyword parmname">LastFeedAccessDate</span></td>
+
+<td class="entry" headers="d230793e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Date and time when a group member last accessed the group’s
+feed. The value is only updated when a member explicitly consumes
+the group’s feed, not when the member sees group posts in other
+feeds, like the profile feed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d230793e103" data-title="Field"><a name="//apple_ref/cpp/Field/MemberId" class="dashAnchor"></a><span class="keyword parmname">MemberId</span></td>
+
+<td class="entry" headers="d230793e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the group member.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d230793e103" data-title="Field"><a name="//apple_ref/cpp/Field/NotificationFrequency" class="dashAnchor"></a><span class="keyword parmname" id="notfre"><a name="notfre"><!-- --></a>NotificationFrequency</span></td>
+
+<td class="entry" headers="d230793e106" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Daily digests" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Email on every post" class="dashAnchor"></a>Required. <span class="ph" id="notfredef"><a name="notfredef"><!-- --></a>The frequency at which Salesforce sends Chatter group email digests
+            to this member. Can only be set by the member or users with the “Modify All
+            Data” permission. </span> The valid values are: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">D</samp>—Daily</li>
+
+            <li class="li">
+<samp class="codeph nolang">W</samp>—Weekly</li>
+
+            <li class="li">
+<samp class="codeph nolang">N</samp>—Never</li>
+
+            <li class="li">
+<samp class="codeph nolang">P</samp>—On every post</li>
+
+           </ul>
+The default value is specified by the member in their Chatter email settings. In communities, the
+            <span class="keyword parmname">Email on every post</span> option is disabled once more than 10,000
+          members choose this setting for the group. All members who had this option selected are
+          automatically switched to <span class="keyword parmname">Daily digests</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to view, create, and delete Chatter group members. You must be a group owner or
+    manager to create members for private Chatter groups.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroup.htm" title="Represents a Chatter group. This object is available in API version 19.0 and later.">CollaborationGroup</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupfeed.htm" title="Represents a single feed item on a Chatter group feed. A group feed shows posts and comments about the group. This object is available in API version 19.0 and later.">CollaborationGroupFeed</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_collaborationgroupmemberrequest.htm" title="Represents a request to join a private Chatter group. This object is available in API version 21.0 and later.">CollaborationGroupMemberRequest</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

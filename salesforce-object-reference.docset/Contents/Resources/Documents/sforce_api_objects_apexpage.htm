@@ -1,0 +1,397 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ApexPage | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_apexpage"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ApexPage</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a single Visualforce page.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d157312e109">Field</th>
+
+<th class="featureTableHeader  " id="d157312e112">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/ApiVersion" class="dashAnchor"></a><span class="keyword parmname">ApiVersion</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The API version for this page. Every page has an API version
+specified at creation. <span class="ph" id="ApiVersionDefault"><a name="ApiVersionDefault"><!-- --></a>If the API version
+is less than 15.0 and <samp class="codeph java">ApiVersion</samp> is not specified, <samp class="codeph java">ApiVersion</samp> defaults
+to 15.0.</span>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/ControllerKey" class="dashAnchor"></a><span class="keyword parmname">ControllerKey</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The identifier for the controller associated with this page:<ul class="ul bulletList">
+<li class="li"><a name="//apple_ref/cpp/Field/ControllerType" class="dashAnchor"></a>If the <span class="keyword parmname">ControllerType</span> parameter is set to <samp class="codeph nolang">Standard</samp> or <samp class="codeph nolang">StandardSet</samp>, this value is the name of the sObject that
+defines the controller.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/ControllerType" class="dashAnchor"></a>If the <span class="keyword parmname">ControllerType</span> parameter is set to <samp class="codeph nolang">Custom</samp>, this value is the name of the Apex class that defines the controller. </li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/ControllerType" class="dashAnchor"></a><span class="keyword parmname">ControllerType</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The type of controller associated with this Visualforce page. Possible values include:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">Not Specified</samp>, for pages
+defined with neither a <samp class="codeph nolang">standardController</samp> nor a <samp class="codeph nolang">controller</samp> attribute
+on the <samp class="codeph apex_page"><span class="tag">&lt;apex:page</span>&gt;</samp> tag</li>
+
+<li class="li">
+<samp class="codeph nolang">Standard</samp>, for pages defined
+ with the <samp class="codeph nolang">standardController</samp> attribute
+on the <samp class="codeph apex_page"><span class="tag">&lt;apex:page</span>&gt;</samp> tag</li>
+
+<li class="li">
+<samp class="codeph nolang">StandardSet</samp>, for pages defined
+ using the <samp class="codeph nolang">standardController</samp> and <samp class="codeph nolang">recordSetVar</samp> attribute
+ on the <samp class="codeph apex_page"><span class="tag">&lt;apex:page</span>&gt;</samp> tag</li>
+
+<li class="li">
+<samp class="codeph nolang">Custom</samp>, for pages defined
+with the <samp class="codeph nolang">controller</samp> attribute
+on the <samp class="codeph apex_page"><span class="tag">&lt;apex:page</span>&gt;</samp> tag</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a> <span class="keyword parmname">Description</span> </td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Description of the Visualforce page.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/isAvailableInTouch" class="dashAnchor"></a><span class="keyword parmname">isAvailableInTouch</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates if Visualforce tabs associated with the Visualforce page can be used in the Salesforce1 app (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). (Use of this field for Salesforce Touch is deprecated.) This field is available in API version
+27.0 and later. <p class="p">Standard object tabs that are overridden with a Visualforce page aren’t supported in Salesforce1, even if you set this field for the page. The default Salesforce1 page for the object is displayed instead of the Visualforce page.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/IsConfirmationTokenRequired" class="dashAnchor"></a><span class="keyword parmname">IsConfirmationTokenRequired</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Defaulted on create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether <samp class="codeph nolang">GET</samp> requests
+for the page require a CSRF confirmation token (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). This field is available in API version
+28.0 and later. <p class="p">If you change this field’s value from <samp class="codeph nolang">false</samp> to <samp class="codeph nolang">true</samp>, links to the page require a CSRF token to be added
+to them, or the page will be inaccessible.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/Markup" class="dashAnchor"></a><span class="keyword parmname">Markup</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Visualforce markup, HTML, Javascript, and any other Web-enabled code that
+defines the content of the page.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The text used to identify the Visualforce page in the Setup area of Salesforce.
+The Label is <strong class="ph b">Label</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Required. Name of this Visualforce page. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d157312e109" data-title="Field"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a><span class="keyword parmname">NamespacePrefix</span></td>
+
+<td class="entry" headers="d157312e112" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The namespace prefix associated
+with this object. Each Developer Edition organization that creates
+a managed package has a unique namespace prefix. Limit: 15 characters.
+You can refer to a component in a managed package by using the <samp class="codeph nolang"><var class="keyword varname">namespacePrefix</var>__<var class="keyword varname">componentName</var></samp> notation. <p class="p">The namespace prefix can have one of the following values:</p>
+<ul class="ul bulletList">
+<li class="li">In Developer Edition organizations, the namespace prefix is set to the namespace prefix of the
+             organization for all objects that support it. There is an exception if an object is in
+             an installed managed package. In that case, the object has the namespace prefix of the
+             installed managed package. This field’s value is the namespace prefix of the Developer
+             Edition organization of the package developer.</li>
+
+<li class="li"><a name="//apple_ref/cpp/Field/NamespacePrefix" class="dashAnchor"></a>In organizations that are not Developer Edition organizations, <span class="keyword parmname">NamespacePrefix</span> is only set for objects that are part
+of an installed managed package. There is no namespace prefix for
+all other objects.</li>
+
+</ul>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use Visualforce pages to add custom
+    content that extends the base Salesforce
+    application functionality. All users in Visualforce-enabled organizations can view
+     Visualforce pages, but the
+    “Customize Application” permission is required to create or update them.</p>
+
+  </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_apexcomponent.htm" title="Represents a definition for a custom component that can be used in a Visualforce page alongside standard components such as &lt;apex:relatedList&gt; and &lt;apex:dataTable&gt;.">ApexComponent</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_staticresource.htm" title="Represents a static resource that can be used in Visualforce markup.">StaticResource</a></div>
+</li>
+<li>
+<div><a class="link" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.pages.meta/pages/" target="_blank" title="Developer's Guide: Visualforce Developer's Guide - html (New Window)">Developer's Guide: Visualforce Developer's Guide</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

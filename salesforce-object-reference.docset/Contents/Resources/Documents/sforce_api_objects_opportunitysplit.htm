@@ -1,0 +1,261 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>OpportunitySplit | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_opportunitysplit"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>OpportunitySplit</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>OpportunitySplit credits one or more opportunity team members with a
+   portion of the opportunity amount. <span class="ph" id="api_version"><a name="api_version"><!-- --></a>This object is available in API version 16.0 and later for
+    pilot customers, and version 28.0 and later for others.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d557785e106">Field</th>
+
+<th class="featureTableHeader  " id="d557785e109">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityId" class="dashAnchor"></a><span class="keyword parmname">OpportunityId</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, FilterGroup, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">ID of the opportunity for which the split is being created.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Opportunity ID" class="dashAnchor"></a>Label is <span class="keyword parmname">Opportunity ID</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/Split" class="dashAnchor"></a><span class="keyword parmname" id="Split-C6416276"><a name="Split-C6416276"><!-- --></a>Split</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Autonumber, Defaulted on create, Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Read-only. Automatically-generated number identifying the split
+within the opportunity.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/SplitAmount" class="dashAnchor"></a><span class="keyword parmname">SplitAmount</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Monetary amount of the split.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Split Amount" class="dashAnchor"></a>Label is <span class="keyword parmname">Split Amount</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/SplitNote" class="dashAnchor"></a><span class="keyword parmname">SplitNote</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable,Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Enter any notes or comments about the split. Character limit is
+255.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Split Note" class="dashAnchor"></a>Label is <span class="keyword parmname">Split Note</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/SplitOwnerId" class="dashAnchor"></a><span class="keyword parmname">SplitOwnerId</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter,Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The opportunity owner.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/User ID" class="dashAnchor"></a>Label is <span class="keyword parmname">User ID</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/SplitPercentage" class="dashAnchor"></a><span class="keyword parmname">SplitPercentage</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">percent</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Split percentage that this team member will receive. If the split
+type is validated to a 100% total, this number can range from 0 to
+100. If the total isn’t validated, this number can range from
+0 to 1,000.</dd>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Split (%)" class="dashAnchor"></a>Label is <span class="keyword parmname">Split (%)</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d557785e106" data-title="Field"><a name="//apple_ref/cpp/Field/SplitTypeId" class="dashAnchor"></a><span class="keyword parmname">SplitTypeId</span></td>
+
+<td class="entry" headers="d557785e109" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Nillable, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Auto-generated, numeric ID for the split type defined by the OpportunitySplitType
+object. This field is available in API version 28 and later.</dd>
+
+<dd class="dd">If this field is blank, the system automatically specifies the
+default split type for the opportunity amount, which is validated
+to 100%.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use the OpportunitySplit object to manage splits for an opportunity.</p>
+<p class="p">If you change
+the opportunity owner using the API,
+the old owner remains on the opportunity team with either Read-only
+access, or the level of access specified in your organization-wide
+defaults.</p>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

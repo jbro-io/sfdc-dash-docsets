@@ -1,0 +1,1341 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>FeedItem | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_feeditem"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>FeedItem</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="feeditem_defn"><a name="feeditem_defn"><!-- --></a><span class="ph" id="summary"><a name="summary"><!-- --></a>FeedItem represents an entry in the feed, such as
+        changes in a record feed, including text posts, link posts, and content posts.</span>
+      <span class="ph" id="FeedItemAvailVersion"><a name="FeedItemAvailVersion"><!-- --></a>This object is available in API version 21.0 and later.</span>
+      This object replaces FeedPost.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>,
+          <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>,
+          <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<div class="p">You can delete all feed items you created.
+To delete feed items you didn’t create, you must have one of
+these permissions:<ul class="ul bulletList">
+          <li class="li">“Modify All Data”</li>
+
+          <li class="li">“Moderate Chatter” <div class="box message info" id="d254327e84-d254465e83">
+<a name="d254327e84-d254465e83"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Users with the “Moderate Chatter”
+permission can delete only the feed items and comments they see.</p>
+</div>
+</div></div></div>
+</div>
+</li>
+
+          <li class="li">“Manage Unlisted Groups”<p class="p">Only users with this
+              permission can delete items in unlisted groups.</p>
+</li>
+
+        </ul>
+<span class="ph" id="mad_user_delete"><a name="mad_user_delete"><!-- --></a>Only users with the “Modify All Data” permission
+          can delete a FeedItem of
+            <span class="keyword parmname">Type</span>
+          <samp class="codeph nolang">TrackedChange</samp>.</span>
+      </div>
+<p class="p">If the logged-in user has the “Insert
+            System Field Values for Chatter Feeds” user permission, the <samp class="codeph soql">create</samp> field property is available on
+              <span class="keyword parmname">CreatedBy</span> and <span class="keyword parmname">CreatedDate</span> system fields.
+            During migration, the logged-in user can set these fields to the original post’s author
+            and creation date. The fields can’t be updated after migration.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d409560e161">Field Name</th>
+
+<th class="featureTableHeader  " id="d409560e164">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+            <tr id="FeedBodyRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/BestCommentId" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_BestCommentId"><a name="FeedItem_BestCommentId"><!-- --></a>BestCommentId</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The Id of the comment marked as best answer on a question post.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_Body"><a name="FeedItem_Body"><!-- --></a>Body</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435387">textarea</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The content of the FeedItem. <span class="ph" id="BodyDescReqWhenTextPost"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="BodyDescReqWhenTextPost"><!-- --></a>Required when
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">TextPost</samp>. Optional when <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp> or <samp class="codeph nolang">LinkPost</samp>. This field is the message that appears in the
+                        feed.</span><div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>See the <a class="xref" href="#isRichTextDes"><a name="//apple_ref/cpp/Field/IsRichText" class="dashAnchor"></a><span class="keyword parmname">IsRichText</span></a>
+                        field for a list of HTML tags supported in the body of rich text
+                        posts.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="CommentCountRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/CommentCount" class="dashAnchor"></a><span class="keyword parmname">CommentCount</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435108">int</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="desc_CommentCount"><a name="desc_CommentCount"><!-- --></a>The number of FeedComments associated with this
+                        feed item.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ConnectionIdRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ConnectionId" class="dashAnchor"></a><span class="keyword parmname" id="sforce_api_object_feeditem_connectionId"><a name="sforce_api_object_feeditem_connectionId"><!-- --></a>ConnectionId</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="feeds_connectionid_def"><a name="//apple_ref/cpp/Field/ConnectionId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CreatedBy" class="dashAnchor"></a><a name="feeds_connectionid_def"><!-- --></a>When a PartnerNetworkConnection modifies a record that is tracked, the <span class="keyword parmname">CreatedBy</span>
+                        field contains the ID of the system administrator. The
+                          <span class="keyword parmname">ConnectionId</span> contains the ID of the PartnerNetworkConnection. Available if Salesforce to Salesforce is
+                        enabled for your organization.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ContentDataRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_ContentData"><a name="FeedItem_ContentData"><!-- --></a>ContentData</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435003">base64</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Available in API version 35.0 and earlier only. <span class="ph" id="RequiredforContentType"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="RequiredforContentType"><!-- --></a>This field is required if
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp>.</span>
+                      <span class="ph" id="ContentDataDesc"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="ContentDataDesc"><!-- --></a>Encoded file data in any format, and can’t be 0
+                        bytes. Setting this field automatically sets <span class="keyword parmname">Type</span> to
+                          <samp class="codeph nolang">ContentPost</samp>.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ContentDescriptionRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentDescription" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_ContentDescription"><a name="FeedItem_ContentDescription"><!-- --></a>ContentDescription</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435387">textarea</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Available in API version 35.0 and earlier only. <span class="ph" id="ContentDescriptionDesc"><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><a name="ContentDescriptionDesc"><!-- --></a>The description of the file specified in
+                          <span class="keyword parmname">ContentData</span>.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ContentFileNameRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_ContentFileName"><a name="FeedItem_ContentFileName"><!-- --></a>ContentFileName</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435116">string</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>Available in API version 35.0 and earlier only. This field is required if
+                          <span class="keyword parmname">Type</span> is <samp class="codeph nolang">ContentPost</samp>.
+                      <span class="ph" id="ContentFileNameDesc"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><a name="ContentFileNameDesc"><!-- --></a>The name of the file uploaded to the feed.
+                        Setting <span class="keyword parmname">ContentFileName</span> automatically sets
+                          <span class="keyword parmname">Type</span> to <samp class="codeph nolang">ContentPost</samp>.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ContentSizeRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentSize" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_ContentSize"><a name="FeedItem_ContentSize"><!-- --></a>ContentSize</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435108">int</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Available in API version 35.0 and earlier only. <span class="ph" id="ContentSizeDesc"><a name="ContentSizeDesc"><!-- --></a>This field is the size of the file (in bytes) uploaded to the feed. This
+                        field is read-only and is automatically determined during insert.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ContentTypeRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ContentType" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_ContentType"><a name="FeedItem_ContentType"><!-- --></a>ContentType</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435116">string</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Available in API version 35.0 and earlier only. <span class="ph" id="ContentTypeDesc"><a name="ContentTypeDesc"><!-- --></a>This field is the MIME type of the file uploaded to the feed. This field is
+                        read-only and is automatically determined during insert.</span>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="FeedPostIdRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/FeedPostId" class="dashAnchor"></a><span class="keyword parmname" id="field_FeedPostId"><a name="field_FeedPostId"><!-- --></a>FeedPostId</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="do_not_use_FeedPostId"><a name="do_not_use_FeedPostId"><!-- --></a>This field was removed in API version 22.0,
+                        and is available in earlier versions for backward compatibility only.</span>
+                      <p class="p">ID of the associated <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_feedpost.htm#sforce_api_objects_feedpost" title="FeedPost represents the following types of changes in a record feed, such as AccountFeed: text posts, link posts, and content posts. This object is available in API version 18.0 through 21.0. FeedPost is no longer available in later versions. Starting with API version 21.0, use FeedItem to represent text posts, link posts, and content posts in feeds.">FeedPost</a>. A <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_feedpost.htm#sforce_api_objects_feedpost" title="FeedPost represents the following types of changes in a record feed, such as AccountFeed: text posts, link posts, and content posts. This object is available in API version 18.0 through 21.0. FeedPost is no longer available in later versions. Starting with API version 21.0, use FeedItem to represent text posts, link posts, and content posts in feeds.">FeedPost</a> represents the following types of
+                        changes in an FeedItem: changes to tracked fields, text posts, link posts,
+                        and content posts.</p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasContent" class="dashAnchor"></a><span class="keyword parmname">HasContent</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435021">boolean</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435199">Defaulted on create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the feed item has content.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/HasLink" class="dashAnchor"></a><span class="keyword parmname">HasLink</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435021">boolean</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435199">Defaulted on create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Indicates whether the feed item has a link attached.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="InsertedByIdRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/InsertedById" class="dashAnchor"></a><span class="keyword parmname">InsertedById</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/InsertedBy" class="dashAnchor"></a>ID of the user who added this object to the feed.
+                        For example, if an application migrates posts and comments from another
+                        application into a feed, the <span class="keyword parmname">InsertedBy</span> value is set to
+                        the ID of the logged-in user.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="IsDeletedRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a><span class="keyword parmname">IsDeleted</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435021">boolean</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435199">Defaulted on create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="stand_sys_field"><a name="stand_sys_field"><!-- --></a>Standard system field.</span>
+                      Indicates whether the record has been moved to the Recycle Bin (<samp class="codeph java">true</samp>) or not (<samp class="codeph java">false</samp>).
+                    </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsRichText" class="dashAnchor"></a><span class="keyword parmname">IsRichText</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435021">boolean</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435199">Defaulted on create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd" id="isRichTextDes"><a name="//apple_ref/cpp/Field/IsRichText" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a>
+<a name="isRichTextDes"><!-- --></a>Indicates whether the feed item <span class="keyword parmname">Body</span>
+                      contains rich text. Set <span class="keyword parmname">IsRichText</span> to <samp class="codeph nolang">true</samp> if you post a rich text feed item via the
+                      SOAP API. Otherwise, the post is rendered as plain text.<p class="p">Rich text supports
+                        the following HTML tags:</p>
+<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">&lt;p&gt;</samp><div class="box message confirm"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpTips_icon.gif" alt="Tip"><div class="mediaBd">
+<h4 class="mbs">Tip</h4>
+<p>Though the
+                              <samp class="codeph nolang">&lt;br&gt;</samp> tag isn’t supported, you
+                            can use <samp class="codeph nolang"> &lt;p&gt;&amp;nbsp;&lt;/p&gt;</samp> to
+                            create lines.</p>
+</div>
+</div></div></div></div>
+</li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;b&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;i&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;u&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;s&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;ul&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;ol&gt;</samp></li>
+
+                        <li class="li"><samp class="codeph nolang">&lt;li&gt;</samp></li>
+
+                        <li class="li">
+<samp class="codeph nolang">&lt;img&gt;</samp><p class="p">The <samp class="codeph nolang">&lt;img&gt;</samp> tag is accessible only via the
+                            API and must reference files in Salesforce similar to this example:
+                              <span class="ph filepath">&lt;img
+                            src="sfdc://069B0000000omjh"&gt;&lt;/img&gt;</span></p>
+</li>
+
+                      </ul>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>In API
+                        version 35.0 and later, the system replaces special characters in rich text
+                        with escaped HTML. In API version 34.0
+                        and prior, all rich text appears as a plain-text representation.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastEditById" class="dashAnchor"></a><span class="keyword parmname" id="field_LastEditById"><a name="field_LastEditById"><!-- --></a>LastEditById</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">ID of the user who last edited the feed item.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastEditDate" class="dashAnchor"></a><span class="keyword parmname" id="field_LastEditDate"><a name="field_LastEditDate"><!-- --></a>LastEditDate</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435039">datetime</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The date the feed item was last edited.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="LikeCountRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/LikeCount" class="dashAnchor"></a><span class="keyword parmname">LikeCount</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435108">int</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="desc_LikeCount"><a name="desc_LikeCount"><!-- --></a>The number of FeedLikes associated with this feed
+                        item.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="LinkUrlRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/LinkUrl" class="dashAnchor"></a><span class="keyword parmname" id="feedItem_LinkUrl"><a name="feedItem_LinkUrl"><!-- --></a>LinkUrl</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435395">url</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="LinkUrl_Def"><a name="LinkUrl_Def"><!-- --></a>The URL of a <samp class="codeph nolang">LinkPost</samp>.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a><span class="keyword parmname" id="NetworkScopt"><a name="NetworkScopt"><!-- --></a>NetworkScope</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <a name="NetworkScopeDesc"><!-- --></a><dl class="dl detailList" id="NetworkScopeDesc">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435370">picklist</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435238">Restricted picklist</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="NetworkScopeDesc1"><a name="NetworkScopeDesc1"><!-- --></a>Specifies whether this feed item is available in
+                        the default <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_network.htm" title="Represents a community, which is a customizable public or private space where employees, end-customers, and partners can collaborate on best practices and business processes. Communities give you the opportunity to share information, records, and files with coworkers and related external stakeholders all in one place. This object is available in API version 26.0 and later.">community</a>, a specific community, or all communities. This field is available in API version 26.0
+                        and later, if Salesforce
+                        Communities is enabled for your organization.</span><div class="p" id="NetworkScopeValues"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a>
+<a name="NetworkScopeValues"><!-- --></a><span class="keyword parmname">NetworkScope</span> can have the following values: <ul class="ul bulletList">
+                          <li class="li"><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a>
+<span class="keyword parmname">NetworkId</span>—The ID of the community in which the FeedItem is available. If left empty, the feed item is
+                            only available in the default community.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">AllNetworks</samp>—The feed item
+                            is available in all communities.</li>
+
+                        </ul>
+</div>
+<div class="p" id="NetworkScopeExceptions"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a>
+<a name="NetworkScopeExceptions"><!-- --></a>Note the following exceptions for
+                          <span class="keyword parmname">NetworkScope</span>:<ul class="ul bulletList">
+                          <li class="li"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NetworkId" class="dashAnchor"></a>Only feed items with a <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a> or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm#sforce_api_objects_user" title="Represents a user in your organization.">User</a> parent can set a
+                              <span class="keyword parmname">NetworkId</span> or a null value for
+                              <span class="keyword parmname">NetworkScope</span>.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a>For feed items with a record parent, users can set
+                              <span class="keyword parmname">NetworkScope</span> only to <samp class="codeph nolang">AllNetworks</samp>.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/NetworkScope" class="dashAnchor"></a>You can’t filter a FeedItem on the
+                              <span class="keyword parmname">NetworkScope</span> field. </li>
+
+                        </ul>
+</div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="ParentId">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><span class="ph" id="parentid_desc"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><a name="parentid_desc"><!-- --></a>ID of the object type to which the FeedItem object is
+                        related. For example, set this field to a <span class="keyword parmname">UserId</span> to
+                        post to someone’s profile feed, or an <span class="keyword parmname">AccountId</span>
+                        to post to a specific account.</span></dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="RelatedRecordIdRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/RelatedRecordId" class="dashAnchor"></a><span class="keyword parmname" id="Related_Record_Id"><a name="Related_Record_Id"><!-- --></a>RelatedRecordId</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435379">reference</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">
+<span class="ph" id="relatedrecordid_descrip_short"><a name="relatedrecordid_descrip_short"><!-- --></a>ID of the ContentVersion object associated with a <samp class="codeph nolang">ContentPost</samp>. For Work.com thanks posts, it’s the ID of the WorkThanks object associated with a <samp class="codeph nolang">RypplePost</samp>.
+                        This field is typically null for all posts except <samp class="codeph nolang">ContentPost</samp> and <samp class="codeph nolang">RypplePost</samp>.</span><p class="p"><span class="ph" id="relatedrecordid_descrip2"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="relatedrecordid_descrip2"><!-- --></a>For
+                          example, set this field to an existing <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_contentversion.htm#sforce_api_objects_contentversion" title="Represents a specific version of a document in Salesforce CRM Content or Salesforce Files. This object is available in versions 17.0 and later for Salesforce CRM Content documents. This object is available in versions 20.0 and later for Salesforce Files.">ContentVersion</a> and post it to a feed as a FeedItem object of
+                            <span class="keyword parmname">Type</span>
+                          <samp class="codeph nolang">ContentPost</samp>.</span></p>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Revision" class="dashAnchor"></a><span class="keyword parmname" id="field_Revision"><a name="field_Revision"><!-- --></a>Revision</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435108">int</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>,
+                        <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The revision number of the feed item.</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status (Beta)" class="dashAnchor"></a><span class="keyword parmname" id="field_Status"><a name="field_Status"><!-- --></a>Status (Beta)</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435370">picklist</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>,
+                        <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435238">Restricted picklist</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether this feed item is published and visible to all who have
+                      access to the feed. This field is available in API version 37.0 and
+                      later.</dd>
+
+                    <dd class="dd">Possible values are:<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">Published</samp>—The feed item is
+                          visible to all who have access to the feed.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">PendingReview</samp>—The feed item
+                          is visible to its author and to users who can see the item and have
+                          “ViewAllData” or “CanApproveFeedPost” permission. The feed item can be
+                          deleted and edited by its author and users who can see the item and have
+                          "CanApproveFeedPost" or "ModifyAllData" permission.</li>
+
+                      </ul>
+</dd>
+
+                  
+                </dl>
+
+                <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This release contains a beta version of the pre-moderation feature, which
+                  means it’s a high-quality feature with <a class="xref" href="https://releasenotes.docs.salesforce.com/en-us/summer16/release-notes/rn_networks_moderation_rules_review.htm" target="_blank" title="HTML (New Window)">known
+                    limitations</a>. This feature isn’t generally available unless or until
+                  Salesforce announces its general availability in documentation or in press
+                  releases or public statements. We can’t guarantee general availability within any
+                  particular time frame or at all. Make your purchase decisions only based on
+                  generally available products and features. You can provide feedback and
+                  suggestions for this feature in the <a class="xref" href="https://success.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F9300000001og8CAA" target="_blank" title="HTML (New Window)">Community
+                    Implementation</a> group in the Success Community.</p>
+</div>
+</div></div></div></div>
+
+              </td>
+
+            </tr>
+
+            <tr id="TitleRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_Title"><a name="FeedItem_Title"><!-- --></a>Title</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/primitive_data_types.htm#i1435116">string</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a>
+<span class="ph" id="title_desc"><a name="title_desc"><!-- --></a>The title of the FeedItem. <span class="ph" id="title_desc_linkpost"><a name="//apple_ref/cpp/Field/LinkUrl" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><a name="title_desc_linkpost"><!-- --></a>When the <span class="keyword parmname">Type</span> is <samp class="codeph nolang">LinkPost</samp>, the <span class="keyword parmname">LinkUrl</span> is the URL and this
+                          field is the link name.</span></span> The <span class="keyword parmname">Title</span> field can
+                      be updated on posts of <span class="keyword parmname">Type</span>
+                      <samp class="codeph nolang">QuestionPost</samp>. </dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr id="TypeRow">
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a><span class="keyword parmname" id="FeedItem_Type"><a name="FeedItem_Type"><!-- --></a>Type</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <dl class="dl detailList">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435370">picklist</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435238">Restricted picklist</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">The type of FeedItem. Except for <samp class="codeph nolang">ContentPost</samp>, <samp class="codeph nolang">LinkPost</samp>, and
+                        <samp class="codeph nolang">TextPost</samp>, don’t create FeedItem types
+                      directly from the API.<a name="TypePicklist"><!-- --></a><ul class="ul bulletList" id="TypePicklist">
+                        <li class="li">
+                          <p class="p"><samp class="codeph nolang">ActivityEvent</samp>—indirectly
+                            generated event when a user or the API adds a
+                              <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_task.htm#sforce_api_objects_task" title="Represents a business activity such as making a phone call or other to-do items. In the user interface, Task and Event records are collectively referred to as activities.">Task</a> associated with a feed-enabled parent
+                            record (excluding email tasks on cases). Also occurs when a user or the
+                              API adds
+                            or updates a <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_task.htm#sforce_api_objects_task" title="Represents a business activity such as making a phone call or other to-do items. In the user interface, Task and Event records are collectively referred to as activities.">Task</a> or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_event.htm#sforce_api_objects_event" title="Represents an event in the calendar. In the user interface, event and task records are collectively referred to as activities.">Event</a> associated with a case record
+                            (excluding email and call logging).</p>
+
+                          <p class="p">For a recurring <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_task.htm#sforce_api_objects_task" title="Represents a business activity such as making a phone call or other to-do items. In the user interface, Task and Event records are collectively referred to as activities.">Task</a> with <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_casefeed.htm#sforce_api_objects_casefeed" title="Represents a single feed item in the feed displayed on the detail page for a case record. A case feed shows recent changes to a case record for any fields that are tracked in feeds, and comments and posts about the record. It is a useful way to stay up-to-date with changes to cases. This object is available in API version 18.0 and later.">CaseFeed</a> disabled, one event is generated for the series
+                            only. For a recurring <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_task.htm#sforce_api_objects_task" title="Represents a business activity such as making a phone call or other to-do items. In the user interface, Task and Event records are collectively referred to as activities.">Task</a> with <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_casefeed.htm#sforce_api_objects_casefeed" title="Represents a single feed item in the feed displayed on the detail page for a case record. A case feed shows recent changes to a case record for any fields that are tracked in feeds, and comments and posts about the record. It is a useful way to stay up-to-date with changes to cases. This object is available in API version 18.0 and later.">CaseFeed</a> enabled, events are generated for the series and
+                            each occurrence.</p>
+
+                        </li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="advancedTextPost"><a name="advancedTextPost"><!-- --></a>AdvancedTextPost</samp>—created when a user posts a group
+                          announcement.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">AnnouncementPost</samp>—Not
+                          used.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">ApprovalPost</samp>—generated when
+                          a user submits an approval.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">BasicTemplateFeedItem</samp>—Not
+                          used.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">CanvasPost</samp>—a post made by a
+                          canvas app posted on a feed.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">CollaborationGroupCreated</samp>—generated when a user creates a
+                          public group.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">CollaborationGroupUnarchived</samp>—Not used.</li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="contentPost"><a name="contentPost"><!-- --></a>ContentPost</samp>—a post with an attached file.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">CreatedRecordEvent</samp>—generated
+                          when a user creates a record from the publisher.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">DashboardComponentAlert</samp>—generated when a dashboard metric
+                          or gauge exceeds a user-defined threshold.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">DashboardComponentSnapshot</samp>—created when a user posts a
+                          dashboard snapshot on a feed.</li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="linkPost"><a name="linkPost"><!-- --></a>LinkPost</samp>—a
+                          post with an attached URL.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">PollPost</samp>—a poll posted on a
+                          feed.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">ProfileSkillPost</samp>—generated
+                          when a skill is added to a user’s Chatter
+                          profile.</li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="questionPost"><a name="questionPost"><!-- --></a>QuestionPost</samp>—generated when a user posts a question.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">ReplyPost</samp>—generated when
+                          Chatter Answers posts a reply.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">RypplePost</samp>—generated when a
+                          user creates a Thanks badge in Work.com.</li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="textPost"><a name="textPost"><!-- --></a>TextPost</samp>—a
+                          direct text entry on a feed.</li>
+
+                        <li class="li">
+<samp class="codeph nolang" id="type_trackedchange"><a name="type_trackedchange"><!-- --></a>TrackedChange</samp>—a change or group of changes to a tracked
+                          field.</li>
+
+                        <li class="li">
+<samp class="codeph nolang">UserStatus</samp>—automatically
+                          generated when a user adds a post. Deprecated.</li>
+
+                      </ul>
+<div class="p" id="case_feed_type_values"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>
+<a name="case_feed_type_values"><!-- --></a>The following values appear in the
+                          <span class="keyword parmname">Type</span> picklist for all feed objects but apply only to
+                          <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_casefeed.htm#sforce_api_objects_casefeed" title="Represents a single feed item in the feed displayed on the detail page for a case record. A case feed shows recent changes to a case record for any fields that are tracked in feeds, and comments and posts about the record. It is a useful way to stay up-to-date with changes to cases. This object is available in API version 18.0 and later.">CaseFeed</a>: <ul class="ul bulletList">
+                          <li class="li">
+<samp class="codeph nolang">AttachArticleEvent</samp>—generated event when a user attaches
+                            an article to a case.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">CallLogPost</samp>—generated
+                            event when a user logs a call for a case through the user interface. CTI
+                            calls also generate this event.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">CaseCommentPost</samp>—generated
+                            event when a user adds a case comment for a case object.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">ChangeStatusPost</samp>—generated
+                            event when a user changes the status of a case.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">ChatTranscriptPost</samp>—generated event when Live Agent
+                            transcript is saved to a case.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">EmailMessageEvent</samp>—generated event when an email related
+                            to a case object is sent or received.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">FacebookPost</samp>—generated
+                            when a Facebook post is created from a case. Deprecated.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">MilestoneEvent</samp>—generated
+                            when a case milestone is completed or reaches violation status.</li>
+
+                          <li class="li">
+<samp class="codeph nolang">SocialPost</samp>—generated when
+                            a social post is created from a case.</li>
+
+                        </ul>
+</div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/ContentFileName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ContentData" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>If you set <span class="keyword parmname">Type</span> to <samp class="codeph nolang">ContentPost</samp>, also specify
+                          <span class="keyword parmname">ContentData</span> and
+                        <span class="keyword parmname">ContentFileName</span>.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d409560e161" data-title="Field Name"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a><span class="keyword parmname" id="Visibility"><a name="Visibility"><!-- --></a>Visibility</span></td>
+
+              <td class="entry" headers="d409560e164" data-title="Details">
+                <a name="VisibilityDesc"><!-- --></a><dl class="dl detailList" id="VisibilityDesc">
+                  
+                    <dt class="dt dlterm">Type</dt>
+
+                    <dd class="dd"><a class="xref" href="atlas.en-us.api.meta/api/field_types.htm#i1435370">picklist</a></dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Properties</dt>
+
+                    <dd class="dd">
+<a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435191">Create</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435212">Filter</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_groupable">Group</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435217">Nillable</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435238">Restricted picklist</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#field_access_sortable">Sort</a>, <a class="xref" href="atlas.en-us.api.meta/api/access_for_fields.htm#i1435259">Update</a>
+</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Description</dt>
+
+                    <dd class="dd">Specifies whether this feed item is available to all users or internal users
+                      only. This field is available in API version 26.0
+                      and later, if Salesforce Communities
+                      is enabled for your organization.<div class="p"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>
+<span class="keyword parmname">Visibility</span> can have
+                        the following values: <ul class="ul bulletList">
+                          <li class="li">
+<samp class="codeph nolang">AllUsers</samp>—The feed item is
+                            available to all users who have permission to see the feed item. </li>
+
+                          <li class="li">
+<samp class="codeph nolang" id="InternalUsers-4D1EB2B9"><a name="InternalUsers-4D1EB2B9"><!-- --></a>InternalUsers</samp>—The feed item is available to internal
+                            users only.</li>
+
+                        </ul>
+</div>
+<div class="p"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>Note the following exceptions for
+                          <span class="keyword parmname">Visibility</span>: <ul class="ul bulletList">
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>For record posts, <span class="keyword parmname">Visibility</span> is set to <samp class="codeph nolang">InternalUsers</samp> for all internal users by
+                            default. </li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>External users can set <span class="keyword parmname">Visibility</span> only to <samp class="codeph nolang">AllUsers</samp>.</li>
+
+                          <li class="li"><a name="//apple_ref/cpp/Field/Visibility" class="dashAnchor"></a>
+<span class="keyword parmname">Visibility</span> can be updated on record posts.</li>
+
+                          <li class="li">The <samp class="codeph nolang">Update</samp> property is supported
+                            only for feed items posted on records.</li>
+
+                        </ul>
+</div>
+</dd>
+
+                  
+                </dl>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+        <li class="li">If you are using API
+          version 23.0 or later and have “View All Data” permission, you can directly
+          query for a FeedItem. The following example returns the 20 most recent feed
+          items.<div class="codeSection soql"><div id="highlighter_521255" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_521255_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_521255" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT ID, CreatedDate, CreatedById, CreatedBy.FirstName, CreatedBy.LastName, ParentId, Parent.Name, Body,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;</code><code class="plain">(SELECT ID, FieldName, OldValue, NewValue FROM FeedTrackedChanges ORDER BY ID DESC) </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM FeedItem </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE CreatedDate &gt; LAST_MONTH </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">ORDER BY CreatedDate DESC</code></td></tr></tbody></table></div></div></div></div>
+</li>
+
+        <li class="li">If you are using an earlier API version than version 23.0,
+          query FeedItem objects through a feed (such as <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_accountfeed.htm#sforce_api_objects_accountfeed" title="Represents a single feed item on an account record detail page. This object is available in API version 18.0 and later.">AccountFeed</a> or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_opportunityfeed.htm#sforce_api_objects_opportunityfeed" title="Represents a single feed item in the feed displayed on the detail page for an opportunity record. This object is available in API version 18.0 and later.">OpportunityFeed</a>).
+          The following example returns all feed items for a given account, ordered by date
+            descending:<div class="codeSection soql"><div id="highlighter_624140" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_624140_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_624140" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Type, FeedItem.Body </code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM AccountFeed </code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE ParentId = AccountId ORDER BY CreatedDate DESC</code></td></tr></tbody></table></div></div></div></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Provide
+            the <span class="keyword parmname">ParentId</span> for API version 22.0 and earlier.</p>
+</div>
+</div></div></div></div>
+</li>
+
+        <li class="li">A FeedItem of type <samp class="codeph nolang">UserStatus</samp> is automatically
+          created when a user adds a post to update the status. You can’t explicitly create a FeedItem of type <samp class="codeph nolang">UserStatus</samp>.</li>
+
+        <li class="li">The FeedItem object doesn’t support aggregate functions in queries.</li>
+
+        <li class="li">If the logged-in user has the “Insert
+            System Field Values for Chatter Feeds” user permission, the <samp class="codeph soql">create</samp> field property is available on
+              <span class="keyword parmname">CreatedBy</span> and <span class="keyword parmname">CreatedDate</span> system fields.
+            During migration, the logged-in user can set these fields to the original post’s author
+            and creation date. The fields can’t be updated after migration.</li>
+
+        <li class="li">The size limit for an attachment on a profile or news feed is 25 MB.</li>
+
+        <li class="li">The size limit for an attachment on a record feed is 5 MB.</li>
+
+        <li class="li">You can’t use the content fields to update or delete the content.</li>
+
+        <li class="li">You can’t filter or update the content fields.</li>
+
+        <li class="li">Deleting a FeedItem via the API also deletes the associated
+          content. Likewise, undeleting a FeedItem restores associated content.<div class="box message info" id="feedpost_hard_delete">
+<a name="feedpost_hard_delete"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This object is hard deleted. It isn’t sent to the Recycle Bin.</p>
+</div>
+</div></div></div>
+</div>
+</li>
+
+        <li class="li">After uploading to a feed, it is possible for an attachment or document to be deleted,
+          marked private, or hidden by sharing rules. In this case, all content fields in a FeedItem
+          object appear as <samp class="codeph soql">null</samp> in a SOQL query.</li>
+
+        <li class="li">You can’t explicitly create or delete a <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_feedtrackedchange.htm#topic-title">FeedTrackedChange</a> record.</li>
+
+        <li class="li">If you insert a FeedItem or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_feedcomment.htm#topic-title">FeedComment</a> of <span class="keyword parmname">Type</span>
+          <samp class="codeph nolang">ContentPost</samp> on a <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm#sforce_api_objects_user" title="Represents a user in your organization.">User</a> or <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_group.htm#sforce_api_objects_group" title="A set of User records.">Group</a> to create a file, the <span class="keyword parmname">NetworkScope</span>
+          field value of the FeedItem is passed to the file.</li>
+
+        <li class="li">If you use an Apex
+          trigger to modify the <span class="keyword parmname">Body</span> of a FeedItem object, all mentions
+          hyperlinks are converted to plain text. The mentioned users don’t get email
+          notifications.</li>
+
+        <li class="li">If you insert rich text into the feed item body, make sure that the case of the opening
+          and closing HTML tags matches. For example, <samp class="codeph nolang">&lt;b&gt;This is bold
+            text&lt;/B&gt;</samp> generates an error. </li>
+
+        <li class="li">To check file sharing with Apex triggers, write
+          triggers on ContentDocumentLink instead of FeedItem. For a ContentDocumentLink trigger example, see <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_contentdocumentlink.htm" title="Represents the link between a Salesforce CRM Content document or Salesforce file and where it's shared. A file can be shared with other users, groups, records, and Salesforce CRM Content libraries. This object is available in versions 21.0 and later for Salesforce CRM Content documents and Salesforce Files.">ContentDocumentLink</a>.</li>
+
+        <li class="li">In API version 36.0 and later, use <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_feedattachment.htm" title="Represents an attachment to a feed item, such as a file attachment or a link. Use FeedAttachment to add various attachments to one feed item. This object is available in API version 36.0 and later.">FeedAttachment</a> to attach one or more
+          content items to a FeedItem. As a result of multiple attachment support through
+          FeedAttachment, all fields related to content attachments have been removed. These fields
+          are: <span class="keyword parmname">ContentData</span>, <span class="keyword parmname">ContentDescription</span>, <span class="keyword parmname">ContentFileName</span>, <span class="keyword parmname">ContentSize</span>, and <span class="keyword parmname">ContentType</span>.</li>
+
+      </ul>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

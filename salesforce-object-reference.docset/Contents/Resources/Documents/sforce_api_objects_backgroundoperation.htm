@@ -1,0 +1,682 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>BackgroundOperation | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_BackgroundOperation"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>BackgroundOperation</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a background operation in an asynchronous job queue. This
+			object is available in API version 35.0 and later.</span></div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d186966e96">Field Name</th>
+
+							<th class="featureTableHeader  " id="d186966e99">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Error" class="dashAnchor"></a><span class="keyword parmname">Error</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The error message for the operation. Applies only if the
+                    operation has an error status.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExecutionGroup" class="dashAnchor"></a><span class="keyword parmname">ExecutionGroup</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Applies only if the operation is
+                    merged with other operations into an execution group to be processed in
+                    bulk. Identifies the execution group.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/ExpiresAt" class="dashAnchor"></a><span class="keyword parmname">ExpiresAt</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">After this time, the operation is removed from the
+											asynchronous job queue. Applies only if the operation
+											has a status of complete, canceled, error, or
+											merged.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/FinishedAt" class="dashAnchor"></a><span class="keyword parmname">FinishedAt</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When the operation reached the status of completed or
+											error.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/GroupLeaderId" class="dashAnchor"></a><span class="keyword parmname">GroupLeaderId</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Applies only if the operation is
+                    merged with other operations into an execution group to be processed in
+                    bulk. Identifies the operation that’s selected as the
+											leader of the execution group.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, idLookup, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Identifies the background operation.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/NumFollowers" class="dashAnchor"></a><span class="keyword parmname">NumFollowers</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Applies only if the operation is
+                    merged with other operations into an execution group to be processed in
+                    bulk. Number of other operations that are in the execution
+											group.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentKey" class="dashAnchor"></a><span class="keyword parmname">ParentKey</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, idLookup, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Tag that identifies related sets of operations, if
+											any.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/ProcessAfter" class="dashAnchor"></a><span class="keyword parmname">ProcessAfter</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The operation is scheduled to be processed after this
+											time.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/RetryBackoff" class="dashAnchor"></a><span class="keyword parmname">RetryBackoff</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/RetryBackoff" class="dashAnchor"></a>Applies only if the
+                    operation has an error status. The first retry is attempted immediately. Each
+											subsequent retry is increasingly delayed according to an
+											exponential expression that’s multiplied by the
+												<span class="keyword parmname">RetryBackoff</span>, in
+												milliseconds.<p class="p"><a name="//apple_ref/cpp/Field/RetryBackoff" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RetryCount" class="dashAnchor"></a>Specifically, the delay time is
+												<samp class="codeph nolang">(2<sup class="ph sup">n</sup>-1)×R</samp>, where <samp class="codeph nolang">n</samp> is the
+												<span class="keyword parmname">RetryCount</span>, and <samp class="codeph nolang">R</samp> is the
+												<span class="keyword parmname">RetryBackoff</span>.</p>
+<p class="p"><a name="//apple_ref/cpp/Field/RetryBackoff" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/RetryBackoff" class="dashAnchor"></a>The
+												default value for <span class="keyword parmname">RetryBackoff</span>
+												depends on the type of operation. For example, the
+												<span class="keyword parmname">RetryBackoff</span> default for
+												write operations on external objects is 1,000
+												milliseconds. For write operations, retries are
+												attempted immediately, after 3 seconds, after 7
+												seconds, after 15 seconds, and so on.</p>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/RetryCount" class="dashAnchor"></a><span class="keyword parmname">RetryCount</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Number of attempted retries. Applies only if the
+                    operation has an error status.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/RetryLimit" class="dashAnchor"></a><span class="keyword parmname">RetryLimit</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">Maximum number of retries to attempt. Applies only if the
+                    operation has an error status.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/SequenceGroup" class="dashAnchor"></a><span class="keyword parmname">SequenceGroup</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Identifies the sequence group. Applies only if the operation is
+                    merged with other operations into an execution group to be processed in
+                    bulk.
+											Within an execution group, operations can
+                    be placed into a sequence group to be executed in a specific order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/SequenceNumber" class="dashAnchor"></a><span class="keyword parmname">SequenceNumber</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Order position within the sequence group. Applies only if the operation is
+                    merged with other operations into an execution group to be processed in
+                    bulk.
+											Within an execution group, operations can
+                    be placed into a sequence group to be executed in a specific order.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartedAt" class="dashAnchor"></a><span class="keyword parmname">StartedAt</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+											<p class="p">When the operation started running.</p>
+
+										</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Status of the background operation. The options are:<ul class="ul bulletList">
+												<li class="li">New</li>
+
+												<li class="li">Scheduled</li>
+
+												<li class="li">Canceled</li>
+
+												<li class="li">Merged</li>
+
+												<li class="li">Waiting</li>
+
+												<li class="li">Running</li>
+
+												<li class="li">Error</li>
+
+												<li class="li">Complete</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/SubmittedAt" class="dashAnchor"></a><span class="keyword parmname">SubmittedAt</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">When the operation was added to the job queue.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Timeout" class="dashAnchor"></a><span class="keyword parmname">Timeout</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">Maximum time in milliseconds to wait for results after
+											the operation started running.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d186966e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/WorkerUri" class="dashAnchor"></a><span class="keyword parmname">WorkerUri</span></td>
+
+							<td class="entry" headers="d186966e99" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, idLookup, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">URI of the worker that performed the operation.<div class="p">Example for a Salesforce Connect OData operation:
+												<div class="codeSection nolang"><div id="highlighter_662406" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_662406_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_662406" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">services/data/v35.0/xds/upsert</code></td></tr></tbody></table></div></div></div></div>
+</div>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<div class="p">The BackgroundOperation object lets you:<ul class="ul bulletList">
+					<li class="li">Monitor the job status of asynchronous operations.</li>
+
+					<li class="li">View errors that are related to the asynchronous operations.</li>
+
+					<li class="li">Extract statistics for the asynchronous job queue.</li>
+
+				</ul>
+</div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

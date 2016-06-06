@@ -1,0 +1,323 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ConnectedApplication | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_connectedapplication"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ConnectedApplication</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a connected app and its details; all
+			fields are read-only.</span></div>
+<div class="section">
+<p class="p">Connected apps link client
+				applications, third-party services, other Salesforce organizations,
+				apps and resources to your organization. The connected app  configuration
+				specifies authorization and security settings for these resources. This object
+				exposes the settings for a specified connected app.</p>
+</div>
+
+			 
+			<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+				
+			<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+						
+						
+						<thead class="thead sorted" align="left">
+							<tr>
+								<th class="featureTableHeader  " id="d234964e96">Field Name</th>
+
+								<th class="featureTableHeader  " id="d234964e99">Details</th>
+
+							</tr>
+
+						</thead>
+
+						<tbody class="tbody">
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/MobileSessionTimeout" class="dashAnchor"></a><span class="keyword parmname">MobileSessionTimeout</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">Length of time after which the system logs out inactive mobile users. </p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/MobileStartUrl" class="dashAnchor"></a><span class="keyword parmname">MobileStartUrl</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">url</dd>
+
+											
+											
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, idLookup, Nillable, Sort</dd>
+
+									
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">Users are directed to this URL after they’ve authenticated when the app is accessed from a
+												mobile device.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">string</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">The unique name for this object.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsAllowAdminApprovedUsersOnly" class="dashAnchor"></a><span class="keyword parmname">OptionsAllowAdminApprovedUsersOnly</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">boolean</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">Indicates whether access is limited to users granted approval to use the connected app by an administrator. Manage profiles for the app
+												by editing each profile’s Access list. </p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsHasSessionLevelPolicy" class="dashAnchor"></a><span class="keyword parmname">OptionsHasSessionLevelPolicy</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">boolean</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">Specifies whether the connected app requires a
+												High Assurance level session.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/OptionsRefreshTokenValidityMetric" class="dashAnchor"></a><span class="keyword parmname">OptionsRefreshTokenValidityMetric</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">boolean</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">Specifies whether the refresh token validity is based on duration or inactivity. If <samp class="codeph nolang">true</samp>, the token
+												validity is measured based on the last use of the
+												token; otherwise, it is based on the token duration. </p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/PinLength" class="dashAnchor"></a><span class="keyword parmname">PinLength</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">picklist</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">For mobile apps, this is the PIN length requirement for users of the connected app.Valid values are <samp class="codeph nolang">5</samp>, <samp class="codeph nolang">6</samp>, <samp class="codeph nolang">7</samp>, <samp class="codeph nolang">8</samp> or <samp class="codeph nolang">9</samp>. </p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/RefreshTokenValidityPeriod" class="dashAnchor"></a><span class="keyword parmname">RefreshTokenValidityPeriod</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">int</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+											<p class="p">The duration of an authorization token until it
+												expires in hours, months or days as set in the connected app management page.</p>
+
+										</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+								<tr>
+									<td class="entry" headers="d234964e96" data-title="Field Name"><a name="//apple_ref/cpp/Field/StartUrl" class="dashAnchor"></a><span class="keyword parmname">StartUrl</span></td>
+
+									<td class="entry" headers="d234964e99" data-title="Details">
+<dl class="dl detailList">
+											
+												<dt class="dt dlterm">Type</dt>
+
+												<dd class="dd">url</dd>
+
+											
+											
+												<dt class="dt dlterm">Properties</dt>
+
+												<dd class="dd">Filter, Nillable, Sort</dd>
+
+											
+											
+												<dt class="dt dlterm">Description</dt>
+
+												<dd class="dd">
+<p class="p">If the app is not accessed from a mobile device, users are directed to this URL after
+												they’ve authenticated.</p>
+</dd>
+
+											
+										</dl>
+</td>
+
+								</tr>
+
+						</tbody>
+
+					</table></div>
+</div>
+
+		</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

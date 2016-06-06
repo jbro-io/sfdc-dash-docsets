@@ -1,0 +1,643 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>VerificationHistory | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_verificationhistory"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>VerificationHistory</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the past six months of your org users’ attempts to verify
+			their identity.</span> This object is available in API version 36.0 and
+		later.</div>
+
+		<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+			
+			<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp></p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Only users with “Manage Users” permission can access this object.</p>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+			
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader  " id="d761801e101">Field Name</th>
+
+							<th class="featureTableHeader  " id="d761801e104">Details</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/Activity" class="dashAnchor"></a><span class="keyword parmname">Activity</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_useractivity"><a name="def_useractivity"><!-- --></a>The action the user attempted that requires identity
+												verification.</span> The label is User Activity.
+											Available values are: <ul class="ul bulletList">
+												<li class="li">AccessReports—<span class="ph" id="def_useractivity_accessreports"><a name="def_useractivity_accessreports"><!-- --></a>The user
+												attempted to access reports or
+												dashboards.</span>
+</li>
+
+												<li class="li">Apex—<span class="ph" id="def_useractivity_apex"><a name="def_useractivity_apex"><!-- --></a>The user
+												attempted to access a Salesforce resource with a verification Apex method.</span>
+</li>
+
+												<li class="li">ConnectedApp—<span class="ph" id="def_useractivity_connapp"><a name="def_useractivity_connapp"><!-- --></a>The user attempted to access a connected
+												app.</span>
+</li>
+
+												<li class="li">ExportPrintReports—<span class="ph" id="def_useractivity_exportprintrpts"><a name="def_useractivity_exportprintrpts"><!-- --></a>The user
+												attempted to export or print reports or
+												dashboards.</span>
+</li>
+
+												<li class="li">Login—<span class="ph" id="def_useractivity_login"><a name="def_useractivity_login"><!-- --></a>The user
+												attempted to log in.</span>
+</li>
+
+												<li class="li">Registration—Reserved for future use.</li>
+
+												<li class="li">TempCode—<span class="ph" id="def_useractivity_tempcode"><a name="def_useractivity_tempcode"><!-- --></a>The
+												user attempted to generate a temporary
+												verification code. This value is available in API version 37.0 and later.</span>
+</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/EventGroup" class="dashAnchor"></a><span class="keyword parmname">EventGroup</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">int</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_verifattempt"><a name="def_verifattempt"><!-- --></a>ID of the verification attempt. Verification can involve
+												several attempts and use different verification
+												methods. For example, in a user’s session, a user
+												enters an invalid verification code (first attempt).
+												The user then enters the correct code and
+												successfully verifies identity (second attempt).
+												Both attempts are part of a single verification and,
+												therefore, have the same ID.</span> The label is
+											Verification Attempt.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/LoginGeoId" class="dashAnchor"></a><span class="keyword parmname">LoginGeoId</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The 18-character ID for the record of the geographic location of the user for a
+											successful or unsuccessful identity verification
+											attempt. Due to the nature of geolocation technology,
+											the accuracy of geolocation fields (for example,
+											country, city, postal code) may vary.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/LoginHistoryId" class="dashAnchor"></a><span class="keyword parmname">LoginHistoryId</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">The ID for the record of the user’s successful or
+											unsuccessful login attempt.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/Policy" class="dashAnchor"></a><span class="keyword parmname">Policy</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_triggeredby"><a name="def_triggeredby"><!-- --></a>The identity verification security policy or setting.</span>
+											The label is Triggered By. Available values are: <ul class="ul bulletList">
+												<li class="li">CustomApex—<span class="ph" id="def_triggeredby_customapex"><a name="def_triggeredby_customapex"><!-- --></a>Identity verification made by a verification Apex method.</span>
+</li>
+
+												<li class="li">DeviceActivation—<span class="ph" id="def_triggeredby_deviceactivation"><a name="def_triggeredby_deviceactivation"><!-- --></a>Identity
+												verification required for users logging in from an
+												unrecognized device or new IP address. This
+												verification is part of Salesforce’s risk-based authentication.</span>
+</li>
+
+												<li class="li">HighAssurance—<span class="ph" id="def_triggeredby_highassurance"><a name="def_triggeredby_highassurance"><!-- --></a>High assurance session required
+												for resource access. This verification is
+												triggered when the user tries to access a
+												resource, such as a connected app, report, or
+												dashboard that requires a high-assurance session
+												level.</span>
+</li>
+
+												<li class="li">ProfilePolicy—<span class="ph" id="def_triggeredby_profilepolicy"><a name="def_triggeredby_profilepolicy"><!-- --></a>Session
+												security level required at login. This
+												verification is triggered by the “Session security
+												level required at login” setting on the user’s
+												profile.</span>
+												</li>
+
+												<li class="li">TwoFactorAuthentication—<span class="ph" id="def_triggeredby_2fa"><a name="def_triggeredby_2fa"><!-- --></a>Two-factor authentication
+												required at login. This verification is triggered
+												by the “Two-Factor Authentication for User
+												Interface Logins” user permission assigned to a
+												custom profile. Or, the user permission is
+												included in a permission set that is assigned to a
+												user.</span>
+</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/Remarks" class="dashAnchor"></a><span class="keyword parmname">Remarks</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/Remarks" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Activity" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Remarks" class="dashAnchor"></a>
+<span class="ph" id="def_activitymessage"><a name="def_activitymessage"><!-- --></a>The text the user sees on the screen or in Salesforce Authenticator when prompted to verify identity.
+												For example, if identity verification is required
+												for a user’s login, the user sees “You’re trying to
+												Log In to Salesforce”.</span> In this instance, the
+												<span class="keyword parmname">Remarks</span> value is “Log In to
+											Salesforce”. The exception is when the
+												<span class="keyword parmname">Activity</span> value is Apex. In this
+											instance, the <span class="keyword parmname">Remarks</span> value is a
+											custom description passed by the Apex method. If the
+											user is verifying identity using the Salesforce Authenticator app, the custom description displays in
+											the app as well. If the custom description isn’t
+											specified, the default value is the name of the Apex
+											method. The label is Activity Message.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/ResourceId" class="dashAnchor"></a><span class="keyword parmname">ResourceId</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><a name="//apple_ref/cpp/Field/ResourceId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Activity" class="dashAnchor"></a>If the <span class="keyword parmname">Activity</span> value is ConnectedApp, the
+												<span class="keyword parmname">ResourceId</span> value is the ID of
+											the connected app. The label is Connected App ID.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/SourceIp" class="dashAnchor"></a><span class="keyword parmname">SourceIp</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">string</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd"><span class="ph" id="def_sourceip"><a name="def_sourceip"><!-- --></a>The IP address of the machine from which the user attempted the
+												action that requires identity verification. For
+												example, the IP address of the machine from where
+												the user tried to log in or access reports. If it’s
+												a non-login action that required verification, the
+												IP address can be different from the address from
+												where the user logged in. This address can be an
+												IPv4 or IPv6 address.</span></dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_status"><a name="def_status"><!-- --></a>The status of the identity verification attempt.</span> Available
+											values are:<ul class="ul bulletList">
+												<li class="li">AutomatedSuccess—<span class="ph" id="def_status_automatedsuccess"><a name="def_status_automatedsuccess"><!-- --></a>Salesforce Authenticator approved the request for access
+												because the request came from a trusted location.
+												After users enable location services in Salesforce Authenticator, they can designate trusted
+												locations. When a user trusts a location for a
+												particular activity, such as logging in from a
+												recognized device, that activity is approved from
+												the trusted location for as long as the location
+												is trusted.</span>
+</li>
+
+												<li class="li">Denied—<span class="ph" id="def_status_denied"><a name="def_status_denied"><!-- --></a>The user denied the approval request in the
+												authenticator app, such as Salesforce Authenticator.</span>
+</li>
+
+												<li class="li">FailedGeneralError—<span class="ph" id="def_status_failedgeneral"><a name="def_status_failedgeneral"><!-- --></a>An error caused by
+												something other than an invalid verification code,
+												too many verification attempts, or authenticator
+												app connectivity.</span>
+</li>
+
+												<li class="li">FailedInvalidCode—<span class="ph" id="def_status_failedinvalid"><a name="def_status_failedinvalid"><!-- --></a>The user provided an
+												invalid verification code.</span>
+</li>
+
+												<li class="li">FailedTooManyAttempts—<span class="ph" id="def_status_failedtoomany"><a name="def_status_failedtoomany"><!-- --></a>The user attempted
+												to verify identity too many times. For example,
+												the user entered an invalid verification code
+												repeatedly.</span>
+</li>
+
+												<li class="li">Initiated—Salesforce initiated identity verification but hasn’t yet
+												challenged the user.</li>
+
+												<li class="li">InProgress—<span class="ph" id="def_status_inprogress"><a name="def_status_inprogress"><!-- --></a>Salesforce challenged the user to verify identity and is
+												waiting for the user to respond or for Salesforce Authenticator to send an automated
+												response.</span>
+</li>
+
+												<li class="li">RecoverableError—<span class="ph" id="def_status_recoverable"><a name="def_status_recoverable"><!-- --></a>Salesforce can’t reach the authenticator app to verify
+												identity, but will retry.</span>
+</li>
+
+												<li class="li">ReportedDenied—<span class="ph" id="def_status_reporteddenied"><a name="def_status_reporteddenied"><!-- --></a>The user denied the approval
+												request in the authenticator app, such as Salesforce Authenticator, and also flagged the approval
+												request to report to an administrator.</span>
+</li>
+
+												<li class="li">Succeeded—<span class="ph" id="def_status_succeeded"><a name="def_status_succeeded"><!-- --></a>The
+												user’s identity was verified.</span>
+												</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">reference</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">ID of the user verifying identity.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/VerificationMethod" class="dashAnchor"></a><span class="keyword parmname">VerificationMethod</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">picklist</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_method"><a name="def_method"><!-- --></a>The method by which the user attempted to verify identity in the
+												verification event.</span> The label is Method.
+											Available values are:<ul class="ul bulletList">
+												<li class="li">Email—<span class="ph" id="def_method_email"><a name="def_method_email"><!-- --></a>Salesforce sent an email with a verification code to the
+												address associated with the user’s
+												account.</span>
+</li>
+
+												<li class="li">Hotp—<span class="ph" id="def_method_hotp"><a name="def_method_hotp"><!-- --></a>Reserved for future use.</span>
+</li>
+
+												<li class="li">SalesforceAuthenticator—<span class="ph" id="def_method_sfauthenticator"><a name="def_method_sfauthenticator"><!-- --></a>Salesforce Authenticator sent a notification to the user’s
+												mobile device to verify account
+												activity.</span>
+</li>
+
+												<li class="li">Sms—<span class="ph" id="def_method_sms"><a name="def_method_sms"><!-- --></a>Salesforce sent a text message with a verification code to
+												the user’s mobile device.</span>
+</li>
+
+												<li class="li">TempCode—<span class="ph" id="def_method_tempcode"><a name="def_method_tempcode"><!-- --></a>A Salesforce admin or a user with the “Manage Two-Factor
+												Authentication in User Interface” permission
+												generated a temporary verification code for the
+												user.</span> This value is available in API version 37.0 and later.</li>
+
+												<li class="li">Totp—<span class="ph" id="def_method_totp"><a name="def_method_totp"><!-- --></a>An authenticator
+												app generated a time-based, one-time password
+												(TOTP) on the user’s mobile device.</span>
+</li>
+
+											</ul>
+</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e101" data-title="Field Name"><a name="//apple_ref/cpp/Field/VerificationTime" class="dashAnchor"></a><span class="keyword parmname">VerificationTime</span></td>
+
+							<td class="entry" headers="d761801e104" data-title="Details">
+								<dl class="dl detailList">
+									
+										<dt class="dt dlterm">Type</dt>
+
+										<dd class="dd">dateTime</dd>
+
+									
+									
+										<dt class="dt dlterm">Properties</dt>
+
+										<dd class="dd">Filter, Sort</dd>
+
+									
+									
+										<dt class="dt dlterm">Description</dt>
+
+										<dd class="dd">
+<span class="ph" id="def_time"><a name="def_time"><!-- --></a>The time of the identity verification attempt. The time zone is
+												based on GMT.</span> The label is Time.</dd>
+
+									
+								</dl>
+
+							</td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+		<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+			
+			<p class="p">Here are two examples of the types of API queries you can
+				perform.</p>
+
+			
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+					
+					
+					<thead class="thead sorted" align="left">
+						<tr>
+							<th class="featureTableHeader vertical-align-top " id="d761801e971">Query </th>
+
+							<th class="featureTableHeader vertical-align-top " id="d761801e974">String</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody class="tbody">
+						<tr>
+							<td class="entry" headers="d761801e971" data-title="Query">Show verification history for a user’s login record</td>
+
+							<td class="entry" headers="d761801e974" data-title="String"><samp class="codeph soql">SELECT Activity, EventGroup, Policy, Remarks, Status,
+									UserId,VerificationMethod, VerificationTime FROM
+									VerificationHistory WHERE LoginHistoryId =
+									'0YaD000#########'</samp></td>
+
+						</tr>
+
+						<tr>
+							<td class="entry" headers="d761801e971" data-title="Query">Get detailed geographic location information for a user’s verification attempt</td>
+
+							<td class="entry" headers="d761801e974" data-title="String"><samp class="codeph soql">SELECT City, CountryIso, Latitude,
+									Longitude, PostalCode FROM LoginGeo WHERE LoginGeoId =
+									'0LE###############'</samp></td>
+
+						</tr>
+
+					</tbody>
+
+				</table></div>
+
+		</div>
+
+	</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

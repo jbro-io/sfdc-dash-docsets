@@ -1,0 +1,1461 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Case | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_case"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Case</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a case, which is a customer issue or
+  problem.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+ <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>, <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d203141e117">Field</th>
+
+<th class="featureTableHeader  " id="d203141e120">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1444416"><a name="i1444416"><!-- --></a>AccountId</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the account associated with this case. </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/BusinessHoursId" class="dashAnchor"></a><span class="keyword parmname">BusinessHoursId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the business hours associated with this case. </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/CaseNumber" class="dashAnchor"></a>
+        <span class="keyword parmname">CaseNumber</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Assigned automatically when each case is inserted. It can't be set directly, and it
+           can't be modified after the case is created.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/ClosedDate" class="dashAnchor"></a>
+        <span class="keyword parmname">ClosedDate</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time when the case was closed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/CommunityId" class="dashAnchor"></a><span class="keyword parmname" id="CommunityIdField"><a name="CommunityIdField"><!-- --></a>CommunityId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><span class="ph" id="CommunityIdFieldDesc"><a name="CommunityIdFieldDesc"><!-- --></a>ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_community.htm" title="Represents a zone that contains Idea or Question objects.">Community (Zone)</a> associated with this case.</span></dd>
+
+          <dd class="dd">
+           <p class="p">This field is available in API version 24.0 and
+            later.</p>
+
+          </dd>
+
+          
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1444499"><a name="i1444499"><!-- --></a>ContactId</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">
+           Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the associated Contact.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorFullPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">CreatorFullPhotoUrl</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">URL of the user’s profile
+photo from the feed. Chatter Answers must be enabled to view this
+field. This field is available in API version 26.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorName" class="dashAnchor"></a><span class="keyword parmname">CreatorName</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">Name of the user who posted the question
+or reply. Only the first name of internal users (agents) appears to
+portal users in the feed. Chatter Answers must be enabled to view
+this field.
+            This field is available in API version 26.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/CreatorSmallPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">CreatorSmallPhotoUrl</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">
+           <p class="p">URL of the user’s thumbnail
+photo from the feed. Chatter Answers must be enabled to view this
+field.
+            This field is available in API version 26.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>
+<span class="keyword parmname">Description</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A text description of the case. Limit: 32 KB.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/FeedItemId" class="dashAnchor"></a><span class="keyword parmname">FeedItemId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the question in Chatter associated with the case. This field is available in API
+           version 33.0 and later, and is only accessible in organizations where Question-to-Case is
+           enabled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/HasCommentsUnreadByOwner" class="dashAnchor"></a>
+        <span class="keyword parmname">HasCommentsUnreadByOwner</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether a case has comments that have not yet been read by the owner
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/HasSelfServiceComments" class="dashAnchor"></a>
+        <span class="keyword parmname">HasSelfServiceComments</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether a case has comments added by a Self-Service user (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1444585"><a name="i1444585"><!-- --></a>IsClosed</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>Indicates whether the case is closed (<samp class="codeph nolang">true</samp>) or
+           open (<samp class="codeph nolang">false</samp>). This field is controlled by the
+            <span class="keyword parmname">Status</span>
+           field; it can't be set directly. Label is <strong class="ph b">Closed</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsClosedOnCreate" class="dashAnchor"></a>
+<span class="keyword parmname">IsClosedOnCreate</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a>Indicates whether the case was closed at the same time that it was created (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           This flag is read-only and is automatically set when a record is created. It can't be set
+           to <samp class="codeph nolang">true</samp> unless the <span class="keyword parmname">IsClosed</span> flag
+           is also <samp class="codeph nolang">true</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a>
+        <span class="keyword parmname">IsDeleted</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the object has been moved to the Recycle Bin
+            (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Label is <strong class="ph b">Deleted</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsEscalated" class="dashAnchor"></a>
+        <span class="keyword parmname">IsEscalated</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the case has been escalated (<samp class="codeph nolang">true</samp>) or not. A case's escalated state does not affect how you can use a case,
+           or whether you can query, delete, or update it. However, you can't set this flag via the
+            API. Label is
+            <strong class="ph b">Escalated</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsSelfServiceClosed" class="dashAnchor"></a><span class="keyword parmname">IsSelfServiceClosed</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the case is closed for Self-Service users (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsStopped" class="dashAnchor"></a><span class="keyword parmname" id="IsStopped"><a name="IsStopped"><!-- --></a>IsStopped</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether an entitlement process on a case is stopped (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/IsVisibleInSelfService" class="dashAnchor"></a>
+        <span class="keyword parmname">IsVisibleInSelfService</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the case can be viewed in the Customer Service Portal, Partner
+           Service Portal, and Self-Service Portal (<samp class="codeph nolang">true</samp>) or
+           not (<samp class="codeph nolang">false</samp>). This field is applied for case
+           visibility in the Partner Relationship Management, Customer Service Portal, and the
+           earlier version of Self Service Portal. The field does not alter sharing and will not
+           prevent usage of a direct URL to a case if a portal user has read or write access.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a><span class="keyword parmname">LastReferencedDate</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The timestamp for when the current
+user last viewed a record related to this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/LastViewedDate" class="dashAnchor"></a><span class="keyword parmname">LastViewedDate</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/LastReferencedDate" class="dashAnchor"></a>The timestamp for when the current
+user last viewed this record. If this value is null, this record might only have been referenced (<span class="keyword parmname">LastReferencedDate</span>) and not viewed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Origin" class="dashAnchor"></a>
+        <span class="keyword parmname">Origin</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable,Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The source of the case, such as <samp class="codeph nolang">Email</samp>, <samp class="codeph nolang">Phone</samp>, or <samp class="codeph nolang">Web</samp>. Label
+           is <strong class="ph b">Case Origin</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a>
+        <span class="keyword parmname">OwnerId</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the contact who owns the case.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the parent case in the hierarchy. The label is <strong class="ph b">Parent Case</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Priority" class="dashAnchor"></a>
+        <span class="keyword parmname">Priority</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The importance or urgency of the case, such as <samp class="codeph nolang">High</samp>, <samp class="codeph nolang">Medium</samp>, or <samp class="codeph nolang">Low</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/QuestionId" class="dashAnchor"></a>
+        <span class="keyword parmname">QuestionId</span>
+</td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The question in the answers community that is associated with the case. This field
+           does not appear if you don't have an answers community enabled.</dd>
+
+          
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Reason" class="dashAnchor"></a>
+        <span class="keyword parmname">Reason</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The reason why the case was created, such as <samp class="codeph nolang">Instructions
+            not clear</samp>, or <samp class="codeph nolang">User didn’t attend
+            training</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/RecordTypeId" class="dashAnchor"></a>
+<span class="keyword parmname" id="i1438294"><a name="i1438294"><!-- --></a>RecordTypeId</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the record type assigned to this object.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/SlaStartDate" class="dashAnchor"></a><span class="keyword parmname" id="SlaStartDate"><a name="SlaStartDate"><!-- --></a>SlaStartDate</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Shows the time that the case entered an entitlement process. If you have the “Edit”
+           permission on cases, you can update or reset the time if you have the
+           “Edit” permission on cases.</dd>
+
+          <dd class="dd">
+           <p class="p" id="API18"><a name="API18"><!-- --></a>This field is available in API version 18.0 and
+            later.</p>
+
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a>
+        <span class="keyword parmname" id="i1444757"><a name="i1444757"><!-- --></a>Status</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/IsClosed" class="dashAnchor"></a>The status of the case, such as “New,” “Closed,” or
+           “Escalated.” This field directly controls the <span class="keyword parmname">IsClosed</span> flag.
+           Each predefined <span class="keyword parmname">Status</span> value
+           implies an <span class="keyword parmname">IsClosed</span> flag
+           value. For more information, see CaseStatus.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/StopStartDate" class="dashAnchor"></a><span class="keyword parmname" id="StopStartDate"><a name="StopStartDate"><!-- --></a>StopStartDate</span></td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date and time an entitlement process was stopped on the case.<p class="p">This field is available in API version 18.0 and
+            later.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Subject" class="dashAnchor"></a>
+<span class="keyword parmname">Subject</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The subject of the case. Limit: 255 characters.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/SuppliedCompany" class="dashAnchor"></a>
+        <span class="keyword parmname">SuppliedCompany</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The company name that was entered when the case was created. can't be updated after
+           the case has been created. Label is <strong class="ph b">Company</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/SuppliedEmail" class="dashAnchor"></a>
+<span class="keyword parmname" id="case_suppliedemail"><a name="case_suppliedemail"><!-- --></a>SuppliedEmail</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">email</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The email address that was entered when the case was created. can't be updated after
+           the case has been created. Label is <strong class="ph uicontrol">Email</strong>.<p class="p"><a name="//apple_ref/cpp/Field/ContactId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/SuppliedEmail" class="dashAnchor"></a>If your organization
+            has an active auto-response rule, <span class="keyword parmname">SuppliedEmail</span> is required when
+            creating a case via the API. Auto-response rules use the email in the contact specified by <span class="keyword parmname">ContactId</span>. If no email
+            address is in the contact record, the email specified here is used.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/SuppliedName" class="dashAnchor"></a>
+        <span class="keyword parmname">SuppliedName</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The name that was entered when the case was created. can't be updated after the case
+           has been created. Label is <strong class="ph b">Name</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/SuppliedPhone" class="dashAnchor"></a>
+        <span class="keyword parmname">SuppliedPhone</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The phone number that was entered when the case was created. can't be updated after
+           the case has been created. Label is <strong class="ph b">Phone</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d203141e117" data-title="Field"><a name="//apple_ref/cpp/Field/Type" class="dashAnchor"></a>
+        <span class="keyword parmname">Type</span>
+       </td>
+
+       <td class="entry" headers="d203141e120" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of case, such as <samp class="codeph nolang">Feature Request</samp> or
+            <samp class="codeph nolang">Question</samp>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+</table></div>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you are importing Case data and need to set the value
+for an audit field, such as <span class="keyword parmname">CreatedDate</span>, contact Salesforce. Audit fields are automatically updated during API operations
+unless you request to set these fields yourself.</p>
+</div>
+</div></div></div></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use the Case object to manage cases for your organization. Client applications
+can query, update, and delete Attachment records associated with a case via the API.</p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Assignment Rules</h2>
+<p class="p">When you query
+or update a case, your client application can have the case automatically
+assigned to one or more User records based on assignment rules that have been configured
+in the user interface. To use this feature, your client application
+needs to set either of the following options (but not both) in the AssignmentRuleHeader used in the create or update:</p>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d203141e2616">Field</th>
+
+<th class="featureTableHeader  " id="d203141e2619">Field Type</th>
+
+<th class="featureTableHeader  " id="d203141e2622">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d203141e2616" data-title="Field"><span class="keyword parmname">assignmentRuleId</span></td>
+
+<td class="entry" headers="d203141e2619" data-title="Field Type">reference</td>
+
+<td class="entry" headers="d203141e2622" data-title="Details">ID of the assignment rule to use. Can be an inactive assignment
+ rule. If unspecified and <span class="keyword parmname">useDefaultRule</span> is <samp class="codeph nolang">true</samp>, then the default assignment rule
+is used. To find the ID for a given assignment rule, query the AssignmentRule object (specifying <samp class="codeph nolang">RuleType="caseAssignment"</samp>), iterate through the returned AssignmentRule objects, find the one you want to use, retrieve its ID, and
+then specify its ID in this field in the AssignmentRuleHeader.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d203141e2616" data-title="Field"><span class="keyword parmname">useDefaultRule</span></td>
+
+<td class="entry" headers="d203141e2619" data-title="Field Type">boolean </td>
+
+<td class="entry" headers="d203141e2622" data-title="Details">Specifies whether to use the default rule for rule-based assignment
+(<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). The default rule is assigned
+by users in the Salesforce user
+interface.</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+<p class="p">For a code example that shows setting the AssignmentRuleHeader for a Lead (which is similar to setting the AssignmentRuleHeader for a Case), see Lead.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="i1445040"><a name="i1445040"><!-- --></a>Separating Accounts from Contacts
+in Cases</span></h2>
+<p class="p">In releases before 8.0, the <span class="keyword parmname">AccountId</span> could not be specified, it was derived from the contact’s
+account. This behavior will continue to be supported in future releases,
+but you can also now specify an <span class="keyword parmname">AccountId</span>. If you do not specify the <span class="keyword parmname">AccountId</span> during the creation of a case, the value will default
+to the contact’s <span class="keyword parmname">AccountId</span>.</p>
+<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>When a record is updated, if the <span class="keyword parmname">ContactId</span> has not changed, then the <span class="keyword parmname">AccountId</span> is not regenerated. This prevents the API from
+overwriting a value previously changed in the Salesforce user
+interface. However, if an API call
+changes the <span class="keyword parmname">ContactId</span> and the <span class="keyword parmname">AccountId</span> field is empty, then the <span class="keyword parmname">AccountId</span> is generated using the contact’s account. </p>
+</div>
+</div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2"><span class="ph" id="java_special_case"><a name="java_special_case"><!-- --></a>Using <span class="titlecodeph">_case</span> with Java</span></h2>
+<p class="p">Depending
+on the development tool you use, you may need to write your application
+using <samp class="codeph nolang">_case</samp> instead of <samp class="codeph nolang">Case</samp>. This is because <samp class="codeph nolang">case</samp> is a reserved word in Java.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_account.htm" title="Represents an individual account, which is an organization or person involved with your business (such as customers, competitors, and partners).">Account</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_casemilestone.htm" title="Represents a milestone (required step in a customer support process) on a Case. This object is available in API version 18.0 and later.">CaseMilestone</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,905 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AgentWork | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_agentwork"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AgentWork</span></h1><div class="body refbody">
+<div class="shortdesc">
+<span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a work assignment that’s been routed to an agent.</span>
+  <span class="ph" id="api_version"><a name="api_version"><!-- --></a>This object is available in API version 32.0 and later.</span>
+</div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">getDeleted()</samp>,
+     <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">retrieve()</samp>,
+     <samp class="codeph nolang">undelete()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d151599e108">Field</th>
+
+       <th class="featureTableHeader  " id="d151599e111">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/AcceptDatetime" class="dashAnchor"></a><span class="keyword parmname">AcceptDatetime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the work item was accepted.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/ActiveTime" class="dashAnchor"></a><span class="keyword parmname">ActiveTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The amount of time an agent actively worked on the work item. Tracks when the item is
+           open and in focus in the agent’s console.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/AgentCapacityWhenDeclined" class="dashAnchor"></a><span class="keyword parmname">AgentCapacityWhenDeclined</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The agent’s capacity when declining work, either explicitly or through push
+           timeout.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/AssignedDateTime" class="dashAnchor"></a><span class="keyword parmname">AssignedDateTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the work item was assigned to an agent,</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CancelDateTime" class="dashAnchor"></a><span class="keyword parmname">CancelDateTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the work item was canceled.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CapacityPercentage" class="dashAnchor"></a><span class="keyword parmname">CapacityPercentage</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">percent</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The percentage of an agent’s capacity for work items that’s consumed by a specific
+           type of work item from this service channel.<p class="p">When combined work items reach 100% for an
+            agent, the agent won’t receive new work items until there is enough open capacity for
+            more work. For example, if you give phone calls a capacity percentage of
+             <var class="keyword varname">100</var>. an agent on a call doesn’t receive new work items until the
+            call ends. </p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CapacityWeight" class="dashAnchor"></a><span class="keyword parmname">CapacityWeight</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The amount of an agent’s capacity for work items that’s consumed by a work item from
+           this service channel.<p class="p">For example, if cases are assigned a capacity weight of
+             <var class="keyword varname">2</var>, an agent with a capacity of <var class="keyword varname">6</var> can accept up to
+            3 cases before the agent is at capacity and can’t receive new work items.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CloseDateTime" class="dashAnchor"></a><span class="keyword parmname">CloseDateTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the work item was closed.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CreatedById" class="dashAnchor"></a><span class="keyword parmname">CreatedById</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm#topic-title">User</a> who created this record. </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a><span class="keyword parmname">CreatedDate</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on createFilter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date and time when this record was created.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/DeclineDatetime" class="dashAnchor"></a><span class="keyword parmname">DeclineDatetime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date and time when this record was declined by an agent.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/DeclineReason" class="dashAnchor"></a><span class="keyword parmname">DeclineReason</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The provided reason for why an agent declined the work request.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/HandleTime" class="dashAnchor"></a><span class="keyword parmname">HandleTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Accepted Time" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Close Time" class="dashAnchor"></a>The amount of time an agent had the work item open. Calculated by <span class="keyword parmname">Close Time</span> –
+           <span class="keyword parmname">Accepted Time</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a><span class="keyword parmname">Id</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">ID</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the AgentWork object.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a><span class="keyword parmname">IsDeleted</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the record has been moved to the Recycle Bin (<samp class="codeph java">true</samp>) or not (<samp class="codeph java">false</samp>).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/LastModifiedById" class="dashAnchor"></a><span class="keyword parmname">LastModifiedById</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user who last modified this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/LastModifiedDate" class="dashAnchor"></a><span class="keyword parmname">LastModifiedDate</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date and time when a user last modified this
+                record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Autonumber, Defaulted on create, Filter, idLookup, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">An automatically generated ID number that identifies the record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/OriginalQueueId" class="dashAnchor"></a><span class="keyword parmname">OriginalQueueId</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the queue that the work assignment was originally routed to.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/PushTimeout" class="dashAnchor"></a><span class="keyword parmname">PushTimeout</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of seconds set for push timeout. <var class="keyword varname">0</var> is returned when push
+           timeout isn’t enabled. Available in API version 36.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/PushTimeoutDateTime" class="dashAnchor"></a><span class="keyword parmname">PushTimeoutDateTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the push timeout event occurred. Available in API version 36.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/RequestDateTime" class="dashAnchor"></a><span class="keyword parmname">RequestDateTime</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates when the work was requested.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/ServiceChannelId" class="dashAnchor"></a><span class="keyword parmname">ServiceChannelId</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the service channel that’s associated with the work assignment.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/SpeedToAnswer" class="dashAnchor"></a><span class="keyword parmname">SpeedToAnswer</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The amount of time between when the work was requested and when an agent accepted
+           it.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group, Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The working status of the work item. Valid values are:<ul class="ul bulletList">
+            <li class="li">Assigned</li>
+
+            <li class="li">Unavailable</li>
+
+            <li class="li">Declined</li>
+
+            <li class="li">Opened</li>
+
+            <li class="li">Closed</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/SystemModstamp" class="dashAnchor"></a><span class="keyword parmname">SystemModstamp</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Date and time when a user or automated process (such as a
+                trigger) last modified this record.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user that the work item was assigned to.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d151599e108" data-title="Field"><a name="//apple_ref/cpp/Field/WorkItemId" class="dashAnchor"></a><span class="keyword parmname">WorkItemId</span></td>
+
+       <td class="entry" headers="d151599e111" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the object that’s routed to the agent through Omni-Channel.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">AgentWork</samp> records can only be deleted if they have the
+    status Closed, Declined, or Unavailable. They can’t be deleted if their status is Assigned or
+    Opened because they’re active in Omni-Channel.</p>
+
+   <p class="p"><samp class="codeph nolang">AgentWork</samp> records have the status Assigned when they’re
+    created. Once created, the record is automatically pushed to the assigned agent.</p>
+
+   <p class="p">While the metadata for <samp class="codeph nolang">AgentWork</samp> indicates support for
+     <samp class="codeph nolang">upsert()</samp> and
+     <samp class="codeph nolang">update()</samp>, these calls aren’t used with <samp class="codeph nolang">AgentWork</samp> because none of its fields can be updated.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

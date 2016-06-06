@@ -1,0 +1,2287 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserProfile | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_userprofile"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserProfile</span></h1><div class="body refbody">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a Chatter user
+    profile.</span></div>
+
+<div class="section">
+      <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><span class="ph" id="api_version"><a name="api_version"><!-- --></a>This object has been deprecated as of API version 32.0. Use the <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_user.htm" title="Represents a user in your organization.">User</a> object to query information about a user in API version 32.0 and
+          later.</span></p>
+</div>
+</div></div></div></div>
+
+    </div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeLayout()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<div class="p">
+<ul class="ul bulletList">
+<li class="li">Information in hidden fields in a user's profile is not searchable by
+      external users (with a portal profile) in a community. For example, if a user in a community
+      has a hidden email address and an external user searches for it, the user record is not
+      returned in the search results. Hidden field values are also not returned when external users
+      perform searches on non-hidden fields. So if an external user searches for a user's name
+      (cannot be hidden), any hidden field values associated with the user record (for example, a
+      hidden email address) are not returned in the search results. <p class="p">Internal users from your organization who belong to the same
+       community, however, can both search for and view hidden field values in search
+      results.</p>
+</li>
+
+<li class="li">Any fields that have been restricted in visibility will be returned
+empty, whether or not they are, and will not be removed from the field
+listing.</li>
+
+</ul>
+</div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d736339e119">Field</th>
+
+<th class="featureTableHeader  " id="d736339e122">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/AboutMe" class="dashAnchor"></a><span class="keyword parmname">AboutMe</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Information about the user, such as areas of interest or skills.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>
+<span class="keyword parmname">Address</span> (beta)</td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The city associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/CompanyName" class="dashAnchor"></a><span class="keyword parmname">CompanyName</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The company associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The country associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Email" class="dashAnchor"></a><span class="keyword parmname">Email</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">email</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, idLookup, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The email address associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a><span class="keyword parmname">Fax</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The fax number associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a><span class="keyword parmname">FirstName</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s first name.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/FullPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">FullPhotoUrl</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The URL for the user's profile photo if Chatter is
+                      enabled. <p class="p">The
+             URL is updated every time a photo is uploaded and reflects the most recent photo. The
+             URL returned for an older photo is not guaranteed to return a photo if a newer photo
+             has been uploaded. You should always query this field for the URL of the most recent
+             photo.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the user has access to log in (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). You can modify a User's active status from the user
+interface or via the API.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/IsBadged" class="dashAnchor"></a><span class="keyword parmname">IsBadged</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the user is visually badged (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). Users of the same Chatter user type (internal, external) are badged. Different user types
+are not badged.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><span class="keyword parmname">LastName</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s last name.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>
+<span class="keyword parmname">Latitude</span> (beta)</td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Longitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –90 and 90 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>
+<span class="keyword parmname">Longitude</span> (beta)</td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Latitude</span> to specify
+the precise geolocation of an address. Acceptable values are numbers
+between –180 and 180 with up to 15 decimal places.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerId" class="dashAnchor"></a><span class="keyword parmname">ManagerId</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID of the user who manages this user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/MobilePhone" class="dashAnchor"></a><span class="keyword parmname">MobilePhone</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s mobile or cellular phone number.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/LastName" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/FirstName" class="dashAnchor"></a>Concatenation of <span class="keyword parmname">FirstName</span> and <span class="keyword parmname">LastName</span>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s phone number.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s postal or ZIP code. Label is <strong class="ph uicontrol">Zip/Postal
+Code</strong>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/SmallPhotoUrl" class="dashAnchor"></a><span class="keyword parmname">SmallPhotoUrl</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The URL for a thumbnail of the user's profile photo if Chatter is
+                      enabled. <p class="p">The
+             URL is updated every time a photo is uploaded and reflects the most recent photo. The
+             URL returned for an older photo is not guaranteed to return a photo if a newer photo
+             has been uploaded. You should always query this field for the URL of the most recent
+             photo.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The state associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The street address associated with the user profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/Title" class="dashAnchor"></a><span class="keyword parmname">Title</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The user’s business title, such as “Vice President.”</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesActivityRemindersPopup" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesActivityRemindersPopup</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Trigger alert when reminder comes due" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, a
+            reminder popup window automatically opens when an activity reminder is due. Corresponds
+            to the <span class="keyword parmname">Trigger alert when reminder comes due</span> checkbox at the
+            Reminders page in the personal settings in the user interface.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesApexPagesDeveloperMode" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesApexPagesDeveloperMode</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>,
+            indicates the user has enabled developer mode for editing Visualforce pages and
+            controllers.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableAllFeedsEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableAllFeedsEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email for all updates to Chatter feeds, based on the
+            types of feed emails and digests the user has enabled.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableBookmarkEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableBookmarkEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email every time someone comments on a Chatter feed item after the
+            user has bookmarked it.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableChangeCommentEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableChangeCommentEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time someone comments on a
+            change the user has made, such as an update to their profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableEndorsementEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableEndorsementEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the member automatically
+receives email every time someone endorses them for a topic.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableFeedbackEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableFeedbackEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically
+receives emails related to Work.com feedback.
+This includes when someone requests or offers feedback, shares feedback
+with the user, or reminds the user to answer a feedback request.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableFileShareNotificationsForApi" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableFileShareNotificationsForApi</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, email
+            notifications are sent from the person who has shared a file to the users with whom the
+            file has been shared.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableFollowersEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableFollowersEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email every time someone starts following the user in
+             Chatter.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableLaterCommentEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableLaterCommentEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time someone comments on a
+            feed item after the user has commented on the feed item.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableLikeEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableLikeEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the
+            user automatically receives email every time someone likes a post or comment the user
+            has made.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableMentionsPostEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableMentionsPostEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time the user is mentioned
+            in posts.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableMessageEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableMessageEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email for Chatter messages sent to the
+            user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableProfilePostEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableProfilePostEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time someone posts to the
+            user’s profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableRewardEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableRewardEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically
+receives emails related to Work.com rewards.
+This includes when someone someone gives a reward to the user.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableSharePostEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableSharePostEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time the user’s post
+            is shared.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisableWorkEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisableWorkEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user receives
+emails related to Work.com feedback,
+goals, and coaching. The user must also sign up for individual emails
+listed on the Work.com email
+settings page. When <samp class="codeph nolang">true</samp>, the
+user will not receive any emails related to Work.com feedback,
+goals, or coaching even if they are signed up for individual emails.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisCommentAfterLikeEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisCommentAfterLikeEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>, the user automatically receives email every time someone comments on a
+            post the user has liked.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisMentionsCommentEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisMentionsCommentEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email every time the user is mentioned in comments.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesDisProfPostCommentEmail" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesDisProfPostCommentEmail</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">false</samp>,
+            the user automatically receives email every time someone comments on posts on the
+            user’s profile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesEnableAutoSubForFeeds" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesEnableAutoSubForFeeds</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>,
+            the user automatically subscribes to feeds for any objects that the user creates.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesEventRemindersCheckboxDefault" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesEventRemindersCheckboxDefault</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/By default, set reminder on Events to..." class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, a reminder popup is automatically set on the user's events. Corresponds
+            to the <span class="keyword parmname">By default, set reminder on Events to...</span> checkbox on the
+            Reminders page in the user interface. This field is related to UserPreference and customizing activity reminders.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesHideChatterOnboardingSplash" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesHideChatterOnboardingSplash</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>, the initial Chatter onboarding prompts do not appear.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesHideCSNDesktopTask" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesHideCSNDesktopTask</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>,
+            the Chatter
+            recommendations panel never displays the recommendation to install Chatter Desktop.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesHideCSNGetChatterMobileTask" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesHideCSNGetChatterMobileTask</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>, the Chatter recommendations
+            panel never displays the recommendation to install Chatter Mobile.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesHideS1BrowserUI" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesHideS1BrowserUI</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Controls the interface that the
+            user sees when logging in to Salesforce from a supported
+            mobile browser. If <samp class="codeph nolang">false</samp>, the user is automatically
+            redirected to the Salesforce1 mobile browser app. If <samp class="codeph nolang">true</samp>, the user sees the full Salesforce site. The default
+            value is <samp class="codeph nolang">false</samp>. Label is <strong class="ph uicontrol">Salesforce1
+            User</strong>.<p class="p">This field is
+            available in API version 29.0 or later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesHideSecondChatterOnboardingSplash" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesHideSecondChatterOnboardingSplash</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">When <samp class="codeph nolang">true</samp>, the secondary Chatter onboarding prompts do not appear.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesReminderSoundOff" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesReminderSoundOff</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Play a reminder sound " class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, a
+            sound automatically plays when an activity reminder is due. Corresponds to the
+             <span class="keyword parmname">Play a reminder sound </span> checkbox on the Reminders page in the user
+            interface.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowCityToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowCityToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the city field in the
+           user’s contact information. City is visible only to internal members of the
+           user’s organization when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">false</samp>. When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</li>
+
+           </ul>
+City is visible to external members in a community when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">true</samp>, or</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/UserPreferencesShowCityToGuestUsers" class="dashAnchor"></a>This field is <samp class="codeph nolang">false</samp> but <span class="keyword parmname">UserPreferencesShowCityToGuestUsers</span> is <samp class="codeph nolang">true</samp>, which overrides this field’s value.</li>
+
+           </ul>
+External users are users with Community, Customer Portal, or partner portal licenses.<p class="p"><span class="ph" id="d480154e2273-d480240e7102"><a name="d480154e2273-d480240e7102"><!-- --></a>The default value is <samp class="codeph nolang">false</samp>.</span>
+            <span class="ph" id="d480154e2273-d480240e7108"><a name="d480154e2273-d480240e7108"><!-- --></a>This field is available in API version 26.0 and
+             later.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowCityToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowCityToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the city field in the
+           user’s contact information. When <samp class="codeph nolang">true</samp>, city
+           is visible to guest users. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.
+           When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+           <p class="p"><a name="//apple_ref/cpp/Field/UserPreferencesShowCityToExternalUsers" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, this field overrides the value <samp class="codeph nolang">false</samp> in <span class="keyword parmname">UserPreferencesShowCityToExternalUsers</span>, making the user’s
+            city visible to external members. </p>
+<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            <span class="ph" id="d480154e2310-d480240e7176"><a name="d480154e2310-d480240e7176"><!-- --></a>This field is available in API version 28.0 and
+             later.</span></p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowCountryToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowCountryToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the country field in the
+           user’s contact information. Country is visible only to internal members of the
+           user’s organization when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">false</samp>. When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</li>
+
+           </ul>
+Country is visible to external members in a community when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">true</samp>, or</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/UserPreferencesShowCountryToGuestUsers" class="dashAnchor"></a>This field is <samp class="codeph nolang">false</samp> but <span class="keyword parmname">UserPreferencesShowCountryToGuestUsers</span> is <samp class="codeph nolang">true</samp>, which overrides this field’s value.</li>
+
+           </ul>
+External users are users with Community, Customer Portal, or partner portal licenses.
+           <p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowCountryToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowCountryToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the country field in the
+           user’s contact information. When <samp class="codeph nolang">true</samp>,
+           country is visible to guest users. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.
+           When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+           <p class="p"><a name="//apple_ref/cpp/Field/UserPreferencesShowCountryToExternalUsers" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, this field overrides the value <samp class="codeph nolang">false</samp> in <span class="keyword parmname">UserPreferencesShowCountryToExternalUsers</span>, making the
+            user’s country visible to external members. </p>
+<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 28.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowEmailToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowEmailToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the email address field in
+           the user’s contact information. Email address is visible only to internal members
+           of the user’s organization when this field is <samp class="codeph nolang">false</samp>. Email address is visible to external members in a community when
+           this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p"><span class="ph" id="d480154e2422-d480240e7381"><a name="d480154e2422-d480240e7381"><!-- --></a>When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</span>
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowFaxToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowFaxToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the fax number field in the
+           user’s contact information. Fax number is visible only to internal members of the
+           user’s organization when this field is <samp class="codeph nolang">false</samp>.
+           Fax number is visible to external members in a community when
+           this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowManagerToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowManagerToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the manager field in the
+           user’s contact information. Manager is visible only to internal members of the
+           user’s organization when this field is <samp class="codeph nolang">false</samp>.
+           Manager is visible to external members in a community when
+           this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowMobilePhoneToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowMobilePhoneToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the mobile or
+           cellular phone number field in the user’s contact information. The number is
+           visible only to internal members of the user’s organization when this field is
+            <samp class="codeph nolang">false</samp>. The number is visible to external members in
+           a community
+           when this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowPostalCodeToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowPostalCodeToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the postal or ZIP code
+           field in the user’s contact information. Postal code is visible only to internal
+           members of the user’s organization when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">false</samp>. When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</li>
+
+           </ul>
+Postal code is visible to external members in a community when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">true</samp>, or</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/UserPreferencesShowPostalCodeToGuestUsers" class="dashAnchor"></a>This field is <samp class="codeph nolang">false</samp> but <span class="keyword parmname">UserPreferencesShowPostalCodeToGuestUsers</span> is <samp class="codeph nolang">true</samp>, which overrides this field’s value.</li>
+
+           </ul>
+External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowPostalCodeToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowPostalCodeToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the postal or ZIP code
+           field in the user’s contact information. When <samp class="codeph nolang">true</samp>, postal code is visible to guest users. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.
+           When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+           <p class="p"><a name="//apple_ref/cpp/Field/UserPreferencesShowPostalCodeToExternalUsers" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, this field overrides the value
+             ​<samp class="codeph nolang">false</samp> in <span class="keyword parmname">UserPreferencesShowPostalCodeToExternalUsers</span>, making the
+            user’s postal code visible to external members. </p>
+<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 28.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowProfilePicToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowProfilePicToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the user’s profile
+           photo. When <samp class="codeph nolang">true</samp>, the photo is visible to guest
+           users in a community. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.<p class="p">When <samp class="codeph nolang">false</samp>, this field returns the stock
+            photo. The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 28.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowStateToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowStateToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the state field in the
+           user’s contact information. State is visible only to internal members of the
+           user’s organization when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">false</samp>. When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</li>
+
+           </ul>
+State is visible to external members in a community when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">true</samp>, or</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/UserPreferencesShowStateToGuestUsers" class="dashAnchor"></a>This field is <samp class="codeph nolang">false</samp> but <span class="keyword parmname">UserPreferencesShowStateToGuestUsers</span> is <samp class="codeph nolang">true</samp>, which overrides this field’s value.</li>
+
+           </ul>
+External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowStateToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowStateToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the state field in the
+           user’s contact information. When <samp class="codeph nolang">true</samp>, state
+           is visible to guest users. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.
+           When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+           <p class="p"><a name="//apple_ref/cpp/Field/UserPreferencesShowStateToExternalUsers" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, this field overrides the value <samp class="codeph nolang">false</samp> in <span class="keyword parmname">UserPreferencesShowStateToExternalUsers</span>, making the user’s
+            state visible to external members. </p>
+<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 28.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowStreetAddressToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowStreetAddressToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the street address
+           field in the user’s contact information. The address is visible only to internal
+           members of the user’s organization when this field is <samp class="codeph nolang">false</samp>. The address is visible to external members in a community when
+           this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowTitleToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowTitleToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the business title field in
+           the user’s contact information. Title is visible only to internal members of the
+           user’s organization when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">false</samp>. When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.</li>
+
+           </ul>
+Title is visible to external members in a community when:<ul class="ul bulletList">
+            <li class="li">This field is <samp class="codeph nolang">true</samp>, or</li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/UserPreferencesShowTitleToGuestUsers" class="dashAnchor"></a>This field is <samp class="codeph nolang">false</samp> but <span class="keyword parmname">UserPreferencesShowTitleToGuestUsers</span> is <samp class="codeph nolang">true</samp>, which overrides this field’s value.</li>
+
+           </ul>
+External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">The default value is <samp class="codeph nolang">true</samp>. This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowTitleToGuestUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowTitleToGuestUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the business title field in the
+           user’s contact information. When <samp class="codeph nolang">true</samp>, title
+           is visible to guest users. Guest users can access public Site.com and Force.com sites, and public pages in
+                Communities, via the Guest User license associated with each site or
+              community.
+           When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+           <p class="p"><a name="//apple_ref/cpp/Field/UserPreferencesShowTitleToExternalUsers" class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, this field overrides the value <samp class="codeph nolang">false</samp> in <span class="keyword parmname">UserPreferencesShowTitleToExternalUsers</span>, making the user’s
+            title visible to external members. </p>
+<p class="p">The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 28.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesShowWorkPhoneToExternalUsers" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesShowWorkPhoneToExternalUsers</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates the visibility of the work phone number
+           field in the user’s contact information. The number is visible only to internal
+           members of the user’s organization when this field is <samp class="codeph nolang">false</samp>. The number is visible to external members in a community when
+           this field is <samp class="codeph nolang">true</samp>. External users are users with Community, Customer Portal, or partner portal licenses.<p class="p">When <samp class="codeph nolang">false</samp>, this
+             field returns the value <samp class="codeph nolang">#N/A</samp>.
+            The default value is <samp class="codeph nolang">false</samp>.
+            This field is available in API version 26.0 and
+             later.</p>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d736339e119" data-title="Field"><a name="//apple_ref/cpp/Field/UserPreferencesTaskRemindersCheckboxDefault" class="dashAnchor"></a><span class="keyword parmname">UserPreferencesTaskRemindersCheckboxDefault</span></td>
+
+<td class="entry" headers="d736339e122" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/By default, set reminder on Tasks to..." class="dashAnchor"></a>When <samp class="codeph nolang">true</samp>, a reminder popup is automatically set on the user's tasks. Corresponds
+            to the <span class="keyword parmname">By default, set reminder on Tasks to...</span> checkbox on the
+            Reminders page in the user interface. This field is related to UserPreference and customizing activity reminders.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">Use this object to query Chatter—related information about the user. While the User object contains
+        all the information about a user and is historically tied to user management, UserProfile is a read-only entity that contains
+        the information that is relevant in a Chatter context.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

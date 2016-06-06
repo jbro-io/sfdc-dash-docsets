@@ -1,0 +1,174 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserPreference | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_userpreference"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserPreference</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="defn"><a name="defn"><!-- --></a>Represents a functional preference for a specific user in
+    your organization.</span></span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p"><span class="ph" id="d479863e57-d479912e73"><a name="d479863e57-d479912e73"><!-- --></a>Customer Portal users
+can't access this object.</span></p>
+</div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d735875e97">Field</th>
+
+       <th class="featureTableHeader  " id="d735875e100">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d735875e97" data-title="Field"><a name="//apple_ref/cpp/Field/Preference" class="dashAnchor"></a><span class="keyword parmname">Preference</span></td>
+
+       <td class="entry" headers="d735875e100" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Enable New Open Dialog" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserPreferencesTaskRemindersCheckboxDefault" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserPreferencesEventRemindersCheckboxDefault" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Email Transport Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Enable Query
+            Plan" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Pinned Folders" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Editor Font
+            Size" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Editor Theme" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Forecasting Displayed
+            Type" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Visualforce Viewstate Inspector" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ Autocomplete Apex After Key Press" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Prevent
+            Logs on Load" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Task Reminder Default Time" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Event Reminder Default
+            Lead Time" class="dashAnchor"></a>The name of the user preference. Supported values are <span class="keyword parmname">Event Reminder Default
+            Lead Time</span>, <span class="keyword parmname">Task Reminder Default Time</span>, <span class="keyword parmname">Prevent
+            Logs on Load</span>,<span class="keyword parmname"> Autocomplete Apex After Key Press</span>,
+            <span class="keyword parmname">Visualforce Viewstate Inspector</span>, <span class="keyword parmname">Forecasting Displayed
+            Type</span>, <span class="keyword parmname">Editor Theme</span>, <span class="keyword parmname">Editor Font
+            Size</span>, <span class="keyword parmname">Pinned Folders</span>, <span class="keyword parmname">Enable Query
+            Plan</span>, and <span class="keyword parmname">Email Transport Type</span>. These values are related
+           to <span class="keyword parmname">UserPreferencesEventRemindersCheckboxDefault</span> and <span class="keyword parmname">UserPreferencesTaskRemindersCheckboxDefault</span> on the User object. <span class="keyword parmname">Enable New Open Dialog</span> is reserved for future
+           use.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d735875e97" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a>
+        <span class="keyword parmname">UserId</span>
+       </td>
+
+       <td class="entry" headers="d735875e100" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The ID of the user associated with this role. Label is <strong class="ph uicontrol">User
+           ID</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d735875e97" data-title="Field"><a name="//apple_ref/cpp/Field/Value" class="dashAnchor"></a>
+<span class="keyword parmname">Value</span>
+       </td>
+
+       <td class="entry" headers="d735875e100" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Task Reminder Default Time" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Event Reminder Default Lead
+            Time" class="dashAnchor"></a>The value of the user preference. For <span class="keyword parmname">Event Reminder Default Lead
+            Time</span>, the values are increasing intervals of time from 0 minutes to 2 days.
+           For <span class="keyword parmname">Task Reminder Default Time</span>, the values are half-hours from 12:00
+           AM to 11:30 PM. To view the respective sets of values, access the Reminders in your
+           personal settings in the online application.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Use this object to query the set of currently configured user preferences in your
+    organization. In your client application, you can query the User object to
+    obtain valid User IDs in
+    order to access the UserPreference object.</p>
+
+   <p class="p">All users can invoke <samp class="codeph nolang">query()</samp> or <samp class="codeph nolang">describeSObjects()</samp> with this object. </p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

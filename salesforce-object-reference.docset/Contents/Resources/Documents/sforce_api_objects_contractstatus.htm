@@ -1,0 +1,210 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ContractStatus | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_contractstatus"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ContractStatus</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents the status of a Contract,
+   such as Draft, InApproval, Activated, Terminated, or Expired.</span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d279063e83">Field</th>
+
+<th class="featureTableHeader  " id="d279063e86">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d279063e83" data-title="Field"><a name="//apple_ref/cpp/Field/ApiName" class="dashAnchor"></a>
+        <span class="keyword parmname">ApiName</span>
+       </td>
+
+       <td class="entry" headers="d279063e86" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Uniquely identifies a picklist value so it can be retrieved without using an id or
+           master label.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+<tr>
+<td class="entry" headers="d279063e83" data-title="Field"><a name="//apple_ref/cpp/Field/IsDefault" class="dashAnchor"></a> <span class="keyword parmname">IsDefault</span> </td>
+
+<td class="entry" headers="d279063e86" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether this is the default contract status value (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>) in the picklist.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d279063e83" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a> <span class="keyword parmname">MasterLabel</span> </td>
+
+<td class="entry" headers="d279063e86" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Master label for this contract status value. This display value
+is the internal label that does not get translated.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d279063e83" data-title="Field"><a name="//apple_ref/cpp/Field/SortOrder" class="dashAnchor"></a> <span class="keyword parmname">SortOrder</span> </td>
+
+<td class="entry" headers="d279063e86" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Number used to sort this value in the contract status picklist.
+These numbers are not guaranteed to be sequential, as some previous
+contract status values might have been deleted.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d279063e83" data-title="Field"><a name="//apple_ref/cpp/Field/StatusCode" class="dashAnchor"></a> <span class="keyword parmname" id="i1448425"><a name="i1448425"><!-- --></a>StatusCode</span> </td>
+
+<td class="entry" headers="d279063e86" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Code indicating the status of a contract. One of the following
+values: <ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">Draft</samp></li>
+
+<li class="li"><samp class="codeph nolang">InApproval</samp></li>
+
+<li class="li"><samp class="codeph nolang">Activated</samp></li>
+
+</ul>
+ Two other values (<samp class="codeph nolang">Terminated</samp> and <samp class="codeph nolang">Expired</samp>) are defined but
+are not available for use via the API.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+ </div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+ <p class="p">This object represents a value in
+the contract status picklist. The contract status picklist provides
+additional information about the status of a Contract, such as its current state (<samp class="codeph nolang">Draft</samp>, <samp class="codeph nolang">InApproval</samp>, or <samp class="codeph nolang">Activated</samp>). You can query these records
+to retrieve the set of values in the contract status picklist, and
+then use that information while processing Contract objects to determine more information about a given contract.
+For example, the application could test whether a given contract is
+activated based on its <span class="keyword parmname">Status</span> value and the value of the <span class="keyword parmname">StatusCode</span> property in the associated ContractStatus object.</p>
+ </div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_contractcontactrole.htm" title="Represents the role that a given Contact plays on a Contract.">ContractContactRole</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

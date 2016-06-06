@@ -1,0 +1,3093 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>AccountCleanInfo | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_AccountCleanInfo"><!-- --></a><h1 class="helpHead1"> 			<span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>AccountCleanInfo</span> 		</h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Stores the metadata Data.com Clean uses to
+            determine an account record’s clean status. AccountCleanInfo helps you automate
+            the cleaning or related processing of account records.</span></div>
+
+        <p class="p">Account Clean Info provides a snapshot of the data in your Salesforce account record and
+            its matched Data.com record
+            at the time the Salesforce
+            record was cleaned.</p>
+
+        <p class="p">Account Clean Info includes a number of bit vector fields, whose component fields each
+            correspond to individual object fields and provide related data or status information
+            about those fields. For example, the bit vector field <span class="keyword parmname">IsDifferent</span>
+            has an <span class="keyword parmname">IsDifferentState</span> field. If the
+                <span class="keyword parmname">IsDifferentState</span> field’s value is
+                <samp class="ph systemoutput">False</samp>, that means the <span class="keyword parmname">State</span> field
+            value is <em class="ph i">the same</em> on the Salesforce account record and its matched Data.com
+            record.</p>
+
+        <div class="p">AccountCleanInfo bit vector fields include:<ul class="ul bulletList">
+                <li class="li">
+<span class="keyword parmname">CleanedBy</span> indicates who (a user) or what (a Clean job)
+                    cleaned the account record.</li>
+
+                <li class="li">
+<span class="keyword parmname">IsDifferent</span> indicates whether or not a field on the account
+                    record has a value that differs from the corresponding field on the matched Data.com record.</li>
+
+                <li class="li">
+<span class="keyword parmname">IsFlaggedWrong</span> indicates whether or not a field on the
+                    account record has a value that is flagged as wrong to Data.com.</li>
+
+                <li class="li">
+<span class="keyword parmname">IsReviewed</span> indicates whether or not a field on the account
+                    record is in a <samp class="ph systemoutput">Reviewed</samp> state, which means that the
+                    value was reviewed but not accepted.</li>
+
+            </ul>
+</div>
+
+        <p class="p">Their individual bits are defined here.</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">getDeleted()</samp>,&nbsp;<samp class="codeph nolang">getUpdated()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d125301e170">Field Name</th>
+
+<th class="featureTableHeader  " id="d125301e173">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountId" class="dashAnchor"></a><span class="keyword parmname">AccountId</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The unique, system-generated ID assigned when the account record
+was created.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/AccountSite" class="dashAnchor"></a><span class="keyword parmname">AccountSite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Information about the account’s location, such as single
+location, headquarters, or branch.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a><span class="keyword parmname">Address</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">address</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The compound form of the address. Read-only. See <a class="xref" href="atlas.en-us.api.meta/api/compound_fields_address.htm" title="Standard addresses—addresses built into standard objects in Salesforce—are accessible in the SOAP and REST APIs as an Address, a structured compound data type, as well as individual address elements.">Address Compound Fields</a> for details on compound address fields.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">AnnualRevenue</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">currency</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Estimated annual revenue of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a><span class="keyword parmname">City</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/CleanedByJob" class="dashAnchor"></a><span class="keyword parmname">CleanedByJob</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the account record was cleaned by a Data.com
+Clean job (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/CleanedByUser" class="dashAnchor"></a><span class="keyword parmname">CleanedByUser</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the account record was cleaned by a Salesforce
+user (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompanyName" class="dashAnchor"></a><span class="keyword parmname">CompanyName</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The name of the company.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/CompanyStatusDataDotCom" class="dashAnchor"></a><span class="keyword parmname">CompanyStatusDataDotCom</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The status of the company per Data.com. Values are: <samp class="ph systemoutput">Company is In Business per Data.com</samp> or <samp class="ph systemoutput">Company is Out of Business per Data.com.</samp>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a><span class="keyword parmname">Country</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">DandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The D-U-N-S Number on the D&amp;B Company record (if any) that
+is linked to the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DataDotComId" class="dashAnchor"></a><span class="keyword parmname">DataDotComId</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The ID Data.com maintains for the company.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Nillable</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A description of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DunsNumber" class="dashAnchor"></a><span class="keyword parmname">DunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The Data Universal Numbering System (D-U-N-S) number is a unique,
+nine-digit number assigned to every business location in the Dun &amp;
+Bradstreet database that has a unique, separate, and distinct operation.
+D-U-N-S numbers are used by industries and organizations around the
+world as a global standard for business identification and tracking. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DunsRightMatchConfidence" class="dashAnchor"></a><span class="keyword parmname">DunsRightMatchConfidence</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The account’s DUNSRight confidence code.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/DunsRightMatchGrade" class="dashAnchor"></a><span class="keyword parmname">DunsRightMatchGrade</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The account’s DUNSRight match grade.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a><span class="keyword parmname">Fax</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The account’s fax number.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a><span class="keyword parmname">Industry</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The industry the account belongs to.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentAccountSite" class="dashAnchor"></a><span class="keyword parmname">IsDifferentAccountSite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountSite" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AccountSite</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsDifferentAnnualRevenue</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AnnualRevenue</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCity" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCity</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/City" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">City</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCompanyName</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountName" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AccountName</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCountry" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCountry</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Country" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Country</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentCountryCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentCountryCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Country Code" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Country Code</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentDandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsDifferentDandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/DandBCompanyID" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">DandBCompanyID</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentDescription" class="dashAnchor"></a><span class="keyword parmname">IsDifferentDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Description</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsDifferentDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/DunsNumber" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">DunsNumber</span> field value is different from the D-U-N-S Number on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentFax" class="dashAnchor"></a><span class="keyword parmname">IsDifferentFax</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Fax</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentIndustry" class="dashAnchor"></a><span class="keyword parmname">IsDifferentIndustry</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Industry</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentNaicsCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentNaicsCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsCode" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsCode</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentNaicsDescription" class="dashAnchor"></a><span class="keyword parmname">IsDifferentNaicsDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsDescription</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsDifferentNumberOfEmployees</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NumberOf Employees" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NumberOf Employees</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentOwnership" class="dashAnchor"></a><span class="keyword parmname">IsDifferentOwnership</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Ownership" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Ownership</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentPhone" class="dashAnchor"></a><span class="keyword parmname">IsDifferentPhone</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Phone</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentPostalCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentPostalCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">PostalCode</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentSic" class="dashAnchor"></a><span class="keyword parmname">IsDifferentSic</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Sic" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Sic</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentSicDescription" class="dashAnchor"></a><span class="keyword parmname">IsDifferentSicDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SicDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">SicDescription</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentState" class="dashAnchor"></a><span class="keyword parmname">IsDifferentState</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">State</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentStateCode" class="dashAnchor"></a><span class="keyword parmname">IsDifferentStateCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/State Code" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">State Code</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentStreet" class="dashAnchor"></a><span class="keyword parmname">IsDifferentStreet</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">State</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentTickerSymbol" class="dashAnchor"></a><span class="keyword parmname">IsDifferentTickerSymbol</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/TickerSymbol" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">TickerSymbol</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentTradestyle" class="dashAnchor"></a><span class="keyword parmname">IsDifferentTradestyle</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Tradestyle" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Tradestyle</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentWebsite" class="dashAnchor"></a><span class="keyword parmname">IsDifferentWebsite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Website" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Website</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsDifferentYearStarted" class="dashAnchor"></a><span class="keyword parmname">IsDifferentYearStarted</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/YearStarted" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">YearStarted</span> field value is different from the corresponding value on its matched
+Data.com record (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongAccountSite" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongAccountSite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountSite" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AccountSite</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongAddress" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongAddress</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Address</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongAnnualRevenue</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AnnualRevenue</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongCompanyName</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/CompanyName" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">CompanyName</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongDescription" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Description</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/DunsNumber" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">DunsNumber</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongFax" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongFax</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Fax</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongIndustry" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongIndustry</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Industry</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongNaicsCode" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongNaicsCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsCode" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsCode</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongNaicsDescription" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongNaicsDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsDescription</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongNumberOfEmployees</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NumberOfEmployees" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NumberOfEmployees</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongOwnership" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongOwnership</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Ownership" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Ownership</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongPhone" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongPhone</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Phone</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongSic" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongSic</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Sic" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Sic</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongSicDescription" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongSicDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SicDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">SicDescription</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongTickerSymbol" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongTickerSymbol</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/TickerSymbol" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">TickerSymbol</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongTradestyle" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongTradestyle</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Tradestyle" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Tradestyle</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongWebsite" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongWebsite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Website" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Website</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsFlaggedWrongYearStarted" class="dashAnchor"></a><span class="keyword parmname">IsFlaggedWrongYearStarted</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/YearStarted" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">YearStarted</span> field value is flagged as wrong to Data.com (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsInactive" class="dashAnchor"></a><span class="keyword parmname">IsInactive</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Defaulted on create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Indicates whether the account has been reported to Data.com as <kbd class="ph userinput">Inactive</kbd> (<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedAccountSite" class="dashAnchor"></a><span class="keyword parmname">IsReviewedAccountSite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AccountSite" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AccountSite</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedAddress" class="dashAnchor"></a><span class="keyword parmname">IsReviewedAddress</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Address" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Address</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedAnnualRevenue" class="dashAnchor"></a><span class="keyword parmname">IsReviewedAnnualRevenue</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/AnnualRevenue" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">AnnualRevenue</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedCompanyName" class="dashAnchor"></a><span class="keyword parmname">IsReviewedCompanyName</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/CompanyName" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">CompanyName</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedDandBCompanyDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsReviewedDandBCompanyDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/DandBCompanyID" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">DandBCompanyID</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedDescription" class="dashAnchor"></a><span class="keyword parmname">IsReviewedDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Description</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedDunsNumber" class="dashAnchor"></a><span class="keyword parmname">IsReviewedDunsNumber</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/DunsNumber" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">DunsNumber</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedFax" class="dashAnchor"></a><span class="keyword parmname">IsReviewedFax</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Fax" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Fax</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedIndustry" class="dashAnchor"></a><span class="keyword parmname">IsReviewedIndustry</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Industry" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Industry</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedNaicsCode" class="dashAnchor"></a><span class="keyword parmname">IsReviewedNaicsCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsCode" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsCode</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedNaicsDescription" class="dashAnchor"></a><span class="keyword parmname">IsReviewedNaicsDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NaicsDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NaicsDescription</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedNumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">IsReviewedNumberOfEmployees</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/NumberOfEmployees" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">NumberOfEmployees</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedOwnership" class="dashAnchor"></a><span class="keyword parmname">IsReviewedOwnership</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Ownership" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Ownership</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedPhone" class="dashAnchor"></a><span class="keyword parmname">IsReviewedPhone</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Phone</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedSic" class="dashAnchor"></a><span class="keyword parmname">IsReviewedSic</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Sic" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Sic</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedSicDescription" class="dashAnchor"></a><span class="keyword parmname">IsReviewedSicDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/SicDescription" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">SicDescription</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedTickerSymbol" class="dashAnchor"></a><span class="keyword parmname">IsReviewedTickerSymbol</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/TickerSymbol" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">TickerSymbol</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedTradestyle" class="dashAnchor"></a><span class="keyword parmname">IsReviewedTradestyle</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Tradestyle" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Tradestyle</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedWebsite" class="dashAnchor"></a><span class="keyword parmname">IsReviewedWebsite</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Website" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">Website</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/IsReviewedYearStarted" class="dashAnchor"></a><span class="keyword parmname">IsReviewedYearStarted</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/YearStarted" class="dashAnchor"></a>Indicates whether the account’s <span class="keyword parmname">YearStarted</span> field value is in a <samp class="ph systemoutput">Reviewed</samp> state
+(<samp class="ph systemoutput">true</samp>) or not (<samp class="ph systemoutput">false</samp>).</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastMatchedDate" class="dashAnchor"></a><span class="keyword parmname">LastMatchedDate</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The date the account record was last matched and linked to a Data.com
+record.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastStatusChangedById" class="dashAnchor"></a><span class="keyword parmname">LastStatusChangedById</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Clean Status" class="dashAnchor"></a>The ID of who or what last changed the record’s <span class="keyword parmname">Clean Status</span> field value: a Salesforce user or a Clean
+job.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/LastStatusChangedDate" class="dashAnchor"></a><span class="keyword parmname">LastStatusChangedDate</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">dateTime</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Clean Status" class="dashAnchor"></a>The date on which the record’s <span class="keyword parmname">Clean Status</span> field value was last changed.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a><span class="keyword parmname">Latitude</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Longitude</span> to specify the precise
+geolocation of a billing address. Data not currently provided.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Longitude" class="dashAnchor"></a><span class="keyword parmname">Longitude</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">double</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Latitude" class="dashAnchor"></a>Used with <span class="keyword parmname">Latitude</span> to specify the precise
+geolocation of a billing address. Data not currently provided.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/NaicsCode" class="dashAnchor"></a><span class="keyword parmname">NaicsCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The six-digit North American Industry Classification System (NAICS)
+code is the standard used by business and government to classify business
+establishments into industries, according to their economic activity
+for the purpose of collecting, analyzing, and publishing statistical
+data related to the U.S. business economy.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/NaicsDescription" class="dashAnchor"></a><span class="keyword parmname">NaicsDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+based on its NAICS code.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Sort, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Field label is <strong class="ph uicontrol">Account Clean Info Name</strong>.
+The name of the account. Maximum size is 255 characters. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/NumberOfEmployees" class="dashAnchor"></a><span class="keyword parmname">NumberOfEmployees</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">int</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The number of employees working at the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Ownership" class="dashAnchor"></a><span class="keyword parmname">Ownership</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Ownership type for the account, for example Private, Public, or
+            Subsidiary. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Phone" class="dashAnchor"></a><span class="keyword parmname">Phone</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">phone</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The phone number for the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/PostalCode" class="dashAnchor"></a><span class="keyword parmname">PostalCode</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Sic" class="dashAnchor"></a><span class="keyword parmname">Sic</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><span class="ph" id="SicDef"><a name="SicDef"><!-- --></a>Standard Industrial Classification code of the
+company’s main business categorization, for example, 57340
+for Electronics.</span></dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/SicDescription" class="dashAnchor"></a><span class="keyword parmname">SicDescription</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A brief description of an organization’s line of business,
+based on its SIC code. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/State" class="dashAnchor"></a><span class="keyword parmname">State</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Street" class="dashAnchor"></a><span class="keyword parmname">Street</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">textarea</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">Details for the billing address of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/TickerSymbol" class="dashAnchor"></a><span class="keyword parmname">TickerSymbol</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The stock market symbol for the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Tradestyle" class="dashAnchor"></a><span class="keyword parmname">Tradestyle</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">A name, different from its legal name, that an organization can
+use for conducting business. Similar to “Doing business as”
+(DBA). </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/Website" class="dashAnchor"></a><span class="keyword parmname">Website</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">url</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The website of the account.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d125301e170" data-title="Field Name"><a name="//apple_ref/cpp/Field/YearStarted" class="dashAnchor"></a><span class="keyword parmname">YearStarted</span></td>
+
+<td class="entry" headers="d125301e173" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">string</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Filter, Group, Nillable, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The year the company was established or the year when current
+ownership or management assumed control of the company. </dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+            <p class="p">Administrators can modify a limited set of AccountCleanInfo fields from the Account
+                Clean Info page. </p>
+
+            <p class="p">Developers can create triggers that read the Account Clean Info fields to help
+                automate the cleaning or related processing of account records. For example, you
+                might create a trigger that reads the <span class="keyword parmname">Clean Status</span> field on the
+                Account object. If an account record’s <span class="keyword parmname">Clean Status</span>
+                field value is <samp class="ph systemoutput">Different</samp> but the record has no
+                    <span class="keyword parmname">Billing Street</span> value, the trigger could update the
+                record’s status to <samp class="ph systemoutput">Not Compared</samp>.</p>
+<div class="p">Create triggers that read AccountCleanInfo
+fields to help automate the cleaning or related processing of account
+records. For example:<ul class="ul bulletList">
+<li class="li">Keep account records’ status <samp class="ph systemoutput">InSync</samp> if the only difference
+                        from matched records is the <span class="keyword parmname">Phone</span> format (for
+                            example,<var class="keyword varname"> (415) 353-8000</var> on the account record versus
+                            <var class="keyword varname">415 353 8000</var> on the matched Data.com record).
+                        <div class="codeSection apex_code"><div id="highlighter_152599" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_152599_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_152599" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">trigger AccountPhoneTrigger on Account (before </code><code class="apexKey">update</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="apexKey">for</code> <code class="plain">(Account account: Trigger.</code><code class="apexKey">new</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Account oldAccount = Trigger.oldMap.</code><code class="apexKey">get</code><code class="plain">(account.ID);</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(account.CleanStatus == </code><code class="apexString">'Different'</code><code class="plain">) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">List</code> <code class="plain">&lt;AccountCleanInfo&gt; cleanInfo = [</code><code class="apexKey">Select</code> <code class="plain">Id, IsDifferentPhone, IsReviewedPhone, Phone </code><code class="apexKey">from</code> <code class="plain">AccountCleanInfo </code><code class="apexKey">where</code> <code class="plain">AccountId = :account.Id];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">if</code> <code class="plain">(cleanInfo.size() &gt; </code><code class="value">0</code> <code class="plain">&amp;&amp; cleanInfo[</code><code class="value">0</code><code class="plain">].IsDifferentPhone &amp;&amp; cleanInfo[</code><code class="value">0</code><code class="plain">].Phone.StartsWith(</code><code class="apexString">'+'</code><code class="plain">)) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// if Data.com phone number is marked Different but starts with ‘+’, ignore this</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexComments">// and set the status to “Reviewed”</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">AccountCleanInfo cleanInfoToUpdate = </code><code class="apexKey">new</code> <code class="plain">AccountCleanInfo();</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">cleanInfoToUpdate.Id = cleanInfo[</code><code class="value">0</code><code class="plain">].Id;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">cleanInfoToUpdate.IsReviewedPhone = </code><code class="apexKey">true</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="apexKey">update</code> <code class="plain">cleanInfoToUpdate;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">account.CleanStatus = </code><code class="apexString">'Reviewed'</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div></div>
+</li>
+
+<li class="li">Create a customized set of <span class="keyword parmname">Industry</span> field
+values for accounts. Use triggers to map values from fields on imported
+or cleaned records onto a standard set of values.</li>
+
+<li class="li">Read the <span class="keyword parmname">CleanStatus</span> field value on the Account
+object. If that value is <samp class="ph systemoutput">Different</samp>, but
+a Salesforce record has no street address value, update the record’s
+status to <span class="keyword parmname">Not Compared</span>.</li>
+
+</ul>
+ </div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,1127 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>QuantityForecast | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_quantityforecast"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>QuantityForecast</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a quantity-based forecast.</span></div>
+
+  <p class="p">The API also provides
+   revenue-based forecasts using RevenueForecast.</p>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>,
+     <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section" id="q_forecast_special">
+<a name="q_forecast_special"><!-- --></a><h2 class="helpHead2">Special Access Rules</h2>
+
+   
+   <ul class="ul bulletList">
+    <li class="li">Requires the “View All Data” permission.</li>
+
+    <li class="li">Customer Portal users can’t access this object.</li>
+
+   </ul>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d619427e138">Field</th>
+
+       <th class="featureTableHeader  " id="d619427e141">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/Closed" class="dashAnchor"></a><span class="keyword parmname">Closed</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. A rollup of opportunities or opportunity line items that have closed in
+           this period.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/Commit" class="dashAnchor"></a><span class="keyword parmname">Commit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's Commit total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/CommitComment" class="dashAnchor"></a><span class="keyword parmname">CommitComment</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The comment entered when the owner edited his or her
+            <strong class="ph uicontrol">Commit</strong> total from the <strong class="ph uicontrol">Adjusted Total</strong> link
+           on the forecast edit page.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/CommitOverride" class="dashAnchor"></a><span class="keyword parmname">CommitOverride</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The owner's override of their own <strong class="ph uicontrol">My Commit</strong>
+           total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultRollupCommit" class="dashAnchor"></a><span class="keyword parmname">DefaultRollupCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The owner's standard <strong class="ph uicontrol">Commit</strong> rollup, including their
+           own opportunities and forecast-level overrides from subordinate users in the role
+           hierarchy.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/DefaultRollupUpside" class="dashAnchor"></a><span class="keyword parmname">DefaultRollupUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The owner's standard <strong class="ph uicontrol">Best Case</strong> rollup, including
+           their own opportunities and forecast-level overrides from subordinate users in the role
+           hierarchy.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/InvalidationDate" class="dashAnchor"></a><span class="keyword parmname">InvalidationDate</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">dateTime</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. If not blank, indicates that the rollup numbers for <strong class="ph uicontrol">Forecast
+            Override</strong> fields that represent calculated (summarized) amounts may not be up
+           to date.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerChoiceCommit" class="dashAnchor"></a><span class="keyword parmname">ManagerChoiceCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's choice regarding the commit amount: <ul class="ul bulletList">
+            <li class="li">DefaultRollup: Use the manager's default commit rollup for owner's forecast, which
+             reflects the manager's opportunity forecast overrides.</li>
+
+            <li class="li">AcceptForecast (default selection): Accept the forecast owner's <strong class="ph uicontrol">Adjusted
+              Total </strong>commit amount, which may or may not be an override.</li>
+
+            <li class="li">ManagerManualOverride: Use the manager's manual override.</li>
+
+            <li class="li">OpportunityOnlyRollup: Use the opportunity rollup, including opportunity forecast
+             overrides, but excluding any forecast-level (<strong class="ph uicontrol">Adjusted Total</strong>)
+             overrides.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerChoiceUpside" class="dashAnchor"></a><span class="keyword parmname">ManagerChoiceUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's choice regarding the best case amount: <ul class="ul bulletList">
+            <li class="li">DefaultRollup: Use the manager's default best case rollup for owner's forecast,
+             which reflects the manager's opportunity forecast overrides.</li>
+
+            <li class="li">AcceptForecast (default selection): Accept the forecast owner's <strong class="ph uicontrol">Adjusted
+              Total</strong> best case amount, which may or may not be an override.</li>
+
+            <li class="li">ManagerManualOverride: Use the manager's manual override.</li>
+
+            <li class="li">OpportunityOnlyRollup: Use the opportunity rollup, including opportunity forecast
+             overrides, but excluding any forecast-level (<strong class="ph uicontrol">Adjusted Total</strong>)
+             overrides.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerClosed" class="dashAnchor"></a><span class="keyword parmname">ManagerClosed</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's closed total for the owner's forecast, including any
+           opportunity or opportunity product overrides made by the manager.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerCommit" class="dashAnchor"></a><span class="keyword parmname">ManagerCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The manager's Commit total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerCommitOverride" class="dashAnchor"></a><span class="keyword parmname">ManagerCommitOverride</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's manual override of the forecast owner's
+            <strong class="ph uicontrol">Commit</strong> total. Represents an option in the override pop-up window,
+           which allows managers to choose how to roll up the forecast numbers of a direct
+           report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerDefaultRollupCommit" class="dashAnchor"></a><span class="keyword parmname">ManagerDefaultRollupCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's standard <strong class="ph uicontrol">Commit</strong> rollup for the
+           forecast owner. Represents an option in the override pop-up window, which allows managers
+           to choose how to roll up the forecast numbers of a direct report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerDefaultRollupUpside" class="dashAnchor"></a><span class="keyword parmname">ManagerDefaultRollupUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's standard <strong class="ph b">Best Case</strong> rollup for the forecast owner.
+           Represents an option in the override pop-up window, which allows managers to choose how
+           to roll up the forecast numbers of a direct report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerId" class="dashAnchor"></a><span class="keyword parmname">ManagerId</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. ID of the direct manager of the user who owns this forecast.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerOpportunityRollupCommit" class="dashAnchor"></a><span class="keyword parmname">ManagerOpportunityRollupCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's view of the forecast owner's opportunity-level
+            <strong class="ph uicontrol">Commit</strong> rollup, ignoring all forecast overrides. Represents an
+           option in the override pop-up window, which allows managers to choose how to roll up the
+           forecast numbers of a direct report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerOpportunityRollupUpside" class="dashAnchor"></a><span class="keyword parmname">ManagerOpportunityRollupUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. The manager's view of the forecast owner's opportunity-level
+            <strong class="ph uicontrol">Best Case</strong> rollup, ignoring all forecast overrides. Represents an
+           option in the override pop-up window, which allows managers to choose how to roll up the
+           forecast numbers of a direct report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerPipeline" class="dashAnchor"></a><span class="keyword parmname">ManagerPipeline</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The manager's pipeline total for the owner's forecast, including any opportunity or
+           opportunity product overrides made by the manager.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerUpside" class="dashAnchor"></a><span class="keyword parmname">ManagerUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The manager's Best Case total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ManagerUpsideOverride" class="dashAnchor"></a>
+<span class="keyword parmname">ManagerUpsideOverride</span>
+       </td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The manager's manual override of the forecast owner's <strong class="ph uicontrol">Best Case</strong>
+           total. Represents an option in the override pop-up window, which allows managers to
+           choose how to roll up the forecast numbers of a direct report.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityRollupClosed" class="dashAnchor"></a><span class="keyword parmname">OpportunityRollupClosed</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's <strong class="ph uicontrol">Closed</strong> total for his or her opportunities
+           only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityRollupCommit" class="dashAnchor"></a><span class="keyword parmname">OpportunityRollupCommit</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's <strong class="ph b">Commit</strong> total for his or her opportunities only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityRollupPipeline" class="dashAnchor"></a><span class="keyword parmname">OpportunityRollupPipeline</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's <strong class="ph uicontrol">Pipeline</strong> total for his or her opportunities
+           only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/OpportunityRollupUpside" class="dashAnchor"></a><span class="keyword parmname">OpportunityRollupUpside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's <strong class="ph uicontrol">Best Case</strong> total for his or her opportunities
+           only.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname">OwnerId</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User
+           who owns this forecast. Required on create.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/PeriodId" class="dashAnchor"></a><span class="keyword parmname" id="i1464122"><a name="i1464122"><!-- --></a>PeriodId</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a>The ID of the Period that contains the <span class="keyword parmname">StartDate</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/Pipeline" class="dashAnchor"></a><span class="keyword parmname">Pipeline</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The total pipeline rollup from subordinates in the role hierarchy, including the
+           owner's opportunities.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/ProductFamily" class="dashAnchor"></a><span class="keyword parmname">ProductFamily</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The value chosen in the Product Family picklist, which can be configured from the
+           object management settings for products. This field is relevant if you have chosen
+           Product Families as the Forecast Type in Forecasts Settings. If you are not forecasting
+           by product family or if the forecast represents opportunities that are not associated
+           with a product family, then this field is blank. Required on create.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/Quota" class="dashAnchor"></a><span class="keyword parmname" id="i1464183"><a name="i1464183"><!-- --></a>Quota</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The quota amount for the period. You can create, update, upsert, and delete. Requires
+           the “Modify All Data” and “Manage Users” permission. Required
+           on create.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/StartDate" class="dashAnchor"></a><span class="keyword parmname" id="i1464219"><a name="i1464219"><!-- --></a>StartDate</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">date</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/PeriodId" class="dashAnchor"></a>The start date of this forecast. The ID of the Period that contains this date is written to the <span class="keyword parmname">PeriodId</span> field if it changes. A new Period is created if none exists. Required on create.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/Upside" class="dashAnchor"></a><span class="keyword parmname">Upside</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">currency</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The owner's <strong class="ph uicontrol">Best Case</strong> total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/UpsideComment" class="dashAnchor"></a><span class="keyword parmname">UpsideComment</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The comment entered when the owner edited his or her <strong class="ph uicontrol">Best Case</strong>
+           total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d619427e138" data-title="Field"><a name="//apple_ref/cpp/Field/UpsideOverride" class="dashAnchor"></a><span class="keyword parmname">UpsideOverride</span></td>
+
+       <td class="entry" headers="d619427e141" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">double</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read only. The owner's override of their own My <strong class="ph uicontrol">Best Case</strong>
+           total.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Query this object to support customizable forecasts based on quantities.</p>
+
+   <p class="p">You can update one field, <span class="keyword parmname">Quota</span>, which means that you can mass update sales users' quotas instead of updating them one by one
+    in the user interface. Editing <span class="keyword parmname">Quota</span>, which means that you can mass update sales users' quotas instead of updating them one by one
+    in the user interface. Editing <span class="keyword parmname">Quota</span> requires the “Modify All Data” and “Manage Users”
+    permissions.</p>
+
+   <p class="p">The rollup fields always reflect opportunity and opportunity product overrides by the forecast
+    owner or one of the forecast owner’s subordinates in the role hierarchy. In addition, the
+    manager rollup fields include overrides by the forecast owner's direct manager in the role
+    hierarchy.</p>
+
+   <p class="p">Some of the rollup fields ignore forecast-level (<strong class="ph uicontrol">Adjusted Total</strong>)
+    overrides, but they never ignore opportunity forecast overrides that are visible to the owner or
+    manager.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_revenueforecast.htm" title="Represents a revenue-based forecast.">RevenueForecast</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_quantityforecasthistory.htm" title="Represents historical information about quantity-based forecasts that have been submitted (saved) in the user interface.">QuantityForecastHistory</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

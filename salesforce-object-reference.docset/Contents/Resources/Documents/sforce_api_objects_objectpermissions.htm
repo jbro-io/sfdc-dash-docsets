@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>ObjectPermissions | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_objectpermissions"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>ObjectPermissions</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents the enabled object permissions for
+            the parent PermissionSet.</span> This object is available in API version 24.0 and
+         later.</span></div>
+
+<p class="p">To grant a user access to an object, associate an ObjectPermissions record with a PermissionSet that’s assigned to a user. ObjectPermissions records are only supported
+         in PermissionSet, not in Profile.</p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>,&nbsp;<samp class="codeph nolang">delete()</samp>,&nbsp;<samp class="codeph nolang">describeSObjects()</samp>,&nbsp;<samp class="codeph nolang">query()</samp>,&nbsp;<samp class="codeph nolang">retrieve()</samp>,&nbsp;<samp class="codeph nolang">update()</samp>,&nbsp;<samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d536095e121">Field Name</th>
+
+<th class="featureTableHeader  " id="d536095e124">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname">ParentId</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">reference</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/Id" class="dashAnchor"></a>The <span class="keyword parmname">Id</span> of this object’s parent <a class="xref" href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm" title="Represents a set of permissions that’s used to grant additional access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and later.">PermissionSet</a>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsCreate" class="dashAnchor"></a><span class="keyword parmname" id="PermCreate"><a name="PermCreate"><!-- --></a>PermissionsCreate</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can create records for this object. <span class="ph" id="ReqPermsReadTrue"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a><a name="ReqPermsReadTrue"><!-- --></a>Requires <span class="keyword parmname">PermissionsRead</span> for the same object to be <samp class="codeph nolang">true</samp>.</span>
+</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsDelete" class="dashAnchor"></a><span class="keyword parmname" id="PermDelete"><a name="PermDelete"><!-- --></a>PermissionsDelete</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsEdit" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can delete records for this object. Requires <span class="keyword parmname">PermissionsRead</span> and <span class="keyword parmname">PermissionsEdit</span> for the same object to be <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsEdit" class="dashAnchor"></a><span class="keyword parmname" id="PermEdit"><a name="PermEdit"><!-- --></a>PermissionsEdit</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can edit records for this object. Requires <span class="keyword parmname">PermissionsRead</span> for the same object to be <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsModifyAllRecords" class="dashAnchor"></a><span class="keyword parmname" id="PermMAR"><a name="PermMAR"><!-- --></a>PermissionsModifyAllRecords</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsViewAllRecords" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PermissionsEdit" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PermissionsDelete" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can edit all records for this object, regardless of sharing
+settings. Requires <span class="keyword parmname">PermissionsRead</span>, <span class="keyword parmname">PermissionsDelete</span>, <span class="keyword parmname">PermissionsEdit</span>, and <span class="keyword parmname">PermissionsViewAllRecords</span> for the same object to be <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a><span class="keyword parmname" id="PermRead"><a name="PermRead"><!-- --></a>PermissionsRead</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can view records for this object.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/PermissionsViewAllRecords" class="dashAnchor"></a><span class="keyword parmname" id="PermVAR"><a name="PermVAR"><!-- --></a>PermissionsViewAllRecords</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">boolean</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Update</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd"><a name="//apple_ref/cpp/Field/PermissionsRead" class="dashAnchor"></a>If <samp class="codeph nolang">true</samp>, users assigned to
+the parent PermissionSet can view all records for this object, regardless of sharing
+settings. Requires <span class="keyword parmname">PermissionsRead</span> for the same object to be <samp class="codeph nolang">true</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d536095e121" data-title="Field Name"><a name="//apple_ref/cpp/Field/SobjectType" class="dashAnchor"></a><span class="keyword parmname">SobjectType</span></td>
+
+<td class="entry" headers="d536095e124" data-title="Details">
+<dl class="dl detailList">
+
+<dt class="dt dlterm">Type</dt>
+
+<dd class="dd">picklist</dd>
+
+
+
+<dt class="dt dlterm">Properties</dt>
+
+<dd class="dd">Create, Filter, Group, Restricted picklist, Sort</dd>
+
+
+
+<dt class="dt dlterm">Description</dt>
+
+<dd class="dd">The object’s API name.
+For example, <samp class="codeph nolang">Merchandise__c</samp>.</dd>
+
+
+</dl>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Permission Dependencies</h2>
+<p class="p">Some user permissions
+have dependencies on object permissions. For example, if a permission
+set has the “Transfer Leads” permission, it also has
+“Read” and “Create” on the leads object.</p>
+<p class="p">You can query from ObjectPermissions up
+to the parent PermissionSet object. For example:</p>
+<div class="codeSection soql"><div id="highlighter_530676" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_530676_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_530676" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Parent.Name, Parent.PermissionsTransferAnyLead, PermissionsRead, PermissionsCreate</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ObjectPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE SobjectType = 'Lead'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Determining Object Access with “Modify All
+Data”</h2>
+<p class="p">When using SOQL to query object permissions,
+be aware that some object permissions are enabled because a user permission
+requires them.</p>
+<p class="p">The exception to this rule is when “Modify
+All Data” is enabled. While it enables all object permissions,
+it doesn’t physically store any object permission records in
+the database. As a result, unlike object permissions that are required
+by a user permission—such as “View All Data”
+or “Import Leads”—the query still returns permission
+sets with “Modify All Data,” but the object permission
+record will contain an invalid ID that begins with “000”.
+This ID indicates that the object has full access due to “Modify
+All Data” and the object permission record can’t be
+updated or deleted. To remove full access from these objects, disable
+“Modify All Data” and then delete the resulting object
+permission record. This ensures that when using SOQL to find all the
+objects that have full access, it returns all objects that have this
+access regardless of whether it’s due to “Modify All
+Data” or because an administrator set full access.</p>
+<p class="p">For
+example, the following will return all permission sets that have “Read”
+on the Merchandise__c object, regardless of whether it’s explicitly
+defined on the object or implicitly defined through “Modify
+All Data.”</p>
+<div class="codeSection soql"><div id="highlighter_275193" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_275193_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_275193" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Parent.label, SobjectType, PermissionsRead,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">Parent.PermissionsModifyAllData, ParentId</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM ObjectPermissions</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE PermissionsRead = true and SobjectType = 'Merchandise__c'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Nesting Object Permissions</h2>
+<div class="p">You can nest ObjectPermissions in
+a PermissionSet query. For example, the following returns any permission sets
+where “Transfer Leads” is true. Additionally, the result
+set will include the “Read” object permission on leads.
+This is done by nesting the SOQL with an object permission query using
+the relationship name for object permissions: <samp class="codeph nolang">ObjectPerms</samp>.<div class="codeSection soql"><div id="highlighter_216885" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_216885_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_216885" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id,Name,PermissionsTransferAnyLead,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">(SELECT Id, PermissionsRead from ObjectPerms where SobjectType='Lead')</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM PermissionSet</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE PermissionsTransferAnyLead = true</code></td></tr></tbody></table></div></div></div></div>
+</div>
+<p class="p">As a result,
+it’s possible to traverse the relationship between the PermissionSet and any child related objects (in this case, ObjectPermissions).
+You can do this from the PermissionSet object by using the child relationship (<samp class="codeph nolang">ObjectPerms</samp>, <samp class="codeph nolang">FieldPerms</samp>, and so on) or from the child object by referencing
+the PermissionSet with <samp class="codeph nolang">Parent.<var class="keyword varname">permission_set_attribute</var></samp>.</p>
+<p class="p">It’s important to consider when to use a
+conditional <samp class="codeph soql">WHERE</samp> statement to
+restrict the result set. To query based on an attribute on the permission
+set object, nest the SOQL with the child relationship. However, to
+query based on an attribute on the child object, you must reference
+the permission set parent attribute in your query.</p>
+<div class="p">The following
+two queries return the same columns with different results, based
+on whether you use the child relationship or parent notation.<div class="codeSection soql"><div id="highlighter_197075" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_197075_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_197075" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, Name, PermissionsModifyAllData,</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">(SELECT Id, SobjectType, PermissionsRead from Objectperms)</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">FROM PermissionSet</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">WHERE PermissionsModifyAllData=true</code></td></tr></tbody></table></div></div></div></div>
+versus:<div class="codeSection soql"><div id="highlighter_117920" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_117920_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_117920" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT Id, SObjectType, PermissionsRead, Parent.Id, Parent.Name, Parent.PermissionsModifyAllData</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM ObjectPermissions</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">WHERE SObjectType='Merchandise__c'</code></td></tr></tbody></table></div></div></div></div>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled">
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_permissionset.htm" title="Represents a set of permissions that’s used to grant additional access to one or more users without changing their profile or reassigning profiles. This object is available in API version 22.0 and later.">PermissionSet</a></div>
+</li>
+<li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_fieldpermissions.htm" title="Represents the enabled field permissions for the parent PermissionSet. This object is available in API version 24.0 and later.">FieldPermissions</a></div>
+</li>
+</ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserLicense | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_userlicense"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserLicense</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="defn"><a name="defn"><!-- --></a>Represents a user license in your organization.</span> A
+   user license entitles a user to specific functionality and determines the profiles and permission
+   sets available to the user.</span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d733495e91">Field</th>
+
+       <th class="featureTableHeader  " id="d733495e94">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/LicenseDefinitionKey" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="LicenseDefKey"><a name="LicenseDefKey"><!-- --></a>LicenseDefinitionKey</span></span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/License Def. ID" class="dashAnchor"></a>A string that uniquely identifies a particular user license. Label is
+            <span class="keyword parmname">License Def. ID</span>. Values are:<p class="p"><strong class="ph b">AUL</strong>: corresponds to the Salesforce Platform user
+            license</p>
+<p class="p"><strong class="ph b">AUL1</strong>: corresponds to the Salesforce Platform One user
+             license</p>
+<p class="p"><strong class="ph b">AUL_LIGHT</strong> corresponds to the Salesforce Platform Light user
+            license</p>
+<p class="p"><strong class="ph b">FDC_ONE</strong> corresponds to the Force.com - One
+          App user
+            license</p>
+<p class="p"><strong class="ph b">FDC_SUB</strong> corresponds to the Force.com App
+          Subscription user
+              license</p>
+<p class="p"><strong class="ph b">High Volume Customer Portal_User</strong>:
+            corresponds to the High Volume Customer Portal user license</p>
+<p class="p"><strong class="ph b">Overage_Platform_Portal_User</strong> corresponds to the Overage
+            Authenticated Website user license</p>
+<p class="p"><strong class="ph b">PID_STRATEGIC_PRM</strong>: corresponds to the
+             Gold Partner user
+             license</p>
+<p class="p"><strong class="ph b">PID_CHATTER</strong> corresponds to the Chatter
+          Only user
+            license</p>
+<p class="p"><strong class="ph b">PID_CONTENT</strong> corresponds to the Content Only user
+             license</p>
+<p class="p"><strong class="ph b">PID_Customer_Portal_Basic</strong>: corresponds to the Customer Portal Manager Standard user
+            license and the Customer Portal User
+            license</p>
+<p class="p"><strong class="ph b">PID_Customer_Portal_Standard</strong>: corresponds to the Customer Portal Manager Custom user
+            license</p>
+<p class="p"><strong class="ph b">PID_FDC_FREE</strong> corresponds to the Force.com Free user
+             license</p>
+<p class="p"><strong class="ph b">PID_IDEAS</strong> corresponds to the Ideas Only user
+             license</p>
+<p class="p"><strong class="ph b">PID_Ideas_Only_Portal</strong> corresponds to the Ideas Only Portal user
+            license</p>
+<p class="p"><strong class="ph b">PID_Ideas_Only_Site</strong> corresponds to the Ideas Only Site user
+            license</p>
+<p class="p"><strong class="ph b">PID_KNOWLEDGE</strong> corresponds to the Knowledge Only user
+             license</p>
+<p class="p"><strong class="ph b">PID_Customer_Community</strong> corresponds to the Customer Community
+            license.</p>
+<p class="p"><strong class="ph b">PID_Customer_Community_Login</strong> corresponds to the Customer Community
+            Login license.</p>
+<p class="p"><strong class="ph b">PID_Partner_Community</strong> corresponds to the Partner Community
+            license.</p>
+<p class="p"><strong class="ph b">PID_Partner_Community_Login</strong> corresponds to the Partner Community
+            Login license.</p>
+<p class="p"><strong class="ph b">PID_Limited_Customer_Portal_Basic</strong>: corresponds to the
+            Limited Customer Portal Manager
+            Standard user license</p>
+<p class="p"><strong class="ph b">PID_Limited_Customer_Portal_Standard</strong>: corresponds to
+            the Limited Customer Portal Manager
+            Custom user license</p>
+<p class="p"><strong class="ph b">PID_Overage_Customer_Portal_Basic</strong>: corresponds to the
+            Overage Customer Portal Manager
+            Standard user license</p>
+<p class="p"><strong class="ph b">PID_Overage_High Volume Customer Portal</strong> corresponds
+            to the Overage High Volume Customer Portal user
+             license</p>
+<p class="p"><strong class="ph b">Platform_Portal_User</strong>: corresponds to the Authenticated Website user
+            license</p>
+<p class="p"><strong class="ph b">POWER_PRM</strong>: corresponds to the Partner user
+             license</p>
+<p class="p"><strong class="ph b">POWER_SSP</strong>: corresponds to the Customer Portal Manager user
+             license</p>
+<p class="p"><strong class="ph b">SFDC</strong>: corresponds to the Full CRM user license</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/MasterLabel" class="dashAnchor"></a><span class="keyword parmname">MasterLabel</span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The user license label.</dd>
+
+          <dd class="dd">This field is available in API version 32.0 and later. </dd>
+
+          <dd class="dd" id="api_access_to_user_license_pilot">
+<a name="api_access_to_user_license_pilot"><!-- --></a>This field is available through the API Access
+           to User Licenses pilot program. For information on enabling this pilot program for your
+           organization, contact Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/MonthlyLoginsEntitlement" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="monthly_logins_entitlement"><a name="monthly_logins_entitlement"><!-- --></a>MonthlyLoginsEntitlement</span></span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The maximum number of customer or partner portal logins allowed per month. A <samp class="codeph nolang">null</samp> value in this field means the user license is charged
+           according to the number of users rather than the number of logins.</dd>
+
+          <dd class="dd">This field is available in API version 20.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/MonthlyLoginsUsed" class="dashAnchor"></a><span class="keyword parmname"><span class="ph" id="monthly_logins_used"><a name="monthly_logins_used"><!-- --></a>MonthlyLoginsUsed</span></span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/MonthlyLoginsEntitlement" class="dashAnchor"></a>The number of successful logins for all users associated with a customer or partner
+           portal user license. This field has a non-<samp class="codeph nolang">null</samp> value
+           if <span class="keyword parmname">MonthlyLoginsEntitlement</span> has a non-<samp class="codeph nolang">null</samp> value.</dd>
+
+          <dd class="dd">This field is available in API version 20.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname">Name</span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The internal name of the user license. <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Your organization may also include custom
+            user licenses.</p>
+</div>
+</div></div></div></div>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/Status" class="dashAnchor"></a><span class="keyword parmname">Status</span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The current status of the user license. Valid values for this field are <samp class="codeph nolang">Active</samp> and <samp class="codeph nolang">Disabled</samp>.</dd>
+
+          <dd class="dd">This field is available in API version 32.0 and
+           later.</dd>
+
+          <dd class="dd">This field is available through the API Access
+           to User Licenses pilot program. For information on enabling this pilot program for your
+           organization, contact Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/TotalLicenses" class="dashAnchor"></a><span class="keyword parmname">TotalLicenses</span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of user licenses in the organization.</dd>
+
+          <dd class="dd">This field is available in API version 32.0 and
+           later.</dd>
+
+          <dd class="dd">This field is available through the API Access
+           to User Licenses pilot program. For information on enabling this pilot program for your
+           organization, contact Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d733495e91" data-title="Field"><a name="//apple_ref/cpp/Field/UsedLicenses" class="dashAnchor"></a><span class="keyword parmname">UsedLicenses</span></td>
+
+       <td class="entry" headers="d733495e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The number of user licenses that are assigned to active users in the
+           organization.</dd>
+
+          <dd class="dd">This field is available in API version 32.0 and
+           later.</dd>
+
+          <dd class="dd">This field is available through the API Access
+           to User Licenses pilot program. For information on enabling this pilot program for your
+           organization, contact Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">Users with the “View Setup and Configuration” permission can use the UserLicense object
+    to view the set of currently defined user licenses in your organization.</p>
+
+   <p class="p">The UserLicense object is currently used by bulk user creation to determine the user license to which each
+    profile and permission set belongs. For example, if you use the API to create portal users and you
+    want to know which profile belongs to each portal user license, you can query this object for
+    each profile and check the <span class="keyword parmname">LicenseDefinitionKey</span> to identify the associated user license.</p>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_profile.htm" title="Represents a profile, which defines a set of permissions to perform different operations, such as querying, adding, updating, or deleting information.">Profile</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

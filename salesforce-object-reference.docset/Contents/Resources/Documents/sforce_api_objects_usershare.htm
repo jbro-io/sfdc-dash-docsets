@@ -1,0 +1,242 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>UserShare | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_usershare"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>UserShare</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a sharing entry on a user record. <span class="ph" id="UserShareVersion"><a name="UserShareVersion"><!-- --></a>This object is available in API
+    version 26.0 and later.</span></span></div>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+</div>
+
+<div class="section" id="custom_portal_no_access_section">
+<a name="custom_portal_no_access_section"><!-- --></a><h2 class="helpHead2">Special Access
+Rules</h2>
+<p class="p">Customer Portal users can't access this object.</p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   <p class="p">The properties available for some fields depend on the
+                default organization-wide sharing settings. The properties listed are true for the
+                default settings of such fields.</p>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d759649e115">Field</th>
+
+       <th class="featureTableHeader  " id="d759649e118">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d759649e115" data-title="Field"><a name="//apple_ref/cpp/Field/IsActive" class="dashAnchor"></a><span class="keyword parmname">IsActive</span></td>
+
+       <td class="entry" headers="d759649e118" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Read-only. Indicates whether the User
+           has access to log in (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>). You can modify a User's active status from the user
+           interface or via the API.
+          </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d759649e115" data-title="Field"><a name="//apple_ref/cpp/Field/RowCause" class="dashAnchor"></a><span class="keyword parmname">RowCause</span></td>
+
+       <td class="entry" headers="d759649e118" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Restricted picklist, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Reason that this sharing entry exists. You can only write to this field when its value
+           is either omitted or set to <samp class="codeph nolang">Manual</samp> (default).</dd>
+
+          <dd class="dd">You can create a value for this field in API versions
+                32.0 and later with the correct organization-wide sharing settings.</dd>
+
+          <dd class="dd">
+           Possible values include: <ul class="ul bulletList">
+            <li class="li">
+<samp class="codeph nolang">Manual</samp>—The User
+             or Group has access to the user record because a User
+             with “All” access manually shared the User with
+             them.</li>
+
+            <li class="li">
+<samp class="codeph nolang">Rule</samp>—The User
+             or Group has access to the user record via a User sharing
+             rule.</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d759649e115" data-title="Field"><a name="//apple_ref/cpp/Field/UserAccessLevel" class="dashAnchor"></a><span class="keyword parmname" id="useraccesslevel"><a name="useraccesslevel"><!-- --></a>UserAccessLevel</span></td>
+
+       <td class="entry" headers="d759649e118" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">picklist</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Restricted picklist, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/UserAccessLevel" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a>Level of access that the User or
+            Group
+           has to the specified user. The specified user is denoted by the
+            <span class="keyword parmname">UserId</span>. The possible values are:<ul class="ul bulletList">
+            <li class="li"><a name="//apple_ref/cpp/Field/Read" class="dashAnchor"></a><span class="keyword parmname">Read</span></li>
+
+            <li class="li"><a name="//apple_ref/cpp/Field/Edit" class="dashAnchor"></a><span class="keyword parmname">Edit</span></li>
+
+           </ul>
+This field must be set to an access level that is at least equal to the
+           organization’s default <span class="keyword parmname">UserAccessLevel</span>. <p class="p"><a name="//apple_ref/cpp/Field/RowCause" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/UserAccessLevel" class="dashAnchor"></a><span class="keyword parmname">UserAccessLevel</span> can be updated only if
+             <span class="keyword parmname">RowCause</span> is set to <samp class="codeph nolang">Manual
+             Sharing</samp>.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d759649e115" data-title="Field"><a name="//apple_ref/cpp/Field/UserId" class="dashAnchor"></a><span class="keyword parmname">UserId</span></td>
+
+       <td class="entry" headers="d759649e118" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User
+            being shared.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d759649e115" data-title="Field"><a name="//apple_ref/cpp/Field/UserOrGroupId" class="dashAnchor"></a><span class="keyword parmname">UserOrGroupId</span></td>
+
+       <td class="entry" headers="d759649e118" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User
+            or Group
+            that has been given access to the User.
+            This field can’t be updated.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+<p class="p">This object allows you to determine
+which users and groups can view or edit User records owned by other users.</p>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

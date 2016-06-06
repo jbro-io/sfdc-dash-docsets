@@ -1,0 +1,447 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>MetricsDataFile | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_metricsdatafile"><!-- --></a><h1 class="helpHead1">
+  <span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>MetricsDataFile</span>
+ </h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a><span class="ph" id="description"><a name="description"><!-- --></a>Represents a data file containing usage metrics on
+    all installations of a managed package in a Salesforce instance.</span> This object is available
+   in API version 30.0 and
+  later.</span></div>
+
+  <div class="section" id="section1">
+<a name="section1"><!-- --></a><h2 class="helpHead2">Supported Calls</h2>
+
+   
+   <p class="p"><samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">delete()</samp></p>
+
+  </div>
+
+  <div class="section" id="section2">
+<a name="section2"><!-- --></a><h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d517712e91">Field Name</th>
+
+       <th class="featureTableHeader  " id="d517712e94">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsDataFile</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           base64
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">A text file containing the usage data encoded in Base 64.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsDataFileContentType</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The format of the data file. Currently, the only allowed value is
+            <span class="keyword parmname">text/csv</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsDataFileLength</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           int
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The size of the data file in bytes.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name"><span class="keyword parmname">MetricsRunDate</span></td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           dateTime
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The date when the usage metrics collection job was run.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsEndDate</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           dateTime
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The end time and date for the data collection.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsStartDate</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           dateTime
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The start time and date for the data collection.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">MetricsType</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           picklist
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The type of data being collected. The possible values are
+            <span class="keyword parmname">CustomObject</span> and <span class="keyword parmname">Visualforce</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">NamespacePrefix</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The namespace prefix of the package for which data is being collected.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d517712e91" data-title="Field Name">
+        <span class="keyword parmname">SendingInstance</span>
+       </td>
+
+       <td class="entry" headers="d517712e94" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">
+           string
+          </dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Query, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The server instance from which this data was collected, for example,
+           “na8.”</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+  <div class="section" id="section4">
+<a name="section4"><!-- --></a><h2 class="helpHead2">Usage</h2>
+
+   
+   <p class="p" id="usage_p1"><a name="usage_p1"><!-- --></a>Use this object to access customer usage metrics for a managed package. Each
+    record contains one day’s data, on either custom objects or Visualforce pages, for all
+    organizations in a Salesforce instance that have the package installed. The following data is
+    collected each day. </p>
+
+   <div class="p" id="usage_p2">
+<a name="usage_p2"><!-- --></a>
+    <ul class="ul bulletList">
+     <li class="li">
+<strong class="ph b">Custom objects</strong> — the number of records stored in each custom object.</li>
+
+    </ul>
+
+    <ul class="ul bulletList">
+     <li class="li">
+<strong class="ph b">Visualforce pages</strong> — the number of times each Visualforce page was accessed,
+      the number of unique users who accessed it, and the average loading time (in
+      milliseconds).</li>
+
+    </ul>
+
+   </div>
+
+   <p class="p" id="usage_p3"><a name="usage_p3"><!-- --></a>The custom objects data is a snapshot that reflects the state of the
+    organization at the time the database was sampled, while the Visualforce data covers usage over
+    a 24-hour period.</p>
+
+   <p class="p" id="usage_p4"><a name="usage_p4"><!-- --></a>This feature is intended for API access only. The owner of the package must
+    write a secondary process to retrieve the metrics data from the reporting organization, and
+    export it to another system for analysis.</p>
+
+   <p class="p" id="usage_p5"><a name="usage_p5"><!-- --></a>The usage metrics data for all production organizations in a given instance is
+    merged and written into a text file, in a specified format, once a day. If an instance
+    doesn’t have any organizations with the package installed or any organizations that
+    accessed Visualforce pages in the package, a blank record is created for that day, with
+     <span class="keyword parmname">MetricsDataFileLength</span> set to zero.</p>
+
+   <div class="p" id="p3">
+<a name="p3"><!-- --></a>In a record for custom objects, each row of the text file contains usage data in the
+    following order.<ul class="ul bulletList">
+     <li class="li">Organization ID</li>
+
+     <li class="li">Organization name</li>
+
+     <li class="li">Organization edition</li>
+
+     <li class="li">Organization status</li>
+
+     <li class="li">Name of the custom object</li>
+
+     <li class="li">Number of records of the custom object on the specified day</li>
+
+    </ul>
+</div>
+
+   <div class="p" id="p4">
+<a name="p4"><!-- --></a>The custom object count is a snapshot captured once each day. Here’s a section
+    of a sample data file for custom objects. It shows there were 3500 and 1500 records in the
+     <span class="keyword parmname">Alpha</span> and <span class="keyword parmname">Beta</span> custom objects, respectively, in the
+    specified customer organization on the specified
+    day.<div class="codeSection nolang"><div id="highlighter_100140" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_100140_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_100140" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">"00Dxx0000001gbk","org1","Enterprise Edition","TRIAL","Alpha", "3500"</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">"00Dxx0000001gbk","org1","Enterprise Edition","TRIAL","Beta", "1500"</code></td></tr></tbody></table></div></div></div></div>
+</div>
+
+   <div class="p" id="p5">
+<a name="p5"><!-- --></a>In a record for Visualforce pages, each row of the text file contains usage data in
+    the following order.<ul class="ul bulletList">
+     <li class="li">Organization ID</li>
+
+     <li class="li">Organization name</li>
+
+     <li class="li">Organization edition</li>
+
+     <li class="li">Organization status</li>
+
+     <li class="li">Package version number</li>
+
+     <li class="li">Name of the Visualforce page</li>
+
+     <li class="li">Number of times the page was accessed</li>
+
+     <li class="li">Number of unique users who accessed the page</li>
+
+     <li class="li">Average loading time of the page, in milliseconds</li>
+
+    </ul>
+</div>
+
+   <p class="p" id="p6"><a name="p6"><!-- --></a>The Visualforce counts for each organization measure the number of times the page was
+    viewed in the duration between the start and end times. Here’s a section of a sample data
+    file for Visualforce pages.</p>
+
+   <div class="p" id="p7">
+<a name="p7"><!-- --></a>
+    <div class="codeSection nolang"><div id="highlighter_702283" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_702283_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_702283" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">"00Dxx0000001gbk","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f1","1","1","66.0"</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">"00Dxx0000001gbk","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f2","1","1","128.0"</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">"00Dxx0000001gbk","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f3","1","1","107.0"</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">"00Dxx0000001gbf","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f1","5","1","73.6"</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">"00Dxx0000001gbf","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f2","1","1","72.0"</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">"00Dxx0000001gbf","org1","Enterprise Edition","TRIAL","1.0","/apex/gm12__f3","7","1","50.8"</code></td></tr></tbody></table></div></div></div></div>
+
+   </div>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

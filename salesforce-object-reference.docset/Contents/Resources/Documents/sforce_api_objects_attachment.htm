@@ -1,0 +1,554 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Attachment | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="sforce_api_objects_attachment"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Attachment</span></h1><div class="body">
+<div class="shortdesc"><span class="ph" id="summary"><a name="summary"><!-- --></a>Represents a file that a User has
+   uploaded and attached to a parent object.</span></div>
+
+  <div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+
+   
+   <p class="p"><samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">getDeleted()</samp>,
+     <samp class="codeph nolang">getUpdated()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">search()</samp>, <samp class="codeph nolang">undelete()</samp>, <samp class="codeph nolang">update()</samp>, <samp class="codeph nolang">upsert()</samp></p>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+   
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d179790e124">Field</th>
+
+       <th class="featureTableHeader  " id="d179790e127">Details</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/Body" class="dashAnchor"></a><span class="keyword parmname" id="i1442204"><a name="i1442204"><!-- --></a>Body</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">base64</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. Encoded file data. </dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/BodyLength" class="dashAnchor"></a><span class="keyword parmname">BodyLength</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">int</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Group,
+            Nillable, Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Size of the file (in bytes).</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionReceivedId" class="dashAnchor"></a><span class="keyword parmname">ConnectionReceivedId</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the PartnerNetworkConnection that shared this record with your organization. This field
+is only available if you have enabled Salesforce to Salesforce.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><span class="keyword parmname">ConnectionSentId</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Filter, Nillable</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/ConnectionSentId" class="dashAnchor"></a>ID of the PartnerNetworkConnection that you shared this record with. This field is only available
+if you have enabled Salesforce to Salesforce. Beginning with API version
+15.0, the <span class="keyword parmname">ConnectionSentId</span> field is no longer supported. The <span class="keyword parmname">ConnectionSentId</span> field is still visible, but the value is null. You can
+use the new PartnerNetworkRecordConnection object to forward records to connections.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/ContentType" class="dashAnchor"></a><span class="keyword parmname">ContentType</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">The content type of the attachment.<p class="p"><a name="//apple_ref/cpp/Field/Don't allow HTML uploads as attachments
+                        or document records" class="dashAnchor"></a>If the <span class="keyword parmname">Don't allow HTML uploads as attachments
+                        or document records</span> security setting is enabled for your
+                    organization, you cannot upload files with the following file extensions:
+                        <span class="ph filepath">.htm</span>, <span class="ph filepath">.html</span>,
+                        <span class="ph filepath">.htt</span>, <span class="ph filepath">.htx</span>,
+                        <span class="ph filepath">.mhtm</span>, <span class="ph filepath">.mhtml</span>,
+                        <span class="ph filepath">.shtm</span>, <span class="ph filepath">.shtml</span>,
+                        <span class="ph filepath">.acgi</span>, <span class="ph filepath">.svg</span>.</p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname" id="AttachmentDescription"><a name="AttachmentDescription"><!-- --></a>Description</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">textarea</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Nillable, Sort, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Description of the attachment. This field is available in API version 18.0 and
+           later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsEncrypted" class="dashAnchor"></a><span class="keyword parmname">IsEncrypted</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>This information is about Shield Platform Encryption and not Classic Encryption.</p>
+</div>
+</div></div></div></div>
+
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether the attachment is encrypted using Shield Platform Encryption (<samp class="codeph nolang">true</samp>) or not (<samp class="codeph nolang">false</samp>).
+           This field is available in API version 34.0 and later.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsPartnerShared" class="dashAnchor"></a><span class="keyword parmname" id="IsPartnerShared"><a name="IsPartnerShared"><!-- --></a>IsPartnerShared</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Defaulted on create, Filter, Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd"><a name="//apple_ref/cpp/Field/Is
+            Shared With Partner" class="dashAnchor"></a>Indicates whether this record is shared with a connection using Salesforce to Salesforce. Label is <span class="keyword parmname">Is
+            Shared With Partner</span>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/IsPrivate" class="dashAnchor"></a><span class="keyword parmname" id="i1442279"><a name="i1442279"><!-- --></a>IsPrivate</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">boolean</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Indicates whether this record is viewable only by the owner and administrators
+            (<samp class="codeph nolang">true</samp>) or viewable by all otherwise-allowed users
+            (<samp class="codeph nolang">false</samp>). During a create or update call, it is
+           possible to mark an Attachment record as private even if you are not the owner. This can result in a situation in
+           which you can no longer access the record that you just inserted or updated. Label is
+            <strong class="ph b">Private</strong>.<p class="p"><span class="ph" id="ActivityNotPrivate"><a name="ActivityNotPrivate"><!-- --></a>Attachments on tasks or events can't be
+             marked private.</span></p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname" id="i1442312"><a name="i1442312"><!-- --></a>Name</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">string</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. Name of the attached file. Label is <strong class="ph b">File Name</strong>.</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/OwnerId" class="dashAnchor"></a><span class="keyword parmname" id="i1442333"><a name="i1442333"><!-- --></a>OwnerId</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Defaulted on create, Filter, Group,
+            Sort,
+            Update</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">ID of the User
+           who owns the attachment. This field was required previous to release 9.0. Beginning with
+           release 9.0, it can be null on create.<p class="p"><span class="ph" id="ActivityOwner"><a name="ActivityOwner"><!-- --></a>The owner of an
+             attachment on a task or event must be the same as the owner of the task or
+            event.</span></p>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d179790e124" data-title="Field"><a name="//apple_ref/cpp/Field/ParentId" class="dashAnchor"></a><span class="keyword parmname" id="i1442363"><a name="i1442363"><!-- --></a>ParentId</span></td>
+
+       <td class="entry" headers="d179790e127" data-title="Details">
+        <dl class="dl detailList">
+         
+          <dt class="dt dlterm">Type</dt>
+
+          <dd class="dd">reference</dd>
+
+         
+         
+          <dt class="dt dlterm">Properties</dt>
+
+          <dd class="dd">Create, Filter, Group,
+            Sort</dd>
+
+         
+         
+          <dt class="dt dlterm">Description</dt>
+
+          <dd class="dd">Required. ID of the parent object of the attachment. The following objects are
+           supported as parents of attachments: <ul class="ul bulletList">
+            <li class="li">Account</li>
+
+            <li class="li">Asset</li>
+
+            <li class="li">Campaign</li>
+
+            <li class="li">Case</li>
+
+            <li class="li">Contact</li>
+
+            <li class="li">Contract</li>
+
+            <li class="li">Custom objects</li>
+
+            <li class="li">EmailMessage</li>
+
+            <li class="li">EmailTemplate</li>
+
+            <li class="li">Event</li>
+
+            <li class="li">Lead</li>
+
+            <li class="li">Opportunity</li>
+
+            <li class="li">Product2</li>
+
+            <li class="li">Solution</li>
+
+            <li class="li">Task</li>
+
+           </ul>
+</dd>
+
+         
+        </dl>
+
+       </td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+   <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/CreatedDate" class="dashAnchor"></a>If you are importing Attachment data and need to set the value for an audit field, such as
+     <span class="keyword parmname">CreatedDate</span>, contact Salesforce. For example, for compliance reasons, you
+    may prefer to set the <span class="keyword parmname">CreatedDate</span> to the date the record was originally
+    created in your system, rather than the date it was imported into Salesforce. Audit fields are
+    automatically updated during API operations unless you request to set these fields
+    yourself.</p>
+</div>
+</div></div></div></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2">Usage<a name="//apple_ref/cpp/Guide/Usage" class="dashAnchor"></a></h2>
+
+   
+   <p class="p">The API sends and receives the
+    binary file attachment data encoded as a base64Binary data type. Prior to creating a record,
+    client applications must encode the binary attachment data as base64. Upon receiving a response,
+    client applications must decode the base64 data to binary (this conversion is usually
+     handled for you by the SOAP client).</p>
+
+   <p class="p">The create call restricts these files to a maximum size of 25 MB. For a file attached to a
+     Solution, the limit is 1.5 MB. The maximum email attachment size is 3 MB.</p>
+
+   <p class="p">The API supports attachments on
+    email in create, delete, or update calls. The query call does not return attachments parented by
+    email, unless the user performing the query has the “Modify All Data”
+    permission.</p>
+
+   <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+    </p><ul class="ul bulletList">
+     <li class="li">Attachment records are not searched during text searches.</li>
+
+     <li class="li">When issued by an administrator, the query results include Attachment records from the Recycle Bin. </li>
+
+     <li class="li">When issued by a non-administrator, the <samp class="codeph nolang">queryAll()</samp> call
+      results do not include Attachment records from the Recycle Bin.</li>
+
+    </ul>
+
+   <p></p>
+</div>
+</div></div></div></div>
+
+   <p class="p">Access to fields depends on the method being used:</p>
+
+   <ul class="ul bulletList">
+    <li class="li">All of the fields are accessible using the <samp class="codeph nolang">describeSObjects()</samp> and <samp class="codeph nolang">query()</samp>
+     calls. With the <samp class="codeph nolang">create()</samp> call, you
+     can insert the <span class="keyword parmname">Name</span>, <span class="keyword parmname">ParentId</span>, <span class="keyword parmname">Body</span>, <span class="keyword parmname">IsPrivate</span>, and <span class="keyword parmname">OwnerId</span>
+     fields.</li>
+
+    <li class="li"> To modify existing records, the <samp class="codeph nolang">update()</samp> call gives
+     you access to change the <span class="keyword parmname">Name</span>, <span class="keyword parmname">Body</span>, <span class="keyword parmname">IsPrivate</span>, and <span class="keyword parmname">OwnerId</span>
+     fields.</li>
+
+    <li class="li">You can access all of the fields using a <samp class="codeph nolang">query()</samp> call.
+     However, you can't receive the <span class="keyword parmname">Body</span>
+     field for multiple records in a single <samp class="codeph nolang">query()</samp> call. If
+     your query returns the <span class="keyword parmname">Body</span>
+     field, your client application must ensure that only one row with one Attachment is returned; otherwise, an error occurs. A more effective approach is to return IDs (but not
+      Attachment records in the <span class="keyword parmname">Body</span>
+     field) from a <samp class="codeph nolang">query()</samp> call and
+     then pass them into <samp class="codeph nolang">retrieve()</samp> calls
+     that return the <span class="keyword parmname">Body</span>
+     field.</li>
+
+    <li class="li">For information about accessing the attachments of archived activities, see Archived Activities.</li>
+
+   </ul>
+
+  </div>
+
+ </div><div id="sfdc:seealso" class="related-links">
+<div class="relinfo">
+<h4>See Also:</h4>
+<ul class="unstyled"><li>
+<div><a class="link" href="atlas.en-us.api.meta/api/sforce_api_objects_note.htm" title="Represents a note, which is text associated with a custom object or a standard object, such as a Contact, Contract, or Opportunity.">Note</a></div>
+</li></ul>
+</div>
+</div><!--DRC 202.6--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>PushTopic | SOAP API Developer Guide | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="pushtopic"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>PushTopic</span></h1><div class="body">
+<p class="p"><span class="ph" id="intro"><a name="intro"><!-- --></a>Represents a query that is the basis for notifying
+listeners of changes to records in an organization. This is available
+from API version 21.0 or later.</span></p>
+
+<div class="section">
+<h2 class="helpHead2">Supported Calls<a name="//apple_ref/cpp/Function/SupportedCalls" class="dashAnchor"></a></h2>
+<p class="p">REST: DELETE, GET, PATCH,
+POST (query requests are specified in the URI)</p>
+<p class="p">SOAP: <samp class="codeph nolang">create()</samp>, <samp class="codeph nolang">delete()</samp>, <samp class="codeph nolang">describe()</samp>, <samp class="codeph nolang">describeSObjects()</samp>, <samp class="codeph nolang">query()</samp>, <samp class="codeph nolang">retrieve()</samp>, <samp class="codeph nolang">update()</samp></p>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Special Access Rules<a name="//apple_ref/cpp/Guide/SpecialAccessRules" class="dashAnchor"></a></h2>
+<ul class="ul bulletList">
+<li class="li">This object is only available if Streaming API is enabled for your organization.</li>
+
+<li class="li">Only users with “Create” permission can create this record.</li>
+
+</ul>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">Fields</h2>
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader  " id="d831472e118">Field</th>
+
+<th class="featureTableHeader  " id="d831472e121">Field Type</th>
+
+<th class="featureTableHeader  " id="d831472e124">Description</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/ApiVersion" class="dashAnchor"></a><span class="keyword parmname" id="pushtopic_api_version"><a name="pushtopic_api_version"><!-- --></a>ApiVersion</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">double</td>
+
+<td class="entry" headers="d831472e124" data-title="Description"><a name="//apple_ref/cpp/Field/ApiVersion" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/Query" class="dashAnchor"></a>Required. API version to use for executing the query specified in <span class="keyword parmname">Query</span>. It must be an API version greater than 20.0. If your query applies to a custom object
+from a package, this value must match the package's <span class="keyword parmname">ApiVersion</span>.<p class="p">Example value: 37.0</p>
+<p class="p"><strong class="ph b">Field Properties:</strong> <span class="ph" id="create"><a name="create"><!-- --></a>Create</span>, <span class="ph" id="filter"><a name="filter"><!-- --></a>Filter</span>, <span class="ph" id="sort"><a name="sort"><!-- --></a>Sort</span>, <span class="ph" id="update"><a name="update"><!-- --></a>Update</span></p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/Description" class="dashAnchor"></a><span class="keyword parmname">Description</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">string</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Description of the PushTopic. Limit: 400 characters<p class="p"><strong class="ph b">Field
+Properties: </strong>Create, Filter, Sort, Update</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/ID" class="dashAnchor"></a><span class="keyword parmname">ID</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">ID</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">System field: Globally unique string that identifies a record.<p class="p"><strong class="ph b">Field Properties:</strong> <span class="ph" id="def_on_create"><a name="def_on_create"><!-- --></a>Default on create</span>, Filter, <span class="ph" id="group"><a name="group"><!-- --></a>Group</span>, idLookup, Sort</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/isActive" class="dashAnchor"></a><span class="keyword parmname">isActive</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Indicates whether the record currently counts towards the organization's
+limit. <p class="p"><strong class="ph b">Field Properties:</strong> Create, Default on create, Filter, Group, Sort, Update</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/IsDeleted" class="dashAnchor"></a><span class="keyword parmname">IsDeleted</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">System field: Indicates whether the record has been moved to the Recycle Bin (<samp class="codeph java">true</samp>) or not (<samp class="codeph java">false</samp>).<p class="p"><strong class="ph b">Field Properties:</strong> Default on create, Filter, Group, Sort</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/Name" class="dashAnchor"></a><span class="keyword parmname" id="pushtopic_name"><a name="pushtopic_name"><!-- --></a>Name</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">string</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Required. Descriptive name of the PushTopic, such as <samp class="codeph nolang">MyNewCases</samp> or <samp class="codeph nolang">TeamUpdatedContacts</samp>. Limit: 25 characters. This value identifies the channel and
+        must be unique.<p class="p"><strong class="ph b">Field Properties:</strong>
+         Create, Filter, Group, Sort, Update</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForFields" class="dashAnchor"></a><span class="keyword parmname" id="NotifyForFields"><a name="NotifyForFields"><!-- --></a>NotifyForFields</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">picklist</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Specifies which fields are evaluated to generate a notification. <div class="p">Valid values:<ul class="ul bulletList">
+<li class="li"><samp class="codeph nolang">All</samp></li>
+
+<li class="li">
+<samp class="codeph nolang">Referenced</samp> (default)</li>
+
+<li class="li"><samp class="codeph nolang">Select</samp></li>
+
+<li class="li">
+<samp class="codeph nolang">Where</samp> </li>
+
+</ul>
+</div>
+<p class="p"><strong class="ph b">Field Properties:</strong> Create, Filter, Sort, Update</p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForOperations" class="dashAnchor"></a><span class="keyword parmname">NotifyForOperations</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">picklist</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Specifies which record events may generate a notification.<div class="p">Valid values:<ul class="ul bulletList">
+<li class="li">
+<samp class="codeph nolang">All</samp> (default)</li>
+
+<li class="li"><samp class="codeph nolang">Create</samp></li>
+
+<li class="li"><samp class="codeph nolang">Extended</samp></li>
+
+<li class="li"><samp class="codeph nolang">Update</samp></li>
+
+</ul>
+</div>
+<p class="p"><strong class="ph b">Field Properties for API version 28.0 and earlier:</strong> Create, Filter, Sort, Update</p>
+<p class="p"><strong class="ph b">Field Properties
+for API version 29.0 and later:</strong> Filter, Sort</p>
+<p class="p"><a name="//apple_ref/cpp/Field/NotifyForOperationUpdate" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NotifyForOperationUndelete" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NotifyForOperationDelete" class="dashAnchor"></a><a name="//apple_ref/cpp/Field/NotifyForOperationCreate" class="dashAnchor"></a>In API version 29.0 and later, this field is read-only, and will not contain
+information about delete and undelete events. Use <span class="keyword parmname">NotifyForOperationCreate</span>, <span class="keyword parmname">NotifyForOperationDelete</span>, <span class="keyword parmname">NotifyForOperationUndelete</span> and <span class="keyword parmname">NotifyForOperationUpdate</span> to specify which
+record events should generate a notification.</p>
+<p class="p"><span class="ph" id="notifyforoperations_extended_description"><a name="notifyforoperations_extended_description"><!-- --></a>A value of <samp class="codeph nolang">Extended</samp> means that neither create or
+update operations are set to generate events.</span></p>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForOperationCreate" class="dashAnchor"></a><span class="keyword parmname">NotifyForOperationCreate</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">
+<span class="ph" id="notifyforoperationcreate_description"><a name="notifyforoperationcreate_description"><!-- --></a><samp class="codeph nolang">true</samp> if a create operation should generate
+a notification, otherwise, <samp class="codeph nolang">false</samp>.</span> Defaults to <samp class="codeph nolang">true</samp>. This
+field is available in API version 29.0 and later.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForOperationDelete" class="dashAnchor"></a><span class="keyword parmname">NotifyForOperationDelete</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">
+<span class="ph" id="notifyforoperationdelete_description"><a name="notifyforoperationdelete_description"><!-- --></a><samp class="codeph nolang">true</samp> if a delete operation should generate
+a notification, otherwise, <samp class="codeph nolang">false</samp>.</span> Defaults to <samp class="codeph nolang">true</samp>. Clients must connect using
+the <span class="ph filepath">cometd/29.0</span> (or later) Streaming API endpoint to receive delete and undelete event notifications. This field is available in API version 29.0 and later.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForOperationUndelete" class="dashAnchor"></a><span class="keyword parmname">NotifyForOperationUndelete</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">
+<span class="ph" id="notifyforoperationundelete_description"><a name="notifyforoperationundelete_description"><!-- --></a><samp class="codeph nolang">true</samp> if an undelete operation should
+generate a notification, otherwise, <samp class="codeph nolang">false</samp>.</span> Defaults to <samp class="codeph nolang">true</samp>. Clients must connect using
+the <span class="ph filepath">cometd/29.0</span> (or later) Streaming API endpoint to receive delete and undelete event notifications. This field is available in API version 29.0 and later.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/NotifyForOperationUpdate" class="dashAnchor"></a><span class="keyword parmname">NotifyForOperationUpdate</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">boolean</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">
+<span class="ph" id="notifyforoperationupdate_description"><a name="notifyforoperationupdate_description"><!-- --></a><samp class="codeph nolang">true</samp> if an update operation should generate
+a notification, otherwise, <samp class="codeph nolang">false</samp>.</span> Defaults to <samp class="codeph nolang">true</samp>. This
+field is available in API version 29.0 and later.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d831472e118" data-title="Field"><a name="//apple_ref/cpp/Field/Query" class="dashAnchor"></a><span class="keyword parmname" id="pushtopic_query_field"><a name="pushtopic_query_field"><!-- --></a>Query</span></td>
+
+<td class="entry" headers="d831472e121" data-title="Field Type">string</td>
+
+<td class="entry" headers="d831472e124" data-title="Description">Required. The SOQL query statement that determines which record changes trigger events
+to be sent to the channel. <p class="p">Limit: 1,300 characters</p>
+<p class="p"><strong class="ph b">Field Properties:</strong> Create, Filter, Sort, Update</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+</div>
+
+<div class="section">
+<h2 class="helpHead2">
+<span class="keyword parmname">PushTopic</span> and Notifications</h2>
+<div class="p">The PushTopic defines when notifications are generated in the channel.
+      This is specified by configuring the following PushTopic fields:<ul class="ul bulletList">
+        <li class="li">PushTopic Queries</li>
+
+        <li class="li">Events</li>
+
+        <li class="li">Notifications</li>
+
+      </ul>
+</div>
+</div>
+
+</div><div id="sfdc:seealso" class="related-links"></div><!--DRC 202.7--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>
