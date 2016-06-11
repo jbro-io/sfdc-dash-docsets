@@ -1,0 +1,485 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SOQL and SOSL Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_platform_soslsoql"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SOQL and SOSL Limits</span></h1><div class="body">
+<div class="p">
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader vertical-align-top " id="d20543e43">Feature</th>
+
+              <th class="featureTableHeader vertical-align-top " id="d20543e46">Limit</th>
+
+              <th class="featureTableHeader vertical-align-top " id="d20543e49">Limit Description</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">SOQL statements</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum length of SOQL statements</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">By default, 20,000 characters.<div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Long, complex SOQL statements, such as
+            statements that contain many formula fields, can sometimes result in a <samp class="codeph soql">QUERY_TOO_COMPLICATED</samp> error. The error occurs because the
+            statement is expanded internally when processed by Salesforce, even though the original
+              SOQL statement is under the
+              20,000 character limit. To avoid
+            this, reduce the complexity of your SOQL statement.</p>
+</div>
+</div></div></div></div>
+</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">SOSL statements</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum length of SOSL statements</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">By default, 20,000. This limit is tied to the SOQL statement character limit
+                defined for your org.</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">SOSL search query strings</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum length of <samp class="codeph soql">SearchQuery</samp> string</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">If the <samp class="codeph soql">SearchQuery</samp> string is longer than 10,000 characters, no result rows are
+        returned. If <samp class="codeph soql">SearchQuery</samp> is longer than 4,000 characters,
+        any logical operators are removed. For example, the <samp class="codeph soql">AND</samp>
+        operator in a statement with a <samp class="codeph soql">SearchQuery</samp> that’s
+        4,001 characters will default to the <samp class="codeph soql">OR</samp> operator, which
+        could return more results than expected.</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">SOSL query results</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum rows returned</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">2,000
+                results total (API version 28.0 and later), unless you specify custom limits in the
+                query. Previous API versions return 200 results.</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">Relationship queries</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Relationship query limits</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">
+                <ul class="ul bulletList">
+                  <li class="li">No more than 35 child-to-parent relationships can be specified
+          in a query. A custom object allows up to 25 relationships, so you can reference all the
+          child-to-parent relationships for a custom object in one query.</li>
+
+                  <li class="li">No more than 20 parent-to-child relationships can be specified
+          in a query.</li>
+
+                  <li class="li">In each specified relationship, no more than <span class="ph" id="d385827e129-d385930e57"><a name="d385827e129-d385930e57"><!-- --></a>five</span> levels can be specified in a child-to-parent
+          relationship. For example, <samp class="codeph java">Contact.Account.Owner.FirstName</samp> (three levels).</li>
+
+                  <li class="li">In each specified relationship, only one level of
+          parent-to-child relationship can be specified in a query. For example, if the <samp class="codeph soql">FROM</samp> clause specifies Account, the <samp class="codeph soql">SELECT</samp> clause can specify only the Contact or other objects at that level. It
+          could not specify a child object of Contact.</li>
+
+                </ul>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">FOR VIEW and FOR REFERENCE</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum RecentlyViewed records allowed</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">The RecentlyViewed object is updated every time the logged-in user views or references a record. It is also
+        updated when records are retrieved using the <samp class="codeph soql">FOR VIEW</samp> or
+         <samp class="codeph soql">FOR REFERENCE</samp> clause in a SOQL query. To ensure that the
+        most recent data is available, RecentlyViewed data is periodically truncated down to 200 records per object.</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d20543e43" data-title="Feature">OFFSET clause</td>
+
+              <td class="entry" headers="d20543e46" data-title="Limit">Maximum number of rows skipped by OFFSET</td>
+
+              <td class="entry" headers="d20543e49" data-title="Limit Description">The maximum offset is 2,000 rows. Requesting
+                        an offset greater than 2,000 will result in a <samp class="codeph nolang">NUMBER_OUTSIDE_VALID_RANGE</samp> error.</td>
+
+            </tr>
+
+            
+          </tbody>
+
+        </table></div>
+The following are SOQL limitations and tips that are specific to some Salesforce objects.
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+    
+    
+    <thead class="thead sorted" align="left">
+     <tr>
+      <th class="featureTableHeader vertical-align-top " id="d20543e252">Object</th>
+
+      <th class="featureTableHeader vertical-align-top " id="d20543e255">Description</th>
+
+     </tr>
+
+    </thead>
+
+    <tbody class="tbody">
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">ContentDocumentLink</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description"><span class="ph" id="d385827e173-d386048e78"><a name="d385827e173-d386048e78"><!-- --></a>A SOQL query must filter on one of <samp class="codeph nolang">Id</samp>, <samp class="codeph nolang">ContentDocumentId</samp>, or <samp class="codeph nolang">LinkedEntityId</samp>.</span></td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">ContentHubItem</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">A SOQL query must filter on
+       one of <samp class="codeph nolang">Id</samp>, <samp class="codeph nolang">ExternalId</samp>, or <samp class="codeph nolang">ContentHubRepositoryId</samp>.</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">Custom metadata types</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+<span class="ph" id="d385827e173-d386048e117"><a name="d385827e173-d386048e117"><!-- --></a>Custom metadata types support the following SOQL query
+        syntax.</span><div class="codeSection soql"><div id="highlighter_695833" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_695833_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_695833" menu="false" src="https://developer.salesforce.com/resource/flash/clipboard.swf"></div><a href="#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">SELECT <code class="italic">fieldList</code> [...]</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">FROM objectType</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">[USING SCOPE filterScope]</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">[WHERE conditionExpression]</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">[ORDER BY field {ASC|DESC} [NULLS {FIRST|LAST}] ]</code></td></tr></tbody></table></div></div></div></div>
+<a name="d385827e173-d386048e134"><!-- --></a><ul class="ul bulletList" id="d385827e173-d386048e134">
+        <li class="li">The <var class="keyword varname">fieldList</var> can include only non-relationship fields.</li>
+
+        <li class="li">
+<samp class="codeph soql">FROM</samp> can include only one object.</li>
+
+        <li class="li">You can use the following operators.<ul class="ul bulletList">
+          <li class="li">
+<samp class="codeph soql">IN</samp> and <samp class="codeph soql">NOT
+           IN</samp>
+</li>
+
+          <li class="li">
+<samp class="codeph soql">=</samp>, <samp class="codeph soql">&gt;</samp>, <samp class="codeph soql">&gt;=</samp>, <samp class="codeph soql">&lt;</samp>, <samp class="codeph soql">&lt;=</samp>, and <samp class="codeph soql">!=</samp>
+</li>
+
+          <li class="li">
+<samp class="codeph soql">LIKE</samp>, including wild cards</li>
+
+          <li class="li"><samp class="codeph soql">AND</samp></li>
+
+         </ul>
+</li>
+
+        <li class="li">You can use <samp class="codeph soql">ORDER BY</samp>, <samp class="codeph soql">ASC</samp>, and <samp class="codeph soql">DESC</samp> with multiple fields.</li>
+
+        <li class="li">You can only use <samp class="codeph soql">ORDER BY</samp> when the ordered field is a
+         selected field.</li>
+
+       </ul>
+</td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">External objects</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <ul class="ul bulletList">
+                
+                <li class="li"><span class="ph" id="d385827e173-d386048e213-d386159e2809"><a name="d385827e173-d386048e213-d386159e2809"><!-- --></a>A subquery that
+                        involves external objects can fetch up to 1,000
+                        rows of data.</span></li>
+
+                <li class="li">
+<span class="ph" id="d385827e173-d386048e213-d386159e2815"><a name="d385827e173-d386048e213-d386159e2815"><!-- --></a>Each SOQL query can have up
+                        to 4
+                        joins across external objects and other types of objects.</span><p class="p"><span class="ph" id="d385827e173-d386048e213-d386159e2822"><a name="d385827e173-d386048e213-d386159e2822"><!-- --></a>Each join requires a separate
+                            round trip to the external system when executing the query. Expect
+                            longer response times for each join in a query.</span></p>
+</li>
+
+                <li class="li">External objects don’t support the following aggregate functions and clauses.<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">AVG()</samp> function</li>
+
+                        <li class="li">
+<samp class="codeph soql">COUNT(<var class="keyword varname">fieldName</var>)</samp> function (however, <samp class="codeph soql">COUNT()</samp> is supported)</li>
+
+                        <li class="li">
+<samp class="codeph nolang">HAVING</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">GROUP BY</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">MAX()</samp> function</li>
+
+                        <li class="li">
+<samp class="codeph nolang">MIN()</samp> function</li>
+
+                        <li class="li">
+<samp class="codeph nolang">SUM()</samp> function</li>
+
+                    </ul>
+</li>
+
+                <li class="li">External objects also don’t support the following.<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">EXCLUDES</samp> operator</li>
+
+                        <li class="li">
+<samp class="codeph nolang">FOR VIEW</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">FOR REFERENCE</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">INCLUDES</samp> operator</li>
+
+                        <li class="li">
+<samp class="codeph nolang">LIKE</samp> operator</li>
+
+                        <li class="li">
+<samp class="codeph nolang">toLabel()</samp> function</li>
+
+                        <li class="li">
+<samp class="codeph nolang">TYPEOF</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">WITH</samp> clause</li>
+
+                    </ul>
+</li>
+
+            </ul>
+
+       <div class="p">The following limits apply only to the OData
+                            2.0 and 4.0 adapters for Salesforce Connect.<ul class="ul bulletList">
+                
+                <li class="li">
+<span class="ph" id="d385827e173-d386048e217-d386159e2919"><a name="d385827e173-d386048e217-d386159e2919"><!-- --></a>External objects have the
+                        following limitations for the <samp class="codeph nolang">ORDER BY</samp>
+                        clause.</span><a name="d385827e173-d386048e217-d386159e2924"><!-- --></a><ul class="ul bulletList" id="d385827e173-d386048e217-d386159e2924">
+                        <li class="li"><span class="ph" id="d385827e173-d386048e217-d386159e2927"><a name="d385827e173-d386048e217-d386159e2927"><!-- --></a><samp class="codeph nolang">NULLS FIRST</samp> and <samp class="codeph nolang">NULLS LAST</samp> are
+                                ignored.</span></li>
+
+                        <li class="li"><span class="ph" id="d385827e173-d386048e217-d386159e2937"><a name="d385827e173-d386048e217-d386159e2937"><!-- --></a>External objects don’t
+                                support the <samp class="codeph nolang">ORDER BY</samp> clause in
+                                relationship queries.</span></li>
+
+                    </ul>
+</li>
+
+                <li class="li">The <samp class="codeph nolang">COUNT()</samp> aggregate function is supported
+                    only on external objects whose external data sources have <span class="keyword parmname">Request Row Counts</span>
+                    enabled. Specifically, the response from the external system must include the
+                    total row count of the result set.</li>
+
+            </ul>
+</div>
+
+       <div class="p">The following limits apply only to custom
+                            adapters for Salesforce Connect.<ul class="ul bulletList">
+                
+                <li class="li">Location-based SOQL
+                    queries of external objects aren’t supported.</li>
+
+                <li class="li">If a SOQL query of an
+                    external object includes the following, the query fails.<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">convertCurrency()</samp> function</li>
+
+                        <li class="li">
+<samp class="codeph nolang">UPDATE TRACKING</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">UPDATE VIEWSTAT</samp> clause</li>
+
+                        <li class="li">
+<samp class="codeph nolang">USING SCOPE</samp> clause</li>
+
+                    </ul>
+</li>
+
+                <li class="li">In an <samp class="codeph nolang">ORDER BY</samp> clause, the following are ignored.<ul class="ul bulletList">
+                        <li class="li">
+<samp class="codeph nolang">NULLS FIRST</samp> syntax</li>
+
+                        <li class="li">
+<samp class="codeph nolang">NULLS LAST</samp> syntax</li>
+
+                    </ul>
+</li>
+
+            </ul>
+</div>
+
+       <p class="p">The following limits apply only to external objects associated with a SharePoint 2010/2013
+        external data source using SecureAgent.</p>
+
+       <ul class="ul bulletList">
+        <li class="li">In SOQL queries of external
+         objects, <samp class="codeph nolang">IN</samp> clauses with more than approximately 15
+         IDs will return the error “This operation is too complicated for Secure Agent.” The exact
+          <samp class="codeph nolang">IN</samp> clause limit varies based on SharePoint ID
+         length.</li>
+
+       </ul>
+
+      </td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">KnowledgeArticleVersion</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <ul class="ul bulletList">
+<li class="li">Always filter on a single value of <span class="keyword parmname">PublishStatus</span> unless the query filters on one or more primary key IDs.
+To support security, only users with the “Manage Articles”
+permission see articles whose <span class="keyword parmname">PublishStatus</span> value is <samp class="codeph nolang">Draft</samp>.</li>
+
+<li class="li">Archived article versions are stored in the articletype_kav object.
+To query archived article versions, specify the article <span class="keyword parmname">Id</span> and set <samp class="codeph soql">sLatestVersion='0'</samp>.</li>
+
+<li class="li">Always filter on a single value of <span class="keyword parmname">Language</span>. However, in SOQL, you can filter on more than one <span class="keyword parmname">Language</span> if there is a filter on <span class="keyword parmname">Id</span> or <span class="keyword parmname">KnowledgeArticleId</span>.</li>
+
+</ul>
+
+      </td>
+
+     </tr>
+
+     
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">NewsFeed</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <a name="d385827e173-d386048e263"><!-- --></a><ul class="ul bulletList" id="d385827e173-d386048e263">
+        <li class="li">No SOQL limit if logged-in user has “View All Data” permission. If not,
+         specify a LIMIT clause of 1,000 records or fewer.</li>
+
+        <li class="li">SOQL ORDER BY on fields using relationships is not available. Use ORDER BY on fields on
+         the root object in the SOQL query.</li>
+
+       </ul>
+
+      </td>
+
+     </tr>
+
+     
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">RecentlyViewed</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description"><span class="ph" id="d385827e173-d386048e280"><a name="d385827e173-d386048e280"><!-- --></a>The RecentlyViewed object is updated every time the logged-in user views or references a record. It is also
+        updated when records are retrieved using the <samp class="codeph soql">FOR VIEW</samp> or
+         <samp class="codeph soql">FOR REFERENCE</samp> clause in a SOQL query. To ensure that the
+        most recent data is available, RecentlyViewed data is periodically truncated down to 200 records per object.</span></td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">TopicAssignment</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <div class="p" id="d385827e173-d386048e301">
+<a name="d385827e173-d386048e301"><!-- --></a>No SOQL limit if logged-in user has “View All
+        Data” permission. If not, do one of the following:<ul class="ul bulletList">
+         <li class="li">Specify a LIMIT clause of 1,100 records or fewer.</li>
+
+         <li class="li">Filter on <samp class="codeph nolang">Id</samp> or <samp class="codeph nolang">Entity</samp> when using a <samp class="codeph nolang">WHERE</samp> clause with
+          "=".</li>
+
+        </ul>
+</div>
+
+      </td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">UserRecordAccess</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <ul class="ul bulletList">
+        <li class="li">Always use the query formats specified in the SOAP API Developer's Guide.</li>
+
+        <li class="li">May include an <samp class="codeph soql">ORDER BY</samp> clause. You must <samp class="codeph soql">ORDER BY</samp>
+         <span class="keyword parmname">HasAccess</span> if you <samp class="codeph soql">SELECT</samp>
+         <span class="keyword parmname">HasAccess</span>, and <samp class="codeph soql">ORDER BY</samp>
+         <span class="keyword parmname">MaxAccessLevel</span> if you <samp class="codeph soql">SELECT</samp>
+         <span class="keyword parmname">MaxAccessLevel</span>.</li>
+
+        <li class="li">Maximum number of records that can be queried is 200.</li>
+
+       </ul>
+
+      </td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">UserProfileFeed</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <ul class="ul bulletList">
+        <li class="li">No SOQL limit if logged-in user has “View All Data” permission. If not,
+         specify a LIMIT clause of 1,000 records or fewer.</li>
+
+        <li class="li">SOQL ORDER BY on fields using relationships is not available. Use ORDER BY on fields on
+         the root object in the SOQL query.</li>
+
+       </ul>
+
+       <p class="p" id="d385827e173-d386048e383"><a name="d385827e173-d386048e383"><!-- --></a>Also, a SOQL query must include <samp class="codeph nolang">WITH
+         UserId = {userId]</samp>.</p>
+
+      </td>
+
+     </tr>
+
+     <tr>
+      <td class="entry" headers="d20543e252" data-title="Object">Vote</td>
+
+      <td class="entry" headers="d20543e255" data-title="Description">
+       <a name="d385827e173-d386048e398"><!-- --></a><ul class="ul bulletList" id="d385827e173-d386048e398">
+        <li class="li"><samp class="codeph nolang">ParentId = [<var class="keyword varname">single ID</var>]</samp></li>
+
+        <li class="li"><samp class="codeph nolang">Parent.Type = [<var class="keyword varname">single type</var>]</samp></li>
+
+        <li class="li"><samp class="codeph nolang">Id = [<var class="keyword varname">single ID</var>]</samp></li>
+
+        <li class="li"><samp class="codeph nolang">Id IN = [<var class="keyword varname">list of IDs</var>]</samp></li>
+
+       </ul>
+
+      </td>
+
+     </tr>
+
+    </tbody>
+
+   </table></div>
+</div>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

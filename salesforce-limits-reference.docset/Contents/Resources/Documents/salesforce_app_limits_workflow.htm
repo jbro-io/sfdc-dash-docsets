@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Workflow and Approval Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_workflow"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Workflow and Approval Limits</span></h1><div class="body">
+        
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d26295e45">Limit</th>
+
+              <th class="featureTableHeader  " colspan="4" id="d26295e48">Details</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Approval Processes</td>
+
+              <td class="entry" headers="d26295e48" data-title="Details">N/A</td>
+
+              <td class="entry" headers="d26295e48" data-title="">N/A</td>
+
+              <td class="entry" headers="d26295e48" data-title="">N/A</td>
+
+              <td class="entry" headers="d26295e48" data-title="">N/A</td>
+
+              <td class="entry">Each organization can have:<ul class="ul bulletList">
+                  <li class="li">1,000 approval processes</li>
+
+                  <li class="li">300 approval processes per object</li>
+
+                </ul>
+<div class="p">Each approval process can have:<ul class="ul bulletList">
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8099"><a name="d387838e26-d387851e8099"><!-- --></a>30 steps</span></li>
+
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8103"><a name="d387838e26-d387851e8103"><!-- --></a>25 approvers per step</span></li>
+
+                    
+                    
+                    
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8109"><a name="d387838e26-d387851e8109"><!-- --></a>40</span> initial submission
+                      actions</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8114"><a name="d387838e26-d387851e8114"><!-- --></a>40</span> final approval actions</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8120"><a name="d387838e26-d387851e8120"><!-- --></a>40</span> final rejection actions</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8125"><a name="d387838e26-d387851e8125"><!-- --></a>40</span> recall actions</li>
+
+                  </ul>
+</div>
+<div class="p">Each set of initial submission, final approval, final rejection, and recall actions can have:<ul class="ul bulletList">
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8134"><a name="d387838e26-d387851e8134"><!-- --></a>10</span> email alerts</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8139"><a name="d387838e26-d387851e8139"><!-- --></a>10</span> tasks</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8144"><a name="d387838e26-d387851e8144"><!-- --></a>10</span> field updates</li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8149"><a name="d387838e26-d387851e8149"><!-- --></a>10</span> outbound
+                      messages</li>
+
+                  </ul>
+</div>
+</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Approval request comments: maximum characters</td>
+
+              <td class="entry" colspan="4" headers="d26295e48" data-title="Details">Approval request comments are limited to 4,000
+                    characters. In Chinese, Japanese, or Korean, the limit is 1,333
+                characters.</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Flow trigger workflow actions: flow variable assignments</td>
+
+              <td class="entry" colspan="4" headers="d26295e48" data-title="Details">
+<span class="ph" id="d387838e26-d387851e8170"><a name="d387838e26-d387851e8170"><!-- --></a>25</span> (N/A in Professional Edition)</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Workflow emails per day</td>
+
+              <td class="entry" colspan="4" headers="d26295e48" data-title="Details">
+<span class="ph" id="d387838e26-d387851e8181"><a name="d387838e26-d387851e8181"><!-- --></a>1,000 per
+                  standard Salesforce license</span> (<span class="ph" id="d387838e26-d387851e8186"><a name="d387838e26-d387851e8186"><!-- --></a>15 </span>in Developer Edition); <span class="ph" id="d387838e26-d387851e8189"><a name="d387838e26-d387851e8189"><!-- --></a>2,000,000</span> per org</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Workflow rules</td>
+
+              <td class="entry" colspan="4" headers="d26295e48" data-title="Details">Each workflow rule can have:<ul class="ul bulletList">
+                  <li class="li"><span class="ph" id="d387838e26-d387851e8204"><a name="d387838e26-d387851e8204"><!-- --></a>10 time triggers</span></li>
+
+                  <li class="li"><span class="ph" id="d387838e26-d387851e8208"><a name="d387838e26-d387851e8208"><!-- --></a>40 immediate actions</span></li>
+
+                  <li class="li"><span class="ph" id="d387838e26-d387851e8212"><a name="d387838e26-d387851e8212"><!-- --></a>40 time-dependent actions per time
+                      trigger</span></li>
+
+                </ul>
+<div class="p">The immediate actions and each time trigger can have:<ul class="ul bulletList">
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8220"><a name="d387838e26-d387851e8220"><!-- --></a>10 email alerts</span></li>
+
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8224"><a name="d387838e26-d387851e8224"><!-- --></a>10 tasks</span></li>
+
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8228"><a name="d387838e26-d387851e8228"><!-- --></a>10 field updates</span></li>
+
+                    <li class="li"><span class="ph" id="d387838e26-d387851e8232"><a name="d387838e26-d387851e8232"><!-- --></a>10 outbound
+                      messages</span></li>
+
+                    <li class="li">
+<span class="ph" id="d387838e26-d387851e8236"><a name="d387838e26-d387851e8236"><!-- --></a>10 flow
+                triggers</span><sup class="ph sup">1</sup>
+</li>
+
+                  </ul>
+</div>
+</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d26295e45" data-title="Limit">Workflow time triggers per hour</td>
+
+              <td class="entry" colspan="1" headers="d26295e48" data-title="Details"><span class="ph" id="d387838e26-d387851e8251"><a name="d387838e26-d387851e8251"><!-- --></a>50</span></td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+        <p class="p"><sup class="ph sup">1</sup>
+        The Process Builder has superseded
+                    flow trigger workflow actions, formerly available in a pilot program.
+                    Organizations that are using flow trigger workflow actions can continue to
+                    create and edit them, but flow trigger workflow actions aren’t available for new
+                    organizations.</p>
+
+        <div class="section" id="DailyWorkflowAlertLimitSection">
+<a name="DailyWorkflowAlertLimitSection"><!-- --></a><h2 class="helpHead2"><span class="ph" id="DailyWorkflowAlertLimitTitle"><a name="DailyWorkflowAlertLimitTitle"><!-- --></a>Workflow Alert Emails: Daily Workflow Alert
+                    Email Limits</span></h2>
+
+            
+            <p class="p">The daily limit for emails sent through email alerts is 1,000 per
+                  standard Salesforce license per org—except for free Developer
+          Edition and trial orgs, where the daily workflow email limit is 15 . The overall org limit is 2,000,000. This limit applies to emails sent through
+          email alerts in workflow rules, approval processes, flows<span class="ph">,
+            processes,</span> or the REST API.</p>
+
+            <div class="p">After your org has reached its daily workflow email limit:<ul class="ul bulletList">
+          <li class="li">Any emails in the workflow queue left over and not sent that day are discarded. Salesforce doesn't try to resend them
+            later.</li>
+
+          <li class="li">If a workflow rule with an action and an email alert is triggered, only the email
+            action is blocked.</li>
+
+          <li class="li">Final approval, final rejection, approval, rejection, and recall email actions are
+            blocked.</li>
+
+          <li class="li">An error message is added to the debug log.</li>
+
+        </ul>
+</div>
+
+            <div class="p">The following items don't count against the workflow email limit:<ul class="ul bulletList">
+          <li class="li">Approval notification emails</li>
+
+          <li class="li">Task assignment notifications</li>
+
+          <li class="li">Lead assignment rules notifications</li>
+
+          <li class="li">Case assignment rules notifications</li>
+
+          <li class="li">Case escalation rules notifications</li>
+
+          <li class="li">Force.com sites usage alerts</li>
+
+        </ul>
+</div>
+
+            <p class="p">The limit restriction is based on activity in the 24-hour period
+        starting and ending at midnight GMT. Adding or removing a user license immediately adjusts
+        the limit's total. If you send an email alert to a group, every recipient in that group
+        counts against your daily workflow email limit.</p>
+
+            <div class="p">When workflow email alerts
+                    approach or exceed certain limits, Salesforce sends a warning email
+                    to the default workflow user or—if the default workflow user isn't
+                    set—to an active system administrator.
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+                        
+                        
+                        
+                        <thead class="thead sorted" align="left">
+                            <tr>
+                                <th class="featureTableHeader vertical-align-top " id="d26295e353">When...</th>
+
+                                <th class="featureTableHeader vertical-align-top " id="d26295e356">Salesforce
+                                    Sends...</th>
+
+                                <th class="featureTableHeader vertical-align-top " id="d26295e361">Warning Email Includes...</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr>
+                                <td class="entry" headers="d26295e353" data-title="When...">An email alert isn't sent because the number of recipients
+                                    exceeds the limit for a single email</td>
+
+                                <td class="entry" headers="d26295e356" data-title="Salesforce Sends...">A warning email for each unsent email alert</td>
+
+                                <td class="entry" headers="d26295e361" data-title="Warning Email Includes...">The unsent email alert’s content and
+                                    recipients</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="entry" headers="d26295e353" data-title="When...">The organization reaches 90% of the limit of emails per
+                                    day</td>
+
+                                <td class="entry" headers="d26295e356" data-title="Salesforce Sends...">One warning email</td>
+
+                                <td class="entry" headers="d26295e361" data-title="Warning Email Includes..."><span class="ph" id="d387838e48-d388030e1444"><a name="d387838e48-d388030e1444"><!-- --></a>The limit and
+                                        the organization's usage</span></td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="entry" headers="d26295e353" data-title="When...">The organization reaches 90% of the limit of workflow emails
+                                    per day</td>
+
+                                <td class="entry" headers="d26295e356" data-title="Salesforce Sends...">One warning email</td>
+
+                                <td class="entry" headers="d26295e361" data-title="Warning Email Includes...">The limit and
+                                        the organization's usage</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="entry" headers="d26295e353" data-title="When...">An email alert isn't sent because the organization reaches
+                                    the limit of emails per day</td>
+
+                                <td class="entry" headers="d26295e356" data-title="Salesforce Sends...">A warning email after every 100 attempted email alerts over
+                                    the limit</td>
+
+                                <td class="entry" headers="d26295e361" data-title="Warning Email Includes...">The limit and
+                                        the organization's usage</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="entry" headers="d26295e353" data-title="When...">An email alert isn't sent because the organization reaches
+                                    the limit of workflow emails per day</td>
+
+                                <td class="entry" headers="d26295e356" data-title="Salesforce Sends...">A warning email after every 100 attempted email alerts over
+                                    the limit</td>
+
+                                <td class="entry" headers="d26295e361" data-title="Warning Email Includes...">The limit and
+                                        the organization's usage</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table></div>
+</div>
+
+        </div>
+
+    </div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Storage Capacity Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_storage"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Storage Capacity Limits</span></h1><div class="body">
+<div class="section">
+<h2 class="helpHead2">Storage Capacity</h2>
+
+      
+      <div class="p">
+<span class="ph" id="d387646e26-d387659e7476"><a name="d387646e26-d387659e7476"><!-- --></a>Storage is divided into two categories. File storage includes
+          files in attachments, the Documents tab, the Files tab, the File field, Salesforce CRM Content, Chatter files (including user
+          photos), and Site.com assets. Data storage
+          includes the following.</span><a name="d387646e26-d387659e7482"><!-- --></a><ul class="ul bulletList" id="d387646e26-d387659e7482">
+          <li class="li">Accounts</li>
+
+          <li class="li">Article types (format: “[<var class="keyword varname">Article Type Name</var>]”)</li>
+
+          <li class="li">Article type translations (format: “[<var class="keyword varname">Article Type Name</var>]
+            Version”)</li>
+
+          <li class="li">Campaigns</li>
+
+          <li class="li">Campaign Members</li>
+
+          <li class="li">Cases</li>
+
+          <li class="li">Case Teams</li>
+
+          <li class="li">Contacts</li>
+
+          <li class="li">Contracts</li>
+
+          <li class="li">Custom objects</li>
+
+          <li class="li">Email messages</li>
+
+          <li class="li">Events</li>
+
+          <li class="li">Forecast items</li>
+
+          <li class="li">Google docs</li>
+
+          <li class="li">Ideas</li>
+
+          <li class="li">Leads</li>
+
+          <li class="li">Notes</li>
+
+          <li class="li">Opportunities</li>
+
+          <li class="li">Opportunity Splits</li>
+
+          <li class="li">Orders</li>
+
+          <li class="li">Quotes</li>
+
+          <li class="li">Quote Template Rich Text Data</li>
+
+          <li class="li">Solutions</li>
+
+          <li class="li">Tags: Unique tags</li>
+
+          <li class="li">Tasks</li>
+
+        </ul>
+</div>
+
+      <p class="p"><span class="ph" id="d387646e26-d387659e7572"><a name="d387646e26-d387659e7572"><!-- --></a>For file storage, Contact Manager,&nbsp;Group, Professional,
+          Enterprise, Performance, and Unlimited Editions are
+          allocated a per-user limit multiplied by the number of users in the org plus an additional
+          per-org allocation. <span class="ph" id="d387646e26-d387659e7576"><a name="d387646e26-d387659e7576"><!-- --></a>For example, a Professional Edition
+            org with 10 users receives 11 GB of file storage, or 100 MB per user multiplied by 10
+            users plus an additional 10 GB. A Professional Edition org with 100 users receives 20 GB
+            of file storage, or 100 MB per user multiplied by 100 users plus an additional 10
+            GB.</span></span></p>
+
+      <p class="p"><span class="ph" id="d387646e26-d387659e7580"><a name="d387646e26-d387659e7580"><!-- --></a>For data storage, Contact Manager,&nbsp;Group,
+          Professional, Enterprise,&nbsp;Performance, and
+          Unlimited Editions are allocated the greater of 1 GB or a per-user limit. <span class="ph" id="d387646e26-d387659e7584"><a name="d387646e26-d387659e7584"><!-- --></a>For example, a Professional Edition org with 10 users
+            receives 1 GB, because 10 users multiplied by 20 MB per user is 200 MB, which is less
+            than the 1 GB minimum. A Professional Edition org with 100 users receives more than the
+            1 GB minimum, because 100 users multiplied by 20 MB per user is 2,000 MB.</span></span></p>
+
+      <p class="p"><span class="ph" id="d387646e26-d387659e7588"><a name="d387646e26-d387659e7588"><!-- --></a>File storage and data storage are calculated asynchronously,
+          so your org’s storage usage isn’t updated immediately if you import or add a
+          large number of records or files.</span></p>
+
+      <p class="p"><span class="ph" id="d387646e26-d387659e7593"><a name="d387646e26-d387659e7593"><!-- --></a>The values in the Storage Allocation Per User License columns
+          below apply to Salesforce and Salesforce Platform user licenses.</span>
+        Other standard user licenses, such as Communities user licenses, include
+        additional storage. For a description of user licenses, see <a class="xref" href="https://help.salesforce.com/apex/HTViewHelpDoc?id=users_understanding_license_types.htm&amp;language=en_US" title="A user license determines the baseline of features that the user can access. Every user must have exactly one user license. You assign user permissions for data access through a profile and optionally one or more permission sets.">User Licenses</a>. <span class="ph" id="d387646e26-d387659e7605"><a name="d387646e26-d387659e7605"><!-- --></a>If your org uses custom user licenses,
+          contact Salesforce to determine if these
+          licenses provide additional storage.</span></p>
+
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d25655e201"><strong class="ph b">Salesforce
+                  Edition</strong></th>
+
+              <th class="featureTableHeader  " id="d25655e207"><strong class="ph b">Data Storage Minimum per Org</strong></th>
+
+              <th class="featureTableHeader  " id="d25655e211"><strong class="ph b">Data Storage Allocation per User License</strong></th>
+
+              <th class="featureTableHeader  " id="d25655e215"><strong class="ph b">File Storage Allocation per Org</strong></th>
+
+              <th class="featureTableHeader  " id="d25655e219"><strong class="ph b">File Storage Allocation per User License</strong></th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Contact Manager</td>
+
+              <td class="vertical-align-middle " rowspan="6" headers="d25655e207" data-title="Data Storage Minimum per Org">1 GB</td>
+
+              <td class="vertical-align-middle " rowspan="4" headers="d25655e211" data-title="Data Storage Allocation per User License">20 MB</td>
+
+              <td class="vertical-align-middle " rowspan="6" headers="d25655e215" data-title="File Storage Allocation per Org">11 GB</td>
+
+              <td class="vertical-align-middle " rowspan="3" headers="d25655e219" data-title="File Storage Allocation per User License">612 MB</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Group</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Professional</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Enterprise</td>
+
+              <td class="vertical-align-middle " rowspan="3" headers="d25655e219" data-title="File Storage Allocation per User License">2 GB</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Performance</td>
+
+              <td class="vertical-align-middle " rowspan="2" headers="d25655e211" data-title="Data Storage Allocation per User License">120 MB</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Unlimited</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Developer</td>
+
+              <td class="entry" headers="d25655e207" data-title="Data Storage Minimum per Org">5 MB</td>
+
+              <td class="vertical-align-middle " rowspan="2" headers="d25655e211" data-title="Data Storage Allocation per User License">N/A</td>
+
+              <td class="vertical-align-middle " rowspan="2" headers="d25655e215" data-title="File Storage Allocation per Org">20 MB</td>
+
+              <td class="vertical-align-middle " rowspan="2" headers="d25655e219" data-title="File Storage Allocation per User License">N/A</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d25655e201" data-title="Salesforce Edition">Personal</td>
+
+              <td class="entry" headers="d25655e207" data-title="Data Storage Minimum per Org">20 MB (approximately 10,000 records)</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+      <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p><span class="ph" id="d387646e26-d387659e7740"><a name="d387646e26-d387659e7740"><!-- --></a>The only feature license that provides additional storage
+          is Salesforce CRM Content User. Each Salesforce CRM Content User license provides an additional
+          512 MB of file storage, whether Salesforce CRM Content is
+          enabled or not. To find out whether your org has Salesforce CRM Content enabled, contact your Salesforce
+          admin.</span></p>
+</div>
+</div></div></div></div>
+
+    </div>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

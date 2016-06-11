@@ -1,0 +1,114 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Picklist Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_picklist"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Picklist Limits</span></h1><div class="body">
+  <p class="p">The maximum entries you can have
+        in a picklist is determined by the total number of characters allowed in the picklist, which is
+          <span class="ph" id="d382748e27-d382761e6384"><a name="d382748e27-d382761e6384"><!-- --></a>15,000</span>. <span class="ph" id="d382748e27-d382761e6387"><a name="d382748e27-d382761e6387"><!-- --></a>Each entry
+          includes a line break and a return character that aren’t visible. These two additional characters per
+          entry are counted as part of the 15,000
+        limit.</span></p>
+
+  <div class="section" id="PicklistsLimits-section">
+<a name="PicklistsLimits-section"><!-- --></a><h2 class="helpHead2"><span class="ph" id="d382748e29-d382781e103"><a name="d382748e29-d382781e103"><!-- --></a>Additional Limits for Standard
+     Picklists</span></h2>
+
+   
+   <p class="p">For standard picklists, each entry can have up to 40
+          characters, not including line breaks and returns. For standard multi-select picklists,
+          the total number of characters for all entries combined can’t exceed 255.</p>
+
+   <p class="p">For standard picklists in orgs that use record types
+          or the Translation Workbench, you can
+          have unlimited entries with these exceptions for special picklists.</p>
+
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d14234e63">Picklist Field</th>
+
+              <th class="featureTableHeader  " id="d14234e66">Maximum Number of Entries</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Lead Status</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">100</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Task Status</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">100</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Task Priority</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">50</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Case Status</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">100</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Case Priority</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">50</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d14234e63" data-title="Picklist Field"><span class="keyword parmname">Opportunity Stage</span></td>
+
+              <td class="entry" headers="d14234e66" data-title="Maximum Number of Entries">100</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+  </div>
+
+  <div class="section">
+<h2 class="helpHead2"><span class="ph" id="d382748e31-d382761e6494"><a name="d382748e31-d382761e6494"><!-- --></a>Additional Limits for Custom
+        Picklists</span></h2>
+
+      
+      <div class="p" id="d382748e31-d382761e6497">
+<a name="d382748e31-d382761e6497"><!-- --></a>Within the 15,000 total
+        character limit, custom picklists can have:<ul class="ul bulletList">
+          <li class="li">Up to 1,000 entries</li>
+
+          <li class="li">Up to 255 characters per entry</li>
+
+        </ul>
+</div>
+
+      <p class="p" id="d382748e31-d382761e6510"><a name="d382748e31-d382761e6510"><!-- --></a>Custom multi-select picklists can have up to 500
+        values. Users can select up to 100 values at a time on a record.</p>
+
+      <p class="p" id="d382748e31-d382761e6513"><a name="d382748e31-d382761e6513"><!-- --></a>You can have up to 500 global picklists (or picklist value sets)
+        in an org. This limit doesn’t apply to custom picklists that are based on global picklists.
+        Each global picklist value set can contain up to 500 values.</p>
+
+      <p class="p" id="d382748e31-d382761e6516"><a name="d382748e31-d382761e6516"><!-- --></a>You can have up to 1000 values in a custom
+          <em class="ph i">restricted</em> picklist.</p>
+
+    </div>
+
+ </div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

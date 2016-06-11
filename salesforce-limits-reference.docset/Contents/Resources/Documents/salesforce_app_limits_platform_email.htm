@@ -1,0 +1,112 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Email Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_platform_email"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Email Limits</span></h1><div class="body">
+<p class="p"><span class="ph" id="d385600e27-d385613e3115"><a name="d385600e27-d385613e3115"><!-- --></a>Using the API or Apex, you can send single emails to
+            a maximum of <span class="ph" id="d385600e27-d385613e3121"><a name="d385600e27-d385613e3121"><!-- --></a>1,000</span> external email addresses per
+            day</span> based on Greenwich Mean Time (GMT). <span class="ph" id="d385600e27-d385613e3125"><a name="d385600e27-d385613e3125"><!-- --></a>Single emails sent using the Salesforce
+            application don't count toward this limit.</span>
+          <span class="ph" id="d385600e27-d385613e3130"><a name="d385600e27-d385613e3130"><!-- --></a>There’s no limit on sending individual emails
+            to contacts, leads, person accounts, and users in your org directly from account, contact, lead, opportunity, case,
+            campaign, or custom object pages.</span></p>
+
+<div class="p">When sending single emails, keep in mind:<ul class="ul bulletList">
+          <li class="li"><span class="ph" id="d385600e29-d385613e3140"><a name="d385600e29-d385613e3140"><!-- --></a>You can send <span class="ph" id="d385600e29-d385613e3142"><a name="d385600e29-d385613e3142"><!-- --></a>100</span> emails per
+                <span class="keyword parmname">SingleEmailMessage</span>.</span></li>
+
+          <li class="li"><span class="ph" id="d385600e29-d385613e3150"><a name="d385600e29-d385613e3150"><!-- --></a>If you use
+                <span class="keyword parmname">SingleEmailMessage</span> to email your org’s internal users,
+              specifying the user’s ID in <span class="keyword parmname">setTargetObjectId</span> means the
+              email doesn’t count toward the daily limit. However, specifying internal
+              users’ email addresses in <span class="keyword parmname">setToAddresses</span> means the email
+              does count toward the limit.</span></li>
+
+        </ul>
+</div>
+
+<div class="p">
+<span class="ph" id="d385600e31-d385613e3165"><a name="d385600e31-d385613e3165"><!-- --></a>You can send mass email to a maximum of
+          1,000 external email addresses per day per org based on Greenwich Mean Time (GMT). The
+          maximum number of external addresses you can include in each mass email depends on your
+          edition:</span>
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+            
+            
+            <thead class="thead sorted" align="left">
+              <tr>
+                <th class="featureTableHeader vertical-align-top " id="d20094e95">Edition</th>
+
+                <th class="featureTableHeader vertical-align-top " id="d20094e98">External Address Limit per Mass Email</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+              <tr>
+                <td class="entry" headers="d20094e95" data-title="Edition">Personal, Contact Manager, and Group</td>
+
+                <td class="entry" headers="d20094e98" data-title="External Address Limit per Mass Email">N/A</td>
+
+              </tr>
+
+              <tr>
+                <td class="entry" headers="d20094e95" data-title="Edition">Professional</td>
+
+                <td class="entry" headers="d20094e98" data-title="External Address Limit per Mass Email">250</td>
+
+              </tr>
+
+              <tr>
+                <td class="entry" headers="d20094e95" data-title="Edition">Enterprise</td>
+
+                <td class="entry" headers="d20094e98" data-title="External Address Limit per Mass Email">500</td>
+
+              </tr>
+
+              <tr>
+                <td class="entry" headers="d20094e95" data-title="Edition">Unlimited and Performance</td>
+
+                <td class="entry" headers="d20094e98" data-title="External Address Limit per Mass Email">1,000</td>
+
+              </tr>
+
+            </tbody>
+
+          </table></div>
+<div class="box message info" id="d385600e31-d385613e3231">
+<a name="d385600e31-d385613e3231"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>
+          </p><ul class="ul bulletList">
+            <li class="li"><span class="ph" id="d385600e31-d385613e3236"><a name="d385600e31-d385613e3236"><!-- --></a>The single and mass email limits don't
+                take unique addresses into account. For example, if you have
+                  <span class="ph filepath">johndoe@example.com</span> in your email 10 times, that counts as 10
+                against the limit.</span></li>
+
+            <li class="li"><span class="ph" id="d385600e31-d385613e3243"><a name="d385600e31-d385613e3243"><!-- --></a><span class="ph" id="d385600e31-d385613e3244"><a name="d385600e31-d385613e3244"><!-- --></a>You can send an
+                  unlimited amount of email to your org’s internal users, which includes
+                  portal users.</span></span></li>
+
+            
+            <li class="li"><span class="ph" id="d385600e31-d385613e3250"><a name="d385600e31-d385613e3250"><!-- --></a>You can send mass emails only to contacts,
+                person accounts, leads, and your org’s internal users.</span></li>
+
+            <li class="li"><span class="ph" id="d385600e31-d385613e3254"><a name="d385600e31-d385613e3254"><!-- --></a>In Developer Edition orgs and orgs evaluating
+                  Salesforce during a trial period, you
+                can send mass email to no more than 10 external email addresses per day. This lower
+                limit doesn’t apply if your org was created before the Winter ’12 release and
+                already had mass email enabled with a higher limit. Additionally, your org can send
+                single emails to a maximum of 15 email addresses per day.</span></li>
+
+          </ul>
+
+        <p></p>
+</div>
+</div></div></div>
+</div>
+</div>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

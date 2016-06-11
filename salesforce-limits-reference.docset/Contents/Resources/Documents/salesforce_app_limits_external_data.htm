@@ -1,0 +1,138 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>External Data Integration Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_external_data"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>External Data Integration Limits</span></h1><div class="body refbody">
+<div class="shortdesc">Some limits apply to Salesforce Connect
+  external objects and external data sources.</div>
+
+    <div class="section">
+<h2 class="helpHead2">Salesforce Connect—All Adapters</h2>
+
+      
+      <p class="p">For each user, the maximum number of
+                    external objects to which you can grant object permissions is equal to the
+                    maximum number of custom objects that the user is allowed to access. This limit
+                    is determined by the user license that’s assigned to the user.</p>
+
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+                    
+                    
+                    <tbody class="tbody">
+                        <tr>
+                            <td class="entry">Maximum external objects per org<sup class="ph sup">1</sup>
+</td>
+
+                            <td class="entry">100</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum joins per query across external objects and other types
+                                of objects</td>
+
+                            <td class="entry"><span class="ph" id="d381081e57-d381125e3325"><a name="d381081e57-d381125e3325"><!-- --></a>4</span></td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum length of the OAuth token that’s issued by the external
+                                system</td>
+
+                            <td class="entry">4,000 characters</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum new rows retrieved per hour per external data source.
+                                This limit doesn’t apply to high-data-volume external data sources
+                                or to rows that have previously been retrieved.</td>
+
+                            <td class="entry">50,000</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table></div>
+
+      <p class="p"><sup class="ph sup">1</sup>
+        The limit of 100 external
+                    objects applies regardless of how many Salesforce Connect add-ons you purchase for your
+                org.</p>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Salesforce Connect—OData 2.0 Adapter</h2>
+
+      
+      <div class="p">An org is limited to:<ul class="ul bulletList">
+                    <li class="li">10,000 OData
+                        callouts per hour for Enterprise, Performance, and Unlimited Editions. Higher limits are
+                                        available on request.</li>
+
+                    <li class="li">1,000 OData callouts per
+                        hour for Developer Edition.</li>
+
+                </ul>
+</div>
+
+      
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+                    
+                    
+                    <tbody class="tbody">
+                        <tr>
+                            <td class="entry">Maximum HTTP request size for OData</td>
+
+                            <td class="entry">8 MB</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum HTTP response size for OData</td>
+
+                            <td class="entry">8 MB</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum result set size for an OData query</td>
+
+                            <td class="entry">16 MB</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="entry">Maximum result set size for an OData subquery</td>
+
+                            <td class="entry">
+<span class="ph" id="d381081e74-d381125e3411"><a name="d381081e74-d381125e3411"><!-- --></a>1,000</span>
+                                rows</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table></div>
+
+    </div>
+
+    <div class="section">
+<h2 class="helpHead2">Salesforce Connect—Custom Adapter</h2>
+<div class="p">Apex data type limits:<ul class="ul bulletList">
+        <li class="li">Double—The value
+                                loses precision beyond 18 significant digits. For higher precision,
+                                use decimals instead of doubles.</li>
+
+        <li class="li">String—If the
+                                length is greater than 255 characters, the string is mapped to a
+                                long text area field in Salesforce.</li>
+
+      </ul>
+</div>
+</div>
+
+  </div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

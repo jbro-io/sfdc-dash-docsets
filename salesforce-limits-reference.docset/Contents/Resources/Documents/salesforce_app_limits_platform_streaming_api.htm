@@ -1,0 +1,275 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Streaming API Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_platform_streaming_api"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Streaming API Limits</span></h1><div class="body refbody">
+<div class="section">
+   <p class="p">Limits protect shared resources. These are the default
+    limits intended for basic consumers of Streaming API.</p>
+
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader vertical-align-top " id="d22362e52">Description</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e55">Performance and Unlimited Editions</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e58">Enterprise Edition</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e61">All other editions</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum number of topics (PushTopic records) per org</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions">100</td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">50</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">40</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum number of clients (subscribers) per topic</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions">2,000</td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">20</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum number of concurrent clients (subscribers) across all topics</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions">2,000</td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">20</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum number of events within a 24–hour period</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions">1,000,000</td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">200,000</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">50,000 (10,000 for free orgs)</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Socket timeout during connection (<span class="ph" id="d386486e31-d386510e148"><a name="d386486e31-d386510e148"><!-- --></a>CometD
+        session</span>)</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions"><span class="ph" id="d386486e31-d386510e153"><a name="d386486e31-d386510e153"><!-- --></a>110 seconds</span></td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">110 seconds</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">110 seconds</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Timeout to reconnect after successful connection (<span class="ph" id="d386486e31-d386510e168"><a name="d386486e31-d386510e168"><!-- --></a>keepalive</span>)</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions"><span class="ph" id="d386486e31-d386510e173"><a name="d386486e31-d386510e173"><!-- --></a>40 seconds</span></td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">40 seconds</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">40 seconds</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum length of the SOQL query in the <span class="keyword parmname">Query</span> field of a PushTopic record</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions"><span class="ph" id="d386486e31-d386510e194"><a name="d386486e31-d386510e194"><!-- --></a>1,300 characters</span></td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">1,300 characters</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">1,300 characters</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e52" data-title="Description">Maximum length for a PushTopic name</td>
+
+       <td class=" text-right" headers="d22362e55" data-title="Performance and Unlimited Editions"><span class="ph" id="d386486e31-d386510e210"><a name="d386486e31-d386510e210"><!-- --></a>25 characters</span></td>
+
+       <td class=" text-right" headers="d22362e58" data-title="Enterprise Edition">25 characters</td>
+
+       <td class=" text-right" headers="d22362e61" data-title="All other editions">25 characters</td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+   <div class="box message info" id="free_orgs_limit_note">
+<a name="free_orgs_limit_note"><!-- --></a><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>For free orgs, the maximum number of events within a 24-hour
+    period is 10,000. <span class="ph" id="free_org_def"><a name="free_org_def"><!-- --></a>Free orgs include Developer Edition orgs, sandboxes,
+     trial orgs (all editions) including partner test and demo orgs created through the Environment
+     Hub.</span></p>
+</div>
+</div></div></div>
+</div>
+
+  </div>
+
+<div class="section">
+<h2 class="helpHead2">Generic
+                Streaming Limits</h2>
+
+   
+   <p class="p">The following limits apply to generic streaming.</p>
+
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader  " id="d22362e247">Description</th>
+
+       <th class="featureTableHeader  " id="d22362e250">Performance and Unlimited Editions</th>
+
+       <th class="featureTableHeader  " id="d22362e253">Enterprise Edition</th>
+
+       <th class="featureTableHeader  " id="d22362e256">Professional Edition</th>
+
+       <th class="featureTableHeader  " id="d22362e259">Free Orgs</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d22362e247" data-title="Description">Maximum streaming channels per org</td>
+
+       <td class=" text-right" headers="d22362e250" data-title="Performance and Unlimited Editions">1,000</td>
+
+       <td class=" text-right" headers="d22362e253" data-title="Enterprise Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e256" data-title="Professional Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e259" data-title="Free Orgs">200</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e247" data-title="Description">Maximum events within a 24-hour period with Generic Streaming (API version 36.0 and
+        earlier)</td>
+
+       <td class=" text-right" headers="d22362e250" data-title="Performance and Unlimited Editions">100,000</td>
+
+       <td class=" text-right" headers="d22362e253" data-title="Enterprise Edition">100,000</td>
+
+       <td class=" text-right" headers="d22362e256" data-title="Professional Edition">100,000</td>
+
+       <td class=" text-right" headers="d22362e259" data-title="Free Orgs">10,000</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e247" data-title="Description">Maximum events within a 24-hour period with Durable Generic Streaming (API version 37.0 and later)</td>
+
+       <td class=" text-right" headers="d22362e250" data-title="Performance and Unlimited Editions">1,000,000</td>
+
+       <td class=" text-right" headers="d22362e253" data-title="Enterprise Edition">200,000</td>
+
+       <td class=" text-right" headers="d22362e256" data-title="Professional Edition">100,000</td>
+
+       <td class=" text-right" headers="d22362e259" data-title="Free Orgs">10,000</td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+   <div class="box message info"><div class="inner"><div class="bd"><div class="media">
+<img class="img mtm" src="https://res.cloudinary.com/hy4kyit2a/image/upload/img/msg_icons/helpNote_icon.gif" alt="Note"><div class="mediaBd">
+<h4 class="mbs">Note</h4>
+<p>Free orgs include Developer Edition orgs, sandboxes, and
+     trial orgs (all editions) such as partner test and demo orgs created through the Environment
+     Hub.</p>
+</div>
+</div></div></div></div>
+
+   <p class="p">Generic Streaming has
+     the same limits for the maximum number of clients and maximum number of concurrent clients as
+     PushTopic Streaming. The following limits apply to Generic Streaming and Durable Generic Streaming.</p>
+
+   
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+     
+     
+     
+     
+     <thead class="thead sorted" align="left">
+      <tr>
+       <th class="featureTableHeader vertical-align-top " id="d22362e354">Description</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e357">Performance and Unlimited Editions</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e360">Enterprise Edition</th>
+
+       <th class="featureTableHeader vertical-align-top " id="d22362e363">All other editions</th>
+
+      </tr>
+
+     </thead>
+
+     <tbody class="tbody">
+      <tr>
+       <td class="entry" headers="d22362e354" data-title="Description">Maximum clients (subscribers) per generic streaming channel</td>
+
+       <td class=" text-right" headers="d22362e357" data-title="Performance and Unlimited Editions">2,000</td>
+
+       <td class=" text-right" headers="d22362e360" data-title="Enterprise Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e363" data-title="All other editions">20</td>
+
+      </tr>
+
+      <tr>
+       <td class="entry" headers="d22362e354" data-title="Description">Maximum concurrent clients (subscribers) across all generic streaming channels</td>
+
+       <td class=" text-right" headers="d22362e357" data-title="Performance and Unlimited Editions">2,000</td>
+
+       <td class=" text-right" headers="d22362e360" data-title="Enterprise Edition">1,000</td>
+
+       <td class=" text-right" headers="d22362e363" data-title="All other editions">20</td>
+
+      </tr>
+
+     </tbody>
+
+    </table></div>
+
+  </div>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

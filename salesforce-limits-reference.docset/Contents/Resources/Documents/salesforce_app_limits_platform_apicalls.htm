@@ -1,0 +1,156 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>SOAP API Call Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_platform_apicalls"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>SOAP API Call
+Limits</span></h1><div class="body">
+    
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+        
+        
+        
+        <thead class="thead sorted" align="left">
+          <tr>
+            <th class="featureTableHeader vertical-align-top " id="d18769e42">API
+              Name</th>
+
+            <th class="featureTableHeader vertical-align-top " id="d18769e47">API
+              Limit</th>
+
+            <th class="featureTableHeader vertical-align-top " id="d18769e52">Limit Description</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_create.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">create()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Maximum number of records created</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">Your client application can add up
+to 200 records in a single <samp class="codeph nolang">create()</samp> call. If a create request exceeds 200 objects, then
+the entire operation fails.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_describesobjects.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">describeSObjects()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Maximum number of objects returned</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">The <samp class="codeph nolang">describeSObjects()</samp> call is limited to a maximum of <span class="ph" id="d384870e79-d384948e81"><a name="d384870e79-d384948e81"><!-- --></a>100</span> objects returned.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_emptyrecyclebin.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">emptyRecycleBin()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Maximum number of records in the Recycle Bin</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">Your org can have up to
+               5,000 records per license in the Recycle Bin at any one time. For example, if your org has five user licenses, 25,000 records
+               can be stored in the Recycle Bin. If your org reaches its Recycle Bin limit, Salesforce automatically
+               removes the oldest records, as long as they have been in the recycle bin for at least
+               two hours.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_getdeleted.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">getDeleted()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Limits for returned records</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">
+              <ul class="ul bulletList">
+<li class="li">If your  <samp class="codeph nolang">getDeleted()</samp> call returns more than 600,000 records and the user
+is a system administrator, an exception EXCEEDED_ID_LIMIT is returned.</li>
+
+<li class="li">If your  <samp class="codeph nolang">getDeleted()</samp> call returns more than 20,000 records and the user is
+not a system administrator, an exception OPERATION_TOO_LARGE is returned.
+Note that this error is returned when more than 20,000 records across
+the organization have been deleted, not just the records viewable
+by the user. </li>
+
+</ul>
+
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_login.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">login()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Login request size limit</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">The login request size is limited to 10 KB.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_login.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">login()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Maximum calls per user</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">The limit is 3600 calls to <samp class="codeph nolang">login()</samp> per
+            user per hour. Exceeding this limit results in a “Login Rate Exceeded”
+            error.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_merge.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">merge()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Merge request limits</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">
+              <ul class="ul bulletList">
+<li class="li">Up to 200 merge requests can be made in a single SOAP call.</li>
+
+<li class="li">Up to three records can be merged in a single request, including
+the master record. This is the same limit as the Salesforce user
+interface. If you have more than three records to merge, use the same
+master record in each request to avoid errors.</li>
+
+<li class="li">External ID fields cannot be used with <samp class="codeph nolang">merge()</samp>.</li>
+
+</ul>
+
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name"><a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_update.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">update()</samp></a></td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Maximum number of records updated</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">Your client application can change up to 200 records in a single <samp class="codeph nolang">update()</samp> call. If an update request exceeds 200 records, the entire operation
+               fails.</td>
+
+          </tr>
+
+          <tr>
+            <td class="entry" headers="d18769e42" data-title="API Name">
+<a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_query.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">query()</samp></a> and <a class="xref" href="https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/sforce_api_calls_querymore.htm" target="_blank" title="HTML (New Window)"><samp class="codeph nolang">queryMore()</samp></a>
+</td>
+
+            <td class="entry" headers="d18769e47" data-title="API Limit">Batch size limits</td>
+
+            <td class="entry" headers="d18769e52" data-title="Limit Description">WSC clients can set the batch size by calling <samp class="codeph nolang">setQueryOptions()</samp> on the connection object. C# client
+        applications can change this setting by specifying the batch size in the call QueryOptions portion of the SOAP header before invoking the <samp class="codeph nolang">query()</samp>
+        call. The maximum batch size is 2,000 records. However this setting is only a suggestion.
+        There is no guarantee that the requested batch size will be the actual batch size. This is
+        done to maximize performance.<p class="p">The batch size will be no more than 200 if the SOQL
+        statement selects two or more custom fields of type long text. This is to prevent large SOAP
+        messages from being returned.</p>
+</td>
+
+          </tr>
+
+        </tbody>
+
+      </table></div>
+
+  </div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

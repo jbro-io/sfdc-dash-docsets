@@ -1,0 +1,181 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Email Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_email"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Email Limits</span></h1><div class="body">
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          
+          
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d5060e51">Feature</th>
+
+              <th class="featureTableHeader  " id="d5060e54">Personal Edition</th>
+
+              <th class="featureTableHeader  " id="d5060e57">Contact Manager</th>
+
+              <th class="featureTableHeader  " id="d5060e61">Group Edition</th>
+
+              <th class="featureTableHeader  " id="d5060e66">Professional Edition</th>
+
+              <th class="featureTableHeader  " id="d5060e70">Enterprise Edition</th>
+
+              <th class="featureTableHeader  " id="d5060e73">Unlimited and Performance Edition</th>
+
+              <th class="featureTableHeader  " id="d5060e79">Developer Edition</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Email templates: maximum size</td>
+
+              <td class="entry" headers="d5060e54" data-title="Personal Edition">
+<span class="ph" id="d380908e26-d380921e2934"><a name="d380908e26-d380921e2934"><!-- --></a>384 KB</span> for text email templates</td>
+
+              <td class="entry" colspan="6" headers="d5060e57 d5060e61 d5060e66 d5060e70 d5060e73 d5060e79" data-title="Contact Manager">
+                <ul class="ul bulletList">
+                  <li class="li">384 KB for text, HTML, and custom HTML
+                    templates</li>
+
+                  <li class="li">
+<span class="ph" id="d380908e26-d380921e2947"><a name="d380908e26-d380921e2947"><!-- --></a>1 MB</span> for Visualforce templates</li>
+
+                </ul>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Email services: maximum email messages processed by Salesforce per day</td>
+
+              <td class="vertical-align-middle " rowspan="3" colspan="3" headers="d5060e54 d5060e57 d5060e61" data-title="Personal Edition">N/A</td>
+
+              <td class="vertical-align-middle " colspan="4" headers="d5060e66 d5060e70 d5060e73 d5060e79" data-title="Professional Edition"><span class="ph" id="d380908e26-d380921e2967"><a name="d380908e26-d380921e2967"><!-- --></a>Number
+                  of user licenses multiplied by <span class="ph" id="d380908e26-d380921e2969"><a name="d380908e26-d380921e2969"><!-- --></a>1,000; maximum
+                    1,000,000</span></span></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Email services: maximum size of email message (email headers, body,
+                attachments, and encoding)</td>
+
+              <td class="vertical-align-middle " colspan="4" headers="d5060e66 d5060e70 d5060e73 d5060e79" data-title="Professional Edition">
+<span class="ph" id="d380908e26-d380921e2979"><a name="d380908e26-d380921e2979"><!-- --></a>25
+                  MB</span><sup class="ph sup">1</sup>
+</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Email-to-Case: maximum emails converted into cases</td>
+
+              <td class="vertical-align-middle " colspan="4" headers="d5060e66 d5060e70 d5060e73 d5060e79" data-title="Professional Edition"><span class="ph" id="d380908e26-d380921e2991"><a name="d380908e26-d380921e2991"><!-- --></a>2,500 per day</span></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Extended mail merge: maximum records</td>
+
+              <td class="vertical-align-middle " colspan="7" headers="d5060e54 d5060e57 d5060e61 d5060e66 d5060e70 d5060e73 d5060e79" data-title="Personal Edition"><span class="ph" id="d380908e26-d380921e3001"><a name="d380908e26-d380921e3001"><!-- --></a>1,000</span></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Extended mail merge: maximum total size of selected templates</td>
+
+              <td class="vertical-align-middle " colspan="7" headers="d5060e54 d5060e57 d5060e61 d5060e66 d5060e70 d5060e73 d5060e79" data-title="Personal Edition"><span class="ph" id="d380908e26-d380921e3012"><a name="d380908e26-d380921e3012"><!-- --></a>1
+                  MB</span></td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Inbound email sent to Salesforce</td>
+
+              <td class="entry" colspan="7" headers="d5060e54 d5060e57 d5060e61 d5060e66 d5060e70 d5060e73 d5060e79" data-title="Personal Edition">
+                <ul class="ul bulletList">
+                  <li class="li">Email body truncation size: <span class="ph" id="d380908e26-d380921e3028"><a name="d380908e26-d380921e3028"><!-- --></a>32 KB</span>
+</li>
+
+                  <li class="li">Maximum email activities created for each email received: <span class="ph" id="d380908e26-d380921e3033"><a name="d380908e26-d380921e3033"><!-- --></a>50</span>
+</li>
+
+                  <li class="li">Maximum size of a file attachment: <span class="ph" id="d380908e26-d380921e3038"><a name="d380908e26-d380921e3038"><!-- --></a>5
+                    MB</span>
+</li>
+
+                  <li class="li">Total maximum size of file attachments: <span class="ph" id="d380908e26-d380921e3043"><a name="d380908e26-d380921e3043"><!-- --></a>25
+                      MB</span><sup class="ph sup">1</sup>
+</li>
+
+                </ul>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">Merge field: <span class="keyword parmname">Case.Email_Thread</span>
+</td>
+
+              <td class="vertical-align-middle " colspan="2" headers="d5060e54 d5060e57" data-title="Personal Edition">N/A</td>
+
+              <td class="entry" colspan="5" headers="d5060e61 d5060e66 d5060e70 d5060e73 d5060e79" data-title="Group Edition">
+                <a name="d380908e26-d380921e3063"><!-- --></a><ul class="ul bulletList" id="d380908e26-d380921e3063">
+                  <li class="li">Maximum emails: 200</li>
+
+                  <li class="li">Email body truncation size: 32 KB</li>
+
+                </ul>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">On-Demand Email-to-Case: maximum email messages
+                processed by Salesforce per day (counts
+                toward limit for email services)</td>
+
+              <td class="vertical-align-middle " rowspan="2" colspan="3" headers="d5060e54 d5060e57 d5060e61" data-title="Personal Edition">N/A</td>
+
+              <td class="vertical-align-middle " colspan="4" headers="d5060e66 d5060e70 d5060e73 d5060e79" data-title="Professional Edition">Number
+                  of user licenses multiplied by <span class="ph" id="d380908e26-d380921e3087-d380921e2969"><a name="d380908e26-d380921e3087-d380921e2969"><!-- --></a>1,000; maximum
+                    1,000,000</span>
+</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d5060e51" data-title="Feature">On-Demand Email-to-Case: maximum email size
+                (email headers, body, attachments, and encoding)</td>
+
+              <td class="vertical-align-middle " colspan="4" headers="d5060e66 d5060e70 d5060e73 d5060e79" data-title="Professional Edition">
+<span class="ph" id="d380908e26-d380921e3097"><a name="d380908e26-d380921e3097"><!-- --></a>25 MB</span><sup class="ph sup">1</sup>
+</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+<p class="p"><sup class="ph sup">1</sup> The maximum size of email messages for email services <span class="ph" id="d380908e29-d380921e3110"><a name="d380908e29-d380921e3110"><!-- --></a>varies depending on language and character set. The size of an
+          email message includes the email headers, body, attachments, and encoding. As a result, an
+          email with a 25 MB attachment likely exceeds the 25 MB size limit for an email message
+          after accounting for the headers, body, and encoding.</span></p>
+
+<p class="p">For more information on outbound email limits, see <a class="xref" href="atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_email.htm">Email Limits</a>.</p>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

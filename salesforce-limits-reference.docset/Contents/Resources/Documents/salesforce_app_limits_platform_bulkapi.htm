@@ -1,0 +1,146 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Bulk API Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_platform_bulkapi"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Bulk API Limits</span></h1><div class="body">
+
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+<thead class="thead sorted" align="left">
+<tr>
+<th class="featureTableHeader vertical-align-top " id="d19644e38">Bulk API Limit</th>
+
+<th class="featureTableHeader vertical-align-top " id="d19644e43">Limit Description</th>
+
+</tr>
+
+</thead>
+
+<tbody class="tbody">
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Batch limit</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">You can submit up to 5,000 batches per rolling 24 hour
+            period. <span class="ph" id="d385329e54-d385363e82"><a name="d385329e54-d385363e82"><!-- --></a>You can't create new batches associated with a job that is
+              more than 24 hours old.</span>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Batch lifespan</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">Batches and jobs that are older than seven
+            days are removed from the queue regardless of job status. The seven days are measured
+            from the youngest batch associated with a job, or the age of the job if there are no
+            batches. You can't create new batches associated with a job that is
+              more than 24 hours old.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Batch size</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">
+<ul class="ul bulletList">
+            <li class="li">
+<span class="ph" id="d385329e72-d385363e106"><a name="d385329e72-d385363e106"><!-- --></a>Batches for data loads can consist of a single CSV, XML,
+                or JSON file that is no larger than 10 MB.</span>
+            </li>
+
+            <li class="li">A batch can contain a maximum of 10,000 records.</li>
+
+            <li class="li">A batch can contain a maximum of 10,000,000 characters for all the data in a
+              batch.</li>
+
+            <li class="li">A field can contain a maximum of 32,000 characters.</li>
+
+            <li class="li">A record can contain a maximum of 5,000 fields.</li>
+
+            <li class="li">A record can contain a maximum of 400,000 characters for all its fields.</li>
+
+            <li class="li">A batch must contain some content or an error occurs.</li>
+
+          </ul>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Batch processing time</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">Batches are processed in chunks. The chunk size
+            depends on the API version. In API version 20.0 and earlier, the chunk size is 100
+            records. In API version 21.0 and later, the chunk size is 200 records. There’s a five-minute limit for processing each chunk. Also, if it takes longer than 10 minutes to process a whole batch, the Bulk API places the remainder of the
+            batch back in the queue for later processing. If the Bulk API continues to exceed the 10-minute limit on subsequent attempts, the batch is placed back in the queue and
+            reprocessed up to 10 times before the batch is permanently marked as failed.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Binary content</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">
+<ul class="ul bulletList">
+            <li class="li">The length of any file name can't exceed 512 bytes.</li>
+
+            <li class="li">A zip file can't exceed 10 MB.</li>
+
+            <li class="li">The total size of the unzipped content can't exceed 20 MB.</li>
+
+            <li class="li">A maximum of 1,000 files can be contained in a zip file. Directories don't count
+              toward this total.</li>
+
+          </ul>
+</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Bulk query number of attempts to query</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">15 attempts at 10 minutes each
+                      to process the batch. There is also a two minute limit on the time to process
+                      the query. If more than 15 attempts are made for the query, an error message
+                      of “Tried more than fifteen times” is returned. If the query
+                      takes more than two minutes to process, a QUERY_TIMEOUT error is
+                      returned.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Bulk query number of retrieved files</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">15 files. If the query needs to
+                      return more than 15 files, the query should be filtered to return less data.
+                      Bulk batch sizes are not used for bulk queries.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Bulk query results lifespan</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">7 days.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Bulk query retrieved file size</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">1 gigabyte.</td>
+
+</tr>
+
+<tr>
+<td class="entry" headers="d19644e38" data-title="Bulk API Limit">Job open time</td>
+
+<td class="entry" headers="d19644e43" data-title="Limit Description">The maximum time that a job can remain open is 24 hours. The
+              Bulk API doesn't support clients
+            that, for example, post one batch every hour for many hours.</td>
+
+</tr>
+
+</tbody>
+
+</table></div>
+
+</div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>

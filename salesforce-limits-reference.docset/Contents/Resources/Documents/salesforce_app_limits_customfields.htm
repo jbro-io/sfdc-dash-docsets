@@ -1,0 +1,99 @@
+<!DOCTYPE html><html class=" js touch js touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;} body{ color: #333333; font-family: ProximaNovaRegular,Lucida Grande,Lucida Sans Unicode,Arial,sans-serif;font-size: 15px; line-height: 17px;}</style><link href="https://developer.salesforce.com/resource/stylesheets/holygrail.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" async="" src="https://www.google.com/cse/cse.js?cx=014927952804528719554:cug5vn4rcvy"></script><script type="text/javascript" async="" src="https://tag.perfectaudience.com/serve/52f42c76b4f4376fc1000003.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MWZCN8"></script><script type="text/javascript" src="https://developer.salesforce.com/resource/javascripts/holygrail.min.js"></script><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/docs.min.css" type="text/css"><link rel="stylesheet" href="https://developer.salesforce.com/resource/stylesheets/events.min.css" type="text/css" media="all"><script src="https://developer.salesforce.com/resource/javascripts/syntax-highlighter.min.js"></script><link href="https://developer.salesforce.com/resource/stylesheets/syntax-highlighter.min.css" rel="stylesheet" type="text/css"><title>Custom Field Limits | Salesforce Developer Limits Quick Reference | Salesforce Developers</title><script type="text/javascript" async="" src="https://pixel-geo.prfct.co/tagjs?a_id=17624&amp;source=js_tag"></script></head>
+<body style="" class="adroll_safari_light_theme">
+        <!-- uiView:  --><div df-bind-html-directive="" class="topic-content ng-binding ng-scope" df-bind-html="body" ui-view=""><a name="salesforce_app_limits_customfield"><!-- --></a><h1 class="helpHead1"><span class="ph" id="topic-title"><a name="topic-title"><!-- --></a>Custom Field Limits</span></h1><div class="body">
+    <p class="p">The number of custom fields allowed per object varies
+          according to your Salesforce Edition. The
+          maximum number of activities, long text area fields, rich text area fields, relationship
+          fields, and roll-up summary fields varies as well.</p>
+
+    
+<div class="data colSort"><table class="featureTable sort_table" summary="">
+          
+          
+          
+          
+          
+          
+          
+          
+          <thead class="thead sorted" align="left">
+            <tr>
+              <th class="featureTableHeader  " id="d4568e58">Field Type</th>
+
+              <th class="featureTableHeader  " id="d4568e61">Personal Edition</th>
+
+              <th class="featureTableHeader  " id="d4568e64">Contact Manager</th>
+
+              <th class="featureTableHeader  " id="d4568e68">Group Edition</th>
+
+              <th class="featureTableHeader  " id="d4568e73">Professional Edition</th>
+
+              <th class="featureTableHeader  " id="d4568e77">Enterprise Edition</th>
+
+              <th class="featureTableHeader  " id="d4568e80">Developer Edition</th>
+
+              <th class="featureTableHeader  " id="d4568e83">Unlimited and Performance Edition</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr>
+              <td class="entry" headers="d4568e58" data-title="Field Type">Activities</td>
+
+              <td class="entry" colspan="3" headers="d4568e61 d4568e64 d4568e68" data-title="Personal Edition">No additional limit</td>
+
+              <td class="entry" headers="d4568e73" data-title="Professional Edition">20</td>
+
+              <td class="entry" colspan="3" headers="d4568e77 d4568e80 d4568e83" data-title="Enterprise Edition">100</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d4568e58" data-title="Field Type">Long text area</td>
+
+              <td class="entry" rowspan="2" colspan="7" headers="d4568e61 d4568e64 d4568e68 d4568e73 d4568e77 d4568e80 d4568e83" data-title="Personal Edition">
+                <p class="p"><span class="ph" id="d380803e29-d380816e2474"><a name="d380803e29-d380816e2474"><!-- --></a>An object can contain unlimited rich text area and
+                    long text area fields, although your edition’s limit for total custom
+                    fields allowed on an object, regardless of field type, applies. Each object can
+                    contain 1,600,000 characters across long text area and rich text area fields.
+                    When you create a long text area or rich text area field, you set a character
+                    limit for the field—the maximum length of the text that can be entered.
+                    The default character limit for long text area and rich text area fields is <span class="ph" id="d380803e29-d380816e2476"><a name="d380803e29-d380816e2476"><!-- --></a>32,768</span> (32 KB). The maximum character limit
+                    for long text area and rich text area fields is <span class="ph" id="d380803e29-d380816e2479"><a name="d380803e29-d380816e2479"><!-- --></a>131,072</span> (128 KB). The minimum character limit is 256.</span>
+                  <span class="ph" id="d380803e29-d380816e2483"><a name="d380803e29-d380816e2483"><!-- --></a>The maximum size of an image that can be uploaded in a
+                    rich text area field is <span class="ph" id="d380803e29-d380816e2485"><a name="d380803e29-d380816e2485"><!-- --></a>1 MB</span>.</span></p>
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d4568e58" data-title="Field Type">Rich text area</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d4568e58" data-title="Field Type">Relationship</td>
+
+              <td class="vertical-align-middle " rowspan="2" headers="d4568e61" data-title="Personal Edition">No additional limit</td>
+
+              <td class="entry" colspan="6" headers="d4568e64 d4568e68 d4568e73 d4568e77 d4568e80 d4568e83" data-title="Contact Manager">40</td>
+
+            </tr>
+
+            <tr>
+              <td class="entry" headers="d4568e58" data-title="Field Type">Roll-up summary</td>
+
+              <td class="vertical-align-middle " colspan="6" headers="d4568e64 d4568e68 d4568e73 d4568e77 d4568e80 d4568e83" data-title="Contact Manager">25</td>
+
+            </tr>
+
+          </tbody>
+
+        </table></div>
+
+  </div><!--DRC 202.8--></div>
+        <div class="row-fluid nav-buttons-container"> </div>
+      </body></html>
